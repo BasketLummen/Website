@@ -1,6 +1,14 @@
 .navbar{
 	margin-bottom: 0px;
 }
+.navbar-brand{
+	padding: 0vw 2vw 0vw 0vw;
+}
+.navbar-brand img{
+	margin-top: -1vw;
+	max-width: 8vw;
+	max-height: 8vw;
+}
 
 #sponsors{
 	height: 8vh;

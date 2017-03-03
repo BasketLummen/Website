@@ -1,6 +1,15 @@
-/* .navbar-default{ */
-	/* background-color: #FFE100; */
-/* } */
+ .navbar-default{ 
+	background-color: #ffe100;
+	border: 0px solid #ffe100;
+ } 
+ .navbar-brand img{
+	 border: 4px solid #ffe100;
+	 border-radius: 50%;
+	 background-color: #fff;	 
+ }
+ 
+
+
 /* .navbar-default .navbar-nav > .active > a, */
 /* .navbar-default .navbar-nav > .active > a:hover, */
 /* .navbar-default .navbar-nav > .active > a:focus { */
