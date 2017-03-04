@@ -5,9 +5,46 @@
 	padding: 0vw 2vw 0vw 0vw;
 }
 .navbar-brand img{
-	margin-top: -1vw;
-	max-width: 8vw;
-	max-height: 8vw;
+	width: 8vw;
+	height: 8vw;
+	min-height: 50px; /*same as navbar*/
+	min-width: 50px;
+}
+@media (min-width: 768px) {
+	.navbar-brand img{	
+		margin-top: -1vw;
+	}
+}
+
+.carousel {
+  height: 50vh;
+  margin-bottom: 60px;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 50vh;
+}
+.carousel-inner > .item > img {
+  min-width: 100vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
 }
 
 #sponsors{
