@@ -147,8 +147,29 @@
       </a>
     </div><!-- /.carousel -->
 
-	<div id= "sponsors">
-		Hier komen de sponsors
+	<div id="partners">
+		<h2>Onze partners</h2>
+		<ul>
+			<li><a><img src="img/partners/ArDeko.jpg"></a></li>
+			<li><a href="http://www.volderswauters.be" target="_blank"><img src="img/partners/volderswauters.jpg"></a></li>
+			<li><a><img src="img/partners/sonia.gif"></a></li>
+			<li><a href="http://www.vloerwerkenswinnen.be" target="_blank"><img src="img/partners/johanswinnen.jpg"></a></li>
+			<li><a href="http://celis.bouwpunt.be" target="_blank"><img src="img/partners/andrecelis.gif"></a></li>
+			<li><a href="http://www.lansas.nl" target="_blank"><img src="img/partners/lansas.jpg"></a></li>
+			<li><a href="http://www.vandermaesen.be" target="_blank"><img src="img/partners/vandermaesen.jpg"></a></li>
+			<li><a href="http://www.mpa-bouw.be" target="_blank"><img src="img/partners/mpa.jpg"></a></li>
+			<li><a href="http://www.elision.be" target="_blank"><img src="img/partners/elision.png"></a></li>
+			<li><a href="http://www.prikentik.com/prik_tik/" target="_blank"><img src="img/partners/prikentik.gif"></a></li>
+			<li><a href="http://www.deluman.be" target="_blank"><img src="img/partners/deluman.gif"></a></li>
+			<li><a href="http://www.riotech.nl" target="_blank"><img src="img/partners/jrt.jpg"></a></li>
+			<li><a href="http://www.kaarskesprocessie.be/" target="_blank"><img src="img/partners/kaarskesprocessie.jpg"></a></li>
+			<li><a href="http://www.vatana.be" target="_blank"><img src="img/partners/vatana.png"></a></li>
+			<li><a href="http://www.indicator.be" target="_blank"><img src="img/partners/glorieux.jpg"></a></li>			
+			<li><a href="http://www.ing.be" target="_blank"><img src="img/partners/ing.jpg"></a></li>			
+			<li><a href="http://www.campsbvba.be/" target="_blank"><img src="img/partners/camps.png"></a></li>
+			<li><a href="http://www.verisol.be/" target="_blank"><img src="img/partners/verisol.jpg"></a></li>
+		</ul>
+	
 	</div>
 	
    <!-- Main component for a primary marketing message or call to action -->
@@ -183,5 +204,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+		setInterval(function(){
+
+		var width = $("#partners ul li:first-child img").outerWidth();
+		$("#partners ul li:first-child").animate({
+				opacity: 0, // animate slideUp
+				marginLeft: '-' + width + 'px'
+			  }, 'slow', 'swing', function() {
+				var el = $(this).detach();
+				$("#partners ul").append(el);
+				el.css({ 'opacity' : 1, 'margin-left' : 0 });
+			  });		
+		}, 5000);
+
+		</script>
   </body>
 </html>

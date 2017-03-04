@@ -18,7 +18,6 @@
 
 .carousel {
   height: 50vh;
-  margin-bottom: 60px;
 }
 
 .carousel-caption {
@@ -47,6 +46,29 @@
   }
 }
 
-#sponsors{
-	height: 8vh;
+#partners{
+	/* height: 16vh; */
+	padding: 1vh;
+	margin-bottom: 3vh;
+}
+#partners h2{
+	margin-left: 2vw;
+}
+#partners ul{
+	width: 96vw;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	white-space:nowrap; 
+	overflow-x:hidden;
+}
+#partners ul li{
+	display: inline;
+}
+#partners ul li img{
+	height: 6vh;
+	padding: 1vh;
+}
+#partners ul li:nth-child(n+15){
+    display:none;
 }
