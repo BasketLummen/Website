@@ -95,7 +95,7 @@
 	display: inline-block;
 }
 #next-top-title h3{
-	font-size: 4vh;
+	font-size: 3vh;
 }
 #next-middle  > .container{
 	height: 8vh;
@@ -106,7 +106,7 @@
 }
 #next-vs{
 	display: inline-block;
-	font-size: 4vh;	
+	font-size: 3vh;	
 	text-align: center;
 }
 #next-home-team, #next-away-team{
@@ -137,12 +137,13 @@
 }
 #next-bottom-title{
 	text-align: center;
+	margin-top: .5vh;
 	padding: 0 65px;
 	display: inline-block;
 	background-color: #fff;
 }
 #next-bottom-title h3{
-	font-size: 4vh;
+	font-size: 3vh;
 }
 
 /* partner section */
