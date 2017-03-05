@@ -49,13 +49,10 @@
 #partners{
 	/* height: 16vh; */
 	padding: 1vh;
-	margin-bottom: 3vh;
+	margin: 3vh auto;
 }
-#partners h2{
-	margin-left: 2vw;
-}
+
 #partners ul{
-	width: 96vw;
 	display: block;
 	margin: 0 auto;
 	padding: 0;
@@ -67,8 +64,8 @@
 }
 #partners ul li img{
 	height: 6vh;
-	padding: 1vh;
+	padding: 1vh 3vw;
 }
-#partners ul li:nth-child(n+15){
+#partners ul li:nth-child(n+6){
     display:none;
 }
