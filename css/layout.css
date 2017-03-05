@@ -69,15 +69,93 @@
   }
 }
 
+/* next games section */
+
+#next{
+	height: 32vh;
+}
+#next-top{
+}
+#next-top > .container{
+	position: relative;
+	height: 12vh;
+}
+#next-top-border{
+	height: 6vh;
+	position: absolute;
+	bottom: 1vh;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#next-top-title{
+	text-align: center;
+	margin-top: -50px;
+	padding: 0 65px;
+	display: inline-block;
+}
+#next-top-title h3{
+	font-size: 4vh;
+}
+#next-middle  > .container{
+	height: 8vh;
+	line-height: 8vh;
+	position: relative;
+	display: flex;
+    justify-content: space-between;
+}
+#next-vs{
+	display: inline-block;
+	font-size: 4vh;	
+	text-align: center;
+}
+#next-home-team, #next-away-team{
+	display: inline-block;
+	margin-top: -4vh;
+}
+#next-home-team-logo img, #next-away-team-logo img{
+	padding: 1vw;
+	width: 16vh;
+	height: 16vh;
+	min-height: 50px; /*same as navbar*/
+	min-width: 50px;
+}
+#next-bottom{
+	
+}
+#next-bottom > .container{
+	position: relative;
+	height: 12vh;
+}
+#next-bottom-border{
+	height: 6vh;
+	position: absolute;
+	top: 1vh;	
+	left: 0;
+	right: 0;	
+	text-align: center;
+}
+#next-bottom-title{
+	text-align: center;
+	margin-top: 2vh;
+	padding: 0 65px;
+	display: inline-block;
+	background-color: #fff;
+}
+#next-bottom-title h3{
+	font-size: 4vh;
+}
+
+/* partner section */
+
 #partners{
 	/* height: 16vh; */
 	padding: 1vh;
-	margin: 3vh auto;
 }
 
 #partners ul{
 	display: block;
-	margin: 0 auto;
+	margin: 3vh auto;
 	padding: 0;
 	white-space:nowrap; 
 	overflow-x:hidden;
