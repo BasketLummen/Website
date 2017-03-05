@@ -35,6 +35,8 @@
 .carousel-inner > .item > img {
   min-width: 100vw;
   min-height: 100%;
+  height: auto;
+  width: auto;
   margin: 0 auto;
 }
 

@@ -84,6 +84,17 @@
 	}
 }
 
+/* buttons */
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #14225C;
+    border-color: #14225C;
+}
+
 /* carousel */
  
  .carousel .item {
