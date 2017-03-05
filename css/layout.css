@@ -67,10 +67,12 @@
 	min-height: 50px;
 	padding: 1vh 3vw;
 }
-#partners ul li:nth-child(n+5){
-    display:none;
+@media (max-width: 480px) {
+	#partners ul li:nth-child(n+5){
+		display:none;
+	}
 }
-@media (min-width: 480px) {
+@media (min-width: 481px) {
 	#partners ul li:nth-child(n+6){
 		display:none;
 	}
