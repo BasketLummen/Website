@@ -92,10 +92,11 @@
 	text-align: center;
 	margin-top: -50px;
 	padding: 0 65px;
-	display: inline-block;
+	display: inline-block;	
 }
 #next-top-title h3{
 	font-size: 3vh;
+	line-height: normal;
 }
 #next-middle  > .container{
 	height: 8vh;
@@ -112,6 +113,7 @@
 #next-home-team, #next-away-team{
 	display: inline-block;
 	margin-top: -4vh;
+	z-index: 10;
 }
 #next-home-team-logo img, #next-away-team-logo img{
 	padding: 1vw;
@@ -137,13 +139,14 @@
 }
 #next-bottom-title{
 	text-align: center;
-	margin-top: .5vh;
+	margin-top: 2vh;
 	padding: 0 65px;
 	display: inline-block;
 	background-color: #fff;
 }
 #next-bottom-title h3{
 	font-size: 3vh;
+	line-height: normal;
 }
 
 /* partner section */
