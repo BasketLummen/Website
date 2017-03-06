@@ -1,4 +1,8 @@
- /* navbar */
+body{
+		font-family: "Verdana, Geneva, sans-serif";
+}
+
+/* navbar */
 .navbar-default {
     background-color: #ffe100;
     border: 1px solid #fff;
