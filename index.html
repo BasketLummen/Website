@@ -175,6 +175,31 @@
 			</div>
 		</div>
 	</div>
+	
+	<div id="news-letter">
+	</div>
+	
+	<div id="news">
+	
+		<div class="container">
+			<div>
+				<div>
+					<a><h3>Title</h3></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor mauris feugiat augue dictum, ut egestas sapien hendrerit. Vestibulum erat odio, cursus a convallis ut, posuere id leo. Pellentesque eu nibh posuere, mattis augue eget, mollis enim. Quisque tempor congue tortor, ac vulputate felis tincidunt in. Donec pretium vehicula euismod. Maecenas maximus diam quam, quis rutrum est posuere quis. Aliquam commodo magna et ligula ullamcorper pellentesque. Ut varius egestas ultricies. Cras magna purus, placerat sed felis ac, finibus pretium nulla.</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<a><h3>Title</h3></a>
+					<p>
+					Phasellus congue sem non nisl sagittis, at varius libero iaculis. Pellentesque nec tellus nec erat placerat lacinia sit amet nec lorem. Vestibulum porttitor vitae enim sit amet laoreet. Proin suscipit libero nec ligula commodo molestie. Proin eleifend ornare risus, in iaculis neque tristique a. In hac habitasse platea dictumst. Curabitur auctor mollis leo in tincidunt. Nulla nec nisl vitae leo porta pulvinar a ac lacus. Phasellus ac mattis tortor. Integer mattis turpis sed tempor mattis.
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
 	<div id="partners">
 		<div class="container">
 			<ul>
@@ -198,6 +223,13 @@
 				<li><a href="http://www.verisol.be/" target="_blank"><img src="img/partners/verisol.jpg"></a></li>
 			</ul>
 		</div>
+	</div>
+	
+	<div id="map-holder">
+		<div id="map" ></div>	
+	</div>
+	
+	<div id="footer">
 	</div>
 	
 	  
@@ -257,6 +289,40 @@
 			  });		
 		}, 5000);
 
-		</script>
+	</script>
+		
+	<script>
+      function initMap() {
+	  /*50.991189,5.18965*/
+        var uluru = {lat: 50.991189, lng: 5.18965};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        /*var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });*/
+    	var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+
+        service.getDetails({ placeId: 'ChIJZRgmzYI7wUcRjEHmCqFIOFA' }, function(place, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                place.formatted_address + '</div>');
+              infowindow.open(map, this);
+            });
+          }
+        });
+      }
+    </script>
+		
+		<script async defer   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBesDse5XU1BASBA_G4RqjjsdUp2CQvqp4&libraries=places&callback=initMap">
+</script>
   </body>
 </html>

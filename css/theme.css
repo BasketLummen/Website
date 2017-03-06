@@ -133,7 +133,39 @@ body{
 	border-top-width: 0px;
 }
 
+/* partners */
 #partners{
 	background-color: #333;
 }
 
+/* news-letter */
+#news-letter{
+	background-color: #333;
+}
+
+#news > .container > div{
+	border: 1px solid #E7E7E7;	
+
+}
+#news > .container > div a{
+	color: #14225C;
+	text-decoration: none;
+}
+#news > .container > div a h3{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+/* map */
+#map-holder{
+	background-color: #ffe100;
+	border: 1px solid #E7E7E7;
+}
+#map::after{
+	background-color: #ffe100;
+}
+
+/* footer */
+#footer{
+	background-color: #333;
+}

@@ -175,7 +175,7 @@ blockquote, code{
 /* partner section */
 
 #partners{
-	/* height: 16vh; */
+	min-height: 16vh;
 	padding: 1vh;
 }
 
@@ -203,4 +203,75 @@ blockquote, code{
 	#partners ul li:nth-child(n+6){
 		display:none;
 	}
+}
+
+/* news */
+#news{
+	min-height: 40vh;
+}
+#news .container{
+    position: relative;
+	display: flex;
+    justify-content: space-between;
+	padding: 0;
+}
+
+#news > .container > div {
+	min-height: 38vh;
+	margin: 1vh 0;
+	padding: 1vh 1vw;
+}
+
+
+#news > .container > div:first-child {
+	margin-right: .5vw;
+}
+#news > .container > div:last-child {
+	margin-left: .5vw;
+}
+
+/* news-letter */
+
+#news-letter{
+	min-height: 16vh;
+}
+
+/* map */
+#map-holder{
+	height: 40vh;
+	margin: 4vh 0;
+	overflow: hidden;
+	position: relative;
+}
+#map {
+	height: 40vh;
+}
+@media (max-width: 768px) {
+	#map {
+		width: 100vw;
+	}
+}
+@media (min-width: 769px) {
+	#map {
+		width: 70vw;
+	}
+	#map::after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  right: -165px;
+	  width: 330px;
+	  -webkit-transform: skewX(-33deg);
+	  -khtml-transform: skewX(-33deg);
+	  -moz-transform: skewX(-33deg);
+	  -ms-transform: skewX(-33deg);
+	  transform: skewX(-33deg);
+	  z-index: 0;
+	}
+}
+
+/* footer */
+#footer{
+	height: 20vh;
 }
