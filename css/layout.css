@@ -41,11 +41,11 @@ blockquote, code{
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#facebook-ico{ display: none; }
 	#twitter-ico{ display: none; }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 	#facebook-txt{ display: none; }
 	#twitter-txt{ display: none; }
 	/* buttons */
@@ -258,12 +258,12 @@ blockquote, code{
 #map {
 	height: 40vh;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	#map {
 		width: 100vw;
 	}
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 	#map {
 		width: 70vw;
 	}
