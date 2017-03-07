@@ -113,13 +113,15 @@ blockquote, code{
 }
 #next-top-title{
 	text-align: center;
-	margin-top: -50px;
+	margin-top: -4vh;
 	padding: 0 65px;
 	display: inline-block;	
 }
-#next-top-title h3{
+#next-top-title span{
 	font-size: 3vh;
 	line-height: normal;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 #next-middle  > .container{
 	height: 8vh;
@@ -162,14 +164,16 @@ blockquote, code{
 }
 #next-bottom-title{
 	text-align: center;
-	margin-top: 2vh;
+	margin-top: 3vh;
 	padding: 0 65px;
 	display: inline-block;
 	background-color: #fff;
 }
-#next-bottom-title h3{
+#next-bottom-title span{
 	font-size: 3vh;
 	line-height: normal;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 /* partner section */
