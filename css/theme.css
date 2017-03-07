@@ -72,7 +72,7 @@ body{
 .navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #14225C;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #000;
     }
