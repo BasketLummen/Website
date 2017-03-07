@@ -99,14 +99,18 @@ blockquote, code{
 /* next games section */
 
 #next{
-	height: 34vh;
+	
 }
-#next-top{
+#next > h2{
+	text-align:center;
+	padding-top: 1vh;
 }
+
 #next-top > .container{
 	position: relative;
-	height: 13vh;
+	height: 12vh;
 }
+
 #next-top-border{
 	height: 6vh;
 	position: absolute;
