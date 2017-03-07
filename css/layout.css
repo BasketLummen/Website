@@ -95,13 +95,13 @@ blockquote, code{
 /* next games section */
 
 #next{
-	height: 32vh;
+	height: 34vh;
 }
 #next-top{
 }
 #next-top > .container{
 	position: relative;
-	height: 12vh;
+	height: 13vh;
 }
 #next-top-border{
 	height: 6vh;
@@ -150,7 +150,7 @@ blockquote, code{
 }
 #next-bottom > .container{
 	position: relative;
-	height: 12vh;
+	height: 13vh;
 }
 #next-bottom-border{
 	height: 6vh;
