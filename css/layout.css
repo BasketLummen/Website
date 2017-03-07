@@ -41,22 +41,30 @@ blockquote, code{
 	}
 }
 
-/* buttons */
-#facebook-ico{
-	background-image: url('../img/social-media-icons.png');
-    background-repeat: no-repeat;
-	background-position: -317px -100px;
-	margin: 10px;
-    width: 25px;
-    height: 25px;
+@media (max-width: 768px) {
+	#facebook-ico{ display: none; }
+	#twitter-ico{ display: none; }
 }
-#twitter-ico{
-	background-image: url('../img/social-media-icons.png');
-    background-repeat: no-repeat;
-	background-position: -114px -100px;
-    width: 25px;
-    height: 25px;
-	margin: 10px;
+@media (min-width: 769px) {
+	#facebook-txt{ display: none; }
+	#twitter-txt{ display: none; }
+	/* buttons */
+	#facebook-ico{
+		background-image: url('../img/social-media-icons.png');
+		background-repeat: no-repeat;
+		background-position: -317px -100px;
+		margin: 10px;
+		width: 25px;
+		height: 25px;
+	}
+	#twitter-ico{
+		background-image: url('../img/social-media-icons.png');
+		background-repeat: no-repeat;
+		background-position: -114px -100px;
+		width: 25px;
+		height: 25px;
+		margin: 10px;
+	}
 }
 
 /* carousel */
@@ -82,14 +90,6 @@ blockquote, code{
   height: auto;
   width: auto;
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
 }
 
 /* next games section */
