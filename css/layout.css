@@ -75,9 +75,13 @@ blockquote, code{
 .carousel-caption {
   z-index: 10;
 }
-
-.carousel-caption {
-  z-index: 10;
+@media (max-width: 768px) {
+	.carousel-caption h1{
+	  font-size: 2em;
+	}
+	.carousel-caption p{
+	  font-size: 1em;
+	}
 }
 
 /* Declare heights because of positioning of img element */
