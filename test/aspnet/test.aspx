@@ -18,15 +18,15 @@
         This page allows to check the possibility to get the extension environment settings." };
     protected int TabIndex
     {
-        get 
-        { 
+        get
+        {
             object index = ViewState["TabIndex"];
             if (index == null)
                 index = 0;
             return (int)index;
         }
-        set 
-        { 
+        set
+        {
             ViewState["TabIndex"] = value;
         }
     }
@@ -34,8 +34,8 @@
     {
         if (!IsPostBack)
             txtPort.Text = "3306";
-        
-        
+
+
     }
     protected override void OnPreRender(EventArgs e)
     {
@@ -53,7 +53,7 @@
         txtServer.Text = "";
         txtUser.Text = "";
         txtPassword.Text = "";
-        
+
         _port_row.Attributes["class"] = (TabIndex != 0) ? "hidden" : "";
         lblSource.InnerText = (TabIndex != 2) ? "Server" : "File";
 
@@ -80,25 +80,28 @@
                 {
                     string sPort = txtPort.Text.Trim();
                     con = new System.Data.Odbc.OdbcConnection();
-                    con.ConnectionString = string.Format("DRIVER={{MySQL ODBC 3.51 Driver}};Port={0};Server={1};UID={2};Password={3}", sPort, sServer, sUser, sPassword);
+                    //con.ConnectionString = string.Format("DRIVER={{MySQL ODBC 3.51 Driver}};Port={0};Server={1};UID={2};Password={3}", sPort, sServer, sUser, sPassword);
+                    con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
                     break;
                 }
             case 1:
                 {
                     con = new System.Data.SqlClient.SqlConnection();
-                    con.ConnectionString = string.Format("Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
+                    // con.ConnectionString = string.Format("Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
+                    con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
                     break;
                 }
             case 2:
                 {
                     con = new System.Data.OleDb.OleDbConnection();
-                    string AppPath = Request.PhysicalApplicationPath;
-                    if (sServer.IndexOf(AppPath) == -1)
-                    {//Add AppPath
-                        sServer = AppPath + sServer;
-                        txtServer.Text = sServer;
-                    }
-                    con.ConnectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
+                    con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
+                    //string AppPath = Request.PhysicalApplicationPath;
+                    //if (sServer.IndexOf(AppPath) == -1)
+                    //{//Add AppPath
+                    //    sServer = AppPath + sServer;
+                    //    txtServer.Text = sServer;
+                    //}
+                    //con.ConnectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
                     break;
                 }
         }
@@ -118,7 +121,7 @@
         {
             mes += " " + ex.Message ;
             mes += " TESTS FAILED!";
-            MakeMessage(false, mes);            
+            MakeMessage(false, mes);
         }
 
     }
@@ -156,14 +159,14 @@
             MakeMessage(false, mes);
         }
     }
-        
+
     void MakeMessage(bool success, string message)
     {
         Panel pn = new Panel();
-        Label lb = new Label(); 
+        Label lb = new Label();
         Literal L = new Literal();
         pn.CssClass = "testRelults";
-        lb.CssClass = "testResult"; 
+        lb.CssClass = "testResult";
         pn.ID =  success ? "testSuccessful" : "testFailed";
         lb.Text = success ? "Success:" : "Fail:";
         L.Text = message ;
@@ -172,40 +175,7 @@
         MessageHolder.Controls.Add(pn);
     }
 
-    public static List<String> GetSystemDriverList()
-        {
-            List<string> names = new List<string>();
-            // get system dsn's
-            Microsoft.Win32.RegistryKey reg = (Microsoft.Win32.Registry.LocalMachine).OpenSubKey("Software");
-            if (reg != null)
-            {
-                reg = reg.OpenSubKey("ODBC");
-                if (reg != null)
-                {
-                    reg = reg.OpenSubKey("ODBCINST.INI");
-                    if (reg != null)
-                    {
 
-                        reg = reg.OpenSubKey("ODBC Drivers");
-                        if (reg != null)
-                        {
-                            // Get all DSN entries defined in DSN_LOC_IN_REGISTRY.
-                            foreach (string sName in reg.GetValueNames())
-                            {
-                                names.Add(sName);
-                            }
-                        }
-                        try
-                        {
-                            reg.Close();
-                        }
-                        catch { /* ignore this exception if we couldn't close */ }
-                    }
-                }
-            }
-
-            return names;
-        }
 </script>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -305,15 +275,6 @@
     </div>
   </div>
   </form>
-    <div>
-        <%
-            List<string> drivers = GetSystemDriverList();
-            foreach(string driver in drivers)
-            {
-                Response.Write(driver);
-            }
-            %>
-    </div>
   <div class="footer">
     <div class="footer-area">
     <script type="text/javascript">
