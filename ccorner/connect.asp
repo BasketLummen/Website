@@ -8,11 +8,13 @@ Response.CacheControl = "no-cache"
 
 set shell = createobject("WScript.Shell")
 connectionString = shell.Environment("PROCESS").Item("MYSQLCONNSTR_localdb")
-connectionString = "Driver={MySQL ODBC 3.51 Driver};" & Replace(connectionString, "localdb", "basketlummen")
+connectionString = "& Replace(connectionString, "localdb", "basketlummen")
+' connectionString = "Driver={MySQL ODBC 3.51 Driver}; Server=localhost; uid=basketlummen; pwd=6#vWHD_$; database=basketlummen; option=3; port=49879;"
 Response.Write(connectionString)
 
 set con = server.createobject("ADODB.Connection")
-con.Open connectionString
+con.ConnectionString = connectionString
+con.Open 
 
 set rs = server.createobject("adodb.recordset")
 rs.activeconnection = con
