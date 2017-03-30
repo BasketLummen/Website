@@ -14,6 +14,17 @@ connectionString = shell.Environment("PROCESS").Item("MYSQLCONNSTR_localdb")
 ' connectionString = "DRIVER={MySQL ODBC 5.3 UNICODE Driver}; Server=127.0.0.1;Database=basketlummen;UID=azure;Password=6#vWHD_$; OPTION=3; PORT=49879"
 Response.Write(connectionString)
 
+Const HKEY_LOCAL_MACHINE = &H80000002
+strComputer = "."
+Set objRegistry = GetObject("winmgmts:\\" & strComputer & "\root\default:StdRegProv")
+strKeyPath = "SOFTWARE\ODBC\ODBCINST.INI\ODBC Drivers"
+objRegistry.EnumValues HKEY_LOCAL_MACHINE, strKeyPath, arrValueNames, arrValueTypes
+For i = 0 to UBound(arrValueNames)
+    strValueName = arrValueNames(i)
+    objRegistry.GetStringValue HKEY_LOCAL_MACHINE,strKeyPath,strValueName,strValue
+    Response.Write arrValueNames(i) & " — " & strValue
+Next
+
 set con = server.createobject("ADODB.Connection")
 con.ConnectionString = connectionString
 con.Open 
