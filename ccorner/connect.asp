@@ -7,7 +7,7 @@ Response.Expires = 0
 Response.CacheControl = "no-cache"
 
 set shell = createobject("WScript.Shell")
-connectionString = shell.Environment("SYSTEM").Item("MYSQLCONNSTR_localdb")
+connectionString = shell.Environment("USER").Item("MYSQLCONNSTR_localdb")
 
 Response.Write(connectionString)
 
