@@ -12,7 +12,7 @@ connectionString = shell.Environment("PROCESS").Item("MYSQLCONNSTR_localdb")
 ' connectionString = Replace(connectionString, "localdb", "basketlummen")
 ' connectionString = "Server=localhost; uid=azure; pwd=password; database=localdb; option=3; port=49879;"
 ' connectionString = "DRIVER={MySQL ODBC 5.3 UNICODE Driver}; Server=127.0.0.1;Database=basketlummen;UID=azure;Password=6#vWHD_$; OPTION=3; PORT=49879"
-connectionString = "DRIVER={MySQL ODBC 3.51 Driver}; SERVER=127.0.0.1; DATABASE=basketlummen; UID=azure;PASSWORD=6#vWHD_$; OPTION=3"
+' connectionString = "DRIVER={MySQL ODBC 3.51 Driver}; SERVER=127.0.0.1; DATABASE=basketlummen; UID=azure;PASSWORD=6#vWHD_$; OPTION=3"
 Response.Write(connectionString)
 
 'Const HKEY_LOCAL_MACHINE = &H80000002

@@ -220,7 +220,7 @@
           </tr>
           <tr id="_port_row" runat="server">
             <td class="name"><label for="txtPort">Port</label></td>
-            <td><asp:TextBox ID="txtPort" Runat="Server" MaxLength="4" Columns="5"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPort" Runat="Server" MaxLength="5" Columns="5"></asp:TextBox></td>
           </tr>
           <tr>
             <td class="name"><label for="txtUser">User name</label></td>
