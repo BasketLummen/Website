@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <%@ Import Namespace="System.Web.Mail" %>
+<%@ Import Namespace="System.Collections.Generic" %>
 <script runat="server">
     readonly string[] tab_captions = new string[] { "MySQL", "MSSQL", "MS Access", "E-Mail", "Environment" };
     readonly string[] tab_ids = new string[] { "mysql", "mssql", "msaccess", "email", "environment" };
@@ -170,6 +171,41 @@
         pn.Controls.Add(L);
         MessageHolder.Controls.Add(pn);
     }
+
+    public static List<String> GetSystemDriverList()
+        {
+            List<string> names = new List<string>();
+            // get system dsn's
+            Microsoft.Win32.RegistryKey reg = (Microsoft.Win32.Registry.LocalMachine).OpenSubKey("Software");
+            if (reg != null)
+            {
+                reg = reg.OpenSubKey("ODBC");
+                if (reg != null)
+                {
+                    reg = reg.OpenSubKey("ODBCINST.INI");
+                    if (reg != null)
+                    {
+
+                        reg = reg.OpenSubKey("ODBC Drivers");
+                        if (reg != null)
+                        {
+                            // Get all DSN entries defined in DSN_LOC_IN_REGISTRY.
+                            foreach (string sName in reg.GetValueNames())
+                            {
+                                names.Add(sName);
+                            }
+                        }
+                        try
+                        {
+                            reg.Close();
+                        }
+                        catch { /* ignore this exception if we couldn't close */ }
+                    }
+                }
+            }
+
+            return names;
+        }
 </script>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -269,6 +305,15 @@
     </div>
   </div>
   </form>
+    <div>
+        <%
+            List<string> drivers = GetSystemDriverList();
+            foreach(string driver in drivers)
+            {
+                Response.Write(driver);
+            }
+            %>
+    </div>
   <div class="footer">
     <div class="footer-area">
     <script type="text/javascript">
