@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <%@ Import Namespace="System.Web.Mail" %>
-<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="Microsoft.Win32" %>
 <script runat="server">
     readonly string[] tab_captions = new string[] { "MySQL", "MSSQL", "MS Access", "E-Mail", "Environment" };
     readonly string[] tab_ids = new string[] { "mysql", "mssql", "msaccess", "email", "environment" };
