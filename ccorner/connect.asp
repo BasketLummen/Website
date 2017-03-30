@@ -7,9 +7,9 @@ Response.Expires = 0
 Response.CacheControl = "no-cache"
 
 set shell = createobject("WScript.Shell")
-' connectionString = shell.Environment("PROCESS").Item("MYSQLCONNSTR_localdb")
-' connectionString = Replace(connectionString, "localdb", "basketlummen")
-connectionString = "Server=localhost; uid=azure; pwd=6#vWHD_$; database=localdb; option=3; port=49879;"
+connectionString = shell.Environment("PROCESS").Item("MYSQLCONNSTR_localdb")
+connectionString = Replace(connectionString, "localdb", "basketlummen")
+' connectionString = "Server=localhost; uid=azure; pwd=6#vWHD_$; database=localdb; option=3; port=49879;"
 Response.Write(connectionString)
 
 set con = server.createobject("ADODB.Connection")
