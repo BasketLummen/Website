@@ -9,6 +9,8 @@ Response.CacheControl = "no-cache"
 set shell = createobject("WScript.Shell")
 connectionString = shell.ExpandEnvironmentStrings("MYSQLCONNSTR_localdb")
 
+Response.Write(connectionString)
+
 set con = server.createobject("ADODB.Connection")
 con.Open connectionString
 
