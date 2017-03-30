@@ -81,7 +81,8 @@
                     string sPort = txtPort.Text.Trim();
                     con = new System.Data.Odbc.OdbcConnection();
                     //con.ConnectionString = string.Format("DRIVER={{MySQL ODBC 3.51 Driver}};Port={0};Server={1};UID={2};Password={3}", sPort, sServer, sUser, sPassword);
-                    con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
+                    //con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
+                    con.ConnectionString = "Database=localdb;Data Source=127.0.0.1;User Id=azure;Password=6#vWHD_$;Port=49879";
                     break;
                 }
             case 1:
