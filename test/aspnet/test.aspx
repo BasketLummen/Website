@@ -176,6 +176,20 @@
         MessageHolder.Controls.Add(pn);
     }
 
+    public static string[] GetOdbcDriverNames()
+    {
+        string[] odbcDriverNames = null;
+        using (RegistryKey localMachineHive = Registry.LocalMachine)
+        using (RegistryKey odbcDriversKey = localMachineHive.OpenSubKey(@"SOFTWARE\ODBC\ODBCINST.INI\ODBC Drivers"))
+        {
+            if (odbcDriversKey != null)
+            {
+                odbcDriverNames = odbcDriversKey.GetValueNames();
+            }
+        }
+
+        return odbcDriverNames;
+    }
 
 </script>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -276,6 +290,20 @@
     </div>
   </div>
   </form>
+    <div>
+        <h2>Drivers</h2>
+        <div>
+            <% 
+                string[] drivers = GetOdbcDriverNames();
+                Response.Write("Number of drivers: "+ drivers.Length);
+                foreach(string driver in drivers)
+                {
+                    Response.Write(driver);
+                }
+                %>
+
+        </div>
+    </div>
   <div class="footer">
     <div class="footer-area">
     <script type="text/javascript">
