@@ -8,7 +8,7 @@ Response.CacheControl = "no-cache"
 
 set shell = createobject("WScript.Shell")
 connectionString = shell.Environment("PROCESS").Item("MYSQLCONNSTR_localdb")
-connectionString = Replace(connectionString, "localdb", "basketlummen")
+connectionString = "Driver={MySQL ODBC 3.51 Driver};" & Replace(connectionString, "localdb", "basketlummen")
 Response.Write(connectionString)
 
 set con = server.createobject("ADODB.Connection")
