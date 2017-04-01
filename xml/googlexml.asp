@@ -2,12 +2,8 @@
 
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <%
-    
-set shell = createobject("WScript.Shell")
-connectionString = shell.ExpandEnvironmentStrings("MYSQLCONNSTR_localdb")
-
 set con = server.createobject("ADODB.Connection")
-con.Open connectionString
+con.Open "Driver={MySQL ODBC 3.51 Driver}; Server=localhost; uid=basketlummen; pwd=ba7863; database=basketlummen; option=3; port=3306;"
 
 set rs = server.createobject("adodb.recordset")
 rs.activeconnection = con

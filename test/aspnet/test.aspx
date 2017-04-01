@@ -2,7 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <%@ Import Namespace="System.Web.Mail" %>
-<%@ Import Namespace="Microsoft.Win32" %>
 <script runat="server">
     readonly string[] tab_captions = new string[] { "MySQL", "MSSQL", "MS Access", "E-Mail", "Environment" };
     readonly string[] tab_ids = new string[] { "mysql", "mssql", "msaccess", "email", "environment" };
@@ -18,15 +17,15 @@
         This page allows to check the possibility to get the extension environment settings." };
     protected int TabIndex
     {
-        get
-        {
+        get 
+        { 
             object index = ViewState["TabIndex"];
             if (index == null)
                 index = 0;
             return (int)index;
         }
-        set
-        {
+        set 
+        { 
             ViewState["TabIndex"] = value;
         }
     }
@@ -34,8 +33,8 @@
     {
         if (!IsPostBack)
             txtPort.Text = "3306";
-
-
+        
+        
     }
     protected override void OnPreRender(EventArgs e)
     {
@@ -53,7 +52,7 @@
         txtServer.Text = "";
         txtUser.Text = "";
         txtPassword.Text = "";
-
+        
         _port_row.Attributes["class"] = (TabIndex != 0) ? "hidden" : "";
         lblSource.InnerText = (TabIndex != 2) ? "Server" : "File";
 
@@ -80,29 +79,25 @@
                 {
                     string sPort = txtPort.Text.Trim();
                     con = new System.Data.Odbc.OdbcConnection();
-                    //con.ConnectionString = string.Format("DRIVER={{MySQL ODBC 3.51 Driver}};Port={0};Server={1};UID={2};Password={3}", sPort, sServer, sUser, sPassword);
-                    //con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
-                    con.ConnectionString = "Database=localdb;Data Source=127.0.0.1;User Id=azure;Password=6#vWHD_$;Port=49879";
+                    con.ConnectionString = string.Format("DRIVER={{MySQL ODBC 3.51 Driver}};Port={0};Server={1};UID={2};Password={3}", sPort, sServer, sUser, sPassword);
                     break;
                 }
             case 1:
                 {
                     con = new System.Data.SqlClient.SqlConnection();
-                    // con.ConnectionString = string.Format("Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
-                    con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
+                    con.ConnectionString = string.Format("Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
                     break;
                 }
             case 2:
                 {
                     con = new System.Data.OleDb.OleDbConnection();
-                    con.ConnectionString = Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb");
-                    //string AppPath = Request.PhysicalApplicationPath;
-                    //if (sServer.IndexOf(AppPath) == -1)
-                    //{//Add AppPath
-                    //    sServer = AppPath + sServer;
-                    //    txtServer.Text = sServer;
-                    //}
-                    //con.ConnectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
+                    string AppPath = Request.PhysicalApplicationPath;
+                    if (sServer.IndexOf(AppPath) == -1)
+                    {//Add AppPath
+                        sServer = AppPath + sServer;
+                        txtServer.Text = sServer;
+                    }
+                    con.ConnectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};User ID={1};Password={2}", sServer, sUser, sPassword);
                     break;
                 }
         }
@@ -122,7 +117,7 @@
         {
             mes += " " + ex.Message ;
             mes += " TESTS FAILED!";
-            MakeMessage(false, mes);
+            MakeMessage(false, mes);            
         }
 
     }
@@ -160,14 +155,14 @@
             MakeMessage(false, mes);
         }
     }
-
+        
     void MakeMessage(bool success, string message)
     {
         Panel pn = new Panel();
-        Label lb = new Label();
+        Label lb = new Label(); 
         Literal L = new Literal();
         pn.CssClass = "testRelults";
-        lb.CssClass = "testResult";
+        lb.CssClass = "testResult"; 
         pn.ID =  success ? "testSuccessful" : "testFailed";
         lb.Text = success ? "Success:" : "Fail:";
         L.Text = message ;
@@ -175,22 +170,6 @@
         pn.Controls.Add(L);
         MessageHolder.Controls.Add(pn);
     }
-
-    public static string[] GetOdbcDriverNames()
-    {
-        string[] odbcDriverNames = null;
-        using (RegistryKey localMachineHive = Registry.LocalMachine)
-        using (RegistryKey odbcDriversKey = localMachineHive.OpenSubKey(@"SOFTWARE\ODBC\ODBCINST.INI\ODBC Drivers"))
-        {
-            if (odbcDriversKey != null)
-            {
-                odbcDriverNames = odbcDriversKey.GetValueNames();
-            }
-        }
-
-        return odbcDriverNames;
-    }
-
 </script>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -241,7 +220,7 @@
           </tr>
           <tr id="_port_row" runat="server">
             <td class="name"><label for="txtPort">Port</label></td>
-            <td><asp:TextBox ID="txtPort" Runat="Server" MaxLength="5" Columns="5"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPort" Runat="Server" MaxLength="4" Columns="5"></asp:TextBox></td>
           </tr>
           <tr>
             <td class="name"><label for="txtUser">User name</label></td>
@@ -290,21 +269,6 @@
     </div>
   </div>
   </form>
-    <div>
-        <h2>Drivers</h2>
-        <div>
-            <% 
-                string[] drivers = GetOdbcDriverNames();
-                Response.Write("Number of drivers: "+ drivers.Length);
-                foreach(string driver in drivers)
-                {
-                    Response.Write(driver);
-                    Response.Write("<br/>");
-                }
-                %>
-
-        </div>
-    </div>
   <div class="footer">
     <div class="footer-area">
     <script type="text/javascript">
