@@ -1,0 +1,31 @@
+# Site settings
+title: Goeleven
+description: Cloud and messaging specialist 
+url: "https://www.goeleven.com/" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Author settings
+author:
+  name     : Yves Goeleven
+  bio      : Azure MVP, cloud and messaging specials.
+  email    : yves@goeleven.com
+  twitter  : https://twitter.com/yvesgoeleven
+  
+# Build settings
+permalink: /:title/
+markdown: kramdown
+paginate: 5
+paginate_path: "/blog/page/:num"
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+css_folder:  "/css"
+js_folder:  "/js"
+img_folder:  "/img"
