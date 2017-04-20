@@ -13,12 +13,17 @@ author:
 # Build settings
 permalink: /:title/
 markdown: kramdown
-paginate: 5
-paginate_path: "/blog/page/:num"
-
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 gems:
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
 

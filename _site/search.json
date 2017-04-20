@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "News Nieuw Design",
+      "tags"     : "",
+      "url"      : "/news/nieuw-design/",
+      "date"     : "19 Apr 2017"
+    } ,
+  
+    {
       "title"    : "Nieuw Design",
       "tags"     : "",
       "url"      : "/blog/nieuw-design/",
