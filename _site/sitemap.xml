@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/blog/nieuw-design/</loc>
+<loc>https://www.goeleven.com//blog/nieuw-design/</loc>
 <lastmod>2017-04-19T10:40:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/news/nieuw-design/</loc>
+<loc>https://www.goeleven.com//news/nieuw-design/</loc>
 <lastmod>2017-04-19T10:40:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>https://www.goeleven.com//</loc>
 </url>
 <url>
-<loc>http://localhost:4000/products/</loc>
+<loc>https://www.goeleven.com//blog/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/news/</loc>
+<loc>https://www.goeleven.com//news/</loc>
 </url>
 </urlset>

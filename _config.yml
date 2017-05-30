@@ -30,6 +30,11 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - "bower_components"
+  - "bower.json"
+  - "node_modules"
+  - "package.json"
+  - "gruntfile.coffee"
 
 css_folder:  "/css"
 js_folder:  "/js"
