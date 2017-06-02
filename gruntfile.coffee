@@ -65,7 +65,7 @@ module.exports = (grunt) ->
         options:
           port: 4000
           base: '_site'
-          livereload: true
+          livereload: false
 
   grunt.registerTask "build", [
     "copy"
