@@ -14,7 +14,13 @@ var vbl = new function(){
     this.getUrl = function(path, query){
         return vblprotocol + "://" + vblbase + "/" + path + "?" + query;
     }
+
+
     this.orgDetail = function(orgId, callback){
         self.getRequest(self.getUrl("OrgDetailByGuid", "issguid=" + orgId), callback);
+    }
+
+    this.members = function(orgId, callback){
+        self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), callback);
     }
 }

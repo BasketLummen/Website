@@ -1,3 +1,5 @@
+var dbversion = 2;
+
 var repository = new function(){
     var self = this;
     this.initialize = function(orgId){
@@ -14,31 +16,26 @@ var repository = new function(){
             console.warn("Web Worker not available.");
         }
 
-        if (window.indexedDB) {  
+        if (indexedDB) {  
 
-            var request = window.indexedDB.open(orgId, 1);
+            var request = indexedDB.open(orgId, dbversion);
             request.onerror = function(event) {
                 console.warn("Database error: " + event.target.errorCode);
             };
             request.onsuccess = function(event) {
                 self.db = event.target.result;
-            };
-            request.onupgradeneeded = function(event) { 
-                var db = event.target.result;
-
-                var orgStore = db.createObjectStore("organisations", { keyPath: "guid" });
-
-                orgStore.transaction.oncomplete = function(event) {
 
                 // if(self.worker != null){
-                //     console.log('Sending command to worker');
-                //     self.worker.postMessage(JSON.stringify({what:"loadOrganization", orgId:orgId}))
-                // }
-                // else{
-                    self.loadOrganization(orgId);
-                // }
+                //     //       self.worker.postMessage(JSON.stringify({what:"loadOrganization", orgId:self.orgId}))
+                //     // }
+                self.loadOrganization(self.orgId);
+                self.loadMembers(self.orgId);
                
-                };
+            };
+            request.onupgradeneeded = function(event) { 
+                self.db = event.target.result;
+                self.ensureOrganisationsStore();
+                self.ensureMembersStore();
             };
 
         }
@@ -48,17 +45,35 @@ var repository = new function(){
         }
     }
 
-    this.loadOrganization = function(orgId){
-        console.log("hello from load organization");
-        vbl.orgDetail(orgId, function(org){
-            var l = org[0];
-            var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
-            tx.add(l);
-        });
-        
+    this.ensureOrganisationsStore =  function(){
+        if (!self.db.objectStoreNames.contains('organisations')) {
+            var orgStore = self.db.createObjectStore("organisations", { keyPath: "guid" });
 
-         // Store values in the newly created objectStore.
-               
+        }
+    }
+
+     this.ensureMembersStore =  function(b){
+         if (!self.db.objectStoreNames.contains('members')) {
+            var memberStore = self.db.createObjectStore("members", { keyPath: "relGuid" });
+         }
+    }
+
+    this.loadOrganization = function(orgId){
+        vbl.orgDetail(orgId, function(orgs){
+            var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
+            orgs.forEach(function(o){
+               tx.add(o);
+            });            
+        }); 
+    }
+
+    this.loadMembers = function(orgId){
+        vbl.members(orgId, function(members){
+            var tx = self.db.transaction("members", "readwrite").objectStore("members");
+            members.forEach(function(m){
+               tx.add(m);
+            });            
+        }); 
     }
 }
 
