@@ -1,4 +1,4 @@
-var dbversion = 2;
+var dbversion = 3;
 
 var repository = new function(){
     var self = this;
@@ -30,12 +30,15 @@ var repository = new function(){
                 //     // }
                 self.loadOrganization(self.orgId);
                 self.loadMembers(self.orgId);
+                self.loadMatches(self.orgId);
                
             };
             request.onupgradeneeded = function(event) { 
+                console.log("Database upgrade needed");
                 self.db = event.target.result;
                 self.ensureOrganisationsStore();
                 self.ensureMembersStore();
+                self.ensureMatchesStore();
             };
 
         }
@@ -52,9 +55,15 @@ var repository = new function(){
         }
     }
 
-     this.ensureMembersStore =  function(b){
+    this.ensureMembersStore =  function(b){
          if (!self.db.objectStoreNames.contains('members')) {
             var memberStore = self.db.createObjectStore("members", { keyPath: "relGuid" });
+         }
+    }
+
+    this.ensureMatchesStore =  function(b){
+         if (!self.db.objectStoreNames.contains('matches')) {
+            var matchesStore = self.db.createObjectStore("matches", { keyPath: "guid" });
          }
     }
 
@@ -71,6 +80,15 @@ var repository = new function(){
         vbl.members(orgId, function(members){
             var tx = self.db.transaction("members", "readwrite").objectStore("members");
             members.forEach(function(m){
+               tx.add(m);
+            });            
+        }); 
+    }
+
+    this.loadMatches = function(orgId){
+        vbl.matches(orgId, function(matches){
+            var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
+            matches.forEach(function(m){
                tx.add(m);
             });            
         }); 

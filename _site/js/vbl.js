@@ -23,4 +23,8 @@ var vbl = new function(){
     this.members = function(orgId, callback){
         self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), callback);
     }
+
+    this.matches = function(orgId, callback){
+        self.getRequest(self.getUrl("OrgMatchesByGuid", "issguid=" +  orgId), callback);
+    }
 }
