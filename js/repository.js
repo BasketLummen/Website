@@ -2,7 +2,7 @@ var dbversion = 3;
 
 var repository = new function(){
     var self = this;
-    this.initialize = function(orgId){
+    this.initialize = function(orgId, callback){
         self.orgId = orgId;
 
         if(typeof(Worker) !== "undefined") {
@@ -31,6 +31,8 @@ var repository = new function(){
                 self.loadOrganization(self.orgId);
                 self.loadMembers(self.orgId);
                 self.loadMatches(self.orgId);
+
+                callback();
                
             };
             request.onupgradeneeded = function(event) { 
@@ -64,6 +66,7 @@ var repository = new function(){
     this.ensureMatchesStore =  function(b){
          if (!self.db.objectStoreNames.contains('matches')) {
             var matchesStore = self.db.createObjectStore("matches", { keyPath: "guid" });
+            matchesStore.createIndex("jsDTCode", "jsDTCode")
          }
     }
 
@@ -92,6 +95,25 @@ var repository = new function(){
                tx.add(m);
             });            
         }); 
+    }
+
+    this.nextMatch = function(){
+        var tx = self.db.transaction("matches", "readonly");
+        var store = tx.objectStore("matches");
+        var index = store.index("jsDTCode");
+
+        var today = new Date();
+
+        var range = IDBKeyRange.lowerBound(today.getTime());
+        index.openCursor(range).onsuccess = function(e) {
+            var cursor = e.target.result;
+            if(cursor) {
+                var key = cursor.key;
+                var match = cursor.value;
+                console.log(match.pouleNaam + ": " + match.tTNaam + " vs " + match.tUNaam + " - " + match.datumString + ":" + match.beginTijd);
+                cursor.continue();
+            }
+        }
     }
 }
 
