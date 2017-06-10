@@ -1,14 +1,31 @@
-setInterval(function(){
+$.topic("db.opened").subscribe(function () {
+       repository.nextMatch(function(match){
+         repository.currentOrganisation(function(org){
+            var d = new Date(match.jsDTCode);
+            $("#next-top-title span").text(d.toLocaleString(window.navigator.language, {weekday: 'long'}));
+            /* looks like local time is stored as if it were utc? */
+            $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+d.getUTCHours()).slice(-2) + ":" + ('0'+d.getMinutes()).slice(-2));    
+         
+            org.teams.forEach(function(team){
+                if(team.guid == match.tTGUID || team.guid == match.tUGUID){
+                    $("#next-vs").text(team.naam.replace("Basket Lummen ", ""));
+                }
+            });
+        
+          });
+       });
+});
 
-var width = $("#partners ul li:first-child img").outerWidth();
-$("#partners ul li:first-child").animate({
-		opacity: 0, // animate slideUp
-		marginLeft: '-' + width + 'px'
-	  }, 'slow', 'swing', function() {
-		var el = $(this).detach();
-		$("#partners ul").append(el);
-		el.css({ 'opacity' : 1, 'margin-left' : 0 });
-	  });		
+setInterval(function(){
+  var width = $("#partners ul li:first-child img").outerWidth();
+  $("#partners ul li:first-child").animate({
+      opacity: 0, // animate slideUp
+      marginLeft: '-' + width + 'px'
+      }, 'slow', 'swing', function() {
+      var el = $(this).detach();
+      $("#partners ul").append(el);
+      el.css({ 'opacity' : 1, 'margin-left' : 0 });
+      });		
 }, 5000);
 
 var center = function(){
@@ -35,30 +52,29 @@ center();
 
 
 function initMap() {
-	  /*50.991189,5.18965*/
-        var uluru = {lat: 50.991189, lng: 5.18965};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        /*var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });*/
-    	var infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
+    var uluru = {lat: 50.991189, lng: 5.18965};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: uluru
+    });
+    /*var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });*/
+  var infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
 
-        service.getDetails({ placeId: 'ChIJZRgmzYI7wUcRjEHmCqFIOFA' }, function(place, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            var marker = new google.maps.Marker({
-              map: map,
-              position: place.geometry.location
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                place.formatted_address + '</div>');
-              infowindow.open(map, this);
-            });
-          }
+    service.getDetails({ placeId: 'ChIJZRgmzYI7wUcRjEHmCqFIOFA' }, function(place, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+            place.formatted_address + '</div>');
+          infowindow.open(map, this);
         });
       }
+    });
+  }

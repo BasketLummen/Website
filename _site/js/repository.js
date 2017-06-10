@@ -2,7 +2,7 @@ var dbversion = 3;
 
 var repository = new function(){
     var self = this;
-    this.initialize = function(orgId, callback){
+    this.initialize = function(orgId){
         self.orgId = orgId;
 
         if(typeof(Worker) !== "undefined") {
@@ -21,6 +21,7 @@ var repository = new function(){
             var request = indexedDB.open(orgId, dbversion);
             request.onerror = function(event) {
                 console.warn("Database error: " + event.target.errorCode);
+                $.topic("db.openerror").publish();
             };
             request.onsuccess = function(event) {
                 self.db = event.target.result;
@@ -32,7 +33,8 @@ var repository = new function(){
                 self.loadMembers(self.orgId);
                 self.loadMatches(self.orgId);
 
-                callback();
+                console.log("Database opened");
+                $.topic("db.opened").publish();
                
             };
             request.onupgradeneeded = function(event) { 
@@ -97,7 +99,21 @@ var repository = new function(){
         }); 
     }
 
-    this.nextMatch = function(){
+    this.currentOrganisation = function(callback){
+        var tx = self.db.transaction("organisations", "readonly");
+        var store = tx.objectStore("organisations");
+
+        store.openCursor().onsuccess = function(e) {
+            var cursor = e.target.result;
+            if(cursor) {
+                var key = cursor.key;
+                var match = cursor.value;
+                if(callback) callback(match);
+            }
+        }
+    }
+
+    this.futureMatches = function(callback){
         var tx = self.db.transaction("matches", "readonly");
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
@@ -110,8 +126,50 @@ var repository = new function(){
             if(cursor) {
                 var key = cursor.key;
                 var match = cursor.value;
-                console.log(match.pouleNaam + ": " + match.tTNaam + " vs " + match.tUNaam + " - " + match.datumString + ":" + match.beginTijd);
+                if(callback) callback(match);
                 cursor.continue();
+            }
+        }
+    }
+
+     this.nextMatch = function(callback){
+        var tx = self.db.transaction("matches", "readonly");
+        var store = tx.objectStore("matches");
+        var index = store.index("jsDTCode");
+
+        var today = new Date();
+
+        var range = IDBKeyRange.lowerBound(today.getTime());
+        index.openCursor(range).onsuccess = function(e) {
+            var cursor = e.target.result;
+            if(cursor) {
+                var key = cursor.key;
+                var match = cursor.value;
+                if(callback) callback(match);
+            }
+        }
+    }
+
+    this.nextMatchOfTeam = function(teamId, callback){
+        var tx = self.db.transaction("matches", "readonly");
+        var store = tx.objectStore("matches");
+        var index = store.index("jsDTCode");
+
+        var today = new Date();
+
+        var range = IDBKeyRange.lowerBound(today.getTime());
+        index.openCursor(range).onsuccess = function(e) {
+            var cursor = e.target.result;
+            if(cursor) {
+                var key = cursor.key;
+                var match = cursor.value;
+                if(match.tTGuid == teamId || match.tUGuid == teamId)
+                {
+                    if(callback) callback(match);
+                }
+                else{
+                    cursor.continue();
+                }                
             }
         }
     }

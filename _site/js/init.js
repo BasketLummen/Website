@@ -2,9 +2,7 @@ window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndex
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; 
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 
-repository.initialize("BVBL1176", function() { repository.nextMatch(); });
-
-
+repository.initialize("BVBL1176");
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
