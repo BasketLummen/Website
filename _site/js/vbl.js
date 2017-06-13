@@ -17,14 +17,23 @@ var vbl = new function(){
 
 
     this.orgDetail = function(orgId, callback){
-        self.getRequest(self.getUrl("OrgDetailByGuid", "issguid=" + orgId), callback);
+        self.getRequest(self.getUrl("OrgDetailByGuid", "issguid=" + orgId), function(org){
+            callback(org);
+            $.topic("vbl.organisation.loaded").publish();
+        });
     }
 
     this.members = function(orgId, callback){
-        self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), callback);
+        self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), function(members){
+            callback(members);
+            $.topic("vbl.members.loaded").publish();
+        });
     }
 
     this.matches = function(orgId, callback){
-        self.getRequest(self.getUrl("OrgMatchesByGuid", "issguid=" +  orgId), callback);
+        self.getRequest(self.getUrl("OrgMatchesByGuid", "issguid=" +  orgId), function(matches){
+            callback(matches);
+            $.topic("vbl.matches.loaded").publish();
+        });
     }
 }

@@ -1,8 +1,8 @@
+var orgId = "BVBL1176";
+
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; 
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-
-repository.initialize("BVBL1176");
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {

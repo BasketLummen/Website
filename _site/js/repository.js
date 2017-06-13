@@ -1,4 +1,5 @@
 var dbversion = 3;
+var usedb = indexedDB;
 
 var repository = new function(){
     var self = this;
@@ -16,26 +17,18 @@ var repository = new function(){
             console.warn("Web Worker not available.");
         }
 
-        if (indexedDB) {  
+        if (usedb) {  
 
             var request = indexedDB.open(orgId, dbversion);
             request.onerror = function(event) {
                 console.warn("Database error: " + event.target.errorCode);
-                $.topic("db.openerror").publish();
+                $.topic("db.open.error").publish();
             };
             request.onsuccess = function(event) {
                 self.db = event.target.result;
-
-                // if(self.worker != null){
-                //     //       self.worker.postMessage(JSON.stringify({what:"loadOrganization", orgId:self.orgId}))
-                //     // }
-                self.loadOrganization(self.orgId);
-                self.loadMembers(self.orgId);
-                self.loadMatches(self.orgId);
-
                 console.log("Database opened");
-                $.topic("db.opened").publish();
-               
+                $.topic("db.open.success").publish();
+                $.topic("repository.initialized").publish();               
             };
             request.onupgradeneeded = function(event) { 
                 console.log("Database upgrade needed");
@@ -49,57 +42,82 @@ var repository = new function(){
         else
         {
             console.warn("Browser doesn't support a stable version of IndexedDB.");
+            $.topic("repository.initialized").publish(); 
         }
     }
 
     this.ensureOrganisationsStore =  function(){
-        if (!self.db.objectStoreNames.contains('organisations')) {
+        if (usedb && !self.db.objectStoreNames.contains('organisations')) {
             var orgStore = self.db.createObjectStore("organisations", { keyPath: "guid" });
-
         }
     }
 
     this.ensureMembersStore =  function(b){
-         if (!self.db.objectStoreNames.contains('members')) {
+         if (usedb && !self.db.objectStoreNames.contains('members')) {
             var memberStore = self.db.createObjectStore("members", { keyPath: "relGuid" });
          }
     }
 
     this.ensureMatchesStore =  function(b){
-         if (!self.db.objectStoreNames.contains('matches')) {
+         if (usedb && !self.db.objectStoreNames.contains('matches')) {
             var matchesStore = self.db.createObjectStore("matches", { keyPath: "guid" });
             matchesStore.createIndex("jsDTCode", "jsDTCode")
          }
     }
 
-    this.loadOrganization = function(orgId){
-        vbl.orgDetail(orgId, function(orgs){
-            var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
-            orgs.forEach(function(o){
-               tx.add(o);
-            });            
+    this.loadOrganization = function(){
+        vbl.orgDetail(self.orgId, function(orgs){
+            if(usedb){
+                var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
+                orgs.forEach(function(o){
+                tx.add(o);
+                });     
+            }  
+            else{
+                 self.orgs = orgs;
+             }                    
         }); 
     }
 
-    this.loadMembers = function(orgId){
-        vbl.members(orgId, function(members){
-            var tx = self.db.transaction("members", "readwrite").objectStore("members");
-            members.forEach(function(m){
-               tx.add(m);
-            });            
+    this.loadMembers = function(){
+        vbl.members(self.orgId, function(members){
+            if(usedb){
+                var tx = self.db.transaction("members", "readwrite").objectStore("members");
+                members.forEach(function(m){
+                tx.add(m);
+                });
+            }    
+            else{
+                 self.members = members;
+             }     
         }); 
     }
 
-    this.loadMatches = function(orgId){
-        vbl.matches(orgId, function(matches){
-            var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
-            matches.forEach(function(m){
-               tx.add(m);
-            });            
+    this.loadMatches = function(){
+        vbl.matches(self.orgId, function(matches){
+             if(usedb){
+                var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
+                matches.forEach(function(m){
+                tx.add(m);
+                });
+             }
+             else{
+                 self.matches = matches;
+             }   
         }); 
     }
+
 
     this.currentOrganisation = function(callback){
+         if(usedb){
+            self._currentOrganisationFromDb(callback);           
+         }
+         else{
+            self._currentOrganisationFromArrays(callback); 
+         }
+    }
+
+    this._currentOrganisationFromDb = function(callback){
         var tx = self.db.transaction("organisations", "readonly");
         var store = tx.objectStore("organisations");
 
@@ -112,8 +130,21 @@ var repository = new function(){
             }
         }
     }
+    
+    this._currentOrganisationFromArrays = function(callback){
+       callback(self.orgs[0]);
+    }
 
-    this.futureMatches = function(callback){
+    this.futureMatches = function(teamId, callback){
+         if(usedb){
+            self._futureMatchesFromDb(teamId, callback);           
+         }
+         else{
+            self._futureMatchesFromArrays(teamId, callback); 
+         }
+    }
+
+    this._futureMatchesFromDb = function(callback){
         var tx = self.db.transaction("matches", "readonly");
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
@@ -132,7 +163,28 @@ var repository = new function(){
         }
     }
 
-     this.nextMatch = function(callback){
+    this._futureMatchesFromArrays = function(teamId, callback){
+         var today = new Date().getTime();
+            var futureMatches = [];
+            self.matches.forEach(function(match){
+                if(match.jsDTCode > today){
+                    futureMatches.push(match);
+                }
+            });
+
+            callback(futureMatches);
+    }
+
+    this.nextMatch = function(callback){
+         if(usedb){
+            self._nextMatchFromDb(callback);           
+         }
+        else{
+            self._nextMatchFromArrays(callback); 
+         }
+    }
+
+    this._nextMatchFromDb = function(callback){
         var tx = self.db.transaction("matches", "readonly");
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
@@ -147,10 +199,51 @@ var repository = new function(){
                 var match = cursor.value;
                 if(callback) callback(match);
             }
-        }
+        }         
+    }
+
+    this._nextMatchFromArrays = function(callback){
+         var today = new Date().getTime();
+            var futureMatches = [];
+            self.matches.forEach(function(match){
+                if(match.jsDTCode > today){
+                    futureMatches.push(match);
+                }
+            });
+
+            if(futureMatches.length > 0)
+            {
+                futureMatches.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
+                callback(futureMatches[0])
+            }
     }
 
     this.nextMatchOfTeam = function(teamId, callback){
+         if(usedb){
+            self._nextMatchOfTeamFromDb(teamId, callback);           
+         }
+         else{
+            self._nextMatchOfTeamFromArrays(teamId, callback); 
+         }
+    }
+
+    this._nextMatchOfTeamFromArrays = function(teamId, callback){
+         var today = new Date().getTime();
+            var futureMatchesOfTeam = [];
+            self.matches.forEach(function(match){
+                if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > today){
+                    futureMatchesOfTeam.push(match);
+                }
+            });
+
+            if(futureMatchesOfTeam.length > 0)
+            {
+                futureMatchesOfTeam.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
+                callback(futureMatchesOfTeam[0])
+            }
+     }
+
+    this._nextMatchOfTeamFromDb = function(teamId, callback){
         var tx = self.db.transaction("matches", "readonly");
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
