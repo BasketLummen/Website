@@ -11,7 +11,13 @@ var showNextMatch = function(){
               $("#next-vs").text(team.naam.replace("Basket Lummen ", ""));
           }
       });
+
+      var homesrc = vbl.teamimage(match.tTGUID);
+      var awaysrc = vbl.teamimage(match.tUGUID);
+      $("#next-home-team-logo img").attr("src", homesrc);
+      $("#next-away-team-logo img").attr("src", awaysrc);
   
+      $("#next-middle .container").css("visibility", "visible");
     });
   });
 };

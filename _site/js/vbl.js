@@ -1,8 +1,10 @@
 var vblprotocol = "http";
-var vblbase = "vblcb.wisseq.eu/VBLCB_WebService/data"
+var vblbase = "vblcb.wisseq.eu/VBLCB_WebService/data";
+var imgbas = "https://vblcb.wisseq.eu/vbldata/organisatie/";
 
 var vbl = new function(){
     var self = this;
+
     this.getRequest = function(uri, callback){
         var xhttp = new XMLHttpRequest();
         xhttp.onload = function () { callback(JSON.parse(xhttp.responseText)); };
@@ -18,22 +20,25 @@ var vbl = new function(){
 
     this.orgDetail = function(orgId, callback){
         self.getRequest(self.getUrl("OrgDetailByGuid", "issguid=" + orgId), function(org){
-            callback(org);
-            $.topic("vbl.organisation.loaded").publish();
+            callback(org);           
         });
     }
 
     this.members = function(orgId, callback){
         self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), function(members){
-            callback(members);
-            $.topic("vbl.members.loaded").publish();
+            callback(members);            
         });
     }
 
     this.matches = function(orgId, callback){
         self.getRequest(self.getUrl("OrgMatchesByGuid", "issguid=" +  orgId), function(matches){
-            callback(matches);
-            $.topic("vbl.matches.loaded").publish();
+            callback(matches);            
         });
     }
+
+    this.teamimage = function(teamid){
+            return imgbas + "/" + teamid.substring(0, 8) + "_Small.jpg";
+    }
 }
+
+vbl.initialize();

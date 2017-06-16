@@ -3,19 +3,20 @@ var usedb = indexedDB;
 
 var repository = new function(){
     var self = this;
-    this.initialize = function(orgId){
-        self.orgId = orgId;
 
-        if(typeof(Worker) !== "undefined") {
-            if(typeof(worker) == "undefined") {
-                self.worker = new Worker("/js/background.js");
-            }
-            self.worker.onmessage = function(event) {
-                console.log( event.data );
-            };
-        } else {
-            console.warn("Web Worker not available.");
-        }
+    this.initialize = function(orgId){
+        self.orgId = orgId;           
+
+        // if(typeof(Worker) !== "undefined") {
+        //     if(typeof(worker) == "undefined") {
+        //         self.worker = new Worker("/js/background.js");
+        //     }
+        //     self.worker.onmessage = function(event) {
+        //         console.log( event.data );
+        //     };
+        // } else {
+        //     console.warn("Web Worker not available.");
+        // }   
 
         if (usedb) {  
 
@@ -75,7 +76,8 @@ var repository = new function(){
             }  
             else{
                  self.orgs = orgs;
-             }                    
+             }
+              $.topic("vbl.organisation.loaded").publish();                 
         }); 
     }
 
@@ -89,7 +91,8 @@ var repository = new function(){
             }    
             else{
                  self.members = members;
-             }     
+             }
+             $.topic("vbl.members.loaded").publish();
         }); 
     }
 
@@ -103,10 +106,10 @@ var repository = new function(){
              }
              else{
                  self.matches = matches;
-             }   
+             }
+             $.topic("vbl.matches.loaded").publish();
         }); 
     }
-
 
     this.currentOrganisation = function(callback){
          if(usedb){
@@ -241,7 +244,7 @@ var repository = new function(){
                 futureMatchesOfTeam.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
                 callback(futureMatchesOfTeam[0])
             }
-     }
+    }
 
     this._nextMatchOfTeamFromDb = function(teamId, callback){
         var tx = self.db.transaction("matches", "readonly");

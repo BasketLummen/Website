@@ -101,6 +101,9 @@ blockquote, code{
 #next{
 	
 }
+#next-middle .container{
+	visibility: hidden;
+}
 #next > h2{
 	text-align:center;
 	padding-top: 1vh;
