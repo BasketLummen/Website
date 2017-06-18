@@ -40,5 +40,3 @@ var vbl = new function(){
             return imgbas + "/" + teamid.substring(0, 8) + "_Small.jpg";
     }
 }
-
-vbl.initialize();

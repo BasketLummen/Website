@@ -253,9 +253,8 @@ blockquote, code{
 
 /* map */
 #map-holder{
-	height: 40vh;
+	
 	margin: 4vh 0;
-	overflow: hidden;
 	position: relative;
 }
 #map {
@@ -265,8 +264,16 @@ blockquote, code{
 	#map {
 		width: 100vw;
 	}
+	#map-info{
+		text-align: center;
+	}
 }
 @media (min-width: 768px) {
+	#map-holder{
+		height: 40vh;
+		display: flex;
+		overflow: hidden;
+	}
 	#map {
 		width: 70vw;
 	}
@@ -283,6 +290,12 @@ blockquote, code{
 	  -ms-transform: skewX(-33deg);
 	  transform: skewX(-33deg);
 	  z-index: 0;
+	}
+	#map-info{
+		 display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: right;
 	}
 }
 

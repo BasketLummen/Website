@@ -165,6 +165,17 @@ body{
 	background-color: #ffe100;
 }
 
+#map-info{
+	color: #333;
+}
+
+@media (min-width: 768px) {
+	#map-info{
+		font-size: 1.2em;
+	}
+}
+
+
 /* footer */
 #footer{
 	background-color: #333;
