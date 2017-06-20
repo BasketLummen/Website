@@ -50,6 +50,7 @@ module.exports = (grunt) ->
           "js/**/*"
           "blog/**/*"
           "news/**/*"
+          "club/**/*"
           "_config.yml"
           "*.html"
           "*.md"
@@ -65,7 +66,7 @@ module.exports = (grunt) ->
         options:
           port: 4000
           base: '_site'
-          livereload: false
+          livereload: true
 
   grunt.registerTask "build", [
     "copy"
