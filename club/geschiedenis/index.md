@@ -30,7 +30,12 @@ De start in 2e provinciale
 
 Steeds bovenaan in 1e provinciale
  
- * [1977-1983](/club/geschiedenis/1977-1983) 
+ * [1977-1978](/club/geschiedenis/1977-1978) 
+ * [1978-1979](/club/geschiedenis/1978-1979) 
+ * [1979-1980](/club/geschiedenis/1979-1980) 
+ * [1980-1981](/club/geschiedenis/1980-1981) 
+ * [1981-1982](/club/geschiedenis/1981-1982) 
+ * [1982-1983](/club/geschiedenis/1982-1983) 
  
 ## 1983-1988
 
