@@ -7,12 +7,14 @@ keywords: Basket, Lummen
 
 # 1971-1972
 
+## 13 september 1971
+
 Ook in de jaren 70 was aanwezigheid op training belangrijk, getuige hiervan het verslag van een wedstrijd tegen Borgloon waar Biesmans, Westhof en Put gestraft werden.
 Lummen eindigde dit seizoen 1 plaatsje lager op een vijfde plaats.
 
 ![19710913](/club/geschiedenis/1971-1972/19710913.gif)
 
-## Eindklassement
+## Eindklassement 2e provinciale
 
 |----|--------------------|----|----|----|---|----|
 | 1  | Lommel             | 24 | 20 | 2  | 2 | 42 |
@@ -26,7 +28,7 @@ Lummen eindigde dit seizoen 1 plaatsje lager op een vijfde plaats.
 | 9  | Berkenbos          | 24 | 9  | 15 | 0 | 18 |
 | 10 | Alken              | 24 | 8  | 16 | 0 | 16 |
 | 11 | Kuringen           | 24 | 7  | 17 | 0 | 14 |
-| 12 | Ebak Eisden       | 24 | 6  | 18 | 0 | 12 |
+| 12 | Ebak Eisden        | 24 | 6  | 18 | 0 | 12 |
 | 13 | Lobac Borgloon     | 24 | 0  | 24 | 0 | 0  |
 
 

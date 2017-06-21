@@ -13,7 +13,7 @@ Tijdens het tweede seizoen had Lummen tot op de laatste speeldag kans op een der
 
 ![19710315](/club/geschiedenis/1970-1971/19710315.gif)
 
-## Eindklassement
+## Eindklassement 2e provinciale
 
 |----|--------------------|----|----|----|---|----|
 | 1  | Zillertal Beringen | 22 | 21 | 1  | 0 | 42 |

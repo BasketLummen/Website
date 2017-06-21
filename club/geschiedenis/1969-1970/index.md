@@ -35,7 +35,7 @@ Het eerste competitiejaar werd afgesloten op een 11de plaats (op 12 ploegen) in 
 
 ![19700416](/club/geschiedenis/1969-1970/19700416.gif)
 
-## Eindklassement
+## Eindklassement 2e provinciale
 
 |----|--------------------|----|----|----|---|----|
 | 1  | Optima             | 22 | 19 | 2  | 1 | 39 |
