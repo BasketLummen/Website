@@ -33,7 +33,9 @@ Op zaterdag 13 september 1969 speelde Lummen hun allereerste competitiewedstrijd
 
 Het eerste competitiejaar werd afgesloten op een 11de plaats (op 12 ploegen) in 2e provinciale. 5 overwinningen behaalde Lummen het eerste seizoen op 22 wedstrijden.
 
-### Het eindklassement
+![19700416](/club/geschiedenis/1969-1970/19700416.gif)
+
+## Eindklassement
 
 |----|--------------------|----|----|----|---|----|
 | 1  | Optima             | 22 | 19 | 2  | 1 | 39 |
