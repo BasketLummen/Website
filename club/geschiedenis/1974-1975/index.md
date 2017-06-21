@@ -30,4 +30,4 @@ Na 2 seizoen de promotie naar 1e provinciale net te missen, kwam Lummen in 1974-
 | 12 | Ebak Eisden           | 28 | 9  | 18 | 1 | 19 |
 | 13 | Kuringen              | 28 | 9  | 19 | 0 | 18 |
 | 14 | Maasmechelen          | 28 | 4  | 23 | 1 | 9  |
-| 14 | Obak Luxor Opglabbeek | 28 | 1  | 27 | 0 | 2  |
+| 15 | Obak Luxor Opglabbeek | 28 | 1  | 27 | 0 | 2  |
