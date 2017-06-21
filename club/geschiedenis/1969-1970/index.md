@@ -35,116 +35,16 @@ Het eerste competitiejaar werd afgesloten op een 11de plaats (op 12 ploegen) in 
 
 ### Het eindklassement
 
-<table border="1" cellspacing="0">
-	<tr>
-	  <td colspan="7" align="center" bgcolor="#999999"><span class="style1">2e provinciale 1969-1970</span></td>
-	</tr>
-	<tr>
-	  <td width="20" align="center">1</td>
-	  <td>Optima</td>
-	  <td width="20" align="center">22</td>
-	  <td width="20" align="center">19</td>
-	  <td width="20" align="center">2</td>
-	  <td width="20" align="center">1</td>
-	  <td width="20" align="center">39</td>
-	</tr>
-	<tr>
-	  <td align="center">2</td>
-	  <td>Overpelt</td>
-	  <td align="center">22</td>
-	  <td align="center">18</td>
-	  <td align="center">4</td>
-	  <td align="center">0</td>
-	  <td align="center">36</td>
-	</tr>
-	<tr>
-	  <td align="center">3</td>
-	  <td>Mechelen-a-d-Maas</td>
-	  <td align="center">22</td>
-	  <td align="center">17</td>
-	  <td align="center">5</td>
-	  <td align="center">0</td>
-	  <td align="center">34</td>
-	</tr>
-	<tr>
-	  <td align="center">4</td>
-	  <td>Lommel</td>
-	  <td align="center">22</td>
-	  <td align="center">16</td>
-	  <td align="center">6</td>
-	  <td align="center">0</td>
-	  <td align="center">32</td>
-	</tr>
-	<tr>
-	  <td align="center">5</td>
-	  <td>Zillertal Beringen</td>
-	  <td align="center">22</td>
-	  <td align="center">13</td>
-	  <td align="center">9</td>
-	  <td align="center">0</td>
-	  <td align="center">26</td>
-	</tr>
-	<tr>
-	  <td align="center">6</td>
-	  <td>Eisden</td>
-	  <td align="center">22</td>
-	  <td align="center">11</td>
-	  <td align="center">11</td>
-	  <td align="center">0</td>
-	  <td align="center">22</td>
-	</tr>
-	<tr>
-	  <td align="center">7</td>
-	  <td>Peerder</td>
-	  <td align="center">22</td>
-	  <td align="center">8</td>
-	  <td align="center">14</td>
-	  <td align="center">0</td>
-	  <td align="center">16</td>
-	</tr>
-	<tr>
-	  <td align="center">8</td>
-	  <td>Alken</td>
-	  <td align="center">22</td>
-	  <td align="center">7</td>
-	  <td align="center">14</td>
-	  <td align="center">1</td>
-	  <td align="center">15</td>
-	</tr>
-	<tr>
-	  <td align="center">9</td>
-	  <td>Gems Diepenbeek</td>
-	  <td align="center">22</td>
-	  <td align="center">7</td>
-	  <td align="center">15</td>
-	  <td align="center">0</td>
-	  <td align="center">14</td>
-	</tr>
-	<tr>
-	  <td align="center">10</td>
-	  <td>Kuringen</td>
-	  <td align="center">22</td>
-	  <td align="center">6</td>
-	  <td align="center">16</td>
-	  <td align="center">0</td>
-	  <td align="center">12</td>
-	</tr>
-	<tr>
-	  <td align="center"><b>11</b></td>
-	  <td><b>Tamera Lummen</b></td>
-	  <td align="center"><b>22</b></td>
-	  <td align="center"><b>5</b></td>
-	  <td align="center"><b>17</b></td>
-	  <td align="center"><b>0</b></td>
-	  <td align="center"><b>10</b></td>
-	</tr>
-	<tr>
-	  <td align="center">12</td>
-	  <td>Zizubo</td>
-	  <td align="center">22</td>
-	  <td align="center">4</td>
-	  <td align="center">18</td>
-	  <td align="center">0</td>
-	  <td align="center">8</td>
-	</tr>
-</table>
+|----|--------------------|----|----|----|---|----|
+| 1  | Optima             | 22 | 19 | 2  | 1 | 39 |
+| 2  | Overpelt           | 22 | 18 | 4  | 0 | 36 |
+| 3  | Mechelen-a-d-Maas  | 22 | 17 | 5  | 0 | 34 |
+| 4  | Lommel             | 22 | 16 | 6  | 0 | 32 |
+| 5  | Zillertal Beringen | 22 | 13 | 9  | 0 | 26 |
+| 6  | Eisden             | 22 | 11 | 11 | 0 | 22 |
+| 7  | Peerder            | 22 | 8  | 14 | 0 | 16 |
+| 8  | Alken              | 22 | 7  | 14 | 1 | 15 |
+| 9  | Gems Diepenbeek    | 22 | 7  | 15 | 0 | 14 |
+| 10 | Kuringen           | 22 | 6  | 16 | 0 | 12 |
+| 11 | **Tamera Lummen**  | 22 | 5  | 17 | 0 | 10 |
+| 12 | Zizubo             | 22 | 5  | 18 | 0 | 8  |
