@@ -41,8 +41,8 @@ Lummen 76 eindigde voorlaatste in de eerste ronde en hierdoor traden ze in de 2e
 | 5  | Zolder            | 16 | 8  | 8  | 16 |
 | 6  | Peer              | 16 | 6  | 10 | 12 |
 | 7  | Maasmechelen      | 16 | 4  | 12 | 8  |
-| 6  | **Lummen 76**     | 16 | 3  | 13 | 6  |
-| 7  | Excelsior Hasselt | 16 | 2  | 14 | 4  |
+| 8  | **Lummen 76**     | 16 | 3  | 13 | 6  |
+| 9  | Excelsior Hasselt | 16 | 2  | 14 | 4  |
 
 ## Eindklassement 2e provinciale B (2e ronde)
 
