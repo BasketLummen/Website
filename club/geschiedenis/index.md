@@ -41,8 +41,15 @@ Steeds bovenaan in 1e provinciale
 
 Naar nationale en terug naar provinciale
  
- * [1983-1988](/club/geschiedenis/1983-1988) 
- * [1988-1992](/club/geschiedenis/1988-1992)
+ * [1983-1984](/club/geschiedenis/1983-1984)
+ * [1984-1985](/club/geschiedenis/1984-1985)
+ * [1985-1986](/club/geschiedenis/1985-1986)
+ * [1986-1987](/club/geschiedenis/1986-1987)
+ * [1987-1988](/club/geschiedenis/1987-1988) 
+ * [1988-1989](/club/geschiedenis/1988-1989) 
+ * [1989-1990](/club/geschiedenis/1989-1990) 
+ * [1990-1991](/club/geschiedenis/1990-1991) 
+ * [1991-1992](/club/geschiedenis/1991-1992)
  
 ## 1992-1997
 
