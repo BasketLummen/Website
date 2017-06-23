@@ -21,13 +21,13 @@ Lummen 76 werd in de eerste ronde 7e in 2e provinciale B en in de eindronde met 
 | 5  | Gems DIepenbeek    | 26 | 18 | 8  | 36 |
 | 6  | Orly Hasselt       | 26 | 17 | 9  | 34 |
 | 7  | Bree               | 26 | 15 | 11 | 30 |
-| 7  | Kuringen           | 26 | 14 | 12 | 28 |
-| 7  | Inter Genk         | 26 | 12 | 14 | 24 |
-| 7  | Lommel             | 26 | 8  | 18 | 16 |
-| 7  | Eisden             | 26 | 8  | 18 | 16 |
-| 7  | Sint-Jans Hasselt  | 26 | 5  | 21 | 10 |
-| 7  | Overpelt           | 26 | 3  | 23 | 6  |
-| 7  | Beverlo            | 26 | 1  | 25 | 3  |
+| 8  | Kuringen           | 26 | 14 | 12 | 28 |
+| 9  | Inter Genk         | 26 | 12 | 14 | 24 |
+| 10 | Lommel             | 26 | 8  | 18 | 16 |
+| 11 | Eisden             | 26 | 8  | 18 | 16 |
+| 12 | Sint-Jans Hasselt  | 26 | 5  | 21 | 10 |
+| 13 | Overpelt           | 26 | 3  | 23 | 6  |
+| 14 | Beverlo            | 26 | 1  | 25 | 3  |
 
 ## Eindklassement 2e provinciale B (1e ronde)
 
