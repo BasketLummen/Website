@@ -66,8 +66,8 @@ Lummen 76 speelde kampioen in 2e provinciale na winst in een testwedstrijd tegen
 
 ## 26 maart 1984
 
-![19811109](/club/geschiedenis/1981-1982/19811109.gif)
+![19840326](/club/geschiedenis/1983-1984/19840326.gif)
 
 ## 21 april 1984
 
-![19811109](/club/geschiedenis/1981-1982/19811109.gif)
+![19840421](/club/geschiedenis/1983-1984/19840421.gif)
