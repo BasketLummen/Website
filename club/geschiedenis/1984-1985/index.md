@@ -77,9 +77,9 @@ De promotie van Lummen 76 naar 1e provinciale kwam hard aan: ze eindigden laatst
 | 8  | **Gama Lummen**  | 24 | 9  | 15 | 18 |
 | 9  | Maasmechelen     | 24 | 8  | 16 | 16 |
 | 10 | Neerpelt         | 24 | 6  | 18 | 12 |
-| 10 | Peer             | 24 | 5  | 19 | 10 |
-| 10 | Heusden          | 24 | 5  | 19 | 10 |
-| 10 | Overpelt         | 24 | 0  | 24 | 0  |
+| 11 | Peer             | 24 | 5  | 19 | 10 |
+| 12 | Heusden          | 24 | 5  | 19 | 10 |
+| 13 | Overpelt         | 24 | 0  | 24 | 0  |
 
 ## 18 februari 1985
 
