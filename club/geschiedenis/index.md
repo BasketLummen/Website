@@ -74,5 +74,7 @@ De topjaren
 
 Vechten in 3e nationale 
 
- * [2001-2004](/club/geschiedenis/2001-2004)
+ * [2001-2002](/club/geschiedenis/2001-2002)
+ * [2002-2003](/club/geschiedenis/2002-2003)
+ * [2003-2004](/club/geschiedenis/2003-2004)
 
