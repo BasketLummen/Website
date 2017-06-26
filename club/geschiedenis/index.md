@@ -65,7 +65,10 @@ Vaste waarde in 4de nationale
 
 De topjaren
  
- * [1997-2001](/club/geschiedenis/1997-2001)
+ * [1997-1998](/club/geschiedenis/1997-1998)
+ * [1998-1999](/club/geschiedenis/1998-1999)
+ * [1999-2000](/club/geschiedenis/1999-2000)
+ * [2000-2001](/club/geschiedenis/2000-2001)
 
 ## 2001-2004
 
