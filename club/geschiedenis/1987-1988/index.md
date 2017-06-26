@@ -15,7 +15,7 @@ Delta Lummen speelde opnieuw geen rol van betekenis in 3e provincale en werd 12e
 
 |----|---------------------|----|----|----|----|
 | 1  | Leopoldsburg        | 26 | 24 | 2  | 48 |
-| 2  |  **Gama Lummen**    | 26 | 20 | 6  | 40 |
+| 2  | **Gama Lummen**     | 26 | 20 | 6  | 40 |
 | 3  | Borgloon            | 26 | 19 | 7  | 38 |
 | 4  | Hades               | 26 | 18 | 8  | 36 |
 | 5  | Overpelt            | 26 | 14 | 12 | 28 |
@@ -42,7 +42,7 @@ Delta Lummen speelde opnieuw geen rol van betekenis in 3e provincale en werd 12e
 | 8  | Excelsior Hasselt   | 22 | 9  | 13 | 18 |
 | 9  | Bocholt             | 22 | 6  | 16 | 12 |
 | 10 | Hamont              | 22 | 4  | 18 | 8  |
-| 11 | 	JT Maasmechelen    | 22 | 2  | 20 | 4  |
+| 11 | JT Maasmechelen     | 22 | 2  | 20 | 4  |
 | 12 | **Delta Lummen**    | 22 | 1  | 21 | 2  |
 
 ## 21 oktober 1987
