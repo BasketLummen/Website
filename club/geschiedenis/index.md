@@ -55,7 +55,11 @@ Naar nationale en terug naar provinciale
 
 Vaste waarde in 4de nationale
 
- * [1992-1997](/club/geschiedenis/1992-1997)
+ * [1992-1993](/club/geschiedenis/1992-1993)
+ * [1993-1994](/club/geschiedenis/1993-1994)
+ * [1994-1995](/club/geschiedenis/1994-1995)
+ * [1995-1996](/club/geschiedenis/1995-1996)
+ * [1996-1997](/club/geschiedenis/1996-1997)
  
 ## 1997-2001
 
