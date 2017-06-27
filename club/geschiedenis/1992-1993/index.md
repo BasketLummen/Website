@@ -12,20 +12,20 @@ In 1992-1993 was er voor de spelers Lummen maar 1 opdracht: kampioen spelen en t
 ## Eindklassement 1e provinciale
 
 |----|--------------------|----|----|----|----|
-| 1  | **Lummen**         | 26 | 24 | 2  | 46 |
-| 2  | Zolder             | 26 | 17 | 9  | 42 |
-| 3  | Alken              | 26 | 17 | 9  | 36 |
+| 1  | **Lummen**         | 26 | 24 | 2  | 48 |
+| 2  | Zolder             | 26 | 17 | 9  | 34 |
+| 3  | Alken              | 26 | 17 | 9  | 34 |
 | 4  | Helchteren         | 26 | 16 | 10 | 32 |
-| 5  | Pioneer Beringen   | 26 | 16 | 10 | 30 |
-| 6  | Leopoldsburg       | 26 | 15 | 11 | 28 |
-| 7  | Sint-Truiden 81    | 26 | 15 | 11 | 24 |
+| 5  | Pioneer Beringen   | 26 | 16 | 10 | 32 |
+| 6  | Leopoldsburg       | 26 | 15 | 11 | 30 |
+| 7  | Sint-Truiden 81    | 26 | 15 | 11 | 30 |
 | 8  | Optima Tessenderlo | 26 | 11 | 15 | 22 |
-| 9  | Borgloon           | 26 | 11 | 15 | 20 |
+| 9  | Borgloon           | 26 | 11 | 15 | 22 |
 | 10 | Hades              | 26 | 10 | 16 | 20 |
-| 11 | Stevoort           | 26 | 10 | 16 | 18 |
-| 12 | Kajoba             | 26 | 9  | 17 | 16 |
-| 13 | Bilzen             | 26 | 9  | 17 | 16 |
-| 14 | Orly Hasselt       | 26 | 2  | 24 | 14 |
+| 11 | Stevoort           | 26 | 10 | 16 | 20 |
+| 12 | Kajoba             | 26 | 9  | 17 | 18 |
+| 13 | Bilzen             | 26 | 9  | 17 | 18 |
+| 14 | Orly Hasselt       | 26 | 2  | 24 | 4 |
 
 ## 1 maart 1993
 
