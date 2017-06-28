@@ -238,7 +238,7 @@ blockquote, code{
 }
 
 /* posts */
-.post{
+.posts, .post{
 	min-height: calc(70vh - 70px);
 	margin-bottom: 6vh;
 	padding-top: 2vh;
