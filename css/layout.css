@@ -36,10 +36,15 @@ blockquote, code{
 	min-width: 50px;
 }
 @media (min-width: 768px) {
+	.navbar {
+		margin-bottom: 3vw;
+	}
 	.navbar-brand img{	
 		margin-top: -1vw;
 	}
 }
+
+
 
 @media (max-width: 767px) {
 	#facebook-ico{ display: none; }
@@ -70,6 +75,7 @@ blockquote, code{
 /* carousel */
 .carousel {
   height: 60vh;
+  margin-top: -3vw;
 }
 
 .carousel-caption {
@@ -221,28 +227,31 @@ blockquote, code{
 }
 
 /* news */
-#news{
-	min-height: 40vh;
-}
-#news .container{
-    position: relative;
-	display: flex;
-    justify-content: space-between;
-	padding: 0;
+#news h2{
+	text-align: center;
+	padding-top: 1vh;
 }
 
 #news > .container > div {
-	min-height: 38vh;
-	margin: 1vh 0;
-	padding: 1vh 1vw;
+    margin: 1vh 0;
+    padding: 1vh 1vw;
 }
 
-
-#news > .container > div:first-child {
-	margin-right: .5vw;
+/* posts */
+.post{
+	min-height: calc(70vh - 70px);
+	margin-bottom: 6vh;
+	padding-top: 2vh;
 }
-#news > .container > div:last-child {
-	margin-left: .5vw;
+.post table{
+	border-collapse: collapse;
+	width: 100%;
+}
+.post img{
+	max-width: 100%;
+}
+.post .comment{
+	margin-top: 4vh;
 }
 
 /* news-letter */
