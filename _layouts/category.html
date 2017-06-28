@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Blog
 ---
 	<div id="posts">
 		<div class="container">	
 		
-			<h2>Blog</h2>
+			<h2>{{ page.title }}</h2>
 			{% for post in paginator.posts %}
 				<div>
 					<a href="{{ post.permalink | prepend: site.baseurl }}"><h3>{{ post.title }}</h3></a>
