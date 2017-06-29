@@ -51,6 +51,7 @@ module.exports = (grunt) ->
           "blog/**/*"
           "news/**/*"
           "club/**/*"
+          "business/**/*"
           "_config.yml"
           "*.html"
           "*.md"
