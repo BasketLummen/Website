@@ -226,15 +226,51 @@ blockquote, code{
 	}
 }
 
+.partners ul {
+	-moz-column-count: 1;
+	-webkit-column-count: 1;
+	column-count: 1;
+    -moz-column-gap: 2vw;
+    -webkit-column-gap: 2vw;
+    column-gap: 2vw;
+}
+
 .partners li{
 	list-style-type: none;
 }
 
 .partners img{
-	width: 20vw;
+	width: 60vw;
 	height: auto;
 	margin: 2vh;
 }
+
+
+@media (min-width: 481px) {
+	.partners ul {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	
+	.partners img{
+		width: 30vw;
+	}
+}
+
+@media (min-width: 768px) {
+	.partners ul {
+		-moz-column-count: 4;
+		-webkit-column-count: 4;
+		column-count: 4;
+	}
+	
+	.partners img{
+		width: 10vw;
+	}
+}
+
+
 
 /* news */
 #news h2{
