@@ -226,6 +226,16 @@ blockquote, code{
 	}
 }
 
+.partners li{
+	list-style-type: none;
+}
+
+.partners img{
+	width: 20vw;
+	height: auto;
+	margin: 2vh;
+}
+
 /* news */
 #news h2{
 	text-align: center;
