@@ -25,7 +25,6 @@ var showNextMatch = function(){
 
 $.topic("repository.initialized").subscribe(function () {
   console.log("loading data");
-  repository.loadOrganization();
   repository.loadMatches();
 });
 
