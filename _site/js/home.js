@@ -31,6 +31,7 @@ $.topic("repository.initialized").subscribe(function () {
 var orgloaded = false;
 var matchesloaded = false;
 
+// assumes init loads the org
 $.topic("vbl.organisation.loaded").subscribe(function () {
     orgloaded = true;
     if(matchesloaded == true){
@@ -48,9 +49,6 @@ $.topic("vbl.matches.loaded").subscribe(function () {
 $.topic("vbl.members.loaded").subscribe(function () {
 
 });
-
-repository.initialize(orgId);
-
 
 
 setInterval(function(){
