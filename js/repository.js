@@ -71,7 +71,7 @@ var repository = new function(){
             if(usedb){
                 var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
                 orgs.forEach(function(o){
-                tx.add(o);
+                tx.put(o);
                 });     
             }  
             else{
@@ -86,7 +86,7 @@ var repository = new function(){
             if(usedb){
                 var tx = self.db.transaction("members", "readwrite").objectStore("members");
                 members.forEach(function(m){
-                tx.add(m);
+                tx.put(m);
                 });
             }    
             else{
@@ -101,7 +101,7 @@ var repository = new function(){
              if(usedb){
                 var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
                 matches.forEach(function(m){
-                tx.add(m);
+                tx.put(m);
                 });
              }
              else{
