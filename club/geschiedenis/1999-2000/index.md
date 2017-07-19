@@ -1,5 +1,5 @@
 ---
-layout:contentpage
+layout: content
 title: Basket Lummen
 description: Basket Lummen
 keywords: Basket, Lummen
