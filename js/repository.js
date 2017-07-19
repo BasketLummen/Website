@@ -1,4 +1,4 @@
-var dbversion = 3;
+var dbversion = 4;
 var usedb = indexedDB;
 
 var repository = new function(){
@@ -35,6 +35,7 @@ var repository = new function(){
                 console.log("Database upgrade needed");
                 self.db = event.target.result;
                 self.ensureOrganisationsStore();
+                self.ensureTeamsStore();
                 self.ensureMembersStore();
                 self.ensureMatchesStore();
             };
@@ -50,6 +51,12 @@ var repository = new function(){
     this.ensureOrganisationsStore =  function(){
         if (usedb && !self.db.objectStoreNames.contains('organisations')) {
             var orgStore = self.db.createObjectStore("organisations", { keyPath: "guid" });
+        }
+    }
+
+    this.ensureTeamsStore =  function(){
+        if (usedb && !self.db.objectStoreNames.contains('teams')) {
+            var orgStore = self.db.createObjectStore("teams", { keyPath: "guid" });
         }
     }
 
@@ -71,13 +78,28 @@ var repository = new function(){
             if(usedb){
                 var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
                 orgs.forEach(function(o){
-                tx.put(o);
+                    tx.put(o);
                 });     
             }  
             else{
                  self.orgs = orgs;
              }
               $.topic("vbl.organisation.loaded").publish();                 
+        }); 
+    }
+
+     this.loadTeam = function(teamId){
+        vbl.teamDetail(teamId, function(teams){
+            if(usedb){
+                var tx = self.db.transaction("teams", "readwrite").objectStore("teams");
+                teams.forEach(function(t){
+                    tx.put(t);
+                });  
+            }  
+            else{
+                 self.teams = teams;
+             }
+              $.topic("vbl.team.loaded").publish();                 
         }); 
     }
 

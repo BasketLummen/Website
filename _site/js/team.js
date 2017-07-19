@@ -7,14 +7,16 @@ var getParameterByName = function (name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-
+var teamid = decodeURIComponent(getParameterByName("teamid"));
 
 $.topic("repository.initialized").subscribe(function () {
   console.log("loading data");
   repository.loadMatches();
+  
+  repository.loadTeam(teamid);
 });
 
-$.topic("vbl.organisation.loaded").subscribe(function () {
+$.topic("vbl.team.loaded").subscribe(function () {
    
 });
 
@@ -27,6 +29,5 @@ $.topic("vbl.members.loaded").subscribe(function () {
 });
 
 $( document ).ready(function() {
-    var teamid = decodeURIComponent(getParameterByName("teamid"));
     $("#team-name").text(teamid)
 });

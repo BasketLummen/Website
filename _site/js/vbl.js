@@ -24,6 +24,12 @@ var vbl = new function(){
         });
     }
 
+    this.teamDetail = function(teamId, callback){
+        self.getRequest(self.getUrl("TeamDetailByGuid", "teamGuid=" + teamId), function(teams){
+            callback(teams);           
+        });
+    }
+
     this.members = function(orgId, callback){
         self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), function(members){
             callback(members);            
@@ -35,8 +41,10 @@ var vbl = new function(){
             callback(matches);            
         });
     }
+    //GET /VBLCB_WebService/data/TeamMatchesByGuid?teamGuid=BVBL1176DSE++1 HTTP/1.1 ???
 
     this.teamimage = function(teamid){
             return imgbas + "/" + teamid.substring(0, 8) + "_Small.jpg";
     }
+
 }
