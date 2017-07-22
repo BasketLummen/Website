@@ -17,7 +17,12 @@ $.topic("repository.initialized").subscribe(function () {
 });
 
 $.topic("vbl.team.loaded").subscribe(function () {
-   
+    var team = repository.getTeam(teamid, function(team){
+        if(team && team.guid == teamid){
+            $("#team-name").text(team.naam)
+        }  
+    });
+     
 });
 
 $.topic("vbl.matches.loaded").subscribe(function () {
@@ -29,5 +34,5 @@ $.topic("vbl.members.loaded").subscribe(function () {
 });
 
 $( document ).ready(function() {
-    $("#team-name").text(teamid)
+    
 });

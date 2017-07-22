@@ -99,7 +99,7 @@ var repository = new function(){
             else{
                  self.teams = teams;
              }
-              $.topic("vbl.team.loaded").publish();                 
+             $.topic("vbl.team.loaded").publish();                 
         }); 
     }
 
@@ -158,6 +158,34 @@ var repository = new function(){
     
     this._currentOrganisationFromArrays = function(callback){
        callback(self.orgs[0]);
+    }
+
+     this.getTeam = function(teamid, callback){
+         if(usedb){
+            self._getTeamFromDb(teamid,callback);           
+         }
+         else{
+            self._getTeamFromArrays(teamid,callback); 
+         }
+    }
+
+    this._getTeamFromDb = function(teamid, callback){
+        var tx = self.db.transaction("teams", "readonly");
+        var store = tx.objectStore("teams");
+
+        var req = store.get(teamid);
+
+        req.onsuccess = function(event) {
+            callback(req.result);
+        };
+    }
+    
+    this._getTeamFromArrays = function(teamid, callback){
+       self.teams.forEach(function(team){
+            if(team.guid == teamid){
+                 callback(team);
+            }
+        });
     }
 
     this.futureMatches = function(teamId, callback){
