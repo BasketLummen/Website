@@ -358,3 +358,26 @@ blockquote, code{
 #footer{
 	height: 20vh;
 }
+
+/* dashboard */
+.dashboard{
+	display: flex; 
+	/* flex-direction: row; */
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.pane{
+	/* flex-grow: 0;
+    flex-shrink: 0; */
+    flex-basis: 40%;
+  
+  	
+}
+.border{
+	 padding: 5px; 
+}
+
+.dashboard table{
+	width: 100%;
+}

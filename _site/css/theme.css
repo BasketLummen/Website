@@ -1,5 +1,5 @@
 body{
-	font-family: Open Sans;
+	font-family: Muli;
     /*font-size: 1.6em;*/
 }
 
@@ -177,4 +177,30 @@ body{
 /* footer */
 #footer{
 	background-color: #333;
+}
+
+
+/* dashboard */
+.dashboard{
+	/* font-size: 1em; */
+}
+
+.pane{
+    margin: 5px;
+}
+.border{
+	border: 1px solid #CCC;
+}
+.spacer:not(:last-child){
+ 	margin-bottom: 5px;
+}
+
+.dashboard table th{
+	background-color: #999;
+	color: #fff;
+	font-weight: normal;
+}
+.dashboard table tr, .dashboard table td{
+	border: 1px solid #CCC;
+	border-collapse: collapse;
 }

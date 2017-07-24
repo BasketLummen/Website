@@ -28,7 +28,7 @@ $.topic("vbl.organisation.loaded").subscribe(function () {
             var naam = team.naam.replace("Basket Lummen ", "");
             var guid = encodeURIComponent(team.guid);
             var markup = "<li><a href=\"/teams?teamid=" + guid + "\">" + naam + "</a></li>";
-            if(naam.startsWith("HSE") || naam.startsWith("DSE")){
+            if(naam.lastIndexOf("HSE", 0) === 0 || naam.lastIndexOf("DSE", 0) === 0){
                 $(markup).insertBefore("#teams-menu-separator");
             }
             else{
