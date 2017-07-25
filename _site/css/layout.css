@@ -374,6 +374,10 @@ blockquote, code{
 		flex-basis: 49%;
 	}
 }
+.pane.large{
+	flex-basis: 100%;
+}
+
 .border{
 	 padding: 5px; 
 }
