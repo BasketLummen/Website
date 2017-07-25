@@ -408,3 +408,10 @@ blockquote, code{
 .dashboard .tiles .tile img{
 	max-width: 150px;  	
 }
+
+.centered-content{
+	text-align: center;
+}
+.centered-content img{
+	margin: 20px;
+}

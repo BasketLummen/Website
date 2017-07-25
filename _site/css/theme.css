@@ -204,3 +204,13 @@ body{
 	border: 1px solid #CCC;
 	border-collapse: collapse;
 }
+
+/* team dashboard */
+.rank{
+	font-size: 2em;
+	padding: .6em;
+}
+.rank span{
+	font-size: 3em;
+	font-weight: bold;
+}
