@@ -415,3 +415,6 @@ blockquote, code{
 .centered-content img{
 	margin: 20px;
 }
+.klassement-detail{
+	display: none;
+}

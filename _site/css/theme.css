@@ -214,3 +214,23 @@ body{
 	font-size: 3em;
 	font-weight: bold;
 }
+
+.next-game{
+	background-color: #ffe100;
+	color: #333;
+	padding: 20px;
+}
+.next-game h2{
+	color: #333;
+}
+
+.next-game img{
+	border: 1px solid #ffe100;
+	background-color: #fff;
+	padding: 10px;
+}
+
+.klassement { background-color: #EFEFEF; }
+.klassement ~ .klassement { background-color: #fff; }
+.klassement.border { border: 1px solid #EFEFEF; }
+.klassement.border ~ .klassement.border { border: 1px solid #EFEFEF; }
