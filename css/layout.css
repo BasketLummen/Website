@@ -371,7 +371,7 @@ blockquote, code{
 	.pane{
 		/* flex-grow: 0;
 		flex-shrink: 0; */
-		flex-basis: 45%;
+		flex-basis: 40%;
 	}
 }
 .pane.large{
