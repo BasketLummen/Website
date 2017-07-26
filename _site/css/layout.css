@@ -393,7 +393,7 @@ blockquote, code{
 .dashboard .tiles{
 	display: flex; 
 	flex-flow: row wrap;
-	justify-content: space-between;	
+	justify-content: center;	
 }
 .dashboard .tiles .tile{
 	flex-grow: 0;
@@ -402,11 +402,11 @@ blockquote, code{
 }
 @media (min-width: 768px) {
 	.dashboard .tiles .tile{
-		flex-basis: 25%;		
+		flex-basis: 20%;		
 	}
 }
 .dashboard .tiles .tile img{
-	max-width: 125px;  	
+	max-width: 110px;  	
 }
 
 .centered-content{
