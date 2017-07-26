@@ -405,9 +405,16 @@ blockquote, code{
 		flex-basis: 30%;		
 	}
 }
+
 .dashboard .tiles .tile img{
-	max-width: 80px;  	
+	max-width: 100px;  	
 }
+@media (orientation : portrait) { 
+	.dashboard .tiles .tile img{
+		max-width: 80px;  	
+	} 
+}
+
 
 .centered-content{
 	text-align: center;
