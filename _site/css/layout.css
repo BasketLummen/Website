@@ -371,7 +371,7 @@ blockquote, code{
 	.pane{
 		/* flex-grow: 0;
 		flex-shrink: 0; */
-		flex-basis: 49%;
+		flex-basis: 45%;
 	}
 }
 .pane.large{
@@ -398,7 +398,7 @@ blockquote, code{
 .dashboard .tiles .tile{
 	flex-grow: 0;
 	flex-shrink: 0;
-	margin: 5px;
+	margin: 0px 5px 10px 5px;
 }
 @media (min-width: 768px) {
 	.dashboard .tiles .tile{
@@ -406,7 +406,7 @@ blockquote, code{
 	}
 }
 .dashboard .tiles .tile img{
-	max-width: 150px;  	
+	max-width: 125px;  	
 }
 
 .centered-content{
