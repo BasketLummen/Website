@@ -234,3 +234,6 @@ body{
 .klassement ~ .klassement { background-color: #fff; }
 .klassement.border { border: 1px solid #EFEFEF; }
 .klassement.border ~ .klassement.border { border: 1px solid #EFEFEF; }
+
+.detail tr:nth-child(even){ background-color: #FFFFFF; }
+.detail tr:nth-child(odd){ background-color: #EFEFEF; }

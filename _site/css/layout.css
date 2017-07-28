@@ -399,6 +399,7 @@ blockquote, code{
 	flex-grow: 0;
 	flex-shrink: 0;
 	margin: 0px 5px 10px 5px;
+	text-align: center;
 }
 @media (min-width: 768px) {
 	.dashboard .tiles .tile{
@@ -407,7 +408,7 @@ blockquote, code{
 }
 
 .dashboard .tiles .tile img{
-	max-width: 100px;  	
+	max-width: 100px;
 }
 @media (orientation : portrait) { 
 	.dashboard .tiles .tile img{
@@ -422,6 +423,6 @@ blockquote, code{
 .centered-content img{
 	margin: 20px;
 }
-.klassement-detail{
+.detail{
 	display: none;
 }

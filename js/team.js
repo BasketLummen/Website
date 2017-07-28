@@ -34,8 +34,8 @@ $.topic("vbl.members.loaded").subscribe(function () {
 });
 
 $( document ).ready(function() {
-    $(".klassement-detail-toggle").click(function(){
-        $(this).parent().nextAll(".klassement-detail:first").toggle();  
+    $(".detail-toggle").click(function(){
+        $(this).parent().nextAll(".detail:first").toggle();  
         return false;
     });
 });
