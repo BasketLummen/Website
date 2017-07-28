@@ -205,7 +205,21 @@ body{
 	border-collapse: collapse;
 }
 
+
+
+.detail tr:nth-child(even){ background-color: #FFFFFF; }
+.detail tr:nth-child(odd){ background-color: #EFEFEF; }
+
+.next-game .detail tr:nth-child(even){ background-color: #FFFFFF; }
+.next-game .detail tr:nth-child(odd){ background-color: #FFF4A6; }
+
+
 /* team dashboard */
+
+#team-dashboard{
+	visibility: hidden;
+}
+
 .rank{
 	font-size: 2em;
 	padding: .6em;
@@ -235,8 +249,3 @@ body{
 .klassement.border { border: 1px solid #EFEFEF; }
 .klassement.border ~ .klassement.border { border: 1px solid #EFEFEF; }
 
-.detail tr:nth-child(even){ background-color: #FFFFFF; }
-.detail tr:nth-child(odd){ background-color: #EFEFEF; }
-
-.next-game .detail tr:nth-child(even){ background-color: #FFFFFF; }
-.next-game .detail tr:nth-child(odd){ background-color: #FFF4A6; }

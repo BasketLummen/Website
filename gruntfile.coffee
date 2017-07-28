@@ -31,8 +31,14 @@ module.exports = (grunt) ->
           cwd: "bower_components/bootstrap/dist/js/"
           src: "bootstrap.min.js"
           dest: "theme/js/"
+        },
+        {
+          expand: true
+          cwd: "bower_components/jquery.template/"
+          src: "jquery.template.js"
+          dest: "js/"
         }]
-
+		
     exec:
       jekyll:
         cmd: "jekyll build --trace"

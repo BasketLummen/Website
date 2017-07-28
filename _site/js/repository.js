@@ -309,7 +309,7 @@ var repository = new function(){
             if(cursor) {
                 var key = cursor.key;
                 var match = cursor.value;
-                if(match.tTGuid == teamId || match.tUGuid == teamId)
+                if(match.tTGUID == teamId || match.tUGUID == teamId)
                 {
                     if(callback) callback(match);
                 }

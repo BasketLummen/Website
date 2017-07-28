@@ -95,10 +95,7 @@ custom_js:
         <div class="pane">
             <div class="next-game spacer centered-content">
                 <h2>Volgende tegenstander</h2>
-                <img src="https://vblcb.wisseq.eu/vbldata/organisatie//BVBL1171_Small.jpg" />
-                <div> zaterdag </div>
-                <div> 5 augustus </div>
-                <div> 18:00 </div>
+                <div id="next-game-placeholder"></div>
                 <div>
                     <h3><a class="detail-toggle" href="#">Volgende Wedstrijden</a></h3>
                     <table class="detail">
@@ -520,3 +517,11 @@ custom_js:
 
     </div>
 </div>
+
+<script type="text/template" id="next-game-template">
+    <img id="opponent-img" class="src-imgurl" />
+    <div class="text-name"></div>
+    <div class="text-day"></div>
+    <div class="text-date"></div>
+    <div class="text-time"></div>
+</script>
