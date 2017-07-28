@@ -196,7 +196,7 @@ body{
 }
 
 .dashboard table th{
-	background-color: #999;
+	background-color: #333;
 	color: #fff;
 	font-weight: normal;
 }
@@ -237,3 +237,6 @@ body{
 
 .detail tr:nth-child(even){ background-color: #FFFFFF; }
 .detail tr:nth-child(odd){ background-color: #EFEFEF; }
+
+.next-game .detail tr:nth-child(even){ background-color: #FFFFFF; }
+.next-game .detail tr:nth-child(odd){ background-color: #FFF4A6; }
