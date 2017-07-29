@@ -244,8 +244,8 @@ body{
 	padding: 10px;
 }
 
-.klassement { background-color: #EFEFEF; }
-.klassement ~ .klassement { background-color: #fff; }
-.klassement.border { border: 1px solid #EFEFEF; }
-.klassement.border ~ .klassement.border { border: 1px solid #EFEFEF; }
+.standings { background-color: #EFEFEF; }
+.standings ~ .standings { background-color: #fff; }
+.standings.border { border: 1px solid #EFEFEF; }
+.standings.border ~ .standings.border { border: 1px solid #EFEFEF; }
 

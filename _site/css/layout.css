@@ -423,6 +423,17 @@ blockquote, code{
 .centered-content img{
 	margin: 20px;
 }
+.absolute-centered-flex {
+  align-self: center;
+}
+
 .detail{
 	display: none;
+}
+
+.players .tiles{
+	min-height: 30vh;
+}
+.staff .tiles{
+	min-height: 20vh;
 }
