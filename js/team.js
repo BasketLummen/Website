@@ -9,7 +9,7 @@ var getParameterByName = function (name, url) {
 }
 var teamid = decodeURIComponent(getParameterByName("teamid"));
 
-var showNextMatch = function(){
+var renderNextMatch = function(){
   repository.nextMatchOfTeam(teamid, function(match){
         var src;
         var name;
@@ -34,14 +34,29 @@ var showNextMatch = function(){
         });
         $("#next-game-placeholder").append(div);
   });
-};
 
-$.topic("repository.initialized").subscribe(function () {
-  console.log("loading data");
-  repository.loadMatches();
-  
-  repository.loadTeam(teamid);
-});
+  repository.futureMatches(teamid, function(match){
+    var tr = $.template("#future-game-template", {
+                date: match.datumString,
+                time: match.beginTijd,
+                home: match.tTNaam,
+                away: match.tUNaam
+            }, "tbody");
+    $(".future-games").append(tr);
+  });
+
+repository.pastMatches(teamid, function(match){
+    var tr = $.template("#past-game-template", {
+                date: match.datumString,
+                time: match.beginTijd,
+                home: match.tTNaam,
+                away: match.tUNaam,
+                result: match.uitslag
+            }, "tbody");
+    $(".past-games").append(tr);
+  });
+
+};
 
 var renderTeam = function(team){
     $("#team-name").text(team.naam);
@@ -101,7 +116,7 @@ var renderTeam = function(team){
                             draws: t.wedGelijk,
                             losses:  t.wedVerloren,
                             points: t.wedPunt
-                        }, "table")
+                        }, "tbody")
                         entries.push(tr);
                     });
                 }
@@ -126,6 +141,14 @@ var renderTeam = function(team){
     });
 };
 
+
+$.topic("repository.initialized").subscribe(function () {
+  console.log("loading data");
+  repository.loadMatches();
+  
+  repository.loadTeam(teamid);
+});
+
 $.topic("vbl.team.loaded").subscribe(function () {
     var team = repository.getTeam(teamid, function(team){
         if(team && team.guid == teamid){
@@ -139,7 +162,7 @@ $.topic("vbl.team.loaded").subscribe(function () {
 });
 
 $.topic("vbl.matches.loaded").subscribe(function () {
-   showNextMatch();
+   renderNextMatch();
 });
 
 $.topic("vbl.members.loaded").subscribe(function () {

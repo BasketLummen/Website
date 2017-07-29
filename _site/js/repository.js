@@ -197,7 +197,7 @@ var repository = new function(){
          }
     }
 
-    this._futureMatchesFromDb = function(callback){
+    this._futureMatchesFromDb = function(teamId, callback){
         var tx = self.db.transaction("matches", "readonly");
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
@@ -210,22 +210,73 @@ var repository = new function(){
             if(cursor) {
                 var key = cursor.key;
                 var match = cursor.value;
-                if(callback) callback(match);
+                if((match.tTGUID == teamId || match.tUGUID == teamId)){
+                     if(callback) callback(match);
+                }
                 cursor.continue();
             }
         }
     }
 
     this._futureMatchesFromArrays = function(teamId, callback){
-         var today = new Date().getTime();
-            var futureMatches = [];
-            self.matches.forEach(function(match){
-                if(match.jsDTCode > today){
-                    futureMatches.push(match);
-                }
-            });
+        var today = new Date().getTime();
+        self.matches.forEach(function(match){
+            if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > today){
+                callback(match);
+            }
+        });
+    }
 
-            callback(futureMatches);
+    var computeSeasonStart = function(date){
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        if(month >= 8){
+            return new Date(year, month, 1);
+        }
+        else{
+            return new Date(year - 1, month, 1);
+        }
+    };
+
+    this.pastMatches = function(teamId, callback){
+         if(usedb){
+            self._pastMatchesFromDb(teamId, callback);           
+         }
+         else{
+            self._pastMatchesFromArrays(teamId, callback); 
+         }
+    }
+
+    this._pastMatchesFromDb = function(teamId, callback){
+        var tx = self.db.transaction("matches", "readonly");
+        var store = tx.objectStore("matches");
+        var index = store.index("jsDTCode");
+
+        var today = new Date();
+        var seasonStart = computeSeasonStart(today);
+
+        var range = IDBKeyRange.Bound(seasonStart.getTime(), today.getTime());
+        index.openCursor(range).onsuccess = function(e) {
+            var cursor = e.target.result;
+            if(cursor) {
+                var key = cursor.key;
+                var match = cursor.value;
+                if((match.tTGUID == teamId || match.tUGUID == teamId)){
+                     if(callback) callback(match);
+                }
+                cursor.continue();
+            }
+        }
+    }
+
+    this._pastMatchesFromArrays = function(teamId, callback){
+        var today = new Date();
+        var seasonStart = computeSeasonStart(today);
+        self.matches.forEach(function(match){
+            if((match.tTGUID == teamId || match.tUGUID == teamId) && (match.jsDTCode >= seasonStart.getTime() && match.jsDTCode <= today.getTime())){
+                callback(match);
+            }
+        });
     }
 
     this.nextMatch = function(callback){
