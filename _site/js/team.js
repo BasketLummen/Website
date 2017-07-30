@@ -153,7 +153,8 @@ $.topic("vbl.team.loaded").subscribe(function () {
     var team = repository.getTeam(teamid, function(team){
         if(team && team.guid == teamid){
            renderTeam(team);
-            $("#team-dashboard").css("visibility", "visible");
+           $(".loading").hide();
+           $("#team-dashboard").css("visibility", "visible");
         }
         if(!team){
             $("#team-name").text("Team niet gevonden");
