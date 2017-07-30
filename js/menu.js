@@ -25,15 +25,18 @@ $.topic("vbl.organisation.loaded").subscribe(function () {
             }
         });
         sortedTeams.forEach(function(team){
-            var naam = team.naam.replace("Basket Lummen ", "");
             var guid = encodeURIComponent(team.guid);
-            var markup = "<li><a href=\"/teams?teamid=" + guid + "\">" + naam + "</a></li>";
-            if(naam.lastIndexOf("HSE", 0) === 0 || naam.lastIndexOf("DSE", 0) === 0){
-                $(markup).insertBefore("#teams-menu-separator");
+            if($("#" + guid).length){
+                var naam = team.naam.replace("Basket Lummen ", "");
+                var markup = "<li id="+ guid + "><a href=\"/teams?teamid=" + guid + "\">" + naam + "</a></li>";
+                if(naam.lastIndexOf("HSE", 0) === 0 || naam.lastIndexOf("DSE", 0) === 0){
+                    $(markup).insertBefore("#teams-menu-separator");
+                }
+                else{
+                    $("#teams-menu").append(markup);
+                } 
             }
-            else{
-                 $("#teams-menu").append(markup);
-            }           
+                      
         });
     });
    

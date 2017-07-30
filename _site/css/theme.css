@@ -195,14 +195,15 @@ body{
  	margin-bottom: 5px;
 }
 
-.dashboard table th{
+table th{
 	background-color: #333;
 	color: #fff;
 	font-weight: normal;
 }
-.dashboard table tr, .dashboard table td{
+table tr, table td{
 	border: 1px solid #CCC;
 	border-collapse: collapse;
+	padding: 5px;
 }
 
 

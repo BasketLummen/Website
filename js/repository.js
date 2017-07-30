@@ -230,11 +230,11 @@ var repository = new function(){
     var computeSeasonStart = function(date){
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
-        if(month >= 8){
-            return new Date(year, month, 1);
+        if(month >= 7){
+            return new Date(year, 7, 1);
         }
         else{
-            return new Date(year - 1, month, 1);
+            return new Date(year - 1, 7, 1);
         }
     };
 
@@ -255,7 +255,7 @@ var repository = new function(){
         var today = new Date();
         var seasonStart = computeSeasonStart(today);
 
-        var range = IDBKeyRange.Bound(seasonStart.getTime(), today.getTime());
+        var range = IDBKeyRange.bound(seasonStart.getTime(), today.getTime());
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {
