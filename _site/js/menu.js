@@ -26,8 +26,8 @@ $.topic("vbl.organisation.loaded").subscribe(function () {
         });
         sortedTeams.forEach(function(team){
             var guid = encodeURIComponent(team.guid);
-            if($("#" + guid).length){
-                var naam = team.naam.replace("Basket Lummen ", "");
+            var naam = team.naam.replace("Basket Lummen ", "");
+            if($("[id=' + guid + ']").length){
                 var markup = "<li id="+ guid + "><a href=\"/teams?teamid=" + guid + "\">" + naam + "</a></li>";
                 if(naam.lastIndexOf("HSE", 0) === 0 || naam.lastIndexOf("DSE", 0) === 0){
                     $(markup).insertBefore("#teams-menu-separator");
