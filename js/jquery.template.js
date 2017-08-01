@@ -23,7 +23,8 @@
             $html.find('.id-' + i).attr('id', values[i]);
             $html.find('.value-' + i).attr('value', values[i]);
             $html.find('.alt-' + i).attr('alt', values[i]);
-            $html.find('.title-' + i).attr('title', values[i]);
+            $html.find('.title-' + i).attr('title', values[i]);			
+            $html.find('.style-' + i).attr('style', values[i]);
         }
 
         return $html.children();

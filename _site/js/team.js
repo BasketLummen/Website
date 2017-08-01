@@ -63,11 +63,13 @@ var renderTeam = function(team){
 
     if(team.spelers){
         team.spelers.forEach(function(p){
+            var pic = p.naam.replace(/  +/g,".").toLowerCase();
             var div = $.template("#player-template",
             {
                 name: p.naam,
                 birthDate: p.sGebDat,
-                imgurl: '/img/icon.jpg'           
+                // imgurl: '/img/members/' + pic +  '.jpg'        
+                imgscript: "background: url('/img/members/" + pic +  ".jpg'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center;"
             });
             $(".players .tiles").append(div);          
         });
@@ -81,11 +83,13 @@ var renderTeam = function(team){
 
     if(team.tvlijst){
         team.tvlijst.forEach(function(tv){
+            var pic = tv.naam.replace(/  +/g,".").toLowerCase();
             var div = $.template("#staff-template",
             {
                 name: tv.naam,
                 role: tv.tvCaC,
-                imgurl: '/img/icon.jpg'           
+               // imgurl: '/img/members/' + pic +  '.jpg'   
+               imgscript: "background: url('/img/members/" + pic +  ".jpg'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center;"       
             });
             $(".staff .tiles").append(div);          
         });

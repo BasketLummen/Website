@@ -379,7 +379,7 @@ blockquote, code{
 }
 
 .border{
-	 padding: 5px; 
+	 /* padding: 5px;  */
 }
 
 .dashboard h2{
@@ -400,6 +400,8 @@ blockquote, code{
 	flex-shrink: 0;
 	margin: 0px 5px 10px 5px;
 	text-align: center;
+	min-height: 250px;
+	position: relative;
 }
 @media (min-width: 768px) {
 	.dashboard .tiles .tile{
@@ -407,14 +409,21 @@ blockquote, code{
 	}
 }
 
-.dashboard .tiles .tile img{
+.dashboard .tiles .tile .tile-description{
+   position: absolute;
+   bottom: 0px;
+   margin: 0px;
+   background-color: red;
+   width: 100%;
+}
+/* .dashboard .tiles .tile img{
 	max-width: 100px;
 }
 @media (orientation : portrait) { 
 	.dashboard .tiles .tile img{
 		max-width: 80px;  	
 	} 
-}
+} */
 
 
 .centered-content{
