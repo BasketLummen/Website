@@ -231,10 +231,10 @@ var repository = new function(){
         var year = date.getFullYear();
         var month = date.getMonth() + 1;
         if(month >= 7){
-            return new Date(year, 7, 1);
+            return new Date(year, 6, 1);
         }
         else{
-            return new Date(year - 1, 7, 1);
+            return new Date(year - 1, 6, 1);
         }
     };
 
