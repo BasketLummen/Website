@@ -63,7 +63,7 @@ var renderTeam = function(team){
 
     if(team.spelers){
         team.spelers.forEach(function(p){
-            var pic = p.naam.replace(/  +/g,".").toLowerCase();
+            var pic = p.naam.replace(/ +/g,".").toLowerCase();
             var div = $.template("#player-template",
             {
                 name: p.naam,
@@ -83,7 +83,7 @@ var renderTeam = function(team){
 
     if(team.tvlijst){
         team.tvlijst.forEach(function(tv){
-            var pic = tv.naam.replace(/  +/g,".").toLowerCase();
+            var pic = tv.naam.replace(/ +/g,".").toLowerCase();
             var div = $.template("#staff-template",
             {
                 name: tv.naam,
