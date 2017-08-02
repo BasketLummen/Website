@@ -69,7 +69,7 @@ var renderTeam = function(team){
                 name: p.naam,
                 birthDate: p.sGebDat,
                 // imgurl: '/img/members/' + pic +  '.jpg'        
-                imgscript: "background: url('/img/members/" + pic +  ".jpg'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center;"
+                imgscript: "background: url('/img/members/" + pic +  ".jpg'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"
             });
             $(".players .tiles").append(div);          
         });
@@ -89,7 +89,7 @@ var renderTeam = function(team){
                 name: tv.naam,
                 role: tv.tvCaC,
                // imgurl: '/img/members/' + pic +  '.jpg'   
-               imgscript: "background: url('/img/members/" + pic +  ".jpg'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center;"       
+               imgscript: "background: url('/img/members/" + pic +  ".jpg'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"       
             });
             $(".staff .tiles").append(div);          
         });
