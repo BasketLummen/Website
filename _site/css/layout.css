@@ -73,7 +73,7 @@ blockquote, code{
 }
 
 /* carousel */
-.carousel {
+.carousel, .team-photo {
   height: 60vh;
   margin-top: -3vw;
 }
@@ -91,10 +91,10 @@ blockquote, code{
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
+.carousel .item, .team-photo {
   height: 60vh;
 }
-.carousel-inner > .item > img {
+.carousel-inner > .item > img{
   min-width: 2000px;
   min-height: 666px;
   height: auto;

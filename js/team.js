@@ -60,7 +60,9 @@ repository.pastMatches(teamid, function(match){
 
 var renderTeam = function(team){
     $("#team-name").text(team.naam);
-
+    var pic = team.naam.replace(/ +/g,".").toLowerCase();
+    $("#team-photo").attr("style", "background: url('/img/teams/" + pic +  ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");
+  
     if(team.spelers){
         team.spelers.forEach(function(p){
             var pic = p.naam.replace(/ +/g,".").toLowerCase();
