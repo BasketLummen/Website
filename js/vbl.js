@@ -42,6 +42,12 @@ var vbl = new function(){
         });
     }
     //GET /VBLCB_WebService/data/TeamMatchesByGuid?teamGuid=BVBL1176DSE++1 HTTP/1.1 ???
+    this.teamMatches = function(teamId, callback){
+        var cleanId = teamId.replace(/%20/g, "+");
+        self.getRequest(self.getUrl("TeamMatchesByGuid", "teamGuid=" +  cleanId), function(matches){
+            callback(matches);            
+        });
+    }
 
     this.teamimage = function(teamid){
             return imgbas + "/" + teamid.substring(0, 8) + "_Small.jpg";

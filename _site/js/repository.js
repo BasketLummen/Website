@@ -4,19 +4,10 @@ var usedb = indexedDB;
 var repository = new function(){
     var self = this;
 
-    this.initialize = function(orgId){
-        self.orgId = orgId;           
-
-        // if(typeof(Worker) !== "undefined") {
-        //     if(typeof(worker) == "undefined") {
-        //         self.worker = new Worker("/js/background.js");
-        //     }
-        //     self.worker.onmessage = function(event) {
-        //         console.log( event.data );
-        //     };
-        // } else {
-        //     console.warn("Web Worker not available.");
-        // }   
+    this.initialize = function(orgId, partnerTeamIds){
+        self.orgId = orgId;   
+        self.partnerTeamIds = partnerTeamIds;
+        self.matches = [];     
 
         if (usedb) {  
 
@@ -119,18 +110,42 @@ var repository = new function(){
     }
 
     this.loadMatches = function(){
+        waitFor = [];
+        var wait = new $.Deferred();
         vbl.matches(self.orgId, function(matches){
              if(usedb){
                 var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
                 matches.forEach(function(m){
-                tx.put(m);
+                    tx.put(m);
                 });
              }
              else{
-                 self.matches = matches;
+                 self.matches.push.apply(self.matches, matches);
              }
-             $.topic("vbl.matches.loaded").publish();
-        }); 
+             wait.resolve();
+        });
+        waitFor.push(wait);
+        partnerTeamIds.forEach(function(teamId){
+            var wait = new $.Deferred();
+            vbl.teamMatches(teamId, function(matches){
+                if(usedb){
+                    var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
+                    matches.forEach(function(m){
+                        tx.put(m);
+                    });
+                }
+                else{
+                    self.matches.push.apply(self.matches, matches);
+                }
+                wait.resolve();             
+            }); 
+            waitFor.push(wait);
+        });
+
+        $.when.apply($, waitFor).then(function() {
+          $.topic("vbl.matches.loaded").publish();
+        });
+        
     }
 
     this.currentOrganisation = function(callback){
