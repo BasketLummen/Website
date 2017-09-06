@@ -7,24 +7,27 @@ keywords: Basket, Lummen
 
 # Documenten
 
+ * [Medisch Getuigschrift](/club/documenten/medischgetuigschrift17-18.pdf)
+ * [Verzekeringsformulier](/club/documenten/verzekeringsformulier.pdf)
+ 
 ## Handleidingen
 
- * [Invullen wedstrijdblad](/documenten/Handleiding invullen wedstrijdblad.doc)
- * [Scorebord terrein 1](/documenten/Handleiding scorebord terrein 1.doc)
- * [Scorebord terrein 3](/documenten/Handleiding scorebord terrein 3.doc) 
- * [24 seconden-klok](/documenten/Handleiding 24sec.doc)
+ * [Invullen wedstrijdblad](/club/documenten/Handleiding invullen wedstrijdblad.doc)
+ * [Scorebord terrein 1](/club/documenten/Handleiding scorebord terrein 1.doc)
+ * [Scorebord terrein 3](/club/documenten/Handleiding scorebord terrein 3.doc) 
+ * [24 seconden-klok](/club/documenten/Handleiding 24sec.doc)
  
 ## Reglementen
 
- * [Beknopte regels tijdwaarnemer](/documenten/Beknopte regels tijdwaarnemer.doc)
- * [Beknopte regels 24 seconden](/documenten/samenvatting24sec.docx)
- * [Volledig reglement 24 seconden](/documenten/24secondenregel.pdf)  
+ * [Beknopte regels tijdwaarnemer](/club/documenten/Beknopte regels tijdwaarnemer.doc)
+ * [Beknopte regels 24 seconden](/club/documenten/samenvatting24sec.docx)
+ * [Volledig reglement 24 seconden](/club/documenten/24secondenregel.pdf)  
  
 ## Minibasket
 
- * [Dossier VBL](/documenten/minibasket dossier VBL.doc)
- * [Wedstrijdblad](/documenten/minibasket wedstrijdblad.04 sep 05.xls)
+ * [Dossier VBL](/club/documenten/minibasket dossier VBL.doc)
+ * [Wedstrijdblad](/club/documenten/minibasket wedstrijdblad.04 sep 05.xls)
  
 ## Presentaties
 
- * [Medische Clinic](/documenten/ehbobijsport.pdf)
+ * [Medische Clinic](/club/documenten/ehbobijsport.pdf)
