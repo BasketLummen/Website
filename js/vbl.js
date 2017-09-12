@@ -41,13 +41,19 @@ var vbl = new function(){
             callback(matches);            
         });
     }
-    //GET /VBLCB_WebService/data/TeamMatchesByGuid?teamGuid=BVBL1176DSE++1 HTTP/1.1 ???
     this.teamMatches = function(teamId, callback){
         var cleanId = teamId.replace(/%20/g, "+");
         self.getRequest(self.getUrl("TeamMatchesByGuid", "teamGuid=" +  cleanId), function(matches){
             callback(matches);            
         });
     }
+    this.matchDetails = function(matchId, callback){
+        self.getRequest(self.getUrl("MatchesByWedGuid", "issguid=" +  matchId), function(matches){
+            callback(matches);            
+        });
+    }
+
+    //MatchesByWedGuid?issguid=BVBL17189180NAHSE11AFC 
 
     this.teamimage = function(teamid){
             return imgbas + "/" + teamid.substring(0, 8) + "_Small.jpg";

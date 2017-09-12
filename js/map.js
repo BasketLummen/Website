@@ -1,11 +1,11 @@
 function initMap() {
-    var uluru = {lat: 50.991189, lng: 5.18965};
+    var loc = {lat: 50.991189, lng: 5.18965};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
-      center: uluru
+      center: loc
     });
     /*var marker = new google.maps.Marker({
-      position: uluru,
+      position: loc,
       map: map
     });*/
   var infowindow = new google.maps.InfoWindow();

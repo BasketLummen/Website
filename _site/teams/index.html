@@ -159,10 +159,13 @@
 <script type="text/template" id="next-game-template">
     <img id="opponent-img" class="src-imgurl" />
     <div class="text-name"></div>
-    <div class="text-day"></div>
-    <div class="text-date"></div>
-    <div class="text-time"></div>
+    <div>
+        <span class="text-day"></span>
+        <span class="text-date"></span>
+        <span class="text-time"></span>
+    </div>
     <div class="text-location"></div>
+    <div id="mini-map"></div>
 </script>
 
 <script  type="text/template" id="future-game-template">
@@ -272,6 +275,10 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+	
+	
+	
+	<script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBesDse5XU1BASBA_G4RqjjsdUp2CQvqp4&libraries=places&callback=initMap' type="text/javascript"></script>
 	
 	
 	

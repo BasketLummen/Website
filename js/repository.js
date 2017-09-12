@@ -1,4 +1,4 @@
-var dbversion = 4;
+var dbversion = 5;
 var usedb = indexedDB;
 
 var repository = new function(){
@@ -7,7 +7,8 @@ var repository = new function(){
     this.initialize = function(orgId, partnerTeamIds){
         self.orgId = orgId;   
         self.partnerTeamIds = partnerTeamIds;
-        self.matches = [];     
+        self.matches = [];
+        self.matchDetails =  []; 
 
         if (usedb) {  
 
@@ -29,6 +30,7 @@ var repository = new function(){
                 self.ensureTeamsStore();
                 self.ensureMembersStore();
                 self.ensureMatchesStore();
+                self.ensureMatchDetailsStore();
             };
 
         }
@@ -61,6 +63,13 @@ var repository = new function(){
          if (usedb && !self.db.objectStoreNames.contains('matches')) {
             var matchesStore = self.db.createObjectStore("matches", { keyPath: "guid" });
             matchesStore.createIndex("jsDTCode", "jsDTCode")
+         }
+    }
+
+    this.ensureMatchDetailsStore =  function(b){
+         if (usedb && !self.db.objectStoreNames.contains('matchDetails')) {
+            var matchesStore = self.db.createObjectStore("matchDetails", { keyPath: "doc.guid" });
+            matchesStore.createIndex("jsDTCode", "doc.jsDTCode")
          }
     }
 
@@ -146,6 +155,21 @@ var repository = new function(){
           $.topic("vbl.matches.loaded").publish();
         });
         
+    }
+
+    this.loadMatchDetails = function(matchId){
+         vbl.matchDetails(matchId, function(matches){
+             if(usedb){
+                var tx = self.db.transaction("matchDetails", "readwrite").objectStore("matchDetails");
+                matches.forEach(function(m){
+                    tx.put(m);
+                });
+             }
+             else{
+                 self.matchDetails.push.apply(self.matchDetails, matches);
+             }
+              $.topic("vbl.match.details.loaded").publish();
+        });
     }
 
     this.currentOrganisation = function(callback){
@@ -384,6 +408,34 @@ var repository = new function(){
                 }                
             }
         }
+    }
+
+    this.getMatchDetails = function(matchId, callback){
+         if(usedb){
+            self._getMatchDetailsFromDb(matchId, callback);           
+         }
+         else{
+            self._getMatchDetailsFromArrays(matchId, callback); 
+         }
+    }
+
+    this._getMatchDetailsFromArrays = function(matchId, callback){
+        self.matchDetails.forEach(function(match){
+            if(match.doc.guid == matchId){
+              callback(match)
+            }
+        });
+    }
+
+    this._getMatchDetailsFromDb = function(matchId, callback){
+        var tx = self.db.transaction("matchDetails", "readonly");
+        var store = tx.objectStore("matchDetails");
+
+        var req = store.get(matchId);
+
+        req.onsuccess = function(event) {
+            callback(req.result);
+        };
     }
 }
 

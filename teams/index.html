@@ -5,6 +5,8 @@ description: Basket Lummen
 keywords: Basket, Lummen, Team
 custom_js:
 - team
+async_js:
+- https://maps.googleapis.com/maps/api/js?key=AIzaSyBesDse5XU1BASBA_G4RqjjsdUp2CQvqp4&libraries=places&callback=initMap
 ---
 
 <div id="team-photo" class="team-photo">
@@ -67,10 +69,13 @@ custom_js:
 <script type="text/template" id="next-game-template">
     <img id="opponent-img" class="src-imgurl" />
     <div class="text-name"></div>
-    <div class="text-day"></div>
-    <div class="text-date"></div>
-    <div class="text-time"></div>
+    <div>
+        <span class="text-day"></span>
+        <span class="text-date"></span>
+        <span class="text-time"></span>
+    </div>
     <div class="text-location"></div>
+    <div id="mini-map"></div>
 </script>
 
 <script  type="text/template" id="future-game-template">
