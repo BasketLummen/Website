@@ -8,52 +8,6 @@ var getParameterByName = function (name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 var teamid = decodeURIComponent(getParameterByName("teamid"));
-var nextMatchId;
-
-var renderMatchDetails = function(match) {
-    var geocoder = new google.maps.Geocoder();
-    var address = match.doc.accommodatieDoc.adres;
-    var addressStr = address.straat + " " + address.huisNr + ", " + address.plaats;
-    geocoder.geocode( { 'address': addressStr}, function(results, status) {
-         if (status == google.maps.GeocoderStatus.OK) {
-          if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-            var loc = results[0].geometry.location;
-
-            var infowindow = new google.maps.InfoWindow();
-            var map = new google.maps.Map(document.getElementById('mini-map'), {
-                zoom: 15,
-                center: loc
-            });
-            var marker = new google.maps.Marker({
-                position: loc,
-                map: map
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent('<div><strong>' + match.doc.accommodatieDoc.naam + '</strong><br>' + addressStr + '</div>');
-                infowindow.open(map, this);
-            });
-            // 
-            // var service = new google.maps.places.PlacesService(map);
-
-            // service.getDetails({ placeId: 'ChIJZRgmzYI7wUcRjEHmCqFIOFA' }, function(place, status) {
-            // if (status === google.maps.places.PlacesServiceStatus.OK) {
-            //     var marker = new google.maps.Marker({
-            //     map: map,
-            //     position: place.geometry.location
-            //     });
-            //     google.maps.event.addListener(marker, 'click', function() {
-            //     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-            //         place.formatted_address + '</div>');
-            //     infowindow.open(map, this);
-            //     });
-            // }
-            // });
-          }
-         }
-    });
-
-   
-  }
 
 var renderNextMatch = function(){
   repository.nextMatchOfTeam(teamid, function(match){
@@ -71,6 +25,7 @@ var renderNextMatch = function(){
         var d = new Date(match.jsDTCode);
         var div = $.template("#next-game-template",
         {
+            matchuri: "/matches/?matchid=" + match.guid,
             imgurl: src,
             name: name,
             day: d.toLocaleString(window.navigator.language, {weekday: 'long'}),
@@ -78,10 +33,7 @@ var renderNextMatch = function(){
             time: ('0'+d.getUTCHours()).slice(-2) + ":" + ('0'+d.getMinutes()).slice(-2),
             location: match.accNaam
         });
-        $("#next-game-placeholder").append(div);
-
-        nextMatchId = match.guid;
-        repository.loadMatchDetails(nextMatchId);
+        $("#next-game-placeholder").append(div);     
   });
 
   repository.futureMatches(teamid, function(match){
@@ -219,12 +171,6 @@ $.topic("vbl.team.loaded").subscribe(function () {
 
 $.topic("vbl.matches.loaded").subscribe(function () {
      renderNextMatch();   
-});
-
-$.topic("vbl.match.details.loaded").subscribe(function (match) {
-     repository.getMatchDetails(nextMatchId, function(match){
-          renderMatchDetails(match);
-     });  
 });
 
 $.topic("vbl.members.loaded").subscribe(function () {

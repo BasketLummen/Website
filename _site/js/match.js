@@ -9,7 +9,27 @@ var getParameterByName = function (name, url) {
 }
 var matchid = decodeURIComponent(getParameterByName("matchid"));
 
-var renderMatchDetails = function(match) {
+var renderMatchDetails = function(match, org) {
+
+
+     var d = new Date(match.doc.jsDTCode);
+      $("#next-top-title span").text(d.toLocaleString(window.navigator.language, {weekday: 'long'}));
+      /* looks like local time is stored as if it were utc? */
+      $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+d.getUTCHours()).slice(-2) + ":" + ('0'+d.getMinutes()).slice(-2));    
+    
+      org.teams.forEach(function(team){
+          if(team.guid == match.doc.teamThuisGUID || team.guid == match.doc.teamUitGUID){
+              $("#next-vs").text(team.naam.replace("Basket Lummen ", ""));
+          }
+      });
+
+      var homesrc = vbl.teamimage(match.doc.teamThuisGUID);
+      var awaysrc = vbl.teamimage(match.doc.teamUitGUID);
+      $("#next-home-team-logo img").attr("src", homesrc);
+      $("#next-away-team-logo img").attr("src", awaysrc);
+  
+      $("#next-middle .container").css("visibility", "visible");
+
     var geocoder = new google.maps.Geocoder();
     var address = match.doc.accommodatieDoc.adres;
     var addressStr = address.straat + " " + address.huisNr + ", " + address.plaats;
@@ -42,7 +62,9 @@ var renderMatchDetails = function(match) {
 
 $.topic("vbl.match.details.loaded").subscribe(function (match) {
      repository.getMatchDetails(matchid, function(match){
-          renderMatchDetails(match);
+         repository.currentOrganisation(function(org){
+            renderMatchDetails(match, org);
+         });
      });  
 });
 
