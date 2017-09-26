@@ -285,9 +285,9 @@ blockquote, code{
 
 /* posts */
 .posts, .post, .content{
-	min-height: calc(70vh - 70px);
-	margin-bottom: 6vh;
+	min-height: calc(70vh - 70px);	
 	padding-top: 2vh;
+	margin-bottom: 6vh;
 }
 .post table{
 	border-collapse: collapse;
@@ -363,6 +363,7 @@ blockquote, code{
 /* footer */
 #footer{
 	height: 20vh;
+	margin-top: 6vh;
 }
 
 /* dashboard */
@@ -443,3 +444,26 @@ blockquote, code{
 .staff .tiles{
 	min-height: 20vh;
 }
+
+.columns{
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 768px) {
+	.columns{
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+table{
+	display: table;
+}
+.full-width{
+	width: 100%;
+}
+table.space-around {
+	margin: auto;
+    width: calc(100% - 1vw);
+}
+

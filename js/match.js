@@ -11,7 +11,6 @@ var matchid = decodeURIComponent(getParameterByName("matchid"));
 
 var renderMatchDetails = function(match, org) {
 
-
      var d = new Date(match.doc.jsDTCode);
       $("#next-top-title span").text(d.toLocaleString(window.navigator.language, {weekday: 'long'}));
       /* looks like local time is stored as if it were utc? */
@@ -58,6 +57,14 @@ var renderMatchDetails = function(match, org) {
     $("#acc-address").text(addressStr);
     $("#acc-telephone").text(match.doc.accommodatieDoc.telefoon ? match.doc.accommodatieDoc.telefoon : "");
     $("#acc-web").text(match.doc.accommodatieDoc.website ? match.doc.accommodatieDoc.website : "");
+
+    $("#division").text(match.doc.wedID.substring(0, 8));
+    $("#game-nr").text(match.doc.wedID.substring(9));
+    $("#mat").text(org.stamNr);
+
+    match.doc.wedOff.forEach(function(off){
+        $('#officials').append($('<tr>').append($('<td>').text(off)));
+    });
 }
 
 $.topic("vbl.match.details.loaded").subscribe(function (match) {
