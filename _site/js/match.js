@@ -62,9 +62,13 @@ var renderMatchDetails = function(match, org) {
     $("#game-nr").text(match.doc.wedID.substring(9));
     $("#mat").text(org.stamNr);
 
-    match.doc.wedOff.forEach(function(off){
-        $('#officials').append($('<tr>').append($('<td>').text(off)));
-    });
+    if(match.doc.wedOff){
+        match.doc.wedOff.forEach(function(off){
+            $('#officials').append($('<tr>').append($('<td>').text(off)));
+        });
+    }    
+
+    $('#results').text(match.doc.uitslag);
 }
 
 $.topic("vbl.match.details.loaded").subscribe(function (match) {

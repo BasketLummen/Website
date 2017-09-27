@@ -43,6 +43,8 @@ var renderNextMatch = function(){
                 home: match.tTNaam,
                 away: match.tUNaam
             }, "tbody");
+    var matchuri= "/matches/?matchid=" + match.guid;
+    tr.attr('onclick', 'window.document.location="' + matchuri + '";')
     $(".future-games").append(tr);
   });
 
@@ -54,6 +56,8 @@ repository.pastMatches(teamid, function(match){
                 away: match.tUNaam,
                 result: match.uitslag
             }, "tbody");
+     var matchuri= "/matches/?matchid=" + match.guid;
+    tr.attr('onclick', 'window.document.location="' + matchuri + '";')
     $(".past-games").append(tr);
   });
 
