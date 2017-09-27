@@ -11,6 +11,7 @@ var matchid = decodeURIComponent(getParameterByName("matchid"));
 
 var renderMatchDetails = function(match, org) {
 
+    $("#poule").text(match.doc.pouleNaam);
      var d = new Date(match.doc.jsDTCode);
       $("#next-top-title span").text(d.toLocaleString(window.navigator.language, {weekday: 'long'}));
       /* looks like local time is stored as if it were utc? */
