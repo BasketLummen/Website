@@ -17,7 +17,7 @@ var showNextMatch = function(){
       $("#next-home-team-logo img").attr("src", homesrc);
       $("#next-away-team-logo img").attr("src", awaysrc);
   
-      $("#next-link").attr("href", "/matches/?matchid=" + match.guid)
+      $("#next-link").attr("href", "/match/?matchid=" + match.guid)
       $("#next-middle .container").css("visibility", "visible");
 
     });

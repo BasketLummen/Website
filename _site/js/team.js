@@ -25,7 +25,7 @@ var renderNextMatch = function(){
         var d = new Date(match.jsDTCode);
         var div = $.template("#next-game-template",
         {
-            matchuri: "/matches/?matchid=" + match.guid,
+            matchuri: "/match/?matchid=" + match.guid,
             imgurl: src,
             name: name,
             day: d.toLocaleString(window.navigator.language, {weekday: 'long'}),
@@ -43,7 +43,7 @@ var renderNextMatch = function(){
                 home: match.tTNaam,
                 away: match.tUNaam
             }, "tbody");
-    var matchuri= "/matches/?matchid=" + match.guid;
+    var matchuri= "/match/?matchid=" + match.guid;
     tr.attr('onclick', 'window.document.location="' + matchuri + '";')
     $(".future-games").append(tr);
   });
@@ -56,7 +56,7 @@ repository.pastMatches(teamid, function(match){
                 away: match.tUNaam,
                 result: match.uitslag
             }, "tbody");
-     var matchuri= "/matches/?matchid=" + match.guid;
+     var matchuri= "/match/?matchid=" + match.guid;
     tr.attr('onclick', 'window.document.location="' + matchuri + '";')
     $(".past-games").append(tr);
   });

@@ -53,6 +53,7 @@ module.exports = (grunt) ->
           "club/**/*"
           "business/**/*"
           "teams/**/*"
+          "match/**/*"
           "matches/**/*"
           "contact/**/*"
           "_config.yml"
