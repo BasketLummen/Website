@@ -263,3 +263,6 @@ table tr, table td{
 	color: #333;
 	text-decoration: none;
 }
+.calendar-items{
+	background-color: red;
+}
