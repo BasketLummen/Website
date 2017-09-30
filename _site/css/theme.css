@@ -264,5 +264,10 @@ table tr, table td{
 	text-decoration: none;
 }
 .calendar-items{
-	background-color: red;
+	background: linear-gradient(#EFEFEF 0,#EFEFEF 270px, #f6f6f6 270px,#f6f6f6 630px,#EFEFEF 630px,#EFEFEF 720px);
+}
+.calendar-item{
+	 background-color: #ffe100; 
+	 /* background-color: #14225C;
+	  color: #fff; */
 }

@@ -474,7 +474,7 @@ table.space-around {
 	justify-content: center;
 }
 .day{
-	height: 80vh;
+	height: 720px; /*.5 per minute*/
 	margin: .1vw;
 	text-align: center;
 	display: flex;
@@ -488,7 +488,6 @@ table.space-around {
 	position:absolute;
 	width: 100%;
 	text-align: center;
-	background-color: blue;
 }
 @media (min-width: 768px) {
 	.calendar{

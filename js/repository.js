@@ -1,6 +1,21 @@
 var dbversion = 5;
 var usedb = indexedDB;
 
+Date.prototype.getWeek = function(start)
+{
+        //Calcing the starting point
+    start = start || 0;
+    var today = new Date(this.setHours(0, 0, 0, 0));
+    var day = today.getDay() - start;
+    var date = today.getDate() - day;
+
+        // Grabbing Start/End Dates
+    var startDate = new Date(today.setDate(date));
+    var endDate = new Date(today.setDate(date + 6));
+    return [startDate, endDate];
+}
+
+
 var repository = new function(){
     var self = this;
 
@@ -261,6 +276,42 @@ var repository = new function(){
         var today = new Date().getTime();
         self.matches.forEach(function(match){
             if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > today){
+                callback(match);
+            }
+        });
+    }
+
+    this.matchesInWeekOf = function(date, callback){
+         if(usedb){
+            self._matchesInWeekOfFromDb(date, callback);           
+         }
+         else{
+            self._matchesInWeekOfFromArrays(date, callback); 
+         }
+    }
+
+    this._matchesInWeekOfFromDb = function(date, callback){
+        var dates = date.getWeek();
+        var tx = self.db.transaction("matches", "readonly");
+        var store = tx.objectStore("matches");
+        var index = store.index("jsDTCode");
+
+        var range = IDBKeyRange.bound(dates[0], dates[1]);
+        index.openCursor(range).onsuccess = function(e) {
+            var cursor = e.target.result;
+            if(cursor) {
+                var key = cursor.key;
+                var match = cursor.value;
+                 if(callback) callback(match);
+                cursor.continue();
+            }
+        }
+    }
+
+    this._matchesInWeekOfFromArrays = function(date, callback){
+         var dates = date.getWeek();
+        self.matches.forEach(function(match){
+            if(match.jsDTCode >= dates[0] && match.jsDTCode <= dates[1]){
                 callback(match);
             }
         });
