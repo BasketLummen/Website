@@ -72,6 +72,11 @@ blockquote, code{
 	}
 }
 
+/* container */
+.container h2{
+	text-align: center;
+}
+
 /* carousel */
 .carousel, .team-photo {
   height: 60vh;
@@ -191,6 +196,14 @@ blockquote, code{
 	line-height: normal;
 	padding-top: 0px;
 	padding-bottom: 0px;
+}
+
+/* link to all matches */
+#all-matches{
+	margin-bottom: 3vw;
+}
+#all-matches a{
+	font-size: 2vh;
 }
 
 /* partner section */
@@ -469,6 +482,7 @@ table.space-around {
 
 
 .calendar{
+	margin-top: 3vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -477,16 +491,19 @@ table.space-around {
 	height: 720px; /*.5 per minute*/
 	margin: .1vw;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
+	display: none;
+	flex-direction: column;	
 }
 .calendar-items{
 	flex: 1;
-	position:relative; 
+	display: flex;
+	flex-direction: column;
+	position:relative;
 }
 .calendar-item{
-	position:absolute;
-	width: 100%;
+	/* position:absolute;
+	width: 100%; */
+	
 	text-align: center;
 }
 @media (min-width: 768px) {

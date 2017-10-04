@@ -4,7 +4,7 @@ var usedb = indexedDB;
 Date.prototype.getWeek = function(start)
 {
         //Calcing the starting point
-    start = start || 0;
+    start = start || 1; // default start on monday: 1
     var today = new Date(this.setHours(0, 0, 0, 0));
     var day = today.getDay() - start;
     var date = today.getDate() - day;
@@ -296,7 +296,7 @@ var repository = new function(){
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
 
-        var range = IDBKeyRange.bound(dates[0], dates[1]);
+        var range = IDBKeyRange.bound(dates[0].getTime(), dates[1].getTime());
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {
