@@ -17,11 +17,23 @@ var renderMatchDetails = function(match, org) {
       /* looks like local time is stored as if it were utc? */
       $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+d.getUTCHours()).slice(-2) + ":" + ('0'+d.getMinutes()).slice(-2));    
     
+      var vs = "";
       org.teams.forEach(function(team){
           if(team.guid == match.doc.teamThuisGUID || team.guid == match.doc.teamUitGUID){
-              $("#next-vs").text(team.naam.replace("Basket Lummen ", ""));
+              vs = team.naam.replace("Basket Lummen ", "");
           }
       });
+      if(vs == ""){
+        if( partnerTeamIds.indexOf(encodeURI(match.doc.teamThuisGUID)) > -1){
+            vs = match.doc.teamThuisNaam.replace("KBBC Zolder vzw ", "");
+        }
+        else if( partnerTeamIds.indexOf(encodeURI(match.doc.teamUitGUID)) > -1){
+            vs = match.doc.teamUitNaam.replace("KBBC Zolder vzw ", "");
+        }
+      }
+     
+
+      $("#next-vs").text(vs);
 
       var homesrc = vbl.teamimage(match.doc.teamThuisGUID);
       var awaysrc = vbl.teamimage(match.doc.teamUitGUID);

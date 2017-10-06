@@ -15,6 +15,12 @@ Date.prototype.getWeek = function(start)
     return [startDate, endDate];
 }
 
+Date.prototype.currentLocalTime = function()
+{
+    var offset = -(this.getTimezoneOffset()/60);  
+    return this.getTime() + offset * 3600 * 1000;
+}
+
 
 var repository = new function(){
     var self = this;
@@ -256,9 +262,9 @@ var repository = new function(){
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
 
-        var today = new Date();
+         var now = new Date().currentLocalTime();
 
-        var range = IDBKeyRange.lowerBound(today.getTime());
+        var range = IDBKeyRange.lowerBound(now);
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {
@@ -273,9 +279,9 @@ var repository = new function(){
     }
 
     this._futureMatchesFromArrays = function(teamId, callback){
-        var today = new Date().getTime();
+         var now = new Date().currentLocalTime();
         self.matches.forEach(function(match){
-            if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > today){
+            if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > now){
                 callback(match);
             }
         });
@@ -296,7 +302,7 @@ var repository = new function(){
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
 
-        var range = IDBKeyRange.bound(dates[0].getTime(), dates[1].getTime());
+        var range = IDBKeyRange.bound(dates[0].currentLocalTime(), dates[1].currentLocalTime());
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {
@@ -311,7 +317,7 @@ var repository = new function(){
     this._matchesInWeekOfFromArrays = function(date, callback){
          var dates = date.getWeek();
         self.matches.forEach(function(match){
-            if(match.jsDTCode >= dates[0] && match.jsDTCode <= dates[1]){
+            if(match.jsDTCode >= dates[0].currentLocalTime() && match.jsDTCode <= dates[1].currentLocalTime()){
                 callback(match);
             }
         });
@@ -383,9 +389,9 @@ var repository = new function(){
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
 
-        var today = new Date();
+        var now = new Date().currentLocalTime();
 
-        var range = IDBKeyRange.lowerBound(today.getTime());
+        var range = IDBKeyRange.lowerBound(now);
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {
@@ -397,19 +403,19 @@ var repository = new function(){
     }
 
     this._nextMatchFromArrays = function(callback){
-         var today = new Date().getTime();
-            var futureMatches = [];
-            self.matches.forEach(function(match){
-                if(match.jsDTCode > today){
-                    futureMatches.push(match);
-                }
-            });
-
-            if(futureMatches.length > 0)
-            {
-                futureMatches.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
-                callback(futureMatches[0])
+        var now = new Date().currentLocalTime();
+        var futureMatches = [];
+        self.matches.forEach(function(match){
+            if(match.jsDTCode > now){
+                futureMatches.push(match);
             }
+        });
+
+        if(futureMatches.length > 0)
+        {
+            futureMatches.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
+            callback(futureMatches[0])
+        }
     }
 
     this.nextMatchOfTeam = function(teamId, callback){
@@ -422,19 +428,19 @@ var repository = new function(){
     }
 
     this._nextMatchOfTeamFromArrays = function(teamId, callback){
-         var today = new Date().getTime();
-            var futureMatchesOfTeam = [];
-            self.matches.forEach(function(match){
-                if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > today){
-                    futureMatchesOfTeam.push(match);
-                }
-            });
-
-            if(futureMatchesOfTeam.length > 0)
-            {
-                futureMatchesOfTeam.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
-                callback(futureMatchesOfTeam[0])
+        var now = new Date().currentLocalTime();
+        var futureMatchesOfTeam = [];
+        self.matches.forEach(function(match){
+            if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > now){
+                futureMatchesOfTeam.push(match);
             }
+        });
+
+        if(futureMatchesOfTeam.length > 0)
+        {
+            futureMatchesOfTeam.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
+            callback(futureMatchesOfTeam[0])
+        }
     }
 
     this._nextMatchOfTeamFromDb = function(teamId, callback){
@@ -442,9 +448,9 @@ var repository = new function(){
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
 
-        var today = new Date();
+        var now = new Date().currentLocalTime();
 
-        var range = IDBKeyRange.lowerBound(today.getTime());
+        var range = IDBKeyRange.lowerBound(now);
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {

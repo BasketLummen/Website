@@ -6,11 +6,22 @@ var showNextMatch = function(){
       /* looks like local time is stored as if it were utc? */
       $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+d.getUTCHours()).slice(-2) + ":" + ('0'+d.getMinutes()).slice(-2));    
     
+      var vs = "";
       org.teams.forEach(function(team){
-          if(team.guid == match.tTGUID || team.guid == match.tUGUID){
-              $("#next-vs").text(team.naam.replace("Basket Lummen ", ""));
+          if(team.guid == match.tTGUID|| team.guid == match.tUGUID){
+              vs = team.naam.replace("Basket Lummen ", "");
           }
       });
+      if(vs == ""){
+        if( partnerTeamIds.indexOf(encodeURI(match.tTGUID)) > -1){
+            vs = match.tTNaam.replace("KBBC Zolder vzw ", "");
+        }
+        else if( partnerTeamIds.indexOf(encodeURI(match.tUGUID)) > -1){
+            vs = match.tUNaam.replace("KBBC Zolder vzw ", "");
+        }
+      } 
+
+      $("#next-vs").text(vs);
 
       var homesrc = vbl.teamimage(match.tTGUID);
       var awaysrc = vbl.teamimage(match.tUGUID);
