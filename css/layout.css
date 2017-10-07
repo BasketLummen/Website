@@ -72,11 +72,6 @@ blockquote, code{
 	}
 }
 
-/* container */
-.container h2{
-	text-align: center;
-}
-
 /* carousel */
 .carousel, .team-photo {
   height: 60vh;
@@ -317,6 +312,10 @@ blockquote, code{
 
 #news-letter{
 	min-height: 16vh;
+	display:flex;
+}
+#news-letter > div{
+	margin:auto;
 }
 
 /* map */

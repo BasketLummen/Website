@@ -3,6 +3,36 @@ body{
     /*font-size: 1.6em;*/
 }
 
+label, input, button {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    /* the following ensures they're all using the same box-model for rendering */
+    -moz-box-sizing: content-box; /* or `border-box` */
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type=text]{
+	border:1px solid #999; 
+	-webkit-appearance:none;
+}
+input[type=submit]{
+	background-color: #ccc; 
+	border: 1px solid #ccc; 
+	border-radius:4px; 
+	letter-spacing:.03em; 
+	color: #333; 
+	cursor: pointer; 
+	display: inline-block; 
+	text-align: center; 
+	text-decoration: none; 
+	vertical-align: top; 
+	white-space: nowrap; 
+	width: auto; 
+	transition: all 0.23s ease-in-out 0s;
+}
+
 /* navbar */
 .navbar-default {
     background-color: #ffe100;
@@ -146,6 +176,9 @@ body{
 /* news-letter */
 #news-letter{
 	background-color: #333;
+}
+#news-letter label{
+	color: #fff;
 }
 
 
