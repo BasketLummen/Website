@@ -1,17 +1,19 @@
 var dbversion = 5;
 var usedb = indexedDB;
 
-Date.prototype.getWeek = function(start)
+Date.prototype.getWeek = function()
 {
-        //Calcing the starting point
-    start = start || 1; // default start on monday: 1
+    //Calcing the starting point
     var today = new Date(this.setHours(0, 0, 0, 0));
-    var day = today.getDay() - start;
-    var date = today.getDate() - day;
+
+    var day = today.getDay();
+    var offset = (day == 0) ? 6 : day - 1;
+    var date = today.getDate() - offset;
 
         // Grabbing Start/End Dates
     var startDate = new Date(today.setDate(date));
     var endDate = new Date(today.setDate(date + 7));
+
     return [startDate, endDate];
 }
 
