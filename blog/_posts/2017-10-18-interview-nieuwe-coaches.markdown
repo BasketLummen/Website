@@ -56,4 +56,10 @@ Over hun aanwezigheid heb ik zeker niet te klagen. Op een enkele uitzondering, i
 
 Bedankt voor jullie tijd! We zijn heel blij dat jullie ons trainersteam komen versterken!
 
+![Yasmine](/blog/img/yasmine.jpg)
 
+**Yasmine**
+
+![Jo](/blog/img/jo.jpg)
+
+**Jo**
