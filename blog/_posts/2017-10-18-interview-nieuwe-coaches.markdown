@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Basketba(bbe)l: Interview Nieuwe Coaches"
+title:  "Basketba(bbe)l: Interview nieuwe coaches"
 date:   2017-04-19 08:40:00
-description: Nieuw Design.
-permalink: /blog/nieuw-design/
+description: Interview nieuwe coaches.
+permalink: /blog/interview-nieuwe-coaches/
 ---
 
 
