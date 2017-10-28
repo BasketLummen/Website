@@ -43,7 +43,7 @@ Er werd een volledig nieuwe **business sectie** toegevoegd. Deze heeft vooral to
 
 Is alles dan perfect aan de nieuwe website? Nee, zeker niet. Er zijn een aantal tekortkomingen waar we ons bewust van zijn (en waarschijnlijk ook een aantal waar we ons niet van bewust zijn).
 
-Een van de grootste beperkingen waar we momenteel nog mee zitten is de informatie die basketbal.vlaanderen ons aanbiedt. Deze omvat enkel informatie over de ploegen die in de reguliere competitie zitten en is incompleet wat betreft de jongste jeugdploegen. Vandaar dus dat er geen spelers geregistreerd staan voor de U12 en jonger. Dit zal op termijn opgelost worden, geen nood, maar het vraagt wat tijd.
+Een van de grootste beperkingen waar we momenteel nog mee zitten is de informatie die basketbal.vlaanderen ons aanbiedt. Deze omvat enkel informatie over de ploegen die in de reguliere competitie zitten en is incompleet wat betreft de jongste jeugdploegen. Vandaar dus dat er geen spelers geregistreerd staan voor de U10 en jonger. Dit zal op termijn opgelost worden, geen nood, maar het vraagt wat tijd.
 
 Merk je verder nog iets, of heb je een suggestie om de informatie op onze website te verbeteren, dan kan je altijd een email sturen naar [yves@goeleven.com](mailto://yves@goeleven.com). Indien je meer technisch aangelegd bent, kan je ook gebruik maken van onze issue tracker op [github](https://github.com/yvesgoeleven/BasketLummen/issues).
 
