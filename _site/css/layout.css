@@ -203,14 +203,19 @@ blockquote, code{
 
 /* partner section */
 
-#partners{
-	min-height: 16vh;
-	padding: 1vh;
+#partners-top{
+	padding: 2vh;
+	text-align: center;
 }
+
+#partners{
+	margin-bottom: 2vh;
+}
+
 
 #partners ul{
 	display: block;
-	margin: 3vh auto;
+	margin: 2vh auto;
 	padding: 0;
 	white-space:nowrap; 
 	overflow-x:hidden;

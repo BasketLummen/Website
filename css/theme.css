@@ -169,10 +169,16 @@ input[type=submit]{
 }
 
 /* partners */
-#partners{
-	background-color: #333;
+#partners-top{
+	background-color: #333;	
 }
-
+#partners-top h2{
+	color: #fff;
+}
+#partners > div{
+	background-color: #fff;
+	border-bottom: 1px solid #333;
+}
 /* news-letter */
 #news-letter{
 	background-color: #333;
