@@ -309,4 +309,6 @@ table tr, table td{
 	 background-color: #ffe100; 
 	 /* background-color: #14225C;
 	  color: #fff; */
+	  font-size: .9vw;
+	  white-space: nowrap;
 }
