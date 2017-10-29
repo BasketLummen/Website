@@ -6,11 +6,11 @@ description: Nieuwe Website.
 permalink: /blog/nieuwe-website/
 ---
 
-2018 en 2019 worden belangrijke jaren in de geschiedenis van Basket Lummen. Het zal namelijk 50 jaar geleden zijn dat, respectievelijk, de club opgericht werd en dat de we voor een eerste keer deelnamen aan de reguliere competitie. Om deze jaren te vieren zullen er tal van activiteiten en initiatieven ondernomen worden, één van deze initiatieven is een nieuw kleedje voor onze website.
+2018 en 2019 worden belangrijke jaren in de geschiedenis van Basket Lummen. Het zal namelijk 50 jaar geleden zijn dat respectievelijk de club opgericht werd en dat de we voor een eerste keer deelnamen aan de reguliere competitie. Om deze jaren te vieren zullen er tal van activiteiten en initiatieven ondernomen worden, één van deze initiatieven is een nieuw kleedje voor onze website.
 
 ## Mobile ready
 
-Eén van de grootste 'klachten' die we over de vorige website kregen, was dat ze niet handig in gebruik was op mobiele telefoons.Ook niet heel verbazend, want ze dateerde nog uit begin 2000 toen er nog geen mobiele telefoons waren.
+Eén van de grootste 'klachten' die we over de vorige website kregen, was dat ze niet handig in gebruik was op mobiele telefoons. Ook niet heel verbazend, want ze dateerde nog uit begin 2000 toen er nog geen mobiele telefoons waren.
 
 Het nieuwe ontwerp is een zogenaamd 'responsive design', dat zich aanpast aan het formaat van het scherm waarop je de website bekijkt. De website zal daardoor makkelijk in gebruik zijn op zowel mobiele telefoons als op grote schermen, en alles ertussenin.
 
