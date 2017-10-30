@@ -49,7 +49,10 @@ Merk je verder nog iets, of heb je een suggestie om de informatie op onze websit
 
 ## Vorige website
 
-De vorige website, alsook de coach corner, zijn zeker nog niet verdwenen. Indien je in de nieuwe website informatie mist dan kan je de vorige nog steeds bereiken [via deze link](/b/). 
+De vorige website is zeker nog niet verdwenen. Indien je in de nieuwe website informatie mist dan kan je de vorige nog steeds bereiken [via deze link](/b/).
 
-Ook coach corner [blijft bereikbaar](/b/ccorner). In de loop van de volgende 2 jaren zal de coach corner ook gemoderniseerd worden,net zoals de website.
+## Bedankt Johny!
+
+Tevens zouden we Johny Peeters nog van harte willen bedanken voor al het werk dat hij de afgelopen 17 jaar in de website gestoken heeft. Er is ongeloofelijk veel tijd ingekropen, over de jaren heen, om alles uit te bouwen en alle informatie bij elkaar te zoeken. Via deze weg willen we allen graag laten weten dat we dat werk ten zeerste apprecieren. Bedankt!
+
 
