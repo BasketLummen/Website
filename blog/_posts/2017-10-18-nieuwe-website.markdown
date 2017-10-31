@@ -18,7 +18,7 @@ Het nieuwe ontwerp is een zogenaamd 'responsive design', dat zich aanpast aan he
 
 Zo goed als alle informatie op de oude website werd overgenomen op de nieuwe, maar er zijn toch ook heel wat verschillen.
 
-#### Wedstrijden
+##### Wedstrijden
 
 Vooral op het gebied van de **wedstrijd kalenders** zijn er wel wat wijzigingen. In het verleden toonden we letterlijk stukken van de website [basketbal.vlaanderen](http://www.basketbal.vlaanderen/), maar nu zal de website uit deze overvloed aan informatie enkel het belangrijkste halen en weergeven.
 
@@ -27,7 +27,7 @@ Vooral op het gebied van de **wedstrijd kalenders** zijn er wel wat wijzigingen.
 * **Per team**: Op de team detail pagina wordt automatisch de volgende wedstrijd weergegeven, verder kan je ook alle toekomstige wedstrijden en reeds gespeeld wedstrijden bekijken.
 * **Wedstrijd detail**: Via al de bovenstaande weergaves kan je doorklikken naar het wedstrijd detail. Daarop staat al de nodige info over de wedstrijd, inclusief een kaart weergave waar de wedstrijd plaatsvind (zo moet je dat niet meer zelf opzoeken), alsook de informatie die de table officials moeten opnemen in de feuille.
 
-#### News & blog
+##### News & blog
 
 Deze twee secties zijn bedoeld om informatie te delen met alle leden en sympathisanten van de club. **News** omvat alle aankondigingen van activiteiten alsook belangrijke boodschappen. **Blog** omvat meer uitgebreide verhalen over de belevingen binnen de club, zoals bvb de basketba(bel)l, wedstrijd verslagen en dergelijke.
 
@@ -35,7 +35,7 @@ In principe kan iedereen, dus ook u, nieuws items en verhalen indienen om opgeno
 
 Er staat een team, de cel communicatie, klaar om elk ingediend item te reviewen en op te nemen in de website na goedkeuring.
 
-#### Business sectie
+##### Business sectie
 
 Er werd een volledig nieuwe **business sectie** toegevoegd. Deze heeft vooral tot doel om aan potentiele sponsors uit te leggen wat er allemaal gedaan wordt qua visibiliteit, evenementen en dergelijke.
 
