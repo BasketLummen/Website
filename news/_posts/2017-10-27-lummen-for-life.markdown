@@ -3,7 +3,7 @@ layout: post
 title:  "Lummen for Life 1-12-2017"
 date:   2017-10-27 20:00:00
 description: Lummen for Life 1 December 2017.
-permalink: /news/lummen-for-life-1-12-2017/
+permalink: /news/2017-10-27-lummen-for-life/
 ---
 Zin om een Lummens goed doel te steunen en een leuke avond te beleven? Op vrijdag 1 December 2017 organiseert Basket Lummen een toernooi ter voordele van **Music for Life**, het toernooi zal doorgaan van 20u - 22u in [Sporthal Vijfsprong](/club/sporthal/).
 
