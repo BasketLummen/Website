@@ -7,6 +7,8 @@ permalink: /news/2017-10-27-lummen-for-life/
 ---
 Zin om een Lummens goed doel te steunen en een leuke avond te beleven? Op vrijdag 1 December 2017 organiseert Basket Lummen een toernooi ter voordele van **Music for Life**, het toernooi zal doorgaan van 20u - 22u in [Sporthal Vijfsprong](/club/sporthal/).
 
+![Music for Life](/news/img/musicforlife.png)
+
 ## Toernooi
 
 Het formaat van dit toernooi zal volgens de ['3 tegen 3'](http://www.basketbal.vlaanderen/competitie/3x3) regels verlopen. 
@@ -19,3 +21,5 @@ Inschrijven kan vanaf 12 jaar en kost 3 euro per wedstrijd per ploeg. Als je wil
 ## Goede doel
 
 De inkomsten van dit toernooi komen ten goede aan vzw **Avali**. Zwemclub Avali biedt sinds 1997 zwemlessen en –trainingen aan voor personen met een verstandelijke beperking. Meer informatie vind je op [www.avali.be](https://www.avali.be/).
+
+![Avali](/news/img/avali.png)
