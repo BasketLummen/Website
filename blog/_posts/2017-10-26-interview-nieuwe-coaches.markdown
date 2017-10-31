@@ -11,9 +11,9 @@ In deze Basketba(bbe)l maken we kennis met een paar van onze nieuwe coaches van 
 
 We maken kennis met Karel, de coach van onze U16 jongens provinciaal. We leren wie Jo eigenlijk is, de nieuwe coach van de U12A. We kijken ook even wie er als jongste coach komt piepen bij de U8, Yasmine.
 
-## Welkom bij Basket Lummen! We vliegen er direct in met een aantal vragen
+### Welkom bij Basket Lummen! We vliegen er direct in met een aantal vragen
 
-### Wat zijn je ambities met de ploeg voor dit seizoen?
+#### Wat zijn je ambities met de ploeg voor dit seizoen?
 
 **Karel**: We spelen enkel met eerstejaars miniemen. Daarom leg ik mijn ambitie met spelers van heel verschillend niveau meer op het individuele: de goede spelers beter maken en de nieuwelingen zo snel mogelijk integreren. Ik wil deze groep zo veel mogelijk laten spelen, zodat ze zo snel mogelijk iets bijleren. Dit houdt dus in dat we misschien voor de kerstbreak geen enkele match gaan winnen. Zolang de inzet er is en we maar plezier hebben in het basket en bijleren, vind ik het OK.
 Over hun aanwezigheid heb ik zeker niet te klagen. Op een enkele uitzondering, is iedereen altijd aanwezig. Een extra pluimpje voor Thiam is zeker op zijn plaats. Hij is in de vakantie als U14 steeds met ons komen meetrainen, en doet dat nu nog elke donderdag.
@@ -30,7 +30,7 @@ Over hun aanwezigheid heb ik zeker niet te klagen. Op een enkele uitzondering, i
 
 **Yasmine**: Ik basket zelf ook al 10 jaar bij Basket Lummen, dus coachen doe ik het liefst bij mijn eigen club.
 
-### Wat vind je nu al (op deze korte periode) het leukste aan je ploeg?
+#### Wat vind je nu al (op deze korte periode) het leukste aan je ploeg?
 
 **Yasmine**: Dat ze toch wel al veel van basketbal weten en dat ze altijd blij naar de training komen.
 
@@ -38,7 +38,7 @@ Over hun aanwezigheid heb ik zeker niet te klagen. Op een enkele uitzondering, i
 
 **Jo**: De spelers en een toffe groep ouders ;-). Van hen probeer ik ook een team te maken dit seizoen.
 
-### Hoe lang coach je al?
+#### Hoe lang coach je al?
 
 **Karel**: Ik ben de tel een beetje kwijt, maar ik denk dat ik al 38 jaar coach.
 
@@ -46,7 +46,7 @@ Over hun aanwezigheid heb ik zeker niet te klagen. Op een enkele uitzondering, i
 
 **Jo**: Iets meer dan 30 jaar ;-).
 
-### Wat vind je het leukste aan coach zijn?
+#### Wat vind je het leukste aan coach zijn?
 
 **Karel**: Ik vind het gewoon leuk om met basket bezig te zijn. Ik probeer steeds het beste uit elke speler te halen. Ik werk heel veel op inzicht, “read and re-act” en vind het fantastisch als spelers dat oppikken.
 
