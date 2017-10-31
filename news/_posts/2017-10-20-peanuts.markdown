@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Peanuts Toernooi 11-11-2017"
-date:   2017-10-27 20:00:00
+date:   2017-10-20 20:00:00
 description: Peanuts toernooi 11 November.
-permalink: /news/2017-10-27-peanuts/
+permalink: /news/2017-10-20-peanuts/
 ---
 
 Op zaterdag 11 November 2017 organiseert Basket Lummen opnieuw het jaarlijks peanuts toernooi, dit zal doorgaan van 9u - 12u in [Sporthal Vijfsprong](/club/sporthal/).

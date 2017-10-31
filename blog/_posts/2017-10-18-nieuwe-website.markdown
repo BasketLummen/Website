@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Nieuwe Website"
-date:   2017-10-26 21:00:00
+date:   2017-10-18 21:00:00
 description: Nieuwe Website.
-permalink: /blog/2017-10-26-nieuwe-website/
+permalink: /blog/2017-10-18-nieuwe-website/
 ---
 
 2018 en 2019 worden belangrijke jaren in de geschiedenis van Basket Lummen. Het zal namelijk 50 jaar geleden zijn dat respectievelijk de club opgericht werd en dat de we voor een eerste keer deelnamen aan de reguliere competitie. Om deze jaren te vieren zullen er tal van activiteiten en initiatieven ondernomen worden, één van deze initiatieven is een nieuw kleedje voor onze website.
