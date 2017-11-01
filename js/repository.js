@@ -12,7 +12,7 @@ Date.prototype.getWeek = function()
 
         // Grabbing Start/End Dates
     var startDate = new Date(today.setDate(date));
-    var endDate = new Date(today.setDate(date + 7));
+    var endDate = new Date(today.setDate(startDate.getDate() + 7));
 
     return [startDate, endDate];
 }
