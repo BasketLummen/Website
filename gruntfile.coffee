@@ -60,6 +60,7 @@ module.exports = (grunt) ->
           "*.html"
           "*.md"
           "*.ico"
+          "*.config"
           "robots.txt"
         ]
         tasks: [
