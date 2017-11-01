@@ -338,6 +338,11 @@ table tr, table td{
 	 background-color: #ffe100; 
 	 /* background-color: #14225C;
 	  color: #fff; */
-	  font-size: .9vw;
+	  font-size: 12px;
 	  white-space: nowrap;
+}
+@media (min-width: 768px) {
+	.calendar-item{
+     	 font-size: .9vw;
+   }
 }
