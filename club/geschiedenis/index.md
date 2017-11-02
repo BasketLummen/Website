@@ -9,7 +9,7 @@ keywords: Basket, Lummen
 
 Ter gelegenheid van het 40-jarig bestaan van Basket Lummen blikken we terug op de rijke gescheidenis van de club via krantenartikels uit Het Belang van Limburg.
 
-Iedereen wie nog krantenartikels of oude foto's heeft van vroeger mag ze e-mailen naar [johnny.peeters@basketlummen.be](mailto://johnny.peeters@basketlummen.be) ofwel ze in de sporthal aan mij bezorgen.
+Iedereen wie nog krantenartikels of oude foto's heeft van vroeger mag ze e-mailen naar [johnny_peeters@telenet.be](mailto://johnny_peeters@telenet.be) ofwel ze in de sporthal aan mij bezorgen.
 
 Ook indien er fouten in de namen of artikels staan mag je dit altijd melden.
 
