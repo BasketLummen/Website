@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Sponsor Match 11-11-2017"
+date:   2017-11-03 20:00:00
+description: Sponsor Match 11 November.
+permalink: /news/2017-11-03-peanuts/
+---
+
 Beste sponsor
 
 
@@ -11,7 +19,7 @@ Het beloven dus weer twee spannende en sfeervolle wedstrijden te worden.
 We verwachten u dan vanaf 18.15 uur voor de wedstrijd van de dames B. 
 Na hun wedstrijd om 19.30 uur kunt u genieten van een kaas- en wijnbuffet, en vanaf 20.30 uur kunt u de wedstrijd van de dames A volgen. 
 
-Om alles vlot te kunnen organiseren, vragen we u wel uw aanwezigheid te bevestigen door een mailtje naar dereze.els@telenet.be en dit voor woensdag 8 november. 
+Om alles vlot te kunnen organiseren, vragen we u wel uw aanwezigheid te bevestigen door een mailtje naar [dereze.els@telenet.be](mailto://dereze.els@telenet.be) en dit voor woensdag 8 november. 
 
 
 We rekenen op uw aanwezigheid!  
@@ -20,4 +28,4 @@ We rekenen op uw aanwezigheid!
 Namens het bestuur van Basket Lummen
 
 
-PS : Hou nu ook al zaterdag 13 januari vrij want dan houden we onze nieuwjaarsreceptie voor alle sponsors en vrijwilligers met de wedstrijd van de heren A tegen Hades en de dames C tegen Overpelt. 
+PS : Hou nu ook al zaterdag 13 januari vrij want dan houden we onze nieuwjaarsreceptie voor alle sponsors en vrijwilligers met de wedstrijd van de heren A tegen Hades en de dames C tegen Overpelt.
