@@ -20,4 +20,4 @@ We rekenen op uw aanwezigheid!
 Namens het bestuur van Basket Lummen
 
 
-PS : Hou nu ook al zaterdag 13 januari vrij want dan houden we onze nieuwjaarsreceptie voor alle sponsors en vrijwilligers met de wedstrijd van de heren A tegen Hades en de dames C tegen Overpelt. 
+PS : Hou nu ook al zaterdag 13 januari vrij want dan houden we onze nieuwjaarsreceptie voor alle sponsors en vrijwilligers met de wedstrijd van de heren A tegen Hades en de dames C tegen Overpelt.
