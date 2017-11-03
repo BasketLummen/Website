@@ -13,8 +13,8 @@ Voor het najaar van 2017 zijn er nog enkele evenementen bijgekomen waar wij onze
 Wil jij Basket Lummen steunen en ondertussen de vele veldritfans voorzien van een lekker pintje of een frisse cola? Dan zien we je graag terug op één van de volgende data:
 
  * Zaterdag 11 November 9h00-18h00: veldrit Niel (5 medewerkers)
- * Zaterdag 2 december 9h00-18h00: veldrit Hasselt (5 medewerkers)
- * Zondag 3 december 9h00-18h00: veldrit Mol (5 medewerkers)
+ * Zaterdag 2 december 9h00-18h00: veldrit Hasselt (3 medewerkers)
+ * Zondag 3 december 9h00-18h00: veldrit Mol (3 medewerkers)
 
 **Stuur snel een email naar Ilse**: [ilseleynen@hotmail.be](mailto://ilseleynen@hotmail.be)
 
