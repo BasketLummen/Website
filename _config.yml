@@ -21,7 +21,7 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-plugins_dir:
+gems:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-sitemap
