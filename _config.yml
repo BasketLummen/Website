@@ -1,7 +1,7 @@
 # Site settings
-title: Goeleven
-description: Cloud and messaging specialist 
-url: "https://www.goeleven.com/" # the base hostname & protocol for your site, e.g. http://example.com
+title: Basket Lummen
+description: Basket Lummen 
+url: "https://www.basketlummen.be/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author:
@@ -21,7 +21,7 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-plugins:
+plugins_dir:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-sitemap

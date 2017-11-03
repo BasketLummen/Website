@@ -1,9 +1,7 @@
 User-agent: *
-Sitemap: https://www.goeleven.com//sitemap.xml
+Sitemap: https://www.basketlummen.be//sitemap.xml
 
 
 
 
-
-    Disallow: /feed.xml
 
