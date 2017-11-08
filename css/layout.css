@@ -463,7 +463,7 @@ table.space-around {
 }
 
 
-.calendar{
+.calendar-calendar{
 	margin-top: 3vh;
 	display: flex;
 	flex-direction: column;
@@ -489,7 +489,7 @@ table.space-around {
 	text-align: center;
 }
 @media (min-width: 768px) {
-	.calendar{
+	.calendar-calendar{
 		flex-direction: row;		
 	}
 	.day{
