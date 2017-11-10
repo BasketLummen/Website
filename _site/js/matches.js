@@ -24,7 +24,8 @@ var renderMatches = function(){
                 time: match.beginTijd,
                 home: match.tTNaam,
                 away: match.tUNaam,
-                acc: match.accNaam
+                acc: match.accNaam,
+                link: matchuri,
             }, "tbody");
 
           $("#calendar-table tbody").append(tr);
