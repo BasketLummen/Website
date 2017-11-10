@@ -18,11 +18,34 @@ var renderMatches = function(){
                       pos: "margin-top: " + top + "px"
                   });
 
+          var tr = $.template("#table-item-template", {
+                code: match.wedID,
+                date: match.datumString,
+                time: match.beginTijd,
+                home: match.tTNaam,
+                away: match.tUNaam,
+                acc: match.accNaam
+            }, "tbody");
+
+          $("#calendar-table tbody").append(tr);
+
           $("#day-" + weekday + " .day-text").text(day);
-          $("#day-" + weekday + " .month-text").text(month);
-          $("#day-" + weekday).css("display", "flex");  
+          $("#day-" + weekday + " .month-text").text(month);          
           $("#day-" + weekday + " .calendar-items").append(div);
+          $("#day-" + weekday).css("display", "flex");
+
+
     });
+}
+
+var toggleCalendar = function(){
+    $("#calendar-table").hide();
+    $("#calendar-calendar").show();
+}
+
+var toggleTable = function(){
+    $("#calendar-calendar").hide();
+    $("#calendar-table").show();    
 }
 
 

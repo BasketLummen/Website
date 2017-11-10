@@ -346,3 +346,41 @@ table tr, table td{
      	 font-size: .9vw;
    }
 }
+
+
+/* */
+.responsive-table table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+.responsive-table table a {
+	cursor: pointer;
+}
+
+.responsive-table table tr:nth-child(odd) {
+	background-color: #EFEFEF;
+ }
+
+.responsive-table th, .calendar-header { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+.responsive-table td, .responsive-table th { 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.responsive-table tr { border: 1px solid #ccc; }
+
+	.responsive-table td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+	}
+	
+}
