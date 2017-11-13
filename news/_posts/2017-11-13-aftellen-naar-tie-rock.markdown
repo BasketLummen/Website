@@ -8,8 +8,14 @@ permalink: /news/2017-11-13-aftellen-naar-tie-rock/
 
 Aftellen naar Tie-Rock
 
-De tent is er al klaar voor (foto tent op fb te vinden) Nu jullie nog! Nog 5 keer slapen en het is zo ver!
+Dankzij het noeste werk van de talloze vrijwilligers dit weekend, is de tent er al klaar voor! 
 
-Voorverkoopkaarten zijn nog steeds te verkrijgen in de cafetaria Vijfsprong en bij Dozies-pub.
+Nu jullie nog! Nog 5 keer slapen en het is zo ver!
+
+![Tie-Rock tent](/news/img/tie-rock-tent.jpg)
+
+### Waar vind je kaarten?
+
+Voorverkoopkaarten zijn nog steeds te verkrijgen in de cafetaria van sporthal De Vijfsprong en bij Dozies-pub.
 
 Jij komt toch ook?!
