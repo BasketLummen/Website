@@ -79,11 +79,11 @@ setInterval(function(){
 var center = function(){
 	$("img.focus-center").each(function(i, img) {
 		var offset = ($(window).width() - $(img).width()) / 2;
-		if(offset < -($(window).width() / 4) || $(img).css('margin-left') != "0px"){
+		/*if(offset < -($(window).width() / 4) || $(img).css('margin-left') != "0px"){*/
 			$(img).animate({
 				marginLeft: offset + 'px'
 			}, 'slow', 'swing', function() {});
-		}
+		/*}*/
 	});
 }
 
