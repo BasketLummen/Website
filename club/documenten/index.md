@@ -13,6 +13,7 @@ keywords: Basket, Lummen
 ## Handleidingen
 
  * [Invullen wedstrijdblad](/club/documenten/Handleiding invullen wedstrijdblad.doc)
+ * [Voorbeeld wedstrijdblad](/club/documenten/wedstrijdformulier_2017-2018.pdf)
  * [Scorebord terrein 1](/club/documenten/Handleiding scorebord terrein 1.doc)
  * [Scorebord terrein 3](/club/documenten/Handleiding scorebord terrein 3.doc) 
  * [24 seconden-klok](/club/documenten/Handleiding 24sec.doc)
