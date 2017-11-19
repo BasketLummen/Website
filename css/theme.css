@@ -1,6 +1,11 @@
 body{
 	font-family: Muli;
-	font-size: 1.6em;
+	font-size: 1.4em;
+}
+@media (min-width: 1024px) {
+	body{
+		font-size: 1.6em;
+	}
 }
 
 h1 {
