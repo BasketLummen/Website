@@ -6,15 +6,15 @@
     <span>&laquo; Prev</span>
   {% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+  {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+      {% if paginator.page == trail.num %}
+        <em>{{ paginator.page }}</em>
+      {% else %}
+        <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">{{ trail.num }}</a>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | replace: '//', '/' }}">Next &raquo;</a>
