@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.basketlummen.be//feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.basketlummen.be//" rel="alternate" type="text/html" /><updated>2017-11-30T23:48:33+01:00</updated><id>https://www.basketlummen.be//</id><title type="html">Basket Lummen</title><subtitle>Basket Lummen</subtitle><author><name>Yves Goeleven</name><email>yves@goeleven.com</email></author><entry><title type="html">Onze club in de kijker bij Limburg United</title><link href="https://www.basketlummen.be//news/2017-12-02-limutd/" rel="alternate" type="text/html" title="Onze club in de kijker bij Limburg United" /><published>2017-11-29T21:00:00+01:00</published><updated>2017-11-29T21:00:00+01:00</updated><id>https://www.basketlummen.be//news/limutd</id><content type="html" xml:base="https://www.basketlummen.be//news/2017-12-02-limutd/">&lt;p&gt;Wat houdt het precies in?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.basketlummen.be//feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.basketlummen.be//" rel="alternate" type="text/html" /><updated>2017-12-01T18:59:20+01:00</updated><id>https://www.basketlummen.be//</id><title type="html">Basket Lummen</title><subtitle>Basket Lummen</subtitle><author><name>Yves Goeleven</name><email>yves@goeleven.com</email></author><entry><title type="html">Onze club in de kijker bij Limburg United</title><link href="https://www.basketlummen.be//news/2017-12-02-limutd/" rel="alternate" type="text/html" title="Onze club in de kijker bij Limburg United" /><published>2017-11-29T21:00:00+01:00</published><updated>2017-11-29T21:00:00+01:00</updated><id>https://www.basketlummen.be//news/limutd</id><content type="html" xml:base="https://www.basketlummen.be//news/2017-12-02-limutd/">&lt;p&gt;Wat houdt het precies in?&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;uw club mag 12 jeugdspelers (in tenue) tussen de 6 jaar en de 12 jaar afvaardigen om bij het begin vd wedstrijd mee de arena te betreden met de spelers van HLU.
 =&amp;gt; + eigen kleedkamer&lt;/li&gt;
@@ -15,7 +15,57 @@
 
 &lt;p&gt;Uw contactpersoon ter plaatse: Tom Willems of Bob Vanderheyden (0494 44 30 21)&lt;/p&gt;
 
-&lt;div data-promotionid=&quot;limutd&quot;&gt;&lt;/div&gt;</content><author><name>Yves Goeleven</name><email>yves@goeleven.com</email></author><summary type="html">Wat houdt het precies in? uw club mag 12 jeugdspelers (in tenue) tussen de 6 jaar en de 12 jaar afvaardigen om bij het begin vd wedstrijd mee de arena te betreden met de spelers van HLU. =&amp;gt; + eigen kleedkamer er worden van alle spelers foto’s gemaakt iedereen onder de 12 jaar mag gratis de wedstrijd bijwonen iedereen vanaf 12 jaar betaalt 5 euro inkom i.p.v. de gebruikelijke 15 euro</summary></entry><entry><title type="html">Eindejaarsactie</title><link href="https://www.basketlummen.be//news/2017-11-21-eindejaarsactie/" rel="alternate" type="text/html" title="Eindejaarsactie" /><published>2017-11-21T21:00:00+01:00</published><updated>2017-11-21T21:00:00+01:00</updated><id>https://www.basketlummen.be//news/eindejaarsactie</id><content type="html" xml:base="https://www.basketlummen.be//news/2017-11-21-eindejaarsactie/">&lt;p&gt;De feestdagen komen eraan! Basket Lummen, Prik &amp;amp; Tik Drinkcenter Borger en De Kaarskesprocessie slaan de handen in elkaar. Vanaf nu zijn we niet alleen een prachtige basketclub, maar ook wijn- en pralineverkopers.&lt;/p&gt;
+&lt;div data-promotionid=&quot;limutd&quot;&gt;
+    &lt;div&gt;
+        &lt;form class=&quot;responsive-form&quot;&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Inschrijving&lt;/legend&gt;
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;label for=&quot;name&quot;&gt;Naam&lt;/label&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;                        
+                            &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; placeholder=&quot;Vul je naam in...&quot; /&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;label for=&quot;firstname&quot;&gt;Voornaam&lt;/label&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;firstname&quot; id=&quot;firstname&quot; placeholder=&quot;Vul je voornaam in...&quot; /&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;label for=&quot;promo1&quot;&gt;Aantal personen ouder dan 12&lt;/label&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;promo1&quot; id=&quot;promo1&quot; placeholder=&quot;0&quot; /&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;label for=&quot;promo2&quot;&gt;Aantal personen jonger dan 12&lt;/label&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;input type=&quot;text&quot; name=&quot;promo2&quot; id=&quot;promo2&quot; placeholder=&quot;0&quot; /&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;
+                            &lt;label for=&quot;submit&quot;&gt;&lt;/label&gt;
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                            &lt;button type=&quot;submit&quot; id=&quot;submit&quot;&gt;Inschrijven&lt;/button&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</content><author><name>Yves Goeleven</name><email>yves@goeleven.com</email></author><summary type="html">Wat houdt het precies in? uw club mag 12 jeugdspelers (in tenue) tussen de 6 jaar en de 12 jaar afvaardigen om bij het begin vd wedstrijd mee de arena te betreden met de spelers van HLU. =&amp;gt; + eigen kleedkamer er worden van alle spelers foto’s gemaakt iedereen onder de 12 jaar mag gratis de wedstrijd bijwonen iedereen vanaf 12 jaar betaalt 5 euro inkom i.p.v. de gebruikelijke 15 euro</summary></entry><entry><title type="html">Eindejaarsactie</title><link href="https://www.basketlummen.be//news/2017-11-21-eindejaarsactie/" rel="alternate" type="text/html" title="Eindejaarsactie" /><published>2017-11-21T21:00:00+01:00</published><updated>2017-11-21T21:00:00+01:00</updated><id>https://www.basketlummen.be//news/eindejaarsactie</id><content type="html" xml:base="https://www.basketlummen.be//news/2017-11-21-eindejaarsactie/">&lt;p&gt;De feestdagen komen eraan! Basket Lummen, Prik &amp;amp; Tik Drinkcenter Borger en De Kaarskesprocessie slaan de handen in elkaar. Vanaf nu zijn we niet alleen een prachtige basketclub, maar ook wijn- en pralineverkopers.&lt;/p&gt;
 
 &lt;p&gt;Ben jij ook altijd op zoek naar een leuk cadeautje voor de grootouders of meter of peter… Zoek niet verder!
 We hebben een prachtige &lt;a href=&quot;/news/downloads/eindejaarsactie_2017_lijst.pdf&quot;&gt;selectie wijnen en pralines&lt;/a&gt; in de aanbieding.&lt;/p&gt;

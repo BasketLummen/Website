@@ -462,9 +462,6 @@ table.space-around {
     width: calc(100% - 1vw);
 }
 
-.responsive-table td, .responsive-table th, .calendar-header{
-	padding: 6px;
-}
 .calendar-table
 {
 	width: 100%; 
@@ -505,6 +502,10 @@ table.space-around {
 	}
 }
 
+/* responsive table */
+.responsive-table td, .responsive-table th, .calendar-header{
+	padding: 6px;
+}
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -554,4 +555,46 @@ only screen and (max-width: 760px),
 
 .actions{
 	text-align: right;
+}
+
+/* responsive form */
+.responsive-form td, .responsive-form th{
+	padding: 6px;
+}
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.responsive-form td, .responsive-form th{
+		padding: 0px;
+	}
+
+	/* Force table to not be like tables anymore */
+	.responsive-form table, .responsive-form thead, .responsive-form tbody, .responsive-form th, .responsive-form td,.responsive-form tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.responsive-form thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.responsive-form td { 
+		/* Behave  like a "row" */
+		position: relative;
+	}
+	
+	.responsive-form td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
 }
