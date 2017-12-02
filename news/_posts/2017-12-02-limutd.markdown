@@ -1,24 +1,25 @@
 ---
 layout: post
-title:  "Onze club in de kijker bij Limburg United"
-date:   2017-11-29 20:00:00
-description: Onze club in de kijker bij Limburg United.
+title:  "Onze club in de kijker bij Hubo Limburg United"
+date:   2017-12-02 20:00:00
+description: Onze club in de kijker bij Hubo Limburg United.
 permalink: /news/2017-12-02-limutd/
 custom_js:
 - promotion
 ---
 
-Wat houdt het precies in?
--   uw club mag 12 jeugdspelers (in tenue) tussen de 6 jaar en de 12 jaar afvaardigen om bij het begin vd wedstrijd mee de arena te betreden met de spelers van HLU.
-=> + eigen kleedkamer
--   er worden van alle spelers foto's gemaakt
--   iedereen onder de 12 jaar mag gratis de wedstrijd bijwonen
--   iedereen vanaf 12 jaar betaalt 5 euro inkom i.p.v. de gebruikelijke 15 euro
+Op 22 December 2017 staat onze club in de spotlights bij Hubo Limburg United!
 
-Graag verkrijg ik nog volgende gegevens van jou:
--   het aantal betalende aanwezigen aan 5euro (totaal cash te betalen op de wedstrijdavond zelf. U krijgt een envelop mee met alle bestelde inkomtickets)
-=> Gelieve dit tijdig door te geven
+Aan het begin van de wedstrijd mogen dan 12 van onze jongste spelertjes (6 tot 12 jaar) in tenue mee de arena betreden samen met de spelers van Hubo Limburg United. Ze krijgen hun eigen kleedkamer en er worden foto's gemaakt, zoals het echte sterren betaamt.
 
-Uw contactpersoon ter plaatse: Tom Willems of Bob Vanderheyden (0494 44 30 21)
+Maar het is niet alleen feest voor onze kleinsten, we kunnen allemaal aan verlaagd tarief de wedstrijd bijwonen! Iedereen van onze club onder de 12 jaar mag de wedstrijd gratis bijwonen, voor iedereen vanaf 12 jaar wordt de inkom beperkt tot 5 euro in plaats van de gebruikelijke 15 euro.
+
+### Tegen wie spelen ze?
+
+Op 22 December wordt er gestreden tegen Basic Fit Brussels, een rechtstreekse concurrent in de strijd om een playoff spot. Het beloofd dus een spannende wedstrijd te worden. En ze hebben nog iets recht te zetten van de vorige confrontatie, dat beloofd dus! De wedstrijd begint om 20u30.
+
+### Hoe kan ik deelnemen?
+
+Schrijf je in op onderstaande formulier en geef aan met hoeveel personen je komt, inclusief jezelf. Het geld neem je gepast mee op de wedstrijd dag, er zal iemand van de club aan de inkom staan met de bestelde tickets.
 
 <div data-promotionid="limutd"></div>
