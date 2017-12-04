@@ -353,7 +353,7 @@ table tr, table td{
 }
 
 
-/* */
+/* responsive table views */
 .responsive-table table { 
   width: 100%; 
   border-collapse: collapse; 
@@ -389,3 +389,41 @@ only screen and (max-width: 760px),
 	}
 	
 }
+
+/* responsive forms */
+.responsive-form table { 
+	width: 100%; 
+	border-collapse: collapse;
+	border: none;
+  }
+  .responsive-form table a {
+	  cursor: pointer;
+  }
+  
+  .responsive-form th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+  }
+  .responsive-form tr, .responsive-form td  {
+	  border: none;
+  }
+  .responsive-form td { 
+	text-align: left;
+	white-space: nowrap;
+  }
+  .responsive-form td:first-of-type { 
+	text-align: right;
+  }
+  .responsive-form td:not(:first-of-type){
+	width: 99%;
+  }
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+	.responsive-form td:first-of-type { 
+		text-align: left;
+	  }
+  }
+
+  
