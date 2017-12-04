@@ -1,20 +1,17 @@
 ---
 layout: post
-title:  "Fietspromo Lummen X-mastocht"
+title:  "Fietspromo Lummen X-mastocht 2017"
 date:   2017-12-04 20:00:00
-description: Fietspromo Lummen X-mastocht.
+description: Fietspromo Lummen X-mastocht 2017.
 permalink: /news/2017-12-04-mountainbike/
 ---
 
-FIETSPROMO LUMMEN X-MASTOCHT
+Als je dacht dat basketters enkel een beetje met de bal konden spelen, dan ben je verkeerd. Ze kunnen ook aardig crossen met de mountainbike! 
 
-DATUM
-dinsdag 26 december 2017
-PLAATS
-LUMMEN SPORTHAL
-AFSTANDEN
-25km - 45km
-STARTTIJDEN
-8.00-11.00
+Op dinsdag 26 december 2017 organiseert Ivan Luyten, samen met Basket Lummen en de X-Masbikers, de jaarlijkse X-Mastocht in de Lummense velden en bossen.
 
-BASKET LUMMEN Feat.IVAN LUYTEN
+Vanaf 8u 's ochtends kunnen alle mountainbikers terecht aan het gemeentelijk sportcomplex voor een tocht van 25 of 45 kilometer.
+
+Alle faciliteiten zijn aanwezig om er weer een perfecte tocht van te maken: douches, bevoorrading, een fietswash en vooral een topsfeer.
+
+Afspraak tweede kerstdag aan de sporthal van Lummen!
