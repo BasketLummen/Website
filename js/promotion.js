@@ -88,6 +88,7 @@ $(document).ready(function(){
                     if (items.hasOwnProperty(key)){
                         var item = items[key];
                         var quantity = $("#" + item.id).val();
+                        if(quantity == null || quantity.length == 0) quantity = 0;
                         sum += quantity * item.price;
                     }
                 }
@@ -116,10 +117,12 @@ $(document).ready(function(){
                     for (var key in items) {
                         if (items.hasOwnProperty(key)){
                             var item = items[key];
+                            var quantity = $("#" + item.id).val();
+                            if(quantity == null || quantity.length == 0) quantity = 0;
                             itemsToSubmit.push({
                                 id: guid(), 
                                 promotionItem: item,
-                                quantity: $("#" + item.id).val()
+                                quantity: quantity
                             });
                         }
                     }
