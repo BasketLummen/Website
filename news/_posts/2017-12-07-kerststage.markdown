@@ -8,7 +8,7 @@ custom_js:
 - promotion
 ---
 
-Net zoals Sinterklaas elk jaar op 6 december komt, organiseren wij weer klokvast een kerststage voor onze jongste spelers. De stage kost 5€ per halve dag en zal doorgaan op:
+Net zoals Sinterklaas elk jaar op 6 december komt, organiseren wij weer klokvast een kerststage voor onze jongste spelers. De stage kost €5 per halve dag en zal plaatsvinden op:
 
 - 3 januari van 10:00 tot 13:00
 - 5 januari van 10:00 tot 13:00
