@@ -6,7 +6,7 @@ description: Scheidsrechterscursus U8 & U10.
 permalink: /news/2017-12-15-scheidsrechterscursus/
 ---
 
-Dan kan je terecht in de sporthal van Zolder voor een scheidsrechterscursus georganiseerd door [basketbal.vlaanderen](http://www.basketbal.vlaanderen) op volgende datums :
+Dan kan je terecht in de sporthal van Zolder voor een scheidsrechterscursus georganiseerd door [basketbal.vlaanderen](http://www.basketbal.vlaanderen) op volgende data :
 
 - Zondag 14 januari 2018 van 10u00 tot 16u00
 - Zondag 21 januari 2018 van 10u00 tot 16u00
@@ -29,9 +29,8 @@ De cursus bestaat uit 4 theoretische modules + 2 praktische modules + 1 theoreti
 
 Iedereen die voldoet aan de voorwaarden:
 
-- Minimuum leeftijd = 14 jaar,
+- Minimum leeftijd = 14 jaar,
 - Aangesloten zijn bij Basketbal Vlaanderen (via de club).
-- Slagen in het examen van de scheidsrechtersopleiding.
 
 Je moet dus niet per se zelf ervaring hebben als speler.
 
