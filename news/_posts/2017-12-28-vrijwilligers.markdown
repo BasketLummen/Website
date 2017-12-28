@@ -26,6 +26,3 @@ Je kan ons op verschillende evenementen een handje helpen. Hieronder vind je het
 - 13/5/18: De ridders van de ronde keukentafel Ethias Theater: 12u - 17u (15 personen)
 - 18/5/18: Semino Rossi Ethias Arena: 18u - 23u30 (17 personen)
 - 30/5/18: John Cleese Ethias Theater: 18u - 24u (15 personen)
-  
-
-
