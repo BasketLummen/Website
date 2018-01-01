@@ -13,6 +13,8 @@ if (!String.prototype.format) {
 $(document).ready(function(){
     var promotionholder = $("[data-promotionid]");
     var promotionid = promotionholder.attr("data-promotionid");
+    var title = promotionholder.attr("data-title");
+    var buttontext = promotionholder.attr("data-buttontext");
     var service = "community-service.azurewebsites.net";
   //  var service = "localhost:22465"; // uncomment for local testing
     var uri= "http://" + service + "/api/promotions/" + promotionid;
@@ -32,7 +34,7 @@ $(document).ready(function(){
 
             promotionholder.append($('<form>').addClass('responsive-form')
                            .append($('<fieldset>')
-                           .append($('<legend>').text('Schrijf je in'))
+                           .append($('<legend>').text(title))
                            .append(table)));
 
             var today = new Date();
@@ -111,7 +113,7 @@ $(document).ready(function(){
 
                         var inputTextVisible = item.maximumQuantity == null || item.maximumQuantity > 1;
                         table.append($('<tr>')
-                            .append($('<td>').append($('<label>').text(item.name).attr('for', item.id)))
+                            .append($('<td>').append($('<label>').text(item.name + " €" + item.price).attr('for', item.id)))
                             .append($('<td>').append($('<input>').attr({ type: 'text', id: item.id, name: item.id, placeholder: '0' }).addClass("promotionitem").toggle(inputTextVisible))
                                             .append($('<input>').attr({ type: 'checkbox', "data-targetid": item.id, "data-minvalue": item.minimumQuantity, "data-maxvalue": item.maximumQuantity }).addClass("promotionitemtoggle").toggle(!inputTextVisible) )));
                     }
@@ -125,7 +127,7 @@ $(document).ready(function(){
 
                 table.append($('<tr>')
                     .append($('<td>').append($('<label>').attr('for', 'submit')))
-                    .append($('<td>').append($('<button>').text('Inschrijven').attr({ type: 'submit', id: 'submit' }))));
+                    .append($('<td>').append($('<button>').text(buttontext).attr({ type: 'submit', id: 'submit' }))));
 
                 // compute price on promotion item changes
                 var computeTotal = function(){
