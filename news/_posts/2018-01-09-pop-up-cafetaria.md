@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Popup cafetaria"
+date:   2018-09-01 10:00:00
+description: Popup cafetaria.
+permalink: /news/2018-01-09-pop-up-cafetaria/
+---
+
 Zoals jullie al gemerkt hebben wordt er hard gewerkt aan de vernieuwing van het zwembad, verbonden aan onze sporthal.
 De komende 8 weken worden ook de kleedkamers grondig aangepakt. Tijdens die periode is het cafétaria ook tijdelijk gesloten.
 
