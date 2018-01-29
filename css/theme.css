@@ -376,6 +376,10 @@ table tr, table td{
   text-align: left; 
 }
 
+.responsive-table-cell{
+	position: relative;
+}
+
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -426,4 +430,18 @@ only screen and (max-width: 760px),
 	  }
   }
 
-  
+.table-indicator{
+	padding: .8vh .8vw;
+	font-size: .7em;
+	color: #DDD;
+}
+.table-indicator.red{
+	color: #FF0000;
+}
+
+#workplanning th{
+	white-space: nowrap
+}
+#workplanning ul{
+	list-style: none;
+}

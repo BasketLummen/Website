@@ -598,3 +598,9 @@ only screen and (max-width: 760px),
 	}
 
 }
+
+.table-indicator{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
