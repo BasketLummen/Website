@@ -23,7 +23,7 @@ function renderRows(planning){
 		table.append(tr.append($("<td>").addClass("responsive-table-cell").append(div)));
 		for (i = 0; i < planning.shifts.length; i++) {
 			var shift = planning.shifts[i];
-			var slots = planning.slots.filter(e => e.workTaskId === task.id && e.workShiftId == shift.id);
+			var slots = planning.slots.filter(function(e){ return e.workTaskId === task.id && e.workShiftId == shift.id; });
 			var slot = slots.length > 0 ? slots[0] : null;
 			var slotid = task.id + "-" + shift.id;
 			
