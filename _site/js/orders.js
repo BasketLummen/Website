@@ -27,7 +27,7 @@ function renderRows(details){
 		table.append(tr.append($("<td>").addClass("responsive-table-cell").append(div)));
 		var price = 0;
 		details.promotion.items.forEach(function(item){
-			var items = subscription.items.filter(e => e.promotionItem.id === item.id);
+			var items = subscription.items.filter(function(e){ return e.promotionItem.id === item.id });
 			
 			var subscribed = items.length > 0 ? items[0] : null;
 			var quantity = 0;
