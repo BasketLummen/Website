@@ -389,8 +389,13 @@ only screen and (max-width: 760px),
 	.responsive-table td { 
 		/* Behave  like a "row" */
 		border: none;
+	}
+	.responsive-table td:not(:last-child) { 
 		border-bottom: 1px solid #eee; 
 	}
+	.responsive-table tr:nth-child(odd) td:not(:last-child){
+		border-bottom: 1px solid #fff; 
+	 }
 	
 }
 

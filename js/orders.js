@@ -1,10 +1,28 @@
+function renderStyleSheet(){
+	var style = document.createElement("style");
+
+	style.setAttribute("media", "only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)");
+
+	// WebKit hack :(
+	style.appendChild(document.createTextNode(""));
+
+	// Add the <style> element to the page
+	document.head.appendChild(style);
+	
+	return style.sheet;
+}
+var sheet = renderStyleSheet();
+
 function renderHeader(details){
 	var tr = $("#orders-table tr:first");
+	var i = 1;
 	details.promotion.items.forEach(function(item) {
 		var div = $.template("#available-item-template",
 		{
 			title: item.name
 		});
+		i++;
+		sheet.insertRule("#orders-table td:nth-of-type(" + i + "):before {content: \"" + item.name + "\"; }", 0);
 		tr.append($("<th>").addClass("responsive-table-cell").append(div));
 	});
 	

@@ -1,12 +1,31 @@
+function renderStyleSheet(){
+	var style = document.createElement("style");
+
+	style.setAttribute("media", "only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)");
+
+	// WebKit hack :(
+	style.appendChild(document.createTextNode(""));
+
+	// Add the <style> element to the page
+	document.head.appendChild(style);
+	
+	return style.sheet;
+}
+var sheet = renderStyleSheet();
+
 function renderHeader(planning){
 	var tr = $("#workplanning-table tr:first");
+	var i = 1;
 	planning.shifts.forEach(function(shift) {
 		if(!shift.archived){
 			var start = new Date(Date.parse(shift.workStartsOn));
 			var end = new Date(Date.parse(shift.workEndsOn));
+			var title = start.toLocaleDateString('nl-BE', { year: 'numeric', month: 'numeric', day: 'numeric' }) + " [" + start.toLocaleTimeString('nl-BE', { hour: 'numeric', minute: 'numeric' }) + "-" + end.toLocaleTimeString('nl-BE', { hour: 'numeric', minute: 'numeric' }) + "]";
+			i++;
+			sheet.insertRule("#workplanning-table tr:not(:last-child) td:nth-of-type(" + i + "):before {content: \"" + title + "\"; }", 0);
 			var div = $.template("#shift-template",
 			{
-				title: start.toLocaleDateString('nl-BE', { year: 'numeric', month: 'numeric', day: 'numeric' }) + " [" + start.toLocaleTimeString('nl-BE', { hour: 'numeric', minute: 'numeric' }) + "-" + end.toLocaleTimeString('nl-BE', { hour: 'numeric', minute: 'numeric' }) + "]"
+				title: title			
 			});
 			tr.append($("<th>").addClass("responsive-table-cell").append(div));		
 		}		
