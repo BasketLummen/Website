@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description }}">  
+    <meta name="keywords" content="{{ page.keywords }}">
+				
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109047777-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-109047777-1');
+		</script>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Muli" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+	  <link href="/css/layout.css" rel="stylesheet" media="screen" type="text/css">	
+		<link href="/css/theme.css" rel="stylesheet" media="screen" type="text/css">
+	
+	{% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="/css/{{ stylesheet }}.css" media="screen" type="text/css">
+    {% endfor %}
+    {% endif %}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+	{{ content }}	
+		
+	{% include footer.html %}
+  {% include scripts.html %}
+	
+	{% if page.custom_js %}
+	{% for js_file in page.custom_js %}
+	<script src='/js/{{ js_file }}.js' type="text/javascript"></script>
+	{% endfor %}
+	{% endif %}
+
+	<script src='/js/start.js' type="text/javascript"></script>
+	
+	{% if page.async_js %}
+	{% for js_uri in page.async_js %}
+	<script async defer src='{{ js_uri }}' type="text/javascript"></script>
+	{% endfor %}
+	{% endif %}
+	
+  </body>
+</html>

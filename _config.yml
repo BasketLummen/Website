@@ -1,0 +1,44 @@
+# Site settings
+title: Basket Lummen
+description: Basket Lummen 
+url: "https://www.basketlummen.be/" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Author settings
+author:
+  name     : Yves Goeleven
+  bio      : Azure MVP, cloud and messaging specials.
+  email    : yves@goeleven.com
+  twitter  : https://twitter.com/yvesgoeleven
+  
+# Build settings
+permalink: /:title/
+markdown: kramdown
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - pagina :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail: 
+    before: 2
+    after: 2
+gems:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "bower_components"
+  - "bower.json"
+  - "node_modules"
+  - "package.json"
+  - "gruntfile.coffee"
+
+css_folder:  "/css"
+js_folder:  "/js"
+img_folder:  "/img"
