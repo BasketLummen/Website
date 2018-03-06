@@ -2,8 +2,8 @@
 layout: post
 title:  "Sponsormatch met pastabuffet - 10 maart 2018"
 date:   2018-03-05 21:45:00
-description: "Sponsormatch 10 maart 2018".
-permalink: /news/sponsormatch-en-pastabuffet-10-maart-2018/
+description: Sponsormatch 10 maart 2018.
+permalink: /news/2018-03-05-sponsormatch-en-pastabuffet/
 ---
 
 Zaterdag 10 maart 2018 wordt een belangrijke dag voor onze dames!
