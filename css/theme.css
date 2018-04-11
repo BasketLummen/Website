@@ -450,3 +450,80 @@ only screen and (max-width: 760px),
 #workplanning ul{
 	list-style: none;
 }
+
+/* organogram */
+
+.organogram{
+	position: relative;
+}
+
+.organogram ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;		
+}
+
+.organogram ul a{
+	display: block;
+	text-align: center;
+	border: 4px solid #333;
+	padding: 2vh;
+	margin: 1vh;
+}
+
+.organogram .management > li > a {
+	min-width: 30vw;
+	margin: 0 auto 0 auto;
+}
+
+.organogram .administration{
+	width: 50%;
+	text-align: right;
+	border: 0;
+	border-right: 4px solid #333;
+}
+
+.organogram .administration > li > a{
+	display: inline-block;
+	min-width: 10vw;
+	position: relative;
+}
+.organogram .administration > li > a:after{
+	content:"";
+	display: block;
+	position: absolute;
+	border-bottom: 4px solid #333;
+	width: 1.8vh;
+	top: 50%;
+	right: -1.8vh;
+}
+
+.organogram .departments{
+	display: flex;
+	flex: column;
+	flex-wrap: wrap;
+	position: relative;
+}
+.organogram .departments:after{
+	content: "";
+	display: block;
+	position: absolute;
+	border-top: 4px solid #333;
+	height: 1vh;
+	margin: 0 auto;
+	width: 82%;
+	left: 8.2%;
+}
+
+.organogram .department{
+	flex-grow: 1;
+	position: relative;
+}
+.organogram .department:before{
+	content:"";
+	display: block;
+	position: absolute;
+	border-left: 4px solid #333;
+	height: 1vh;
+	left: 50%;
+}
