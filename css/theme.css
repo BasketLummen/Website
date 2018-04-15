@@ -372,7 +372,7 @@ table tr, table td{
   font-weight: bold; 
 }
 .responsive-table td, .responsive-table th { 
-  border: 1px solid #ccc; 
+ /* border: 1px solid #ccc; */
   text-align: left; 
 }
 
@@ -456,6 +456,9 @@ only screen and (max-width: 760px),
 .organogram{
 	position: relative;
 }
+.organogram figure{
+	padding: 4vh;
+}
 
 .organogram ul{
 	padding: 0;
@@ -466,9 +469,12 @@ only screen and (max-width: 760px),
 .organogram ul a{
 	display: block;
 	text-align: center;
-	border: 4px solid #333;
+	/*border: 4px solid #333;*/
+	background-color: #14225C;
 	padding: 2vh;
 	margin: 1vh;
+	color: #fff;
+	font-weight: bold;
 }
 
 .organogram .management > li > a {
@@ -486,22 +492,22 @@ only screen and (max-width: 760px),
 .organogram .administration > li > a{
 	display: inline-block;
 	min-width: 10vw;
-	position: relative;
+	position: relative;	
 }
 .organogram .administration > li > a:after{
 	content:"";
 	display: block;
 	position: absolute;
 	border-bottom: 4px solid #333;
-	width: 1.8vh;
+	width: 1.3vh;
 	top: 50%;
-	right: -1.8vh;
+	right: -1.3vh;
 }
 
 .organogram .departments{
 	display: flex;
-	flex: column;
-	flex-wrap: wrap;
+	flex-direction: row; 
+	flex-wrap: nowrap;
 	position: relative;
 }
 .organogram .departments:after{
