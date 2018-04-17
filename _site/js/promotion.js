@@ -112,10 +112,12 @@ $(document).ready(function(){
                         }
 
                         var inputTextVisible = item.maximumQuantity == null || item.maximumQuantity > 1;
+                        var checkType = promotion.choiceType == "Multiple" ? 'checkbox' : 'radio';
+                        var name = promotion.choiceType == "Multiple" ? item.id : "selection";
                         table.append($('<tr>')
                             .append($('<td>').append($('<label>').text(item.name + " €" + item.price).attr('for', item.id)))
-                            .append($('<td>').append($('<input>').attr({ type: 'text', id: item.id, name: item.id, placeholder: '0' }).addClass("promotionitem").toggle(inputTextVisible))
-                                            .append($('<input>').attr({ type: 'checkbox', "data-targetid": item.id, "data-minvalue": item.minimumQuantity, "data-maxvalue": item.maximumQuantity }).addClass("promotionitemtoggle").toggle(!inputTextVisible) )));
+                            .append($('<td>').append($('<input>').attr({ type: 'text', id: item.id, name: name, placeholder: '0' }).addClass("promotionitem").toggle(inputTextVisible))
+                                            .append($('<input>').attr({ type: checkType, name: name, "data-targetid": item.id, "data-minvalue": item.minimumQuantity, "data-maxvalue": item.maximumQuantity }).addClass("promotionitemtoggle").toggle(!inputTextVisible) )));
                     }
                 }
 
@@ -144,14 +146,17 @@ $(document).ready(function(){
                 };
 
                 $(".promotionitem").change(function(){
-                var sum = computeTotal();
-                promotionholder.find('#price').text("€ " + sum);
+                    var sum = computeTotal();
+                    promotionholder.find('#price').text("€ " + sum);
                 });
                 $(".promotionitemtoggle").change(function(){
-                    var targetid = $(this).attr('data-targetid');
-                    var minvalue = $(this).attr('data-minvalue');
-                    var maxvalue = $(this).attr('data-maxvalue');
-                    $("#" + targetid).val($(this).is(':checked') ? maxvalue : minvalue).trigger("change");
+                    // as not all untoggles trigger change, evaluate all on every toggle
+                    $(".promotionitemtoggle").each(function(i, toggle){
+                        var targetid = $(toggle).attr('data-targetid');
+                        var minvalue = $(toggle).attr('data-minvalue');
+                        var maxvalue = $(toggle).attr('data-maxvalue');
+                        $("#" + targetid).val($(toggle).is(':checked') ? maxvalue : minvalue).trigger("change");
+                    });                    
                 });
 
                 // set up form validation and submit logic
