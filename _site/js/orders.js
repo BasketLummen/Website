@@ -12,10 +12,15 @@ function renderStyleSheet(){
 	return style.sheet;
 }
 var sheet = renderStyleSheet();
+var numberOfOptionsToRender = 0;
 
 function renderHeader(details){
 	var tr = $("#orders-table tr:first");
 	var i = 1;
+	// count maximum number of options first
+	details.promotion.items.forEach(function(item){
+		if(item.options && item.options.length > numberOfOptionsToRender) numberOfOptionsToRender = item.options.length;
+	});
 	details.promotion.items.forEach(function(item) {
 		var div = $.template("#available-item-template",
 		{
@@ -31,6 +36,11 @@ function renderHeader(details){
 		title: "Totaal"
 	});
 	tr.append($("<th>").addClass("responsive-table-cell").append(div));
+
+	if(numberOfOptionsToRender > 0)
+	{
+		tr.append($("<th>").attr("colspan", numberOfOptionsToRender).addClass("responsive-table-cell").append("Keuzes"));
+	}
 }
 
 function renderRows(details){
@@ -48,20 +58,27 @@ function renderRows(details){
 			var items = subscription.items.filter(function(e){ return e.promotionItem.id === item.id });
 			
 			var subscribed = items.length > 0 ? items[0] : null;
-			var quantity = 0;
-			items.forEach(function(s){
-				quantity += s.quantity
-			});	
-			
-			var content = $.template("#subscribed-template",
+			if(subscribed)
 			{
-				quantity: quantity
-			});
+				var quantity = 0;
+				items.forEach(function(s){
+					quantity += s.quantity
+				});	
+				
+				var content = $.template("#subscribed-template",
+				{
+					quantity: quantity
+				});
+				
+				price += quantity * item.price;
+				
+				tr.append($("<td>").attr('id', subscribed.id).addClass("responsive-table-cell").append(content));				
+			}
+			else{
+				tr.append($("<td>").addClass("responsive-table-cell").append("0"));
+			}
 			
-			price += quantity * item.price;
-			
-			tr.append($("<td>").attr('id', subscribed.id).addClass("responsive-table-cell").append(content));
-		});
+		});		
 		
 		var content = $.template("#subscribed-template",
 		{
@@ -69,6 +86,23 @@ function renderRows(details){
 		});
 		
 		tr.append($("<td>").addClass("responsive-table-cell").append(content));
+
+		// show options
+
+		details.promotion.items.forEach(function(item){
+			var items = subscription.items.filter(function(e){ return e.promotionItem.id === item.id });
+			var subscribed = items.length > 0 ? items[0] : null;			
+			if(subscribed && subscribed.selectedOptions){
+				var optionCellsRendered = 0;
+				subscribed.selectedOptions.forEach(function(option){
+					tr.append($("<td>").addClass("responsive-table-cell").append(option.selectedOptionType.name));
+					optionCellsRendered++;
+				});
+				for(var i = optionCellsRendered; i < numberOfOptionsToRender; i++){
+					tr.append($("<td>").addClass("responsive-table-cell").append(""));
+				}
+			}			
+		});	
 	});
 }
 
