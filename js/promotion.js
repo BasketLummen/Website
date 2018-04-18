@@ -123,7 +123,7 @@ $(document).ready(function(){
 
                 // extend with total and submit button
 
-                table.append($('<tr>')
+                table.append($('<tr class="total-row">')
                     .append($('<td>').append($('<label>').text('Te betalen')))
                     .append($('<td>').append($('<label>').text('€ 0').attr('id', 'price'))));
 
@@ -157,6 +157,24 @@ $(document).ready(function(){
                         var maxvalue = $(toggle).attr('data-maxvalue');
                         $("#" + targetid).val($(toggle).is(':checked') ? maxvalue : minvalue).trigger("change");
                     });                    
+                });
+
+                $(".promotionitemtoggle").change(function(){
+                    var targetid = $(this).attr('data-targetid');
+                    var item = items[targetid];
+                    if(item && item.type == "Variable" && item.options){
+                        $(".variable-row").remove();
+                        item.options.forEach(function(option){
+                            var sel = $("<select>");
+                            option.values.forEach(function(value){
+                                sel.append($("<option>").attr("value", value.id).text(value.name));
+                            });
+
+                            $(".total-row").before($('<tr class="variable-row">')
+                            .append($('<td>').append($('<label>').text(option.name)))
+                            .append($('<td>').append(sel)));
+                        });
+                    }
                 });
 
                 // set up form validation and submit logic
