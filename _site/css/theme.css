@@ -356,7 +356,7 @@ table tr, table td{
 
 
 /* responsive table views */
-.responsive-table table { 
+.responsive-table table, .striped-table table { 
   width: 100%; 
   border-collapse: collapse; 
 }
@@ -364,7 +364,7 @@ table tr, table td{
 	cursor: pointer;
 }
 
-.responsive-table table tr:nth-child(odd) {
+.striped-table table tr:nth-child(odd) {
 	background-color: #EFEFEF;
  }
 

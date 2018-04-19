@@ -608,3 +608,7 @@ only screen and (max-width: 760px),
 .allocated-list{
 	min-height: 10px;
 }
+
+#option-statistics-table{
+	margin-top: 2vh;
+}
