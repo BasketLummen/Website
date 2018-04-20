@@ -25,4 +25,4 @@ Inschrijven doe je door onderstaand formulier in te vullen, gebruik de naam en d
 
 Het te betalen bedrag schrijf je over op rekeningnummer BE16363042625274 met vermelding van: **Kerststage + Naam van de deelnemende speler**.
 
-<div data-promotionid="kerststage-20180103"  data-title="Schrijf je in" data-buttontext="Inschrijven"></div>
+<div data-promotionid="kerststage-20180103"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een kind inschrijven"></div>
