@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Werklijst</title>
+    <title>Bestellingen</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,32 +118,41 @@
   </div>
 </nav>
 
-<div id="workplanning" class="container content" data-id="mosselfeest-20180218">
+<div id="orders" class="container content" data-id="bbq-20180512">
+	<h2>Bestellingen</h2>
 	<div class="responsive-table striped-table">
-		<table id="workplanning-table">
+		<table id="orders-table">
 			<thead>
 				<tr>
-					<th>Taak</th>
+					<th>Naam</th>
+				</tr>
+			</thead>			
+		</table>
+	</div>
+
+	<h3>Statistieken</h3>
+	<div class="striped-table">
+		<table id="option-statistics-table">
+			<thead>
+				<tr>
+					<th>Keuze</th>
+					<th>Totaal</th>
 				</tr>
 			</thead>			
 		</table>
 	</div>
 </div>
 
-<script type="text/template" id="shift-template">
+<script type="text/template" id="available-item-template">
 	<div class="table-content text-title"></div>
 </script>
 
-<script type="text/template" id="task-template">
-	<div class="table-content text-description"></div>	
+<script type="text/template" id="subscriber-template">
+	<div class="table-content text-subscriberName"></div>	
 </script>
 
-<script type="text/template" id="allocation-template">
-	<div class="table-content align-top">
-		<ul class="allocated-list">
-		</ul>
-	</div>
-	<div class="table-indicator text-indicator"></div>	
+<script type="text/template" id="subscribed-template">
+	<div class="table-content text-quantity"></div>	
 </script>	
 		
 	
@@ -165,7 +174,7 @@
 	
 	
 	
-	<script src='/js/workplanning.js' type="text/javascript"></script>
+	<script src='/js/orders.js' type="text/javascript"></script>
 	
 	
 
