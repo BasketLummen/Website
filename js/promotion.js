@@ -20,8 +20,11 @@ var uri;
 var posturi;
 var promotion;
 var items = [];
+var selectedOptionMemory = [];
 
 function renderForm(){
+    selectedOptionMemory = [];
+
     var table = $('<table>');
 
     promotionholder.append($('<form>').addClass('responsive-form')
@@ -161,10 +164,20 @@ function renderForm(){
                     option.values.forEach(function(value){
                         sel.append($("<option>").attr("value", value.id).text(value.name));
                     });
+                    var previouslySelected = selectedOptionMemory.hasOwnProperty(option.name);
+                    if(previouslySelected){
+                        sel.val(selectedOptionMemory[option.name]);
+                    }
 
                     $(".total-row").before($('<tr class="variable-row">')
                     .append($('<td>').append($('<label>').text(option.name)))
                     .append($('<td>').append(sel)));
+                });
+
+                $("select[data-optionid]").change(function(){
+                    var sel = $(this).attr('data-optionid');
+                    var val = $(this).val();
+                    selectedOptionMemory[sel] = val;
                 });
             }
         });
