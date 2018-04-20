@@ -16,6 +16,7 @@ var promotionholder;
 var promotionid;
 var title;
 var buttontext;
+var nexttext;
 var uri;
 var posturi;
 var promotion;
@@ -24,6 +25,7 @@ var selectedOptionMemory = [];
 
 function renderForm(){
     selectedOptionMemory = [];
+    promotionholder.empty();
 
     var table = $('<table>');
 
@@ -247,8 +249,15 @@ function renderForm(){
 
                 var report = function(message){
                 // var table = promotionholder.find('table');
+                    var div = $("<div>").append($('<label>').text(message))
+                                        .append("&nbsp;")
+                                        .append($("<a>").attr('id', 'next-order').text("(" + nexttext + ")"));
                     table.empty();
-                    table.append($('<tr>').append($('<td>').append($('<label>').text(message))).append($('<td>')));
+                    table.append($('<tr>').append($('<td>').append(div)).append($('<td>')));
+
+                    $("#next-order").click(function(){
+                        renderForm();
+                    })
                 };
 
                 // send it to the service
@@ -280,6 +289,7 @@ $(document).ready(function(){
     promotionid = promotionholder.attr("data-promotionid");
     title = promotionholder.attr("data-title");
     buttontext = promotionholder.attr("data-buttontext");
+    nexttext = promotionholder.attr("data-nexttext");
     uri= "http://" + service + "/api/promotions/" + promotionid;
     posturi= "http://" + service + "/api/promotions/" + promotionid + "/subscriptions";
 

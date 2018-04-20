@@ -24,4 +24,4 @@ Je kan opteren voor twee (13 euro) of drie (16 euro) stukken, met keuze uit alle
 
 Je kan je bestelling doorgeven door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de slotdag.
 
-<div data-promotionid="bbq-20180512"  data-title="Plaats je bestelling" data-buttontext="Bestellen"></div>
+<div data-promotionid="bbq-20180512"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"></div>
