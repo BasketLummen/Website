@@ -22,7 +22,7 @@ function normalizeOptions(details){
 			item.options.forEach(function(option){
 				normalizedOptions[option.name] = option;
 				option.values.forEach(function(value){
-					optionStatistics[value.id] = 0;
+					optionStatistics[value.name] = 0;
 				});
 			});
 		}
