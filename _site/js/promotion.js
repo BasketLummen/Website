@@ -290,8 +290,8 @@ $(document).ready(function(){
     title = promotionholder.attr("data-title");
     buttontext = promotionholder.attr("data-buttontext");
     nexttext = promotionholder.attr("data-nexttext");
-    uri= "http://" + service + "/api/promotions/" + promotionid;
-    posturi= "http://" + service + "/api/promotions/" + promotionid + "/subscriptions";
+    uri= "https://" + service + "/api/promotions/" + promotionid;
+    posturi= "https://" + service + "/api/promotions/" + promotionid + "/subscriptions";
 
     $.ajax({
         type: 'GET',

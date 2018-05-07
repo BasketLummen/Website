@@ -189,7 +189,7 @@ $(document).ready(function(){
     var id = $("#orders").attr("data-id");
     var service = "community-service.azurewebsites.net";
   //  var service = "localhost:22465"; // uncomment for local testing
-    var uri= "http://" + service + "/api/promotions/" + id + "/subscriptions";
+    var uri= "https://" + service + "/api/promotions/" + id + "/subscriptions";
     var items = [];
 
     $.ajax({
