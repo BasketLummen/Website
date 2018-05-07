@@ -75,7 +75,7 @@ function renderHeader(details){
 	tr.append($("<th>").addClass("responsive-table-cell").append(div));	
 }
 
-function renderRows(details){
+function renderMultipleChoice(details){
 	var table = $("#orders-table");
 	details.subscriptions.forEach(function(subscription) {
 		var div = $.template("#subscriber-template",
@@ -96,19 +96,9 @@ function renderRows(details){
 					quantity += s.quantity
 				});	
 				
-				var toDisplay = "";
-				if(details.promotion.choiceType == "Multiple"){
-					toDisplay = quantity;
-				}
-				else{
-					if(quantity > 1){
-						toDisplay +=  quantity + " x ";
-					}
-					toDisplay += subscribed.promotionItem.name;
-				}
 				var content = $.template("#subscribed-template",
 				{
-					quantity: toDisplay
+					quantity: quantity
 				});
 				
 				price += quantity * item.price;
@@ -123,31 +113,66 @@ function renderRows(details){
 			}
 			
 		});			
-
-		// show options
-
-		details.promotion.items.forEach(function(item){
-			var items = subscription.items.filter(function(e){ return e.promotionItem.id === item.id });
-			var subscribed = items.length > 0 ? items[0] : null;			
-			if(subscribed && subscribed.selectedOptions){
-				var optionCellsRendered = 0;
-				subscribed.selectedOptions.forEach(function(option){
-					tr.append($("<td>").addClass("responsive-table-cell").append(option.selectedOptionType.name));
-					optionStatistics[option.selectedOptionType.name]++;
-					optionCellsRendered++;
-				});
-				for(var i = optionCellsRendered; i < numberOfOptionsToRender; i++){
-					tr.append($("<td>").addClass("responsive-table-cell").append(""));
-				}
-			}			
-		});
-
 		var content = $.template("#subscribed-template",
 		{
 			quantity: "€ " + price
 		});
 		
 		tr.append($("<td>").addClass("responsive-table-cell").append(content));
+	});
+}
+
+function renderSingleChoice(details){
+	var table = $("#orders-table");
+	details.subscriptions.forEach(function(subscription) {
+		
+		details.promotion.items.forEach(function(item){
+			var items = subscription.items.filter(function(e){ return e.promotionItem.id === item.id });
+			items.forEach(function(subscribed){
+				var tr = $("<tr>");
+				var div = $.template("#subscriber-template",
+				{
+					subscriberName: subscription.subscriberName
+				});
+				table.append(tr.append($("<td>").addClass("responsive-table-cell").append(div)));
+				var price = item.price;
+				if(subscribed)
+				{
+					var content = $.template("#subscribed-template",
+					{
+						quantity: subscribed.promotionItem.name
+					});
+					
+					tr.append($("<td>").attr('id', subscribed.id).addClass("responsive-table-cell").append(content));	
+					
+					if(subscribed.selectedOptions){
+						var optionCellsRendered = 0;
+						subscribed.selectedOptions.forEach(function(option){
+							tr.append($("<td>").addClass("responsive-table-cell").append(option.selectedOptionType.name));
+							optionStatistics[option.selectedOptionType.name]++;
+							optionCellsRendered++;
+						});
+						for(var i = optionCellsRendered; i < numberOfOptionsToRender; i++){
+							tr.append($("<td>").addClass("responsive-table-cell").append(""));
+						}
+					}
+				}
+						
+		
+				var content = $.template("#subscribed-template",
+				{
+					quantity: "€ " + price
+				});
+				
+				tr.append($("<td>").addClass("responsive-table-cell").append(content));
+			});
+			
+			
+		});			
+
+		// show options
+
+		
 	});
 }
 
@@ -175,8 +200,13 @@ $(document).ready(function(){
         success: function(details){    
 			
 			normalizeOptions(details);
-            renderHeader(details);
-			renderRows(details);	
+			renderHeader(details);
+			if(details.promotion.choiceType == "Multiple"){
+				renderMultipleChoice(details);
+			}
+			else{
+				renderSingleChoice(details);
+			}
             renderOptionStatistics();
         }
       });
