@@ -58,6 +58,7 @@ module.exports = (grunt) ->
           "events/**/*"
           "training/**/*"
           "contact/**/*"
+          "privacy/**/*"
           "_config.yml"
           "*.html"
           "*.md"

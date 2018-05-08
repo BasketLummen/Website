@@ -255,7 +255,12 @@ input[type=submit]{
 
 /* footer */
 #footer{
+	padding: 3vh 1vw;
 	background-color: #333;
+	color: #fff;
+}
+#footer a{
+	color: #fff;
 }
 
 
