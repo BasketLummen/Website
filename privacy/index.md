@@ -25,9 +25,9 @@ B-3560 Lummen
 ## Welke persoonsgegevens verzamelt Basket Lummen?
 
 Basket Lummen kan, afhankelijk van de relatie die je met de club hebt (speler, coach, ouder, partner), de volgende persoonsgegevens vragen.
-* Persoonlijke gegevens (naam, geslacht, huisadres, e-mailadres, telefoonnummer en geboortedatum, profielfoto);
 
 Gebruik websites, apps en overige online diensten:
+* Persoonlijke gegevens (naam, geslacht, huisadres, e-mailadres, telefoonnummer en geboortedatum, profielfoto);
 * Interactiegegevens via Google Analytics, (IP-adres, surfgedrag op website, cookies); 
 * Gegevens over deelname aan periodieke acties. Dit zijn gegevens zoals een deelname aan een evenement, een donatie, of de gegevens over jouw verjaardag.
 
@@ -42,7 +42,6 @@ Beeldmateriaal:
 * het beeldmateriaal wordt niet aan persoonlijke gegevens gekoppeld, met uitzondering van een profielfoto
 
 ## Voor welke doeleinden verwerkt Basket Lummen persoonsgegevens?
-Basket Lummen verwerkt persoonsgegevens voor:
   
 | Waarvoor gebruiken wij je persoonsgegevens    | Wanneer doen wij dit? |
 | --------------------------------------------- |-----------------------|
