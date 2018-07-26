@@ -7,7 +7,7 @@ keywords: Basket, Lummen
 
 # Documenten
 
- * [Medisch Getuigschrift](/club/documenten/medischgetuigschrift17-18.pdf)
+ * [Medisch Getuigschrift](/club/documenten/medischgetuigschrift18-19.pdf)
  * [Verzekeringsformulier](/club/documenten/verzekeringsformulier.pdf)
  
 ## Handleidingen
