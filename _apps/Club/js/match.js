@@ -25,10 +25,14 @@ var renderMatchDetails = function(match, org) {
       });
       if(vs == ""){
         if( partnerTeamIds.indexOf(encodeURI(match.doc.teamThuisGUID)) > -1){
-            vs = match.doc.teamThuisNaam.replace("KBBC Zolder vzw ", "");
+            partnerTeamNames.forEach(function(teamName){
+                vs = match.doc.teamThuisNaam.replace(teamName, "");
+            });           
         }
         else if( partnerTeamIds.indexOf(encodeURI(match.doc.teamUitGUID)) > -1){
-            vs = match.doc.teamUitNaam.replace("KBBC Zolder vzw ", "");
+            partnerTeamNames.forEach(function(teamName){
+                vs = match.doc.teamUitNaam.replace(teamName, "");
+            });            
         }
       }
      

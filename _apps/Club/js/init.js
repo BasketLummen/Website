@@ -1,5 +1,6 @@
 var orgId = "BVBL1176";
-var partnerTeamIds = ["BVBL1081J16%20%201","BVBL1081M14%20%201"];
+var partnerTeamNames = ["Hasselt BT "];
+var partnerTeamIds = ["BVBL1087M19%20%201","BVBL1087M19%20%202", "BVBL1087M16%20%201"];
 
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; 
