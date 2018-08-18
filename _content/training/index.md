@@ -5,6 +5,9 @@ description: Basket Lummen
 keywords: Basket, Lummen, Trainingsuren
 ---
 
-## Trainingsuren
+## Trainingsuren seizoen 2018-2019
 
-De trainingsuren vind je voorlopig nog terug op de [vorige website](/b/trainingen.asp).
+De trainingsuren voor de maand augustus [vind je hier](/training/2018/Trainingsuren-augustus.xlsx)
+
+De trainingsuren voor de rest van het seizoen [vind je hier](/training/2018/trainingsuren-2018-2019.xlsx).
+
