@@ -27,15 +27,15 @@ Date.prototype.currentLocalTime = function()
 var repository = new function(){
     var self = this;
 
-    this.initialize = function(orgId, partnerTeamIds){
-        self.orgId = orgId;   
+    this.initialize = function(vblOrgId, partnerTeamIds){
+        self.vblOrgId = vblOrgId;   
         self.partnerTeamIds = partnerTeamIds;
         self.matches = [];
         self.matchDetails =  []; 
 
         if (usedb) {  
 
-            var request = indexedDB.open(orgId, dbversion);
+            var request = indexedDB.open(vblOrgId, dbversion);
             request.onerror = function(event) {
                 console.warn("Database error: " + event.target.errorCode);
                 $.topic("db.open.error").publish();
@@ -97,7 +97,7 @@ var repository = new function(){
     }
 
     this.loadOrganization = function(){
-        vbl.orgDetail(self.orgId, function(orgs){
+        vbl.orgDetail(self.vblOrgId, function(orgs){
             if(usedb){
                 var tx = self.db.transaction("organisations", "readwrite").objectStore("organisations");
                 orgs.forEach(function(o){
@@ -127,7 +127,7 @@ var repository = new function(){
     }
 
     this.loadMembers = function(){
-        vbl.members(self.orgId, function(members){
+        vbl.members(self.vblOrgId, function(members){
             if(usedb){
                 var tx = self.db.transaction("members", "readwrite").objectStore("members");
                 members.forEach(function(m){
@@ -144,7 +144,7 @@ var repository = new function(){
     this.loadMatches = function(){
         waitFor = [];
         var wait = new $.Deferred();
-        vbl.matches(self.orgId, function(matches){
+        vbl.matches(self.vblOrgId, function(matches){
              if(usedb){
                 var tx = self.db.transaction("matches", "readwrite").objectStore("matches");
                 matches.forEach(function(m){

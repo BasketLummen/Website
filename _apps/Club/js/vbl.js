@@ -18,8 +18,8 @@ var vbl = new function(){
     }
 
 
-    this.orgDetail = function(orgId, callback){
-        self.getRequest(self.getUrl("OrgDetailByGuid", "issguid=" + orgId), function(org){
+    this.orgDetail = function(vblOrgId, callback){
+        self.getRequest(self.getUrl("OrgDetailByGuid", "issguid=" + vblOrgId), function(org){
             callback(org);           
         });
     }
@@ -30,14 +30,14 @@ var vbl = new function(){
         });
     }
 
-    this.members = function(orgId, callback){
-        self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + orgId), function(members){
+    this.members = function(vblOrgId, callback){
+        self.getRequest(self.getUrl("RelatiesByOrgGuid", "orgguid=" + vblOrgId), function(members){
             callback(members);            
         });
     }
 
-    this.matches = function(orgId, callback){
-        self.getRequest(self.getUrl("OrgMatchesByGuid", "issguid=" +  orgId), function(matches){
+    this.matches = function(vblOrgId, callback){
+        self.getRequest(self.getUrl("OrgMatchesByGuid", "issguid=" +  vblOrgId), function(matches){
             callback(matches);            
         });
     }

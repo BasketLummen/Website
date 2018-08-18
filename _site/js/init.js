@@ -1,4 +1,6 @@
-var orgId = "BVBL1176";
+var orgId = "5159e64f-4d2e-42c4-968d-6ff38338129b";
+var vblOrgId = "BVBL1176";
+
 var partnerTeamNames = ["Hasselt BT "];
 var partnerTeamIds = ["BVBL1087M19%20%201","BVBL1087M19%20%202", "BVBL1087M16%20%201"];
 

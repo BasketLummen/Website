@@ -9,11 +9,11 @@
 //   var cmd = JSON.parse(e.data);
 
 //   // if(cmd.what == "loadOrganization"){
-//   //   repository.loadOrganization(cmd.orgId);
+//   //   repository.loadOrganization(cmd.vblOrgId);
 //   // }
 
 //   // if(cmd.what == "loadMembers"){
-//   //   repository.loadMembers(cmd.orgId);
+//   //   repository.loadMembers(cmd.vblOrgId);
 //   // }
 
 //   console.log('Posting message back to main script');
