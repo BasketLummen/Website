@@ -10,6 +10,7 @@ var getParameterByName = function (name, url) {
 var vblteamid = getParameterByName("vblteamid");
 var teamid = getParameterByName("teamid");
 var team;
+var visualDate = new Date();
 
 var renderNextMatch = function(){
   repository.nextMatchOfTeam(vblteamid, function(match){
@@ -66,13 +67,24 @@ repository.pastMatches(vblteamid, function(match){
 };
 
 var renderTeam = function(vblTeam, team){
-    $("#team-name").text(vblTeam.naam);
-    var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
-    $("#team-photo").attr("style", "background: url('/img/teams/" + pic +  ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");
-  
+   
+    if(vblTeam != null){
+        $("#team-name").text(vblTeam.naam);
+        var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
+        $("#team-photo").attr("style", "background: url('/img/teams/" + pic +  ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");
+    }
+    else if(team != null){
+        $("#team-name").text(team.groupName);
+        $("#team-photo").attr("style", "background: url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");        
+    }
+
     if(team != null)
-    {
+    {      
         team.participations.forEach(function(p){
+            var from = p.from != null ? new Date(p.from) :  null;
+            var to = p.to != null ? new Date(p.to) :  null;
+            if( from != null && from > visualDate || to != null && to <= visualDate ) return;
+            
             if(p.roleName == "Player"){
                 var div = $.template("#player-template",
                 {
@@ -95,6 +107,8 @@ var renderTeam = function(vblTeam, team){
         });
     }
     else{ // temp, until all migrated
+
+       
         if(vblTeam.spelers){
                 vblTeam.spelers.forEach(function(p){
                     var pic = p.naam.replace(/ +/g,".").toLowerCase();
@@ -136,7 +150,7 @@ var renderTeam = function(vblTeam, team){
             }
     }   
 
-     if(vblTeam.poules){
+     if(vblTeam && vblTeam.poules){
         vblTeam.poules.forEach(function(p){
             if(p.naam.indexOf("OEFEN") === -1){
                 var entries = [];
@@ -189,11 +203,21 @@ $.topic("repository.initialized").subscribe(function () {
   }
   else if(teamid != null){   
     clubmgmt.mapTeam(teamid, function(map){
-        vblteamid = map.referenceId;
-        clubmgmt.loadTeam(teamid, function(t){
-            team = t;
-            repository.loadTeam(vblteamid);         
-        });        
+        if(map == null){
+            clubmgmt.loadTeam(teamid, function(t){
+                team = t;
+                renderTeam(null, team);
+                $(".loading").hide();
+                $("#team-dashboard").css("visibility", "visible");     
+            });             
+        }
+        else{
+            vblteamid = map.referenceId;
+            clubmgmt.loadTeam(teamid, function(t){
+                team = t;
+                repository.loadTeam(vblteamid);         
+            }); 
+        }               
     });
   }
  

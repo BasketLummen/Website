@@ -8,7 +8,9 @@ var clubmgmt = new function(){
 
     this.getRequest = function(uri, callback){
         var xhttp = new XMLHttpRequest();
-        xhttp.onload = function () { callback(JSON.parse(xhttp.responseText)); };
+        xhttp.onload = function () { 
+            callback(xhttp.status == 204 ? null : JSON.parse(xhttp.responseText)); 
+        };
         xhttp.onerror = function xhrError () { console.error(this.statusText); }
         xhttp.open("GET", uri, true);
         xhttp.setRequestHeader("Content-type", "application/json");
