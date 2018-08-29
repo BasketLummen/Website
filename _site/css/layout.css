@@ -48,7 +48,7 @@
 }
 
 /* carousel */
-.carousel, .team-photo {
+.carousel {
   height: 70vh;
   margin-top: -3vw;
 }
@@ -66,7 +66,7 @@
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item, .team-photo {
+.carousel .item {
   height: 70vh;
 }
 .carousel-inner > .item > img{
@@ -77,10 +77,77 @@
   margin: 0 auto;
 }
 
+/* newsgrid */
+.newsgrid {
+	/* min-height: 70vh; */
+	margin: 0 auto;
+	margin-top: -3vw;
+	width: 100vw;
+  	display: flex;
+	flex-flow: row wrap;
+  }
+
+.newsgrid > div{
+	flex: 0 1 auto;
+}
+
+.newsgrid > div > img{
+	height: 100%; 
+	width: 100%; 
+	object-fit: contain;
+	filter: grayscale(100%);
+}
+.newsgrid > div > img:hover, .newsgrid > div.active > img{
+	filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+	.newsgrid > div{
+		width: 100vw;
+		height: 100vw;
+	}
+}
+@media (min-width: 768px) and (max-width: 1024px) { 
+	.newsgrid > div{
+		width: 33.3333vw;
+		height: 33.3333vw;
+	}
+	.newsgrid > div:last-child{
+		display: none;
+	}
+}
+@media (min-width: 1025px) /* and (max-width: 1024px)*/ { 
+	.newsgrid > div{
+		width: 20vw;
+		height: 20vw;
+	}
+}
+/* @media (min-width: 1025px) and (max-width: 1280px) {
+	.newsgrid > div{
+		width: 20vw;
+		height: 20vw;
+	}
+}
+@media (min-width: 1281px) {
+	.newsgrid > div{
+		width: 16.6666vw;
+		height: 16.6666vw;
+	}
+} */
+
+
+/* team-photo */
+.team-photo {
+	height: 70vh;
+	margin-top: -3vw;
+}
+
+
 /* next games section */
 
-#next{
-	
+#next-header{
+	padding: 2vh;
+	text-align: center;
 }
 #next-middle .container{
 	visibility: hidden;
