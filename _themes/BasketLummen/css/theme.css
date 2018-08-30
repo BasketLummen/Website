@@ -247,6 +247,25 @@ input[type=submit]{
   background-color: #F7F7F7;
 }
 
+/* news grid */
+.newsgrid-item{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	text-align: center;
+	color: #fff;
+}
+.newsgrid-item:hover, .newsgrid-item.active{
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+.newsgrid-item h1{
+	color: #fff;
+}
+.newsgrid-item a, .newsgrid-item a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
 /* next game */
 
 #next-header{

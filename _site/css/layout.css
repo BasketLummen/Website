@@ -83,22 +83,23 @@
 	margin: 0 auto;
 	margin-top: -3vw;
 	width: 100vw;
-  	display: flex;
+	max-width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
   }
 
 .newsgrid > div{
 	flex: 0 1 auto;
+	flex: 0 1 auto;
 }
 
-.newsgrid > div > img{
+.newsgrid > div img{
 	height: 100%; 
-	width: 100%; 
-	object-fit: contain;
-	filter: grayscale(100%);
-}
-.newsgrid > div > img:hover, .newsgrid > div.active > img{
-	filter: grayscale(0%);
+	width: 100%;
+	-webkit-object-fit: contain;
+	object-fit: contain;	
 }
 
 @media (max-width: 768px) {
@@ -109,8 +110,8 @@
 }
 @media (min-width: 768px) and (max-width: 1024px) { 
 	.newsgrid > div{
-		width: 33.3333vw;
-		height: 33.3333vw;
+		width: calc((100vw - (100vw - 100%)) / 3);
+		height: calc((100vw - (100vw - 100%)) / 3);
 	}
 	.newsgrid > div:last-child{
 		display: none;
@@ -118,22 +119,21 @@
 }
 @media (min-width: 1025px) /* and (max-width: 1024px)*/ { 
 	.newsgrid > div{
-		width: 20vw;
-		height: 20vw;
+		width: calc((100vw - (100vw - 100%)) / 5);
+		height: calc((100vw - (100vw - 100%)) / 5);
 	}
 }
-/* @media (min-width: 1025px) and (max-width: 1280px) {
-	.newsgrid > div{
-		width: 20vw;
-		height: 20vw;
-	}
+
+.newsgrid-item{
+	position: relative;
 }
-@media (min-width: 1281px) {
-	.newsgrid > div{
-		width: 16.6666vw;
-		height: 16.6666vw;
-	}
-} */
+
+.newsgrid-item-overlay{
+	position: absolute; 
+	bottom: 0px;
+	padding: .5vw;
+	z-index: 1;
+}
 
 
 /* team-photo */
