@@ -80,11 +80,11 @@ var renderTeam = function(vblTeam, team){
     if(team != null){
         imgurl = "url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg')";        
     }
-    if(vblTeam != null){
-       
-        var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
-        fallbackimgurl = "url('/img/teams/" + pic +  ".jpg')"       
-    }
+    // if(vblTeam != null){       
+    //     var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
+    //     fallbackimgurl = "url('/img/teams/" + pic +  ".jpg')"       
+    // }
+    fallbackimgurl = "url('/img/team_placeholder.png')";
 
     var combined = null;
     if(imgurl){
