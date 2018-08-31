@@ -152,7 +152,7 @@
      <h1 id="team-name"></h1> 
     <div class="loading centered-content"><img src="/img/loader.gif" /></div>
     <div id="team-dashboard" class="dashboard">
-        <div class="members pane">
+        <div class="members pane medium">
             <div class="players spacer">
                 <div class="tiles">
                     
@@ -164,9 +164,9 @@
                 </div>               
             </div> 
         </div>
-        <div class="results pane">
-            <div class="next-game spacer centered-content">
-                <h2>Volgende tegenstander</h2>
+        <div class="results pane small">
+            <div id="next-opponent" class="next-game spacer centered-content">
+                <h2>Volgende wedstrijd</h2>
                 <div id="next-game-placeholder"></div>
                 <div>
                     <h3><a class="detail-toggle" href="#">Volgende Wedstrijden</a></h3>
@@ -191,7 +191,7 @@
                             <th>Uitslag</th>
                         </tr>
                     </table>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
@@ -204,7 +204,8 @@
 
 <script type="text/template" id="next-game-template">
     <a class="href-matchuri nounderline">
-        <img id="opponent-img" class="src-imgurl" />
+        <!-- <img id="opponent-img" class="src-imgurl" /> -->
+        <div id="opponent-img" class="style-imgurl" ></div>
         <div class="text-name"></div>
         <div>
             <span class="text-day"></span>

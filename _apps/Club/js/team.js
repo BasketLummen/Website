@@ -29,7 +29,7 @@ var renderNextMatch = function(){
         var div = $.template("#next-game-template",
         {
             matchuri: "/match/?matchid=" + match.guid,
-            imgurl: src,
+            imgurl: "background: url(" + src +  "); background-repeat: no-repeat; background-position: center center; background-size: cover;",
             name: name,
             day: d.toLocaleString(window.navigator.language, {weekday: 'long'}),
             date: d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}),
@@ -67,16 +67,40 @@ repository.pastMatches(vblteamid, function(match){
 };
 
 var renderTeam = function(vblTeam, team){
-   
-    if(vblTeam != null){
+      
+    if(team != null){
+        $("#team-name").text(team.groupName);               
+    }
+    else if(vblTeam != null){
         $("#team-name").text(vblTeam.naam);
+    }
+    
+    var imgurl = null;
+    var fallbackimgurl = null;
+    if(team != null){
+        imgurl = "url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg')";        
+    }
+    if(vblTeam != null){
+       
         var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
-        $("#team-photo").attr("style", "background: url('/img/teams/" + pic +  ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");
+        fallbackimgurl = "url('/img/teams/" + pic +  ".jpg')"       
     }
-    else if(team != null){
-        $("#team-name").text(team.groupName);
-        $("#team-photo").attr("style", "background: url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");        
+
+    var combined = null;
+    if(imgurl){
+        combined = imgurl;
     }
+    if(fallbackimgurl){
+        if(combined){
+            combined += ", " + fallbackimgurl;
+        }
+        else{
+            combined = fallbackimgurl;
+        }
+    }
+    combined += ";";
+    
+    $("#team-photo").attr("style", "background: " + combined +  " background-repeat: no-repeat; background-position: center top; background-size: cover;"); 
 
     if(team != null)
     {      
