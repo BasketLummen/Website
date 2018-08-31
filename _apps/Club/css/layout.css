@@ -79,43 +79,59 @@
 
 /* newsgrid */
 .newsgrid {
-	/* min-height: 70vh; */
 	margin: 0 auto;
 	margin-top: -3vw;
 	width: 100vw;
 	max-width: 100%;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	display: grid;
   }
 
-.newsgrid > div{
-	flex: 0 1 auto;
-	flex: 0 1 auto;
-}
-
-.newsgrid > div img{
+.newsgrid-item img{
 	height: 100%; 
 	width: 100%;
 	-webkit-object-fit: contain;
 	object-fit: contain;	
 }
+.newsgrid-item:not(.has-content){
+	display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) { 
-	.newsgrid > div{
-		width: calc((100vw - (100vw - 100%)) / 3);
-		height: calc((100vw - (100vw - 100%)) / 3);
+	.newsgrid{
+		grid-template-columns: calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3);
+		grid-template-rows: calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3);
+	}
+	.newsgrid-item:not(.has-content){
+		display: block;
 	}
 	.newsgrid > div:last-child{
 		display: none;
 	}
+	.newsgrid > div.large{
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+	.newsgrid-item h1{
+		font-size: 3vw;
+	}
+	
 }
 @media (min-width: 1025px) { 
-	.newsgrid > div{
-		width: calc((100vw - (100vw - 100%)) / 5);
-		height: calc((100vw - (100vw - 100%)) / 5);
+	.newsgrid{
+		grid-template-columns: calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5);
+		grid-template-rows: calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5);
 	}
+	.newsgrid-item:not(.has-content){
+		display: block;
+	}
+	.newsgrid > div.large{
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+	.newsgrid-item h1{
+		font-size: 2vw;
+	}
+	
 }
 
 .newsgrid-item{
@@ -127,8 +143,8 @@
 	bottom: 0px;
 	padding: .5vw;
 	z-index: 1;
+	width: 100%;
 }
-
 
 /* team-photo */
 .team-photo {
