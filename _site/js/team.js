@@ -114,7 +114,7 @@ var renderTeam = function(vblTeam, team){
                 {
                     name: p.contactName,
                     // imgurl: '/img/members/' + pic +  '.jpg'        
-                    imgscript: "background: url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"
+                    imgscript: "background:  url('" + clubmgmt.teamspecificprofileimage(p.contactId, team.groupId) + "'), url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"
                 });
                 $(".players .tiles").append(div); 
             }
@@ -124,7 +124,7 @@ var renderTeam = function(vblTeam, team){
                     name: p.contactName,
                     role: p.roleName,
                     // imgurl: '/img/members/' + pic +  '.jpg'   
-                    imgscript: "background: url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"       
+                    imgscript: "background: url('" + clubmgmt.teamspecificprofileimage(p.contactId, team.groupId) + "'), url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"       
                 });
                 $(".staff .tiles").append(div); 
             }
