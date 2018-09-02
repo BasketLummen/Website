@@ -25,9 +25,9 @@ var renderFutureMatches = function(){
         link: matchuri,
     }, "tbody");
 
-    $("#result-table tbody").append(tr);
+    $("#calendar-table tbody").append(tr);
   });
-  $("#result-table").show();
+  $("#calendar-table").show();
 }
 
 var renderTeam = function(vblTeam, team){

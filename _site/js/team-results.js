@@ -23,9 +23,9 @@ var renderPastMatches = function(){
         result: match.uitslag
     }, "tbody");
 
-    $("#calendar-table tbody").append(tr);    
+    $("#result-table tbody").append(tr);    
   });
-  $("#calendar-table").show();
+  $("#result-table").show();
 };
 
 var renderTeam = function(vblTeam, team){

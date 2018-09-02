@@ -29,7 +29,7 @@ var renderNextMatch = function(){
         var div = $.template("#next-game-template",
         {
             matchuri: "/match/?matchid=" + match.guid,
-            imgurl: "background: url(" + src +  "); background-repeat: no-repeat; background-position: center center; background-size: cover;",
+            imgurl: "background: url(" + src +  "), url('/img/icon.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;",
             name: name,
             day: d.toLocaleString(window.navigator.language, {weekday: 'long'}),
             date: d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}),
