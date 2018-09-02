@@ -68,6 +68,17 @@ repository.pastMatches(vblteamid, function(match){
 
 var renderTeam = function(vblTeam, team){
       
+    var qs = null;
+    if(teamid != null){
+        qs = "teamid=" + teamid; 
+    }
+    else if(vblteamid != null){
+        qs = "vblteamid=" + vblteamid;   
+    }
+
+    $("#link-calendar").attr('href', '/teams/calendar/?' + qs);
+    $("#link-results").attr('href', '/teams/results/?' + qs);
+
     if(team != null){
         $("#team-name").text(team.groupName);               
     }
@@ -177,24 +188,12 @@ var renderTeam = function(vblTeam, team){
      if(vblTeam && vblTeam.poules){
         vblTeam.poules.forEach(function(p){
             if(p.naam.indexOf("OEFEN") === -1){
-                var entries = [];
                 var rank = "-";
                 if(p.teams){
                     p.teams.forEach(function(t){
                         if(t.guid == vblteamid){
                             rank = t.rangNr;
                         }
-
-                        var tr = $.template("#standings-entry-template", {
-                            nr: t.rangNr,
-                            team: t.naam,
-                            played: t.wedAant,
-                            wins: t.wedWinst,
-                            draws: t.wedGelijk,
-                            losses:  t.wedVerloren,
-                            points: t.wedPunt
-                        }, "tbody")
-                        entries.push(tr);
                     });
                 }
 
@@ -203,19 +202,12 @@ var renderTeam = function(vblTeam, team){
                     name: p.naam,
                     rank: rank           
                 });
-                var table = $(div).find(".detail");
-                entries.forEach(function(e){
-                    table.append(e);
-                });
+                var a = $(div).find(".detail-toggle");
+                a.attr('href', '/teams/standings/?' + qs + "&poule=" + p.guid)
                 $(".results").append(div);        
             }  
         });
     }
-
-    $(".detail-toggle").click(function(){
-        $(this).parent().nextAll(".detail:first").toggle();  
-        return false;
-    });
 };
 
 
