@@ -1,4 +1,4 @@
-var clubmgmtimgbase = "https://clubmgmt.blob.core.windows.net/profiles/originals/";
+var clubmgmtimgbase = "https://clubmgmt.blob.core.windows.net/profiles/";
 var clubmgmtleaguebaseuri = "https://league-service.azurewebsites.net/api/leagues/";
 var clubmgmtorgbaseuri = "https://org-service.azurewebsites.net/api/organizations/";
 var leagueId = "09346d48-da8b-4b66-ab72-c04bad59d3d8";
@@ -32,7 +32,11 @@ var clubmgmt = new function(){
     }
 
     this.profileimage = function(profileId){
-        return clubmgmtimgbase + profileId + ".jpg"; //?v=" + new Date();
+        return clubmgmtimgbase + profileId + "/" + profileId + ".jpg"; //?v=" + new Date();
+    }
+
+    this.teamspecificprofileimage = function(profileId, groupId){
+        return clubmgmtimgbase + profileId + "/" + groupId + ".jpg"; //?v=" + new Date();
     }
 
 }

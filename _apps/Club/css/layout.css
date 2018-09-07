@@ -48,7 +48,7 @@
 }
 
 /* carousel */
-.carousel, .team-photo {
+.carousel {
   height: 70vh;
   margin-top: -3vw;
 }
@@ -66,7 +66,7 @@
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item, .team-photo {
+.carousel .item {
   height: 70vh;
 }
 .carousel-inner > .item > img{
@@ -77,10 +77,87 @@
   margin: 0 auto;
 }
 
+/* newsgrid */
+.newsgrid {
+	margin: 0 auto;
+	margin-top: -3vw;
+	width: 100vw;
+	max-width: 100%;
+	display: grid;
+  }
+
+.newsgrid-item img{
+	height: 100%; 
+	width: 100%;
+	-webkit-object-fit: contain;
+	object-fit: contain;	
+}
+.newsgrid-item:not(.has-content){
+	display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+	.newsgrid{
+		grid-template-columns: calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3);
+		grid-template-rows: calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3) calc((100vw - (100vw - 100%)) / 3);
+	}
+	.newsgrid-item:not(.has-content){
+		display: block;
+	}
+	.newsgrid > div:last-child{
+		display: none;
+	}
+	.newsgrid > div.large{
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+	.newsgrid-item h1{
+		font-size: 3vw;
+	}
+	
+}
+@media (min-width: 1025px) { 
+	.newsgrid{
+		grid-template-columns: calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5);
+		grid-template-rows: calc((100vw - (100vw - 100%)) / 5) calc((100vw - (100vw - 100%)) / 5);
+	}
+	.newsgrid-item:not(.has-content){
+		display: block;
+	}
+	.newsgrid > div.large{
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+	.newsgrid-item h1{
+		font-size: 2vw;
+	}
+	
+}
+
+.newsgrid-item{
+	position: relative;
+}
+
+.newsgrid-item-overlay{
+	position: absolute; 
+	bottom: 0px;
+	padding: .5vw;
+	z-index: 1;
+	width: 100%;
+}
+
+/* team-photo */
+.team-photo {
+	height: 80vh;
+	margin-top: -3vw;
+}
+
+
 /* next games section */
 
-#next{
-	
+#next-header{
+	padding: 2vh;
+	text-align: center;
 }
 #next-middle .container{
 	visibility: hidden;
@@ -373,7 +450,16 @@
 		/* flex-grow: 0;
 		flex-shrink: 0; */
 		flex-basis: 50%;
+		max-width: 50%;
 	}
+}
+.pane.small{
+	flex-basis: 25%;
+	max-width: 25%;
+}
+.pane.medium{
+	flex-basis: 75%;
+	max-width: 75%;
 }
 .pane.large{
 	flex-basis: 100%;
@@ -401,7 +487,7 @@
 	flex-shrink: 0;
 	margin: 0px 5px 10px 5px;
 	text-align: center;
-	min-height: 250px;
+	min-height: 400px;
 	position: relative;
 }
 .dashboard .tiles .tile{
@@ -550,6 +636,21 @@ only screen and (max-width: 760px),
 
 	#events-table td:nth-of-type(1):before { content: "Datum"; }
 	#events-table td:nth-of-type(2):before { content: "Evenement"; }
+
+	#result-table td:nth-of-type(1):before { content: "Code"; }
+	#result-table td:nth-of-type(2):before { content: "Datum"; }
+	#result-table td:nth-of-type(3):before { content: "Tijd"; }
+	#result-table td:nth-of-type(4):before { content: "Thuis"; }
+	#result-table td:nth-of-type(5):before { content: "Uit"; }
+	#result-table td:nth-of-type(6):before { content: "Resultaat"; }
+
+	#standings-table td:nth-of-type(1):before { content: "Rang"; }
+	#standings-table td:nth-of-type(2):before { content: "Team"; }
+	#standings-table td:nth-of-type(3):before { content: "P"; }
+	#standings-table td:nth-of-type(4):before { content: "W"; }
+	#standings-table td:nth-of-type(5):before { content: "D"; }
+	#standings-table td:nth-of-type(6):before { content: "L"; }
+	#standings-table td:nth-of-type(7):before { content: "Pts"; }	
 }
 
 .actions{

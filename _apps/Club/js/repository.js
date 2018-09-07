@@ -1,5 +1,6 @@
 var dbversion = 5;
 var usedb = indexedDB;
+//var usedb = false;
 
 Date.prototype.getWeek = function()
 {
@@ -310,7 +311,11 @@ var repository = new function(){
             if(cursor) {
                 var key = cursor.key;
                 var match = cursor.value;
-                 if(callback) callback(match);
+                if(match && ((match.tTGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tTGUID)) !== -1) ||
+                (match.tUGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tUGUID)) !== -1)))    
+                {
+                    if(callback) callback(match);
+                }    
                 cursor.continue();
             }
         }
@@ -399,7 +404,15 @@ var repository = new function(){
             if(cursor) {
                 var key = cursor.key;
                 var match = cursor.value;
-                if(callback) callback(match);
+                if(match && ((match.tTGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tTGUID)) !== -1) ||
+                            (match.tUGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tUGUID)) !== -1)))
+                
+                {
+                    if(callback) callback(match);
+                }
+                else{
+                    cursor.continue();
+                }
             }
         }         
     }
@@ -416,7 +429,19 @@ var repository = new function(){
         if(futureMatches.length > 0)
         {
             futureMatches.sort(function(a,b) {return (a.jsDTCode > b.jsDTCode) ? 1 : ((b.jsDTCode > a.jsDTCode) ? -1 : 0);} );
-            callback(futureMatches[0])
+            var match = futureMatches.shift();
+            while(match)
+            {
+                if(((match.tTGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tTGUID)) !== -1) ||
+                    (match.tUGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tUGUID)) !== -1)))    
+                {
+                    if(callback) callback(match);
+                    match = null;
+                }
+                else{
+                    match = futureMatches.shift();
+                }
+            }
         }
     }
 

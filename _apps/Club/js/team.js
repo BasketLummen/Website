@@ -29,7 +29,7 @@ var renderNextMatch = function(){
         var div = $.template("#next-game-template",
         {
             matchuri: "/match/?matchid=" + match.guid,
-            imgurl: src,
+            imgurl: "background: url(" + src +  "), url('/img/icon.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;",
             name: name,
             day: d.toLocaleString(window.navigator.language, {weekday: 'long'}),
             date: d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}),
@@ -67,16 +67,51 @@ repository.pastMatches(vblteamid, function(match){
 };
 
 var renderTeam = function(vblTeam, team){
-   
-    if(vblTeam != null){
+      
+    var qs = null;
+    if(teamid != null){
+        qs = "teamid=" + teamid; 
+    }
+    else if(vblteamid != null){
+        qs = "vblteamid=" + vblteamid;   
+    }
+
+    $("#link-calendar").attr('href', '/teams/calendar/?' + qs);
+    $("#link-results").attr('href', '/teams/results/?' + qs);
+
+    if(team != null){
+        $("#team-name").text(team.groupName);               
+    }
+    else if(vblTeam != null){
         $("#team-name").text(vblTeam.naam);
-        var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
-        $("#team-photo").attr("style", "background: url('/img/teams/" + pic +  ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");
     }
-    else if(team != null){
-        $("#team-name").text(team.groupName);
-        $("#team-photo").attr("style", "background: url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg');  background-repeat: no-repeat; background-position: center top; background-size: cover;");        
+    
+    var imgurl = null;
+    var fallbackimgurl = null;
+    if(team != null){
+        imgurl = "url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg')";        
     }
+    // if(vblTeam != null){       
+    //     var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
+    //     fallbackimgurl = "url('/img/teams/" + pic +  ".jpg')"       
+    // }
+    fallbackimgurl = "url('/img/team_placeholder.png')";
+
+    var combined = null;
+    if(imgurl){
+        combined = imgurl;
+    }
+    if(fallbackimgurl){
+        if(combined){
+            combined += ", " + fallbackimgurl;
+        }
+        else{
+            combined = fallbackimgurl;
+        }
+    }
+    combined += ";";
+    
+    $("#team-photo").attr("style", "background: " + combined +  " background-repeat: no-repeat; background-position: center top; background-size: cover;"); 
 
     if(team != null)
     {      
@@ -90,7 +125,7 @@ var renderTeam = function(vblTeam, team){
                 {
                     name: p.contactName,
                     // imgurl: '/img/members/' + pic +  '.jpg'        
-                    imgscript: "background: url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"
+                    imgscript: "background:  url('" + clubmgmt.teamspecificprofileimage(p.contactId, team.groupId) + "'), url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"
                 });
                 $(".players .tiles").append(div); 
             }
@@ -100,7 +135,7 @@ var renderTeam = function(vblTeam, team){
                     name: p.contactName,
                     role: p.roleName,
                     // imgurl: '/img/members/' + pic +  '.jpg'   
-                    imgscript: "background: url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"       
+                    imgscript: "background: url('" + clubmgmt.teamspecificprofileimage(p.contactId, team.groupId) + "'), url('" + clubmgmt.profileimage(p.contactId) + "'), url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"       
                 });
                 $(".staff .tiles").append(div); 
             }
@@ -153,24 +188,12 @@ var renderTeam = function(vblTeam, team){
      if(vblTeam && vblTeam.poules){
         vblTeam.poules.forEach(function(p){
             if(p.naam.indexOf("OEFEN") === -1){
-                var entries = [];
                 var rank = "-";
                 if(p.teams){
                     p.teams.forEach(function(t){
                         if(t.guid == vblteamid){
                             rank = t.rangNr;
                         }
-
-                        var tr = $.template("#standings-entry-template", {
-                            nr: t.rangNr,
-                            team: t.naam,
-                            played: t.wedAant,
-                            wins: t.wedWinst,
-                            draws: t.wedGelijk,
-                            losses:  t.wedVerloren,
-                            points: t.wedPunt
-                        }, "tbody")
-                        entries.push(tr);
                     });
                 }
 
@@ -179,19 +202,12 @@ var renderTeam = function(vblTeam, team){
                     name: p.naam,
                     rank: rank           
                 });
-                var table = $(div).find(".detail");
-                entries.forEach(function(e){
-                    table.append(e);
-                });
+                var a = $(div).find(".detail-toggle");
+                a.attr('href', '/teams/standings/?' + qs + "&poule=" + p.guid)
                 $(".results").append(div);        
             }  
         });
     }
-
-    $(".detail-toggle").click(function(){
-        $(this).parent().nextAll(".detail:first").toggle();  
-        return false;
-    });
 };
 
 
