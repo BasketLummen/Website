@@ -229,15 +229,17 @@ function renderForm(){
                 // get select options
                 itemsToSubmit.forEach(function(itemToSubmit){
                     var selectedOptions = [];
-                    itemToSubmit.promotionItem.options.forEach(function(option){
-                        var selected = $('select[data-targetid="' + itemToSubmit.promotionItem.id + '"][data-optionid="' + option.name + '"]').val();
-                        var val = option.values.filter(function(v){ return v.id == selected })[0];
-                        selectedOptions.push({
-                            name: option.name,
-                            selectedOptionType: val
+                    if(itemToSubmit.promotionItem.options !== null){
+                        itemToSubmit.promotionItem.options.forEach(function(option){
+                            var selected = $('select[data-targetid="' + itemToSubmit.promotionItem.id + '"][data-optionid="' + option.name + '"]').val();
+                            var val = option.values.filter(function(v){ return v.id == selected })[0];
+                            selectedOptions.push({
+                                name: option.name,
+                                selectedOptionType: val
+                            });
                         });
-                    });
-                    itemToSubmit.selectedOptions = selectedOptions;
+                        itemToSubmit.selectedOptions = selectedOptions;
+                    }                    
                 });
                 
                 var subscription = {

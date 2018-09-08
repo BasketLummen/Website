@@ -3,7 +3,7 @@
   <generator uri="https://www.teamdish.com" version="1.0.0">Dish</generator>
   <link href="/feed.xml" rel="self" type="application/atom+xml" />
   <link href="" rel="alternate" type="text/html" />
-  <updated>2018-09-07T20:54:46.5542689Z</updated>
+  <updated>2018-09-08T20:01:02.9306495Z</updated>
   <id></id>
   <title type="html"></title>
   <subtitle></subtitle>
@@ -11,6 +11,21 @@
     <name />
     <email />
   </author>
+  <entry>
+    <title>Pasta Buffet à Volonté 21 Oktober 2018</title>
+    <link href="/news/2018-09-08-pastadag/" rel="alternate" type="text/html" title="Pasta Buffet à Volonté 21 Oktober 2018" />
+    <published>2018-09-08T19:00:00.0000000</published>
+    <updated>2018-09-08T19:00:00.0000000</updated>
+    <id>/news/2018-09-08-pastadag/</id>
+    <content type="html" xml:base="/news/2018-09-08-pastadag/">&lt;p&gt;TODO&lt;/p&gt;
+&lt;div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"&gt;&lt;/div&gt;
+</content>
+    <author>
+      <name />
+      <email />
+    </author>
+    <summary></summary>
+  </entry>
   <entry>
     <title>Agenda startdag seizoen 2018-2019</title>
     <link href="/news/2018-09-02-agenda-startdag/" rel="alternate" type="text/html" title="Agenda startdag seizoen 2018-2019" />

@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Pasta Buffet à Volonté 21 Oktober 2018"
+date:   2018-09-08 19:00:00
+description: Pasta Buffet à Volonté 21 Oktober 2018.
+permalink: /news/2018-09-08-pastadag/
+custom_js:
+- promotion
+---
+
+TODO
+
+<div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"></div>
