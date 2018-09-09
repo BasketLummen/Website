@@ -59,7 +59,15 @@ function renderForm(){
         table.append($('<tr>')
             .append($('<td>').append($('<label>').text('Naam').attr('for', 'name')))
             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'name', name: 'name', placeholder: 'Vul je naam in...' }))));
+
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Email').attr('for', 'email')))
+            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'email', name: 'email', placeholder: 'Vul je email in...' }))));
         
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Telefoon').attr('for', 'telephone')))
+            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'telephone', name: 'telephone', placeholder: 'Vul je telefoonnummer in...' }))));
+
         // set up form validation rules
         var rules = {
             name: {
@@ -123,6 +131,10 @@ function renderForm(){
         table.append($('<tr class="total-row">')
             .append($('<td>').append($('<label>').text('Te betalen')))
             .append($('<td>').append($('<label>').text('€ 0').attr('id', 'price'))));
+
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
+            .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' }))));        
 
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
@@ -197,6 +209,10 @@ function renderForm(){
 
                 var name = promotionholder.find('#name').val();
                 var firstname = promotionholder.find('#firstname').val();
+                var email = promotionholder.find('#email').val();
+                var telephone = promotionholder.find('#telephone').val();
+                var sendConfirmation = promotionholder.find('#sendConfirmation').is(':checked');
+
                 var itemsToSubmit = [];
                 if(promotion.choiceType == "Multiple"){
                     for (var key in items) {
@@ -246,6 +262,9 @@ function renderForm(){
                     id: guid(), 
                     promotionId: promotionid,
                     subscriberName: firstname + " " + name,
+                    subscriberEmail: email,
+                    subscriberTelephone: telephone,
+                    sendConfirmation: sendConfirmation,
                     items: itemsToSubmit
                 };
 
