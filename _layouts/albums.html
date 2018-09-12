@@ -1,0 +1,26 @@
+---
+layout: page
+---
+<div id="albums" class="albums">
+	<div class="container">	
+	{{>content}}
+	
+	{{#each pager.Albums}}
+		<div>
+			<a href="/albums/{{this.Name}}">
+				<img src="/albums/{{this.Name}}/thumbnails/{{this.Cover}}" />
+				<h3>{{this.Title}}</h3>
+				<div>
+					{{this.Description}}
+				</div>
+			</a>
+		</div>
+	{{/each}}
+	
+	{{>pagination}}
+	</div>
+	
+	
+</div>
+	
+	

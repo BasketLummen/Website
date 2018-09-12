@@ -1,0 +1,20 @@
+---
+layout: page
+---
+<div id="album" class="album">
+	<div class="container">	
+	{{>content}}
+	
+	{{#each pager.Images}}
+		<div>
+			<img src="{{this.Path}}" />
+		</div>
+	{{/each}}
+	
+	{{>pagination}}
+	</div>
+	
+	
+</div>
+	
+	
