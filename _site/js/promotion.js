@@ -134,7 +134,7 @@ function renderForm(){
 
         table.append($('<tr>')
             .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
-            .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' }))));        
+            .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
@@ -268,17 +268,44 @@ function renderForm(){
                     items: itemsToSubmit
                 };
 
-                var report = function(message){
+                var report = function(message, confirmation){
                 // var table = promotionholder.find('table');
+                    
+                  
+                
                     var div = $("<div>").append($('<label>').text(message))
+                                        .append("<br/>")
+                                        .append("<br/>")
+                                        .append($("<button>").attr('id', 'print-order').text("print uw bestelling"))                  
                                         .append("&nbsp;")
-                                        .append($("<a>").attr('id', 'next-order').text("(" + nexttext + ")"));
+                                        .append($("<button>").attr('id', 'next-order').text(nexttext));
+                                       
                     table.empty();
                     table.append($('<tr>').append($('<td>').append(div)).append($('<td>')));
 
                     $("#next-order").click(function(){
                         renderForm();
-                    })
+                    });
+
+                    $("#print-order").click(function(){
+                        var doc = new jsPDF()
+                    
+                        doc.addFileToVFS("PTSans.ttf", PTSans);
+                        doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+                    
+                        doc.setFont('PTSans'); // set font
+                        
+                        doc.setFontType("normal");
+                        doc.setFontSize(18);
+                        //doc.setCharSpace(1);
+                        var lines = doc.splitTextToSize(confirmation, 180);
+                        doc.text(20, 20 , lines)
+                        doc.autoPrint();
+
+                        var iframe = document.getElementById('printoutput');
+                        iframe.src = doc.output('datauristring');
+                        //doc.save('bestelling.pdf')
+                    });
                 };
 
                 // send it to the service
@@ -288,8 +315,8 @@ function renderForm(){
                     contentType: 'application/json', 
                     crossDomain: true,
                     data : JSON.stringify(subscription),                        
-                    success: function(){ 
-                        report(promotion.successMessage.format(sum));
+                    success: function(data){ 
+                      report(promotion.successMessage.format(sum), data.message);
                     },
                     error: function(xhr, ajaxOptions, thrownError){ 
                         report("Er is een fout opgetreden bij het registreren. " + xhr.status);
