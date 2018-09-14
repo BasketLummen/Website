@@ -10,6 +10,20 @@ custom_js:
 - promotion
 ---
 
-TODO
+Op Zondag 21 Oktober 2018 organiseren we een **pasta buffet à volonté** ten voordele van onze jeugdploegen.
+
+Voor de beste pasta bereidingen kan je terecht in **'De Kalen Dries'**, gelegen aan de Meldertse Baan 2 te Lummen, van **11 u. tot 14 u.** en van **17 u. tot 20 u**.
+
+Op het menu staan:
+
+ * Spaghetti bolognaise
+ * Tricolore fusilli arrabiata met zeevruchten
+ * Tagliatelli met gerookte kip, champignon-roomsaus en pijpajuintjes
+ * Penne arrabiata met groentmengeling (vegetarisch) (pikant naar keuze)
+ * Linguine met fijne groentjes en gerookte zalm
+
+Het buffet is inclusief brood en kaas, en à volonté.
+
+Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de pastadag. Na het plaatsen van je bestelling online krijg je een bevestiging. Gelieve deze af te printen en ook mee te nemen naar de pastadag, zo kan de administratie aan de inkom vlotter verlopen.
 
 <div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"></div>
