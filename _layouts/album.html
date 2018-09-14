@@ -1,19 +1,24 @@
 ---
 layout: page
 ---
-<div id="album" class="album">
-	<div class="container">	
+
+<div class="container">	
+	<div id="album" class="album">
+	
 	{{>content}}
 	
-	{{#each pager.Images}}
-		<div>
-			<img src="{{this.Path}}" />
-		</div>
-	{{/each}}
+	{{#split pager.Images 4}}
+		<div class="column">
+			{{#each this}}
+				<img src="{{this.Path}}" />
+			{{/each}}
+		</div>		
+	{{/split}}
 	
-	{{>pagination}}
+	
 	</div>
 	
+	{{>pagination}}
 	
 </div>
 	

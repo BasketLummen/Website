@@ -1,12 +1,14 @@
 ---
 layout: page
 ---
-<div id="albums" class="albums">
-	<div class="container">	
+<div class="container">	
+	<div id="albums" class="albums">
+	
 	{{>content}}
 	
-	{{#each pager.Albums}}
-		<div>
+	{{#split pager.Albums 2}}
+		<div class="column">
+			{{#each this}}
 			<a href="/albums/{{this.Name}}">
 				<img src="/albums/{{this.Name}}/thumbnails/{{this.Cover}}" />
 				<h3>{{this.Title}}</h3>
@@ -14,8 +16,9 @@ layout: page
 					{{this.Description}}
 				</div>
 			</a>
-		</div>
-	{{/each}}
+			{{/each}}
+		</div>		
+	{{/split}}
 	
 	{{>pagination}}
 	</div>

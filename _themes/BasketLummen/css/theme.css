@@ -656,3 +656,70 @@ only screen and (max-width: 760px),
 	height: 1vh;
 	left: 50%;
 }
+
+
+/* album support */
+/* album support */
+.albums {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4px; 
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .albums .column {
+	flex: 50%;
+	max-width: 50%;
+	padding: 0 4px;
+  }
+  
+  .albums .column img {
+	margin-top: 8px; 
+	vertical-align: middle;
+	width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 1024px) {
+	.albums .column {
+		flex: 100%;
+		max-width: 100%;
+	}
+  }
+  
+
+
+.album {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4px; 
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .album .column {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+  }
+  
+  .album .column img {
+	margin-top: 8px; 
+	vertical-align: middle;
+	width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 1024px) {
+	.album .column {
+	  flex: 50%;
+	  max-width: 50%;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+	.album .column {
+	  flex: 100%;
+	  max-width: 100%;
+	}
+  }
