@@ -271,8 +271,7 @@ function renderForm(){
                 };
 
                 var report = function(message, confirmation){
-                // var table = promotionholder.find('table');
-                    
+                // var table = promotionholder.find('table');                  
                   
                 
                     var div = $("<div>").append($('<label>').text(message))
