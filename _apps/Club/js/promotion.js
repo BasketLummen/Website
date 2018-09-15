@@ -277,9 +277,9 @@ function renderForm(){
                     var div = $("<div>").append($('<label>').text(message))
                                         .append("<br/>")
                                         .append("<br/>")
-                                        .append($("<button>").attr('id', 'print-order').text(isIE === false ? "print uw bestelling" : "download uw bestelling" ))                  
+                                        .append($("<button>").attr('id', 'print-order').attr('type', 'button').text(isIE === false ? "print uw bestelling" : "download uw bestelling" ))                  
                                         .append("&nbsp;")
-                                        .append($("<button>").attr('id', 'next-order').text(nexttext));
+                                        .append($("<button>").attr('id', 'next-order').attr('type', 'button').text(nexttext));
                                        
                     table.empty();
                     table.append($('<tr>').append($('<td>').append(div)).append($('<td>')));
