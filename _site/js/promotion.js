@@ -24,6 +24,8 @@ var items = [];
 var selectedOptionMemory = [];
 
 function renderForm(){
+    var isIE = detectIE();
+    
     selectedOptionMemory = [];
     promotionholder.empty();
 
@@ -276,7 +278,7 @@ function renderForm(){
                     var div = $("<div>").append($('<label>').text(message))
                                         .append("<br/>")
                                         .append("<br/>")
-                                        .append($("<button>").attr('id', 'print-order').text("print uw bestelling"))                  
+                                        .append($("<button>").attr('id', 'print-order').text(isIE === false ? "print uw bestelling" : "download uw bestelling" ))                  
                                         .append("&nbsp;")
                                         .append($("<button>").attr('id', 'next-order').text(nexttext));
                                        
@@ -297,14 +299,19 @@ function renderForm(){
                         
                         doc.setFontType("normal");
                         doc.setFontSize(18);
-                        //doc.setCharSpace(1);
+                        
                         var lines = doc.splitTextToSize(confirmation, 180);
                         doc.text(20, 20 , lines)
-                        doc.autoPrint();
+                       
+                        if(isIE === false){
+                            doc.autoPrint();
 
-                        var iframe = document.getElementById('printoutput');
-                        iframe.src = doc.output('datauristring');
-                        //doc.save('bestelling.pdf')
+                            var iframe = document.getElementById('printoutput');
+                            iframe.src = doc.output('datauristring');
+                        }
+                        else{
+                            doc.save('bestelling.pdf');
+                        }
                     });
                 };
 
@@ -330,6 +337,32 @@ function renderForm(){
     }
         
 }
+
+function detectIE() {
+    var ua = window.navigator.userAgent;
+   
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+  
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf('rv:');
+      return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+  
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+      // Edge (IE 12+) => return version number
+      return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+  
+    // other browser
+    return false;
+  }
 
 $(document).ready(function(){
    
