@@ -2,7 +2,7 @@
 layout: category
 title: News
 pagination: 
-  enabled: true  
+  enabled: true
   posts: true
   category: news
 ---
