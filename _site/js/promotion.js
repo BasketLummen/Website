@@ -24,6 +24,8 @@ var items = [];
 var selectedOptionMemory = [];
 
 function renderForm(){
+    var isIE = detectIE();
+    
     selectedOptionMemory = [];
     promotionholder.empty();
 
@@ -59,7 +61,15 @@ function renderForm(){
         table.append($('<tr>')
             .append($('<td>').append($('<label>').text('Naam').attr('for', 'name')))
             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'name', name: 'name', placeholder: 'Vul je naam in...' }))));
+
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Email').attr('for', 'email')))
+            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'email', name: 'email', placeholder: 'Vul je email in...' }))));
         
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Telefoon').attr('for', 'telephone')))
+            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'telephone', name: 'telephone', placeholder: 'Vul je telefoonnummer in...' }))));
+
         // set up form validation rules
         var rules = {
             name: {
@@ -123,6 +133,10 @@ function renderForm(){
         table.append($('<tr class="total-row">')
             .append($('<td>').append($('<label>').text('Te betalen')))
             .append($('<td>').append($('<label>').text('€ 0').attr('id', 'price'))));
+
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
+            .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
@@ -197,6 +211,10 @@ function renderForm(){
 
                 var name = promotionholder.find('#name').val();
                 var firstname = promotionholder.find('#firstname').val();
+                var email = promotionholder.find('#email').val();
+                var telephone = promotionholder.find('#telephone').val();
+                var sendConfirmation = promotionholder.find('#sendConfirmation').is(':checked');
+
                 var itemsToSubmit = [];
                 if(promotion.choiceType == "Multiple"){
                     for (var key in items) {
@@ -229,35 +247,71 @@ function renderForm(){
                 // get select options
                 itemsToSubmit.forEach(function(itemToSubmit){
                     var selectedOptions = [];
-                    itemToSubmit.promotionItem.options.forEach(function(option){
-                        var selected = $('select[data-targetid="' + itemToSubmit.promotionItem.id + '"][data-optionid="' + option.name + '"]').val();
-                        var val = option.values.filter(function(v){ return v.id == selected })[0];
-                        selectedOptions.push({
-                            name: option.name,
-                            selectedOptionType: val
+                    if(itemToSubmit.promotionItem.options !== null){
+                        itemToSubmit.promotionItem.options.forEach(function(option){
+                            var selected = $('select[data-targetid="' + itemToSubmit.promotionItem.id + '"][data-optionid="' + option.name + '"]').val();
+                            var val = option.values.filter(function(v){ return v.id == selected })[0];
+                            selectedOptions.push({
+                                name: option.name,
+                                selectedOptionType: val
+                            });
                         });
-                    });
-                    itemToSubmit.selectedOptions = selectedOptions;
+                        itemToSubmit.selectedOptions = selectedOptions;
+                    }                    
                 });
                 
                 var subscription = {
                     id: guid(), 
                     promotionId: promotionid,
                     subscriberName: firstname + " " + name,
+                    subscriberEmail: email,
+                    subscriberTelephone: telephone,
+                    sendConfirmation: sendConfirmation,
                     items: itemsToSubmit
                 };
 
-                var report = function(message){
-                // var table = promotionholder.find('table');
+                var report = function(message, confirmation){
+                // var table = promotionholder.find('table');                  
+                  
+                
                     var div = $("<div>").append($('<label>').text(message))
+                                        .append("<br/>")
+                                        .append("<br/>")
+                                        .append($("<button>").attr('id', 'print-order').attr('type', 'button').text(isIE === false ? "print uw bestelling" : "download uw bestelling" ))                  
                                         .append("&nbsp;")
-                                        .append($("<a>").attr('id', 'next-order').text("(" + nexttext + ")"));
+                                        .append($("<button>").attr('id', 'next-order').attr('type', 'button').text(nexttext));
+                                       
                     table.empty();
                     table.append($('<tr>').append($('<td>').append(div)).append($('<td>')));
 
                     $("#next-order").click(function(){
                         renderForm();
-                    })
+                    });
+
+                    $("#print-order").click(function(){
+                        var doc = new jsPDF()
+                    
+                        doc.addFileToVFS("PTSans.ttf", PTSans);
+                        doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+                    
+                        doc.setFont('PTSans'); // set font
+                        
+                        doc.setFontType("normal");
+                        doc.setFontSize(18);
+                        
+                        var lines = doc.splitTextToSize(confirmation, 180);
+                        doc.text(20, 20 , lines)
+                       
+                        if(isIE === false){
+                            doc.autoPrint();
+
+                            var iframe = document.getElementById('printoutput');
+                            iframe.src = doc.output('datauristring');
+                        }
+                        else{
+                            doc.save('bestelling.pdf');
+                        }
+                    });
                 };
 
                 // send it to the service
@@ -267,8 +321,8 @@ function renderForm(){
                     contentType: 'application/json', 
                     crossDomain: true,
                     data : JSON.stringify(subscription),                        
-                    success: function(){ 
-                        report(promotion.successMessage.format(sum));
+                    success: function(data){ 
+                      report(promotion.successMessage.format(sum), data.message);
                     },
                     error: function(xhr, ajaxOptions, thrownError){ 
                         report("Er is een fout opgetreden bij het registreren. " + xhr.status);
@@ -282,6 +336,32 @@ function renderForm(){
     }
         
 }
+
+function detectIE() {
+    var ua = window.navigator.userAgent;
+   
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+  
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf('rv:');
+      return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+  
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+      // Edge (IE 12+) => return version number
+      return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+  
+    // other browser
+    return false;
+  }
 
 $(document).ready(function(){
    
