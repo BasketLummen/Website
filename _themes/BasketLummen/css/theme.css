@@ -656,3 +656,28 @@ only screen and (max-width: 760px),
 	height: 1vh;
 	left: 50%;
 }
+
+/* albums grid */
+.album-item{
+	/* -webkit-filter: grayscale(100%);
+	filter: grayscale(100%); */
+	text-align: center;
+	color: #fff;
+}
+.album-item:hover, .album-item.active{
+	/* -webkit-filter: grayscale(0%);
+	filter: grayscale(0%); */
+}
+.album-item h1{
+	color: #fff;
+}
+.album-item a, .album-item a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+.album-image img{
+	display:block;
+    margin: 0 auto;
+}
+

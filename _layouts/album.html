@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+<div id="album" class="album">
+	
+
+		{{#split pager.Images 4}}
+			<div class="column">
+				{{#each this}}
+				<div class="album-item">
+					<a href="{{this.Page}}">
+						<img src="{{this.Path}}" />
+					</a>
+				</div>
+				{{/each}}
+			</div>		
+		{{/split}}
+		
+		
+</div>
+
+<div class="container">	
+		
+	{{>pagination}}
+
+</div>
+	
+	

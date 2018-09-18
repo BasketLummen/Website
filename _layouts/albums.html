@@ -1,0 +1,31 @@
+---
+layout: page
+---
+
+<div id="albums" class="albums">	
+	
+	{{#split pager.Albums 4}}
+		<div class="column">
+			{{#each this}}
+			<div class="album-item">
+				<a href="{{this.Path}}">
+					<img src="/albums/{{this.Name}}/thumbnails/{{this.Cover}}" />				
+					<div class="album-item-overlay">
+						<h3>{{this.Title}}</h3>
+						{{this.Description}}
+					</div>
+				</a>
+			</div>
+			{{/each}}
+		</div>		
+	{{/split}}
+
+</div>	
+
+<div class="container">	
+	
+	{{>pagination}}	
+	
+</div>
+	
+	
