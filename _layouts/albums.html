@@ -1,28 +1,30 @@
 ---
 layout: page
 ---
-<div class="container">	
-	<div id="albums" class="albums">
+
+<div id="albums" class="albums">	
 	
-	{{>content}}
-	
-	{{#split pager.Albums 2}}
+	{{#split pager.Albums 4}}
 		<div class="column">
 			{{#each this}}
-			<a href="/albums/{{this.Name}}">
-				<img src="/albums/{{this.Name}}/thumbnails/{{this.Cover}}" />
-				<h3>{{this.Title}}</h3>
-				<div>
-					{{this.Description}}
-				</div>
-			</a>
+			<div class="album-item">
+				<a href="{{this.Path}}">
+					<img src="/albums/{{this.Name}}/thumbnails/{{this.Cover}}" />				
+					<div class="album-item-overlay">
+						<h3>{{this.Title}}</h3>
+						{{this.Description}}
+					</div>
+				</a>
+			</div>
 			{{/each}}
 		</div>		
 	{{/split}}
+
+</div>	
+
+<div class="container">	
 	
-	{{>pagination}}
-	</div>
-	
+	{{>pagination}}	
 	
 </div>
 	

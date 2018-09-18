@@ -1,11 +1,13 @@
 ---
 layout: album
 title: 08 September 2018 Willebroek
+date: 2018-09-08 22:00:00
 cover: DSC_0252.JPG
 pagination: 
   enabled: true  
   images: true
-  itemsPerPage: 15
+  imageLayout: image
+  itemsPerPage: 32
 og:
   title: Wedstrijd DSE A vs Willebroek - 08 September 2018
   description: Bekijk hier hoe onze dames het ervan af brachten in hun wedstrijd tegen Willebroek.

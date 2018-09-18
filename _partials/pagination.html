@@ -1,9 +1,9 @@
 {{#has-pages pager}}
 	<div class="pagination">
 		{{#page-equals pager.PreviousPage null}}
-			<span>&laquo; Prev</span>
+			<span>&laquo; Vorige</span>
 		{{else}}
-			<a href="{{ pager.PreviousPage.Path }}">&laquo; Prev</a>		
+			<a href="{{ pager.PreviousPage.Path }}">&laquo; Vorige</a>		
 		{{/page-equals}}
 		
 		{{#each pager.Trail }}
@@ -15,9 +15,9 @@
 		{{/each}}
 		
 		{{#page-equals pager.NextPage null}}
-			<span>Next &raquo;</span>		
+			<span>Volgende &raquo;</span>		
 		{{else}}
-			<a href="{{ pager.NextPage.Path }}">Next &raquo;</a>
+			<a href="{{ pager.NextPage.Path }}">Volgende &raquo;</a>
 		{{/page-equals}}
 	</div>
 {{/has-pages}}

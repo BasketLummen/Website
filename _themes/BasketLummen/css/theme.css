@@ -657,69 +657,27 @@ only screen and (max-width: 760px),
 	left: 50%;
 }
 
+/* albums grid */
+.album-item{
+	/* -webkit-filter: grayscale(100%);
+	filter: grayscale(100%); */
+	text-align: center;
+	color: #fff;
+}
+.album-item:hover, .album-item.active{
+	/* -webkit-filter: grayscale(0%);
+	filter: grayscale(0%); */
+}
+.album-item h1{
+	color: #fff;
+}
+.album-item a, .album-item a:hover{
+	text-decoration: none;
+	color: #fff;
+}
 
-/* album support */
-/* album support */
-.albums {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 4px; 
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .albums .column {
-	flex: 50%;
-	max-width: 50%;
-	padding: 0 4px;
-  }
-  
-  .albums .column img {
-	margin-top: 8px; 
-	vertical-align: middle;
-	width: 100%;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 1024px) {
-	.albums .column {
-		flex: 100%;
-		max-width: 100%;
-	}
-  }
-  
+.album-image img{
+	display:block;
+    margin: 0 auto;
+}
 
-
-.album {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 4px; 
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .album .column {
-	flex: 25%;
-	max-width: 25%;
-	padding: 0 4px;
-  }
-  
-  .album .column img {
-	margin-top: 8px; 
-	vertical-align: middle;
-	width: 100%;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 1024px) {
-	.album .column {
-	  flex: 50%;
-	  max-width: 50%;
-	}
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 768px) {
-	.album .column {
-	  flex: 100%;
-	  max-width: 100%;
-	}
-  }

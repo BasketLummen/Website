@@ -2,6 +2,7 @@
 layout: albums
 title: Albums
 pagination: 
-  enabled: true  
+  enabled: true
+  itemsPerPage: 15
   albums: true
 ---

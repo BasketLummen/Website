@@ -712,3 +712,89 @@ only screen and (max-width: 760px),
 #option-statistics-table{
 	margin-top: 2vh;
 }
+
+/* albums */
+.albums, .album, .album-image {
+	margin-top: -3vw;
+  }
+.album-image {
+	margin-bottom: 3vw;
+}
+  
+/* album support */
+.albums {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .albums .column {
+	flex: 25%;
+	max-width: 25%;
+  }
+  
+  .albums .column img {
+	vertical-align: middle;
+	width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 1024px) {
+	.albums .column {
+		flex: 50%;
+		max-width: 50%;
+	}
+  }
+  
+
+
+.album {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100vw - (100vw - 100%));	
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .album .column {
+	flex: 25%;
+	max-width: 25%;
+  }
+  
+  .album .column img {
+	vertical-align: middle;
+	width: calc(100vw - (100vw - 100%));
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 1024px) {
+	.album .column {
+	  flex: 50%;
+	  max-width: 50%;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+	.album .column {
+	  flex: 100%;
+	  max-width: 100%;
+	}
+  }
+
+.album-item{
+	position: relative;
+}
+
+.album-item-overlay{
+	position: absolute; 
+	bottom: 0px;
+	padding: .5vw;
+	z-index: 1;
+	width: 100%;
+}
+
+.album-image img{
+	width: 100%;
+}
+  
