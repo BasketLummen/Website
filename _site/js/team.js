@@ -9,6 +9,7 @@ var getParameterByName = function (name, url) {
 }
 var vblteamid = getParameterByName("vblteamid");
 var teamid = getParameterByName("teamid");
+var partnershipId = getParameterByName("p");
 var team;
 var visualDate = new Date();
 
@@ -74,6 +75,9 @@ var renderTeam = function(vblTeam, team){
     }
     else if(vblteamid != null){
         qs = "vblteamid=" + vblteamid;   
+    }
+    if(partnershipId != null){
+        qs += "&p=" + partnershipId;
     }
 
     $("#link-calendar").attr('href', '/teams/calendar/?' + qs);
@@ -218,23 +222,47 @@ $.topic("repository.initialized").subscribe(function () {
     repository.loadTeam(vblteamid);
   }
   else if(teamid != null){   
-    clubmgmt.mapTeam(teamid, function(map){
-        if(map == null){
-            clubmgmt.loadTeam(teamid, function(t){
-                team = t;
-                renderTeam(null, team);
-                $(".loading").hide();
-                $("#team-dashboard").css("visibility", "visible");     
-            });             
-        }
-        else{
-            vblteamid = map.referenceId;
-            clubmgmt.loadTeam(teamid, function(t){
-                team = t;
-                repository.loadTeam(vblteamid);         
-            }); 
-        }               
-    });
+    
+    if(partnershipId == null){
+
+        clubmgmt.mapTeam(teamid, function(map){
+            if(map == null){            
+                clubmgmt.loadTeam(teamid, function(t){
+                    team = t;
+                    renderTeam(null, team);
+                    $(".loading").hide();
+                    $("#team-dashboard").css("visibility", "visible");     
+                });                       
+            }
+            else{
+                vblteamid = map.referenceId;
+                clubmgmt.loadTeam(teamid, function(t){
+                    team = t;
+                    repository.loadTeam(vblteamid);         
+                });
+            }               
+        });
+
+    }
+    else{
+        clubmgmt.mapPartnerTeam(teamid, partnershipId, function(map){
+            if(map == null){            
+                clubmgmt.loadPartnerTeam(partnershipId, teamid, function(t){
+                    team = t;
+                    renderTeam(null, team);
+                    $(".loading").hide();
+                    $("#team-dashboard").css("visibility", "visible");     
+                });                        
+            }
+            else{
+                vblteamid = map.referenceId;
+                clubmgmt.loadPartnerTeam(partnershipId, teamid, function(t){
+                    team = t;
+                    repository.loadTeam(vblteamid);         
+                });
+            }   
+        });
+    } 
   }
  
 });
