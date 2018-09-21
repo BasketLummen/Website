@@ -40,7 +40,7 @@ var renderNextMatch = function(){
         $("#next-game-placeholder").append(div);     
   });
 
-  repository.futureMatches(vblteamid, function(match){
+  repository.futureMatchesOfTeam(vblteamid, function(match){
     var tr = $.template("#future-game-template", {
                 date: match.datumString,
                 time: match.beginTijd,

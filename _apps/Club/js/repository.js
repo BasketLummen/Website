@@ -251,16 +251,16 @@ var repository = new function(){
         });
     }
 
-    this.futureMatches = function(teamId, callback){
+    this.futureMatchesOfTeam = function(teamId, callback){
          if(usedb){
-            self._futureMatchesFromDb(teamId, callback);           
+            self._futureMatchesOfTeamFromDb(teamId, callback);           
          }
          else{
-            self._futureMatchesFromArrays(teamId, callback); 
+            self._futureMatchesOfTeamFromArrays(teamId, callback); 
          }
     }
 
-    this._futureMatchesFromDb = function(teamId, callback){
+    this._futureMatchesOfTeamFromDb = function(teamId, callback){
         var tx = self.db.transaction("matches", "readonly");
         var store = tx.objectStore("matches");
         var index = store.index("jsDTCode");
@@ -281,7 +281,7 @@ var repository = new function(){
         }
     }
 
-    this._futureMatchesFromArrays = function(teamId, callback){
+    this._futureMatchesOfTeamFromArrays = function(teamId, callback){
          var now = new Date().currentLocalTime();
         self.matches.forEach(function(match){
             if((match.tTGUID == teamId || match.tUGUID == teamId) && match.jsDTCode > now){
@@ -289,6 +289,47 @@ var repository = new function(){
             }
         });
     }
+
+    this.futureMatches = function(callback){
+        if(usedb){
+           self._futureMatchesFromDb(callback);           
+        }
+        else{
+           self._futureMatchesFromArrays(callback); 
+        }
+   }
+
+   this._futureMatchesFromDb = function(callback){
+       var tx = self.db.transaction("matches", "readonly");
+       var store = tx.objectStore("matches");
+       var index = store.index("jsDTCode");
+
+        var now = new Date().currentLocalTime();
+
+       var range = IDBKeyRange.lowerBound(now);
+       index.openCursor(range).onsuccess = function(e) {
+           var cursor = e.target.result;
+           if(cursor) {
+               var key = cursor.key;
+               var match = cursor.value;
+               if(match && ((match.tTGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tTGUID)) !== -1) ||
+                (match.tUGUID.startsWith(vblOrgId) || partnerTeamIds.indexOf(encodeURIComponent(match.tUGUID)) !== -1)))    
+                {
+                    if(callback) callback(match);
+                }  
+               cursor.continue();
+           }
+       }
+   }
+
+   this._futureMatchesFromArrays = function(callback){
+        var now = new Date().currentLocalTime();
+       self.matches.forEach(function(match){
+           if(match.jsDTCode > now){
+               callback(match);
+           }
+       });
+   }
 
     this.matchesInWeekOf = function(date, callback){
          if(usedb){

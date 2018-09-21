@@ -14,7 +14,7 @@ var team;
 var visualDate = new Date();
 
 var renderFutureMatches = function(){
-  repository.futureMatches(vblteamid, function(match){
+  repository.futureMatchesOfTeam(vblteamid, function(match){
     var matchuri= "/match/?matchid=" + match.guid;
     var tr = $.template("#table-item-template", {
         code: match.wedID,
