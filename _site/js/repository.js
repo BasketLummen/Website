@@ -399,7 +399,7 @@ var repository = new function(){
         var today = new Date();
         var seasonStart = computeSeasonStart(today);
 
-        var range = IDBKeyRange.bound(seasonStart.getTime(), today.getTime());
+        var range = IDBKeyRange.bound(seasonStart.getTime(), today.currentLocalTime());
         index.openCursor(range).onsuccess = function(e) {
             var cursor = e.target.result;
             if(cursor) {
