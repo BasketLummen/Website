@@ -52,8 +52,18 @@ var vbl = new function(){
             callback(matches);            
         });
     }
-
-    //MatchesByWedGuid?issguid=BVBL17189180NAHSE11AFC 
+    this.putUitslag = function(matchId, thuis, uit, pin, teamThuisGUID, teamUitGUID, callback, error){
+        var uitslag = ("   " + thuis).slice(-3) + "-" + ("   " + uit).slice(-3);
+        var uri = self.getUrl("UitslagByWedGuidCodeEnPin", "issguid=" +  matchId + "&score=" + uitslag + "&code1=" + pin + "&code2=" + teamThuisGUID + teamUitGUID);
+        self.getRequest(uri, function(result){
+           if(result === "ok"){
+              callback(uitslag); 
+            }
+            else{
+                    error();
+            }          
+        });
+    }
 
     this.teamimage = function(teamid){
             return imgbas + "/" + teamid.substring(0, 8) + "_Small.jpg";

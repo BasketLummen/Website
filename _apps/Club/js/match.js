@@ -12,39 +12,32 @@ var matchid = decodeURIComponent(getParameterByName("matchid"));
 var renderMatchDetails = function(match, org) {
 
     $("#poule").text(match.doc.pouleNaam);
-     var d = new Date(match.doc.jsDTCode);
-      $("#next-top-title span").text(d.toLocaleString(window.navigator.language, {weekday: 'long'}));
-      /* looks like local time is stored as if it were utc? */
-      $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + d.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+d.getUTCHours()).slice(-2) + ":" + ('0'+d.getMinutes()).slice(-2));    
-    
-      var vs = "";
-      org.teams.forEach(function(team){
-          if(team.guid == match.doc.teamThuisGUID || team.guid == match.doc.teamUitGUID){
-              vs = team.naam.replace("Basket Lummen ", "");
-          }
-      });
-      if(vs == ""){
-        if( partnerTeamIds.indexOf(encodeURI(match.doc.teamThuisGUID)) > -1){
-            partnerTeamNames.forEach(function(teamName){
-                vs = match.doc.teamThuisNaam.replace(teamName, "");
-            });           
-        }
-        else if( partnerTeamIds.indexOf(encodeURI(match.doc.teamUitGUID)) > -1){
-            partnerTeamNames.forEach(function(teamName){
-                vs = match.doc.teamUitNaam.replace(teamName, "");
-            });            
-        }
-      }
-     
+    var d = new Date(match.doc.jsDTCode);
+    // d appears to be a UTC date, but using current local time
+    var year = d.getUTCFullYear();
+    var month = d.getUTCMonth();
+    var day = d.getUTCDate();
+    var hours = d.getUTCHours();
+    var minutes = d.getUTCMinutes();
+    var seconds = d.getUTCSeconds();
+    var realDate = new Date(year, month, day, hours, minutes, seconds);
 
-      $("#next-vs").text(vs);
+    $("#next-top-title span").text(d.toLocaleString(window.navigator.language, {weekday: 'long'}));
+    /* date value is local time, but timezone offset still applied */
+    $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + realDate.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+realDate.getHours()).slice(-2) + ":" + ('0'+realDate.getMinutes()).slice(-2));    
 
-      var homesrc = vbl.teamimage(match.doc.teamThuisGUID);
-      var awaysrc = vbl.teamimage(match.doc.teamUitGUID);
-      $("#next-home-team-logo img").attr("src", homesrc);
-      $("#next-away-team-logo img").attr("src", awaysrc);
-  
-      $("#next-middle .container").css("visibility", "visible");
+    var vs = "VS";
+    $("#home-team").text(match.doc.teamThuisNaam);
+    $("#away-team").text(match.doc.teamUitNaam);
+
+    $("#next-vs").text(vs);
+
+    var homesrc = vbl.teamimage(match.doc.teamThuisGUID);
+    var awaysrc = vbl.teamimage(match.doc.teamUitGUID);
+    $("#next-home-team-logo img").attr("src", homesrc);
+    $("#next-away-team-logo img").attr("src", awaysrc);
+
+    $("#next-middle .container").css("visibility", "visible");
 
     var geocoder = new google.maps.Geocoder();
     var address = match.doc.accommodatieDoc.adres;
@@ -85,7 +78,76 @@ var renderMatchDetails = function(match, org) {
         });
     }    
 
-    $('#results').text(match.doc.uitslag);
+
+    if(realDate.getTime() < Date.now()){
+        $("#result-header").show();
+
+        if(match.doc.uitslag != null && match.doc.uitslag.lenght > 0){
+            $('#results').text(match.doc.uitslag);
+            $("#result-container").show();
+        }
+        else{
+            $("#result-form-container").show();
+        }
+    }
+    bindForm(match);
+}
+
+var bindForm = function(match){
+    var form = $('#result-form-container form');
+   
+    var teamThuisGUID = match.doc.teamThuisGUID;
+    var teamUitGUID = match.doc.teamUitGUID
+
+    var rules = {
+        homescore: {
+            required: true
+        },
+        awayscore: {
+            required: true
+        },
+        pin: {
+            required: pin
+        }
+    };
+
+    // set up form validation messages
+    var messages = {
+        homescore: {
+            required: "*"
+        },
+        awayscore: {
+            required: "*"
+        },
+        pin: {
+            required: "*"
+        }
+    };
+
+
+    form.validate({
+        onkeyup: false,
+        rules: rules,
+        messages: messages,
+        submitHandler: function (f) {
+
+            var home = form.find('#homescore').val();
+            var away = form.find('#awayscore').val();
+            var pin = form.find('#pin').val();
+
+            vbl.putUitslag(matchid, home, away, pin, teamThuisGUID, teamUitGUID, function(uitslag){
+                $('#results').text(uitslag);
+                $("#result-container").show();
+                $("#result-form-container").hide();
+            },
+            function(){
+                $("#message").text("Pincode onjuist of verwerking niet mogelijk!")
+            });
+
+            return false;
+        }
+    });
+            
 }
 
 $.topic("vbl.match.details.loaded").subscribe(function (match) {

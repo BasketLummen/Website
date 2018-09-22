@@ -154,7 +154,9 @@
 
 
 /* next games section */
-
+#poule-header{
+	margin-top: -3vw;
+}
 #next-header{
 	padding: 2vh;
 	text-align: center;
@@ -162,9 +164,18 @@
 #next-middle .container{
 	visibility: hidden;
 }
-#next > h2{
+#next > h1{
+	
 	text-align:center;
 	padding-top: 1vh;
+}
+#next > h2:first-of-type{
+	margin-top: 6vh;
+	text-align:center;
+}
+#next > h2:last-of-type{
+	margin-bottom: 6vh;
+	text-align:center;
 }
 
 #next-top > .container{
@@ -244,6 +255,21 @@
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
+
+#feuille{
+	margin: 4vh auto;
+}
+
+#result-form-container{
+	margin: 4vh auto;
+}
+#result-form-container table{
+	margin: 0 auto;
+}
+#result-form-container table tr, #result-form-container table td{
+	border: 0;
+}
+
 
 /* link to all matches */
 #all-matches{
@@ -801,5 +827,9 @@ only screen and (max-width: 760px),
 
 .album-image img{
 	width: 100%;
+}
+
+.no-show{
+	display: none;
 }
   
