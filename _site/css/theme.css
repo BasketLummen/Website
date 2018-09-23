@@ -689,7 +689,7 @@ only screen and (max-width: 760px),
 
 .album-image img{
 	display:block;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 .divider{
