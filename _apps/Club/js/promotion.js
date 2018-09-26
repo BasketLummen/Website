@@ -65,6 +65,10 @@ function renderForm(){
         table.append($('<tr>')
             .append($('<td>').append($('<label>').text('Email').attr('for', 'email')))
             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'email', name: 'email', placeholder: 'Vul je email in...' }))));
+
+        table.append($('<tr>')
+            .append($('<td>').append($('<label>').text('Adres').attr('for', 'address')))
+            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'address', name: 'address', placeholder: 'Vul je adres in...' }))));
         
         table.append($('<tr>')
             .append($('<td>').append($('<label>').text('Telefoon').attr('for', 'telephone')))
@@ -213,6 +217,7 @@ function renderForm(){
                 var firstname = promotionholder.find('#firstname').val();
                 var email = promotionholder.find('#email').val();
                 var telephone = promotionholder.find('#telephone').val();
+                var address = promotionholder.find('#address').val();
                 var sendConfirmation = promotionholder.find('#sendConfirmation').is(':checked');
 
                 var itemsToSubmit = [];
@@ -266,6 +271,7 @@ function renderForm(){
                     subscriberName: firstname + " " + name,
                     subscriberEmail: email,
                     subscriberTelephone: telephone,
+                    invoiceAddress: address,
                     sendConfirmation: sendConfirmation,
                     items: itemsToSubmit
                 };
