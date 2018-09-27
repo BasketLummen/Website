@@ -3,7 +3,7 @@
   <generator uri="https://www.teamdish.com" version="1.0.0">Dish</generator>
   <link href="/feed.xml" rel="self" type="application/atom+xml" />
   <link href="" rel="alternate" type="text/html" />
-  <updated>2018-09-26T21:20:46.4359944Z</updated>
+  <updated>2018-09-27T21:41:17.2863107Z</updated>
   <id></id>
   <title type="html"></title>
   <subtitle></subtitle>
@@ -37,7 +37,7 @@
 &lt;p&gt;Iedereen dient wel eens te stoppen aan een benzinestation, waarom niet aan datgene waar we als club voordeel uithalen?&lt;/p&gt;
 &lt;p&gt;Mag onze club op jullie rekenen?&lt;/p&gt;
 &lt;p&gt;De kaarten kunnen worden aangevraagd via onze bestuursleden of via onderstaande formulier.&lt;/p&gt;
-&lt;div data-promotionid="Kerfs-20180926"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"&gt;&lt;/div&gt;
+&lt;div data-promotionid="Kerfs-20180926"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen" data-required="email address"&gt;&lt;/div&gt;
 </content>
     <author>
       <name />
@@ -117,7 +117,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Het buffet is inclusief brood en kaas, en à volonté.&lt;/p&gt;
 &lt;p&gt;Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de pastadag. Na het plaatsen van je bestelling online krijg je een bevestiging. Gelieve deze af te printen en ook mee te nemen naar de pastadag, zo kan de administratie aan de inkom vlotter verlopen.&lt;/p&gt;
-&lt;div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"&gt;&lt;/div&gt;
+&lt;div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen" data-optional="email telephone"&gt;&lt;/div&gt;
 </content>
     <author>
       <name />

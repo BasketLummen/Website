@@ -13,6 +13,8 @@ if (!String.prototype.format) {
 var service = "community-service.azurewebsites.net";
 //  var service = "localhost:22465"; // uncomment for local testing
 var promotionholder;
+var optional;
+var required;
 var promotionid;
 var title;
 var buttontext;
@@ -62,17 +64,23 @@ function renderForm(){
             .append($('<td>').append($('<label>').text('Naam').attr('for', 'name')))
             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'name', name: 'name', placeholder: 'Vul je naam in...' }))));
 
-        table.append($('<tr>')
-            .append($('<td>').append($('<label>').text('Email').attr('for', 'email')))
-            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'email', name: 'email', placeholder: 'Vul je email in...' }))));
+        if(required.includes("email") || optional.includes("email")){
+            table.append($('<tr>')
+                .append($('<td>').append($('<label>').text('Email').attr('for', 'email')))
+                .append($('<td>').append($('<input>').attr({ type: 'text', id: 'email', name: 'email', placeholder: 'Vul je email in...' })))); 
+        }
 
-        table.append($('<tr>')
-            .append($('<td>').append($('<label>').text('Adres').attr('for', 'address')))
-            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'address', name: 'address', placeholder: 'Vul je adres in...' }))));
+        if(required.includes("address") || optional.includes("address")){
+            table.append($('<tr>')
+                .append($('<td>').append($('<label>').text('Adres').attr('for', 'address')))
+                .append($('<td>').append($('<input>').attr({ type: 'text', id: 'address', name: 'address', placeholder: 'Vul je adres in...' }))));
+        }
         
-        table.append($('<tr>')
-            .append($('<td>').append($('<label>').text('Telefoon').attr('for', 'telephone')))
-            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'telephone', name: 'telephone', placeholder: 'Vul je telefoonnummer in...' }))));
+        if(required.includes("telephone") || optional.includes("telephone")){
+            table.append($('<tr>')
+                .append($('<td>').append($('<label>').text('Telefoon').attr('for', 'telephone')))
+                .append($('<td>').append($('<input>').attr({ type: 'text', id: 'telephone', name: 'telephone', placeholder: 'Vul je telefoonnummer in...' }))));
+        }
 
         // set up form validation rules
         var rules = {
@@ -81,8 +89,20 @@ function renderForm(){
             },
             firstname: {
                 required: true
+            },
+            email: {
+                required: false
+            },
+            address: {
+                required: false
+            },
+            telephone: {
+                required: false
             }
         };
+        required.forEach(function(r){
+            rules[r].required = true;
+        });
 
         // set up form validation messages
         var messages = {
@@ -91,6 +111,15 @@ function renderForm(){
             },
             firstname: {
                 required: "Voornaam is verplicht"
+            },
+            email: {
+                required: "Email is verplicht"
+            },
+            address: {
+                required: "Adres is verplicht"
+            },
+            telephone: {
+                required: "Telefoon is verplicht"
             }
         };
 
@@ -215,9 +244,12 @@ function renderForm(){
 
                 var name = promotionholder.find('#name').val();
                 var firstname = promotionholder.find('#firstname').val();
-                var email = promotionholder.find('#email').val();
-                var telephone = promotionholder.find('#telephone').val();
-                var address = promotionholder.find('#address').val();
+                var optionalInput = promotionholder.find('#email');
+                var email = optionalInput != null ? optionalInput.val() : null;                
+                var optionalInput = promotionholder.find('#telephone');
+                var telephone = optionalInput != null ? optionalInput.val() : null;
+                var optionalInput = promotionholder.find('#address');
+                var address = optionalInput != null ?  optionalInput.val() : null;
                 var sendConfirmation = promotionholder.find('#sendConfirmation').is(':checked');
 
                 var itemsToSubmit = [];
@@ -376,6 +408,10 @@ $(document).ready(function(){
     title = promotionholder.attr("data-title");
     buttontext = promotionholder.attr("data-buttontext");
     nexttext = promotionholder.attr("data-nexttext");
+    var toSplit = promotionholder.attr("data-required");
+    required = toSplit != null ? toSplit.split(" "): [];
+    toSplit = promotionholder.attr("data-optional");
+    optional = toSplit != null ? toSplit.split(" "): [];
     uri= "https://" + service + "/api/promotions/" + promotionid;
     posturi= "https://" + service + "/api/promotions/" + promotionid + "/subscriptions";
 

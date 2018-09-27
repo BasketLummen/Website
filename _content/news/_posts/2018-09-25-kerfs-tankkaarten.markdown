@@ -35,4 +35,4 @@ Mag onze club op jullie rekenen?
 
 De kaarten kunnen worden aangevraagd via onze bestuursleden of via onderstaande formulier.
 
-<div data-promotionid="Kerfs-20180926"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"></div>
+<div data-promotionid="Kerfs-20180926"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen" data-required="email address"></div>

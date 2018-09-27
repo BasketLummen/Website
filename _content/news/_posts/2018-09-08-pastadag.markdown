@@ -26,4 +26,4 @@ Het buffet is inclusief brood en kaas, en à volonté.
 
 Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de pastadag. Na het plaatsen van je bestelling online krijg je een bevestiging. Gelieve deze af te printen en ook mee te nemen naar de pastadag, zo kan de administratie aan de inkom vlotter verlopen.
 
-<div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen"></div>
+<div data-promotionid="pastadag-20181021"  data-title="Plaats je bestelling" data-buttontext="Bestellen" data-nexttext="Nog een bestelling plaatsen" data-optional="email telephone"></div>
