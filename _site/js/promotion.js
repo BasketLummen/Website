@@ -123,6 +123,7 @@ function renderForm(){
             }
         };
 
+        var shouldShowTotal = true;
         // extend with promotion items
         for (var key in promotion.items) {
             if (promotion.items.hasOwnProperty(key)){
@@ -151,11 +152,13 @@ function renderForm(){
 
                 }
 
+                shouldShowTotal &= item.price > 0;
+
                 var inputTextVisible = item.maximumQuantity == null || item.maximumQuantity > 1;
                 var checkType = promotion.choiceType == "Multiple" ? 'checkbox' : 'radio';
                 var name = promotion.choiceType == "Multiple" ? item.id : "selection";
                 table.append($('<tr>')
-                    .append($('<td>').append($('<label>').text(item.name + " €" + item.price).attr('for', item.id)))
+                    .append($('<td>').append($('<label>').text(item.name + (item.price > 0 ? " €" + item.price : "")).attr('for', item.id)))
                     .append($('<td>').append($('<input>').attr({ type: 'text', id: item.id, name: name, placeholder: '0' }).addClass("promotionitem").toggle(inputTextVisible))
                                     .append($('<input>').attr({ type: checkType, name: name, "data-targetid": item.id, "data-minvalue": item.minimumQuantity, "data-maxvalue": item.maximumQuantity }).addClass("promotionitemtoggle").toggle(!inputTextVisible) )));
             }
@@ -163,9 +166,11 @@ function renderForm(){
 
         // extend with total and submit button
 
-        table.append($('<tr class="total-row">')
-            .append($('<td>').append($('<label>').text('Te betalen')))
-            .append($('<td>').append($('<label>').text('€ 0').attr('id', 'price'))));
+        if(shouldShowTotal){
+            table.append($('<tr class="total-row">')
+                .append($('<td>').append($('<label>').text('Te betalen')))
+                .append($('<td>').append($('<label>').text('€ 0').attr('id', 'price'))));
+        }
 
         table.append($('<tr>')
             .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))

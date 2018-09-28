@@ -5,6 +5,8 @@ date:   2018-09-25 22:00:00
 description: Tankkaarten Kerfs.
 permalink: /news/2018-09-25-kerfs-tankkaarten/
 custom_js:
+- ptsans
+- jspdf.min
 - promotion
 ---
 
