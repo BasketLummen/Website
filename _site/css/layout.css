@@ -756,18 +756,18 @@ only screen and (max-width: 760px),
 .albums {
 	display: flex;
 	flex-wrap: wrap;
-	width: 100vw;
+	width: calc(100vw - (100vw - 100%));
   }
   
   /* Create four equal columns that sits next to each other */
   .albums .column {
 	flex: 25%;
-	max-width: 25%;
+	max-width:  25%;
   }
   
   .albums .column img {
 	vertical-align: middle;
-	width: 100%;
+	width: calc(100vw - (100vw - 100%));
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
