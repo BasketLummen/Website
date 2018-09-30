@@ -478,18 +478,27 @@
 		flex-basis: 50%;
 		max-width: 50%;
 	}
+	.pane.small{
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+	.pane.medium{
+		flex-basis: 75%;
+		max-width: 75%;
+	}
+	.pane.large{
+		flex-basis: 100%;
+	}
 }
-.pane.small{
-	flex-basis: 25%;
-	max-width: 25%;
+@media (max-width: 767px) {
+	.pane{
+		/* flex-grow: 0;
+		flex-shrink: 0; */
+		flex-basis: 100%;
+		max-width: 100%;
+	}
 }
-.pane.medium{
-	flex-basis: 75%;
-	max-width: 75%;
-}
-.pane.large{
-	flex-basis: 100%;
-}
+
 
 .border{
 	 /* padding: 5px;  */
@@ -516,11 +525,20 @@
 	min-height: 400px;
 	position: relative;
 }
-.dashboard .tiles .tile{
-	flex-basis: 30%;
+.dashboard .tiles .tile{	
 	display: flex;
 	flex-direction: column; 
 	justify-content: flex-end;
+}
+@media (max-width: 767px) {
+	.dashboard .tiles .tile{
+		flex-basis: 100%;
+	}
+}
+@media (min-width: 768px) {
+	.dashboard .tiles .tile{
+		flex-basis: 30%;
+	}
 }
 
 .dashboard .tiles .tile .tile-description{
