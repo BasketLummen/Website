@@ -2,7 +2,8 @@
 layout: post
 title:  "Tankkaarten Kerfs"
 date:   2018-09-25 22:00:00
-description: Tankkaarten Kerfs.
+cover: /news/img/kerfs.png
+description: Basket Lummen heeft in samenwerking met brandstoffen Kerfs een overeenkomst afgesloten voor de aanschaf van tankkaarten.
 permalink: /news/2018-09-25-kerfs-tankkaarten/
 custom_js:
 - ptsans
