@@ -3,7 +3,7 @@ layout: post
 title:  "50 jaar Basket Lummen!"
 cover: /news/img/50-jaar.png
 date:   2018-10-08 14:00:00
-description: She Got Game.
+description: Het bestuur van Basket Lummen nodigt u graag uit voor de viering van het 50-jarig bestaan van Basket Lummen.
 permalink: /news/2018-10-08-50-jaar/
 ---
 
