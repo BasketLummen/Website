@@ -12,6 +12,8 @@ Om alles in goede banen te laten lopen hebben we nog een aantal mensen nodig die
 
 Wie zijn deze vrijwilligers die hun weekends en hun vrije tijd opgeven om ‘official’ te zijn bij basketbal wedstrijden ?
 
+
+
 ## We geven hierbij een overzicht :
 
 
@@ -25,6 +27,8 @@ We moeten deze mensen zo goed mogelijk motiveren want 'een blije ref is een goed
 
 Wistjedatje : Momenteel is er in Vlaanderen een tekort van ongeveer 250 scheidsrechters. We moeten ze dus koesteren!
 
+
+
 **Youth Officials**
 
 Voor de lagere leeftijdscategorieën (tot en met U12) zijn er geen scheidsrechters maar wel 'Youth Officials'. (Er is 1 uitzondering die we niet verklappen... weet jij het ?)
@@ -36,6 +40,8 @@ Ze fluiten enkel thuismatchen omdat ze nog niet de ervaring en kennis van een sc
 Bij Basket Lummen zijn dit dikwijls U16 spelers die basketbal ademen en dromen, niet uit de sporthal kunnen wegblijven en de jongsten willen helpen hun favoriete hobby uit te oefenen.
 
 Youth Officials zijn ook de scheidsrechters van de toekomst en wie weet zit er nu al een toekomstig internationale Ref tussen... Waaauw !!
+
+
 
 **Tafelofficials**
 
