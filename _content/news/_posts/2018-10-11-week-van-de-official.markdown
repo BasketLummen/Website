@@ -118,11 +118,9 @@ En de volgende keer dat je iets naar de Ref roept… laat het iets zijn als :
 <br/><br/>
 Maak met je ploeg of de hele supporterstribune een selfie met de Ref en ‘de Tafel’ na de match. Ze zullen het de volgende keer met 2 maal zoveel plezier komen doen.  
 
-(Stuur je Selfie naar [selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)Week van de Official : 6 - 14 oktober 2018
-
-[selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)
-
+(Stuur je Selfie naar [selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)
 <br/><br/>
-[De foto's van de onze officials vind je hier terug](/albums/2018-10-09-week-van-de-official "Foto's van onze Officials")
+Nog enkele links :
+[De foto's van onze officials vind je hier terug](/albums/2018-10-09-week-van-de-official "Foto's van onze Officials")
 <br/>
 [Basketbal Vlaanderen - week van de Official](http://basketbal.vlaanderen/weekvandeofficial)
