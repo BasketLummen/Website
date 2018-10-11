@@ -120,7 +120,7 @@ Maak met je ploeg of de hele supporterstribune een selfie met de Ref en ‘de Ta
 
 (Stuur je Selfie naar [selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)
 <br/><br/>
-Nog enkele links :
+Nog enkele links :<br/>
 [De foto's van onze officials vind je hier terug](/albums/2018-10-09-week-van-de-official "Foto's van onze Officials")
 <br/>
 [Basketbal Vlaanderen - week van de Official](http://basketbal.vlaanderen/weekvandeofficial)
