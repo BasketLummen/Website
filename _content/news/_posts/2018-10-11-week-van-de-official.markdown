@@ -1,15 +1,6 @@
----
-layout: post
-title: "Week van de Official"
-cover: /albums/2018-10-09-week-van-de-official/thumbnails/S0355266.jpg
-date: 2018-10-11 11:02:00
-description: Van 6 tot en met 14 october is het de week van de Official
-permalink: /news/2018-10-11-week-van-de-official
----
 # Week van de Official : 6 - 14 oktober 2018
 
 Deze week is het de week van de ‘Official’.
-
 
 Je weet wel, officials, de vrijwilligers die het mogelijk maken dat onze jongens, meisjes, heren en dames wedstrijden kunnen spelen.
 
@@ -26,7 +17,6 @@ Wie zijn deze vrijwilligers die hun weekends en hun vrije tijd opgeven om ‘off
 
 **Scheidsrechters**
 
-
 Dit zijn de heren en dames die de wedstrijden leiden (ja, met korte ei !) en er voor zorgen dat alles volgens de regels gebeurt.
 
 Ze krijgen vaak dingen toegeroepen die niet zo leuk zijn en blijven hun taak met inzet doen.
@@ -35,9 +25,7 @@ We moeten deze mensen zo goed mogelijk motiveren want 'een blije ref is een goed
 
 Wistjedatje : Momenteel is er in Vlaanderen een tekort van ongeveer 250 scheidsrechters. We moeten ze dus koesteren!
 
-
 **Youth Officials**
-
 
 Voor de lagere leeftijdscategorieën (tot en met U12) zijn er geen scheidsrechters maar wel 'Youth Officials'. (Er is 1 uitzondering die we niet verklappen... weet jij het ?)
 
@@ -49,7 +37,6 @@ Bij Basket Lummen zijn dit dikwijls U16 spelers die basketbal ademen en dromen, 
 
 Youth Officials zijn ook de scheidsrechters van de toekomst en wie weet zit er nu al een toekomstig internationale Ref tussen... Waaauw !!
 
-
 **Tafelofficials**
 
 'Wie doet de tafel?' - Een vraag die velen onder ons al eens gehoord hebben alvorens de wedstrijd begint.
@@ -59,6 +46,7 @@ Dit zijn de mensen die de Ref helpen en alles dat moet genoteerd worden ook note
 Bij elke wedstrijd heb je er 2 of 3 nodig en ze moeten heel de wedstrijd zeer aandachtig en soms op een andere manier volgen :
 
 
+
 *De 'Timekeeper'*
 
 Dit is de persoon die het scorebord bedient (ook gekend als 'de klok') en er voor zorgt dat iedereen die mooie rode, groene en oranje lampjes kan zien op de muur.
@@ -66,6 +54,7 @@ Dit is de persoon die het scorebord bedient (ook gekend als 'de klok') en er voo
 En die luide toeter in de sporthal als er gewisseld wordt of als er een time-out is ? Steek dat ook maar op de 'timekeeper'. Helaas kan het volume niet aangepast worden... sorry.
 
 Normaal gezien is dit altijd iemand van de entourage van de thuisploeg. Als je niet weet waarom, vraag het hun dan volgende keer maar eens.
+
 
 
 *De 'Scorekeeper'*
@@ -81,6 +70,7 @@ Deze persoon is iemand van de uitploeg. Het idee is om de taken tussen de ploege
 Nog een wistjedatje : Is er een verschil tussen wat er op het blad en op het scorebord staat, dan heeft het blad voorrang. Het scoreblad wordt na de wedstrijd ook aan de bond overhandigd en is het officiële wedstrijdverloop met eindscore.
 
 
+
 *De '24sec Operator'*
 
 Deze functie is er pas vanaf U14 wedstrijden.
@@ -94,12 +84,10 @@ Ze hanteren het toestel met de minste knoppen maar moeten het meest aantal keren
 Ook moeten zij de wedstrijd op een totaal andere manier bekijken dan andere officials en toeschouwers. Zij focussen vooral op de bal en minder op de spelers.
 
 Quizvraag : Een ploeg heeft de bal in de verdedigende zone en vraagt een time-out. Er stonden nog 22 seconden op de 24s-klok. Wat gebeurt er bij de spelhervatting ?  
+1. De klok loopt verder vanaf 22s
+2. De klok begint weer vanaf 24s
+3. De klok begint weer vanaf 14s
 
-A. De klok loopt verder vanaf 22s
-
-B. De klok begint weer vanaf 24s
-
-C. De klok begint weer vanaf 14s
 
 
 
@@ -109,20 +97,19 @@ Tijdens deze ‘week van de official’ willen we de ‘Officials’ dan ook een
 
 Denk er dus aan om deze vrijwilligers regelmatig te bedanken en een complimentje te geven voor hun inzet.
 
+  
 
 En de volgende keer dat je iets naar de Ref roept… laat het iets zijn als :
 
  - ‘Goed gefloten ref!!!’ of 
  - ‘Goed zo ref! Dat had ik zelf niet gezien’
 
-  
+    
 
+  
 
 Maak met je ploeg of de hele supporterstribune een selfie met de Ref en ‘de Tafel’ na de match. Ze zullen het de volgende keer met 2 maal zoveel plezier komen doen.  
 
-(Stuur je Selfie naar [selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)
+(Stuur je Selfie naar [selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)Week van de Official : 6 - 14 oktober 2018
 
-
-[Klik hier om de foto's te zien](/albums/2018-10-09-week-van-de-official)
-
-[Informatie rond de week van de official van de VBL](http://basketbal.vlaanderen/weekvandeofficial "VBL - Week van de Official")
+[selfie@slamdunk.be](mailto:selfie@slamdunk.be) en we plaatsen de besten op de website)
