@@ -3,7 +3,7 @@
   <generator uri="https://www.teamdish.com" version="1.0.0">Dish</generator>
   <link href="/feed.xml" rel="self" type="application/atom+xml" />
   <link href="" rel="alternate" type="text/html" />
-  <updated>2018-10-14T09:50:14.9118585Z</updated>
+  <updated>2018-10-16T14:06:15.3622686Z</updated>
   <id></id>
   <title type="html"></title>
   <subtitle></subtitle>
@@ -11,6 +11,34 @@
     <name />
     <email />
   </author>
+  <entry>
+    <title>Lummen For Life 3x3 toernooi</title>
+    <link href="/news/2018-10-14-lummen-for-life/" rel="alternate" type="text/html" title="Lummen For Life 3x3 toernooi" />
+    <published>2018-10-14T21:00:00.0000000</published>
+    <updated>2018-10-14T21:00:00.0000000</updated>
+    <id>/news/2018-10-14-lummen-for-life/</id>
+    <content type="html" xml:base="/news/2018-10-14-lummen-for-life/">&lt;div data-tournamentid="516b4ced-a102-482c-a3ff-7bf56f0c6568"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving doen" data-required="email" data-optional="comment" data-allowed-modes="club team individual" data-allowed-levels="Gevorderd Matig Beginners"&gt;&lt;/div&gt;
+</content>
+    <author>
+      <name />
+      <email />
+    </author>
+    <summary></summary>
+  </entry>
+  <entry>
+    <title>Inschrijvingen peanuts 2018</title>
+    <link href="/news/2018-10-14-peanuts/" rel="alternate" type="text/html" title="Inschrijvingen peanuts 2018" />
+    <published>2018-10-14T21:00:00.0000000</published>
+    <updated>2018-10-14T21:00:00.0000000</updated>
+    <id>/news/2018-10-14-peanuts/</id>
+    <content type="html" xml:base="/news/2018-10-14-peanuts/">&lt;div data-tournamentid="3622902d-57af-4c2f-bf27-8273583b68e2"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een club inschrijven" data-required="email" data-optional="comment" data-allowed-modes="club" data-allowed-levels="Gevorderd Matig Beginners"&gt;&lt;/div&gt;
+</content>
+    <author>
+      <name />
+      <email />
+    </author>
+    <summary></summary>
+  </entry>
   <entry>
     <title>Week van de Official : 6 - 14 oktober 2018</title>
     <link href="/news/2018-10-11-week-van-de-official/" rel="alternate" type="text/html" title="Week van de Official : 6 - 14 oktober 2018" />

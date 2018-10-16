@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Inschrijvingen peanuts 2018"
+date: 2018-10-14 21:00:00
+description: Inschrijvingen peanuts 2018
+cover: /news/img/peanuts-2018.jpg
+permalink: /news/2018-10-14-peanuts/
+custom_js:
+- tournament
+---
+
+<div data-tournamentid="3622902d-57af-4c2f-bf27-8273583b68e2"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een club inschrijven" data-required="email" data-optional="comment" data-allowed-modes="club" data-allowed-levels="Gevorderd Matig Beginners"></div>
+

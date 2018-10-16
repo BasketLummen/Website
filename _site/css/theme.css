@@ -46,11 +46,15 @@ label, input, button, select {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
-input[type=text], select{
+input[type=text],input[type=number], select{
 	min-width: 200px;
 	border:1px solid #999; 
 }
-input[type=text]{	
+textarea{
+	width: 100%;
+	border:1px solid #999;
+}
+input[type=text],input[type=number], textarea{	
 	-webkit-appearance:none;
 }
 input[type=submit]{
