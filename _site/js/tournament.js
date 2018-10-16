@@ -98,12 +98,12 @@ function renderForm(){
              .append($('<td>').append($('<input>').attr({ type: 'text', id: 'team', name: 'team', placeholder: 'Vul de naam van je team in...' }))));
 
         table.append($('<tr>').addClass("mode-toggle").addClass("mode-team").css("display", "none")
-             .append($('<td>').append($('<label>').text('Niveau').attr('for', 'level')))
-             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'level', name: 'level', placeholder: 'Wat is het niveau / leeftijd van je team?'  }))));
+             .append($('<td>').append($('<label>').text('Niveau').attr('for', 'level-team')))
+             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'level-team', name: 'level-team', placeholder: 'Wat is het niveau / leeftijd van je team?'  }))));
 
         table.append($('<tr>').addClass("mode-toggle").addClass("mode-individual").css("display", "none")
-             .append($('<td>').append($('<label>').text('Niveau').attr('for', 'level')))
-             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'level', name: 'level', placeholder: 'Op welk niveau speel je?' }))));
+             .append($('<td>').append($('<label>').text('Niveau').attr('for', 'level-individual')))
+             .append($('<td>').append($('<input>').attr({ type: 'text', id: 'level-individual', name: 'level-individual', placeholder: 'Op welk niveau speel je?' }))));
 
         table.append($('<tr>')
                 .append($('<td>').append($('<label>').text("Contact informatie")))
@@ -238,13 +238,20 @@ function renderForm(){
                         }
                     });
                 }
-                else{
-                    var level =  tournamentholder.find('#level').val();
+                else if(mode=="team"){
+                    var level =  tournamentholder.find('#level-team').val();
                     teams.push({
                         name: name,
                         level: level
                     });
-                }                
+                }     
+                else if(mode=="individual"){
+                    var level =  tournamentholder.find('#level-individual').val();
+                    teams.push({
+                        name: firstname + " " +  lastname,
+                        level: level
+                    });
+                }              
                           
                 var registration = {
                     tournamentid: tournamentid,
