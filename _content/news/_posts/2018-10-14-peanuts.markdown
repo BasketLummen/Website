@@ -2,12 +2,25 @@
 layout: post
 title: "Inschrijvingen peanuts 2018"
 date: 2018-10-14 21:00:00
-description: Inschrijvingen peanuts 2018
+description: Op zondag 11 november organiseert Basket Lummen opnieuw het jaarlijks peanutstornooi.
 cover: /news/img/peanuts-2018.jpg
 permalink: /news/2018-10-14-peanuts/
 custom_js:
 - tournament
 ---
+
+Op zondag 11 november organiseert Basket Lummen opnieuw het jaarlijks peanutstornooi.
+
+Dit zal doorgaan van 9u - 12u in Sporthal Vijfsprong (Sportweg 8, Lummen).
+
+## Hoe inschrijven?
+
+Je kan één of meerdere ploegjes van je club inschrijven, voor 6 november, via onderstaand formulier.
+
+Uw inschrijving is pas bevestigd wanneer u een antwoordmail hebt ontvangen van Brecht Truyers. 
+Heeft u deze niet ontvangen op 6 november, gelieve dan contact te nemen via [brecht_truyers@hotmail.com](brecht_truyers@hotmail.com).
+
+<br />
 
 <div data-tournamentid="3622902d-57af-4c2f-bf27-8273583b68e2"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een club inschrijven" data-required="email" data-optional="comment" data-allowed-modes="club" data-allowed-levels="Gevorderd Matig Beginners"></div>
 

@@ -247,10 +247,14 @@ function renderForm(){
                 }     
                 else if(mode=="individual"){
                     var level =  tournamentholder.find('#level-individual').val();
-                    teams.push({
-                        name: firstname + " " +  lastname,
-                        level: level
-                    });
+                    if(level.length > 0)
+                    {
+                        var temp = "Niveau: " + level;
+                        if(comment != null){
+                            temp += "- " + comment;
+                        }
+                        comment = temp;
+                    }                   
                 }              
                           
                 var registration = {
@@ -274,7 +278,7 @@ function renderForm(){
                   
                 
                     var div = $("<div>").append($('<label>').text(message))
-                                        .append("<br/>")
+                                        .append("<br/>").append("<br/>")
                                         .append($("<button>").attr('id', 'next-registration').attr('type', 'button').text(nexttext));
                                        
                     table.empty();
