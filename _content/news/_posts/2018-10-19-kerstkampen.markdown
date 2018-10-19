@@ -37,7 +37,7 @@ Via deze link kan je de inschrijving regelen: [www.hansvanwijn.be](https://www.h
 
 ## Kerststage Basket Lummen
 
-Net als in de voorbije jaren organiseert Basket Lummen in de tweede week van de kerstvakantie een kerststage. De voorbereiding is volop bezig, maar het concept zal vergelijkbaar zijn met dat van de vorige stage (informatie hierover vind je via deze link: [Kerststage Januari 2018](/news/ander-bericht) ) 
+Net als in de voorbije jaren organiseert Basket Lummen in de tweede week van de kerstvakantie een kerststage. De voorbereiding is volop bezig, maar het concept zal vergelijkbaar zijn met dat van de vorige stage (informatie hierover vind je via deze link: [Kerststage Januari 2018](http://www.basketlummen.be/news/2017-12-07-kerststage/) .
 
 ### Voor wie?
 Voor jongens en meisjes uit U8 en U10. Een mooi alternatief voor het Bounce Camp, omdat deze jongens en meisjes daar nog niet kunnen meedoen. Er is nog geen beslissing of de U12 ook zullen kunnen meedoen aan deze kerststage. Dit wordt later bekendgemaakt.
