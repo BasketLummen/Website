@@ -20,7 +20,7 @@ Voor jongens en meisjes vanaf 7 jaar, met minimaal 1 jaar basketervaring.
 Op 26, 27, en 28 december in de sporthal van Lummen, van 09h00 tot 16h00.
 
 ### Inschrijven
-In de bijgevoegde folder vind je alle informatie om in te schrijven. |link naar .pdf-bestand toevoegen|
+In de bijgevoegde folder vind je alle informatie om in te schrijven: [FROS-kamp](/link naar .pdf-bestand toevoegen/).
 
 ## Bounce Camp Hans Vanwijn
 
