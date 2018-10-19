@@ -1,64 +1,50 @@
 ---
 layout: post
 title:  "Basketbal voor de jeugd tijdens de kerstperiode"
-cover: /BasketLummen/Website/_content/albums/2018-10-13-Basket-Lummen-DSEA-Sint-Katelijne-Waver-DSEA/_thumbnails/IMG_6412.jpg
+cover: ![coverfoto](/BasketLummen/Website/_content/albums/2018-10-13-Basket-Lummen-DSEA-Sint-Katelijne-Waver-DSEA/_thumbnails/IMG_6412.png)
 date:   2018-10-25 20:00:00
-description: Basketbal voor de jeugd, ook tijdens de kerstperiode!.
+description: Basketbal voor de jeugd, ook tijdens de kerstperiode!
 permalink: /news/vervang-dit-door-de-bestandsnaam-zonder-extensie/
 ---
 
-Ook tijdens de kerstperiode zullen de jeugdspelers van Basket Lummen leerrijke ervaringen kunnen opdoen. Er is niet alleen het FROS-kamp, met coaches van Basket Lummen, maar ook het Bounce Camp Hans Vanwijn, een voormalig speler van Basket Lummen. Verder volgt er nog een evenement (Brecht)..... details...?
+Ook tijdens de kerstperiode zullen de jeugdspelers van Basket Lummen sportieve ervaringen kunnen opdoen. Er zijn een aantal kampen en stages tijdens de vakantie: het FROS-kamp (met coaches van Basket Lummen), het Bounce Camp (georganiseerd door Hans Vanwijn, voormalig speler van onze club) en onze eigen kerststage tijdens de tweede vakantieweek. 
 
 ## FROS-kamp
 
-Locale coaches, zoals Jolien Wouters, Janne Wouters en Caro Swolfs, hebben een ijzersterk concept voor de beginnende en gevorderde basketter. Het kamp is al jarenlang een vaste waarde in Limburg en bundelt heel wat ervaring. Het wordt georganiseerd door Bart Wouters, die onze DSE-A-ploeg ondersteunt.
+Het FROS-kamp is al jarenlang een vaste waarde in Limburg en bundelt heel wat ervaring en biedt een ijzersterk concept voor de beginnende en gevorderde basketter. Het wordt mede-georganiseerd door Bart Wouters, die onze Dames-A ondersteunt. Er wordt gewerkt met locale coaches, zoals Jolien Wouters, Janne Wouters en Caro Swolfs (speelsters bij onze Dames-A).
 
-#### Voor wie?
+### Voor wie?
 Voor jongens en meisjes vanaf 7 jaar, met minimaal 1 jaar basketervaring.
 
-#### Praktisch
+### Praktisch
 Op 26, 27, en 28 december in de sporthal van Lummen, van 09h00 tot 16h00.
 
-#### Inschrijven
+### Inschrijven
 In de bijgevoegde folder vind je alle informatie om in te schrijven. |link naar .pdf-bestand toevoegen|
 
 ## Bounce Camp Hans Vanwijn
 
-Hans Vanwijn, een voormalig speler van Basket Lummen, leidt een aantal coaches, die hun ervaring bij Limburg United zullen gebruiken voor onze jeugdspelers. 
+Wist je dat Hans Vanwijn een deel van zijn jeugdopleiding bij Basket Lummen genoten heeft? Nu wil hij, samen met enkele voormalige assistent-coaches van Limburg United, deze ervaringen delen met de lokale jeugdspelers. Daarvoor heeft hij dit nieuwe kamp georganiseerd.
 
-#### Voor wie?
+### Voor wie?
 Voor jongens en meisjes tussen 10 en 16 jaar, met minimaal 1 jaar basketervaring.
 
-#### Praktisch
+### Praktisch
 Op 2, 3 en 4 januari, Bogaarsveldstraat in Beringen.
 
-#### Inschrijven
+### Inschrijven
 Via deze link kan je de inschrijving regelen: [www.hansvanwijn.be](https://www.hansvanwijn.be/kampen/)
 
-## evenement Brecht 
+## Kerststage Basket Lummen
 
-details ontbreken nog
+Net als in de voorbije jaren organiseert Basket Lummen in de tweede week van de kerstvakantie een kerststage. De voorbereiding is volop bezig, maar het concept zal vergelijkbaar zijn met dat van de vorige stage (informatie hierover vind je via deze link: [Kerststage Januari 2018](/news/ander-bericht) ) 
 
-#### Voor wie?
-Voor 
+### Voor wie?
+Voor jongens en meisjes uit U8 en U10. Een mooi alternatief voor het Bounce Camp, omdat deze jongens en meisjes daar nog niet kunnen meedoen. Er is nog geen beslissing of de U12 ook zullen kunnen meedoen aan deze kerststage. Dit wordt later bekendgemaakt.
 
-#### Praktisch
-Op 
+### Praktisch
+De precieze data en uren worden nog bekendgemaakt.
 
-#### Inschrijven
-Via
+### Inschrijven
+De precieze inschrijvingsprocedure wordt nog bekendgemaakt.
 
-
-
-Wil je verwijzen naar een andere pagina op de site, gebruik dan [deze notatie](/news/ander-bericht)
-
-Wil je verwijzen naar een pagina op een andere site, gebruik dan [deze notatie](http://www.andere-site.com/pagina)
-
-Wil je een email link aanbieden, gebruik dan deze notatie: [uw.email@provider.be](mailto://uw.email@provider.be)
-
-Wil je een foto integreren in je tekst, gebruik dan onderstaande notatie (let op het uitroepteken vooraan!).
-
-![naam van de foto](/news/img/nogeenfoto.png)
-
-
-Het tekst formaat dat hier gebruikt werd, heet Markdown. Als je meer geavanceerde dingen wil voorzien in je artikel dan kan dat, hier is [een handige cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) waar je een overzicht vind van alle Markdown opties.
