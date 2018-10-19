@@ -10,7 +10,7 @@ if (!String.prototype.format) {
     };
   }
 
-var service = "clubmgmttournaments.azurewebsites.net";
+var service = "tournament-service.azurewebsites.net";
 //  var service = "localhost:22465"; // uncomment for local testing
 var tournamentholder;
 var allowedmodes = ["club"];
