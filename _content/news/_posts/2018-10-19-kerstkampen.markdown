@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Basketbal voor de jeugd tijdens de kerstperiode"
-cover: ![Jeugd](Website/_content/albums/2018-10-13-Hasselt-BT-G12B-Basket-Lummen-G12C/_normalized/IMG_6268.jpg)
+cover: ![Jeugd](/albums/2018-10-13-Hasselt-BT-G12B-Basket-Lummen-G12C/_normalized/IMG_6268.jpg)
 date:   2018-10-25 20:00:00
 description: Basketbal voor de jeugd, ook tijdens de kerstperiode!
 permalink: /news/vervang-dit-door-de-bestandsnaam-zonder-extensie/
@@ -10,8 +10,8 @@ Ook tijdens de kerstperiode zullen de jeugdspelers van Basket Lummen sportieve e
 
 ## FROS-kamp
 
-Het FROS-kamp is al jarenlang een vaste waarde in Limburg en bundelt heel wat ervaring en biedt een ijzersterk concept voor de beginnende en gevorderde basketter. Het wordt mede-georganiseerd door Bart Wouters, die onze Dames-A ondersteunt. Er wordt gewerkt met locale coaches, zoals Jolien Wouters, Janne Wouters en Caro Swolfs (speelsters bij onze Dames-A).
-![coverfoto](/BasketLummen/Website/_content/albums/2018-10-13-Basket-Lummen-DSEA-Sint-Katelijne-Waver-DSEA/_thumbnails/IMG_6412.png)
+Het FROS-kamp is al jarenlang een vaste waarde in Limburg en bundelt heel wat ervaring en biedt een ijzersterk concept voor de beginnende en gevorderde basketter. Het wordt mede-georganiseerd door Bart Wouters, die onze Dames A ondersteunt. Er wordt gewerkt met locale coaches, zoals Jolien Wouters, Janne Wouters en Caro Swolfs (speelsters bij onze Dames A).
+![coverfoto](https://www.basketlummen.be/albums/2018-10-13-Basket-Lummen-DSEA-Sint-Katelijne-Waver-DSEA/_thumbnails/IMG_6412.png)
 ### Voor wie?
 Voor jongens en meisjes vanaf 7 jaar, met minimaal 1 jaar basketervaring.
 
