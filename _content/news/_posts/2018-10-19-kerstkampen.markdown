@@ -1,17 +1,25 @@
 ---
 layout: post
 title:  "Basketbal voor de jeugd tijdens de kerstperiode"
-cover: ![Jeugd](/albums/2018-10-13-Hasselt-BT-G12B-Basket-Lummen-G12C/_normalized/IMG_6268.jpg)
-date:   2018-10-25 20:00:00
+cover: /news/img/fros-kamp.jpg
+date: 2018-10-21 14:00:00
 description: Basketbal voor de jeugd, ook tijdens de kerstperiode!
-permalink: /news/vervang-dit-door-de-bestandsnaam-zonder-extensie/
+permalink: /news/2018-10-19-kerstkampen/
 ---
-Ook tijdens de kerstperiode zullen de jeugdspelers van Basket Lummen sportieve ervaringen kunnen opdoen. Er zijn een aantal kampen en stages tijdens de vakantie: het FROS-kamp (met coaches van Basket Lummen), het Bounce Camp (georganiseerd door Hans Vanwijn, voormalig speler van onze club) en onze eigen kerststage tijdens de tweede vakantieweek. 
+
+Ook tijdens de kerstperiode zullen de jeugdspelers van Basket Lummen sportieve ervaringen kunnen opdoen. Er zijn een aantal kampen en stages tijdens de vakantie: het FROS-kamp (met coaches van Basket Lummen), het Bounce Camp (georganiseerd door Hans Vanwijn, voormalig speler van onze club) en onze eigen kerststage tijdens de tweede vakantieweek.
+
+<br />
 
 ## FROS-kamp
 
 Het FROS-kamp is al jarenlang een vaste waarde in Limburg en bundelt heel wat ervaring en biedt een ijzersterk concept voor de beginnende en gevorderde basketter. Het wordt mede-georganiseerd door Bart Wouters, die onze Dames A ondersteunt. Er wordt gewerkt met locale coaches, zoals Jolien Wouters, Janne Wouters en Caro Swolfs (speelsters bij onze Dames A).
-![coverfoto](https://www.basketlummen.be/albums/2018-10-13-Basket-Lummen-DSEA-Sint-Katelijne-Waver-DSEA/_thumbnails/IMG_6412.png)
+
+<br />
+
+![Fros Kamp](/news/img/fros-kamp.jpg)
+
+<br />
 
 ### Voor wie?
 Voor jongens en meisjes vanaf 7 jaar, met minimaal 1 jaar basketervaring.
@@ -20,7 +28,9 @@ Voor jongens en meisjes vanaf 7 jaar, met minimaal 1 jaar basketervaring.
 Op 26, 27, en 28 december in de sporthal van Lummen, van 09h00 tot 16h00.
 
 ### Inschrijven
-In de bijgevoegde folder vind je alle informatie om in te schrijven: [FROS-kamp informatie](/news/downloads2018-FROS-informatie.pdf/) en [FROS-kamp inschrijving](/news/downloads2018-FROS-inschrijving.pdf/).
+In de bijgevoegde folder vind je alle informatie om in te schrijven: [FROS-kamp informatie](/news/downloads/2018-FROS-informatie.pdf) en [FROS-kamp inschrijving](/news/downloads/2018-FROS-inschrijving.pdf).
+
+<br />
 
 ## Bounce Camp Hans Vanwijn
 
@@ -34,6 +44,8 @@ Op 2, 3 en 4 januari, Bogaarsveldstraat in Beringen.
 
 ### Inschrijven
 Via deze link kan je de inschrijving regelen: [www.hansvanwijn.be](https://www.hansvanwijn.be/kampen/)
+
+<br />
 
 ## Kerststage Basket Lummen
 
