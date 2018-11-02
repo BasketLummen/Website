@@ -356,8 +356,8 @@ $(document).ready(function(){
     optional = toSplit != null ? toSplit.split(" "): [];
     toSplit = tournamentholder.attr("data-allowed-levels");
     levels = toSplit != null ? toSplit.split(" "): [];
-    uri= "https://" + service + "/api/tournaments/" + tournamentid;
-    posturi= "https://" + service + "/api/tournaments/" + tournamentid + "/register";
+    uri= "https://" + service + "/api/tournaments/" + orgId + "/" + tournamentid;
+    posturi= "https://" + service + "/api/tournaments/" + orgId + "/" +tournamentid + "/register";
 
     $.ajax({
         type: 'GET',
