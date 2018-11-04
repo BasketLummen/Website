@@ -17,6 +17,7 @@ var renderPastMatches = function(){
   repository.pastMatches(vblteamid, function(match){
     var matchuri= "/match/?matchid=" + match.guid;
     var tr = $.template("#table-item-template", {
+        code: match.wedID,
         date: match.datumString,
         time: match.beginTijd,
         home: match.tTNaam,
