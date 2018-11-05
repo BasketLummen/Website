@@ -3,7 +3,7 @@ layout: post
 title: "Lummen For Life 3x3 toernooi"
 date: 2018-11-4 11:00:00
 description: Inschrijvingen Lummen For Life 3x3 toernooi 2018
-cover: /news/img/peanuts-2018.jpg
+cover: /news/img/lfl-2018.jpg
 permalink: /news/2018-11-04-lummen-for-life/
 custom_js:
 - tournament
