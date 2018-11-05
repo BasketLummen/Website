@@ -9,7 +9,7 @@ custom_js:
 - tournament
 ---
 
-Zin om te basketten en tegelijk goede doelen te sponsoren? Op vrijdag 16 November 2017 organiseert Basket Lummen een toernooi ter voordele van **Lummen for Life**, het toernooi zal doorgaan van 18 - 22u in [Sporthal Vijfsprong](/club/sporthal/).
+Zin om te basketten en tegelijk goede doelen te sponsoren? Op vrijdag 16 November 2018 organiseert Basket Lummen een toernooi ter voordele van **Lummen for Life**, het toernooi zal doorgaan van 18 - 22u in [Sporthal Vijfsprong](/club/sporthal/).
 
 ### Toernooi
 
