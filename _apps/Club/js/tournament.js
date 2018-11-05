@@ -211,7 +211,7 @@ function renderForm(){
                 
                 // gather the data
 
-                var name = tournamentholder.find('#' + mode).val();
+                var name = tournamentholder.find('#' + mode).val(); //only available for team & club
                 var lastname = tournamentholder.find('#name').val();
                 var firstname = tournamentholder.find('#firstname').val();
                 var optionalInput = tournamentholder.find('#email');
@@ -226,7 +226,7 @@ function renderForm(){
                 var teams= [];
                
                 if(mode=="club"){
-                    var i = 1;
+                    var i = 0;
                     levels.forEach(function(level){
                         var count = tournamentholder.find('#' +level).val();
                         for(var j= 0; j< count; j++){
@@ -246,6 +246,7 @@ function renderForm(){
                     });
                 }     
                 else if(mode=="individual"){
+                    name = firstname + " " +  lastname;
                     var level =  tournamentholder.find('#level-individual').val();
                     if(level.length > 0)
                     {
