@@ -2,7 +2,7 @@
 layout: post
 title: "Coaches Clinic"
 date: 2018-11-12 20:00:00
-description: Op zaterdag 22 december organiseren we 2 coach clinics voor jeugdcoaches. 
+description: Twee coach clinics voor jeugdcoaches op zaterdag 22 december. 
 cover: /news/img/clinic-22-12-2018.jpg
 permalink: /news/2018-11-12-clinic/
 ---
@@ -11,26 +11,26 @@ Op zaterdag 22 december organiseren we in samenwerking met coach Gerrit Driessen
 
 ### Wat is een coaches clinic?
 
-Voor leken is de term 'clinic' een beetje misleidend. Het is niet dat er een bepaald probleem 'genezen' wordt in een clinic. Nee, een clinic kan je best vergelijken met een traditionele bedrijfspresentatie.
+In een clinic komt een ervaren coach uitleggen hoe hij of zij een bepaald aspect van het basketbalspel aanleert aan een team. Dit is vaak een combinatie van theoretische uitleg en voorbeeldoefeningen, gedemonstreerd door een selectie spelers.
 
-In een clinic komt een ervaren coach uitleggen hoe hij/zij een bepaald aspect van het basketbal spel aanleert aan een team. Dit is vaak een combinatie van theoretische uitleg samen met voorbeeld oefeningen die gedemonstreerd worden door een selectie spelers.
-
-Een mooi voorbeeld van een clinic werd onlangs gegeven door coach Philip Wolk (de coach van onze Dames A) op de FIBA U14 Get Together. Waar hij uitlegt hoe hij de dribble hand-off in een motion offense aanleert.
+Een mooi voorbeeld is de clinic van onze coach Philip Wolk (Dames A) op de FIBA U14 Get Together. Hij legde er uit hoe hij de dribble hand-off in een motion offense aanleert.
 
 <iframe width="666" height="375" src="https://www.youtube.com/embed/rwbNeHWRzrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+De term ‘clinic’ is dus een beetje misleidend. Het is geen ‘genezing’ van een probleem maar is eerder vergelijkbaar met een traditionele bedrijfspresentatie.
+
 ### Programma
 
-Op zaterdag 22 december staan er 2 clinics op het programma, beide gegeven door Gerrit Driessens.
+De volgende 2 clinics staan op het programma:
 
-Van 9u30 tot 10u45 komt coach Driessens uitleggen koe we de trainingstijd zo goed mogelijk kunnen maximaliseren bij grote trainingsgroepen (gericht op U8 & U10) en hoe we de fysieke geletterdheid verder kunnen ontwikkelen aan de hand van spelvormen.
- 
-En van 11u tot 12u15 komt hij uitleggen hoe we bij de latere leeftijden, U14-U16-U18/U19, kunnen zorgen voor progressie van de dribbel hand-off naar pick and roll. Hoe we dit kunnen aanleren en verder ontwikkelen.
+Eerste clinic: van 9u30 tot 10u45 komt coach Driessens uitleggen hoe we de trainingstijd zo goed mogelijk kunnen maximaliseren bij grote trainingsgroepen (gericht op U8 en U10) en hoe we de fysieke geletterdheid verder kunnen ontwikkelen aan de hand van spelvormen.
+
+Tweede clinic: van 11u00 tot 12u15 komt hij uitleggen hoe we bij de U14, U16 en U18/U19 de progressie van de dribble hand-off naar pick and roll kunnen aanleren en verder ontwikkelen.
 
 ### Inschrijven
 
-Coaches kunnen zich inschrijven voor deze clinics via de website van basketbal vlaanderen.
+Coaches kunnen zich inschrijven voor deze clinics via deze website:
 
 [http://basketbal.vlaanderen/agenda/detail/coach-clinic-gerrit-driessens-lummen](http://basketbal.vlaanderen/agenda/detail/coach-clinic-gerrit-driessens-lummen)
 
-De clinic gaat door in Sporthal De Vijfspron te lummen en is gratis voor alle coaches van Basket Lummen, maar is ook opgengesteld aan coaches uit andere clubs.
+De clinics gaan door in sporthal De Vijfsprong in Lummen, coaches uit alle clubs zijn welkom. Voor coaches van Basket Lummen zijn deze clinics gratis.
