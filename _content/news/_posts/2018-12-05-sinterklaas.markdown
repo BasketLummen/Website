@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sinterklaas komt!"
-date: 2018-11-12 20:00:00
+date: 2018-11-14 20:00:00
 description: Sinterklaas bezoekt onze U6, U8 en U10-spelers.
 cover: /news/img/S0777608.jpg
 permalink: /news/2018-12-05-sinterklaas/
