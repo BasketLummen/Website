@@ -2,7 +2,7 @@
 layout: post
 title: "Kerstkampen voor de jeugd (update)"
 date: 2018-11-13 08:00:00
-description: Kerstkampen voor de jeugd
+description: update kerststage Basket Lummen
 cover: /news/img/kerstkamp-u8.jpg
 permalink: /news/2018-11-13-kerstkamp-u8/
 custom_js:
@@ -11,6 +11,7 @@ custom_js:
 
 Ook tijdens de kerstperiode zullen de jeugdspelers van Basket Lummen sportieve ervaringen kunnen opdoen. Er zijn een aantal kampen en stages tijdens de vakantie: het FROS-kamp (met coaches van Basket Lummen), het Bounce Camp (georganiseerd door Hans Vanwijn, voormalig speler van onze club) en onze eigen kerststage tijdens de tweede vakantieweek.
 
+De organisatie van deze kerststage is nu klaar, je vindt alle informatie hieronder.
 <br />
 
 ## FROS-kamp
@@ -54,13 +55,15 @@ Via deze link kan je de inschrijving regelen: [www.hansvanwijn.be](https://www.h
 Net als in de voorbije jaren organiseert Basket Lummen in de tweede week van de kerstvakantie een kerststage. De voorbereiding is volop bezig, maar het concept zal vergelijkbaar zijn met dat van de vorige stage (informatie hierover vind je via deze link: [Kerststage Januari 2018](/news/2017-12-07-kerststage/) .
 
 ### Voor wie?
-Voor jongens en meisjes uit U8 en U10. Een mooi alternatief voor het Bounce Camp, omdat deze jongens en meisjes daar nog niet kunnen meedoen. Voor de U12 wordt er een aparte stagedag voorzien op 29 december 2018. 
+Voor jongens en meisjes uit U6, U8 en U10 van Basket Lummen. Een mooi alternatief voor het Bounce Camp, omdat deze jongens en meisjes daar nog niet kunnen meedoen. Voor de U12 wordt er een aparte stagedag voorzien op 29 december 2018. 
 
 ### Praktisch
-te updaten
+
+Op 2 en 3 januari van 13h00 tot 16h00. Je kan hiervan één of twee dagen kiezen.
+
 
 ### Inschrijven
-Inschrijven kan je via het formulier hieronder:
+Inschrijven doe je via het formulier hieronder, ten laatste op 26 december 2018. Je betaalt EUR 5,- ter plaatse.
 
 ---
 
