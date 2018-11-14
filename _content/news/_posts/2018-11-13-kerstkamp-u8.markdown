@@ -49,7 +49,7 @@ Via deze link kan je de inschrijving regelen: [www.hansvanwijn.be](https://www.h
 
 <br />
 
-## Kerststage Basket Lummen
+## Kerststage Basket Lummen (update)
 
 Net als in de voorbije jaren organiseert Basket Lummen in de tweede week van de kerstvakantie een kerststage. De voorbereiding is volop bezig, maar het concept zal vergelijkbaar zijn met dat van de vorige stage (informatie hierover vind je via deze link: [Kerststage Januari 2018](/news/2017-12-07-kerststage/) .
 
