@@ -10,7 +10,7 @@ custom_js:
 ---
 De organisatie van de kerststage is nu klaar, je vindt alle informatie hieronder. 
 
-Over de andere kerstactiviteiten (FROS-kamp en het Bounce Camp Hans Van Wijn) las je eerder al in dit artikel: [Kerstkampen voor de jeugd](/news/_posts/2018-10-19-kerstkampen/)
+Over de andere kerstactiviteiten (FROS-kamp en het Bounce Camp Hans Van Wijn) las je eerder al in dit artikel: [Kerstkampen voor de jeugd](/news/2018-10-19-kerstkampen/).
 
 <br />
 
