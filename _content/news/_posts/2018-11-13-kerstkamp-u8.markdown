@@ -32,5 +32,5 @@ Inschrijven doe je via het formulier hieronder, ten laatste op 26 december 2018.
 ---
 
 
-<div data-campid="14e258ee-86e0-482e-98b7-9fc14e5d631" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een spelertje inschrijven" data-required="email"></div>
+<div data-campid="14e258ee-86e0-482e-98b7-9fc14e5d631b" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een spelertje inschrijven" data-required="email"></div>
 

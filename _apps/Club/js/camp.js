@@ -1,5 +1,7 @@
 var service = "camp-service.azurewebsites.net";
-//  var service = "localhost:22465"; // uncomment for local testing
+var scheme = "https://";
+//var scheme = "http://";
+//var service = "localhost:22465"; // uncomment for local testing
 var campholder;
 var optional;
 var required;
@@ -221,8 +223,8 @@ $(document).ready(function(){
     optional = toSplit != null ? toSplit.split(" "): [];
     toSplit = campholder.attr("data-allowed-levels");
     levels = toSplit != null ? toSplit.split(" "): [];
-    uri= "https://" + service + "/api/camps/" + orgId + "/" + campid;
-    posturi= "https://" + service + "/api/camps/" + orgId + "/" +campid + "/register";
+    uri= scheme + service + "/api/camps/" + orgId + "/" + campid;
+    posturi=  scheme + service + "/api/camps/" + orgId + "/" +campid + "/register";
 
     $.ajax({
         type: 'GET',
