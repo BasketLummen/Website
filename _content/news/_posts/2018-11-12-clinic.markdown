@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Coaches Clinic"
-date: 2018-11-12 20:00:00
+date: 2018-11-17 20:00:00
 description: Twee coach clinics voor jeugdcoaches op zaterdag 22 december. 
 cover: /news/img/clinic-22-12-2018.jpg
 permalink: /news/2018-11-12-clinic/
@@ -15,7 +15,9 @@ In een clinic komt een ervaren coach uitleggen hoe hij of zij een bepaald aspect
 
 Een mooi voorbeeld is de clinic van onze coach Philip Wolk (Dames A) op de FIBA U14 Get Together. Hij legde er uit hoe hij de dribble hand-off in een motion offense aanleert.
 
+<br />
 <iframe width="666" height="375" src="https://www.youtube.com/embed/rwbNeHWRzrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
 
 De term ‘clinic’ is dus een beetje misleidend. Het is geen ‘genezing’ van een probleem maar is eerder vergelijkbaar met een traditionele bedrijfspresentatie.
 
