@@ -43,7 +43,24 @@ function renderForm(){
     }
 
     if(fromDatePassed && !toDatePassed)
-    {       
+    {  
+        table.append($('<tr>')
+        .append($('<td>').append($('<label>').text('Naam').attr('for', 'registration-name')))
+        .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-name', name: 'registration-name', placeholder: 'Vul de naam van de speler in...' }))));
+
+        if(camp.pricingModel.model == "PerDay")
+        {
+            camp.days.forEach(function(cd, i){
+            
+                var start = new Date(cd.start);
+                var end = new Date(cd.end);
+    
+                table.append($('<tr>')
+                    .append($('<td>').append($('<label>').text(start.toLocaleDateString() + " (" + camp.pricingModel.unit + camp.pricingModel.value + ")").attr('for', 'campday-' + i)))
+                    .append($('<td>').append($('<input>').attr({ id: 'campday-' + i, name: 'campday-' + i, type: 'checkbox' }).addClass("campday"))));
+            });
+        }       
+
         table.append($('<tr>')
                 .append($('<td>').append($('<label>').text("Contact informatie")))
                 .append($('<td>')));
@@ -80,8 +97,35 @@ function renderForm(){
                 .append($('<td>').append($('<textarea>').attr({ id: 'comment', name: 'comment', rows: '4', placeholder: '' }))));
         }
 
+        
+        if(camp.pricingModel.model == "Entry" || camp.pricingModel.model == "PerDay"){
+            var price = camp.pricingModel.model == "Entry" ? camp.pricingModel.value : 0;
+            
+            table.append($('<tr class="total-row">')
+                .append($('<td>').append($('<label>').text('Te betalen')))
+                .append($('<td>').append($('<label>').text('€ ' + price).attr('id', 'price'))));
+        }
+
+        var computeTotal = function(){
+            var sum = 0;
+            camp.days.forEach(function(cd, i){
+                if($("#campday-" + i).is(':checked')){
+                    sum += camp.pricingModel.value;
+                }
+            });
+            return sum;
+        };
+
+        $(".campday").change(function(){
+            var sum = computeTotal();
+            campholder.find('#price').text("€ " + sum);
+        });
+      
         // set up form validation rules
         var rules = {
+            "registration-name":{
+                required: true
+            },
             name: {
                 required: true
             },
@@ -107,7 +151,9 @@ function renderForm(){
 
         // set up form validation messages
         var messages = {
-            name: {
+            "registration-name":{
+                required: "Naam is verplicht"
+            },name: {
                 required: "Naam is verplicht"
             },
             firstname: {
@@ -136,6 +182,8 @@ function renderForm(){
             .append($('<td>').append($('<label>').attr('for', 'submit')))
             .append($('<td>').append($('<button>').text(buttontext).attr({ type: 'submit', id: 'submit' }))));
 
+            
+
         // set up form validation and submit logic
         var form = campholder.find('.responsive-form');
         form.validate({
@@ -145,7 +193,9 @@ function renderForm(){
             submitHandler: function (f) {
                 
                 // gather the data
+                var campDays = [];
 
+                var registrationName = campholder.find('#registration-name').val();
                 var lastname = campholder.find('#name').val();
                 var firstname = campholder.find('#firstname').val();
                 var optionalInput = campholder.find('#email');
@@ -157,19 +207,26 @@ function renderForm(){
                 var optionalInput = campholder.find('#comment');
                 var comment = optionalInput != null ? optionalInput.val() : null;
                 //var sendConfirmation = campholder.find('#sendConfirmation').is(':checked');          
+
+                camp.days.forEach(function(cd, i){
+                    if($("#campday-" + i).is(':checked')){
+                        campDays.push(cd);
+                    }
+                });
                           
                 var registration = {
                     campid: campid,
                     registration: {
                         id: guid(),
-                        name: name,
+                        name: registrationName,
                         comment: comment,
                         contact : {
                             name: firstname + " " +  lastname,
                             email: email,
                             address: address,
                             telephone: telephone
-                        }
+                        },
+                        days: campDays
                     }
                 };
 
