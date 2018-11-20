@@ -48,16 +48,21 @@ function renderForm(){
         .append($('<td>').append($('<label>').text('Naam').attr('for', 'registration-name')))
         .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-name', name: 'registration-name', placeholder: 'Vul de naam van de speler in...' }))));
 
-        if(camp.pricingModel.model == "PerDay")
+        table.append($('<tr>')
+        .append($('<td>').append($('<label>').text('Niveau').attr('for', 'registration-level')))
+        .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-level', name: 'registration-level', placeholder: 'Vul het niveau van de speler in...' }))));
+
+
+        if(camp.pricingModel.model == "PerPart")
         {
-            camp.days.forEach(function(cd, i){
+            camp.parts.forEach(function(cd, i){
             
                 var start = new Date(cd.start);
                 var end = new Date(cd.end);
     
                 table.append($('<tr>')
-                    .append($('<td>').append($('<label>').text(start.toLocaleDateString() + " (" + camp.pricingModel.unit + camp.pricingModel.value + ")").attr('for', 'campday-' + i)))
-                    .append($('<td>').append($('<input>').attr({ id: 'campday-' + i, name: 'campday-' + i, type: 'checkbox' }).addClass("campday"))));
+                    .append($('<td>').append($('<label>').text(start.toLocaleDateString() + " (" + camp.pricingModel.unit + camp.pricingModel.value + ")").attr('for', 'camppart-' + i)))
+                    .append($('<td>').append($('<input>').attr({ id: 'camppart-' + i, name: 'camppart-' + i, type: 'checkbox' }).addClass("camppart"))));
             });
         }       
 
@@ -98,7 +103,7 @@ function renderForm(){
         }
 
         
-        if(camp.pricingModel.model == "Entry" || camp.pricingModel.model == "PerDay"){
+        if(camp.pricingModel.model == "Entry" || camp.pricingModel.model == "PerPart"){
             var price = camp.pricingModel.model == "Entry" ? camp.pricingModel.value : 0;
             
             table.append($('<tr class="total-row">')
@@ -108,15 +113,15 @@ function renderForm(){
 
         var computeTotal = function(){
             var sum = 0;
-            camp.days.forEach(function(cd, i){
-                if($("#campday-" + i).is(':checked')){
+            camp.parts.forEach(function(cd, i){
+                if($("#camppart-" + i).is(':checked')){
                     sum += camp.pricingModel.value;
                 }
             });
             return sum;
         };
 
-        $(".campday").change(function(){
+        $(".camppart").change(function(){
             var sum = computeTotal();
             campholder.find('#price').text("€ " + sum);
         });
@@ -124,6 +129,9 @@ function renderForm(){
         // set up form validation rules
         var rules = {
             "registration-name":{
+                required: true
+            }, 
+            "registration-level":{
                 required: true
             },
             name: {
@@ -153,7 +161,11 @@ function renderForm(){
         var messages = {
             "registration-name":{
                 required: "Naam is verplicht"
-            },name: {
+            },
+            "registration-level":{
+                required: "Niveau is verplicht"
+            },
+            name: {
                 required: "Naam is verplicht"
             },
             firstname: {
@@ -193,9 +205,10 @@ function renderForm(){
             submitHandler: function (f) {
                 
                 // gather the data
-                var campDays = [];
+                var campParts = [];
 
                 var registrationName = campholder.find('#registration-name').val();
+                var registrationLevel = campholder.find('#registration-level').val();
                 var lastname = campholder.find('#name').val();
                 var firstname = campholder.find('#firstname').val();
                 var optionalInput = campholder.find('#email');
@@ -208,9 +221,9 @@ function renderForm(){
                 var comment = optionalInput != null ? optionalInput.val() : null;
                 //var sendConfirmation = campholder.find('#sendConfirmation').is(':checked');          
 
-                camp.days.forEach(function(cd, i){
-                    if($("#campday-" + i).is(':checked')){
-                        campDays.push(cd);
+                camp.parts.forEach(function(cd, i){
+                    if($("#camppart-" + i).is(':checked')){
+                        campParts.push(cd);
                     }
                 });
                           
@@ -219,6 +232,7 @@ function renderForm(){
                     registration: {
                         id: guid(),
                         name: registrationName,
+                        level:registrationLevel,
                         comment: comment,
                         contact : {
                             name: firstname + " " +  lastname,
@@ -226,7 +240,7 @@ function renderForm(){
                             address: address,
                             telephone: telephone
                         },
-                        days: campDays
+                        parts: campParts
                     }
                 };
 
