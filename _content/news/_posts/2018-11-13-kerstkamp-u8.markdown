@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Kerststage Basket Lummen"
+title: "Kerststage U6 - U10 Basket Lummen"
 date: 2018-11-13 08:00:00
-description: voor onze U6, U8 en U10-spelers
+description: Kerststage voor onze U6, U8 en U10-spelers
 cover: /news/img/kerstkamp-u8.jpg
 permalink: /news/2018-11-13-kerstkamp-u8/
 custom_js:

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Kerststage U12 Basket Lummen"
+date: 2018-11-13 08:00:00
+description: Kerststage voor onze U12-spelers
+cover: /news/img/kerstkamp-u8.jpg
+permalink: /news/2018-11-13-kerstkamp-u12/
+custom_js:
+- camp
+---
+
+TODO
+
+<div data-campid="1099acb8-38d2-4467-8ea3-eb5aed69442d" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email"></div>
+
