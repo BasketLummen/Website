@@ -14,6 +14,7 @@ var posturi;
 var camp;
 var levels;
 var items = [];
+var eligiblePlayers = [];
 
 function renderForm(){
     var isIE = detectIE();
@@ -44,13 +45,74 @@ function renderForm(){
 
     if(fromDatePassed && !toDatePassed)
     {  
-        table.append($('<tr>')
-        .append($('<td>').append($('<label>').text('Naam').attr('for', 'registration-name')))
-        .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-name', name: 'registration-name', placeholder: 'Vul de naam van de speler in...' }))));
+       
+        if(camp.registrationLimitedTo != null){
 
-        table.append($('<tr>')
-        .append($('<td>').append($('<label>').text('Niveau').attr('for', 'registration-level')))
-        .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-level', name: 'registration-level', placeholder: 'Vul het niveau van de speler in...' }))));
+            table.append($('<tr>').attr("id", "search-parent")
+            .append($('<td>').append($('<label>').text('Naam').attr('for', 'registration-search')))
+            .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-search', name: 'registration-search', placeholder: 'Vul de naam van de speler in...' }))
+            .append($('<input>').attr({ type: 'hidden', id: 'registration-name', name: 'registration-name' }))
+            .append($('<input>').attr({ type: 'hidden', id: 'registration-level', name: 'registration-level' }))));
+
+            var search = table.find('#registration-search');
+
+            var options = {
+                shouldSort: true,
+                threshold: 0.3,
+                location: 0,
+                distance: 100,
+                maxPatternLength: 32,
+                minMatchCharLength: 3,
+                keys: [
+                    "name"
+                    ]
+                };
+            var fuse = new Fuse(eligiblePlayers, options);
+            search.autocomplete({
+                delay: 0,
+                appendTo: "#search-parent",
+                position: { my: 'left top', at: 'left bottom' },
+                source: function(req, callback) {
+                 
+                  var options = [];
+                  $.each(fuse.search(req.term), function(index, obj) {
+                    options.push({value: obj.id, label: obj.name, level: obj.level});
+                  });
+                  
+                  callback(options);
+                },
+                select: function(event, ui) {
+                    event.preventDefault();
+                    $("#registration-search").val(ui.item.label);
+                    $("#registration-name").val(ui.item.label);
+                    $("#registration-level").val(ui.item.level);
+                    $(".showaftersearch").show();
+                },
+                focus: function(event, ui) {
+                    event.preventDefault();
+                    $("#registration-search").val(ui.item.label);
+                    $("#registration-name").val(ui.item.label);
+                    $("#registration-level").val(ui.item.level);
+                },
+                response: function(event,ui) {
+                    if (ui.content.length == 1)
+                    {
+                      ui.item = ui.content[0];
+                      $(this).data('ui-autocomplete')._trigger('select', 'autocompleteselect', ui);
+                      $(this).autocomplete('close');
+                    }
+              }
+            });
+        }
+        else{
+            table.append($('<tr>')
+                .append($('<td>').append($('<label>').text('Naam').attr('for', 'registration-name')))
+                .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-name', name: 'registration-name', placeholder: 'Vul de naam van de speler in...' }))));
+
+            table.append($('<tr>')
+                .append($('<td>').append($('<label>').text('Niveau').attr('for', 'registration-level')))
+                .append($('<td>').append($('<input>').attr({ type: 'text', id: 'registration-level', name: 'registration-level', placeholder: 'Vul het niveau van de speler in...' }))));
+        }
 
 
         if(camp.pricingModel.model == "PerPart")
@@ -190,10 +252,14 @@ function renderForm(){
         //     .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
         //     .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
+        var btn = $('<button>');
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
-            .append($('<td>').append($('<button>').text(buttontext).attr({ type: 'submit', id: 'submit' }))));
+            .append($('<td>').append(btn.text(buttontext).attr({ type: 'submit', id: 'submit' }))));
 
+        if(camp.registrationLimitedTo != null){
+            btn.addClass("showaftersearch");
+        }
             
 
         // set up form validation and submit logic
@@ -260,6 +326,7 @@ function renderForm(){
                 };
 
                 // send it to the service
+               
                 $.ajax({
                     type: 'POST',
                     url: posturi,
@@ -280,6 +347,28 @@ function renderForm(){
         });
     }
         
+}
+
+var loadEligiblePlayers = function(callback){
+    var tasks = [];
+    camp.registrationLimitedTo.forEach(function(limit){
+        var deferred = $.Deferred();
+        tasks.push(deferred.promise());
+        clubmgmt.loadTeam(limit.groupId, function(t){
+
+            t.participations.forEach(function(p){
+                if(p.roleId == limit.roleId){
+                    eligiblePlayers.push({
+                        name: p.contactName,
+                        level: t.groupName 
+                    })
+                };                
+            });
+            
+            deferred.resolve();
+        });
+    });
+    $.when.apply($, tasks).then(callback);
 }
 
 $(document).ready(function(){   
@@ -305,8 +394,15 @@ $(document).ready(function(){
         success: function(c){    
             
             camp = c;
-             // set up form
-            renderForm();
+
+            if(camp.registrationLimitedTo != null){
+                loadEligiblePlayers(renderForm);
+            }
+            else{
+                // set up form
+                renderForm();
+            }
+           
 
         }
       });

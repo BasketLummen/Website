@@ -6,6 +6,7 @@ description: Kerststage voor onze U6, U8 en U10-spelers
 cover: /news/img/kerstkamp-u8.jpg
 permalink: /news/2018-11-13-kerstkamp-u8/
 custom_js:
+- fuse.min
 - camp
 ---
 De organisatie van de kerststage is nu klaar, je vindt alle informatie hieronder. 

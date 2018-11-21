@@ -6,6 +6,7 @@ description: Kerststage voor onze U12-spelers
 cover: /news/img/kerstkamp-u8.jpg
 permalink: /news/2018-11-13-kerstkamp-u12/
 custom_js:
+- fuse.min
 - camp
 ---
 
