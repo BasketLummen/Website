@@ -26,5 +26,5 @@ Op 29 december van 14h00 tot 18h00 in sporthal De Vijfsprong, Lummen.
 
 Inschrijven is vereist en doe je via het formulier hieronder, ten laatste op 26 december 2018. Je betaalt EUR 5,- ter plaatse.
 
-<div data-campid="1099acb8-38d2-4467-8ea3-eb5aed69442d" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email"></div>
+<div data-campid="1099acb8-38d2-4467-8ea3-eb5aed69442d" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
 

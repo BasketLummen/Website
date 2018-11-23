@@ -26,4 +26,4 @@ Op 2 en 3 januari van 13h00 tot 16h00. Je kan dus voor deze twee dagen apart ins
 
 Inschrijven doe je via het formulier hieronder, ten laatste op 26 december 2018. Je betaalt EUR 5,- per dag ter plaatse.
 
-<div data-campid="14e258ee-86e0-482e-98b7-9fc14e5d631b" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een spelertje inschrijven" data-required="email"></div>
+<div data-campid="14e258ee-86e0-482e-98b7-9fc14e5d631b" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een spelertje inschrijven" data-required="email" data-optional="telephone"></div>
