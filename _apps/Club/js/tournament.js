@@ -183,9 +183,14 @@ function renderForm(){
         //     .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
         //     .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
+        var btn = $('<button>')
+                    .attr({ type: 'submit', id: 'submit' })
+                    .append($('<img>').addClass("spinner").attr("src", "/img/loader-button.gif"))
+                    .append($("<span>").text(buttontext));
+
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
-            .append($('<td>').append($('<button>').text(buttontext).attr({ type: 'submit', id: 'submit' }))));
+            .append($('<td>').append(btn)));
 
        $(".mode-" + mode).show();
 
@@ -197,6 +202,8 @@ function renderForm(){
             messages: messages,
             submitHandler: function (f) {
                 
+                $("#submit .spinner").show();
+                $("#submit").attr('disabled', true);
                 // gather the data
 
                 var name = tournamentholder.find('#' + mode).val(); //only available for team & club
@@ -289,6 +296,8 @@ function renderForm(){
                     data : JSON.stringify(registration),                        
                     success: function(data){ 
                       report("Registratie verstuurd", data.message);
+                      $("#submit .spinner").hide();
+                      $("#submit").attr('disabled', false);
                     },
                     error: function(xhr, ajaxOptions, thrownError){ 
                         report("Er is een fout opgetreden bij het registreren. " + xhr.status);

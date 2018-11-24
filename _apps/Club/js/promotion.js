@@ -176,9 +176,14 @@ function renderForm(){
             .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
             .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
+        var btn = $('<button>')
+            .attr({ type: 'submit', id: 'submit' })
+            .append($('<img>').addClass("spinner").attr("src", "/img/loader-button.gif"))
+            .append($("<span>").text(buttontext));
+
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
-            .append($('<td>').append($('<button>').text(buttontext).attr({ type: 'submit', id: 'submit' }))));
+            .append($('<td>').append(btn)));
 
         // compute price on promotion item changes
         var computeTotal = function(){
@@ -244,6 +249,9 @@ function renderForm(){
             messages: messages,
             submitHandler: function (f) {
                 
+                $("#submit .spinner").show();
+                $("#submit").attr('disabled', true);
+
                 // gather the data
                 var sum = computeTotal();
 
@@ -366,6 +374,8 @@ function renderForm(){
                     data : JSON.stringify(subscription),                        
                     success: function(data){ 
                       report(promotion.successMessage.format(sum), data.message);
+                      $("#submit .spinner").hide();
+                      $("#submit").attr('disabled', false);
                     },
                     error: function(xhr, ajaxOptions, thrownError){ 
                         report("Er is een fout opgetreden bij het registreren. " + xhr.status);
