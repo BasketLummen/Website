@@ -252,10 +252,15 @@ function renderForm(){
         //     .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
         //     .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
-        var btn = $('<button>');
+        //<img class="spinner" src="/img/loading-primary.gif" /><span>Sign In</span>
+        var btn = $('<button>')
+                    .attr({ type: 'submit', id: 'submit' })
+                    .append($('<img>').addClass("spinner").attr("src", "/img/loader-button.gif"))
+                    .append($("<span>").text(buttontext));
+
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
-            .append($('<td>').append(btn.text(buttontext).attr({ type: 'submit', id: 'submit' }))));
+            .append($('<td>').append(btn)));
 
         if(camp.registrationLimitedTo != null){
             btn.addClass("showaftersearch");
@@ -270,6 +275,9 @@ function renderForm(){
             messages: messages,
             submitHandler: function (f) {
                 
+                $("#submit .spinner").show();
+                $("#submit").attr('disabled', true);
+        
                 // gather the data
                 var campParts = [];
 
@@ -335,6 +343,8 @@ function renderForm(){
                     data : JSON.stringify(registration),                        
                     success: function(data){ 
                       report("Registratie verstuurd", data.message);
+                      $("#submit .spinner").hide();
+                      $("#submit").attr('disabled', false);
                     },
                     error: function(xhr, ajaxOptions, thrownError){ 
                         report("Er is een fout opgetreden bij het registreren. " + xhr.status);

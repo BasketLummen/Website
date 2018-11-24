@@ -724,3 +724,11 @@ ul.ui-autocomplete li{
 .showaftersearch{
 	display: none;
 }
+
+button .spinner{
+    width: 20px;
+	height: 20px;
+	margin-left: .5vw;
+	margin-right: .5vw;
+    display: none;
+}
