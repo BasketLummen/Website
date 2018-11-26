@@ -5,14 +5,21 @@ layout: page
 <div id="album" class="album">
 	
 
-		{{#split pager.Images 4}}
+		{{#split pager.Items 4}}
 			<div class="column">
 				{{#each this}}
 				<div class="album-item">
+					{{#is-image this}}
 					<a href="{{this.Page}}">
 						<img src="{{this.Path}}" />
 					</a>
-				</div>
+					{{/is-image}}
+					{{#is-video this}}
+					<video controls>
+						<source src="{{this.Path}}" />
+					</video>
+					{{/is-video}}
+				</div>				
 				{{/each}}
 			</div>		
 		{{/split}}

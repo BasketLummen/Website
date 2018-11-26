@@ -818,7 +818,7 @@ only screen and (max-width: 760px),
 	max-width:  25%;
   }
   
-  .albums .column img {
+  .albums .column img, .albums .column video {
 	vertical-align: middle;
 	width: calc(100vw - (100vw - 100%));
   }
@@ -845,7 +845,7 @@ only screen and (max-width: 760px),
 	max-width: 25%;
   }
   
-  .album .column img {
+  .album .column img, .album .column video {
 	vertical-align: middle;
 	width: calc(100vw - (100vw - 100%));
   }
@@ -878,7 +878,7 @@ only screen and (max-width: 760px),
 	width: 100%;
 }
 
-.album-image img{
+.album-image img, .album-image video{
 	width: 100%;
 }
 

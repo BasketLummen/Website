@@ -700,6 +700,11 @@ only screen and (max-width: 760px),
 	margin: 0 auto;
 }
 
+.album-image video{
+	display:block;
+	margin: 0 auto;
+}
+
 .divider{
 	border-left: 1px solid #333;
 }
