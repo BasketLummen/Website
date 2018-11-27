@@ -1,15 +1,3 @@
-if (!String.prototype.format) {
-    String.prototype.format = function() {
-      var args = arguments;
-      return this.replace(/{(\d+)}/g, function(match, number) { 
-        return typeof args[number] != 'undefined'
-          ? args[number]
-          : match
-        ;
-      });
-    };
-  }
-
 var service = "tournament-service.azurewebsites.net";
 //  var service = "localhost:22465"; // uncomment for local testing
 var tournamentholder;
@@ -195,9 +183,14 @@ function renderForm(){
         //     .append($('<td>').append($('<label>').text('Stuur me een bevestiging').attr('for', 'sendConfirmation')))
         //     .append($('<td>').append($('<input>').attr({ type: 'checkbox', id: 'sendConfirmation', name: 'sendConfirmation', checked: 'checked' })).append(" (vereist email)")));        
 
+        var btn = $('<button>')
+                    .attr({ type: 'submit', id: 'submit' })
+                    .append($('<img>').addClass("spinner").attr("src", "/img/loader-button.gif"))
+                    .append($("<span>").text(buttontext));
+
         table.append($('<tr>')
             .append($('<td>').append($('<label>').attr('for', 'submit')))
-            .append($('<td>').append($('<button>').text(buttontext).attr({ type: 'submit', id: 'submit' }))));
+            .append($('<td>').append(btn)));
 
        $(".mode-" + mode).show();
 
@@ -209,6 +202,8 @@ function renderForm(){
             messages: messages,
             submitHandler: function (f) {
                 
+                $("#submit .spinner").show();
+                $("#submit").attr('disabled', true);
                 // gather the data
 
                 var name = tournamentholder.find('#' + mode).val(); //only available for team & club
@@ -301,6 +296,8 @@ function renderForm(){
                     data : JSON.stringify(registration),                        
                     success: function(data){ 
                       report("Registratie verstuurd", data.message);
+                      $("#submit .spinner").hide();
+                      $("#submit").attr('disabled', false);
                     },
                     error: function(xhr, ajaxOptions, thrownError){ 
                         report("Er is een fout opgetreden bij het registreren. " + xhr.status);
@@ -314,32 +311,6 @@ function renderForm(){
     }
         
 }
-
-function detectIE() {
-    var ua = window.navigator.userAgent;
-   
-    var msie = ua.indexOf('MSIE ');
-    if (msie > 0) {
-      // IE 10 or older => return version number
-      return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-    }
-  
-    var trident = ua.indexOf('Trident/');
-    if (trident > 0) {
-      // IE 11 => return version number
-      var rv = ua.indexOf('rv:');
-      return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-    }
-  
-    var edge = ua.indexOf('Edge/');
-    if (edge > 0) {
-      // Edge (IE 12+) => return version number
-      return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-    }
-  
-    // other browser
-    return false;
-  }
 
 $(document).ready(function(){
    

@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Kerststage U12 Basket Lummen"
+date: 2018-11-13 08:00:00
+description: Kerststage voor onze U12-spelers
+cover: /news/img/kerstkamp-u12.JPG
+permalink: /news/2018-11-13-kerstkamp-u12/
+custom_js:
+- fuse.min
+- camp
+---
+
+Ook onze drie U12-ploegen komen aan bod tijdens de kerstvakantie: op zaterdag 29 december kunnen de spelers meedoen aan de stagedag van Basket Lummen. Deze stagedag is gericht op fundamentals: vaardigheden die je als speler altijd nodig zal hebben om verschillende situaties in een wedstrijd aan te kunnen.
+
+Over de andere kerstactiviteiten (FROS-kamp en het Bounce Camp Hans Van Wijn) las je eerder al in dit artikel: [Kerstkampen voor de jeugd](/news/2018-10-19-kerstkampen/). Voor onze jongste spelers wordt er ook [een stage georganiseerd](/news/2018-11-13-kerstkamp-u8/) gedurende de 2e week van de kerstvakantie.
+
+### Voor wie?
+
+Voor jongens en meisjes uit de U12 ploegen van Basket Lummen.
+
+### Praktisch
+
+Op 29 december van 14h00 tot 18h00 in sporthal De Vijfsprong, Lummen.
+
+### Inschrijven
+
+Inschrijven is vereist en doe je via het formulier hieronder, ten laatste op 26 december 2018. Je betaalt EUR 5,- ter plaatse.
+
+<div data-campid="1099acb8-38d2-4467-8ea3-eb5aed69442d" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
+
