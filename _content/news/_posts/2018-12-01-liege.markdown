@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dames A vs Liège Panthers"
-date: 2018-11-26 20:00:00
+date: 2018-11-27 20:00:00
 description: Volg hier live de wedstrijd van onze Dames A tegen Liège Panthers, zaterdag 1 December om 20h30!
 cover: /news/img/jaleesa.jpg
 permalink: /news/2018-12-01-liege/
