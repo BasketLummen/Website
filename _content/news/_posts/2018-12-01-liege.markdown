@@ -3,17 +3,13 @@ layout: post
 title: "Dames A vs Liège Panthers"
 date: 2018-11-27 20:00:00
 description: Volg hier live de wedstrijd van onze Dames A tegen Liège Panthers, zaterdag 1 December om 20h30!
-cover: /news/img/jaleesa.jpg
+cover: /news/img/2018-09-22-ploegfoto-damesA.jpg
 permalink: /news/2018-12-01-liege/
 ---
 
 Op zaterdag 1 December nemen onze Dames A het voor de eerste keer op tegen Liège Panthers. Dit wordt een speciale wedstrijd voor ons, want onze eigenste Jaleesa Maes speelt bij de Panthers. 
 
-## Welkom thuis Jaleesa
-
 Tegenwoordig is Jaleesa een vaste waarde in de basis bij Liège Panthers. Haar jeugdopleiding heeft deze Lummense echter bij ons genoten. Ze nam na 10 jaar afscheid van onze club en zette haar professionele carrière verder bij Sint-Katelijne-Waver, Boom, DBC Houthalen, Liège Panthers en ze maakte zelfs deel uit van de Belgian Cats.
-
-![Jaleesa Maes](/news/img/jaleesa.jpg)
 
 ## Livestream
 
