@@ -3,6 +3,7 @@ layout: post
 title:  "Eindejaarsactie 2018"
 date:   2018-12-02 20:00:00
 description: Pralines, wijn of ijs ten voordele van Basket Lummen.
+cover: /news/img/leonidas2.jpg
 permalink: /news/2018-12-02-eindejaarsactie/
 ---
 
