@@ -7,7 +7,7 @@ cover: /news/img/leonidas2.jpg
 permalink: /news/2018-12-02-eindejaarsactie/
 ---
 
-Zoek je een leuk eindejaarscadeautje voor je familie, je vrienden of jezelf? Dan vind je [hier](/news/downloads/eindejaarsactie_2018_formulier.pdf) zeker iets naar jouw smaak! 
+Zoek je een leuk eindejaarscadeautje voor je familie, je vrienden of jezelf? Dan vind je [hier](/news/downloads/eindejaarsactie2018b.pdf) zeker iets naar jouw smaak! 
 
 Voor deze aanbieding slaan deze partners de handen in elkaar, ten voordele van Basket Lummen:
 - De Kaarskesprocessie Leonidas (Lummen)
@@ -16,7 +16,7 @@ Voor deze aanbieding slaan deze partners de handen in elkaar, ten voordele van B
 
 ### Bestellen doe je zo:
 
-Via deze link vind je het bestelformulier met alle gegevens: [bestelformulier](/news/downloads/eindejaarsactie_2018_formulier.pdf). 
+Via deze link vind je het bestelformulier met alle gegevens: [bestelformulier](/news/downloads/eindejaarsactie2018b.pdf). 
 Vul het in en overhandig het ten laatste op vrijdag 14 december samen met het juiste bedrag aan je coach of aan een bestuurslid.
 
 ### Afhalen
