@@ -9,7 +9,7 @@ permalink: /news/2018-12-02-eindejaarsactie/
 
 Zoek je een leuk eindejaarscadeautje voor je familie, je vrienden of jezelf? Dan vind je [hier](/news/downloads/eindejaarsactie2018b.pdf) zeker iets naar jouw smaak! 
 
-Voor deze aanbieding slaan deze partners de handen in elkaar, ten voordele van Basket Lummen:
+Voor deze aanbieding slaan volgende partners de handen in elkaar, ten voordele van Basket Lummen:
 - De Kaarskesprocessie Leonidas (Lummen)
 - Prik & Tik Drinkcenter Borgers (Lummen)
 - Ijsroosje (Averbode)
