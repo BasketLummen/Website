@@ -7,7 +7,7 @@ cover: /news/img/S0777608.JPG
 permalink: /news/2018-12-05-sinterklaas/
 ---
 
-test Wat zijn we blij met het goede nieuws dat Sinterklaas onze jeugdspelers komt bezoeken. Zijn Communicatie-Piet stuurde ons het bericht dat hij naar de training van onze jongste spelers zal komen op woensdag 5 december. Hij verheugt zich er nu al op.
+Wat zijn we blij met het goede nieuws dat Sinterklaas onze jeugdspelers komt bezoeken. Zijn Communicatie-Piet stuurde ons het bericht dat hij naar de training van onze jongste spelers zal komen op woensdag 5 december. Hij verheugt zich er nu al op.
 
 Ben je een U6, U8 of U10, zorg dat je er bij bent!
 
