@@ -2,22 +2,15 @@
 layout: post
 title:  "X-Masbikers MTB-tour"
 date:   2018-12-04 20:00:00
-description: Jaarlijkse mountainbike tocht in Lummen op 26 december.
+description: Jaarlijkse mountainbiketocht in Lummen op 26 december.
 cover: /news/img/mtb2018-700x700.jpg
 permalink: /news/2018-12-26-mtb/
 ---
-## Inleiding  	Uniek parcours door Lummen
+## Uniek parcours door Lummen
 
-Als je dacht dat basketters enkel een beetje met de bal konden spelen, dan ben je verkeerd. Ze kunnen ook ferm crossen met de mountainbike! 
+Afspraak tweede kerstdag aan de sporthal van Lummen: Ivan Luyten, Basket Lummen en de X-Masbikers organiseren de jaarlijkse X-Mastocht in de Lummense velden en bossen.
 
-Op dinsdag -- organiseert Ivan Luyten, samen met Basket Lummen en de X-Masbikers, de jaarlijkse X-Mastocht in de Lummense velden en bossen.
-
-Vanaf 8u 's ochtends kunnen alle mountainbikers terecht aan het gemeentelijk sportcomplex voor een tocht van 25 of 45 kilometer.
-
-Alle faciliteiten zijn aanwezig om er weer een perfecte tocht van te maken: douches, bevoorrading, een fietswash en vooral een topsfeer.
-
-Afspraak tweede kerstdag aan de sporthal van Lummen!
-
+De faciliteiten en de topsfeer zullen er opnieuw een perfecte tocht van maken! Je zal zien dat onze basketters ook op de mountainbike kunnen scoren...
 
 ## Faciliteiten
 
@@ -35,4 +28,4 @@ Je kan op woensdag 26 december vertrekken tussen 08h00 en 11h00 aan sporthal De 
 Je betaalt EUR 5,- voor deelname (voor leden van Fietspromo is er korting).
 
 
-[mtb](/news/img/mtb2018-700x700.jpg)
+(/news/img/mtb2018-700x700.jpg)
