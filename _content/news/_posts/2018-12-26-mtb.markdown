@@ -3,6 +3,7 @@ layout: post
 title:  "Fietspromo Lummen X-mastocht 2017"
 date:   2017-12-04 20:00:00
 description: Fietspromo Lummen X-mastocht 2017.
+cover: /news/img/mtb2018-700x700.jpg
 permalink: /news/2017-12-04-mountainbike/
 ---
 even de tekst van 2017 als leidraad:
