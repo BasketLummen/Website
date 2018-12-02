@@ -1,5 +1,3 @@
-even de tekst van 2017 als leidraad:
-
 ---
 layout: post
 title:  "Fietspromo Lummen X-mastocht 2017"
@@ -7,6 +5,7 @@ date:   2017-12-04 20:00:00
 description: Fietspromo Lummen X-mastocht 2017.
 permalink: /news/2017-12-04-mountainbike/
 ---
+even de tekst van 2017 als leidraad:
 
 Als je dacht dat basketters enkel een beetje met de bal konden spelen, dan ben je verkeerd. Ze kunnen ook ferm crossen met de mountainbike! 
 
