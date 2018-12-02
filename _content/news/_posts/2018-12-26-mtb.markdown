@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Fietspromo Lummen X-mastocht 2017"
-date:   2017-12-04 20:00:00
-description: Fietspromo Lummen X-mastocht 2017.
+title:  "X-Masbikers MTB-tour"
+date:   2018-12-04 20:00:00
+description: Jaarlijkse mountainbike tocht in Lummen.
 cover: /news/img/mtb2018-700x700.jpg
-permalink: /news/2017-12-04-mountainbike/
+permalink: /news/2018-12-26-mtb/
 ---
-even de tekst van 2017 als leidraad:
+## Inleiding  	Uniek parcours door Lummen
 
 Als je dacht dat basketters enkel een beetje met de bal konden spelen, dan ben je verkeerd. Ze kunnen ook ferm crossen met de mountainbike! 
 
@@ -22,9 +22,7 @@ informatie 2018:
 Woensdag 26 december
 Sportcomplex De Vijfsprong Lummen
 
-X-Masbikers MTB-tour
-
-Vertrek tussen 08u00 en 11u00
+## Faciliteiten
 
 •	Bewaakte fietsenstalling
 •	Fietswash onderweg en bij aankomst
@@ -32,6 +30,12 @@ Vertrek tussen 08u00 en 11u00
 •	Bevoorrading voor alle afstanden en deelnemers
 •	Boterhammen met spek bij aankomst
 •	Douches en kleedkamers aanwezig
-•	Keuze tussen afstanden 25-35-45 kilometer
-•	Uniek parcours door Lummen
-•	Deelname 5 EUR - Korting voor leden van Fietspromo
+
+## Praktisch
+
+Je kan op woensdag 26 december vertrekken tussen 08h00 en 11h00 aan sporthal De Vijfsprong in Lummen. Er zijn tochten van 25, 35 of 45 kilometer.
+
+Je betaalt EUR 5,- voor deelname (voor leden van Fietspromo is er korting).
+
+
+![mtb](/news/img/mtb2018-700x700.jpg)
