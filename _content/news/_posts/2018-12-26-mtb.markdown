@@ -3,7 +3,7 @@ layout: post
 title:  "X-Masbikers MTB-tour"
 date:   2018-12-04 01:00:00
 description: Jaarlijkse mountainbiketocht in Lummen op 26 december.
-cover: /news/img/mtb2018-700x700.jpg
+cover: /news/img/mtb2018-500x500.jpg
 permalink: /news/2018-12-26-mtb/
 ---
 ## Unieke tocht op tweede kerstdag
