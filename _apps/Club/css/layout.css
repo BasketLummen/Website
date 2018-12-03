@@ -798,7 +798,7 @@ only screen and (max-width: 760px),
 }
 
 /* albums */
-.albums, .album, .album-image {
+.albums, .album-image, .album-header {
 	margin-top: -3vw;
   }
 .album-image {

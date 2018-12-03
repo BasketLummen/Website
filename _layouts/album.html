@@ -1,9 +1,12 @@
 ---
 layout: page
 ---
-
+<div id="album-header" class="black-bar album-header">
+	<h2 id="album-title">{{page.title}}</h2>
+	<div><span>{{local_date page.date "nl-BE" "dd MMMM yyyy"}}, dank aan {{page.author}} voor het beeldmateriaal.</span></div>
+</div>	
+		
 <div id="album" class="album">
-	
 
 		{{#split pager.Items 4}}
 			<div class="column">

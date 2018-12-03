@@ -677,6 +677,9 @@ only screen and (max-width: 760px),
 }
 
 /* albums grid */
+.album-header span{
+	color: #fff;
+}
 .album-item{
 	/* -webkit-filter: grayscale(100%);
 	filter: grayscale(100%); */
@@ -703,6 +706,10 @@ only screen and (max-width: 760px),
 .album-image video{
 	display:block;
 	margin: 0 auto;
+}
+
+.album-item-overlay{
+	background-color:rgba(51,51,51,0.6);
 }
 
 .divider{
