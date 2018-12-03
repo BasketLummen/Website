@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "X-Masbikers MTB-tour"
-date:   2018-12-04 20:00:00
+date:   2018-12-04 01:00:00
 description: Jaarlijkse mountainbiketocht in Lummen op 26 december.
 cover: /news/img/mtb2018-700x700.jpg
 permalink: /news/2018-12-26-mtb/
@@ -23,7 +23,7 @@ Het niet altijd gemakkelijke parcours, de faciliteiten en de kerstsfeer maken er
 
 ## Praktisch
 
-Je kan op woensdag 26 december vertrekken tussen 08h00 en 11h00 aan [sporthal De Vijfsprong in Lummen](/club/sporthal/). Er zijn tochten van 25, 35 of 45 kilometer.
+Je kan op woensdag 26 december vertrekken tussen 08h00 en 11h00 aan sporthal De Vijfsprong in Lummen. Er zijn tochten van 25, 35 of 45 kilometer.
 
 Je betaalt EUR 5,- voor deelname (voor leden van Fietspromo is er korting).
 
