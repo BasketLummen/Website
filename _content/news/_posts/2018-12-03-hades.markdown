@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Heren A VS Hades"
+title: "Heren A vs. Hades"
 date: 2018-12-03 20:00:00
 description: Onze Heren A ontvangen de ongeslagen leider uit de reeks van 1e provinciale Heren Limburg.
 cover: /news/img/HSEA-2018.jpg
