@@ -133,7 +133,7 @@ var renderTeam = function(vblTeam, team){
                 });
                 $(".players .tiles").append(div); 
             }
-            else if(p.roleName == "Head coach" || p.roleName == "Assistent coach"){
+            else if(p.roleName == "Head coach" || p.roleName == "Assistent coach" || p.roleName == "Shooting Coach"){
                 var div = $.template("#staff-template",
                 {
                     name: p.contactName,
