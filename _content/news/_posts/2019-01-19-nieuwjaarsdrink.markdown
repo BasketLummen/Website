@@ -34,5 +34,5 @@ Met sportieve groeten,
 
 Bestuur Basket Lummen
 
-<div data-eventid="c743c43b-12ad-420c-b3e8-3ed34035ec21" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving plaatsen" data-required="email" data-optional="telephone"></div>
+<div data-eventid="c743c43b-12ad-420c-b3e8-3ed34035ec21" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving plaatsen" data-required="email" data-optional="telephone comment"></div>
 
