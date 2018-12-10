@@ -2,8 +2,8 @@
 layout: post
 title: "Dames A vs. Mechelen"
 date: 2018-12-11 20:00:00
-description: Op zaterdag 23 december is de thuiswedstrijd tegen Kangoeroes Pitzembourg Mechelen.
-cover: /news/img/HSEA-2018.jpg
+description: Zaterdag 23 december: thuiswedstrijd tegen Kangoeroes Pitzembourg Mechelen.
+cover: /news/img/2018-09-22-ploegfoto-damesA.jpg
 permalink: /news/2018-12-15-mechelen/
 ---
 
@@ -16,5 +16,5 @@ De wedstrijdgegevens: [Basket Lummen DSE A - Kangoeroes Pitzemburg Mechelen DSE 
 Zaterdag 15 december 20h30
 Sportcomplex De Vijfsprong, Lummen       
 
-![Dames A]()
+![Dames A](/news/img/2018-09-22-ploegfoto-damesA.jpg)
 
