@@ -2,8 +2,8 @@
 layout: post
 title: "Dames A vs. Mechelen"
 date: 2018-12-11 20:00:00
-description: Zaterdag 23 december - thuiswedstrijd tegen Kangoeroes Pitzembourg Mechelen.
-cover: /news/img/2018-09-22-ploegfoto-damesA.jpg
+description: Zaterdag 23 december - thuiswedstrijd tegen Kangoeroes Pitzemburg Mechelen.
+cover: /news/img/DSC_0002.JPG
 permalink: /news/2018-12-15-mechelen/
 ---
 
