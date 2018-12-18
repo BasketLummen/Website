@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Nieuwjaarsdrink"
-date:   2018-12-09 20:00:00
+date:   2018-12-18 20:00:00
 description: Naar jaarlijkse goede gewoonte nodigen we u en uw partner graag uit op onze jaarlijkse nieuwjaarsdrink.
 cover: /news/img/champagne.png
 permalink: /news/2019-01-19-nieuwjaarsdrink/
