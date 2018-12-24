@@ -3,7 +3,7 @@ layout: post
 title: "Lizards naar X-Mas Tournament in Kortrijk"
 date: 2018-12-11 12:00:00
 description: De Limburg Lizards doen mee aan dit internationale jeugdbasketbaltoernooi.
-cover: /news/img/LizardTraining_A.jpg
+cover: /news/img/2018-12-28-lizards-rsz-grid.jpg
 permalink: /news/2018-12-28-lizardsxmas2018/
 ---
 
@@ -19,4 +19,4 @@ Ze bereiden zich ondertussen volop voor op deze uitdaging!
 
 Details over het toernooi vind je hier: [X-Mas Tournament](http://www.x-mastournament.be)
 
-![traininglizardsb](/news/img/LizardTraining_B.jpg)
+![team Limburg Lizards](/news/img/2018-12-28-lizards-geel-rsz.jpg)
