@@ -9,5 +9,5 @@ pagination:
   enabled: true
   images: true
   imageLayout: image
-  itemsPerPage: 128
+  itemsPerPage: 256
 ---
