@@ -25,4 +25,4 @@ Bij al deze maaltijden zijn frieten inbegrepen.
 
 Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de eetdag.
 
-<div data-saleid="deb2af44-e401-48e3-9ee1-afba8413350c"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen"></div>
+<div data-saleid="deb2af44-e401-48e3-9ee1-afba8413350c"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>

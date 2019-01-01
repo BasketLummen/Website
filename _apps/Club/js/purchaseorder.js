@@ -284,6 +284,7 @@ function renderForm(){
                     for (var key in items) {
                         if (items.hasOwnProperty(key)){
                             var item = items[key];
+                            var description = itemDescriptions[key];
                             var quantity = $("#" + item.id).val();
                             if(quantity == null || quantity.length == 0) quantity = 0;
                             if(quantity > 0){
@@ -293,6 +294,7 @@ function renderForm(){
                                         id: item.id,
                                         catalogId: item.catalogId,
                                         collectionId: item.collectionId,
+                                        name: description.name,
                                         price: item.price,
                                         selectedOptions : null
                                     },
@@ -305,6 +307,7 @@ function renderForm(){
                 else{ // promotion.choiceType == "Single"
                     var selectedItemId = $('input[name=selection]:checked').attr('data-targetid');
                     var item = items[selectedItemId];
+                    var description = itemDescriptions[selectedItemId];
                     var quantity = $("#" + item.id).val();
                     if(quantity == null || quantity.length == 0) quantity = 0;
                     if(quantity > 0){
@@ -314,6 +317,7 @@ function renderForm(){
                                 id: item.id,
                                 catalogId: item.catalogId,
                                 collectionId: item.collectionId,
+                                name: description.name,
                                 price: item.price,
                                 selectedOptions : null
                             },
@@ -393,7 +397,7 @@ function renderForm(){
                     });
                 };
 
-                var posturi= "https://" + ordersService + "/api/purchaseorders/" + orgId + "/" + orderId;
+                var posturi= "https://" + ordersService + "/api/purchaseorders/" + orgId + "/" + sale.id;
                 // send it to the service
                 $.ajax({
                     type: 'POST',
