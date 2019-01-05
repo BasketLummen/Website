@@ -5,6 +5,9 @@ date:   2018-12-29 19:00:00
 description: Mosselfeest 17 februari 2019.
 permalink: /news/2019-02-17-mosselfeest/
 custom_js:
+- handlebars-v4.0.12
+- ptsans
+- jspdf.min
 - purchaseorder
 ---
 

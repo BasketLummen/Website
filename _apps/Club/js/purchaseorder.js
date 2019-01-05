@@ -27,6 +27,20 @@ var items = [];
 var itemDescriptions = [];
 var selectedOptionMemory = [];
 
+Handlebars.registerHelper('line-item-total', function(orderLine) {
+   return orderLine.Quantity * orderLine.OrderedItem.Price.Value;
+});
+
+Handlebars.registerHelper('order-total', function(order) {
+    var total = 0;
+    
+    order.OrderLines.forEach(function(orderLine){
+        total += orderLine.Quantity * orderLine.OrderedItem.Price.Value;
+    });
+  
+    return total;
+  });
+
 function renderForm(){
     var isIE = detectIE();
     
@@ -270,13 +284,14 @@ function renderForm(){
                 var telephone = optionalInput != null ? optionalInput.val() : null;
                 var optionalInput = promotionholder.find('#address');
                 var address = optionalInput != null ?  optionalInput.val() : null;
-                var sendConfirmation = promotionholder.find('#sendConfirmation').is(':checked');
+                var statusUpdatesRequested = promotionholder.find('#sendConfirmation').is(':checked');
 
+                // all properties must be in caps otherwise the confirmation template won't render on both ends
                 var buyer = {
-                    name : firstname + " " + name,
-                    email : email,
-                    telephone : telephone,
-                    address : address
+                    Name : firstname + " " + name,
+                    Email : email,
+                    Telephone : telephone,
+                    Address : address
                 }
 
                 var orderLines = [];
@@ -289,16 +304,19 @@ function renderForm(){
                             if(quantity == null || quantity.length == 0) quantity = 0;
                             if(quantity > 0){
                                 orderLines.push({
-                                    id: guid(), 
-                                    orderedItem: {
-                                        id: item.id,
-                                        catalogId: item.catalogId,
-                                        collectionId: item.collectionId,
-                                        name: description.name,
-                                        price: item.price,
-                                        selectedOptions : null
+                                    Id: guid(), 
+                                    OrderedItem: {
+                                        Id: item.id,
+                                        CatalogId: item.catalogId,
+                                        CollectionId: item.collectionId,
+                                        Name: description.name,
+                                        Price: {
+                                            Currency: item.price.currency,
+                                            Value: item.price.value
+                                        },
+                                        SelectedOptions : null
                                     },
-                                    quantity: quantity                               
+                                    Quantity: quantity                               
                                 });
                             }
                         }
@@ -312,16 +330,19 @@ function renderForm(){
                     if(quantity == null || quantity.length == 0) quantity = 0;
                     if(quantity > 0){
                         orderLines.push({
-                            id: guid(), 
-                            orderedItem: {
-                                id: item.id,
-                                catalogId: item.catalogId,
-                                collectionId: item.collectionId,
-                                name: description.name,
-                                price: item.price,
-                                selectedOptions : null
+                            Id: guid(), 
+                            OrderedItem: {
+                                Id: item.id,
+                                CatalogId: item.catalogId,
+                                CollectionId: item.collectionId,
+                                Name: description.name,
+                                Price: {
+                                    Currency: item.price.currency,
+                                    Value: item.price.value
+                                },
+                                SelectedOptions : null
                             },
-                            quantity: quantity
+                            Quantity: quantity 
                         });
                     }                    
                 }
@@ -329,31 +350,33 @@ function renderForm(){
                 // get select options
                 orderLines.forEach(function(orderLine){
                     var selectedOptions = [];
-                    var itemDescription = itemDescriptions[orderLine.orderedItem.id];
+                    var itemDescription = itemDescriptions[orderLine.OrderedItem.Id];
                     if(itemDescription.optionSets !== "undefined" && itemDescription.optionSets !== null){
                         itemDescription.optionSets.forEach(function(optionSet){
-                            var selected = $('select[data-targetid="' + orderLine.orderedItem.id + '"][data-optionid="' + optionSet.name + '"]').val();
+                            var selected = $('select[data-targetid="' + orderLine.OrderedItem.Id + '"][data-optionid="' + optionSet.name + '"]').val();
                             var val = optionSet.options.filter(function(v){ return v.id == selected })[0];
                             selectedOptions.push({
-                                name: optionSet.name,
-                                selectedOptionType: val
+                                Id: optionSet.id,
+                                Name: optionSet.name,
+                                Value: val
                             });
                         });
-                        orderLine.orderedItem.selectedOptions = selectedOptions;
+                        orderLine.OrderedItem.SelectedOptions = selectedOptions;
                     }                    
                 });
 
 
                 var orderId = guid();
                 var placeOrder = {
-                    orderId: orderId, 
-                    saleId: saleid,
-                    sellerId: orgId,
-                    buyer: buyer,
-                    orderLines: orderLines
+                    OrderId: orderId, 
+                    SaleId: saleid,
+                    SellerId: orgId,
+                    Buyer: buyer,
+                    OrderLines: orderLines,
+                    StatusUpdatesRequested: statusUpdatesRequested
                 };
 
-                var report = function(message, confirmation){
+                var report = function(message){
                 // var table = promotionholder.find('table');                  
                   
                 
@@ -372,6 +395,12 @@ function renderForm(){
                     });
 
                     $("#print-order").click(function(){
+                        
+                        var template = Handlebars.compile(sale.confirmationMessage.template);
+                        var body = template({
+                            data: placeOrder
+                        });
+                        
                         var doc = new jsPDF()
                     
                         doc.addFileToVFS("PTSans.ttf", PTSans);
@@ -380,9 +409,9 @@ function renderForm(){
                         doc.setFont('PTSans'); // set font
                         
                         doc.setFontType("normal");
-                        doc.setFontSize(18);
+                        doc.setFontSize(11);
                         
-                        var lines = doc.splitTextToSize(confirmation, 180);
+                        var lines = doc.splitTextToSize(body, 180);
                         doc.text(20, 20 , lines)
                        
                         if(isIE === false){
