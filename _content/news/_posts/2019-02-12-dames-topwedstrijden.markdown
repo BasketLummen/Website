@@ -1,1 +1,22 @@
+---
+layout: post
+title: "Lizards naar X-Mas Tournament in Kortrijk"
+date: 2018-12-25 10:00:00
+description: De Limburg Lizards doen mee aan dit internationale jeugdbasketbaltoernooi.
+cover: /news/img/2018-12-28-lizards-grid-rsz.jpg
+permalink: /news/2018-12-28-lizardsxmas2018/
+---
 
+### X-mas Tournament.
+
+Van 28 tot 30 december vindt in Kortrijk het internationaal Coca Cola X-Mas Tournament plaats, met ploegen uit Europa, de V.S. en Israël.
+De Limburg Lizards zullen er met twee teams bij zijn, in deze categorieën:
+
+- Women Under 14 
+- Women Under 12 (one day tournament on 28 December)
+
+Samen met hun coaches bereiden ze zich ondertussen volop voor op deze uitdaging!
+
+Details over het toernooi vind je hier: [X-Mas Tournament](http://www.x-mastournament.be), facebookposts hier: [LimburgLizards](https://www.facebook.com/LimburgLizards/posts/278713986174902?__xts__%5B0%5D=68.ARA_M0Azr1IV-iaEOb8Udjv4Cxcgd015BzNNNKVLapmQepJsdrz3AJG7imwUt9Bl7UUajfnFb6_7vYP4fX-6lvOQkRhNP40Tf7GpIvTDl8kAxMqNKgVDJBPLE6rWaw1ZKA_Ffbg5ThqtFnkx8JqXqJqNV-Ab5Kyu411ffarZqKQWNBcWpdOH316nPfzqJQEEPYoGql6y8srvWhbZs_Q26FDImuadK3fBX-WbFt4ZmqjHbyuOyDmQr98AibI36k2owBpiAsPs_ipz0rhf5dwbSRCOrWM64Ra68PC5R4N2b1nSQp-jaI_VfUgA9UPE8iyV9hSqzBCWxi_jik0W0EY56s3tzgvKgumbjVhEpVZMbwLthQ3rOl6V4Q&__tn__=-R)
+
+![team Limburg Lizards](/news/img/2018-12-28-lizards-geel-rsz.jpg)
