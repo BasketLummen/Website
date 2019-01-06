@@ -14,6 +14,6 @@ Onze Dames B nemen het op tegen DBC Houthalen B. In Houthalen werd de heenwedstr
 Tegenstander voor onze Dames A is Amon Jeugd Gentson A, dat in de heenwedstrijd met drie punten verschil verslagen werd. Gentson heeft de punten broodnodig en zal dus ongetwijfeld gemotiveerd aan de opsprong verschijnen, maar onze dames willen hun 7e plaats in de rangschikking verstevigen. 
 
 ### De wedstrijdgegevens:
-  [17h30: Basket Lummen DSE B - DBC Houthalen DSE B](/match/?matchid=BVBL18199100LADSE21ABE)
+  [zat. 12 januari, 17h30: Basket Lummen DSE B - DBC Houthalen DSE B](/match/?matchid=BVBL18199100LADSE21ABE)
   
-  [20h30: Basket Lummen DSE B - Amon Jeugd Gentson DSE A](/match/?matchid=BVBL18199180NADSE11ABE)
+  [zat. 12 januari, 20h30: Basket Lummen DSE B - Amon Jeugd Gentson DSE A](/match/?matchid=BVBL18199180NADSE11ABE)
