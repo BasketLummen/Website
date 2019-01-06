@@ -22,7 +22,7 @@ Voor de liefhebber van andere lekkernijen bieden we het volgende aan:
 - Vegetarisch
 - 2 hamburgers
 
-+++ Praktisch
+### Praktisch
 
 We verwachten je in de Gildezaal van Laren (Hoogstraat, Lummen), op 17 februari van 11h00 tot 14h00 of van 17h00 tot 20h00.
 
