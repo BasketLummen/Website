@@ -3,7 +3,7 @@ layout: post
 title: "Topwedstrijden op 12 januari"
 date: 2019-01-07 10:00:00
 description: Twee topwedstrijden voor onze seniors dames!
-cover: /albums/2018-09-02-Basket-Lummen-DSEA-Willebroek/2019-01-12-dubbel-dames.png
+cover: /news/img/2019-01-12-dubbel-dames.png
 permalink: /news/2019-01-12-dames-topwedstrijden/
 ---
 
