@@ -32,6 +32,4 @@ Bestellen kan je:
 
 Betalen kan je aan de kassa tijdens de eetdag.
 
-Opgelet: Er zijn een aantal eetkaarten fout gedrukt, onderstaande prijzen gelden.
-
 <div data-saleid="deb2af44-e401-48e3-9ee1-afba8413350c"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
