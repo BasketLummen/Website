@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mosselfeest 17 februari 2019"
-date:   2018-12-29 19:00:00
+date:   2019-01-20 19:00:00
 description: Welkom op ons jaarlijkse mosselfeest!
 cover: /news/img/mosselfeest-2017.jpg
 permalink: /news/2019-02-17-mosselfeest/
@@ -19,7 +19,7 @@ Voor de liefhebber van andere lekkernijen bieden we het volgende aan:
 - Halve haan
 - Vidé
 - Stoofvlees
-- Vegetarisch
+- Veggie nuggets
 - 2 hamburgers
 
 ### Praktisch
@@ -28,8 +28,10 @@ We verwachten je in de Gildezaal van Laren (Hoogstraat, Lummen), op 17 februari 
 
 Bestellen kan je:
 - via de bestelkaarten bij spelers, coaches, bestuursleden en in de cafetaria
-- via het digitale bestelformulier hieronder:
+- via het digitale bestelformulier hieronder
 
 Betalen kan je aan de kassa tijdens de eetdag.
+
+Opgelet: Er zijn een aantal eetkaarten fout gedrukt, onderstaande prijzen gelden.
 
 <div data-saleid="deb2af44-e401-48e3-9ee1-afba8413350c"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
