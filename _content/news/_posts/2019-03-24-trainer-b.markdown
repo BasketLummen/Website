@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Cursus Trainer B"
+date:   2019-01-25 10:00:00
+description: Vanaf zondag 24 maart 2019 start de Trainer B cursus voor basketbalcoaches in Lummen.
+cover: /news/img/trainer-cursus.jpg
+permalink: /news/2019-03-24-trainer-b/
+---
+
+Vanaf zondag 24 maart 2019 start de Trainer B cursus voor basketbalcoaches in Lummen.
+
+### Inhoud
+
+#### Module 1: Algemene module
+
+Cursisten dienen reeds geslaagd te zijn voor de algemene module alvorens ze kunnen deelnemen aan het basketspecifieke gedeelte. 
+
+#### Module 2: Sporttechnisch
+
+- Introductieles
+- Visie U21
+- Talentidentificatie en positie specifieke kenmerken G-F-P
+- Spelbeheersing: Bouwstenen vna het spelen van de 5 tegen 5 basketbal op niveau 4 (ballscreen), niveau 5 (screen away), niveau 6 (transitie) en niveau 7 (stage)
+- Specifieke basketbalconditie: jeugd U14-U21
+- Arbitrage
+- Intervisiemomenten
+- Wetenschappelijke begeleiding in basketbal
+
+#### Module 3: Didactisch-Methodisch
+
+- Begeleiding
+- Didactische oefeningen (microteaching)
+- Didactische oefeningen conditie (microteaching)
+
+#### Module 4: Stage
+
+- Observatie
+- Spelersanalyse
+- Persoonlijk Ontwikkelingsplan (POP)
+- Zelfreflectie + filmen van 2 wedstrijden
+
+### Meer informatie
+
+Ga naar de [website van de Vlaamse Trainersschool om in te schrijven](https://www.sport.vlaanderen/VTS-opleiding?activiteitId=72901&opleidingId=1028).
+
+[Aanbod algemeen gedeelte is tevens te vinden op de website van de Vlaamse Trainersschool](https://www.sport.vlaanderen/sportbegeleiders/opleiden-en-bijscholen/vind-een-basismodule-algemeen-gedeelte?niveauId=1172).
+
+Het [gedetailleerd lessenrooster](https://www.sport.vlaanderen/VotasIFrame.Website/Lessenrooster/Get?opleidingId=1028&activiteitId=72895#) geeft de exacte data van alle les modules weer.
+
+Wil je graag zien waar de andere cursussen doorgaan of wil je meer informatie over de stage? Bezoek dan [het overzicht van alle trainers cursussen](http://basketbal.vlaanderen/praktische-info/opleiding-en-vorming/coaches/vts-trainerscursussen).
