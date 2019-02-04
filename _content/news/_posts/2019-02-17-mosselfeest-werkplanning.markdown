@@ -31,7 +31,10 @@ Wil je zelf graag mee werken, stuur dan een mailtje naar [Eddy Coenen](eddy.coen
 </div>
 
 <script type="text/template" id="shift-template">
-	<div class="table-content text-title"></div>
+	<div class="table-content">
+		<div class="text-title"></div>
+		<div class="text-subtitle"></div>
+	</div>
 </script>
 
 <script type="text/template" id="task-template">
