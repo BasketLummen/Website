@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "Mosselfeest Werkplanning"
+date:   2019-02-04 10:00:00
+description: Mosselfeest Werkplanning
+excerpt: Zoals je weet organizeren we op zondag 17 februari een mosselfeest, hier vind je de werkplanning
+cover: /news/img/chef.jpg
+permalink: /news/2019-02-17-mosselfeest-werkplanning/
+custom_js:
+- workplanning
+---
+
+Zoals je weet organizeren we op zondag 17 februari een mosselfeest, hieronder vind je de werkplanning.
+
+Iedereen wordt tijdig verwacht in de Gildezaal van Laren (Hoogstraat, Lummen).
+
+Wil je zelf graag mee werken, stuur dan een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be). 
+
+## Werkplanning
+
+<div id="workplanning" class="container content" data-id="1869bf77-b8a6-de44-a35f-e23b4551eb6b">
+	<div class="responsive-table striped-table">
+		<table id="workplanning-table">
+			<thead>
+				<tr>
+					<th>Taak</th>
+				</tr>
+			</thead>			
+		</table>
+	</div>
+</div>
+
+<script type="text/template" id="shift-template">
+	<div class="table-content text-title"></div>
+</script>
+
+<script type="text/template" id="task-template">
+	<div class="table-content text-description"></div>	
+</script>
+
+<script type="text/template" id="allocation-template">
+	<div class="table-content align-top">
+		<ul class="allocated-list">
+		</ul>
+	</div>
+	<div class="table-indicator text-indicator"></div>	
+</script>
