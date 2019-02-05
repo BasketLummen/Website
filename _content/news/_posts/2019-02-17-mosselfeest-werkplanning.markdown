@@ -10,11 +10,11 @@ custom_js:
 - workplanning
 ---
 
-Zoals je weet organizeren we op zondag 17 februari een mosselfeest, hieronder vind je de werkplanning.
+Hierbij vind je de werkplanning voor het mosselfeest op zondag 17 februari in de Gildezaal van Laren (Hoogstraat, Lummen).
 
-Iedereen wordt tijdig verwacht in de Gildezaal van Laren (Hoogstraat, Lummen).
+Zoals ons [intern reglement](/club/reglement) voorschrijft worden alle spelers ouder dan 12 verwacht mee te helpen, tenzij ze wedstrijd hebben, dit is de enige manier om onze club leefbaar te houden. Zorg er dus ook voor dat je tijdig aanwezig bent om je steentje bij te dragen zodat deze dag vlot kan verlopen.
 
-Wil je zelf graag mee werken, stuur dan een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be). 
+De spelers worden bijgestaan door vrijwilligers die specifieke rollen in de keuken op zich nemen. Wil je zelf ook graag mee werken, stuur dan een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be). 
 
 ## Werkplanning
 
