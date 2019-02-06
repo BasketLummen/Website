@@ -20,7 +20,7 @@ function renderHeader(planning){
 		if(!shift.archived){
 			var start = new Date(Date.parse(shift.workStartsOn));
 			var end = new Date(Date.parse(shift.workEndsOn));
-			var title = start.toLocaleDateString('nl-BE', { year: 'numeric', month: 'numeric', day: 'numeric' });
+			var title = start.toLocaleDateString('nl-BE', { year: 'numeric', month: '2-digit', day: 'numeric' });
 			var subtitle = "[" + start.toLocaleTimeString('nl-BE', { hour: 'numeric', minute: 'numeric' }) + "-" + end.toLocaleTimeString('nl-BE', { hour: 'numeric', minute: 'numeric' }) + "]";
 			i++;
 			sheet.insertRule("#workplanning-table tr:not(:last-child) td:nth-of-type(" + i + "):before {content: \"" + title + "\"; }", 0);
