@@ -10,15 +10,15 @@ custom_js:
 - workplanning
 ---
 
-Met ons jaarlijks mosselfeest (op 17 februari) steunen we onze club. Als speler kan je hier je steentje aan bijdragen en we verwachten je dan ook op deze dag (tenzij je een wedstrijd speelt).
-
-Om het evenement vlot te laten verlopen zijn er een aantal vrijwillgers die de taken in de keuken op zich nemen, maar jouw hulp is nodig om er een geslaagde dag van te maken.
+Met ons jaarlijks mosselfeest (op 17 februari) steunen we onze club. Om het evenement vlot te laten verlopen zijn er een aantal vrijwillgers die de taken in de keuken op zich nemen, maar ook de hulp van onze spelers is nodig om deze dag te laten slagen. Als speler wordt er van je verwacht hier je steentje aan bijdragen en we verwachten je dan ook aanwezig op deze dag (tenzij je een wedstrijd speelt).
 
 ## Praktisch
 
-Hieronder vind je de werkplanning. Laat via een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be) weten wanneer je graag wil mee werken.
+Hieronder vind je de werkplanning. 
 
 We verwachten je tijdig op 17 februari in de Gildezaal van Laren (Hoogstraat, Lummen).
+
+Ben je geen speler, maar wil je toch graag mee werken, laat het via een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be) weten.
 
 Meer informatie over de verwachtingen naar spelers toe vind je in het [intern reglement](/club/reglement) de club.
 
