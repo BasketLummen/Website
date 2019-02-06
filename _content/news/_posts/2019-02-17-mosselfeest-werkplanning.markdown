@@ -3,18 +3,24 @@ layout: post
 title:  "Mosselfeest Werkplanning"
 date:   2019-02-04 10:00:00
 description: Mosselfeest Werkplanning
-excerpt: Zoals je weet organizeren we op zondag 17 februari een mosselfeest, hier vind je de werkplanning
+excerpt: Zoals je weet organiseren we op zondag 17 februari een mosselfeest, hier vind je de werkplanning
 cover: /news/img/chef.jpg
 permalink: /news/2019-02-17-mosselfeest-werkplanning/
 custom_js:
 - workplanning
 ---
 
-Hierbij vind je de werkplanning voor het mosselfeest op zondag 17 februari in de Gildezaal van Laren (Hoogstraat, Lummen).
+Met ons jaarlijks mosselfeest (op 17 februari) steunen we onze club. Als speler kan je hier je steentje aan bijdragen en we verwachten je dan ook op deze dag (tenzij je een wedstrijd speelt).
 
-Zoals ons [intern reglement](/club/reglement) voorschrijft worden alle spelers verwacht mee te helpen, tenzij ze wedstrijd hebben, dit is de enige manier om onze club leefbaar te houden. Zorg er dus ook voor dat je tijdig aanwezig bent om je steentje bij te dragen zodat deze dag vlot kan verlopen.
+Om het evenement vlot te laten verlopen zijn er een aantal vrijwillgers die de taken in de keuken op zich nemen, maar jouw hulp is nodig om er een geslaagde dag van te maken.
 
-De spelers worden bijgestaan door vrijwilligers die specifieke rollen in de keuken op zich nemen. Wil je zelf ook graag mee werken, stuur dan een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be). 
+## Praktisch
+
+Hieronder vind je de werkplanning. Laat via een mailtje naar [Eddy Coenen](eddy.coenen1@telenet.be) weten wanneer je graag wil mee werken.
+
+We verwachten je tijdig op 17 februari in de Gildezaal van Laren (Hoogstraat, Lummen).
+
+Meer informatie over de verwachtingen naar spelers toe vind je in het [intern reglement](/club/reglement) de club.
 
 ## Werkplanning
 
