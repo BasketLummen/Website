@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "She Got Game 3.0"
-cover: /news/img/shegotgame.png
-date:   2019-02-13 10:00:00
+cover: /news/img/sgg3.jpg
+date:   2019-02-12 10:00:00
 description: Basketstage voor meisjes van U10-U19.
 permalink: /news/2019-02-13-shegotgame3/
 ---
