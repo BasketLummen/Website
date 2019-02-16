@@ -13,6 +13,6 @@ Op zaterdag 23 februari vertrekt de bus om 18h00 stipt aan Sporthal De Vijfspron
 
 Verdere wedstrijdgegevens vind je hier: [wedstrijdgegevens](/match/?matchid=BVBL18199180NADSE11AHB).
 
-Reserveren kan je door een mail te sturen naar onze sfeermaker van dienst: [Peter Corens](mailto://peter.corens@skynet.be)
+Reserveren kan je door een mail te sturen naar [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be)
 
 Zorg dat je er bij bent...
