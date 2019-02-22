@@ -373,7 +373,7 @@ function renderForm(){
                     SellerId: orgId,
                     Buyer: buyer,
                     OrderLines: orderLines,
-                    StatusUpdatesRequested: statusUpdatesRequested
+                    StatusUpdateRequested: statusUpdatesRequested
                 };
 
                 var report = function(message){
