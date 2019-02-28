@@ -4,7 +4,7 @@ title:  "Vrijwilliger, bedankt voor je tijd, inzet en toewijding!"
 date:   2019-01-25 10:00:00
 description: Onze sportclub wordt mede mogelijk gemaakt door haar vele vrijwilligers.
 cover: /news/img/trainer-cursus.jpg
-permalink: /news/2019-03-01-vrijwilliger/
+permalink: /news/2019-03-01-vijwilliger/
 ---
 
 Basket Lummen heeft veel vrijwilligers die zich inzetten voor verschillende activiteiten. Ze zijn onmisbaar, zorgen ervoor dat de missie vervuld kan worden en de organisatie kan draaien.
