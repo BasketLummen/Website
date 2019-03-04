@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Hervorming jeugdcompetitie"
-date: 2019-01-07 10:00:00
+date: 2019-03-04 10:00:00
 description: Volgend seizoen gaat de jeugdcompetitie er heel anders uitzien
 cover: /news/img/hervorming-niveau-3-square.png
-permalink: /news/2019-01-14-hervorming/
+permalink: /news/2019-03-04-hervorming/
 ---
 
 Op de Algemene Vergadering van basketbal.vlaanderen werd in november 2018 de hervorming van de jeugdcompetitie goedgekeurd.
