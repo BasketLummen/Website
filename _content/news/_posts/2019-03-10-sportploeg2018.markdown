@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sportploeg van het jaar 2018"
-cover: /news/img/sportploeg2018.jpg
+cover: /news/img/Sportploeg2018.jpg
 date:   2019-03-10 10:00:00
 description: Huldiging namens het gemeentebestuur.
 permalink: /news/2019-03-10-sportploeg2018/
