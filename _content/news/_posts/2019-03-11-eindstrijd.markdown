@@ -19,4 +19,4 @@ Het is dus zeker mogelijk! Kom daarom onze ploeg aanmoedigen en help ze mee naar
 
 ### Wedstrijdgegevens
 
-Alle details vind je via deze link:  [zaterdag om 20h30, in Lummen](/match/?matchid=BVBL18199180NADSE11ABL).
+Alle details vind je via deze link:  [zaterdag 23 maart om 20h30, in Lummen](/match/?matchid=BVBL18199180NADSE11ABL).
