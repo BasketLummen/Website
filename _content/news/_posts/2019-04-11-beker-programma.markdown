@@ -3,6 +3,7 @@ layout: post
 title:  "Programma Bekerfinals"
 date:   2019-04-11 22:00:00
 description: Programma Limburgse Bekerfinals.
+excerpt: Programma Limburgse Bekerfinals.
 cover: /news/img/flyer-bekerfinales.jpg
 permalink: /news/2019-04-11-beker-programma/
 ---
