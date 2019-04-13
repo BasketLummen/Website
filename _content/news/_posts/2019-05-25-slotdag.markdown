@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "BBQ Slotdag 25 mei 2019"
+date:   2019-04-12 19:00:00
+description: BBQ Slotdag 25 Mei 2019.
+cover: /news/img/bbq.jpg
+permalink: /news/2019-05-25-slotdag/
+custom_js:
+- handlebars-v4.0.12
+- ptsans
+- jspdf.min
+- purchaseorder
+---
+
+
+<div data-saleid="5e9dc1d9-a17e-4f77-97ac-efcb1c54a72e"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>

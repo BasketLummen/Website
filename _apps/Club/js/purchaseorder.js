@@ -10,10 +10,10 @@ if (!String.prototype.format) {
     };
   }
 
-var catalogService = "clubmgmt-catalog-service.azurewebsites.net";
-var salesService = "clubmgmt-sales-service.azurewebsites.net";
-var ordersService = "clubmgmt-orders-service.azurewebsites.net";
-//  var service = "localhost:22465"; // uncomment for local testing
+var catalogService = "https://clubmgmt-catalog-service-test.azurewebsites.net";
+var salesService = "https://clubmgmt-sales-service-test.azurewebsites.net";
+var ordersService = "https://clubmgmt-orders-service-test.azurewebsites.net";
+//var ordersService = "http://localhost:22465"; // uncomment for local testing
 var promotionholder;
 var optional;
 var required;
@@ -236,7 +236,7 @@ function renderForm(){
 
         $(".promotionitemtoggle").change(function(){
             var targetid = $(this).attr('data-targetid');
-            var itemDescription = itemDescriptionss[targetid];
+            var itemDescription = itemDescriptions[targetid];
             if(itemDescription && itemDescription.optionSets){
                 $(".variable-row").remove();
                 itemDescription.optionSets.forEach(function(optionSet){
@@ -358,7 +358,7 @@ function renderForm(){
                             selectedOptions.push({
                                 Id: optionSet.id,
                                 Name: optionSet.name,
-                                Value: val
+                                Value: val.id
                             });
                         });
                         orderLine.OrderedItem.SelectedOptions = selectedOptions;
@@ -426,7 +426,7 @@ function renderForm(){
                     });
                 };
 
-                var posturi= "https://" + ordersService + "/api/purchaseorders/" + orgId + "/" + sale.id;
+                var posturi= ordersService + "/api/purchaseorders/" + orgId + "/" + sale.id;
                 // send it to the service
                 $.ajax({
                     type: 'POST',
@@ -470,7 +470,7 @@ $(document).ready(function(){
 });
 
 function loadSale(){
-    var salesbaseuri = "https://" + salesService + "/api/sales/";
+    var salesbaseuri = salesService + "/api/sales/";
 	var uri = salesbaseuri + orgId + "/" + saleid + "/";
 	$.ajax({
 		 type: 'GET',
@@ -488,7 +488,7 @@ function loadCollection(){
 	if(sale && sale.items){
 		var item = sale.items[0]; // assume all items from same catalog & collection for now
 
-        var catalogbaseuri = "https://" + catalogService + "/api/catalogs/";
+        var catalogbaseuri = catalogService + "/api/catalogs/";
 		uri = catalogbaseuri + orgId + "/" + item.catalogId + "/collections/" + item.collectionId;
 		$.ajax({
 			type: 'GET',
