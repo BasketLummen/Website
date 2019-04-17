@@ -12,5 +12,20 @@ custom_js:
 - purchaseorder
 ---
 
+Dit feestjaar komt stilaan ten einde en ook dit keer sluiten we weer in stijl af met een barbecue. 
+
+Deze zal doorgaan op zaterdag 25 mei vanaf 18.30 u in de cafetaria van Sporthal De Vijfsprong.
+
+Je kan opteren voor twee (15 euro) of drie (18 euro) stukken, met keuze uit allerlei lekkere vlees en vis soorten:
+- spiering kotelet
+- varkensbrochette
+- rundsbrochette
+- chipolata
+- kipfilet
+- scampispies
+- zalm
+- barbecueworst
+
+Je kan je bestelling doorgeven door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de slotdag.
 
 <div data-saleid="5e9dc1d9-a17e-4f77-97ac-efcb1c54a72e"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
