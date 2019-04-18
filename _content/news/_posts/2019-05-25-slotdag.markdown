@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "BBQ Slotdag 25 mei 2019"
+date:   2019-04-12 19:00:00
+description: BBQ Slotdag 25 Mei 2019.
+cover: /news/img/bbq.jpg
+permalink: /news/2019-05-25-slotdag/
+custom_js:
+- handlebars-v4.0.12
+- ptsans
+- jspdf.min
+- purchaseorder
+---
+
+Dit feestjaar komt stilaan ten einde en ook dit keer sluiten we weer in stijl af met een barbecue. 
+
+Deze zal doorgaan op zaterdag 25 mei vanaf 18.30 u in de cafetaria van Sporthal De Vijfsprong.
+
+Je kan opteren voor twee (15 euro) of drie (18 euro) stukken, met keuze uit allerlei lekkere vlees en vis soorten:
+- spiering kotelet
+- varkensbrochette
+- rundsbrochette
+- chipolata
+- kipfilet
+- scampispies
+- zalm
+- barbecueworst
+
+Je kan je bestelling doorgeven door onderstaande digitale formulier in te vullen, het bedrag is te betalen aan de kassa op de slotdag.
+
+<div data-saleid="5e9dc1d9-a17e-4f77-97ac-efcb1c54a72e"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
