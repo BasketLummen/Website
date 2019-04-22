@@ -3,7 +3,7 @@ layout: post
 title: "Kleuterfeest 2019"
 date: 2019-04-24 12:00:00
 description: Sport en spel voor je kleuter (°2014)
-cover: /news/img/demerstee.jpg
+cover: /news/img/2019-05-25-kleuterfeest2019.jpg
 permalink: /news/2019-05-25-kleuterfeest2019/
 ---
 
