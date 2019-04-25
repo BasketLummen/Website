@@ -7,7 +7,7 @@ cover: /news/img/2019-05-25-kleuterfeest.jpg
 permalink: /news/2019-05-25-kleuterfeest/
 ---
 
-Basketbal is er voor iedereen, we organiseren dan ook een leuk feest voor alle kleuters van de 2e en 3e kleuterklas (geboortejaar 2013 en 2014).
+Basketbal is er voor iedereen, we organiseren dan ook een leuk feest voor alle kleuters van de 2e kleuterklas (geboortejaar 2014).
 
 Tijdens het kleuterfeest zullen ze leren dribbelen, scoren,springen, lopen, alsook allerlei basket-trucjes leren.
 
