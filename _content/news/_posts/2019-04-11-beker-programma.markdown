@@ -45,8 +45,10 @@ Op vrijdagavond komt Belgian Cat Hanne Mestdagh de beker uitreiken aan de winnaa
 <h2>Sponsors</h2>	
 <div class="partners">	
 	<ul>
-        <li><a><img src="/news/img/tentenverhuur-joris.jpg"></a></li>
-        <li><a><img src="/news/img/edb-algemene-dakwerken.png"></a></li>
-        <li><a><img src="/news/img/bmw-van-osch.jpg"></a></li>
+        <li><a href="https://www.tentenverhuurjoris.be"><img src="/news/img/tentenverhuur-joris.jpg"></a></li>
+        <li><a href="http://www.edbbvba.be"><img src="/news/img/edb-algemene-dakwerken.png"></a></li>
+        <li><a href="https://vanosch.bmw.be/"><img src="/news/img/bmw-van-osch.jpg"></a></li>
+        <li><a href="https://opel.garageboden.be/nl/"><img src="/news/img/boden.png"></a></li>
+        <li><a href="http://www.kaarskesprocessie.be"><img src="/news/img/kaarskesprocessie.png"></a></li>
     </ul>
 </div>
