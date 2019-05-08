@@ -19,8 +19,6 @@ Je kan het hele weekend lang genieten van top wedstrijden en ook naast het veld 
 | 18u30   | U16 Meisjes            | Limburg Lizards Hasselt BT    | Limburg Lizards Basket Lummen |
 | 21u00   | U21 Jongens            | Hubo Limburg United           | Hasselt BT                    |
 
-<br/>
-Op vrijdagavond komt Belgian Cat Hanne Mestdagh de beker uitreiken aan de winnaar van de finale van de M16 meisjes!
 <br/><br/>
 
 | Zaterdag 11 mei 2019                                                                             |
@@ -41,6 +39,22 @@ Op vrijdagavond komt Belgian Cat Hanne Mestdagh de beker uitreiken aan de winnaa
 | 17u00   | Seniors Dames Prov     | Basket Lummen C               | BC Gems Diepenbeek A          |
 | 19u30   | Seniors Dames Nat/Land | Basket Lummen A               | DBC Houthalen A               |
 
+<br/><br/>
+
+## Beker uitreiking
+
+Het uitreiken van de beker aan de winnaars gebeurt bij elke jeugdploeg door een bekende basketbalspeler of -speelster. 
+Dus als je je idolen een keer wil zien in het echt, dan weet je waar je moet zijn!
+
+M16 - Hanne Mestdagh (Basket Namur Capitale)
+G12 - Dorian Pickens & Justin Kohadja (Hubo Limburg United)
+M19 - Khadeen Carrington - Leander Dedroog (Hubo Limburg United)
+J16 - Hans Vanwijn (Telenet Giants Antwerp)
+G14 - Caro Swolfs (Basket Lummen)
+J18 - Miete Celus (Basket Lummen)
+M14 - Jaleesa Maes (Liège Panthers)
+
+<br/><br/>
 
 <h2>Sponsors</h2>	
 <div class="partners">	
