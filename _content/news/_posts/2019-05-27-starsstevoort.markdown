@@ -5,9 +5,6 @@ date: 2019-05-27 08:00:00
 description: Game Situations voor spelers van 7 tot 18 jaar 
 cover: /news/img/kerstkamp-u12.JPG
 permalink: /news/2019-05-27-starsstevoort/
-custom_js:
-- fuse.min
-- camp
 ---
 
 Tijdens de zomer kan je je basketvaardigheden blijven oefenen of uitbreiden! Op 1 en 2 juli vindt het Stars Basketballcamp plaats in Stevoort. Het thema is de fundamentele opbouw (1T0-4T4) aan de hand van wedstrijdsituaties, met deze coaches onder leiding van Bart Wouters:
@@ -31,7 +28,7 @@ Verzekering, soep, sandwiches, een snack en een drankje zijn in de prijs inbegre
 
 Voor meer informatie kan je terecht bij Bart Wouters:
   [bart.wouters11@gmail.com](mailto://bart.wouters11@gmail.com)
-  telefoon: +32 486 15 87 05
+  of telefoon: +32 486 15 87 05
 
 ### Inschrijven
 
