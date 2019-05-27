@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Stars Basketballcamp"
+title: "Stars Basketballcamp (1 en 2 juli)"
 date: 2019-05-27 08:00:00
-description: Game Situations voor spelers van 7 tot 18 jaar 
+description: Game Situations 34 voor spelers van 7 tot 18 jaar 
 cover: /news/img/kerstkamp-u12.JPG
 permalink: /news/2019-05-27-starsstevoort/
 ---
@@ -23,8 +23,8 @@ Voor jongens en meisjes van 7 tot 18 jaar.
 
 ### Praktisch
 
-Op 1 en 2 juli van 09h00 tot 16h00 in de sporthal van Instituut Mariaburcht, Hofbeemdenstraat in 3512 Stevoort. Je betaalt EUR 50,- (korting vanaf tweede kind EUR 10,-). 
-Verzekering, soep, sandwiches, een snack en een drankje zijn in de prijs inbegrepen.
+Op 1 en 2 juli 2019 van 09h00 tot 16h00 in de sporthal van Instituut Mariaburcht, Hofbeemdenstraat in 3512 Stevoort. Je betaalt EUR 50,- (korting vanaf tweede kind EUR 10,-). 
+Verzekering, verse soep, sandwiches, een snack en een drankje zijn in de prijs inbegrepen.
 
 Voor meer informatie kan je terecht bij Bart Wouters:
   [bart.wouters11@gmail.com](mailto://bart.wouters11@gmail.com)
@@ -35,13 +35,13 @@ Voor meer informatie kan je terecht bij Bart Wouters:
 Inschrijven is vereist en doe je via dit e-mail-adres: [bart.wouters11@gmail.com](mailto://bart.wouters11@gmail.com). 
 
 Vermeld deze gegevens:
-- naam 
+- je naam 
 - adres
 - geboortedatum
 - telefoonnummer
 - e-mail-adres
-- club 
-- leeftijdscategorie (b.v. U14)
+- je club 
+- je leeftijdscategorie (b.v. U14)
 
 Het bedrag mag je overschrijven op rekeningnummer BE59 7512 0077 8926, onder vermelding van "Starscamp" en de naam van de deelnemer. 
 
