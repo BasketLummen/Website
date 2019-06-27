@@ -270,14 +270,17 @@ $.topic("repository.initialized").subscribe(function () {
 $.topic("vbl.team.loaded").subscribe(function () {
     repository.loadMatches();
     repository.getTeam(vblteamid, function(vblteam){
-        if(vblteam && vblteam.guid == vblteamid){
-           renderTeam(vblteam, team);
-           $(".loading").hide();
-           $("#team-dashboard").css("visibility", "visible");
+
+        renderTeam(vblteam, team);
+        $(".loading").hide();
+        $("#team-dashboard").css("visibility", "visible");
+
+       /* if(vblteam && vblteam.guid == vblteamid){
+          
         }
         if(!vblteam){
             $("#team-name").text("Team niet gevonden");
-        }
+        }*/
     });     
 });
 
