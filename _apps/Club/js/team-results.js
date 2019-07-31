@@ -9,7 +9,7 @@ var getParameterByName = function (name, url) {
 }
 var vblteamid = getParameterByName("vblteamid");
 var teamid = getParameterByName("teamid");
-var partnershipId = getParameterByName("p");
+var partnerOrganizationId = getParameterByName("o");
 var team;
 var visualDate = new Date();
 
@@ -76,11 +76,11 @@ $.topic("repository.initialized").subscribe(function () {
     }
     else if(teamid != null){   
       
-      if(partnershipId == null){
+      if(partnerOrganizationId == null){
   
-          clubmgmt.mapTeam(teamid, function(map){
+          clubmgmt.mapTeam(teamid, orgId, function(map){
               if(map == null){            
-                  clubmgmt.loadTeam(teamid, function(t){
+                  clubmgmt.loadTeam(teamid, orgId, function(t){
                       team = t;
                       renderTeam(null, team);
                       $(".loading").hide();
@@ -89,7 +89,7 @@ $.topic("repository.initialized").subscribe(function () {
               }
               else{
                   vblteamid = map.referenceId;
-                  clubmgmt.loadTeam(teamid, function(t){
+                  clubmgmt.loadTeam(teamid, orgId, function(t){
                       team = t;
                       repository.loadTeam(vblteamid);         
                   });
@@ -98,9 +98,9 @@ $.topic("repository.initialized").subscribe(function () {
   
       }
       else{
-          clubmgmt.mapPartnerTeam(teamid, partnershipId, function(map){
+          clubmgmt.mapTeam(teamid, partnerOrganizationId, function(map){
               if(map == null){            
-                  clubmgmt.loadPartnerTeam(partnershipId, teamid, function(t){
+                  clubmgmt.loadTeam(teamid, partnerOrganizationId, function(t){
                       team = t;
                       renderTeam(null, team);
                       $(".loading").hide();
@@ -109,7 +109,7 @@ $.topic("repository.initialized").subscribe(function () {
               }
               else{
                   vblteamid = map.referenceId;
-                  clubmgmt.loadPartnerTeam(partnershipId, teamid, function(t){
+                  clubmgmt.loadTeam(teamid, partnerOrganizationId, function(t){
                       team = t;
                       repository.loadTeam(vblteamid);         
                   });

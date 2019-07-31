@@ -364,7 +364,7 @@ var loadEligiblePlayers = function(callback){
     camp.registrationLimitedTo.forEach(function(limit){
         var deferred = $.Deferred();
         tasks.push(deferred.promise());
-        clubmgmt.loadTeam(limit.groupId, function(t){
+        clubmgmt.loadTeam(limit.groupId, orgId, function(t){
 
             t.participations.forEach(function(p){
                 if(p.roleId == limit.roleId){
