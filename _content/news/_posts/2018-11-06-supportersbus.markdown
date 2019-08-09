@@ -15,4 +15,4 @@ Op zaterdag 10 november vertrekt de bus om 19u stipt aan Sporthal De Vijfsprong.
 
 Wedstrijdgegevens vind je hier: [wedstrijdgegevens](/match/?matchid=BVBL18199180NADSE11AKB)
 
-Reserveren kan je door een mail te sturen naar onze sfeermaker van dienst: [Peter Corens](mailto://peter.corens@skynet.be)
+Reserveren kan je door een mail te sturen naar onze sfeermaker van dienst: [Peter Corens](mailto:peter.corens@skynet.be)

@@ -22,4 +22,4 @@ Fruit, een snack en een drankje zijn inbegrepen en er ligt een She Got Game T-sh
 
 ## Inschrijven
 
-Wil je graag meedoen, schrijf je dan tijdig in via [limburglizards@gmail.com](mailto://limburglizards@gmail.com) en maak het bedrag (EUR 50,-) over op rekeningnummer BE29 3771 0591 7064 (met vermelding van je naam).
+Wil je graag meedoen, schrijf je dan tijdig in via [limburglizards@gmail.com](mailto:limburglizards@gmail.com) en maak het bedrag (EUR 50,-) over op rekeningnummer BE29 3771 0591 7064 (met vermelding van je naam).

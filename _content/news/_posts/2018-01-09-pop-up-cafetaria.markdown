@@ -16,7 +16,7 @@ Het pop-up cafetaria bevindt zich boven het balkon van de sporthal. Het aanbod z
 
 Is het altijd je droom geweest om een professionele barman of barvrouw te zijn: grijp dan nu je kans en geef je op om als vrijwilliger een keer te komen helpen. Alle drank zal in flesjes geserveerd worden.
  
-Hieronder vinden jullie de voorlopige planning. Mocht je ergens een periode voor jouw rekening willen nemen (de oudere jeugdspelers zijn ook van harte welkom!), mail dan even naar [stefancoenen@skynet.be](mailto://stefancoenen@skynet.be) wanneer je kan.
+Hieronder vinden jullie de voorlopige planning. Mocht je ergens een periode voor jouw rekening willen nemen (de oudere jeugdspelers zijn ook van harte welkom!), mail dan even naar [stefancoenen@skynet.be](mailto:stefancoenen@skynet.be) wanneer je kan.
 
 We weten dat onze vaste helpers meestal ook al de tafel doen tijdens de wedstrijden, dus het zou zeer fijn zijn mochten we andere ouders, spelers en supporters bereid vinden om bij te springen.
 

@@ -26,7 +26,7 @@ Daarom organiseren we op zaterdag 13 oktober een pasmoment in de sporthal, je ka
 
 Het pak kan individueel aangekocht worden, maar het is misschien ook een optie om met je ploeg een sponsor te gaan zoeken die het voor de ploeg wil aankopen (en hun bedrijfslogo erop wil laten printen).
 
-Voor meer informatie over het pak kan je terecht bij [swinnen.johan@telenet.be](mailto://swinnen.johan@telenet.be)
+Voor meer informatie over het pak kan je terecht bij [swinnen.johan@telenet.be](mailto:swinnen.johan@telenet.be)
 
 
 

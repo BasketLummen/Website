@@ -20,7 +20,7 @@ Heb je vragen over onze privacyverklaring, dan kun je deze richten aan:
 Basket Lummen  
 Kerkstraat 9  
 B-3560 Lummen  
-[secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be)  
+[secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be)  
 
 ## Welke persoonsgegevens verzamelt Basket Lummen?
 
@@ -69,11 +69,11 @@ Wij maken afspraken over de beveiliging van uw persoonsgegevens die wij bij een 
 **Het recht op onder meer inzage, correctie, overdracht of verwijdering van persoonsgegevens**
 
 De wet kent verschillende rechten toe aan personen van wie persoonsgegevens worden verwerkt (de betrokkenen) en biedt meer middelen om de verwerking van deze persoonsgegevens te controleren en te beïnvloeden.
-Je kunt op ieder moment bij Basket Lummen een verzoek indienen, bijvoorbeeld om jouw gegevens in te zien, over te dragen, te wijzigen of definitief te verwijderen. Neem dan contact op met ons via [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be). Geef duidelijk in het onderwerp aan dat het gaat om privacy en meer specifiek om een bijvoorbeeld een inzage-, correctie- of verwijderingsverzoek. Houd er rekening mee dan in sommige gevallen Basket Lummen om aanvullende informatie kan vragen, bijvoorbeeld om je identiteit vast te stellen en om gericht onderzoek te kunnen doen.
+Je kunt op ieder moment bij Basket Lummen een verzoek indienen, bijvoorbeeld om jouw gegevens in te zien, over te dragen, te wijzigen of definitief te verwijderen. Neem dan contact op met ons via [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be). Geef duidelijk in het onderwerp aan dat het gaat om privacy en meer specifiek om een bijvoorbeeld een inzage-, correctie- of verwijderingsverzoek. Houd er rekening mee dan in sommige gevallen Basket Lummen om aanvullende informatie kan vragen, bijvoorbeeld om je identiteit vast te stellen en om gericht onderzoek te kunnen doen.
 
 **Het recht op verzet**
 
-Je hebt het recht je te verzetten tegen het gebruik van persoonsgegevens. Wanneer je aangeeft niet langer (via een bepaald medium) te willen worden benaderd, zal de Basket Lummen je opnemen in een daartoe strekkend bestand en worden je persoonsgegevens niet langer gebruikt voor deze doeleinden. Dit kun je doen via [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be). Geef duidelijk aan dat het gaat om privacy en meer specifiek om een beroep op je recht op verzet.
+Je hebt het recht je te verzetten tegen het gebruik van persoonsgegevens. Wanneer je aangeeft niet langer (via een bepaald medium) te willen worden benaderd, zal de Basket Lummen je opnemen in een daartoe strekkend bestand en worden je persoonsgegevens niet langer gebruikt voor deze doeleinden. Dit kun je doen via [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be). Geef duidelijk aan dat het gaat om privacy en meer specifiek om een beroep op je recht op verzet.
 
 ## Wijzigen privacyverklaring
 

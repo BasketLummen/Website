@@ -34,6 +34,6 @@ Iedereen die voldoet aan de voorwaarden:
 
 Je moet dus niet per se zelf ervaring hebben als speler.
 
-Meer info vind je op [volgende pagina](http://basketbal.vlaanderen/praktische-info/scheidsrechters/word-scheidsrechter) of je kan mailen naar [info@basketbal.vlaanderen](mailto://info@basketbal.vlaanderen)
+Meer info vind je op [volgende pagina](http://basketbal.vlaanderen/praktische-info/scheidsrechters/word-scheidsrechter) of je kan mailen naar [info@basketbal.vlaanderen](mailto:info@basketbal.vlaanderen)
 
 ![Scheidsrechterscursus](/news/img/scheidsrechterscursus-2018.jpg)

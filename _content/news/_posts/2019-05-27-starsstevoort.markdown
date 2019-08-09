@@ -27,12 +27,12 @@ Op 1 en 2 juli 2019 van 09h00 tot 16h00 in de sporthal van Instituut Mariaburcht
 Verzekering, verse soep, sandwiches, een snack en een drankje zijn in de prijs inbegrepen.
 
 Voor meer informatie kan je terecht bij Bart Wouters:
-  [bart.wouters11@gmail.com](mailto://bart.wouters11@gmail.com)
+  [bart.wouters11@gmail.com](mailto:bart.wouters11@gmail.com)
   of telefoon: +32 486 15 87 05
 
 ### Inschrijven
 
-Inschrijven is vereist en doe je via dit e-mail-adres: [bart.wouters11@gmail.com](mailto://bart.wouters11@gmail.com). 
+Inschrijven is vereist en doe je via dit e-mail-adres: [bart.wouters11@gmail.com](mailto:bart.wouters11@gmail.com). 
 
 Vermeld deze gegevens:
 - je naam 

@@ -16,7 +16,7 @@ Er wordt gespeeld op hoge ringen, vandaar dat je minstens 12 jaar moet zijn om d
 
 ### Inschrijven
 
-Inschrijven kan vanaf 12 jaar en kost 3 euro per wedstrijd per ploeg. Als je wil inschrijven kan dit door een email te sturen naar [linda.doggen@telenet.be](mailto://linda.doggen@telenet.be).
+Inschrijven kan vanaf 12 jaar en kost 3 euro per wedstrijd per ploeg. Als je wil inschrijven kan dit door een email te sturen naar [linda.doggen@telenet.be](mailto:linda.doggen@telenet.be).
 
 ### Goede doel
 

@@ -23,6 +23,6 @@ Zorg voor sportkleding en binnensportschoenen.
 
 ### Reserveren
 
-Reserveren kan je door een mail te sturen naar [marliesvlaeyen@hotmail.com](mailto://marliesvlaeyen@hotmail.com), vóór 22 mei.
+Reserveren kan je door een mail te sturen naar [marliesvlaeyen@hotmail.com](mailto:marliesvlaeyen@hotmail.com), vóór 22 mei.
 
 Een sportief feestje voor je kind!

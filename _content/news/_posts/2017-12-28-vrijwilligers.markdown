@@ -27,6 +27,6 @@ Je kan ons op verschillende evenementen een handje helpen. Hieronder vind je het
 - 18/5/18: Semino Rossi Ethias Arena: 18u - 23u30 (17 personen)
 - 30/5/18: John Cleese Ethias Theater: 18u - 24u (15 personen)
 
-Heb je interesse en wil je jouw club helpen? Mail dan het gewenste evenement, samen met je volledige naam, rijksregisternummer en gsm-nummer naar [ilseleynen@hotmail.be](mailto://ilseleynen@hotmail.be)
+Heb je interesse en wil je jouw club helpen? Mail dan het gewenste evenement, samen met je volledige naam, rijksregisternummer en gsm-nummer naar [ilseleynen@hotmail.be](mailto:ilseleynen@hotmail.be)
 
 Bedankt!!!

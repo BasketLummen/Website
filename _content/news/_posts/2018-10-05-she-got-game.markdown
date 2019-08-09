@@ -21,5 +21,5 @@ De kostprijs bedraagt €40, hierbij zijn fruit, snack en drankje inbegrepen. Be
 
 ## Hoe inschrijven
 
-Wil je graag meedoen, dan dien je vooraf in te schrijven op [limburglizards@gmail.com](mailto://limburglizards@gmail.com)
+Wil je graag meedoen, dan dien je vooraf in te schrijven op [limburglizards@gmail.com](mailto:limburglizards@gmail.com)
 

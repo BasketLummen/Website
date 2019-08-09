@@ -20,7 +20,7 @@ Jullie kunnen komen helpen op deze festivals:
   - **Pukkelpop** van 15 tot 18 augustus 2019 (we zoeken 26 vrijwilligers in 4 shiften)
 
 Voor meer informatie, vragen of inschrijven kan je terecht bij Els Dereze:
-- e-mail: [Dereze.els@telenet.be](mailto://Dereze.els@telenet.be)
+- e-mail: [Dereze.els@telenet.be](mailto:Dereze.els@telenet.be)
 - tel.: 0479 29 87 86
 
 ### Inschrijven

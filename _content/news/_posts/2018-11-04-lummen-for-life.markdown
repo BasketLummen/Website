@@ -18,7 +18,7 @@ Er wordt van 18u tot 20u gespeeld op lage ringen, en van 20u tot 22u op hoge rin
 
 ### Inschrijven
 
-Inschrijven kost 5 euro per wedstrijd per ploeg. Als je wil inschrijven kan dit door een email te sturen naar [linda.doggen@telenet.be](mailto://linda.doggen@telenet.be). Of door onderstaande formulier in te vullen
+Inschrijven kost 5 euro per wedstrijd per ploeg. Als je wil inschrijven kan dit door een email te sturen naar [linda.doggen@telenet.be](mailto:linda.doggen@telenet.be). Of door onderstaande formulier in te vullen
 
 ### Goede doelen
 

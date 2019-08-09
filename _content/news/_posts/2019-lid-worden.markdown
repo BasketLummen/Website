@@ -10,4 +10,4 @@ Basket Lummen is er zowel voor jongens als meisjes, dames en heren. We starten m
 
 Iedereen die wil starten met basketten mag een aantal keren vrijblijvend en gratis komen meetrainen. De trainers hebben dan de kans om je persoonlijk alle uitleg en informatie te geven. 
 
-Als je een mailtje stuurt naar [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be), dan bezorgen we je alle praktische info over waar en wanneer je eens kan komen meetrainen.
+Als je een mailtje stuurt naar [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be), dan bezorgen we je alle praktische info over waar en wanneer je eens kan komen meetrainen.

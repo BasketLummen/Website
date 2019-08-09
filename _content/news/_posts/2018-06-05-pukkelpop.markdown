@@ -20,7 +20,7 @@ Hopelijk kunnen we massaal rekenen op jullie medewerking!!
 
 ### Ben je geinteresseerd? 
 
-Stuur dan je correcte gegevens (naam, voornaam, adres, rijksregister nummer ,email-adres, gsm nummerr, maat van t-shirt) naar [els.dereze@telenet.be](mailto://els.dereze@telenet.be). 
+Stuur dan je correcte gegevens (naam, voornaam, adres, rijksregister nummer ,email-adres, gsm nummerr, maat van t-shirt) naar [els.dereze@telenet.be](mailto:els.dereze@telenet.be). 
 
 Voorwaarde is wel dat je 18 jaar bent en alle 3 dagen kan komen. 
 

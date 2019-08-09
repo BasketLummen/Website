@@ -18,7 +18,7 @@ Het zullen ongetwijfeld spannende en aangename wedstrijden worden.
 - **20h30**: Basket Lummen DSE A	DBC Houthalen DSE A	1e Landelijke Dames	
 
 Mis deze avond niet en meld u (met vermelding van het aantal personen) aan via:
-- [dereze.els@telenet.be](mailto://dereze.els@telenet.be)
-- [swinnen.johan@telenet.be](mailto://swinnen.johan@telenet.be)
+- [dereze.els@telenet.be](mailto:dereze.els@telenet.be)
+- [swinnen.johan@telenet.be](mailto:swinnen.johan@telenet.be)
 
 We rekenen op uw aanwezigheid en verwachten u vanaf 18h15.

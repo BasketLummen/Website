@@ -17,4 +17,4 @@ Programma:
 
 ### Ben je geinteresseerd? 
 
-Stuur dan je gegevens naar [els.dereze@telenet.be](mailto://els.dereze@telenet.be).
+Stuur dan je gegevens naar [els.dereze@telenet.be](mailto:els.dereze@telenet.be).

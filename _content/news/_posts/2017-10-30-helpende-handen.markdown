@@ -16,7 +16,7 @@ Wil jij Basket Lummen steunen en ondertussen de vele veldritfans voorzien van ee
  * Zaterdag 2 december 9h00-18h00: veldrit Hasselt (3 medewerkers)
  * Zondag 3 december 9h00-18h00: veldrit Mol (3 medewerkers)
 
-**Stuur snel een email naar Ilse**: [ilseleynen@hotmail.be](mailto://ilseleynen@hotmail.be)
+**Stuur snel een email naar Ilse**: [ilseleynen@hotmail.be](mailto:ilseleynen@hotmail.be)
 
 Alvast bedankt dat wij op je steun mogen rekenen!
 KBBC Zolder & Basket Lummen
