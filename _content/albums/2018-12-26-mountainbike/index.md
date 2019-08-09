@@ -5,6 +5,7 @@ description: Ivan Luyten, Basket Lummen en de X-Masbikers organiseren de jaarlij
 date: 2018-12-26 08:00:00
 cover: /albums/2018-12-26-mountainbike/thumbnails/IMG_0928.JPG
 author: Arne Kenis
+archived: true
 pagination: 
   enabled: true
   images: true

@@ -5,6 +5,7 @@ description: Onze Youth Officials aan het werk tijdens de wedstrijd tussen Baske
 date: 2018-10-09 14:00:00
 cover: /albums/2018-10-09-week-van-de-official/thumbnails/S0355266.jpg
 author: Danny Willems
+archived: true
 pagination: 
   enabled: true
   images: true

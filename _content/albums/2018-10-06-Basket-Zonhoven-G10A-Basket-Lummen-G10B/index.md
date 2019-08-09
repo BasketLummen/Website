@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen Basket Zonhoven G10 A en Basket Lummen 
 date: 2018-10-06 10:15:00
 cover: /albums/2018-10-06-Basket-Zonhoven-G10A-Basket-Lummen-G10B/thumbnails/20181006_114609.jpg
 author: Yves Goeleven
+archived: true
 pagination: 
   enabled: true
   images: true

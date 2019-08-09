@@ -5,6 +5,7 @@ description: Een paar indrukken uit de wedstrijd van onze G12C tegen Basket Zonh
 date: 2018-09-08 11:00:00
 cover: /albums/2018-09-08-Basket-Zonhoven-G12B-Basket-Lummen-G12C/thumbnails/S0370545.jpg
 author: Danny Willems
+archived: true
 pagination: 
   enabled: true
   images: true

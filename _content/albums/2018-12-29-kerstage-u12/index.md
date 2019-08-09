@@ -5,6 +5,7 @@ description: Op de stagedag van de U12 werd hard gewerkt aan de fundamentals, va
 date: 2018-12-29 21:00:00
 cover: /albums/2018-12-29-kerstage-u12/thumbnails/DSC_0001.jpg
 author: Danny Willems
+archived: true
 pagination: 
   enabled: true
   images: true

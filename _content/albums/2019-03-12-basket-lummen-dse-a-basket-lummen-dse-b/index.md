@@ -5,6 +5,7 @@ description: Beker wedstrijd tussen Dames A en Dames B.
 date: 2019-03-12 20:00:00
 cover: /albums/2019-03-12-basket-lummen-dse-a-basket-lummen-dse-b/thumbnails/DSC_0318.JPG
 author: Marielle Vanaken
+archived: true
 pagination: 
   enabled: true
   images: true

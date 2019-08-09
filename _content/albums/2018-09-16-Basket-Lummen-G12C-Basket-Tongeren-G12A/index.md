@@ -5,6 +5,7 @@ description: Een paar indrukken uit de wedstrijd van onze G12C tegen Basket Tong
 date: 2018-09-16 16:00:00
 cover: /albums/2018-09-16-Basket-Lummen-G12C-Basket-Tongeren-G12A/thumbnails/S0491448.jpg
 author: Danny Willems
+archived: true
 pagination: 
   enabled: true
   images: true

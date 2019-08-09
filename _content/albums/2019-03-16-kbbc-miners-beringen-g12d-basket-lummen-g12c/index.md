@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen KBBC Miners Beringen G12 D vs Basket Lu
 date: 2019-03-16 10:00:00
 cover: /albums/2019-03-16-kbbc-miners-beringen-g12d-basket-lummen-g12c/thumbnails/DSC_1144.jpg
 author: Danny Willems
+archived: true
 pagination: 
   enabled: true
   images: true

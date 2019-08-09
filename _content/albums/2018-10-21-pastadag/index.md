@@ -5,6 +5,7 @@ description: Basket Lummen dankt alle eters en helpers, die afgelopen zondag er 
 date: 2018-10-21 21:00:00
 cover: /albums/2018-10-21-pastadag/thumbnails/20181021_184102.jpg
 author: Stefan Coenen
+archived: true
 pagination: 
   enabled: true
   images: true

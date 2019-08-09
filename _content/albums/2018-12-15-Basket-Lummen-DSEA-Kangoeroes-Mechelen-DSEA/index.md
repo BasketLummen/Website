@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen Basket Lummen DSE A  en Kangoeroes Pitz
 date: 2018-12-15 20:30:00
 cover: /albums/2018-12-15-Basket-Lummen-DSEA-Kangoeroes-Mechelen-DSEA/thumbnails/_DSC9652.JPG
 author: Stefan Coenen
+archived: true
 pagination: 
   enabled: true
   images: true

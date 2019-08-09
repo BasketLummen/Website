@@ -5,6 +5,7 @@ description: Enkele sfeerbeelden uit de wedstrijd van de Heren A tegen Maasmeche
 date: 2018-09-23 20:30:00
 cover: /albums/2018-09-23-BC-Maasmechelen-HSE-A-Basket-Lummen-HSE-A/thumbnails/Maasmechelen-Lummen-3.jpg
 author: John Custers
+archived: true
 pagination: 
   enabled: true
   images: true

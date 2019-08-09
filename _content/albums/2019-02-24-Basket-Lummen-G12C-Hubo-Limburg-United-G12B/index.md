@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen Basket Lummen G12C en Hubo Limburg Unit
 date: 2019-02-24 11:00:00
 cover: /albums/2019-02-24-Basket-Lummen-G12C-Hubo-Limburg-United-G12B/thumbnails/DSC_1042.jpg
 author: Danny Willems
+archived: true
 pagination: 
   enabled: true
   images: true

@@ -5,6 +5,7 @@ description: Beker Van Limburg Finale M16 tussen Hasselt BT en Basket Lummen.
 date: 2019-05-10 18:30:00
 cover: /albums/2019-05-10-Beker-Van-Limburg-Finale-M16/thumbnails/DSC_0345_bis.jpg
 author: Mary-Ann Smits
+archived: true
 pagination: 
   enabled: true
   images: true

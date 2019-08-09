@@ -5,6 +5,7 @@ description: Wedstrijd tussen Sint-Katelijne Waver M16A en Basket Lummen M16A  o
 date: 2018-09-08 11:30:00
 cover: /albums/2018-09-08-Sint-Katelijne-Waver-M16A-Basket-Lummen-M16A/thumbnails/DSC_0468.JPG
 author: Peter Wouters
+archived: true
 pagination: 
   enabled: true
   images: true

@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen Basket Lummen DSE A en Liège Panthers 
 date: 2018-12-01 20:30:00
 cover: /albums/2018-12-01-Basket-Lummen-DSEA-Liege-Panthers-DSEA/thumbnails/lummen_011218_sem_014.JPG
 author: Serge Minten
+archived: true
 pagination: 
   enabled: true
   images: true

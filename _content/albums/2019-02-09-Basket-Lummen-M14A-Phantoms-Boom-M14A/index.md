@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen Basket Lummen M14A en Phantoms Boom M14
 date: 2019-02-09 13:30:00
 cover: /albums/2019-02-09-Basket-Lummen-M14A-Phantoms-Boom-M14A/thumbnails/DSC_1051.JPG
 author: Peter Wouters
+archived: true
 pagination: 
   enabled: true
   images: true

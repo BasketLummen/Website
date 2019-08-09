@@ -5,6 +5,7 @@ description: Beker Van Limburg Finale J21 tussen Hubo Limburg United en Hasselt 
 date: 2019-05-10 21:00:00
 cover: /albums/2019-05-10-Beker-Van-Limburg-Finale-J21/thumbnails/DSC_0702_bis.jpg
 author: Mary-Ann Smits
+archived: true
 pagination: 
   enabled: true
   images: true

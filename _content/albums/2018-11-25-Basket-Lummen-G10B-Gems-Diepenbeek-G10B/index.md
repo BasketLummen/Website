@@ -5,6 +5,7 @@ description: Competitie wedstrijd tussen Basket Lummen G10B en Gems Diepenbeek G
 date: 2018-11-25 11:00:00
 cover: /albums/2018-11-25-Basket-Lummen-G10B-Gems-Diepenbeek-G10B/thumbnails/20181125-9.JPG
 author: Arne Kenis
+archived: true
 pagination: 
   enabled: true
   images: true

@@ -5,6 +5,7 @@ description: Beker Van Limburg Finale Seniors Heren Provinciale tussen Hades BBC
 date: 2019-05-11 18:00:00
 cover: /albums/2019-05-11-Beker-Van-Limburg-Finale-HSE-Prov/thumbnails/DSC_0710_bis.jpg
 author: Mary-Ann Smits
+archived: true
 pagination: 
   enabled: true
   images: true

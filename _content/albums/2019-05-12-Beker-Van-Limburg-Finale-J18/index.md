@@ -5,6 +5,7 @@ description: Beker Van Limburg Finale J18 tussen Hades BBC Hasselt en Hubo Limbu
 date: 2019-05-12 12:00:00
 cover: /albums/2019-05-12-Beker-Van-Limburg-Finale-J18/thumbnails/DSC_0136_zoom.jpg
 author: Mary-Ann Smits
+archived: true
 pagination: 
   enabled: true
   images: true
