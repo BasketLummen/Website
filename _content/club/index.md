@@ -11,7 +11,7 @@ December 1968 (eerste seizoen in competitie: 1969-1970)
 
 ## Adres
 
-Kerkstraat 9, 3560 Lummen
+Sint-Annastraat 59, 3560 Lummen
 
 ## BTW-nummer
 
@@ -25,7 +25,9 @@ Ongeveer 300
 
 | Seizoen        | Verwezenlijkingen  |
 | -------------- |--------------------|
-| 2016-1017      | Dames A **winnaar Beker van Limburg**, finale Beker van Vlaanderen  <br/> Dames C **kampioen in 1ste provinciale, winnaar Beker van Limburg** |
+| 2018-2019      | Dames A **playoffs top division 1**,  finale Beker van Limburg Landelijke  <br/> Dames C finale Beker van Limburg Provinciale <br/> Heren C **kampioen 4e provinciale**  |
+| 2017-2018      | Dames A **kampioen eerste landelijke** <br/> Heren C **kampioen 4e provinciale** |
+| 2016-2017      | Dames A **winnaar Beker van Limburg**, finale Beker van Vlaanderen  <br/> Dames C **kampioen in 1ste provinciale, winnaar Beker van Limburg** |
 | 2015-2016      | Heren A **kampioen in 1ste provinciale** <br/> Dames C **kampioen in 1ste provinciale**, finale beker van Limburg  |
 | 2014-2015      | Dames D **kampioen in 2de provinciale** <br/>  Dames A finale Beker van Limburg landelijk  <br/> Heren A finale Beker van Limburg provinciaal|
 | 2013-2014      | Dames C finale Beker van Limburg provinciaal     |
