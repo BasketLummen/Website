@@ -5,23 +5,31 @@ description: Basket Lummen
 keywords: Basket, Lummen
 ---
 
-## Ontstaan
+## Basket Lummen
+
+### Ontstaan
 
 December 1968 (eerste seizoen in competitie: 1969-1970)
 
-## Adres
+### Adres
 
 Sint-Annastraat 59, 3560 Lummen
 
-## BTW-nummer
+### BTW-nummer
 
 BE0 460 076 245
 
-## Aantal leden
+### Rekening nummer
+
+ING rekening 363-0426252-74 
+IBAN : BE16 3630 4262 5274
+BIC: BBRUBEBB
+
+### Aantal leden
 
 Ongeveer 300
 
-## Palmares
+### Palmares
 
 | Seizoen        | Verwezenlijkingen  |
 | -------------- |--------------------|

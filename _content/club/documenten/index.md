@@ -7,6 +7,7 @@ keywords: Basket, Lummen
 
 # Documenten
 
+ * [Infoblad gegevens speler en ouders](/club/documenten/Bijlage%20A%20gegevens%20speler%20en%20ouders.pdf)
  * [Medisch Getuigschrift](/club/documenten/medischgetuigschrift19-20.pdf)
  * [Verzekeringsformulier](/club/documenten/verzekeringsformulier.pdf)
  
