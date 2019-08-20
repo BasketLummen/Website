@@ -1,0 +1,1 @@
+dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\netcoreapp2.0\dish.dll generate --full --theme BasketLummen --url "https://www.basketlummen.be/"
