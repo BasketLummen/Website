@@ -3,7 +3,7 @@ layout: post
 title: "Scheidsrechterscursus"
 date: 2019-08-27 20:00:00
 description: Leid jij binnenkort onze wedstrijden?
-cover: /news/img/2019-08-27-srczonhoven2019a.JPG
+cover: /news/img/2019-08-27-srczonhoven2019a.jpg
 permalink: /news/2019-08-27-srczonhoven2019/
 ---
 

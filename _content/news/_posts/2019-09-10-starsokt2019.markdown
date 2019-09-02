@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Stars Formshooting camp "35"(28 en 29 oktober)"
+title: "Stars Formshooting camp '35'(28 en 29 oktober)"
 date: 2019-09-10 08:00:00
 description: Formshooting, Footwork, ReadnReact, Game Situations 35 voor spelers van 7 tot 18 jaar 
-cover: /news/img/2019-09-10-starsokt2019.JPG
+cover: /news/img/2019-09-10-starsokt2019.jpg
 permalink: /news/2019-09-10-starsokt2019/
 ---
 
