@@ -3,7 +3,7 @@ layout: post
 title:  "Heren A vs. Cosmo Genk"
 date:   2019-09-10 18:00:00
 description: Eerste thuiswedstrijd van onze Heren A (21 september).
-cover: /news/img/2019-09-21-HSEACosmo.jpg
+cover: /news/img/HSEACosmo.jpg
 permalink: /news/2019-09-21-HSEACosmo/
 ---
 
