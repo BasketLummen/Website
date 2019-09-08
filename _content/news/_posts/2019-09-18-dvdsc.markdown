@@ -3,7 +3,7 @@ layout: post
 title: "Dag van de sportclub"
 date: 2019-09-10 20:00:00
 description: Laat je club zien op school!
-cover: /news/img/2019-09-18-dvdsc.jpg
+cover: /news/img/2019-09-18-dezefotomoetnoggemaaktworden.jpg
 permalink: /news/2019-09-18-dvdsc/
 ---
 
@@ -15,11 +15,6 @@ Trek je basketoutfit van Basket Lummen aan en deel je passie voor het basketbal 
 
 De dag van de sportclub vindt plaats op woensdag 18 september, bij jou in de school.
 
-Heb je mooie of stoere foto´s, dan mag je die sturen naar Basket Lummen [via deze link](secretariaat@basketlummen.be), en dan posten we ze op onze facebookpagina.
-
-Het inschrijvingsformulier vind je via dezelfde link: [NoRefNoGame](https://www.basketbal.vlaanderen/agenda/detail/scheidsrechterscursus-zonhoven).
+Heb je mooie of stoere foto´s, dan mag je die sturen naar Basket Lummen [via deze link](mailto:secretariaat@basketlummen.be), en dan posten we ze op onze facebookpagina.
 
 ![RuneEnNoorInBasketPakjeMetBoekentas?](/news/img/2019-09-18-dezefotomoetnoggemaaktworden.jpg)
-
-
-
