@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "Pasta Buffet à Volonté"
+date:   2019-09-11 09:00:00
+description: Pasta Buffet à Volonté 20 Oktober 2019.
+cover: /news/img/lasagna.jpg
+permalink: /news/2019-09-11-pastadag/
+custom_js:
+- ptsans
+- jspdf.min
+- promotion
+---
+
+Op Zondag 20 Oktober 2019 organiseren we ons jaarlijkse **pasta buffet à volonté** ten voordele van onze jeugdploegen.
+
+Het **pasta buffet à volonté** zal doorgaan in **'De Kalen Dries'**, gelegen aan de Meldertse Baan 2 te Lummen, van **11 u. tot 14 u.** en van **17 u. tot 20 u**.
+
+## Vernieuwde formule
+
+Deze editie zal er keuze zijn Lasagna en 5 pasta's waarvan 1 vegetarisch. De pasta's worden geleverd door **Carlo Leoni**, een italiaanse delicatessen zaak en traiteur uit Diest.
+
+Op het menu staan:
+
+ * Lasagna Bolognese: Lasagna met een tomaten vleessaus
+ * Penne Carbonara: Penne – kaassaus - guanciale 
+ * Farfale con frutti di mare: Vlindertjespasta met een zeevruchten in een tomatensausje 
+ * Pasta con pancetta e cipolle: Pasta met Italiaans spek, ui, spinazie en room
+ * Pipi Rigate con zucchine e peperoncini: Pipe Rigate (tomatensaus met courgette en paprika’s) (vegetarisch)
+ * Spaghetti bolognese: Spaghetti met tomatenvleessaus 
+
+Het buffet is inclusief brood en kaas, en à volonté.
+
+Volwassenen betalen €16, kinderen onder de 12 jaar betalen €12 en peuters mogen gratis aanschuiven.
+
+## Hoe bestellen
+
+Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door online je bestelling door te geven (voorlopig nog niet beschikbaar), het bedrag is te betalen aan de kassa op de pastadag. 
+
+Na het plaatsen van je bestelling online krijg je een bevestiging. Gelieve deze af te printen en ook mee te nemen naar de pastadag, zo kan de administratie aan de inkom vlotter verlopen.
