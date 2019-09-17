@@ -79,7 +79,7 @@ $(document).ready(function(){
 
         var iframe = document.getElementById('printoutput');
         //iframe.src = doc.output('datauristring');
-        iframe.src = doc.output('bloburl');
+        iframe.src = "/pdf/viewer.html?file=" + doc.output('bloburl');
     }
     else{
         doc.save('bestelling.pdf');
