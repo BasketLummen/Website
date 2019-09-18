@@ -9,7 +9,29 @@ custom_js:
 - handlebars-v4.0.12
 - ptsans
 - jspdf.min
+- html2pdf.bundle.min
 - orderconfirmation
 ---
 
 <iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe>
+
+<div id="canvas" style="display: none;"></div>
+<script id="confirmation-template" type="text/x-handlebars-template">
+    {{{{raw}}}}
+    <div>
+        <p><b>Bestelling:</b> {{{data.id}}} </p>
+        <p><b>Naam:</b> {{{data.buyer.name}}}</p>
+        <p><b>Overzicht van je bestelling:</b></p>
+        <ul>
+            {{#each data.orderLines}}
+                <li>{{{this.quantity}}} x {{{this.orderedItem.name}}} = &euro; {{{line-item-total this}}}</li>
+                {{#each this.orderedItem.selectedOptions}}
+                    {{{this.value}}}
+                {{/each}}
+            {{/each}}
+        </ul>
+        <p><b>Totaal:</b>  &euro; {{{order-total data}}}</p>
+        <p><b>Betalings instructies:</b> Gelieve het te betalen bedrag mee te nemen op de dag van de bbq.</p>
+    </div>
+    {{{{/raw}}}}
+</script>

@@ -1,88 +1,84 @@
 var ordersService = "https://clubmgmt-orders-service.azurewebsites.net";
+var salesService = "https://clubmgmt-sales-service.azurewebsites.net";
+
+var getParameterByName = function (name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var o = getParameterByName("o");
+var order;
+var sale;
 
 Handlebars.registerHelper('line-item-total', function(orderLine) {
-   return orderLine.Quantity * orderLine.OrderedItem.Price.Value;
+   return orderLine.quantity * orderLine.orderedItem.price.value;
 });
 
 Handlebars.registerHelper('order-total', function(order) {
     var total = 0;
     
-    order.OrderLines.forEach(function(orderLine){
-        total += orderLine.Quantity * orderLine.OrderedItem.Price.Value;
+    order.orderLines.forEach(function(orderLine){
+        total += orderLine.quantity * orderLine.orderedItem.price.value;
     });
   
     return total;
-  });
+  }); 
 
+function loadSale(){
+    var salesbaseuri = salesService + "/api/sales/";
+	var uri = salesbaseuri + orgId + "/" + order.saleid + "/";
+	$.ajax({
+		 type: 'GET',
+		 url: uri,
+		 dataType: 'json', 
+		 crossDomain: true,
+		 success: function(p){       
+             sale = p;
+             render();
+		 }
+	   });
+}
 
+function loadConfirmation(){
+    var ordersbaseuri = ordersService + "/api/purchaseorders/";
+	var uri = ordersbaseuri + "/" + o + "/confirmation/";
+	$.ajax({
+		 type: 'GET',
+		 url: uri,
+		 dataType: 'json', 
+		 crossDomain: true,
+		 success: function(p){       
+			 order = p;		
+			 loadSale();
+		 }
+	   });
+}
 
-$(document).ready(function(){
-    var isIE = detectIE();
-
-    var tmp =  "{{{data.Buyer.Name}}}, \r\n \r\n" +
-    "Hartelijk dank om je in te schrijven voor de bbq op het slotfeest. \r\n \r\n" +
-    "We verwelkomen je op Zaterdag 25 mei 2019 in de cafetaria van sporthal De Vijfsprong, vanaf 18u30. \r\n \r\n" +
-    "Overzicht van je bestelling: \r\n \r\n" +
-    "{{#each data.OrderLines}} \r\n" +
-    "    {{{this.OrderedItem.Name}}} = €{{{line-item-total this}}} \r\n" +   
-    "   {{#each this.OrderedItem.SelectedOptions}} \r\n" +
-    "        {{{this.Value}}} \r\n" +
-    "    {{/each}} \r\n" +
-    "{{/each}} \r\n \r\n" +
-    "Totaal:  €{{{order-total data}}} \r\n \r\n" +
-    "Gelieve het te betalen bedrag en deze bevestiging mee te nemen op de dag van de bbq. \r\n \r\n" +
-    "Tot op de bbbq, \r\n" +
-    "Basket Lummen \r\n";
+function render(){
+    var tmp = $("#confirmation-template").text().replace("{{{{raw}}}}", "").replace("{{{{/raw}}}}", "");   
     var template = Handlebars.compile(tmp);
     var body = template({
-        data: {
-            Buyer: {
-                Name: "Yves Goeleven"
-            },           
-            OrderLines: [{
-                OrderedItem: {
-                    Name: "Spaghetti",
-                    Price: {
-                        Value: 10
-                    },
-                    SelectedOptions: []
-                },
-                Quantity: 1
-            }, {
-                OrderedItem: {
-                    Name: "Spaghetti",
-                    Price: {
-                        Value: 10
-                    },
-                    SelectedOptions: []
-                },
-                Quantity: 1
-            }]
-        }
+        data: order
     });
-    
-    var doc = new jsPDF()
 
-    doc.addFileToVFS("PTSans.ttf", PTSans);
-    doc.addFont('PTSans.ttf', 'PTSans', 'normal');
+    $("#canvas").append(body);
 
-    doc.setFont('PTSans'); // set font
-    
-    doc.setFontType("normal");
-    doc.setFontSize(11);
-    
-    var lines = doc.splitTextToSize(body, 180);
-    doc.text(20, 20 , lines)
-    
-    if(isIE === false){
-       // doc.autoPrint();
+    $("#canvas").show();
+    html2pdf()
+        .set({ margin: 10, html2canvas: { scale: 4, letterRendering: true } })
+        .from($("#canvas")[0]).toPdf().get('pdf').then(function (pdf) {
+            $("#canvas").hide();
+            var iframe = document.getElementById('printoutput');
+            iframe.src = "/pdf/viewer.html?file=" + pdf.output('bloburl');
+          });
+}
 
-        var iframe = document.getElementById('printoutput');
-        //iframe.src = doc.output('datauristring');
-        iframe.src = "/pdf/viewer.html?file=" + doc.output('bloburl');
-    }
-    else{
-        doc.save('bestelling.pdf');
-    }
+$(document).ready(function(){
+   
+    loadConfirmation();
    
 });
