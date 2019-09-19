@@ -1,5 +1,6 @@
-var ordersService = "https://clubmgmt-orders-service.azurewebsites.net";
-var salesService = "https://clubmgmt-sales-service.azurewebsites.net";
+var ordersService = "https://clubmgmt-orders-service-test.azurewebsites.net";
+//var ordersService = "http://localhost:22465";
+var salesService = "https://clubmgmt-sales-service-test.azurewebsites.net";
 
 var getParameterByName = function (name, url) {
     if (!url) url = window.location.href;
@@ -11,17 +12,17 @@ var getParameterByName = function (name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 var o = getParameterByName("o");
-var order;
+var confirmation;
 var sale;
 
 Handlebars.registerHelper('line-item-total', function(orderLine) {
    return orderLine.quantity * orderLine.orderedItem.price.value;
 });
 
-Handlebars.registerHelper('order-total', function(order) {
+Handlebars.registerHelper('order-total', function(confirmation) {
     var total = 0;
     
-    order.orderLines.forEach(function(orderLine){
+    confirmation.orderLines.forEach(function(orderLine){
         total += orderLine.quantity * orderLine.orderedItem.price.value;
     });
   
@@ -30,7 +31,7 @@ Handlebars.registerHelper('order-total', function(order) {
 
 function loadSale(){
     var salesbaseuri = salesService + "/api/sales/";
-	var uri = salesbaseuri + orgId + "/" + order.saleid + "/";
+	var uri = salesbaseuri + orgId + "/" + confirmation.saleId + "/";
 	$.ajax({
 		 type: 'GET',
 		 url: uri,
@@ -45,14 +46,14 @@ function loadSale(){
 
 function loadConfirmation(){
     var ordersbaseuri = ordersService + "/api/purchaseorders/";
-	var uri = ordersbaseuri + "/" + o + "/confirmation/";
+	var uri = ordersbaseuri + "confirmation/" + o;
 	$.ajax({
 		 type: 'GET',
 		 url: uri,
 		 dataType: 'json', 
 		 crossDomain: true,
 		 success: function(p){       
-			 order = p;		
+            confirmation = p;		
 			 loadSale();
 		 }
 	   });
@@ -62,7 +63,10 @@ function render(){
     var tmp = $("#confirmation-template").text().replace("{{{{raw}}}}", "").replace("{{{{/raw}}}}", "");   
     var template = Handlebars.compile(tmp);
     var body = template({
-        data: order
+        data: {
+            confirmation: confirmation,
+            sale: sale
+        }
     });
 
     $("#canvas").append(body);

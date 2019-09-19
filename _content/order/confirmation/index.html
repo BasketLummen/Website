@@ -19,19 +19,23 @@ custom_js:
 <script id="confirmation-template" type="text/x-handlebars-template">
     {{{{raw}}}}
     <div>
-        <p><b>Bestelling:</b> {{{data.id}}} </p>
-        <p><b>Naam:</b> {{{data.buyer.name}}}</p>
+        <p><b>{{{data.confirmation.buyer.name}}},</b></p>
+        <p>{{{data.sale.confirmationMessage.textParts.thank_you_message}}}</p>
+        <p>{{{data.sale.confirmationMessage.textParts.welcome_message}}}</p>
         <p><b>Overzicht van je bestelling:</b></p>
         <ul>
-            {{#each data.orderLines}}
+            {{#each data.confirmation.orderLines}}
                 <li>{{{this.quantity}}} x {{{this.orderedItem.name}}} = &euro; {{{line-item-total this}}}</li>
                 {{#each this.orderedItem.selectedOptions}}
                     {{{this.value}}}
                 {{/each}}
             {{/each}}
         </ul>
-        <p><b>Totaal:</b>  &euro; {{{order-total data}}}</p>
-        <p><b>Betalings instructies:</b> Gelieve het te betalen bedrag mee te nemen op de dag van de bbq.</p>
+        <p><b>Totaal:</b>  &euro; {{{order-total data.confirmation}}}</p>
+        <p>{{{data.sale.confirmationMessage.textParts.payment_instructions}}}</p>
+        <p>{{{data.sale.confirmationMessage.textParts.checkin_instructions}}}</p>
+        <p>{{{data.sale.confirmationMessage.textParts.support_message}}}</p>
+        <p>{{{data.sale.confirmationMessage.textParts.see_you_message}}},<br/>Basket Lummen</p>
     </div>
     {{{{/raw}}}}
 </script>
