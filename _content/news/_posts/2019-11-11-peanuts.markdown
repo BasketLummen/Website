@@ -2,14 +2,14 @@
 layout: post
 title: "Peanutstoernooi Basket Lummen 11 november 2019"
 date: 2019-09-25 21:00:00
-description: Schrijf je U8- of U10-team snel in!
+description: Schrijf je U8team snel in!
 cover: /news/img/2019-11-11-peanutsa.jpg
 permalink: /news/2019-11-11-peanuts/
 custom_js:
 - tournament
 ---
 
-Basket Lummen organiseert op maandag 11 november het jaarlijks peanutstoernooi voor spelers van U8 en U10. Doe mee en schrijf je team snel in!
+Basket Lummen organiseert op maandag 11 november het jaarlijks peanutstoernooi voor spelers van U8. Doe mee en schrijf je team snel in!
 
 ### Praktisch
 
@@ -18,7 +18,7 @@ Het toernooi vindt plaats in Sporthal de Vijfsprong, Sportweg 8 in Lummen, van 9
 ## Inschrijven
 
 Inschrijven doe je door het onderstaande formulier voor 6 november in te vullen. Van Brecht Truyers krijg je een bevestiging per e-mail.
-Je kan meerdere ploegjes van je club inschrijven.
+Je kan meerdere ploegjes van je club inschrijven. Geef ook aan tot welke categorie je team hoort: beginneling, matig, sterk.
 
 Mocht je op 6 november nog geen bevesting gekregen hebben, neem je best contact op met Brecht: [brecht_truyers@hotmail.com](brecht_truyers@hotmail.com).
 
