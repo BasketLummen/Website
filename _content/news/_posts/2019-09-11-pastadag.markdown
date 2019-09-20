@@ -33,8 +33,10 @@ Volwassenen betalen €16, kinderen onder de 12 jaar betalen €12 en peuters mo
 
 ## Hoe bestellen
 
-Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door online je bestelling door te geven (voorlopig nog niet beschikbaar), het bedrag is te betalen aan de kassa op de pastadag. 
+Je kan je bestelling doorgeven via het papieren formulier dat je van je coach gaat krijgen of door online je bestelling door te geven op het formulier hieronder, het bedrag is te betalen aan de kassa op de pastadag. 
 
-Na het plaatsen van je bestelling online krijg je een bevestiging. Gelieve deze af te printen en ook mee te nemen naar de pastadag, zo kan de administratie aan de inkom vlotter verlopen.
+Na het plaatsen van je bestelling online krijg je een bevestiging. Gelieve deze af te printen en ook mee te nemen naar de pastadag, zo kan de administratie aan de inkom vlotter verlopen. Wegens wijzigingen aan onze email infrastructuur zal deze email nu van basket.lummen@clubmanagement.io komen en niet meer van het vroegere adres. 
+
+Heb je vragen over je bestelling, dan kan je simpelweg antwoorden op de bevestigings email of contact opnemen met secretariaat@basketlummen.be. 
 
 <div data-saleid="0de84537-95e7-4d96-b79d-8d3ebb787493"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
