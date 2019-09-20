@@ -10,9 +10,9 @@ if (!String.prototype.format) {
     };
   }
 
-var catalogService = "https://clubmgmt-catalog-service-test.azurewebsites.net";
-var salesService = "https://clubmgmt-sales-service-test.azurewebsites.net";
-var ordersService = "https://clubmgmt-orders-service-test.azurewebsites.net";
+var catalogService = "https://clubmgmt-catalog-service.azurewebsites.net";
+var salesService = "https://clubmgmt-sales-service.azurewebsites.net";
+var ordersService = "https://clubmgmt-orders-service.azurewebsites.net";
 //var ordersService = "http://localhost:22465"; // uncomment for local testing
 var promotionholder;
 var optional;
@@ -367,10 +367,11 @@ function renderForm(){
                   
                 
                     var div = $("<div>").append($('<label>').text(message))
-                                        .append("<br/>")
-                                        .append("<br/>")
-                                        .append($("<button>").attr('id', 'print-order').attr('type', 'button').text("bekijk uw bestelling" ))                  
-                                        .append("&nbsp;")
+                                        .append("(")
+                                        .append($("<a>").attr('href', "/order/confirmation/?o=" + orderId ).attr('target', 'blank').text("Open pdf versie"))   
+                                        .append(")")               
+                                        .append("<br />")
+                                        .append("<br />")
                                         .append($("<button>").attr('id', 'next-order').attr('type', 'button').text(nexttext));
                                        
                     table.empty();
@@ -380,11 +381,6 @@ function renderForm(){
                         renderForm();
                     });
 
-                    $("#print-order").click(function(){
-                      
-                        window.location = "/order/confirmation/?o=" + orderId 
-                      
-                    });
                 };
 
                 var posturi= ordersService + "/api/purchaseorders/" + orgId + "/" + sale.id;

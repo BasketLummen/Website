@@ -1,6 +1,6 @@
-var ordersService = "https://clubmgmt-orders-service-test.azurewebsites.net";
+var ordersService = "https://clubmgmt-orders-service.azurewebsites.net";
 //var ordersService = "http://localhost:22465";
-var salesService = "https://clubmgmt-sales-service-test.azurewebsites.net";
+var salesService = "https://clubmgmt-sales-service.azurewebsites.net";
 
 var getParameterByName = function (name, url) {
     if (!url) url = window.location.href;
