@@ -27,20 +27,6 @@ var items = [];
 var itemDescriptions = [];
 var selectedOptionMemory = [];
 
-Handlebars.registerHelper('line-item-total', function(orderLine) {
-   return orderLine.Quantity * orderLine.OrderedItem.Price.Value;
-});
-
-Handlebars.registerHelper('order-total', function(order) {
-    var total = 0;
-    
-    order.OrderLines.forEach(function(orderLine){
-        total += orderLine.Quantity * orderLine.OrderedItem.Price.Value;
-    });
-  
-    return total;
-  });
-
 function renderForm(){
     var isIE = detectIE();
     
@@ -152,7 +138,7 @@ function renderForm(){
                 if(item.orderLimit != null)
                 {
                     var min = item.orderLimit.minimumQuantity != null ? item.orderLimit.minimumQuantity : 0;
-                    var max = item.orderLimit.maximumQuantity != null ? item.orderLimit.maximumQuantity : 2147483647; 
+                    var max = item.orderLimit.maximumQuantity != null ? item.orderLimit.maximumQuantity : Number.MAX_SAFE_INTEGER; 
                     rules[item.id] = {
                         range: [min, max]
                     };
@@ -172,7 +158,7 @@ function renderForm(){
 
                 shouldShowTotal &= item.price.value > 0;
 
-                var inputTextVisible = item.orderLimit == null || item.maximumQuantity > 1;
+                var inputTextVisible = item.orderLimit == null || (item.maximumQuantity > 1 || item.maximumQuantity == null);
                 var min = item.orderLimit != null ? item.orderLimit.minimumQuantity : 0;
                 var max = item.orderLimit != null ? item.orderLimit.maximumQuantity : Number.MAX_SAFE_INTEGER;
                 var checkType = sale.choice == "Multiple" ? 'checkbox' : 'radio';
@@ -381,10 +367,11 @@ function renderForm(){
                   
                 
                     var div = $("<div>").append($('<label>').text(message))
-                                        .append("<br/>")
-                                        .append("<br/>")
-                                        .append($("<button>").attr('id', 'print-order').attr('type', 'button').text(isIE === false ? "print uw bestelling" : "download uw bestelling" ))                  
-                                        .append("&nbsp;")
+                                        .append("(")
+                                        .append($("<a>").attr('href', "/order/confirmation/?o=" + orderId ).attr('target', 'blank').text("Open pdf versie"))   
+                                        .append(")")               
+                                        .append("<br />")
+                                        .append("<br />")
                                         .append($("<button>").attr('id', 'next-order').attr('type', 'button').text(nexttext));
                                        
                     table.empty();
@@ -394,36 +381,6 @@ function renderForm(){
                         renderForm();
                     });
 
-                    $("#print-order").click(function(){
-                        
-                        var template = Handlebars.compile(sale.confirmationMessage.template);
-                        var body = template({
-                            data: placeOrder
-                        });
-                        
-                        var doc = new jsPDF()
-                    
-                        doc.addFileToVFS("PTSans.ttf", PTSans);
-                        doc.addFont('PTSans.ttf', 'PTSans', 'normal');
-                    
-                        doc.setFont('PTSans'); // set font
-                        
-                        doc.setFontType("normal");
-                        doc.setFontSize(11);
-                        
-                        var lines = doc.splitTextToSize(body, 180);
-                        doc.text(20, 20 , lines)
-                       
-                        if(isIE === false){
-                            doc.autoPrint();
-
-                            var iframe = document.getElementById('printoutput');
-                            iframe.src = doc.output('datauristring');
-                        }
-                        else{
-                            doc.save('bestelling.pdf');
-                        }
-                    });
                 };
 
                 var posturi= ordersService + "/api/purchaseorders/" + orgId + "/" + sale.id;
