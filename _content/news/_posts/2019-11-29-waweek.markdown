@@ -55,7 +55,7 @@ Inschrijven kost 5 euro per wedstrijd per ploeg. Als je wil inschrijven kan dit 
 
 ### Goede doelen
 
-De inkomsten van dit toernooi gaan volledig naar 4 Lummense goede doelen.
+De inkomsten van dit toernooi gaan volledig naar Lummense goede doelen: 
 
 #### Medora Belgium
 
@@ -65,6 +65,10 @@ Medora Belgium is een vzw waarin tandartsen en vrijwilligers zich met hart en zi
 
 Welzijnsschakel Het Open Poortje is dé plek met de allerlaagste drempel in Lummen. Blikvangers zijn het tweedehandswinkeltje waar iedereen welkom is, de maandelijkse Warme Maaltijd en diverse vormingsnamiddagen, vaak gericht op mensen met een kleine portemonnee.
 
+#### Sint-Ferdinand
+
+uitleg uitleg uitleg uitleg......
+
 #### Sint-Vincentius Lummen
 
 De Sint-Vincentiusvereniging heeft tot doel de kansarmen uit eigen omgeving te ondersteunen op materieel en sociaal gebied en hen een luisterend oor aan te bieden. Met een team van vrijwilligers zorgen ze o.a. voor voedselpakketten voor hulpbehoevende gezinnen.
@@ -72,6 +76,9 @@ De Sint-Vincentiusvereniging heeft tot doel de kansarmen uit eigen omgeving te o
 #### Avali
 
 Zwemclub Avali biedt sinds 1997 zwemlessen en –trainingen aan voor personen met een verstandelijke beperking. Onder begeleiding van gediplomeerde trainers en vrijwilligers zwemmen ze elke zondagvoormiddag in zwembad Vijfsprong te Lummen.
+
+
+
 
 <div data-tournamentid="516b4ced-a102-482c-a3ff-7bf56f0c6568"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving uitvoeren" data-required="email" data-optional="comment" data-allowed-modes="team individual"></div>
 
