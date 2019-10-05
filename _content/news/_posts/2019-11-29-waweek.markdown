@@ -1,13 +1,14 @@
 ---
 layout: post
 title: "Lummen For Life 2019"
-date: 2019-10-08 11:00:00
-description: Lummen For Life 
 cover: /news/img/2019-11-29-waweeka.jpg
+date: 2019-10-08 11:00:00
+description: Sport mee voor het goede doel
 permalink: /news/2019-11-29-waweek/
 custom_js:
 - tournament
 ---
+
 
 LUMMEN FOR LIFE 2019
 
