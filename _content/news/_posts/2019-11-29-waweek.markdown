@@ -1,61 +1,47 @@
 ---
 layout: post
-title: "Lummen For Life 2019"
+title: "Lummen For Life 2019 (3e editie)"
 cover: /news/img/2019-11-29-waweeka.jpg
 date: 2019-10-08 11:00:00
-description: Sport mee voor het goede doel
+description: Sport mee voor het goede doel.
 permalink: /news/2019-11-29-waweek/
 custom_js:
 - tournament
 ---
 
+Ook dit jaar zet het gemeentebestuur van Lummen zich samen met verschillende lokale verenigingen in voor het goede doel. 
 
-LUMMEN FOR LIFE 2019
+Kom op vrijdag 29 november naar [Sporthal Vijfsprong](/club/sporthal/) en draag je steentje bij aan de warmste avond van Lummen. De opbrengst gaat volledig naar verschillende Lummense goede doelen, waarover je hieronder meer uitleg vindt.
 
- 
+Je mag het volgende verwachten (meer details in de flyer hieronder):
 
- 
-
- 
-
-Op vrijdag 29 november maakt Lummen zich al weer warm voor het goede doel. Het gemeentebestuur en verschillende lokale verenigingen verwelkomen je heel graag voor de derde editie van Lummen for Life, een volksfeest met live muziek, drank- en eetstandjes, een binnenspeeltuin en vooral ook een paar unieke sportieve belevenissen. De opbrengst gaat volledig naar verschillende Lummense goede doelen. 
-
- 
-
-Wij willen jullie warm maken voor één van de sportieve uitdagingen. 
-
-Kom zeker op vrijdag 29 november naar sportcomplex Vijfsprong en draag je steentje bij aan de warmste avond van Lummen. 
-
- 
-
-Baskettornooi – tennis work-out – Urban mountainbike – Urban run – water obstacle run
-
- 
-
-Er is ook een binnenspeeltuin; live muziek vanaf 21 uur en geluidsarm lichtspektakel om 20.45 uur.
-
- 
-
-Meer info vind je terug op de bijgevoegde flyer
+ - drank- en eetstandjes
+ - een binnenspeeltuin (18h00-21h00)
+ - een geluidsarm lichtspektakel (20h45)
+ - een volksfeest met live muziek (vanaf 21h00)
+ - deze sportieve uitdagingen: 
+ -- **baskettoernooi** (18h00-20h00 lage ringen en 20h00-22h00 hoge ringen)
+ -- tennis work-out (19h30-20h30)
+ -- urban mountainbike (tussen 18h00 en 19h00)
+ -– urban run (start 19h00)
+ -- water obstacle run (18h00-21h00)
 
 
-
-
-2018:
-Zin om te basketten en tegelijk goede doelen te sponsoren? Op vrijdag 16 November 2018 organiseert Basket Lummen een toernooi ter voordele van **Lummen for Life**, het toernooi zal doorgaan van 18 - 22u in [Sporthal Vijfsprong](/club/sporthal/).
-
-### Toernooi
+### Baskettoernooi
 
 Het formaat van dit toernooi zal volgens de ['3 tegen 3'](http://www.basketbal.vlaanderen/competitie/3x3) regels verlopen. 
-Er wordt van 18u tot 20u gespeeld op lage ringen, en van 20u tot 22u op hoge ringen.
+Er wordt van 18h00 tot 20h00 gespeeld op lage ringen, en van 20h00 tot 22h00 op hoge ringen.
 
 ### Inschrijven
 
-Inschrijven kost 5 euro per wedstrijd per ploeg. Als je wil inschrijven kan dit door een email te sturen naar [linda.doggen@telenet.be](mailto:linda.doggen@telenet.be). Of door onderstaande formulier in te vullen
+Schrijf je ploegje (3 spelers) in:
+- via een e-mail naar [linda.doggen@telenet.be](mailto:linda.doggen@telenet.be) 
+- of door het onderstaande formulier in te vullen
+Je betaalt EUR 5,- per ploeg (ter plaatse).
 
 ### Goede doelen
 
-De inkomsten van dit toernooi gaan volledig naar Lummense goede doelen: 
+De opbrengsten van dit toernooi gaan volledig naar Lummense goede doelen: 
 
 #### Medora Belgium
 
@@ -77,7 +63,7 @@ De Sint-Vincentiusvereniging heeft tot doel de kansarmen uit eigen omgeving te o
 
 Zwemclub Avali biedt sinds 1997 zwemlessen en –trainingen aan voor personen met een verstandelijke beperking. Onder begeleiding van gediplomeerde trainers en vrijwilligers zwemmen ze elke zondagvoormiddag in zwembad Vijfsprong te Lummen.
 
-
+![Lummen For Life flyer](/news/img/2019-11-29-waweekflyer.jpg)
 
 
 <div data-tournamentid="516b4ced-a102-482c-a3ff-7bf56f0c6568"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving uitvoeren" data-required="email" data-optional="comment" data-allowed-modes="team individual"></div>
