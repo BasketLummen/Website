@@ -339,7 +339,7 @@
 #partners ul li img{
 	height: 6vh;
 	min-height: 50px;
-	padding: 1vh 3vw;
+	padding: 0vh 3vw;
 }
 @media (max-width: 480px) {
 	#partners ul li:nth-child(n+5){
