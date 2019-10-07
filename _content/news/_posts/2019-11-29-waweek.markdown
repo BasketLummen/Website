@@ -62,8 +62,12 @@ De Sint-Vincentiusvereniging heeft tot doel de kansarmen uit eigen omgeving te o
 
 Zwemclub Avali biedt sinds 1997 zwemlessen en –trainingen aan voor personen met een verstandelijke beperking. Onder begeleiding van gediplomeerde trainers en vrijwilligers zwemmen ze elke zondagvoormiddag in zwembad Vijfsprong te Lummen.
 
-![Lummen For Life flyer](/news/img/2019-11-29-waweekflyer.jpg)
+## Inschrijfformulier
 
 
 <div data-tournamentid="516b4ced-a102-482c-a3ff-7bf56f0c6568"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving uitvoeren" data-required="email" data-optional="comment" data-allowed-modes="team individual"></div>
+
+
+![Lummen For Life flyer](/news/img/2019-11-29-waweekflyer.jpg)
+
 
