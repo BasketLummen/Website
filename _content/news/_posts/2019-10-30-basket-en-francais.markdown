@@ -13,7 +13,7 @@ Tijdens deze twee dagen zal je op een aangename en speelse manier ondergedompeld
 
 ## Ben je geïnteresseerd en wil je je graag inschrijven? 
 
-Dan kan dit op de site [www.sporthasselt.be](www.sporthasselt.be) (ons aanbod). De inschrijvingen zijn open vanaf 7 oktober. Voorafgaand is een registratie nodig op de site van sport hasselt. 
+Dan kan dit op de site [www.sporthasselt.be](https://www.sporthasselt.be/activity/indexNoCredit). De inschrijvingen zijn open vanaf 7 oktober. Voorafgaand is een registratie nodig op de site van sport hasselt. 
 
 Hieronder vind je de flyer van het kamp met de nodige info. 
 
