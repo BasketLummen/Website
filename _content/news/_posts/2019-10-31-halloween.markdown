@@ -13,3 +13,4 @@ Trek op woensdag 30 oktober je engste of grappigste pak aan, voor U6 en U8 zal e
 
 tijdens de normale trainingsuren, op woensdag 30 oktober.
 
+![Halloween](/news/img/2019-10-31-halloweenb.jpg)
