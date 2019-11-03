@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Lummen For Life 2019 (3e editie)"
-cover: /news/img/2019-11-29-waweeka.jpg
-date: 2019-10-08 11:00:00
+title: "Lummen For Life 2019"
+cover: /news/img/2019-11-29-waweekflyer.JPG
+date: 2019-11-03 11:00:00
 description: Sport mee voor het goede doel.
 permalink: /news/2019-11-29-waweek/
 custom_js:
 - tournament
 ---
 
-Ook dit jaar zet het gemeentebestuur van Lummen zich samen met verschillende lokale verenigingen in voor het goede doel. 
+Ook dit jaar zet Basket Lummen, samen met het gemeentebestuur en verschillende lokale verenigingen, zich weer in voor het goede doel. 
 
-Kom op vrijdag 29 november naar [Sporthal Vijfsprong](/club/sporthal/) en draag je steentje bij aan de warmste avond van Lummen. De opbrengst gaat volledig naar verschillende Lummense goede doelen, waarover je hieronder meer uitleg vindt.
+Kom op vrijdag 29 november naar [Sporthal Vijfsprong](/club/sporthal/) en draag ook je steentje bij aan de warmste avond van Lummen. De opbrengst gaat volledig naar verschillende Lummense goede doelen.
 
 Je mag het volgende verwachten (meer details in de flyer hieronder):
 
@@ -20,54 +20,45 @@ Je mag het volgende verwachten (meer details in de flyer hieronder):
  - een geluidsarm lichtspektakel (20h45)
  - een volksfeest met live muziek (vanaf 21h00)
  - deze sportieve uitdagingen: 
- -- **baskettoernooi** (18h00-20h00 lage ringen en 20h00-22h00 hoge ringen)
+ -- **baskettoernooi (18h00-20h00 lage ringen en 20h00-22h00 hoge ringen)**
  -- tennis work-out (19h30-20h30)
  -- urban mountainbike (tussen 18h00 en 19h00)
  -– urban run (start 19h00)
  -- water obstacle run (18h00-21h00)
 
+### Goede doelen
 
-### Baskettoernooi
+De opbrengsten van dit toernooi gaan volledig naar volgende Lummense goede doelen.
 
-Het formaat van dit toernooi zal volgens de ['3 tegen 3'](http://www.basketbal.vlaanderen/competitie/3x3) regels verlopen. 
-Er wordt van 18h00 tot 20h00 gespeeld op lage ringen, en van 20h00 tot 22h00 op hoge ringen.
+ - **Medora Belgium**: Medora Belgium is een vzw waarin tandartsen en vrijwilligers zich met hart en ziel inzetten voor het algemeen welzijn van Nepalese schoolkinderen. Ze organiseren o.a. preventieprogramma’s in de scholen voor de leerkrachten, ouders en de kinderen, zorgen ervoor dat de kinderen dagelijks op school hun tanden poetsen en leren correct hun handen te wassen.
 
-Schrijf je ploegje (3 spelers) in:
+ - **Het Open Poortje**: Welzijnsschakel Het Open Poortje is dé plek met de allerlaagste drempel in Lummen. Blikvangers zijn het tweedehandswinkeltje waar iedereen welkom is, de maandelijkse Warme Maaltijd en diverse vormingsnamiddagen, vaak gericht op mensen met een kleine portemonnee.
+
+- **O.C. MPI Sint-Ferdinand**: O.C. MPI Sint-Ferdinand biedt zorg aan jongeren en volwassenen die nood hebben aan specifieke ondersteuning of onderwijs en helpt hen hun plaats in de maatschappij te vinden.
+
+- **Sint-Vincentius Lummen**: De Sint-Vincentiusvereniging heeft tot doel de kansarmen uit eigen omgeving te ondersteunen op materieel en sociaal gebied en hen een luisterend oor aan te bieden. Met een team van vrijwilligers zorgen ze o.a. voor voedselpakketten voor hulpbehoevende gezinnen.
+
+- **Avali**: Zwemclub Avali biedt sinds 1997 zwemlessen en –trainingen aan voor personen met een verstandelijke beperking. Onder begeleiding van gediplomeerde trainers en vrijwilligers zwemmen ze elke zondagvoormiddag in zwembad Vijfsprong te Lummen.
+
+## Baskettoernooi
+
+Basket Lummen organiseert een basket toernooi voor deze goede doelen. Het formaat van dit toernooi zal volgens de ['3 tegen 3'](http://www.basketbal.vlaanderen/competitie/3x3) regels verlopen. 
+
+Er wordt van 18h00 tot 20h00 gespeeld op lage ringen voor spelertjes tot 12 jaar, van 20h00 tot 22h00 wordt er gespeeld op hoge ringen.
+
+Schrijf je ploeg (3 spelers) in:
 - via een e-mail naar [linda.doggen@telenet.be](mailto:linda.doggen@telenet.be) 
 - of door het onderstaande formulier in te vullen
 
 Je betaalt EUR 5,- per ploeg (ter plaatse).
 
-### Goede doelen
-
-De opbrengsten van dit toernooi gaan volledig naar Lummense goede doelen: 
-
-#### Medora Belgium
-
-Medora Belgium is een vzw waarin tandartsen en vrijwilligers zich met hart en ziel inzetten voor het algemeen welzijn van Nepalese schoolkinderen. Ze organiseren o.a. preventieprogramma’s in de scholen voor de leerkrachten, ouders en de kinderen, zorgen ervoor dat de kinderen dagelijks op school hun tanden poetsen en leren correct hun handen te wassen.
-
-#### Het Open Poortje
-
-Welzijnsschakel Het Open Poortje is dé plek met de allerlaagste drempel in Lummen. Blikvangers zijn het tweedehandswinkeltje waar iedereen welkom is, de maandelijkse Warme Maaltijd en diverse vormingsnamiddagen, vaak gericht op mensen met een kleine portemonnee.
-
-#### O.C. MPI Sint-Ferdinand
-
-O.C. MPI Sint-Ferdinand biedt zorg aan jongeren en volwassenen die nood hebben aan specifieke ondersteuning of onderwijs en helpt hen hun plaats in de maatschappij te vinden.
-
-#### Sint-Vincentius Lummen
-
-De Sint-Vincentiusvereniging heeft tot doel de kansarmen uit eigen omgeving te ondersteunen op materieel en sociaal gebied en hen een luisterend oor aan te bieden. Met een team van vrijwilligers zorgen ze o.a. voor voedselpakketten voor hulpbehoevende gezinnen.
-
-#### Avali
-
-Zwemclub Avali biedt sinds 1997 zwemlessen en –trainingen aan voor personen met een verstandelijke beperking. Onder begeleiding van gediplomeerde trainers en vrijwilligers zwemmen ze elke zondagvoormiddag in zwembad Vijfsprong te Lummen.
-
-## Inschrijfformulier
+### Inschrijfformulier
 
 
 <div data-tournamentid="cbf65f88-f9ec-460a-8dce-3e1723077f74"  data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een inschrijving uitvoeren" data-required="email" data-optional="comment" data-allowed-modes="team individual"></div>
 
+## Alle activiteiten
 
-![Lummen For Life flyer](/news/img/2019-11-29-waweekflyer.jpg)
+![Lummen For Life flyer](/news/img/2019-11-29-waweekflyer2.JPG)
 
 
