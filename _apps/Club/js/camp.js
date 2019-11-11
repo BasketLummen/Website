@@ -366,16 +366,31 @@ var loadEligiblePlayers = function(callback){
         tasks.push(deferred.promise());
         clubmgmt.loadTeam(limit.groupId, orgId, function(t){
 
-            t.participations.forEach(function(p){
-                if(p.roleId == limit.roleId){
-                    eligiblePlayers.push({
-                        name: p.contactName,
-                        level: t.groupName 
-                    })
-                };                
-            });
+            var profileIds = t.participations.map(function(p){
+                return p.contactId;
+             });  
             
-            deferred.resolve();
+            clubmgmt.mapProfiles(profileIds, function(profiles){
+               
+                var profile = profiles.filter(function(pr){ return pr.id == p.contactId; })[0];
+
+                var contactName = profile.firstName + " " + profile.name;           
+
+                t.participations.forEach(function(p){
+                    if(p.roleId == limit.roleId){
+                        eligiblePlayers.push({
+                            name: contactName,
+                            level: t.groupName 
+                        })
+                    };                
+                });
+
+                deferred.resolve();
+            });                 
+
+           
+            
+           
         });
     });
     $.when.apply($, tasks).then(callback);

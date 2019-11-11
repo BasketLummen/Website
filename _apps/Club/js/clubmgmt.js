@@ -1,6 +1,7 @@
 var clubmgmtimgbase = "https://clubmgmt.blob.core.windows.net/profiles/";
 var clubmgmtleaguebaseuri = "https://league-service.azurewebsites.net/api/leagues/";
 var clubmgmtorgbaseuri = "https://org-service.azurewebsites.net/api/organizations/";
+var clubmgmtprofilebaseuri = "https://user-profile-service.azurewebsites.net/api/profiles/";
 var leagueId = "09346d48-da8b-4b66-ab72-c04bad59d3d8";
 
 var clubmgmt = new function(){
@@ -16,6 +17,17 @@ var clubmgmt = new function(){
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();    
     }
+
+    this.postRequest = function(uri, body, callback){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function () { 
+            callback(xhttp.status == 204 ? null : JSON.parse(xhttp.responseText)); 
+        };
+        xhttp.onerror = function xhrError () { console.error(this.statusText); }
+        xhttp.open("POST", uri, true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(body);    
+    }
     
     //"{leagueid}/organizations/{orgId}/groups/{groupId}"
 
@@ -29,6 +41,13 @@ var clubmgmt = new function(){
      this.loadTeam = function(groupId, o, callback){
         self.getRequest(clubmgmtorgbaseuri + o + "/groups/" + groupId, function(group){
             callback(group);           
+        });
+    }
+
+    // map
+    this.mapProfiles = function(profileIds, callback){
+        self.postRequest(clubmgmtprofilebaseuri + "map", JSON.stringify({ profileIds: profileIds }), function(profiles){
+            callback(profiles);           
         });
     }
 
