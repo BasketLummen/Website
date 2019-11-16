@@ -3,7 +3,7 @@ layout: post
 title: "Kerststage U12 Basket Lummen"
 date: 2019-11-20 08:00:00
 description: Kerststage voor onze U12-spelers
-cover: /news/img/2019-12-30-kerststagea.jpg
+cover: /news/img/2019-12-30-kerststagea.JPG
 permalink: /news/2019-12-30-kerststage2019/
 custom_js:
 - fuse.min
@@ -41,4 +41,4 @@ Enkel spelers van Basket Lummen kunnen zich voor deze stages inschrijven, indien
 
 <div data-campid="1099acb8-38d2-4467-8ea3-eb5aed69442d" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
 
-![foto stage](/news/img/2019-12-30-kerststageb.jpg)
+![foto stage](/news/img/2019-12-30-kerststageb.JPG)
