@@ -1,4 +1,4 @@
-var service = "camp-service.azurewebsites.net";
+var service = "clubmgmt-camp-service.azurewebsites.net";
 var scheme = "https://";
 //var scheme = "http://";
 //var service = "localhost:22465"; // uncomment for local testing
@@ -15,6 +15,7 @@ var camp;
 var levels;
 var items = [];
 var eligiblePlayers = [];
+var visualDate = new Date();
 
 function renderForm(){
     var isIE = detectIE();
@@ -67,6 +68,13 @@ function renderForm(){
                     "name"
                     ]
                 };
+
+            var keycode;
+            search.keydown(function(event) {
+                keycode =event.which;
+            }); 
+  
+                
             var fuse = new Fuse(eligiblePlayers, options);
             search.autocomplete({
                 delay: 0,
@@ -82,11 +90,14 @@ function renderForm(){
                   callback(options);
                 },
                 select: function(event, ui) {
-                    event.preventDefault();
-                    $("#registration-search").val(ui.item.label);
-                    $("#registration-name").val(ui.item.label);
-                    $("#registration-level").val(ui.item.level);
-                    $(".showaftersearch").show();
+                    if(keycode != 8) // ignore backspace
+                    {
+                        event.preventDefault();
+                        $("#registration-search").val(ui.item.label);
+                        $("#registration-name").val(ui.item.label);
+                        $("#registration-level").val(ui.item.level);
+                        $(".showaftersearch").show();
+                    }                    
                 },
                 focus: function(event, ui) {
                     event.preventDefault();
@@ -371,13 +382,23 @@ var loadEligiblePlayers = function(callback){
              });  
             
             clubmgmt.mapProfiles(profileIds, function(profiles){
-               
-                var profile = profiles.filter(function(pr){ return pr.id == p.contactId; })[0];
-
-                var contactName = profile.firstName + " " + profile.name;           
 
                 t.participations.forEach(function(p){
+
+                    var from = p.from != null ? new Date(p.from) :  null;
+                    var to = p.to != null ? new Date(p.to) :  null;
+                    if( from != null && from > visualDate || to != null && to <= visualDate ) return;
+
                     if(p.roleId == limit.roleId){
+
+                        var profile = profiles.filter(function(pr){ return pr.id == p.contactId; })[0];
+
+                        if(!profile){
+                            return;
+                        } 
+
+                        var contactName = profile.firstName + " " + profile.name;   
+
                         eligiblePlayers.push({
                             name: contactName,
                             level: t.groupName 
