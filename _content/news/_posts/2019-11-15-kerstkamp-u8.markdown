@@ -12,10 +12,6 @@ custom_js:
 
 Ook onze jeugdploegen komen aan bod tijdens de kerstvakantie: de U6, U8, U10 spelers kunnen meedoen aan de kerststage van Basket Lummen.
 
-De stage voor U6, U8 en U10 is gericht op:
-- (Wachten op input marlies)
-
-
 ### Praktisch
 ²
 Op 2 en 3 januari 2020 van 09h00 tot 13h00. Je kan voor deze twee dagen apart inschrijven. 
