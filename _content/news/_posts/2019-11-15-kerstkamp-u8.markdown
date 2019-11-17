@@ -20,7 +20,7 @@ Op 2 en 3 januari 2020 van 09h00 tot 13h00. Je kan voor deze twee dagen apart in
 
 Inschrijven is vereist en doe je via het formulier hieronder, ten laatste op 26 december 2019. Je betaalt EUR 5,- per dag ter plaatse.
 
-Enkel spelertjes van de U6, U8 & U10 ploegen van Basket Lummen kunnen zich voor deze stage inschrijven, indien je moeilijkheden ondervind hierbij neem dan contact op met [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
+Enkel spelertjes van de U6, U8 & U10 ploegen van Basket Lummen kunnen zich voor deze stage inschrijven, indien je moeilijkheden ondervindt hierbij neem dan contact op met [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
 
 <div data-campid="e3be52af-b834-48a9-b890-6754cd21bca1" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een spelertje inschrijven" data-required="email" data-optional="telephone"></div>
 
