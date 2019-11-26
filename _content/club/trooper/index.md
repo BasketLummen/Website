@@ -7,9 +7,9 @@ keywords: Basket, Lummen, Trooper
 
 # Trooper
 
-## Gratis mijn vereniging steunen? Hoe kan dat?
+## Gratis Basket Lummen steunen? Hoe kan dat?
 
-Maak kennis met Trooper. Een website waar je door online te shoppen Basket Lummen kan steunen, zonder dat het je extra kost.
+Maak kennis met Trooper. Een website waar je door online te shoppen Basket Lummen kan steunen, zonder dat het je ook maar één cent extra kost.
 
 Voor je jouw bankkaart bovenhaalt, is het belangrijk om te weten hoe Trooper precies in elkaar zit.
 
@@ -18,7 +18,7 @@ Voor je jouw bankkaart bovenhaalt, is het belangrijk om te weten hoe Trooper pre
 1.	Basket Lummen heeft een unieke [Trooper pagina](https://trooper.be/wwwbasketlummenbe)
 2.	Op deze pagina staan links naar webshops.
 3.	Als je via die links naar een webshop surft, weet de shop dat jij ons graag wil steunen.
-4.	De link doet het werk, en jij kan gewoon shoppen zoals je normaal shopt, zonder ook maar €1 extra uit te geven.
+4.	De link doet het werk, en jij kan gewoon shoppen zoals je normaal shopt, zonder ook maar één cent extra uit te geven.
 5.	Van elke aankoop die jij doet, gaat er een percentje naar Basket Lummen. Iedereen blij!
 
 <br/>
