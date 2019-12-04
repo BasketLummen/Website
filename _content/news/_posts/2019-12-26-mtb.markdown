@@ -2,8 +2,8 @@
 layout: post
 title:  "X-Masbikers MTB-tour"
 date:   2019-11-29 01:00:00
-description: Jaarlijkse mountainbiketocht in Lummen op 26 december.
-cover: /news/img/2019-12-26-mtb2019a.jpg
+description: Jaarlijkse X-Masbikers mountainbiketocht in Lummen op 26 december.
+cover: /news/img/2019-12-26-mtb2019a.JPG
 permalink: news/2019-12-26-mtb/
 ---
 
@@ -42,6 +42,6 @@ Volgende faciliteiten zijn aanwezig:
 - Boterhammen met spek bij aankomst
 - Douches en kleedkamers
 
-![mountainbike](/news/img/2019-12-26-mtb2019b.jpg)
+![mountainbike](/news/img/2019-12-26-mtb2019b.JPG)
 
 
