@@ -1,4 +1,4 @@
-var ordersService = "https://clubmgmt-orders-service.azurewebsites.net";
+var ordersService = "https://clubmgmt-orderbooking-service-test.azurewebsites.net";
 //var ordersService = "http://localhost:22465";
 var salesService = "https://clubmgmt-sales-service.azurewebsites.net";
 
@@ -45,7 +45,7 @@ function loadSale(){
 }
 
 function loadConfirmation(){
-    var ordersbaseuri = ordersService + "/api/purchaseorders/";
+    var ordersbaseuri = ordersService + "/api/orderbookings/";
 	var uri = ordersbaseuri + "confirmation/" + o;
 	$.ajax({
 		 type: 'GET',
