@@ -19,7 +19,7 @@ Voor de liefhebber van andere lekkernijen bieden we het volgende aan:
 - Halve haan
 - Vidé
 - Stoofvlees
-- Veggie nuggets
+- Veggie burgers
 - 2 hamburgers
 
 ### Praktisch
