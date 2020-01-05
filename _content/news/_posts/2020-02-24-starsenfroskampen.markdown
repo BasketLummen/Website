@@ -3,7 +3,7 @@ layout: post
 title: "Stars en Fros Basketbalkampen 2020"
 date: 2020-01-18 08:00:00
 description: Stars- en Froskampen 2020 
-cover: /news/img/kerstkamp-u12.JPG
+cover: /news/img/2020-02-24-starsenfroskampena.jpg
 permalink: /news/2020-02-24-starsenfroskampen/
 ---
 Ook dit jaar kan je je basketvaardigheden blijven oefenen of uitbreiden! Hieronder vind je de planning van dit jaar terug, zodat je zeker niets hoeft te missen. De organisatie is in handen van Bart Wouters, Frank Schevenels en Jos Cielen.
@@ -37,7 +37,7 @@ Inschrijven kan je doen zodra de flyer van het kamp rondgestuurd is. Je kan ook 
 
 Bart Wouters 
 
-      [bart.wouters11@gmail.com](mailto:bart.wouters11@gmail.com)
+   [bart.wouters11@gmail.com](mailto:bart.wouters11@gmail.com)
   
       telefoon: +32 486 15 87 05
 
