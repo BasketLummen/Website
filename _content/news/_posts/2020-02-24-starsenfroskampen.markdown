@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stars en Fros Basketbalkampen 2020"
-date: 2020-01-18 08:00:00
+date: 2020-01-07 08:00:00
 description: Stars- en Froskampen 2020 
 cover: /news/img/2020-02-24-starsenfroskampena.jpg
 permalink: /news/2020-02-24-starsenfroskampen/
@@ -35,9 +35,7 @@ FROS
 
 Inschrijven kan je doen zodra de flyer van het kamp rondgestuurd is. Je kan ook op de hoogte blijven of meer informatie opvragen door de organisatie te contacteren: 
 
-Bart Wouters 
-
-   [bart.wouters11@gmail.com](mailto:bart.wouters11@gmail.com)
+Bart Wouters, [bart.wouters11@gmail.com](mailto:bart.wouters11@gmail.com)
   
       telefoon: +32 486 15 87 05
 
