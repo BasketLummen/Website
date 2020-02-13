@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Festivalzomer 2020"
-date: 2019-03-25 12:00:00
+date: 2020-02-14 12:00:00
 description: Festivalzomer 2020
-cover: /news/img/2020-07-01-festivalsa.jpg
+cover: /news/img/2020-07-01-festivala.jpg
 permalink: /news/2020-07-01-festival/
 ---
 Ook deze zomer helpt Basket Lummen mee bij Rock Werchter, Werchter Classic, Werchter Boutique en Pukkelpop! Voor onze club is dat supergoed nieuws en voor jullie ook! 
@@ -24,6 +24,6 @@ Voor meer informatie, vragen of inschrijven kan je terecht bij Els Dereze:
 
 ### Inschrijven
 
-Schrijf je snel in en bezorg je volledige naam, rijksregisternummer, adres en gsm-nummer aan Els Dereze.
+Schrijf je snel in bij Els en bezorg haar je volledige naam, rijksregisternummer, adres en gsm-nummer aan Els Dereze.
 
 Dankzij jullie hulp wordt onze club gesteund!
