@@ -2,8 +2,8 @@
 layout: post
 title: "Info momenten seizoen 20-21"
 date: 2020-01-22 10:00:00
-description: TODO
-cover: /news/img/lid-worden-square.jpg
+description: Graag zouden wij alle ouders van spelers jonger dan 12 en de jongens, willen uitnodigen op een infomoment om onze plannen voor volgend seizoen toe te lichten. 
+cover: /news/img/info-session.png
 permalink: /news/2020-03-07-infosessie/
 ---
 
