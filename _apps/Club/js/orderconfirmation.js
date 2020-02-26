@@ -75,9 +75,17 @@ function render(){
     html2pdf()
         .set({ margin: 10, html2canvas: { scale: 4, letterRendering: true } })
         .from($("#canvas")[0]).toPdf().get('pdf').then(function (pdf) {
+
+            var documentUrl = pdf.output('bloburl');
+
+            appInsights.trackEvent({
+                name: "ConfirmationPdfGenerated",
+                properties: { eventCategory: "Fundraising", eventAction: "render", orderId: o, documentUrl: documentUrl }
+              });
+
             $("#canvas").hide();
             var iframe = document.getElementById('printoutput');
-            iframe.src = "/pdf/viewer.html?file=" + pdf.output('bloburl');
+            iframe.src = "/pdf/viewer.html?file=" + documentUrl;
           });
 }
 
