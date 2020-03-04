@@ -2,7 +2,7 @@
 layout: post
 title: "ministages U10 en U12"
 date: 2020-03-06 20:00:00
-description: leerrijke stage tijdens de paasvakantie
+description: Leerrijke stage tijdens de paasvakantie
 cover: /news/img/2020-04-06-pasena.jpg
 permalink: /news/2020-04-06-pasen/
 custom_js:
