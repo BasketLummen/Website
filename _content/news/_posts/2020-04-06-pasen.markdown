@@ -2,7 +2,7 @@
 layout: post
 title: "Pasen 2020"
 date: 2020-03-06 20:00:00
-description: stages voor onze U10- en U12-spelers
+description: ministages voor onze U10- en U12-spelers
 cover: /news/img/2020-04-06-pasena.jpg
 permalink: /news/2020-04-06-pasen/
 custom_js:
@@ -10,39 +10,34 @@ custom_js:
 - camp
 ---
 
-TEKST NOG AAN TE PASSEN!
+Onze jeugdploegen (U10 en U12) kunnen tijdens de paasvakantie meedoen aan de ministages van Basket Lummen.
 
-Ja graag online inschrijvingen.
- 
- Het is idd alleen voor spelers van Lummen.
-Info:
-U12 maandag 06/04 van 13:00 tot 17:00 in sporthal Herkules in Herd de Stad – prijs 5 Euro – onderwerpen: shooting en 1tg1.
-U8-U10 vrijdag 17/04 van 09:30 tot 13:30 in de Vijfsprong – prijs 5 Euro – onderwerp: spelvormen en fundamentals
-Sportcentrum Herkules
-Ursulinenstraat 1 bus 1
-3540 Herk-de-Stad
-
-
-
-
-
-Ook onze jeugdploegen komen aan bod tijdens de kerstvakantie: de U12 spelers kunnen meedoen aan de kerststage van Basket Lummen.
+De stage voor U10 is gericht op:
+* spelvormen
+* fundamentals
 
 De stage voor U12 is gericht op:
-* 1 tegen 1 in ploegcontext
-* Decission making in meerderheidssituaties
-* 3 tegen 3
+* 1 tegen 1 
+* shooting
 
 ### Praktisch
 
-Op 30 december 2019 van 10h00 tot 16h00 in sporthal De Vijfsprong, Lummen.
+U10:
+- voor spelers van Basket Lummen
+- op vrijdag 17 april 2020, van 09h30 tot 13h30
+- in Sporthal De Vijfsprong, Sportlaan, Lummen
+
+U12:
+- voor spelers van Basket Lummen
+- op maandag 6 april 2020, van 13h00 tot 17h00
+- in Sportcentrum Herkules, Ursulinenstraat 1, Herk-de-Stad
 
 ### Inschrijven
 
-Inschrijven is vereist en doe je via het formulier hieronder, ten laatste op 26 december 2019. Je betaalt EUR 5,- ter plaatse.
-
-Enkel spelers van de U12 ploegen van Basket Lummen kunnen zich voor deze stage inschrijven, indien je moeilijkheden ondervindt hierbij neem dan contact op met [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
+Schrijf je in via het formulier hieronder, ten laatste op 1 april 2020. Je betaalt EUR 5,- ter plaatse.
 
 <div data-campid="90e32761-d2e0-4179-91f9-8209772bfdb1" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
 
-![foto stage](/news/img/2020-04-06-pasena.jpg)
+Bij vragen over de inschrijving kan je mailen naar: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
+
+![u10 spelers](/news/img/2020-04-06-pasena.jpg)
