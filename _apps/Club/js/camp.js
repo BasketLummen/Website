@@ -277,6 +277,10 @@ function renderForm(){
             btn.addClass("showaftersearch");
         }
             
+        appInsights.trackEvent({
+            name: "CampRegistrationFormRendered",
+            properties: { eventCategory: "Camps", eventAction: "render",  campid: campid }
+        });
 
         // set up form validation and submit logic
         var form = campholder.find('.responsive-form');
@@ -344,6 +348,10 @@ function renderForm(){
                   
                 };
 
+                appInsights.trackEvent({
+                    name: "CampRegistrationFormCompleted",
+                    properties: { eventCategory: "Camps", eventAction: "submit",  campid: campid, registrationId: registration.id }
+                });
                 // send it to the service
                
                 $.ajax({
@@ -352,7 +360,8 @@ function renderForm(){
                     contentType: 'application/json', 
                     crossDomain: true,
                     data : JSON.stringify(registration),                        
-                    success: function(data){ 
+                    success: function(data){                        
+
                       report("Registratie verstuurd", data.message);
                       $("#submit .spinner").hide();
                       $("#submit").attr('disabled', false);
