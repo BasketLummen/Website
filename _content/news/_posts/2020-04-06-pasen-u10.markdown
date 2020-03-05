@@ -1,0 +1,31 @@
+---
+layout: post
+title: "ministages U10"
+date: 2020-03-06 20:00:00
+description: Leerrijke stage tijdens de paasvakantie
+cover: /news/img/2020-04-06-pasena.jpg
+permalink: /news/2020-04-06-pasen/
+custom_js:
+- fuse.min
+- camp
+---
+
+Onze U8 en U10 kunnen tijdens de paasvakantie meedoen aan de ministages van Basket Lummen. Er zal voornamelijk gewerkt worden aan spelvormen en fundamentals
+
+### Praktisch
+
+- voor spelers van Basket Lummen
+- op vrijdag 17 april 2020, van 09h30 tot 13h30
+- in Sporthal De Vijfsprong, Sportlaan, Lummen
+
+### Inschrijven
+
+Schrijf je in via het formulier hieronder, ten laatste op 1 april 2020. Je betaalt EUR 5,- ter plaatse.
+
+<br/>
+
+<div data-campid="ba596a5b-b695-49cb-8cc0-1867e48c47f6" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
+
+Bij vragen over de inschrijving kan je mailen naar: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
+
+![u10 spelers](/news/img/2020-04-06-pasena.jpg)
