@@ -20,7 +20,7 @@ Deze infomomenten zullen doorgaan in de grote vergaderzaal van de sporthal op 6 
 * 7 maart, 16.45 - 17.30, jongens en meisjes van het geboorte jaar 2011 tot 2012
 * 7 maart, 17.45 - 18.30, jongens en meisjes van het geboorte jaar 2009 tot 2010
 * 7 maart, 18.45 - 19.30, jongens van het geboorte jaar 2007 tot 2008
-* 7 maart, 19.45 - 20.30, jongens van het geboorte jaar 2003 tot 2006
+* 12 maart, 21.00 - 21.45, jongens van het geboorte jaar 2003 tot 2006
 
 (Voor de Limburg Lizards werking komen er aparte info momenten op een later tijdstip) 
 
