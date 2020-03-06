@@ -71,7 +71,15 @@ function renderForm(){
 
             var keycode;
             search.keydown(function(event) {
-                keycode =event.which;
+
+                if(!keycode){
+                    appInsights.trackEvent({
+                        name: "CampRegistrationFormSearchStarted",
+                        properties: { eventCategory: "Camps", eventAction: "search",  campid: campid }
+                    });
+                }
+
+                keycode = event.which;
             }); 
   
                 
