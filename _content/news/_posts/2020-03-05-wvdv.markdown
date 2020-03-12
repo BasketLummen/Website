@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Helpende helden"
-date:   2020-03-25 10:00:00
+date:   2020-03-05 10:00:00
 description: Onmisbare vrijwilligers voor onze club!
 cover: /news/img/2020-03-05-wvdva.jpg
 permalink: /news/2020-03-05-wvdv/

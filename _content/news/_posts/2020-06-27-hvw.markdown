@@ -2,7 +2,7 @@
 layout: post
 title:  "Hans Vanwijn basketbalkampen"
 cover: /news/img/2020-06-27-hvwa.jpg
-date: 2020-06-27 14:00:00
+date: 2020-02-27 14:00:00
 description: Leuke en professionele kampen voor de jeugd
 permalink: /news/2020-06-27-hvw/
 ---

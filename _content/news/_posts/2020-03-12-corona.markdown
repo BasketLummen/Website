@@ -2,7 +2,7 @@
 layout: post
 title: "Corona Virus Update"
 date: 2020-03-12 10:00:00
-description: Festivalzomer 2020
+description: Alle wedstrijden afgelast tot 31/3, tot nader bericht gaan alle trainingen (voorlopig) door!
 cover: /news/img/corona.png
 permalink: /news/2020-03-12-corona/
 ---
