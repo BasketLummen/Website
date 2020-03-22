@@ -23,11 +23,13 @@ Onze U8 en U10 kunnen tijdens de paasvakantie meedoen aan de ministages van Bask
 
 ### Inschrijven
 
-Schrijf je in via het formulier hieronder, ten laatste op 1 april 2020. Je betaalt EUR 5,- ter plaatse.
+**UPDATE: Alle paaskampen zijn wegens de corona crisis geannuleerd**
+
+<!-- Schrijf je in via het formulier hieronder, ten laatste op 1 april 2020. Je betaalt EUR 5,- ter plaatse.
 
 <br/>
 
-<div data-campid="ba596a5b-b695-49cb-8cc0-1867e48c47f6" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
+<div data-campid="ba596a5b-b695-49cb-8cc0-1867e48c47f6" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div> -->
 
 Bij vragen over de inschrijving kan je mailen naar: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
 

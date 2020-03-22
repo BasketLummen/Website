@@ -2,7 +2,7 @@
 layout: post
 title: "Corona Virus Update"
 date: 2020-03-12 10:00:00
-description: Alle wedstrijden afgelast tot 31/3, tot nader bericht gaan alle trainingen (voorlopig) door!
+description: Alle wedstrijden en trainingen afgelast tot 31/3!
 cover: /news/img/corona.png
 permalink: /news/2020-03-12-corona/
 ---
@@ -10,21 +10,24 @@ permalink: /news/2020-03-12-corona/
 Beste speler/ouder,
 
 Zoals jullie waarschijnlijk al weten zijn alle wedstrijden van 12/03 tot 31/03 afgelast door de bond. Het is mogelijk dat er na die datum een verlenging komt, maar dat zal tijdig gecommuniceerd worden.
- 
-Hoe zit het met de trainingen?
 
-Tot nader bericht gaan alle trainingen (voorlopig) door! 
+**UPDATE: Alle trainingen zijn ook met onmiddelijke ingang geannuleerd.**
+**UPDATE: De basketbal bond heeft beslist de competitie niet meer te herstarten dit seizoen.**
+
+~~Hoe zit het met de trainingen?~~
+
+~~Tot nader bericht gaan alle trainingen (voorlopig) door!~~
  
-MAAR gelieve absoluut het volgende te doen:
-- Wanneer je ziek bent MOET je thuis blijven!!! Ook al is het maar een lichte verkoudheid!!!
-- Was voor en na de training je handen. Indien mogelijk ook tijdens.
-- We roepen niet meer gemeenschappelijk.
-- We douchen niet meer in de sporthal maar thuis.
-- We drinken niet van dezelfde fles.
-- We geven geen handen (dus we roepen ook niet meer).
+~~MAAR gelieve absoluut het volgende te doen:~~
+~~- Wanneer je ziek bent MOET je thuis blijven!!! Ook al is het maar een lichte verkoudheid!!!~~
+~~- Was voor en na de training je handen. Indien mogelijk ook tijdens.~~
+~~- We roepen niet meer gemeenschappelijk.~~
+~~- We douchen niet meer in de sporthal maar thuis.~~
+~~- We drinken niet van dezelfde fles.~~
+~~- We geven geen handen (dus we roepen ook niet meer).~~
  
-Van zodra onze regering gaat beslissen dat de scholen dicht moeten, zullen de trainingen waarschijnlijk ook geannuleerd worden.
-Indien je vindt dat je sowieso niet wil komen trainen, is dit uiteraard geen probleem; gelieve dan wel iets te laten weten aan je trainer.
+~~Van zodra onze regering gaat beslissen dat de scholen dicht moeten, zullen de trainingen waarschijnlijk ook geannuleerd worden.~~
+~~Indien je vindt dat je sowieso niet wil komen trainen, is dit uiteraard geen probleem; gelieve dan wel iets te laten weten aan je trainer.~~
  
 Met verdere vragen kun je terecht bij je trainer of bij het bestuur.
 
