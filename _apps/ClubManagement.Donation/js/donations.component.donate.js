@@ -26,12 +26,31 @@ class Donate extends HTMLElement {
             donation.value = 20;
         });
 
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-        });
+        // Interaction with Stripe
+        // CC details, SCA
+        // TODO
 
-        form.addEventListener('cancel', async (event) => {
+        // var donationCommand = {
+        //     amount: donation.value
+        // };
+
+        // form.addEventListener('submit', async (event) => {
+        //     event.preventDefault();
+
+        //     await $.ajax({
+        //         type: 'POST',
+        //         url: '/TODO',
+        //         contentType: 'application/json',
+        //         data : JSON.stringify(donationCommand),
+        //         crossDomain: true
+        //     });
+        // });
+
+        var cancel = form.querySelector('#cancel');
+        cancel.addEventListener('click', async (event) => {
             event.preventDefault();
+
+            donation.value = 0;
         });
     }
 }
