@@ -1,0 +1,41 @@
+---
+layout: page
+title: Basket Lummen
+description: Basket Lummen
+keywords: Basket, Lummen, Donaties
+modules:
+  - donations.app
+---
+
+<div class="container content">
+	<donate-form />
+</div>
+
+<template id="donation-template">
+    <form class="responsive-form">
+        <fieldset>
+            <legend>Choose amount to donate</legend>
+            <table>
+                <tr>
+                    <td>
+						<button type="button" id="donate5">€5</button>
+						<button type="button" id="donate10">€10</button>
+						<button type="button" id="donate20">€20</button>
+                    </td>
+				</tr>
+				<tr>
+					<td>
+						<input type="number" id="donateOther" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="submit"></label>
+						<button type="submit" id="submit">Submit</button>
+						<button type="button" id="cancel">Cancel</button>
+					</td>
+				</tr>
+            </table>
+        </fieldset>
+    </form>
+</template>
