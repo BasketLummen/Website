@@ -3,13 +3,16 @@ class Donate extends HTMLElement {
     constructor(){
         super();
 
-        this.template = document.getElementById('donation-template');
+        this.template = document.getElementById("donation-template");
+        this.baseUri = "https://clubmgmt-donation-service-test.azurewebsites.net/api/donations";
+        this.stripe = Stripe("pk_test_8U57DC7IOjILi4nOIQM3lmVg");
     }
 
     async connectedCallback() {
         this.innerHTML = this.template.innerHTML;
 
-        var form = this.querySelector('.responsive-form');
+        var amountForm = this.querySelector('#amount-form');
+        var cardForm = this.querySelector('#card-form');
 
         var donate5 = this.querySelector("#donate5");
         var donate10 = this.querySelector("#donate10");
@@ -26,27 +29,37 @@ class Donate extends HTMLElement {
             donation.value = 20;
         });
 
-        // Interaction with Stripe
-        // CC details, SCA
-        // TODO
+        var donationCommand = {
+            amount: donation.value
+        };
 
-        // var donationCommand = {
-        //     amount: donation.value
-        // };
+        amountForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
 
-        // form.addEventListener('submit', async (event) => {
-        //     event.preventDefault();
+            // Request CSA
 
-        //     await $.ajax({
-        //         type: 'POST',
-        //         url: '/TODO',
-        //         contentType: 'application/json',
-        //         data : JSON.stringify(donationCommand),
-        //         crossDomain: true
-        //     });
-        // });
+            // CC registration
+            var elements = this.stripe.elements();
+            var card = elements.create("card");
+            card.mount("#card-element");
 
-        var cancel = form.querySelector('#cancel');
+            // Submit donation information to the CM
+            // const donationId = guid();
+            // const requestStrongCustomerAuthentication = { donationId: donationId };
+            // const url = `${this.baseUri}/${donationId}/requestStrongCustomerAuthentication`;
+
+            // const response = await fetch(url, {
+            //     method: 'POST',
+            //     mode: 'cors',
+            //     cache: 'no-cache',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(requestStrongCustomerAuthentication),
+            //   });
+
+            //   var scaResponse = await response.json();
+        });
+
+        var cancel = amountForm.querySelector('#cancel');
         cancel.addEventListener('click', async (event) => {
             event.preventDefault();
 
