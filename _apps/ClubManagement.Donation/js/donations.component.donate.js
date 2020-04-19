@@ -36,27 +36,48 @@ class Donate extends HTMLElement {
         amountForm.addEventListener('submit', async (event) => {
             event.preventDefault();
 
-            // Request CSA
-
             // CC registration
             var elements = this.stripe.elements();
-            var card = elements.create("card");
-            card.mount("#card-element");
+            this.card = elements.create("card");
+            this.card.mount("#card-element");
+        });
 
-            // Submit donation information to the CM
-            // const donationId = guid();
-            // const requestStrongCustomerAuthentication = { donationId: donationId };
-            // const url = `${this.baseUri}/${donationId}/requestStrongCustomerAuthentication`;
+        cardForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            // Prepare donation
+            const donationId = guid();
+            const prepareDonation = {
+                donationId: donationId,
+                amount: donation.value,
+                currency: "eur"
+            };
+            const url = `${this.baseUri}/${donationId}/PrepareDonation`;
 
-            // const response = await fetch(url, {
-            //     method: 'POST',
-            //     mode: 'cors',
-            //     cache: 'no-cache',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(requestStrongCustomerAuthentication),
-            //   });
+            const response = await fetch(url, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(prepareDonation),
+              });
 
-            //   var scaResponse = await response.json();
+              var paymentIntent = await response.json();
+
+              var cardHolder = cardForm.querySelector('#card-holder').value;
+
+              var result = await this.stripe.confirmCardPayment(paymentIntent.secret, {
+                payment_method: {
+                  card: this.card,
+                  billing_details: {
+                    name: cardHolder
+                  }
+                }
+              });
+
+            // Confirm donation information
+            // TODO:
+            // testing Stripe CC: 4000002500003155
         });
 
         var cancel = amountForm.querySelector('#cancel');
