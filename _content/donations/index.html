@@ -21,6 +21,9 @@ modules:
             <legend>Choose amount to donate</legend>
             <table>
                 <tr>
+					<td>
+						<label>Bedrag</label>
+					</td>
                     <td>
 						<button type="button" id="donate5">€5</button>
 						<button type="button" id="donate10">€10</button>
@@ -29,10 +32,26 @@ modules:
 				</tr>
 				<tr>
 					<td>
-						<input type="number" id="donateOther" />
+						<label>Aangepast bedrag</label>
+					</td>
+					<td>
+						<input type="number" id="donateOther" required />
 					</td>
 				</tr>
 				<tr>
+					<td>Kaarthouder</td>
+					<td>
+						<input type="text" id="card-holder" required />
+					</td>
+				</tr>
+				<tr>
+					<td>Kaart</td>
+					<td>
+						<div id="card-element" />
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
 					<td>
 						<label for="submit"></label>
 						<button type="submit" id="submit">Submit</button>
@@ -42,29 +61,4 @@ modules:
             </table>
         </fieldset>
 	</form>
-	
-	<form class="responsive-form" id="card-form">
-        <fieldset>
-            <legend>Choose amount to donate</legend>
-            <table>
-                <tr>
-                    <td>
-						<input type="text" id="card-holder" required />
-					</td>
-				</tr>
-				<tr>
-                    <td>
-						<div id="card-element" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for="submit"></label>
-						<button type="submit" id="submit">Submit</button>
-						<button type="button" id="cancel">Cancel</button>
-					</td>
-				</tr>
-            </table>
-        </fieldset>
-    </form>
 </template>

@@ -861,3 +861,7 @@ button .spinner{
 	margin-right: .5vw;
     display: none;
 }
+
+#card-element {
+	max-width: 480px;
+}

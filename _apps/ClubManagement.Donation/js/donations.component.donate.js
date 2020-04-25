@@ -11,22 +11,49 @@ class Donate extends HTMLElement {
     async connectedCallback() {
         this.innerHTML = this.template.innerHTML;
 
-        var amountForm = this.querySelector('#amount-form');
-        var cardForm = this.querySelector('#card-form');
+        let amountForm = this.querySelector('#amount-form');
 
-        var donate5 = this.querySelector("#donate5");
-        var donate10 = this.querySelector("#donate10");
-        var donate20 = this.querySelector("#donate20");
-        var donation = this.querySelector("#donateOther");
-
+        let donate5 = this.querySelector("#donate5");
+        let donate10 = this.querySelector("#donate10");
+        let donate20 = this.querySelector("#donate20");
+        let donation = this.querySelector("#donateOther");
+        let cardHolder = this.querySelector('#card-holder');
+        
+        let updateAndValidateDonation = function(amount){
+            donation.value = amount;
+            donation.dispatchEvent(new InputEvent('change'));
+        };
+        
         donate5.addEventListener('click', async (event) =>{
-            donation.value = 5;
+            updateAndValidateDonation(5);
         });
         donate10.addEventListener('click', async (event) =>{
-            donation.value = 10;
+            updateAndValidateDonation(10);
         });
         donate20.addEventListener('click', async (event) =>{
-            donation.value = 20;
+            updateAndValidateDonation(20);
+        });
+
+        let amountProvided;
+        let cardHolderProvided;
+        let showCardInformation = () => {
+            if (amountProvided && cardHolderProvided){
+                // Show CC form
+                const elements = this.stripe.elements();
+                this.card = elements.create("card");
+                this.card.mount("#card-element");
+            }
+        };
+        
+        donation.addEventListener('change', async (event) =>{
+            amountProvided = !!event.target.value;
+            
+            showCardInformation();
+        });
+        cardHolder.addEventListener('change', async (event) =>{
+            cardHolderProvided = !!event.target.value;
+
+            showCardInformation();
         });
 
         var donationCommand = {
@@ -35,16 +62,7 @@ class Donate extends HTMLElement {
 
         amountForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-
-            // CC registration
-            var elements = this.stripe.elements();
-            this.card = elements.create("card");
-            this.card.mount("#card-element");
-        });
-
-        cardForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            
+           
             // Prepare donation
             const donationId = guid();
             const prepareDonation = {
@@ -60,27 +78,34 @@ class Donate extends HTMLElement {
                 cache: 'no-cache',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(prepareDonation),
-              });
+            });
 
-              var paymentIntent = await response.json();
+            var paymentIntent = await response.json();
 
-              var cardHolder = cardForm.querySelector('#card-holder').value;
-
-              var result = await this.stripe.confirmCardPayment(paymentIntent.secret, {
+            var result = await this.stripe.confirmCardPayment(paymentIntent.secret, {
                 payment_method: {
-                  card: this.card,
-                  billing_details: {
-                    name: cardHolder
-                  }
+                    card: this.card,
+                    billing_details: {
+                        name: cardHolder.value
+                    }
                 }
-              });
+            });
 
-            // Confirm donation information
+            // Show donation confirmation
+            // TODO: this needs to be a better UI (label)
+            if (result.error){
+                console.log("oops");
+            }
+            else
+            {
+                console.log("OK");
+            }
+            
             // TODO:
             // testing Stripe CC: 4000002500003155
         });
 
-        var cancel = amountForm.querySelector('#cancel');
+        const cancel = amountForm.querySelector('#cancel');
         cancel.addEventListener('click', async (event) => {
             event.preventDefault();
 
