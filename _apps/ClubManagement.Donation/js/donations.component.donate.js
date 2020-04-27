@@ -1,3 +1,5 @@
+import { appInsights } from "/js/ai.module.js"
+
 class Donate extends HTMLElement {
 
     constructor(){
@@ -47,12 +49,22 @@ class Donate extends HTMLElement {
         
         donation.addEventListener('change', async (event) =>{
             amountProvided = !!event.target.value;
+
+            appInsights.trackEvent({
+                name: "DonationFormAmountSelected",
+                properties: { eventCategory: "Fundraising.Donations", eventAction: "amount", amount: event.target.value }
+            });
             
             showCardInformation();
         });
         cardHolder.addEventListener('change', async (event) =>{
             cardHolderProvided = !!event.target.value;
 
+            appInsights.trackEvent({
+                name: "DonationFormCardholderProvided",
+                properties: { eventCategory: "Fundraising.Donations", eventAction: "cardholder" }
+            });
+            
             showCardInformation();
         });
 
@@ -103,6 +115,11 @@ class Donate extends HTMLElement {
             
             // TODO:
             // testing Stripe CC: 4000002500003155
+
+            appInsights.trackEvent({
+                name: "DonationFormSubmitted",
+                properties: { eventCategory: "Fundraising.Donations", eventAction: "submit", success:  !result.error}
+            });
         });
 
         const cancel = amountForm.querySelector('#cancel');
@@ -110,6 +127,11 @@ class Donate extends HTMLElement {
             event.preventDefault();
 
             donation.value = 0;
+        });
+
+        appInsights.trackEvent({
+            name: "DonationFormRendered",
+            properties: { eventCategory: "Fundraising.Donations", eventAction: "render" }
         });
     }
 }
