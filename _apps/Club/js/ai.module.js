@@ -23,3 +23,7 @@ var telemetryInitializer = (envelope) => {
   envelope.tags["ai.cloud.roleInstance"] = "www.basketlummen.be";s
 }
 appInsights.addTelemetryInitializer(telemetryInitializer);
+
+const ai = appInsights;
+
+export { ai as appInsights }

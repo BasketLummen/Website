@@ -8,7 +8,6 @@ permalink: /news/2020-04-06-pasen-u12/
 preload_js:
 - ai
 custom_js:
-- ai-init
 - fuse.min
 - camp
 ---
