@@ -82,7 +82,7 @@ class Donate extends HTMLElement {
                 amount: donation.value,
                 currency: "eur"
             };
-            const url = `${this.baseUri}/${donationId}/PrepareDonation`;
+            const url = `${this.baseUri}/${donationId}/prepare`;
 
             const response = await fetch(url, {
                 method: 'POST',
