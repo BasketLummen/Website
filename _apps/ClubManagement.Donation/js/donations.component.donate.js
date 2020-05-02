@@ -92,9 +92,9 @@ class Donate extends HTMLElement {
                 body: JSON.stringify(prepareDonation),
             });
 
-            var paymentIntent = await response.json();
+            const paymentIntent = await response.json();
 
-            var result = await this.stripe.confirmCardPayment(paymentIntent.secret, {
+            const result = await this.stripe.confirmCardPayment(paymentIntent.secret, {
                 payment_method: {
                     card: this.card,
                     billing_details: {
@@ -110,10 +110,21 @@ class Donate extends HTMLElement {
             }
             else
             {
-                console.log("OK");
+                const url = `${this.baseUri}/${donationId}/confirm`;
+                const registerDonationConfirmed = {
+                    donationId: donationId,
+                    paymentIntentId: paymentIntent.paymentIntentId
+                };
+                
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(registerDonationConfirmed),
+                });
             }
             
-            // TODO:
             // testing Stripe CC: 4000002500003155
 
             appInsights.trackEvent({
