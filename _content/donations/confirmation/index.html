@@ -1,0 +1,34 @@
+---
+layout: page
+title: Basket Lummen
+description: Bevestiging van je donatie
+keywords: Basket, Lummen
+custom_css:
+- pdfviewermod
+custom_js:
+- handlebars-v4.0.12
+- ptsans
+- html2pdf.bundle.min
+- config
+modules:
+- ai.module
+- donations.app
+---
+
+<donation-confirmation></donation-confirmation>
+
+<iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe>
+
+<div id="canvas" style="display: none;"></div>
+<script id="confirmation-template" type="text/x-handlebars-template">
+    {{{{raw}}}}
+    <div>
+        <p><b>TODO: customer name,</b></p>
+        <p>TODO: thank you message</p>
+        <p><b>Overzicht van je donatie:</b></p>
+        <p>{{{data.donationDate}}}</p>
+        <p>{{{data.currency}}}{{{data.amount}}}</p>
+        <p>{{{data.donationId}}}</p>
+    </div>
+    {{{{/raw}}}}
+</script>
