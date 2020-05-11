@@ -113,7 +113,8 @@ class Donate extends HTMLElement {
                 const url = `${this.baseUri}/${donationId}/confirm`;
                 const registerDonationConfirmed = {
                     donationId: donationId,
-                    paymentIntentId: paymentIntent.paymentIntentId
+                    paymentIntentId: paymentIntent.paymentIntentId,
+                    cardHolder: cardHolder.value
                 };
                 
                 const response = await fetch(url, {
