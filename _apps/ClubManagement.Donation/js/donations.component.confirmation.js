@@ -34,15 +34,19 @@ class DonationConfirmation extends HTMLElement {
         const data = await response.json();
         const template = Handlebars.compile(templateText);
         const body = template({
-            data: data
+            data: {
+                donationDate: data.donationDate,
+                amount: data.amount,
+                currency: this.getCurrencySymbol(data.currency)
+            }
         });
 
-        const canvas = document.getElementById("canvas");
+        const canvas = document.getElementById("confirmation-canvas");
         canvas.innerHTML = body;
         canvas.style.display = "block";
         
         const pdf = await html2pdf()
-            .set({ margin: 10, html2canvas: { scale: 4, letterRendering: true } })
+            .set({ html2canvas: { scale: 4, letterRendering: true } })
             .from(canvas)
             .toPdf()
             .get('pdf');
@@ -59,6 +63,14 @@ class DonationConfirmation extends HTMLElement {
 
         const iframe = document.getElementById('printoutput');
         iframe.src = `/pdf/viewer.html?file=${documentUrl}`;
+    }
+
+    getCurrencySymbol(currencyCode) {
+        if (currencyCode === "eur") {
+            return "&euro;"
+        }
+        
+        return currencyCode;
     }
 }
 

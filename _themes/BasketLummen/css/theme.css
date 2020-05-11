@@ -865,3 +865,32 @@ button .spinner{
 #card-element {
 	max-width: 480px;
 }
+
+#confirmation-canvas{
+	background-color: #f2f4f6;
+	/*  */
+	height: 1122px;
+	font-family: 'Nunito Sans',Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+#confirmation-header{
+	color: #A8AAAF;
+	padding: 20px;
+	text-align: center;
+}
+#confirmation-body{
+	background-color: #FFF;
+	margin: 0 auto;
+	width: 520px;
+	padding: 45px;
+}
+#confirmation-body table, #confirmation-body tr, #confirmation-body td{
+	border-collapse: collapse;
+	border: none;
+}
+#confirmation-body table{
+	margin-bottom: 20px;
+}
+.align-right{
+	text-align: right;
+}

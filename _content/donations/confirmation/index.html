@@ -7,7 +7,6 @@ custom_css:
 - pdfviewermod
 custom_js:
 - handlebars-v4.0.12
-- ptsans
 - html2pdf.bundle.min
 - config
 modules:
@@ -19,16 +18,34 @@ modules:
 
 <iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe>
 
-<div id="canvas" style="display: none;"></div>
+<div id="confirmation-canvas" style="display: none;"></div>
 <script id="confirmation-template" type="text/x-handlebars-template">
     {{{{raw}}}}
-    <div>
+    <div id="confirmation-header">
+        Basket Lummen
+    </div>
+    <div id="confirmation-body">   
         <p><b>TODO: customer name,</b></p>
         <p>TODO: thank you message</p>
-        <p><b>Overzicht van je donatie:</b></p>
-        <p>{{{data.donationDate}}}</p>
-        <p>{{{data.currency}}}{{{data.amount}}}</p>
-        <p>{{{data.donationId}}}</p>
+        <p><h3>Overzicht van je donatie</h3></p>
+        <table>
+            <tr>
+                <td>
+                    Datum:
+                </td>
+                <td>
+                    {{{data.donationDate}}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Bedrag:
+                </td>
+                <td>
+                    {{{data.currency}}}{{{data.amount}}}
+                </td>
+            </tr>
+        </table>
     </div>
     {{{{/raw}}}}
 </script>
