@@ -37,7 +37,8 @@ class DonationConfirmation extends HTMLElement {
             data: {
                 donationDate: data.donationDate,
                 amount: data.amount,
-                currency: this.getCurrencySymbol(data.currency)
+                currency: this.getCurrencySymbol(data.currency),
+                cardHolder: data.cardHolder
             }
         });
 
