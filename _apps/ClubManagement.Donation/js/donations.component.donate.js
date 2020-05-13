@@ -104,9 +104,10 @@ class Donate extends HTMLElement {
             });
 
             // Show donation confirmation
-            // TODO: this needs to be a better UI (label)
+            let resultMessage = this.querySelector('#result');
+            
             if (result.error){
-                console.log("oops");
+                resultMessage.innerText = "There was an error. Please try again."
             }
             else
             {
@@ -124,6 +125,9 @@ class Donate extends HTMLElement {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(registerDonationConfirmed),
                 });
+
+                // todo: add "Email confirmation will be sent if the user opted in"
+                resultMessage.innerText = "Thank you for your donation!"
             }
             
             // testing Stripe CC: 4000002500003155
