@@ -32,10 +32,11 @@ class DonationConfirmation extends HTMLElement {
         });
         
         const data = await response.json();
+        const dateTimeFormat = new Intl.DateTimeFormat('nl-BE', { year: 'numeric', month: 'short', day: '2-digit' });
         const template = Handlebars.compile(templateText);
         const body = template({
             data: {
-                donationDate: data.donationDate,
+                donationDate: dateTimeFormat.format(new Date(data.donationDate)),
                 amount: data.amount,
                 currency: this.getCurrencySymbol(data.currency),
                 cardHolder: data.cardHolder
