@@ -14,6 +14,21 @@ class Donate extends HTMLElement {
         this.innerHTML = this.template.innerHTML;
 
         let amountForm = this.querySelector('#amount-form');
+        
+        let emailAddress = this.querySelector('#email');
+        let emailRow = this.querySelector('#emailRow');
+        let emailConformation = this.querySelector('#emailConfirmation');
+        emailConformation.addEventListener('change', async (event) => {
+           if (event.target.checked === true){
+               emailAddress.setAttribute('required', '');
+               emailRow.style.display = 'table-row';
+           }
+           else {
+               emailAddress.removeAttribute('required');
+               emailAddress.value = '';
+               emailRow.style.display = 'none';
+           }
+        });
 
         let donate5 = this.querySelector("#donate5");
         let donate10 = this.querySelector("#donate10");
@@ -115,7 +130,9 @@ class Donate extends HTMLElement {
                 const registerDonationConfirmed = {
                     donationId: donationId,
                     paymentIntentId: paymentIntent.paymentIntentId,
-                    cardHolder: cardHolder.value
+                    cardHolder: cardHolder.value,
+                    sendEmailConfirmation: emailConformation.checked,
+                    confirmationEmailAddress: emailAddress.value
                 };
                 
                 const response = await fetch(url, {
@@ -128,6 +145,11 @@ class Donate extends HTMLElement {
 
                 // todo: add "Email confirmation will be sent if the user opted in"
                 resultMessage.innerText = "Thank you for your donation!"
+                
+                if (emailConformation.checked) {
+                    resultMessage.append(document.createElement('br'));
+                    resultMessage.append("Confirmation will be emailed.");
+                }
             }
             
             // testing Stripe CC: 4000002500003155
