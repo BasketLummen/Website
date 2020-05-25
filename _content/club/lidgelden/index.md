@@ -13,15 +13,16 @@ Voor nieuwe leden vragen we om dit ten laatste veertien dagen na ontvangst van d
 
 Bij storting vermeld het woord lidgeld, samen met de naam van de speler en de ploeg.
 
-## Bedragen seizoen 2019-2020
+## Bedragen seizoen 2020-2021
 
 | Category                    | Bedrag  |
 |-----------------------------|---------|
-| Senioren                    | €295    |
-| Jeugdploegen die 3x trainen | €350    |
-| Jeugdploegen die 2x trainen | €285    |
-| U8 & U10                    | €240    |
-| U6                          | €130    |
+| Senioren                    | €300    |
+| J14 - J18                   | €295    |
+| Limburg Lizards             | €400    |
+| U12                         | €295    |
+| U8 & U10                    | €250    |
+| U6                          | €150    |
 
 ## Rekeningnummer
 
