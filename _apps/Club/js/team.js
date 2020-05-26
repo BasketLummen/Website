@@ -134,7 +134,7 @@ var renderTeam = function(vblTeam, team, profiles){
                 });
                 $(".players .tiles").append(div); 
             }
-            else if(p.roleName == "Head coach" || p.roleName == "Assistent coach" || p.roleName == "Shooting Coach"){
+            else if(p.roleName == "Head coach" || p.roleName == "Assistent coach" || p.roleName == "Shooting Coach" || p.roleName == "Physical coach" || p.roleName == "Team support manager" || p.roleName == "Physio"){
                 var div = $.template("#staff-template",
                 {
                     name: contactName,
