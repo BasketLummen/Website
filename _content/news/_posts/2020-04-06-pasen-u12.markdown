@@ -6,9 +6,9 @@ description: Leerrijke stage tijdens de paasvakantie
 cover: /news/img/2020-04-06-pasenb.jpg
 permalink: /news/2020-04-06-pasen-u12/
 preload_js:
+- config
 - ai
 custom_js:
-- ai-init
 - fuse.min
 - camp
 ---

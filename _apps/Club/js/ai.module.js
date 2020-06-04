@@ -20,6 +20,10 @@ window.addEventListener('unhandledrejection', (event) => {
 
 var telemetryInitializer = (envelope) => {
   envelope.tags["ai.cloud.role"] = "basket-lummen";
-  envelope.tags["ai.cloud.roleInstance"] = "www.basketlummen.be";s
+  envelope.tags["ai.cloud.roleInstance"] = "www.basketlummen.be";
 }
 appInsights.addTelemetryInitializer(telemetryInitializer);
+
+const ai = appInsights;
+
+export { ai as appInsights }
