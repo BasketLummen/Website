@@ -18,6 +18,6 @@ This is a test for a sale where
 - And specify a quantity themselves
 - the sale will close July 5th UTC
 
-<clubmgmt-purchase-order-wizard saleid="688b702f-7404-4b71-9ff2-e34ad1b586b4"></clubmgmt-purchase-order-wizard>
+<clubmgmt-purchase-order-wizard sale-id="688b702f-7404-4b71-9ff2-e34ad1b586b4"></clubmgmt-purchase-order-wizard>
 
 <div data-saleid="688b702f-7404-4b71-9ff2-e34ad1b586b4"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>

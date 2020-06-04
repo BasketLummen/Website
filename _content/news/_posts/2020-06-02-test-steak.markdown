@@ -19,6 +19,78 @@ This is a test for a sale where
 - but there are different variants of the steak (sauce, cuisine) with different pricing
 - the sale will close July 5th UTC
 
-<clubmgmt-purchase-order-wizard saleid="7c033609-d93d-4eca-855f-7fb232233ba2"></clubmgmt-purchase-order-wizard>
+<clubmgmt-purchase-order-wizard sale-id="7c033609-d93d-4eca-855f-7fb232233ba2"></clubmgmt-purchase-order-wizard>
+
+<template id="clubmgmt-purchase-order-form-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Plaats je bestelling</legend>
+    </fieldset>
+  </form>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-open-template">
+    <table>
+      <tbody>
+        <tr>
+          <td><label for="firstname">Voornaam</label></td>
+          <td><input type="text" id="firstname" name="firstname" placeholder="Vul je voornaam in..." required></input></td>
+        </tr>
+        <tr>
+          <td><label for="name">Familienaam</label></td>
+          <td><input type="text" id="name" name="name" placeholder="Vul je achternaam in..." required></input></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="text" id="email" name="email" placeholder="Vul je email in..."></input></td>
+        </tr>
+      </tbody>
+      <tbody id="offers"></tbody>
+      <tbody>    
+        <tr class="total-row">
+          <td><label>Te betalen</label></td>
+          <td><label id="price">€ 0</label></td>
+        </tr>   
+      </tbody>
+      <tbody id="delivery-slots"></tbody>
+      <tbody>  
+        <tr>
+          <td><label for="sendConfirmation">Stuur me een bevestiging</label></td>
+          <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" placeholder="Vul je email in..." checked></input> (vereist email)</td>
+        </tr>   
+       </tbody>        
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-pending-template">
+    <table>
+      <tr>
+        <td><label>Registratie gaat pas open op </label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-over-template">
+    <table>
+      <tr>
+        <td><label>Registratie is afgelopen</label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-template">
+    <tr>
+        <td><label>...</label></td>
+        <td>...</td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-delivery-slot-template">
+    <tr>
+        <td><label class="clear-subsequent">Wij komen van</label></td>
+        <td><input type="radio" name="delivery"></input> <span class="slot-from"></span> tot <span class="slot-to"></span></td>
+    </tr>
+</template>
+
 
 <div data-saleid="7c033609-d93d-4eca-855f-7fb232233ba2"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
