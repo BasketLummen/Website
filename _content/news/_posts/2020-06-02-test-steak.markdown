@@ -9,6 +9,9 @@ custom_js:
 - ptsans
 - jspdf.min
 - purchaseorder
+modules:
+  - ai.module
+  - clubmanagement.fundraising.sales.app
 ---
 
 This is a test for a sale where
@@ -16,5 +19,7 @@ This is a test for a sale where
 - specify quantity 
 - but there are different variants of the steak (sauce, cuisine) with different pricing
 - the sale will close July 5th UTC
+
+<clubmgmt-purchase-order-wizard saleid="7c033609-d93d-4eca-855f-7fb232233ba2"></clubmgmt-purchase-order-wizard>
 
 <div data-saleid="7c033609-d93d-4eca-855f-7fb232233ba2"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
