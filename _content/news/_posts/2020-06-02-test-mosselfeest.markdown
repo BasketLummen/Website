@@ -4,11 +4,10 @@ title:  "Mosselfeest Testing"
 date:   2020-06-02 17:00:00
 description: Testing Online Payments Mosselfeest
 permalink: /news/2020-06-02-test-mosselfeest/
+preload_js:
+  - config
 custom_js:
-- handlebars-v4.0.12
-- ptsans
-- jspdf.min
-- purchaseorder
+  - purchaseorder
 modules:
   - ai.module
   - clubmanagement.fundraising.sales.app
