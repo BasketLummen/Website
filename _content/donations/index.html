@@ -1,0 +1,90 @@
+---
+layout: page
+title: Basket Lummen
+description: Basket Lummen
+keywords: Basket, Lummen, Donaties
+preload_js:
+  - config
+custom_js:
+  - guid
+modules:
+  - ai.module
+  - donations.app
+---
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<div class="container content">
+	<donate-form />
+</div>
+
+<template id="donation-template">
+    <form class="responsive-form" id="amount-form">
+        <fieldset>
+            <legend>Choose amount to donate</legend>
+            <table>
+                <tr>
+					<td>
+						<label>Bedrag</label>
+					</td>
+                    <td>
+						<button type="button" id="donate5">€5</button>
+						<button type="button" id="donate10">€10</button>
+						<button type="button" id="donate20">€20</button>
+                    </td>
+				</tr>
+				<tr>
+					<td>
+						<label>Aangepast bedrag</label>
+					</td>
+					<td>
+						<input type="number" id="donateOther" required />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Kaarthouder</label>
+					</td>
+					<td>
+						<input type="text" id="card-holder" required />
+					</td>
+				</tr>
+				<tr>
+					<td>Kaart</td>
+					<td>
+						<div id="card-element" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Email confirmation?</label></td>
+					<td>
+						<input type="checkbox" id="emailConfirmation" />
+					</td>
+				</tr>
+				<tr id="emailRow" style="display: none;">
+					<td>
+						<label>Email</label>
+					</td>
+					<td>
+						<input type="text" id="email">
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<label for="submit"></label>
+						<button type="submit" id="submit">Submit</button>
+						<button type="button" id="cancel">Cancel</button>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<label id="result"></label>
+					</td>
+				</tr>
+            </table>
+        </fieldset>
+	</form>
+</template>
