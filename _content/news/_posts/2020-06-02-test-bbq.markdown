@@ -20,6 +20,6 @@ This is a test for a sale where
 - but they can select multiple options (what those pieces should be)
 - the sale will close July 5th UTC
 
-<clubmgmt-purchase-order-wizard data-saleid="ba566f9f-7e90-44d0-9f12-de9ec204e769"></clubmgmt-purchase-order-wizard>
+<clubmgmt-purchase-order-wizard saleid="ba566f9f-7e90-44d0-9f12-de9ec204e769"></clubmgmt-purchase-order-wizard>
 
 <div data-saleid="ba566f9f-7e90-44d0-9f12-de9ec204e769"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
