@@ -254,7 +254,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var uniqueOptionSets = this.extractUniqueOptionSets(itemDescription);
 
 		var xAxis = this.findOptionSetWithSmallestTotalLabelLength(uniqueOptionSets);
-		var yAxis = this.findOptionSetWithHighestTotalLabelLength(uniqueOptionSets);
+		var yAxis = this.findOptionSetWithHighestTotalLabelLength(uniqueOptionSets);		
 
 		for(var option of yAxis.optionSet.options.slice()){
 
@@ -269,6 +269,9 @@ class PurchaseOrderForm extends HTMLElement {
 			var containerTemplate = this.horizontalContainerTemplate.content.cloneNode(true);
 			var container = containerTemplate.querySelector(".horizontal-container");
 
+			var count = xAxis.optionSet.options.length;
+			var width = "calc(" + (400 / count) + "px - " +  ((0.2 * count) - (0.4 / count)) + "em)";
+
 			for (var opt of xAxis.optionSet.options){
 				
 				this.renderInputField(container, variant,  [{
@@ -278,6 +281,14 @@ class PurchaseOrderForm extends HTMLElement {
 					optionSetId: xAxis.optionSet.id,
 					option: opt
 				}]);
+
+				var inputs = container.querySelectorAll("input");
+				inputs.forEach(input => {
+					// fix the fact that inputs do not respect flex
+					input.style.width = width; 
+					input.style.minWidth = width; 
+				});
+				
 			}
 
 			inputHolder.append(containerTemplate);
@@ -448,12 +459,19 @@ class PurchaseOrderForm extends HTMLElement {
 			var containerTemplate = this.horizontalContainerTemplate.content.cloneNode(true);
 			var container = containerTemplate.querySelector(".horizontal-container");
 
+			var count = toRender.optionSet.options.length;
+			var width = "calc(" + (400 / count) + "px - " +  ((0.2 * count) - (0.4 / count)) + "em)";
+
+
 			for(var option of toRender.optionSet.options){
 				
 				var variant = variants.filter(o => o.variantLimits[0].matchingValues.includes(option.id))[0]
-				var label = this.optionLabelTemplate.content.cloneNode(true);
-				label.querySelector(".option-label").innerText = option.name + ((variant != null && variant.price.value > 0) ? " " + variant.price.currency + variant.price.value : "");
-				container.append(label);
+				var labelTemplate = this.optionLabelTemplate.content.cloneNode(true);
+				var label = labelTemplate.querySelector(".option-label");
+				label.innerText = option.name + ((variant != null && variant.price.value > 0) ? " " + variant.price.currency + variant.price.value : "");
+				label.style.width = width;
+				label.style.minWidth = width;
+				container.append(labelTemplate);
 			}
 
 			inputHolder.append(containerTemplate);

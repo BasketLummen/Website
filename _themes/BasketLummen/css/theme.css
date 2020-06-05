@@ -898,11 +898,8 @@ button .spinner{
 .horizontal-container{
 	display: flex;
 	justify-content: space-between;
-	max-width: 340px
+	max-width: 400px
 }
 .horizontal-container span{
-	padding: 1vh 0vw;
-}
-.horizontal-container input{
-	width: fit-content;
+	padding: 0vh 0.2vw;
 }
