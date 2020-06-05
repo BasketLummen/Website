@@ -8,20 +8,20 @@ class PurchaseOrderWizard extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['sale-id'];
+      return ['sale-id'];
+    }
+
+    get saleId() {
+      return this.getAttribute('sale-id');
+    }
+
+    set saleId(val) {
+      if (val) {
+        this.setAttribute('sale-id', val);
+      } else {
+        this.removeAttribute('sale-id');
       }
-  
-      get saleId() {
-        return this.getAttribute('sale-id');
-      }
-  
-      set saleId(val) {
-        if (val) {
-          this.setAttribute('sale-id', val);
-        } else {
-          this.removeAttribute('sale-id');
-        }
-      }    
+    }    
   
 
     async connectedCallback() {    
@@ -33,18 +33,21 @@ class PurchaseOrderWizard extends HTMLElement {
         });
     }
 
-    showStep(name){
+    showStep(name, orderId, currency, total){
         
         this.innerHTML = '';
         
         var step = document.createElement(name);
+        if(orderId) step.setAttribute("order-id", orderId);
+        if(total) step.setAttribute("order-total", total);
+        if(currency) step.setAttribute("order-currency", currency);
         step.setAttribute('sale-id', this.saleId);
 
         step.addEventListener("pay", (event) => {
-            this.showStep("clubmgmt-purchase-order-payment");
+            this.showStep("clubmgmt-purchase-order-payment", step.orderId, step.currency, step.total);
         } );
         step.addEventListener("confirm", (event) => {
-            this.showStep("clubmgmt-purchase-order-confirmation");
+            this.showStep("clubmgmt-purchase-order-confirmation", step.orderId, step.currency, step.total);
         }); 
         step.addEventListener("new", (event) => {
             this.showStep("clubmgmt-purchase-order-form");

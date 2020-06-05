@@ -38,7 +38,7 @@ This is a test for a sale where
         </tr>
         <tr>
           <td><label for="name">Familienaam</label></td>
-          <td><input type="text" id="name" name="name" placeholder="Vul je achternaam in..." required></input></td>
+          <td><input type="text" id="name" name="name" placeholder="Vul je familienaam in..." required></input></td>
         </tr>
         <tr>
           <td><label for="email">Email</label></td>
@@ -58,6 +58,10 @@ This is a test for a sale where
           <td><label for="sendConfirmation">Stuur me een bevestiging</label></td>
           <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" placeholder="Vul je email in..." checked></input> (vereist email)</td>
         </tr>   
+        <tr>
+          <td><label for="submit"></label></td>
+          <td><button type="submit"><img class="spinner" src="/img/loader-button.gif">Bestellen</button></td>
+        </tr>
        </tbody>        
     </table>
 </template>
@@ -65,7 +69,7 @@ This is a test for a sale where
 <template id="clubmgmt-purchase-order-sale-pending-template">
     <table>
       <tr>
-        <td><label>Registratie gaat pas open op </label></td>
+        <td><label>Registratie gaat pas open op <span class="sale-from"></span></label></td>
       </tr>
     </table>
 </template>
@@ -80,9 +84,29 @@ This is a test for a sale where
 
 <template id="clubmgmt-purchase-order-offer-template">
     <tr>
-        <td><label>...</label></td>
-        <td>...</td>
+        <td class="label-holder"><label></label></td>
+        <td class="input-holder"></td>
     </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-label-template">
+    <label></label>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-number-template">
+    <input type="number" placeholder="0" min="0" />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-toggle-template">
+    <input />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-horizontal-container-template">
+    <div class="horizontal-container"></span>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-option-label-template">
+    <span class="option-label"></span>
 </template>
 
 <template id="clubmgmt-purchase-order-delivery-slot-template">

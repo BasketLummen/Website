@@ -894,3 +894,12 @@ button .spinner{
 .align-right{
 	text-align: right;
 }
+
+.horizontal-container{
+	display: flex;
+	justify-content: space-between;
+	max-width: 340px
+}
+.horizontal-container span{
+	padding: 1vh 0vw;
+}
