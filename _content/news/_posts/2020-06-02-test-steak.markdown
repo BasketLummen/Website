@@ -31,12 +31,12 @@ This is a test for a sale where
     <table>
       <tbody>
         <tr>
-          <td><label for="firstname">Voornaam</label></td>
-          <td><input type="text" id="firstname" name="firstname" placeholder="Vul je voornaam in..." required></input></td>
+          <td><label for="given-name">Voornaam</label></td>
+          <td><input type="text" id="given-name" name="given-name" placeholder="Vul je voornaam in..." required></input></td>
         </tr>
         <tr>
-          <td><label for="name">Familienaam</label></td>
-          <td><input type="text" id="name" name="name" placeholder="Vul je familienaam in..." required></input></td>
+          <td><label for="family-name">Familienaam</label></td>
+          <td><input type="text" id="family-name" name="family-name" placeholder="Vul je familienaam in..." required></input></td>
         </tr>
         <tr>
           <td><label for="email">Email</label></td>
