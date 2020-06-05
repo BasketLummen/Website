@@ -903,3 +903,6 @@ button .spinner{
 .horizontal-container span{
 	padding: 1vh 0vw;
 }
+.horizontal-container input{
+	width: fit-content;
+}

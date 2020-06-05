@@ -6,8 +6,6 @@ description: Testing Online Payments Steak
 permalink: /news/2020-06-02-test-steak/
 preload_js:
   - config
-custom_js:
-  - purchaseorder
 modules:
   - ai.module
   - clubmanagement.fundraising.sales.app
@@ -101,6 +99,10 @@ This is a test for a sale where
     <input />
 </template>
 
+<template id="clubmgmt-purchase-order-offer-input-dropdown-template">
+    <select />
+</template>
+
 <template id="clubmgmt-purchase-order-offer-horizontal-container-template">
     <div class="horizontal-container"></span>
 </template>
@@ -117,4 +119,4 @@ This is a test for a sale where
 </template>
 
 
-<div data-saleid="7c033609-d93d-4eca-855f-7fb232233ba2"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
+<!-- <div data-saleid="7c033609-d93d-4eca-855f-7fb232233ba2"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div> -->

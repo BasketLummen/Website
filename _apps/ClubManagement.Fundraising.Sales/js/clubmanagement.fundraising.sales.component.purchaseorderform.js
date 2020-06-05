@@ -15,8 +15,11 @@ class PurchaseOrderForm extends HTMLElement {
 		this.offerTemplate = document.getElementById("clubmgmt-purchase-order-offer-template");
 		this.numberInputTemplate = document.getElementById("clubmgmt-purchase-order-offer-input-number-template");
 		this.toggleInputTemplate = document.getElementById("clubmgmt-purchase-order-offer-input-toggle-template");
+		this.dropdownTemplate = document.getElementById("clubmgmt-purchase-order-offer-input-dropdown-template");
 		this.optionLabelTemplate = document.getElementById("clubmgmt-purchase-order-offer-option-label-template");
 		this.horizontalContainerTemplate = document.getElementById("clubmgmt-purchase-order-offer-horizontal-container-template");
+
+		this.selectedOptionMemory = [];
     }
 
     static get observedAttributes() {
@@ -73,7 +76,7 @@ class PurchaseOrderForm extends HTMLElement {
 
     async connectedCallback() { 
         this.sale = await this.loadSale();
-		this.collection = await this.loadCollection(sale);
+		this.collection = await this.loadCollection();
 
 		this.createIndexes();
 
@@ -193,7 +196,11 @@ class PurchaseOrderForm extends HTMLElement {
 		var uniqueOptionSets = this.extractUniqueOptionSets(itemDescription);
 		
 		if(itemDescription.optionSets.length >= 1 && uniqueOptionSets.length == 1){ // all values in the different optionsets are equal
-			this.renderOptionsAsDropDowns(content, variants, itemDescription);
+			var toggle = content.querySelector(`[data-variantid="${itemDescription.id}"]`);
+			toggle.addEventListener("change", (event) =>{
+				this.renderOptionsAsDropDowns(this, itemDescription);
+			});
+			
 		}
 	
 		if(itemDescription.optionSets.length >= 2 && uniqueOptionSets.length == 2){ // render this as a table
@@ -201,8 +208,45 @@ class PurchaseOrderForm extends HTMLElement {
 		}
 	}
 
-	renderOptionsAsDropDowns(content, variants, itemDescription){
+	renderOptionsAsDropDowns(content, itemDescription){
 		
+		var offers = content.querySelector("#offers");
+		var toRemove = content.querySelectorAll(".temporary");
+		toRemove.forEach(r => r.remove());
+
+		for(var optionSet of itemDescription.optionSets){
+
+			var template = this.offerTemplate.content.cloneNode(true);
+			for(var child of template.children){
+				child.classList.add("temporary");
+			}
+			this.renderOptionLabel(template, null, optionSet.name);
+			this.renderSelect(template, optionSet);
+			
+			offers.append(template);
+		}
+
+	}
+
+	renderSelect(template, optionSet){
+		var inputHolder = template.querySelector(".input-holder");
+		var dropdownTemplate = this.dropdownTemplate.content.cloneNode(true);
+		var select = dropdownTemplate.querySelector("select");
+		select.innerHTML = "";
+		for(var option of optionSet.options){
+			var opt = document.createElement("option");
+			opt.value = option.id;
+			opt.innerText = option.name;
+			select.append(opt);
+		}
+		var previouslySelected = this.selectedOptionMemory.hasOwnProperty(optionSet.name);
+		if(previouslySelected){
+			select.value = this.selectedOptionMemory[optionSet.name];
+		}
+		select.addEventListener("change", (event) =>{
+			this.selectedOptionMemory[optionSet.name] = select.value;
+		});
+		inputHolder.append(dropdownTemplate);
 	}
 
 	renderOptionsAsTable(content, variants, itemDescription){
@@ -217,13 +261,13 @@ class PurchaseOrderForm extends HTMLElement {
 			var variant = variants.filter(o => o.variantLimits[0].matchingValues.includes(option.id))[0]
 
 			var template = this.offerTemplate.content.cloneNode(true);
-			this.renderOptionLabel(template, variant, option);
+			this.renderOptionLabel(template, variant, option.name);
 
 			var inputHolder = template.querySelector(".input-holder");
 			inputHolder.innerHTML = '';
 
 			var containerTemplate = this.horizontalContainerTemplate.content.cloneNode(true);
-			var container = container.querySelector(".horizontal-container");
+			var container = containerTemplate.querySelector(".horizontal-container");
 
 			for (var opt of xAxis.optionSet.options){
 				
@@ -241,74 +285,6 @@ class PurchaseOrderForm extends HTMLElement {
 		}
 	}
 
-/*
-
-
-
-function renderSelect(td, targetid, itemId, optionSet){
-	var sel = $("<select>").attr('data-targetid', targetid).attr('data-itemId', itemId).attr('data-optionsetid', optionSet.id).attr('data-optionsetname', optionSet.name);
-	optionSet.options.forEach(function(value){
-		sel.append($("<option>").attr("value", value.id).text(value.name));
-	});
-	var previouslySelected = selectedOptionMemory.hasOwnProperty(optionSet.name);
-	if(previouslySelected){
-		sel.val(selectedOptionMemory[optionSet.name]);
-	}	
-
-	td.append(sel);
-}
-
-function renderOptionsAsDropDowns(tr, targetid, offers, itemDescription, rules, messages){	
-
-	var render = function(callback){
-		itemDescription.optionSets.forEach(function(optionSet){
-
-			var offer = offers[0];
-
-			var td = $('<td>');
-			
-			renderSelect(td, targetid, offer.id, optionSet);	
-
-			var toInsert = $('<tr>')
-				.append($('<td>').append($('<label>').text(optionSet.name)))
-				.append(td);
-
-			callback(toInsert);
-		});	
-	}
-
-	var wireOptionsets = function(){
-		var optionsetid = $(this).attr('data-optionsetid');
-		var optionsetname = $(this).attr('data-optionsetname');
-		var targetid = $(this).attr('data-targetid');
-		var val = $(this).val();
-
-		$("#" + targetid).attr("data-variant-" + optionsetid, val);
-
-		selectedOptionMemory[optionsetname] = val;
-	}
-
-	if(sale.choice == "Multiple"){
-		render(toInsert => tr.after(toInsert));
-		$("select[data-optionsetid]").unbind("change", wireOptionsets).bind("change", wireOptionsets);
-	}
-	else{
-		$(".promotionitemtoggle[data-targetid=\"" + targetid + "\"]").change(function(){
-
-			$(".temporary-row").remove();			
-			render(toInsert => {
-				toInsert.addClass("temporary-row");
-				$(".total-row").before(toInsert);
-			});
-			$("select[data-optionsetid]").unbind("change", wireOptionsets).bind("change", wireOptionsets);
-		});
-	}
-
-	
-}
-*/
-
-
 	renderOfferLabel(template, variants, itemDescription){
 		var label = template.querySelector("label");
 		if(variants.length == 1){
@@ -320,11 +296,11 @@ function renderOptionsAsDropDowns(tr, targetid, offers, itemDescription, rules, 
 		}
 	}
 
-	renderOptionLabel(template, variant, option){
+	renderOptionLabel(template, variant, name){
 		var labelHolder = template.querySelector(".label-holder");
 		var labelTemplate = this.optionLabelTemplate.content.cloneNode(true);
 		var label = labelTemplate.querySelector(".option-label");
-		label.innerText = option.name + (variant.price.value > 0 ? " " + variant.price.currency + variant.price.value : "");
+		label.innerText = name + (variant != null  && variant.price.value > 0 ? " " + variant.price.currency + variant.price.value : "");
 		labelHolder.append(label);
 	}
 
@@ -470,7 +446,7 @@ function renderOptionsAsDropDowns(tr, targetid, offers, itemDescription, rules, 
 			var toRender = this.findOptionSetWithSmallestTotalLabelLength(uniqueOptionSets) 
 
 			var containerTemplate = this.horizontalContainerTemplate.content.cloneNode(true);
-			var container = container.querySelector(".horizontal-container");
+			var container = containerTemplate.querySelector(".horizontal-container");
 
 			for(var option of toRender.optionSet.options){
 				
@@ -578,7 +554,7 @@ function renderOptionsAsDropDowns(tr, targetid, offers, itemDescription, rules, 
 
     async loadCollection(){
       if(this.sale && this.sale.items){
-        var item = sale.items[0]; // assume all items from same catalog & collection for now
+        var item = this.sale.items[0]; // assume all items from same catalog & collection for now
 
         var uri = `${salesConfig.catalogService}/api/catalogs/${club.organizationId}/${item.catalogId}/collections/${item.collectionId}`;
         var request = await fetch(uri, {

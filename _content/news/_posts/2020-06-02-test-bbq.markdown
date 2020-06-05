@@ -6,8 +6,6 @@ description: Testing Online Payments BBQ
 permalink: /news/2020-06-02-test-bbq/
 preload_js:
   - config
-custom_js:
-  - purchaseorder
 modules:
   - ai.module
   - clubmanagement.fundraising.sales.app
@@ -84,7 +82,7 @@ This is a test for a sale where
 
 <template id="clubmgmt-purchase-order-offer-template">
     <tr>
-        <td><label></label></td>
+        <td class="label-holder"><label></label></td>
         <td class="input-holder"></td>
     </tr>
 </template>
@@ -95,6 +93,10 @@ This is a test for a sale where
 
 <template id="clubmgmt-purchase-order-offer-input-toggle-template">
     <input />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-dropdown-template">
+    <select />
 </template>
 
 <template id="clubmgmt-purchase-order-offer-horizontal-container-template">
@@ -111,5 +113,5 @@ This is a test for a sale where
         <td><input type="radio" name="delivery"></input> <span class="slot-from"></span> tot <span class="slot-to"></span></td>
     </tr>
 </template>
-
-<div data-saleid="ba566f9f-7e90-44d0-9f12-de9ec204e769"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
+<!-- 
+<div data-saleid="ba566f9f-7e90-44d0-9f12-de9ec204e769"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div> -->
