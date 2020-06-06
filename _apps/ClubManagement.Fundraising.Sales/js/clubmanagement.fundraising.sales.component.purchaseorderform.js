@@ -120,10 +120,15 @@ class PurchaseOrderForm extends HTMLElement {
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
 
-			// TODO: submit
-
 			this.orderId = guid();
 			this.currency = "€";
+
+			var sequence = await this.claimSequence();
+
+			var cmd = this.composeCommand(sequence);
+
+			this.placeOrder(cmd);
+			
 			var total = this.computeTotal();
 			this.total = total;
 
@@ -196,7 +201,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var uniqueOptionSets = this.extractUniqueOptionSets(itemDescription);
 		
 		if(itemDescription.optionSets.length >= 1 && uniqueOptionSets.length == 1){ // all values in the different optionsets are equal
-			var toggle = content.querySelector(`[data-variantid="${itemDescription.id}"]`);
+			var toggle = content.querySelector(`[data-itemid="${itemDescription.id}"]`);
 			toggle.addEventListener("change", (event) =>{
 				this.renderOptionsAsDropDowns(this, itemDescription);
 			});
@@ -221,17 +226,19 @@ class PurchaseOrderForm extends HTMLElement {
 				child.classList.add("temporary");
 			}
 			this.renderOptionLabel(template, null, optionSet.name);
-			this.renderSelect(template, optionSet);
+			this.renderSelect(template, itemDescription.id, optionSet);
 			
 			offers.append(template);
 		}
 
 	}
 
-	renderSelect(template, optionSet){
+	renderSelect(template, itemId, optionSet){
 		var inputHolder = template.querySelector(".input-holder");
 		var dropdownTemplate = this.dropdownTemplate.content.cloneNode(true);
 		var select = dropdownTemplate.querySelector("select");
+		select.setAttribute("data-itemid", itemId);
+		select.setAttribute("data-optionsetid",  optionSet.id);
 		select.innerHTML = "";
 		for(var option of optionSet.options){
 			var opt = document.createElement("option");
@@ -333,7 +340,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var input = inputTemplate.querySelector("input");
 		var id = guid();
 		input.setAttribute("id", id);
-		input.setAttribute("data-variantid", variant.id);
+		input.setAttribute("data-itemid", variant.id);
 
 		if(matchingOptions){
 			for(var matchingOption of matchingOptions){
@@ -355,12 +362,12 @@ class PurchaseOrderForm extends HTMLElement {
 				var toggle = toggleTemplate.querySelector("input");
 				toggle.setAttribute("type", this.sale.choice == "Multiple" ? 'checkbox' : 'radio');
 				toggle.setAttribute("name", this.sale.choice == "Multiple" ? "toggle-" + variant.id : "toggle")
-				toggle.setAttribute("data-target-variantid", variant.id)
+				toggle.setAttribute("data-target-itemid", variant.id)
 				toggle.addEventListener("change", (event) => {
 					var otherCheckboxes = this.querySelectorAll(`input[name='${event.target.name}']`);
 					otherCheckboxes.forEach(c =>{
-						var targetId = c.getAttribute("data-target-variantid");
-						var toReset =  this.querySelector(`input[data-variantid='${targetId}']`);
+						var targetId = c.getAttribute("data-target-itemid");
+						var toReset =  this.querySelector(`input[data-itemid='${targetId}']`);
 						toReset.value = min;
 					});
 
@@ -384,14 +391,14 @@ class PurchaseOrderForm extends HTMLElement {
 
 	computeTotal(){
 		var sum = 0;
-		var inputs = this.querySelectorAll("input[data-variantid]");
+		var inputs = this.querySelectorAll("input[data-itemid]");
 		inputs.forEach(input => {
 	
 			var quantity = input.value;
 			if(quantity == null || quantity.length == 0) quantity = 0;
 			if(quantity == 0) return;
 			
-			var itemId = input.getAttribute("data-variantid");
+			var itemId = input.getAttribute("data-itemid");
 	
 			var matchingOptions = this.determineMatchingOptions(input);		
 			
@@ -606,7 +613,38 @@ class PurchaseOrderForm extends HTMLElement {
         });
       }
       return null;
-    }
+	}
+	
+	async claimSequence(){
+		if(this.sale && this.sale.items){
+		  var uri = `${salesConfig.sequenceService}/api/sequences/${this.sale.id}/claim`;
+  
+		  var request = await fetch(uri, {
+			  method: "POST",
+			  mode: 'cors',
+			  headers: {
+				"Content-Type": "application/json"
+			  }
+		  });
+		  return await request.json();
+		}
+		return null;
+	}
+
+	async placeOrder(cmd){
+		if(this.sale && this.sale.items){
+		  var uri = `${salesConfig.bookingService}/api/orderbookings/${club.organizationId}/${this.sale.id}`;
+  
+		  await fetch(uri, {
+			  method: "POST",
+			  mode: 'cors',
+			  headers: {
+				"Content-Type": "application/json"
+			  },
+			  body:  JSON.stringify(cmd)
+		  });
+		}
+	}
 
     createIndexes(){
 		var variantsPerItem = {};
@@ -626,7 +664,128 @@ class PurchaseOrderForm extends HTMLElement {
 		}
 		this.variantsPerItem = variantsPerItem;
 		this.itemDescriptions= itemDescriptions;
-    }   
+	}   
+	
+	composeCommand(sequence){
+
+		var name = this.querySelector('#family-name').value;
+		var firstname = this.querySelector('#given-name').value;
+		var optionalEmailInput = this.querySelector('#email');
+		var email = optionalEmailInput != null ? optionalEmailInput.value : null;                
+		var optionalTelephoneInput = this.querySelector('#telephone');
+		var telephone = optionalTelephoneInput != null ? optionalTelephoneInput.value : null;
+		var optionalAddressInput = this.querySelector('#address');
+		var address = optionalAddressInput != null ?  optionalAddressInput.value: null;
+		var statusUpdatesRequested = this.querySelector('#sendConfirmation').checked;
+
+		var buyer = {
+			name : firstname + " " + name,
+			email : email,
+			telephone : telephone,
+			address : address
+		}
+
+		var orderLines = this.composeOrderLines();
+
+		var expectedDeliveryDateRangeInput = this.querySelector("input[name=delivery]:checked");
+		var expectedDeliveryDateRangeJson = expectedDeliveryDateRangeInput != null ? expectedDeliveryDateRangeInput.value : null;
+		var expectedDeliveryDateRange = expectedDeliveryDateRangeJson != null ? JSON.parse(expectedDeliveryDateRangeJson) : null;
+
+		var cmd = {
+			orderId: this.orderId, 
+			saleId: this.sale.id,
+			sellerId: club.organizationId,
+			buyer: buyer,
+			orderLines: orderLines,
+			statusUpdateRequested: statusUpdatesRequested,
+			deliveryExpectations: expectedDeliveryDateRange != null ? {
+				expectedDeliveryDateRange: {
+					start: expectedDeliveryDateRange.start,
+					end: expectedDeliveryDateRange.end
+				}
+			} : null,
+			referenceNumber: sequence
+		};
+
+		return cmd
+	}
+
+	composeOrderLines(){
+		var orderLines = [];
+
+		var inputs = this.querySelectorAll("input[data-itemid]");
+		inputs.forEach(input => {
+	
+			var quantity = input.value;
+			if(quantity == null || quantity.length == 0) quantity = 0;
+			if(quantity == 0) return;
+			
+			var itemId = input.getAttribute("data-itemid");
+	
+			var matchingOptions = this.determineMatchingOptions(input);		
+			
+			var variant = this.determineVariant(itemId, matchingOptions);
+			
+			if(variant) {
+				
+				var description = this.itemDescriptions[variant.id];
+
+				var selectedOptions = null;
+				if(matchingOptions && matchingOptions.length > 0){
+					selectedOptions = [];
+					matchingOptions.forEach(function(option){
+						var optionSet = description.optionSets.filter(s => s.id == option.id)[0];                               
+						selectedOptions.push({
+							id: optionSet.id,
+							name: optionSet.name,
+							value: option.value
+						});
+					});
+				}
+
+				orderLines.push({
+					id: guid(), 
+					orderedItem: {
+						id: variant.id,
+						catalogId: variant.catalogId,
+						collectionId: variant.collectionId,
+						name: description.name,
+						price: {
+							currency: variant.price.currency,
+							value: variant.price.value
+						},
+						selectedOptions : selectedOptions
+					},
+					quantity: quantity                               
+				});
+
+			}
+		});
+
+		orderLines.forEach(orderLine =>{
+			if(orderLine.orderedItem.selectedOptions == null){
+				var selectedOptions = [];
+				var itemDescription = this.itemDescriptions[orderLine.orderedItem.id];
+				if(itemDescription.optionSets !== "undefined" && itemDescription.optionSets !== null){
+					itemDescription.optionSets.forEach(optionSet => {
+						var selectedInput = this.querySelector('[data-itemid="' + orderLine.orderedItem.id + '"][data-optionsetid="' + optionSet.id + '"]');
+						if(selectedInput){
+							var selected = selectedInput.value;
+							var val = optionSet.options.filter(v => { return v.id == selected })[0];
+							selectedOptions.push({
+								id: optionSet.id,
+								name: optionSet.name,
+								value: val.id
+							});
+						}						
+					});
+					orderLine.orderedItem.selectedOptions = selectedOptions;
+				} 
+			}                                      
+		});
+
+		return orderLines;
+	}
 }
 
 export { PurchaseOrderForm }

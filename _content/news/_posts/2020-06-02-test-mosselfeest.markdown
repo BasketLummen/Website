@@ -6,8 +6,6 @@ description: Testing Online Payments Mosselfeest
 permalink: /news/2020-06-02-test-mosselfeest/
 preload_js:
   - config
-custom_js:
-  - purchaseorder
 modules:
   - ai.module
   - clubmanagement.fundraising.sales.app
@@ -20,4 +18,99 @@ This is a test for a sale where
 
 <clubmgmt-purchase-order-wizard sale-id="3a8c5ca3-617f-4080-bb7d-2beabdfd7859"></clubmgmt-purchase-order-wizard>
 
-<div data-saleid="3a8c5ca3-617f-4080-bb7d-2beabdfd7859"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div>
+<template id="clubmgmt-purchase-order-form-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Plaats je bestelling</legend>
+    </fieldset>
+  </form>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-open-template">
+    <table>
+      <tbody>
+        <tr>
+          <td><label for="given-name">Voornaam</label></td>
+          <td><input type="text" id="given-name" name="given-name" placeholder="Vul je voornaam in..." required></input></td>
+        </tr>
+        <tr>
+          <td><label for="family-name">Familienaam</label></td>
+          <td><input type="text" id="family-name" name="family-name" placeholder="Vul je familienaam in..." required></input></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="text" id="email" name="email" placeholder="Vul je email in..."></input></td>
+        </tr>
+      </tbody>
+      <tbody id="offers"></tbody>
+      <tbody>    
+        <tr class="total-row">
+          <td><label>Te betalen</label></td>
+          <td><label id="price">€ 0</label></td>
+        </tr>   
+      </tbody>
+      <tbody id="delivery-slots"></tbody>
+      <tbody>  
+        <tr>
+          <td><label for="sendConfirmation">Stuur me een bevestiging</label></td>
+          <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" placeholder="Vul je email in..." checked></input> (vereist email)</td>
+        </tr> 
+        <tr>
+          <td><label for="submit"></label></td>
+          <td><submit-button>Bestellen</submit-button></td>
+        </tr>  
+       </tbody>        
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-pending-template">
+    <table>
+      <tr>
+        <td><label>Registratie gaat pas open op <span class="sale-from"></span></label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-over-template">
+    <table>
+      <tr>
+        <td><label>Registratie is afgelopen</label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-template">
+    <tr>
+        <td class="label-holder"><label></label></td>
+        <td class="input-holder"></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-number-template">
+    <input type="number" placeholder="0" min="0" />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-toggle-template">
+    <input />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-dropdown-template">
+    <select />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-horizontal-container-template">
+    <div class="horizontal-container" />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-option-label-template">
+    <span class="option-label" />
+</template>
+
+<template id="clubmgmt-purchase-order-delivery-slot-template">
+    <tr>
+        <td><label class="clear-subsequent">Wij komen van</label></td>
+        <td><input type="radio" name="delivery"></input> <span class="slot-from"></span> tot <span class="slot-to"></span></td>
+    </tr>
+</template>
+
+<!-- <div data-saleid="3a8c5ca3-617f-4080-bb7d-2beabdfd7859"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div> -->

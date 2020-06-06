@@ -3,6 +3,7 @@ import { PurchaseOrderForm } from "/js/clubmanagement.fundraising.sales.componen
 import { PurchaseOrderPayment } from "/js/clubmanagement.fundraising.sales.component.purchaseorderpayment.js"
 import { PurchaseOrderConfirmation } from "/js/clubmanagement.fundraising.sales.component.purchaseorderconfirmation.js"
 import { PurchaseOrderPdf } from "/js/clubmanagement.fundraising.sales.component.purchaseorderpdf.js"
+import { SubmitButton } from "/js/console.component.submit-button.js"
 
 (function() {
     customElements.define('clubmgmt-purchase-order-wizard', PurchaseOrderWizard);
@@ -10,4 +11,5 @@ import { PurchaseOrderPdf } from "/js/clubmanagement.fundraising.sales.component
 	customElements.define('clubmgmt-purchase-order-payment', PurchaseOrderPayment);
 	customElements.define('clubmgmt-purchase-order-confirmation', PurchaseOrderConfirmation);
 	customElements.define('clubmgmt-purchase-order-pdf', PurchaseOrderPdf);
+	customElements.define('submit-button', SubmitButton);
  })();

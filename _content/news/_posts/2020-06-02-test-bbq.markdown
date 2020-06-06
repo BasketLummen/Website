@@ -58,7 +58,7 @@ This is a test for a sale where
         </tr> 
         <tr>
           <td><label for="submit"></label></td>
-          <td><button type="submit"><img class="spinner" src="/img/loader-button.gif">Bestellen</button></td>
+          <td><submit-button>Bestellen</submit-button></td>
         </tr>  
        </tbody>        
     </table>
