@@ -1,6 +1,7 @@
 import { appInsights } from "/js/ai.module.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { club } from "/js/club.config.js"
+import { guid } from "/js/console.guid.js"
 
 class PurchaseOrderForm extends HTMLElement {
 
@@ -121,7 +122,6 @@ class PurchaseOrderForm extends HTMLElement {
 			event.preventDefault();
 
 			this.orderId = guid();
-			this.currency = "€";
 
 			var sequence = await this.claimSequence();
 
@@ -130,7 +130,8 @@ class PurchaseOrderForm extends HTMLElement {
 			this.placeOrder(cmd);
 			
 			var total = this.computeTotal();
-			this.total = total;
+			this.total = total.amount;			
+			this.currency = total.currency;
 
 			this.dispatchEvent(new Event('pay'));
 
@@ -383,7 +384,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 		input.addEventListener("change", (event) => {
 			var total = this.computeTotal();
-			this.querySelector('#price').innerText = "€ " + total;
+			this.querySelector('#price').innerText = total.currency + " " + total.amount;
 		});
 		
 		inputHolder.append(inputTemplate);
@@ -391,6 +392,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 	computeTotal(){
 		var sum = 0;
+		var currency = "€";
 		var inputs = this.querySelectorAll("input[data-itemid]");
 		inputs.forEach(input => {
 	
@@ -405,11 +407,15 @@ class PurchaseOrderForm extends HTMLElement {
 			var variant = this.determineVariant(itemId, matchingOptions);
 			
 			if(variant) {
+				currency = variant.price.currency;
 				sum += quantity * variant.price.value;
 			}
 		});
 	
-		return sum;
+		return {
+			currency: currency,
+			amount: sum
+		};
 	};
 
 	determineMatchingOptions(input){
