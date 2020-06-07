@@ -1,13 +1,14 @@
 import { appInsights } from "/js/ai.module.js"
+import { donationsConfig } from "/js/clubmanagement.fundraising.donations.config.js"
 
-class Donate extends HTMLElement {
+class DonationForm extends HTMLElement {
 
     constructor(){
         super();
 
-        this.template = document.getElementById("donation-template");
-        this.baseUri = "https://clubmgmt-donation-service-test.azurewebsites.net/api/donations";
-        this.stripe = Stripe("pk_test_8U57DC7IOjILi4nOIQM3lmVg");
+        this.template = document.getElementById("clubmgmt-donation-form-template");
+        this.baseUri = donationsConfig.donationsService + "/api/donations";
+        this.stripe = Stripe(donationsConfig.stripeKey);
     }
 
     async connectedCallback() {
@@ -174,4 +175,4 @@ class Donate extends HTMLElement {
     }
 }
 
-export { Donate }
+export { DonationForm }

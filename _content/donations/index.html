@@ -9,16 +9,16 @@ custom_js:
   - guid
 modules:
   - ai.module
-  - donations.app
+  - clubmanagement.fundraising.donations.app
 ---
 
 <script src="https://js.stripe.com/v3/"></script>
 
 <div class="container content">
-	<donate-form />
+	<clubmgmt-donation-form />
 </div>
 
-<template id="donation-template">
+<template id="clubmgmt-donation-form-template">
     <form class="responsive-form" id="amount-form">
         <fieldset>
             <legend>Choose amount to donate</legend>

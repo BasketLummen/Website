@@ -4,23 +4,25 @@ title: Basket Lummen
 description: Bevestiging van je bestelling
 keywords: Basket, Lummen
 preload_js:
-- ai
+- config
 custom_css:
 - pdfviewermod
 custom_js:
 - handlebars-v4.0.12
-- ptsans
-- jspdf.min
-- html2pdf.bundle.min
-- orderconfirmation
+- html2pdf.bundle.min  
+modules:
+  - ai.module
+  - clubmanagement.fundraising.sales.app
 ---
 
-<iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe>
+<clubmgmt-purchase-order-pdf></clubmgmt-purchase-order-pdf>
 
-<div id="canvas" style="display: none;"></div>
-<script id="confirmation-template" type="text/x-handlebars-template">
+<template id="clubmgmt-purchase-order-pdf-template">
     {{{{raw}}}}
-    <div>
+    <div id="confirmation-header">
+        Basket Lummen
+    </div>
+    <div id="confirmation-body">
         <p><b>{{{data.confirmation.buyer.name}}},</b></p>
         <p>{{{data.sale.confirmationMessage.textParts.thank_you_message}}}</p>
         <p>{{{data.sale.confirmationMessage.textParts.welcome_message}}}</p>
@@ -40,4 +42,4 @@ custom_js:
         <p>{{{data.sale.confirmationMessage.textParts.see_you_message}}},<br/>Basket Lummen</p>
     </div>
     {{{{/raw}}}}
-</script>
+</template>

@@ -11,15 +11,13 @@ custom_js:
 - config
 modules:
 - ai.module
-- donations.app
+- clubmanagement.fundraising.donations.app
 ---
 
-<donation-confirmation></donation-confirmation>
+<clubmgmt-donation-pdf></clubmgmt-donation-pdf>
 
-<iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe>
 
-<div id="confirmation-canvas" style="display: none;"></div>
-<script id="confirmation-template" type="text/x-handlebars-template">
+<template id="clubmgmt-donation-pdf-template">
     {{{{raw}}}}
     <div id="confirmation-header">
         Basket Lummen
@@ -48,4 +46,4 @@ modules:
         </table>
     </div>
     {{{{/raw}}}}
-</script>
+</template>
