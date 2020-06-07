@@ -113,4 +113,43 @@ This is a test for a sale where
     </tr>
 </template>
 
-<!-- <div data-saleid="3a8c5ca3-617f-4080-bb7d-2beabdfd7859"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div> -->
+<template id="clubmgmt-purchase-order-confirmation-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Bedankt voor je bestelling!</legend>
+      <table>
+        <tr>
+          <td colspan="2" class="align-left">
+              We zien je op het mosselfeest (hier moet meer info over plaats & tijdstip).
+              Je kan je bestelling <a class="pdf-link" href="/order/confirmation/">hier</a> afdrukken.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="align-left">
+            <button id="new">Nog een bestelling plaatsen</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</template>
+
+<template id="clubmgmt-purchase-order-error-report-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Er is iets fout gegaan!</legend>
+      <table>
+        <tr>
+          <td colspan="2" class="align-left">
+            <span class="error-message"></span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="align-left">
+            <button id="new">Opnieuw een bestelling plaatsen</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</template>

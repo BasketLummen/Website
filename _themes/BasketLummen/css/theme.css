@@ -892,9 +892,11 @@ button .spinner{
 	margin-bottom: 20px;
 }
 .align-right{
-	text-align: right;
+	text-align: right !important;
 }
-
+.align-left{
+	text-align: left !important;
+}
 .horizontal-container{
 	display: flex;
 	justify-content: space-between;

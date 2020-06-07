@@ -113,5 +113,43 @@ This is a test for a sale where
         <td><input type="radio" name="delivery"></input> <span class="slot-from"></span> tot <span class="slot-to"></span></td>
     </tr>
 </template>
-<!-- 
-<div data-saleid="ba566f9f-7e90-44d0-9f12-de9ec204e769"  data-title="Plaats je bestelling" data-buttontext="Bestellen"  data-nexttext="Nog een bestelling plaatsen" data-optional="email"></div> -->
+
+<template id="clubmgmt-purchase-order-confirmation-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Bedankt voor je bestelling!</legend>
+      <table>
+        <tr>
+          <td colspan="2" class="align-left">
+              We zien je op het mosselfeest (hier moet meer info over plaats & tijdstip).
+              Je kan je bestelling <a class="pdf-link" href="/order/confirmation/">hier</a> afdrukken.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="align-left">
+            <button id="new">Nog een bestelling plaatsen</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</template>
+
+<template id="clubmgmt-purchase-order-error-report-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Er is iets fout gegaan!</legend>
+      <table>
+        <tr>
+          <td colspan="2" class="align-left error-message">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="align-left">
+            <button id="new">Opnieuw een bestelling plaatsen</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</template>

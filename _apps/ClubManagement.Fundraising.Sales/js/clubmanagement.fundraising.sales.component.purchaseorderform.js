@@ -1,7 +1,7 @@
 import { appInsights } from "/js/ai.module.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { club } from "/js/club.config.js"
-import { guid } from "/js/console.guid.js"
+import { guid } from "/js/clubmanagement.guid.js"
 
 class PurchaseOrderForm extends HTMLElement {
 
@@ -134,6 +134,13 @@ class PurchaseOrderForm extends HTMLElement {
 			this.currency = total.currency;
 
 			this.dispatchEvent(new Event('pay'));
+
+			//this.dispatchEvent(new Event('confirm'));
+			// this.dispatchEvent(new CustomEvent('error', {
+			// 	detail: {
+			// 		error: "Oops"
+			// 	}
+			// }));
 
 		});
 

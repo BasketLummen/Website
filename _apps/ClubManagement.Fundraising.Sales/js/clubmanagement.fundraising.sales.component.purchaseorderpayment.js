@@ -7,10 +7,9 @@ class PurchaseOrderPayment extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['order-total'];
+        return ['order-total', 'order-id', 'order-currency'];
     }
-
-     
+    
     
     get orderId() {
 		return this.getAttribute('order-id');

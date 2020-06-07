@@ -1,5 +1,5 @@
 ﻿import { appInsights } from "/js/ai.module.js"
-import { queryString } from "/js/utils.querystring.js"
+import { queryString } from "/js/clubmanagement.querystring.js"
 
 class DonationConfirmation extends HTMLElement {
 
