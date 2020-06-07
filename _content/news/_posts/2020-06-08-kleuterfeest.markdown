@@ -15,4 +15,4 @@ We moeten dit uitstellen tot september omwille van de coronamaatregelen, maar vi
 - voor kinderen geboren in 201* (2e kleuterklas)
 - onze kleinste basketters trainen 1 keer per week op vrijdag van 17h00 tot 18h00.
 
-Meer informatie vind je op www.basketlummen.be of je kan vragen stellen via e-mail: secretariaat@basketlummen.be .
+Meer informatie vind je op www.basketlummen.be of je kan vragen stellen via e-mail: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
