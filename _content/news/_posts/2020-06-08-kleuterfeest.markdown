@@ -2,7 +2,7 @@
 layout: post
 title: "Kleuterfeest 2020"
 date: 2020-06-08 12:00:00
-description: Basket voor de kleinsten (°201x)
+description: Basket voor de kleinsten (°2015)
 cover: /news/img/2020-06-08-kleuterfeesta.jpg
 permalink: /news/2020-06-08-kleuterfeest/
 ---
@@ -12,7 +12,7 @@ We moeten dit uitstellen tot september omwille van de coronamaatregelen, maar vi
 
 ### Praktisch
 - in september nodigen we jullie uit om een keer mee te trainen in onze sporthal
-- voor kinderen geboren in 201* (2e kleuterklas)
+- voor kinderen geboren in 2015
 - onze kleinste basketters trainen 1 keer per week op vrijdag van 17h00 tot 18h00.
 
 Meer informatie vind je op [www.basketlummen.be](www.basketlummen.be) of je kan vragen stellen via e-mail: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
