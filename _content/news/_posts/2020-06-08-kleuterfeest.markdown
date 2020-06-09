@@ -15,6 +15,6 @@ We moeten dit uitstellen tot september omwille van de coronamaatregelen, maar vi
 - voor kinderen geboren in 2015
 - onze kleinste basketters trainen 1 keer per week op vrijdag van 17h00 tot 18h00.
 
-Meer informatie vind je op [www.basketlummen.be](www.basketlummen.be) of je kan vragen stellen via e-mail: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
+Voor eventuele vragen kan je terecht via e-mail: [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be).
  
 ![basketters](/news/img/2020-06-08-kleuterfeestc.jpg)
