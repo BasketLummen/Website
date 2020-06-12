@@ -123,13 +123,13 @@ class PurchaseOrderForm extends HTMLElement {
 
 			this.orderId = guid();
 
-			var sequence = await this.claimSequence();
+			// var sequence = await this.claimSequence();
 
-			var cmd = this.composeCommand(sequence);
+			// var cmd = this.composeCommand(sequence);
 
-			this.placeOrder(cmd);
+			// this.placeOrder(cmd);
 			
-			var total = this.computeTotal();
+			const total = this.computeTotal();
 			this.total = total.amount;			
 			this.currency = total.currency;
 

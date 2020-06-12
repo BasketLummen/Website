@@ -1,4 +1,7 @@
+import { club } from "/js/club.config.js"
+import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { appInsights } from "/js/ai.module.js"
+import { guid } from "/js/clubmanagement.guid.js"
 
 class PurchaseOrderPayment extends HTMLElement {
 
@@ -7,10 +10,21 @@ class PurchaseOrderPayment extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['order-total', 'order-id', 'order-currency'];
+        return ['sale-id', 'order-total', 'order-id', 'order-currency'];
     }
-    
-    
+
+    get saleId() {
+        return this.getAttribute('sale-id');
+    }
+
+    set saleId(val) {
+        if (val) {
+            this.setAttribute('sale-id', val);
+        } else {
+            this.removeAttribute('sale-id');
+        }
+    }
+
     get orderId() {
 		return this.getAttribute('order-id');
   	}
@@ -47,22 +61,39 @@ class PurchaseOrderPayment extends HTMLElement {
 		}
   	} 
 
-    async connectedCallback() {      
+    async connectedCallback() {
 
-        var title = document.createElement("div");
-        title.innerText = "TODO: Set up payment for order " + this.orderId + " amount: " + this.currency + this.total;
-        this.append(title);
-
-        var confirm = document.createElement("button");        
-        confirm.innerText = "Pay";
-        confirm.addEventListener("click", (event) => this.dispatchEvent(new Event('confirm')));
-
-        this.append(confirm);
-
+        // const title = document.createElement("div");
+        // title.innerText = `TODO: Set up payment for order ${this.orderId} amount: ${this.currency}${this.total}`;
+        // this.append(title);
+        //
+        // const confirm = document.createElement("button");
+        // confirm.innerText = "Pay";
+        // confirm.addEventListener("click", (event) => {
+        //    
+        //    
+        //     this.dispatchEvent(new Event('confirm'));
+        // });
+        //
+        // this.append(confirm);
+        
+        
         appInsights.trackEvent({
             name: "PurchaseOrderPaymentRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });
+    }
+
+    async loadSale(){
+        var uri = `${salesConfig.salesService}/api/sales/${club.organizationId}/${this.saleId}`;
+        var request = await fetch(uri, {
+            method: "GET",
+            mode: 'cors',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        return await request.json();
     }
 }
 

@@ -153,3 +153,11 @@ This is a test for a sale where
     </fieldset>
   </form>
 </template>
+
+<template id="clubmgmt-purchase-order-payment-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Order payment</legend>
+    </fieldset>
+  </form>
+</template>
