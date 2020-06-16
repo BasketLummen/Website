@@ -2,26 +2,28 @@
 layout: post
 title: "Wetenschappelijk onderzoek"
 date: 2020-06-17 12:00:00
-description: Help mee aan dit onderzoek
-cover: /news/img/2020-06-17-kleuterfeesta.jpg
-permalink: /news/2020-06-17-kleuterfeest/
+description: Draag je steentje bij!
+cover: /news/img/2020-06-17-onderzoeka.jpg
+permalink: /news/2020-06-17-onderzoek/
 ---
 
 Sporten is de beste manier om ons lichaam gezond te houden. Veel jongeren zorgen hier al voor en sporten veel, soms zelfs meer dan 12 uur per week. 
 
 Deze intensieve sporters worden best opgevolgd, want in sommige sporttakken lijkt de intensiteit luchtwegklachten in de hand te werken. Bij jongeren is er niet altijd een opvolging.
 
-We nodigen daarom onze basketters uit om deel te nemen aan een studie naar inspanningsastma (het ontstaan van astma als gevolg van intensief sporten). Je helpt op die manier jongeren met een verhoogde kans op inspanningsastma vroegtijdig op te sporen en aangepast te begeleiden.
-
 ### Studie naar inspanningsastma
-
-Als je tussen 12 en 18 jaar bent en minstens 12 uur per week sport (inclusief trainingen, competities op recreatief en/of op (inter)nationaal niveau, sport buiten club en sport op school) kan je aan de studie meedoen. Bovendien kan je eigen sportarts je met deze studieresultaten verder opvolgen.
 
 Astma heeft een impact op het leven van de jongere en zou het sporten kunnen bemoeilijken. Doel van het onderzoek is na te gaan of iemand inspanningsastma heeft en met een screeningtest te voorspellen of een sporter kenmerken vertoont die de kans op inspanningsastma vergroten. Het vroegtijdig opsporen en behandelen ervan helpt om de impact te verminderen.
 
 De studie wordt geleid door prof. dr. Bullens (UZ Leuven, dienst kinder- en adolescentengeneeskunde) in samenwerking met prof. dr. Dupont (UZ Leuven, dienst longziekten), prof. dr. Raes (Jessa Ziekenhuis, kindergeneeskunde), dr. Leus (Maria Middelares ZH Gent, kindergeneeskunde) en coördinerende sportartsen voor elke sportdiscipline. Uitvoering gebeurt door drs. Goossens (Onderzoeksgroep Allergie en Klinische Immunologie, KUL), met goedkeuring van de ethische commisie: CTC S59778 en S61602. 
 
 De onderzoeksgroep heeft reeds veel ervaring bij het uitvoeren van sportgerelateerde studies in het kader van allergie en astma, onder andere topsportschoolstudenten (basketbal, voetbal, volleybal en zwemmen). Hieruit bleek dat sommige sporttakken meer last hadden dan andere.
+
+## Help mee
+
+We nodigen onze basketters uit om deel te nemen aan een studie naar inspanningsastma (het ontstaan van astma als gevolg van intensief sporten). Je helpt op die manier jongeren met een verhoogd risico vroegtijdig op te sporen en aangepast te begeleiden.
+
+Als je tussen 12 en 18 jaar bent en minstens 12 uur per week sport (inclusief trainingen, competities op recreatief en/of op (inter)nationaal niveau, sport buiten club en sport op school) kan je aan de studie meedoen. Bovendien kan je eigen sportarts je met deze studieresultaten verder opvolgen.
 
 ### Praktisch
 
