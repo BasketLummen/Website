@@ -44,6 +44,6 @@ Hier kan je inschrijven of meer informatie vragen:
 
 - e-mail: [studiesport@kuleuven.be](mailto:studiesport@kuleuven.be)
 - telefoon: 016 19 33 67
-- website: [KUL](https://gbiomed.kuleuven.be/english/research/50000698/50000631/study-sport-registration-form)
+- website: [gbiomed.kuleuven.be](https://gbiomed.kuleuven.be/english/research/50000698/50000631/study-sport-registration-form)
  
 ![logoonderzoek](/news/img/2020-06-17-onderzoekb.jpg)
