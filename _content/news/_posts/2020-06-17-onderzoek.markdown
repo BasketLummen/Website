@@ -33,6 +33,7 @@ De studie start met een vragenlijst vooraf, daarna volgen deze fysieke testen:
 - FeNO meting (blaastest)
 - huidtesten (om allergie op te sporen)
 - bloedtest. 
+
 De fysieke testen duren ongeveer 1,5 uur en zullen worden uitgevoerd in één van de drie onderzoekscentra:
 - Jessa Ziekenhuis, Hasselt
 - UZ, Leuven
