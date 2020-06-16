@@ -19,7 +19,7 @@ De studie wordt geleid door prof. dr. Bullens (UZ Leuven, dienst kinder- en adol
 
 De onderzoeksgroep heeft reeds veel ervaring bij het uitvoeren van sportgerelateerde studies in het kader van allergie en astma, onder andere topsportschoolstudenten (basketbal, voetbal, volleybal en zwemmen). Hieruit bleek dat sommige sporttakken meer last hadden dan andere.
 
-## Help mee
+### Help mee
 
 We nodigen onze basketters uit om deel te nemen aan een studie naar inspanningsastma (het ontstaan van astma als gevolg van intensief sporten). Je helpt op die manier jongeren met een verhoogd risico vroegtijdig op te sporen en aangepast te begeleiden.
 
