@@ -1,13 +1,14 @@
 ﻿import { appInsights } from "/js/ai.module.js"
-import { queryString } from "/js/utils.querystring.js"
+import { queryString } from "/js/clubmanagement.querystring.js"
+import { donationsConfig } from "/js/clubmanagement.fundraising.donations.config.js"
 
-class DonationConfirmation extends HTMLElement {
+class DonationPdf extends HTMLElement {
 
     constructor(){
         super();
 
-        this.template = document.getElementById("donation-template");
-        this.baseUri = "https://clubmgmt-donation-service-test.azurewebsites.net/api/donations";
+        this.template = document.getElementById("clubmgmt-donation-pdf-template");
+        this.baseUri = donationsConfig.donationsService + "/api/donations";
     }
 
     async connectedCallback() {
@@ -15,10 +16,10 @@ class DonationConfirmation extends HTMLElement {
         // Only render the first time. Identify the subsequent rendering by checking for component's inner HTML
         if (this.innerHTML !== '') 
             return;
-        this.append(document.createElement("span"));
+        this.innerHTML = '<iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe><div id="confirmation-canvas" style="display: none;"></div>';
         
-        const templateText = document.getElementById("confirmation-template")
-            .innerText.replace("{{{{raw}}}}", "")
+        const templateText = this.template.innerHTML
+            .replace("{{{{raw}}}}", "")
             .replace("{{{{/raw}}}}", "");
 
         const donationId = queryString.get("d");
@@ -76,4 +77,4 @@ class DonationConfirmation extends HTMLElement {
     }
 }
 
-export { DonationConfirmation }
+export { DonationPdf }

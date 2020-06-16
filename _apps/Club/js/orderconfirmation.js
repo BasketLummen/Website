@@ -1,6 +1,6 @@
-var ordersService = "https://clubmgmt-orderbooking-service.azurewebsites.net";
+var ordersService = "https://clubmgmt-orderbooking-service-test.azurewebsites.net";
 //var ordersService = "http://localhost:22465";
-var salesService = "https://clubmgmt-sales-service.azurewebsites.net";
+var salesService = "https://clubmgmt-sales-service-test.azurewebsites.net";
 
 var getParameterByName = function (name, url) {
     if (!url) url = window.location.href;
@@ -61,6 +61,7 @@ function loadConfirmation(){
 
 function render(){
     var tmp = $("#confirmation-template").text().replace("{{{{raw}}}}", "").replace("{{{{/raw}}}}", "");   
+    fixExpectedDeliveryDateFormat(confirmation);
     var template = Handlebars.compile(tmp);
     var body = template({
         data: {
@@ -69,24 +70,30 @@ function render(){
         }
     });
 
-    $("#canvas").append(body);
+    $("#confirmation-canvas").append(body);
 
-    $("#canvas").show();
+    $("#confirmation-canvas").show();
     html2pdf()
-        .set({ margin: 10, html2canvas: { scale: 4, letterRendering: true } })
-        .from($("#canvas")[0]).toPdf().get('pdf').then(function (pdf) {
-
-            var documentUrl = pdf.output('bloburl');
-
-            appInsights.trackEvent({
-                name: "ConfirmationPdfGenerated",
-                properties: { eventCategory: "Fundraising", eventAction: "render", orderId: o, documentUrl: documentUrl }
-              });
-
-            $("#canvas").hide();
+        .set({ 
+            html2canvas: { scale: 4, letterRendering: true }, 
+         /*   jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } */
+        })
+        .from($("#confirmation-canvas")[0]).toPdf().get('pdf').then(function (pdf) {
+            $("#confirmation-canvas").hide();
             var iframe = document.getElementById('printoutput');
-            iframe.src = "/pdf/viewer.html?file=" + documentUrl;
+            iframe.src = "/pdf/viewer.html?file=" + pdf.output('bloburl');
           });
+}
+
+function fixExpectedDeliveryDateFormat(confirmation)
+{
+    if(confirmation.deliveryExpectations){
+        var start = new Date(confirmation.deliveryExpectations.expectedDeliveryDateRange.start);
+        confirmation.deliveryExpectations.expectedDeliveryDateRange.start = start.toLocaleTimeString("nl-BE", { hour: '2-digit', minute: '2-digit'});
+
+        var end = new Date(confirmation.deliveryExpectations.expectedDeliveryDateRange.end);
+        confirmation.deliveryExpectations.expectedDeliveryDateRange.end = end.toLocaleTimeString("nl-BE", { hour: '2-digit', minute: '2-digit'});
+    }
 }
 
 $(document).ready(function(){

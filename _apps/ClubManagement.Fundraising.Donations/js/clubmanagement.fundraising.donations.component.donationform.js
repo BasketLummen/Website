@@ -1,13 +1,17 @@
 import { appInsights } from "/js/ai.module.js"
+import { donationsConfig } from "/js/clubmanagement.fundraising.donations.config.js"
+import { club } from "/js/club.config.js"
+import { guid } from "/js/clubmanagement.guid.js"
 
-class Donate extends HTMLElement {
+class DonationForm extends HTMLElement {
 
     constructor(){
         super();
 
-        this.template = document.getElementById("donation-template");
-        this.baseUri = "https://clubmgmt-donation-service-test.azurewebsites.net/api/donations";
-        this.stripe = Stripe("pk_test_8U57DC7IOjILi4nOIQM3lmVg");
+        this.template = document.getElementById("clubmgmt-donation-form-template");
+        this.donationsBaseUri = donationsConfig.donationsService + "/api/donations";
+        this.paymentsBaseUri = donationsConfig.paymentsService + "/api/payments";
+        this.stripe = Stripe(donationsConfig.stripeKey);
     }
 
     async connectedCallback() {
@@ -92,12 +96,12 @@ class Donate extends HTMLElement {
            
             // Prepare donation
             const donationId = guid();
-            const prepareDonation = {
+         /*   const prepareDonation = {
                 donationId: donationId,
                 amount: donation.value,
                 currency: "eur"
             };
-            const url = `${this.baseUri}/${donationId}/prepare`;
+            const url = `${this.donationsBaseUri}/${donationId}/prepare`;
 
             const response = await fetch(url, {
                 method: 'POST',
@@ -105,6 +109,37 @@ class Donate extends HTMLElement {
                 cache: 'no-cache',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(prepareDonation),
+            });*/
+
+            const paymentId = guid();
+            const preparePayment = {
+                paymentId: paymentId,
+                amount: {
+                    value: donation.value,
+                    currency: "eur"
+                },
+                payedBy: {
+                    id: null,
+                    name: cardHolder.value
+                },
+                beneficiary: {
+                    id: club.organizationId,
+                    name: club.name
+                },
+                paymentMethod: "card",
+                metadata: {
+                    paymentType: "donation",
+                    donationId: donationId
+                }                
+            };
+            const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
+
+            const response = await fetch(url, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(preparePayment),
             });
 
             const paymentIntent = await response.json();
@@ -126,7 +161,7 @@ class Donate extends HTMLElement {
             }
             else
             {
-                const url = `${this.baseUri}/${donationId}/confirm`;
+              /*  const url = `${this.donationsBaseUri}/${donationId}/confirm`;
                 const registerDonationConfirmed = {
                     donationId: donationId,
                     paymentIntentId: paymentIntent.paymentIntentId,
@@ -141,6 +176,19 @@ class Donate extends HTMLElement {
                     cache: 'no-cache',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(registerDonationConfirmed),
+                });*/
+
+                const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/confirm`;
+                const confirmPayment = {
+                    paymentId: paymentId
+                };
+                
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(confirmPayment),
                 });
 
                 // todo: add "Email confirmation will be sent if the user opted in"
@@ -174,4 +222,4 @@ class Donate extends HTMLElement {
     }
 }
 
-export { Donate }
+export { DonationForm }
