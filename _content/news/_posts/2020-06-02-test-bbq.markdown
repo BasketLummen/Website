@@ -154,10 +154,25 @@ This is a test for a sale where
   </form>
 </template>
 
+<!-- payment step -->
+
 <template id="clubmgmt-purchase-order-payment-template">
-  <form class="responsive-form">
+  <form class="responsive-form" id="orderPayment">
     <fieldset>
       <legend>Order payment</legend>
+      <table id="paymentMethodOptions">
+      </table>
     </fieldset>
   </form>
+</template>
+
+<template id="clubmgmt-purchase-order-payment-method-template">
+  <tr>
+    <td>
+        <input type="radio" name="paymentMethod" value="cash">
+    </td>
+    <td>
+        <span>Cash</span>
+    </td>
+  </tr>
 </template>
