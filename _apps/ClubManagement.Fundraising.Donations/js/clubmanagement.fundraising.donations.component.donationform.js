@@ -130,7 +130,7 @@ class DonationForm extends HTMLElement {
                 metadata: {
                     paymentType: "donation",
                     donationId: donationId
-                }                
+                }
             };
             const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
 
@@ -178,18 +178,18 @@ class DonationForm extends HTMLElement {
                     body: JSON.stringify(registerDonationConfirmed),
                 });*/
 
-                const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/confirm`;
-                const confirmPayment = {
-                    paymentId: paymentId
-                };
-                
-                const response = await fetch(url, {
-                    method: 'PUT',
-                    mode: 'cors',
-                    cache: 'no-cache',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(confirmPayment),
-                });
+                // const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/confirm`;
+                // const confirmPayment = {
+                //     paymentId: paymentId
+                // };
+                //
+                // const response = await fetch(url, {
+                //     method: 'PUT',
+                //     mode: 'cors',
+                //     cache: 'no-cache',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify(confirmPayment),
+                // });
 
                 // todo: add "Email confirmation will be sent if the user opted in"
                 resultMessage.innerText = "Thank you for your donation!"
