@@ -167,12 +167,42 @@ This is a test for a sale where
 </template>
 
 <template id="clubmgmt-purchase-order-payment-method-template">
-  <tr>
-    <td>
-        <input type="radio" name="paymentMethod" value="cash">
-    </td>
-    <td>
-        <span>Cash</span>
-    </td>
-  </tr>
+    <tbody class="payment-method-container">
+        <tr>
+            <td>
+                <input type="radio" name="paymentMethod" value="cash">
+            </td>
+            <td>
+                <span>Cash</span>
+            </td>
+          </tr>
+    </tbody>
+</template>
+
+<template id="clubmgmt-purchase-order-payment-method-card-form-template">
+    <tr>
+        <td>
+            <label>Kaarthouder</label>
+        </td>
+        <td>
+            <input type="text" id="card-holder" required />
+        </td>
+    </tr>
+    <tr>
+        <td>Kaart</td>
+        <td>
+            <div id="card-element" />
+        </td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-payment-method-bancontact-form-template">
+    <tr>
+        <td>
+            <label>Naam</label>
+        </td>
+        <td>
+            <input type="text" id="name" required />
+        </td>
+    </tr>
 </template>

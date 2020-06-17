@@ -98,8 +98,7 @@ class PurchaseOrderPayment extends HTMLElement {
         // });
         //
         // this.append(confirm);
-        
-        
+
         appInsights.trackEvent({
             name: "PurchaseOrderPaymentRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
@@ -119,11 +118,41 @@ class PurchaseOrderPayment extends HTMLElement {
     }
     
     renderPaymentMethodOption(rowElement, paymentMethodId, paymentMethodName) {
+        const paymentMethodContainer = rowElement.querySelector(".payment-method-container");
+        
         const radioButton = rowElement.querySelector("input[type='radio']");
         radioButton.setAttribute("value", paymentMethodId);
+        radioButton.addEventListener('change', event => {
+            const cssClassToUse = "temporary-payment-method-form";
+            this.clearPreviouslySelectedPaymentMethod(cssClassToUse);
+            
+            // add html elements using template
+            const templateId = `clubmgmt-purchase-order-payment-method-${paymentMethodId}-form-template`;
+            const templateBody = document.getElementById(templateId);
+            
+            // cash option has no template
+            if (templateBody) {
+                const content = templateBody.content.cloneNode(true);
+
+                // add CSS class to remove the form elements when the selection is changing
+                for (let node of content.children) {
+                    node.classList.add(cssClassToUse);
+                }
+
+                paymentMethodContainer.append(content);
+            }
+        });
                 
         const title = rowElement.querySelector("span");
         title.innerText = paymentMethodName;
+    }
+
+
+    clearPreviouslySelectedPaymentMethod(cssClassToFind) {
+        const elements = this.querySelectorAll(`.${cssClassToFind}`);
+        for (let element of elements) {
+            element.remove();
+        }
     }
 }
 
