@@ -31,15 +31,15 @@ This is a test for a sale where
       <tbody>
         <tr>
           <td><label for="given-name">Voornaam</label></td>
-          <td><input type="text" id="given-name" name="given-name" placeholder="Vul je voornaam in..." required></input></td>
+          <td><input type="text" id="given-name" name="given-name" placeholder="Vul je voornaam in..." required /></td>
         </tr>
         <tr>
           <td><label for="family-name">Familienaam</label></td>
-          <td><input type="text" id="family-name" name="family-name" placeholder="Vul je familienaam in..." required></input></td>
+          <td><input type="text" id="family-name" name="family-name" placeholder="Vul je familienaam in..." required /></td>
         </tr>
         <tr>
           <td><label for="email">Email</label></td>
-          <td><input type="text" id="email" name="email" placeholder="Vul je email in..."></input></td>
+          <td><input type="text" id="email" name="email" placeholder="Vul je email in..." /></td>
         </tr>
       </tbody>
       <tbody id="offers"></tbody>
@@ -53,7 +53,7 @@ This is a test for a sale where
       <tbody>  
         <tr>
           <td><label for="sendConfirmation">Stuur me een bevestiging</label></td>
-          <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" placeholder="Vul je email in..." checked></input> (vereist email)</td>
+          <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" placeholder="Vul je email in..." checked /> (vereist email)</td>
         </tr> 
         <tr>
           <td><label for="submit"></label></td>

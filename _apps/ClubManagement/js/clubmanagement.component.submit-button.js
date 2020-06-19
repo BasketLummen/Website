@@ -15,7 +15,7 @@ class SubmitButton extends HTMLElement {
     span.innerHTML = this.spanContent;
 
     var button = this.querySelector('button[type="submit"]');
-    button.addEventListener("click",  (event) => {
+    button.form.addEventListener("submit",  (event) => {
       button.disabled = true;
       var txt = this.querySelector("span");
       var width = txt.offsetWidth;
@@ -23,10 +23,6 @@ class SubmitButton extends HTMLElement {
       spinner.parentNode.style.width = width + "px";
       spinner.style.display = "inline";      
       txt.style.display = "none";
-      button.form.dispatchEvent(new Event('submit', {
-        'bubbles'    : true, 
-        'cancelable' : true  
-      }));
     });
   }
 
