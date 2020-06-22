@@ -1,0 +1,11 @@
+{
+  "name": "Basket Lummen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BasketLummen/Website.git",
+  "author": "Yves Goeleven <yves@goeleven.com>",
+  "license": "MIT",
+  "dependencies": {
+    "clubmanagement.shell": "https://github.com/MessageHandler/clubmanagement.shell.git#clubmanagement.shell-v1.0.0-gitpkg"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "systemParams": "win32-x64-64",
+  "modulesFolders": [
+    "_yarn"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "clubmanagement.shell@https://github.com/MessageHandler/clubmanagement.shell.git#clubmanagement.shell-v1.0.0-gitpkg"
+  ],
+  "lockfileEntries": {
+    "clubmanagement.shell@https://github.com/MessageHandler/clubmanagement.shell.git#clubmanagement.shell-v1.0.0-gitpkg": "https://github.com/MessageHandler/clubmanagement.shell.git#e49d71dc2a27eb9a5b32cc92a7273961e89d72bd"
+  },
+  "files": [],
+  "artifacts": {}
+}
