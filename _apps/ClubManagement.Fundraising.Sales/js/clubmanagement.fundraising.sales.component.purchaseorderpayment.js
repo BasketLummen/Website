@@ -10,6 +10,10 @@ class PurchaseOrderPayment extends HTMLElement {
         
         this.template = document.getElementById("clubmgmt-purchase-order-payment-template");
         this.paymentMethodTemplate = document.getElementById("clubmgmt-purchase-order-payment-method-template");
+
+        this.paymentsBaseUri = salesConfig.paymentsService + "/api/payments";
+        
+        this.stripe = Stripe(salesConfig.stripeKey);
     }
 
     static get observedAttributes() {
@@ -84,20 +88,69 @@ class PurchaseOrderPayment extends HTMLElement {
         }
         
         this.append(content);
-        
-        // const title = document.createElement("div");
-        // title.innerText = `TODO: Set up payment for order ${this.orderId} amount: ${this.currency}${this.total}`;
-        // this.append(title);
-        //
-        // const confirm = document.createElement("button");
-        // confirm.innerText = "Pay";
-        // confirm.addEventListener("click", (event) => {
-        //    
-        //    
-        //     this.dispatchEvent(new Event('confirm'));
-        // });
-        //
-        // this.append(confirm);
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            // bancontact name
+            const name = form.querySelector("#name").value;
+
+            const paymentId = guid();
+            const preparePayment = {
+                paymentId: paymentId,
+                amount: {
+                    value: this.total,
+                    currency: this.getCurrencyCode(this.currency)
+                },
+                payedBy: {
+                    id: null,
+                    name: name
+                },
+                beneficiary: {
+                    id: club.organizationId,
+                    name: club.name
+                },
+                paymentMethod: "bancontact",
+                metadata: {
+                    paymentType: "purchase-order",
+                    orderId: this.orderId,
+                    saleId: this.saleId
+                }
+            };
+            const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
+
+            const response = await fetch(url, {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(preparePayment),
+            });
+
+            const paymentIntent = await response.json();
+
+            // Redirects away from the client
+            const {error} = await this.stripe.confirmBancontactPayment(paymentIntent.secret, {
+                    payment_method: {
+                        billing_details: {
+                            name: name
+                        }
+                    },
+                    return_url: `${window.location.href}?s=confirm&o=${this.orderId}`
+                }
+            );
+
+            if (error) {
+                this.dispatchEvent(new CustomEvent('error', {
+                    detail: {
+                        error: "Purchase oder payment failed",
+                        orderId: this.orderId
+                    }
+                }));
+            }
+            
+            this.dispatchEvent(new Event('confirm'));
+        });
 
         appInsights.trackEvent({
             name: "PurchaseOrderPaymentRendered",
@@ -153,6 +206,14 @@ class PurchaseOrderPayment extends HTMLElement {
         for (let element of elements) {
             element.remove();
         }
+    }
+
+    getCurrencyCode(currencySymbol) {
+        if (currencySymbol === "€") {
+            return "eur"
+        }
+
+        return currencySymbol;
     }
 }
 

@@ -11,6 +11,8 @@ modules:
   - clubmanagement.fundraising.sales.app
 ---
 
+<script src="https://js.stripe.com/v3/"></script>
+
 This is a test for a sale where
 - people can order a single product (number of pieces on the bbq)
 - cannot specify quantity as that is already implied by the product
@@ -161,6 +163,14 @@ This is a test for a sale where
     <fieldset>
       <legend>Order payment</legend>
       <table id="paymentMethodOptions">
+        <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <submit-button>Pay</submit-button>
+                </td>
+            </tr>
+        </tbody>
       </table>
     </fieldset>
   </form>
