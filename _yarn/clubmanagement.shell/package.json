@@ -1,8 +1,0 @@
-{
-  "name": "clubmanagement.shell",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/MessageHandler/clubmanagement.shell.git",
-  "author": "Yves Goeleven <yves@goeleven.com>",
-  "license": "RPL1.5"
-}

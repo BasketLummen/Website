@@ -6,10 +6,13 @@
   "flags": [],
   "linkedModules": [],
   "topLevelPatterns": [
-    "clubmanagement.shell@https://github.com/MessageHandler/clubmanagement.shell.git#clubmanagement.shell-v1.0.0-gitpkg"
+    "clubmanagement.orderbooking@npm:@messagehandler/clubmanagement.orderbooking.public",
+    "clubmanagement.payments@npm:@messagehandler/clubmanagement.payments.public"
   ],
   "lockfileEntries": {
-    "clubmanagement.shell@https://github.com/MessageHandler/clubmanagement.shell.git#clubmanagement.shell-v1.0.0-gitpkg": "https://github.com/MessageHandler/clubmanagement.shell.git#e49d71dc2a27eb9a5b32cc92a7273961e89d72bd"
+    "clubmanagement.orderbooking@npm:@messagehandler/clubmanagement.orderbooking.public": "https://npm.pkg.github.com/download/@messagehandler/clubmanagement.orderbooking.public/1.0.5-0/7ff422178af7419de464c75fa6e42ed39ec325e05df38e7155007ba3826b8c3f#9aeb5da848c12b374d06e5007a4c4557408d4242",
+    "clubmanagement.payments@npm:@messagehandler/clubmanagement.payments.public": "https://npm.pkg.github.com/download/@messagehandler/clubmanagement.payments.public/1.0.3-0/1954f9e7c5e070f4b11cfdbc843376dd1c2313ad292fee6c9a67ffb83891a09f#9ce6823c96364f388227d79a37b8c98b24929432",
+    "dish.shell@npm:@messagehandler/dish.shell": "https://npm.pkg.github.com/download/@messagehandler/dish.shell/1.0.13/5c1eac65a9ede3f451e37f3e698c6a23bda00bd942047483f7a4dae785af13d7#1d7c4a1f93d8991020ad3d0d67f5bac0995f0ce8"
   },
   "files": [],
   "artifacts": {}
