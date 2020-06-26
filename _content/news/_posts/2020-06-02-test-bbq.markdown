@@ -8,10 +8,9 @@ preload_js:
   - config
 modules:
   - ai.module
+  - clubmanagement.payments.app
   - clubmanagement.fundraising.sales.app
 ---
-
-<script src="https://js.stripe.com/v3/"></script>
 
 This is a test for a sale where
 - people can order a single product (number of pieces on the bbq)
@@ -159,60 +158,14 @@ This is a test for a sale where
 <!-- payment step -->
 
 <template id="clubmgmt-purchase-order-payment-template">
+
   <form class="responsive-form" id="orderPayment">
     <fieldset>
       <legend>Order payment</legend>
-      <table id="paymentMethodOptions">
-        <tbody>
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <submit-button>Pay</submit-button>
-                </td>
-            </tr>
-        </tbody>
-      </table>
+      <payment-method-selector id="paymentMethodSelector">
+      </payment-method-selector>
+      <submit-button>Pay</submit-button>
     </fieldset>
   </form>
-</template>
-
-<template id="clubmgmt-purchase-order-payment-method-template">
-    <tbody class="payment-method-container">
-        <tr>
-            <td>
-                <input type="radio" name="paymentMethod" value="cash">
-            </td>
-            <td>
-                <span>Cash</span>
-            </td>
-          </tr>
-    </tbody>
-</template>
-
-<template id="clubmgmt-purchase-order-payment-method-card-form-template">
-    <tr>
-        <td>
-            <label>Kaarthouder</label>
-        </td>
-        <td>
-            <input type="text" id="card-holder" required />
-        </td>
-    </tr>
-    <tr>
-        <td>Kaart</td>
-        <td>
-            <div id="card-element" />
-        </td>
-    </tr>
-</template>
-
-<template id="clubmgmt-purchase-order-payment-method-bancontact-form-template">
-    <tr>
-        <td>
-            <label>Naam</label>
-        </td>
-        <td>
-            <input type="text" id="name" required />
-        </td>
-    </tr>
+  
 </template>

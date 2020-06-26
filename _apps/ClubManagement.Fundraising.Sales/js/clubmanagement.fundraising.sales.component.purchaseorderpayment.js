@@ -3,6 +3,8 @@ import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { appInsights } from "/js/ai.module.js"
 import { guid } from "/js/clubmanagement.guid.js"
 
+import { StripeClient } from "./clubmanagement.payments.stripe.js"
+
 class PurchaseOrderPayment extends HTMLElement {
 
     constructor(){
@@ -11,9 +13,8 @@ class PurchaseOrderPayment extends HTMLElement {
         this.template = document.getElementById("clubmgmt-purchase-order-payment-template");
         this.paymentMethodTemplate = document.getElementById("clubmgmt-purchase-order-payment-method-template");
 
-        this.paymentsBaseUri = salesConfig.paymentsService + "/api/payments";
+        this.paymentsBaseUri = salesConfig.paymentsService + "/api/payments";       
         
-        this.stripe = Stripe(salesConfig.stripeKey);
     }
 
     static get observedAttributes() {
@@ -69,9 +70,17 @@ class PurchaseOrderPayment extends HTMLElement {
   	} 
 
     async connectedCallback() {
+
+
+        var loader = new StripeClient();
+        await loader.ensureScriptIsLoaded();
+
+        // todo, move this into stripe class?
+        this.stripe = Stripe(salesConfig.stripeKey);
+
         const content = this.template.content.cloneNode(true);
         const form = content.querySelector("#orderPayment");
-        const table = content.querySelector("#paymentMethodOptions");
+        const selector = content.querySelector("#paymentMethodSelector");
                 
         const sale = await this.loadSale();
         
@@ -81,21 +90,42 @@ class PurchaseOrderPayment extends HTMLElement {
             });    
         }
 
-        for (let paymentMethodType of sale.allowedPaymentMethodTypes) {
-            const rowContent = this.paymentMethodTemplate.content.cloneNode(true)
-            this.renderPaymentMethodOption(rowContent, paymentMethodType.id, paymentMethodType.name);
-            table.append(rowContent);
-        }
-        
+        selector.setAttribute("allowedPaymentMethods", JSON.stringify(sale.allowedPaymentMethodTypes.map(m => m.id)));
+
         this.append(content);
 
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
             
-            // bancontact name
-            const name = form.querySelector("#name").value;
-
             const paymentId = guid();
+            var amount = {
+                value: this.total,
+                currency: this.getCurrencyCode(this.currency)
+            };
+            var beneficiary = {
+                id: club.organizationId,
+                name: club.name
+            };
+            var metadata = {
+                paymentType: "purchase-order",
+                orderId: this.orderId,
+                saleId: this.saleId
+            }
+            var settings = {
+                return_url: `${window.location.href}?s=confirm&o=${this.orderId}`
+            }
+
+            var result = await selector.startPayment(
+                paymentId,
+                amount,
+                beneficiary,
+                metadata,
+                settings
+            );
+
+            // bancontact for sean
+        /*    const name = form.querySelector("#name").value;
+            
             const preparePayment = {
                 paymentId: paymentId,
                 amount: {
@@ -138,12 +168,12 @@ class PurchaseOrderPayment extends HTMLElement {
                     },
                     return_url: `${window.location.href}?s=confirm&o=${this.orderId}`
                 }
-            );
+            );*/
 
-            if (error) {
+            if (result.error) {
                 this.dispatchEvent(new CustomEvent('error', {
                     detail: {
-                        error: "Purchase oder payment failed",
+                        error: "Purchase order payment failed",
                         orderId: this.orderId
                     }
                 }));
@@ -201,8 +231,8 @@ class PurchaseOrderPayment extends HTMLElement {
     }
 
 
-    clearPreviouslySelectedPaymentMethod(cssClassToFind) {
-        const elements = this.querySelectorAll(`.${cssClassToFind}`);
+    clearPreviouslySelectedPaymentMethod() {
+        const elements = this.querySelectorAll(`.temporary`);
         for (let element of elements) {
             element.remove();
         }
