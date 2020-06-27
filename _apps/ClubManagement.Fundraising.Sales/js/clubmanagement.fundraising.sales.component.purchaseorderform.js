@@ -123,11 +123,11 @@ class PurchaseOrderForm extends HTMLElement {
 
 			this.orderId = guid();
 
-			// var sequence = await this.claimSequence();
+			var sequence = await this.claimSequence();
 
-			// var cmd = this.composeCommand(sequence);
+			var cmd = this.composeCommand(sequence);
 
-			// this.placeOrder(cmd);
+			this.placeOrder(cmd);
 			
 			const total = this.computeTotal();
 			this.total = total.amount;			
@@ -370,6 +370,7 @@ class PurchaseOrderForm extends HTMLElement {
 				var toggle = toggleTemplate.querySelector("input");
 				toggle.setAttribute("type", this.sale.choice == "Multiple" ? 'checkbox' : 'radio');
 				toggle.setAttribute("name", this.sale.choice == "Multiple" ? "toggle-" + variant.id : "toggle")
+				if( this.sale.choice != "Multiple") toggle.setAttribute("required", "");
 				toggle.setAttribute("data-target-itemid", variant.id)
 				toggle.addEventListener("change", (event) => {
 					var otherCheckboxes = this.querySelectorAll(`input[name='${event.target.name}']`);

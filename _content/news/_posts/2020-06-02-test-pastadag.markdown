@@ -8,6 +8,7 @@ preload_js:
   - config
 modules:
   - ai.module
+  - clubmanagement.payments.app
   - clubmanagement.fundraising.sales.app
 ---
 
@@ -154,4 +155,19 @@ This is a test for a sale where
       </table>
     </fieldset>
   </form>
+</template>
+
+<!-- payment step -->
+
+<template id="clubmgmt-purchase-order-payment-template">
+
+  <form class="responsive-form" id="orderPayment">
+    <fieldset>
+      <legend>Order payment</legend>
+      <payment-method-selector id="paymentMethodSelector">
+      </payment-method-selector>
+      <submit-button>Pay</submit-button>
+    </fieldset>
+  </form>
+  
 </template>

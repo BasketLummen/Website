@@ -10,13 +10,13 @@
     dish.shell "npm:@messagehandler/dish.shell"
 
 "clubmanagement.payments@npm:@messagehandler/clubmanagement.payments.public":
-  version "1.0.6-0"
-  resolved "https://npm.pkg.github.com/download/@messagehandler/clubmanagement.payments.public/1.0.6-0/025003a21e8c5c61814c3f0c61b0d146ee80ad718ef343c8bb658eb7d12f8a1a#ebf8577c4591b275f1b8ad53d39dc47289c0ca93"
-  integrity sha512-BVp/TRNgtXER9c5eRY4886JfwnGO5Ye8lINvXeaFfLc1BdTTS8+WzzEZPcQQ16ndC6UQr0WGkxWpV8W8koF0qQ==
+  version "1.0.7-0"
+  resolved "https://npm.pkg.github.com/download/@messagehandler/clubmanagement.payments.public/1.0.7-0/cd02fea7667f7ed553261fc62bf3f91a7c7ea3f6312609cc64fdee9235906508#4f8a2c898f0decad570afbfcab7e2040336ceab3"
+  integrity sha512-RqmUd4TA4aKxS1EiVzSrKXxopL8JVmoACIBEdhfcYYNdXQhfELUuTC8VZma+6y4zHOq93NSZps5p4fjRzIR9Uw==
   dependencies:
     dish.shell "npm:@messagehandler/dish.shell"
 
 "dish.shell@npm:@messagehandler/dish.shell":
-  version "1.0.16"
-  resolved "https://npm.pkg.github.com/download/@messagehandler/dish.shell/1.0.16/f0fe547de474699567323c4496cca26c963b4bc90cc71dbeffaaf9e8a06f3e7b#1d156ed96c3112ecac4e9491aa6c1929b2ce913e"
-  integrity sha512-xAopUcxHObIUpaMiJOUUyqZnY5CMCv0mcxDIy9vgMX2MFIWoNZ56g2enB1lUqNJjTYe3XghDgoI8RgeqlPdgvw==
+  version "1.0.17"
+  resolved "https://npm.pkg.github.com/download/@messagehandler/dish.shell/1.0.17/9f8f876ea0182ac80a03c1818705ceae65a31ec27dbbfe85bb928fbf60cad249#0325e6b596cf018ab439f5a50f4979ea7741b2bd"
+  integrity sha512-06VWPewvwI6JQEVAUPYKXc4MfLejjEHq99lt+z5dk35rECFiop0aBSksshPwUa3W1DoGraMBEQgFSb+dmyIQAw==
