@@ -10,9 +10,9 @@
     dish.shell "npm:@messagehandler/dish.shell"
 
 "clubmanagement.payments@npm:@messagehandler/clubmanagement.payments.public":
-  version "1.0.9-0"
-  resolved "https://npm.pkg.github.com/download/@messagehandler/clubmanagement.payments.public/1.0.9-0/45a99aba1939c77c9a3326e3ff03460a6f3f92d11fa8d276a7d9a1f44ffe0cb2#fa857811b27cc271a34ec25cb70039e3937a59f7"
-  integrity sha512-AATRsVzLuOzLKC2GqAsPOwgzAdarML0pAg9ffGMaywt9cfJM7ZLijMZP1/Bz0UVk7OEVY9CDqzfr+dFi01yAqw==
+  version "1.0.10-0"
+  resolved "https://npm.pkg.github.com/download/@messagehandler/clubmanagement.payments.public/1.0.10-0/25af4fa6b2656dfffb5cc0e2fc11abb537a476d10a95dd3a310100679ecebc2f#05b74319c7ff8d148c82b713d0206a014effefcb"
+  integrity sha512-3Mb+1Yb2veEAKTBoUprI7x5bMsCwiV323d67OGyFzvva7JOKg2Ux3Kjx2qtWFzb41DpV1RpZGdOKu2UMHG1jtg==
   dependencies:
     dish.shell "npm:@messagehandler/dish.shell"
 
