@@ -9,40 +9,31 @@ class PurchaseOrderErrorReport extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['order-id', 'data-error'];
+        return ['data-context'];
     }
-    
-    get orderId() {
-		return this.getAttribute('order-id');
-  	}
 
-    set orderId(val) {
-        if (val) {
-            this.setAttribute('order-id', val);
-        } else {
-            this.removeAttribute('order-id');
-        }
+    get contextData() {
+        return this.getAttribute('data-context');
     }
-    
-    get error() {
-		return this.getAttribute('data-error');
-  	}
 
-    set error(val) {
+    set contextData(val) {
         if (val) {
-            this.setAttribute('data-error', val);
+            this.setAttribute('data-context', val);
         } else {
-            this.removeAttribute('data-error');
+            this.removeAttribute('data-context');
         }
     }
 
-    async connectedCallback() {      
+    async connectedCallback() {
+
+        this.context = JSON.parse(this.contextData);
+    
 
         var content = this.template.content.cloneNode(true);
 
         var messages = content.querySelectorAll(".error-message");
         messages.forEach(message => {
-            message.innerText = this.error;
+            message.innerText = this.context.error;
         });
 
         this.append(content);

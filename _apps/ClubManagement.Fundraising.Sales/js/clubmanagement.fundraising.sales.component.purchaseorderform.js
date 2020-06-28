@@ -22,60 +22,27 @@ class PurchaseOrderForm extends HTMLElement {
 
 		this.selectedOptionMemory = [];
     }
-
-    static get observedAttributes() {
-      	return ['sale-id'];
+	
+	static get observedAttributes() {
+        return ['data-context'];
     }
 
-    get saleId() {
-      	return this.getAttribute('sale-id');
+    get contextData() {
+        return this.getAttribute('data-context');
     }
 
-    set saleId(val) {
-		if (val) {
-			this.setAttribute('sale-id', val);
-		} else {
-			this.removeAttribute('sale-id');
-		}
-	}    
-	
-	get orderId() {
-		return this.getAttribute('order-id');
-  	}
+    set contextData(val) {
+        if (val) {
+            this.setAttribute('data-context', val);
+        } else {
+            this.removeAttribute('data-context');
+        }
+    }
 
- 	set orderId(val) {
-		if (val) {
-			this.setAttribute('order-id', val);
-		} else {
-			this.removeAttribute('order-id');
-		}
-	}  
-	
-	get total() {
-		return this.getAttribute('order-total');
-  	}
+    async connectedCallback() {
 
-	set total(val) {
-	if (val) {
-		this.setAttribute('order-total', val);
-	} else {
-		this.removeAttribute('order-total');
-	}
-	}  
-	
-	get currency() {
-		return this.getAttribute('order-currency');
-  	}
+        this.context = JSON.parse(this.contextData);
 
- 	 set currency(val) {
-		if (val) {
-			this.setAttribute('order-currency', val);
-		} else {
-			this.removeAttribute('order-currency');
-		}
-  	}  
-
-    async connectedCallback() { 
         this.sale = await this.loadSale();
 		this.collection = await this.loadCollection();
 
@@ -121,7 +88,7 @@ class PurchaseOrderForm extends HTMLElement {
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
 
-			this.orderId = guid();
+			this.context.orderId = guid();
 
 			var sequence = await this.claimSequence();
 
@@ -130,8 +97,10 @@ class PurchaseOrderForm extends HTMLElement {
 			this.placeOrder(cmd);
 			
 			const total = this.computeTotal();
-			this.total = total.amount;			
-			this.currency = total.currency;
+			this.context.total = total.amount;			
+			this.context.currency = total.currency;
+			this.context.buyer = cmd.buyer;
+			this.context.sendConfirmation =  cmd.statusUpdateRequested;
 
 			this.dispatchEvent(new Event('pay'));
 
@@ -580,7 +549,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 
     async loadSale(){
-        var uri = `${salesConfig.salesService}/api/sales/${club.organizationId}/${this.saleId}`;
+        var uri = `${salesConfig.salesService}/api/sales/${club.organizationId}/${this.context.saleId}`;
         var request = await fetch(uri, {
             method: "GET",
             mode: 'cors',
@@ -706,7 +675,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var expectedDeliveryDateRange = expectedDeliveryDateRangeJson != null ? JSON.parse(expectedDeliveryDateRangeJson) : null;
 
 		var cmd = {
-			orderId: this.orderId, 
+			orderId: this.context.orderId, 
 			saleId: this.sale.id,
 			sellerId: club.organizationId,
 			buyer: buyer,

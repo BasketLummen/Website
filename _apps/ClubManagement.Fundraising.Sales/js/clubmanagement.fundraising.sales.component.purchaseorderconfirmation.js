@@ -9,30 +9,32 @@ class PurchaseOrderConfirmation extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['order-id'];
+        return ['data-context'];
     }
-    
-    
-    get orderId() {
-		return this.getAttribute('order-id');
-  	}
 
-    set orderId(val) {
+    get contextData() {
+        return this.getAttribute('data-context');
+    }
+
+    set contextData(val) {
         if (val) {
-            this.setAttribute('order-id', val);
+            this.setAttribute('data-context', val);
         } else {
-            this.removeAttribute('order-id');
+            this.removeAttribute('data-context');
         }
     }
 
-    async connectedCallback() {      
+    async connectedCallback() {
+
+        this.context = JSON.parse(this.contextData);
+      
 
         var content = this.template.content.cloneNode(true);
 
         var pdflinks = content.querySelectorAll(".pdf-link");
         pdflinks.forEach(link => {
             var href = link.getAttribute("href");
-            href += "?o=" +  this.orderId;
+            href += "?o=" +  this.context.orderId;
             link.setAttribute("href", href);
         });
 

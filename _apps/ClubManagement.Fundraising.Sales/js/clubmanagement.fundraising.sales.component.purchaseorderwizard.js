@@ -29,10 +29,15 @@ class PurchaseOrderWizard extends HTMLElement {
         const orderId = queryString.get("o");
 
         if(step == "confirm" && orderId){
-          this.showStep("clubmgmt-purchase-order-confirmation", orderId);
+          this.showStep("clubmgmt-purchase-order-confirmation", {
+            orderId: orderId,
+            saleId: this.saleId
+          });
         }
         else{
-          this.showStep( "clubmgmt-purchase-order-form"); 
+          this.showStep( "clubmgmt-purchase-order-form", {
+            saleId: this.saleId
+          }); 
         }       
 
         appInsights.trackEvent({
@@ -41,28 +46,28 @@ class PurchaseOrderWizard extends HTMLElement {
         });
     }
 
-    showStep(name, orderId, currency, total, error){
+    showStep(name, context){
         
         this.innerHTML = '';
         
         var step = document.createElement(name);
-        if(orderId) step.setAttribute("order-id", orderId);
-        if(total) step.setAttribute("order-total", total);
-        if(currency) step.setAttribute("order-currency", currency);
-        if(error) step.setAttribute("data-error", error);
-        step.setAttribute('sale-id', this.saleId);
+        step.setAttribute("data-context", JSON.stringify(context));
 
         step.addEventListener("pay", (event) => {
-            this.showStep("clubmgmt-purchase-order-payment", step.orderId, step.currency, step.total);
+            this.showStep("clubmgmt-purchase-order-payment", step.context);
         } );
         step.addEventListener("confirm", (event) => {
-            this.showStep("clubmgmt-purchase-order-confirmation", step.orderId);
+            this.showStep("clubmgmt-purchase-order-confirmation", step.context);
         }); 
         step.addEventListener("error", (event) => {
-          this.showStep("clubmgmt-purchase-order-error-report", step.orderId, null, null, event.detail.error);
+          var context = step.context;
+          context.error = event.detail.error;
+          this.showStep("clubmgmt-purchase-order-error-report", context);
       }); 
         step.addEventListener("new", (event) => {
-            this.showStep("clubmgmt-purchase-order-form");
+            this.showStep("clubmgmt-purchase-order-form", {
+              saleId: step.context.saleId
+            });
         });
 
         this.append(step);       

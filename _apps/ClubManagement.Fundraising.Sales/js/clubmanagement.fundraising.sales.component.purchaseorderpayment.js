@@ -14,63 +14,27 @@ class PurchaseOrderPayment extends HTMLElement {
         this.paymentMethodTemplate = document.getElementById("clubmgmt-purchase-order-payment-method-template");
 
         this.paymentsBaseUri = salesConfig.paymentsService + "/api/payments";       
-        
     }
 
     static get observedAttributes() {
-        return ['sale-id', 'order-total', 'order-id', 'order-currency'];
+        return ['data-context'];
     }
 
-    get saleId() {
-        return this.getAttribute('sale-id');
+    get contextData() {
+        return this.getAttribute('data-context');
     }
 
-    set saleId(val) {
+    set contextData(val) {
         if (val) {
-            this.setAttribute('sale-id', val);
+            this.setAttribute('data-context', val);
         } else {
-            this.removeAttribute('sale-id');
+            this.removeAttribute('data-context');
         }
     }
-
-    get orderId() {
-		return this.getAttribute('order-id');
-  	}
-
-    set orderId(val) {
-        if (val) {
-            this.setAttribute('order-id', val);
-        } else {
-            this.removeAttribute('order-id');
-        }
-    }
-
-    get currency() {
-		return this.getAttribute('order-currency');
-  	}
-
-    set currency(val) {
-        if (val) {
-            this.setAttribute('order-currency', val);
-        } else {
-            this.removeAttribute('order-currency');
-        }
-    }
-    
-    get total() {
-		return this.getAttribute('order-total');
-  	}
-
- 	 set total(val) {
-		if (val) {
-			this.setAttribute('order-total', val);
-		} else {
-			this.removeAttribute('order-total');
-		}
-  	} 
 
     async connectedCallback() {
 
+        this.context = JSON.parse(this.contextData);
 
         var loader = new StripeClient();
         await loader.ensureScriptIsLoaded();
@@ -99,25 +63,32 @@ class PurchaseOrderPayment extends HTMLElement {
             
             const paymentId = guid();
             var amount = {
-                value: this.total,
-                currency: this.getCurrencyCode(this.currency)
+                value: this.context.total,
+                currency: this.getCurrencyCode(this.context.currency)
             };
+            var payer = {
+                id: this.context.buyer.id,
+                name: this.context.buyer.name,
+                email: this.context.buyer.email
+            }
             var beneficiary = {
                 id: club.organizationId,
                 name: club.name
             };
             var metadata = {
                 paymentType: "purchase-order",
-                orderId: this.orderId,
-                saleId: this.saleId
+                orderId: this.context.orderId,
+                saleId: this.context.saleId
             }
             var settings = {
-                return_url: `${window.location.href}?s=confirm&o=${this.orderId}`
+                sendConfirmation: this.context.sendConfirmation,
+                return_url: `${window.location.href}?s=confirm&o=${this.context.orderId}`
             }
 
             var result = await selector.startPayment(
                 paymentId,
                 amount,
+                payer,
                 beneficiary,
                 metadata,
                 settings
@@ -129,8 +100,8 @@ class PurchaseOrderPayment extends HTMLElement {
             const preparePayment = {
                 paymentId: paymentId,
                 amount: {
-                    value: this.total,
-                    currency: this.getCurrencyCode(this.currency)
+                    value: this.context.total,
+                    currency: this.getCurrencyCode(this.context.currency)
                 },
                 payedBy: {
                     id: null,
@@ -143,8 +114,8 @@ class PurchaseOrderPayment extends HTMLElement {
                 paymentMethod: "bancontact",
                 metadata: {
                     paymentType: "purchase-order",
-                    orderId: this.orderId,
-                    saleId: this.saleId
+                    orderId: this.context.orderId,
+                    saleId: this.context.saleId
                 }
             };
             const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
@@ -166,7 +137,7 @@ class PurchaseOrderPayment extends HTMLElement {
                             name: name
                         }
                     },
-                    return_url: `${window.location.href}?s=confirm&o=${this.orderId}`
+                    return_url: `${window.location.href}?s=confirm&o=${this.context.orderId}`
                 }
             );*/
 
@@ -174,7 +145,7 @@ class PurchaseOrderPayment extends HTMLElement {
                 this.dispatchEvent(new CustomEvent('error', {
                     detail: {
                         error: "Purchase order payment failed",
-                        orderId: this.orderId
+                        orderId: this.context.orderId
                     }
                 }));
             }
@@ -189,7 +160,7 @@ class PurchaseOrderPayment extends HTMLElement {
     }
 
     async loadSale(){
-        const uri = `${salesConfig.salesService}/api/sales/${club.organizationId}/${this.saleId}`;
+        const uri = `${salesConfig.salesService}/api/sales/${club.organizationId}/${this.context.saleId}`;
         const request = await fetch(uri, {
             method: "GET",
             mode: 'cors',
