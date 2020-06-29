@@ -1,8 +1,0 @@
-_albums
-_site
-_yarn
-*.mp4
-.idea
-yarn.lock
-/_yarn/.yarn-integrity
-/yarn.lock
