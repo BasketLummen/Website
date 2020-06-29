@@ -3,3 +3,4 @@ _site
 _yarn
 *.mp4
 .idea
+/_yarn
