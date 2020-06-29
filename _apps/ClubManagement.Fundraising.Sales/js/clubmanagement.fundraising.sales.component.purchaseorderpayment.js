@@ -62,30 +62,30 @@ class PurchaseOrderPayment extends HTMLElement {
             event.preventDefault();
             
             const paymentId = guid();
-            var amount = {
+            const amount = {
                 value: this.context.total,
                 currency: this.getCurrencyCode(this.context.currency)
             };
-            var payer = {
+            const payer = {
                 id: this.context.buyer.id,
                 name: this.context.buyer.name,
                 email: this.context.buyer.email
-            }
-            var beneficiary = {
+            };
+            const beneficiary = {
                 id: club.organizationId,
                 name: club.name
             };
-            var metadata = {
+            const metadata = {
                 paymentType: "purchase-order",
                 orderId: this.context.orderId,
                 saleId: this.context.saleId
-            }
-            var settings = {
+            };
+            const settings = {
                 sendConfirmation: this.context.sendConfirmation,
-                return_url: `${window.location.href}?s=confirm&o=${this.context.orderId}`
-            }
+                returnUrl: `${window.location.href}?s=confirm&o=${this.context.orderId}`
+            };
 
-            var result = await selector.startPayment(
+            const result = await selector.startPayment(
                 paymentId,
                 amount,
                 payer,
@@ -93,53 +93,6 @@ class PurchaseOrderPayment extends HTMLElement {
                 metadata,
                 settings
             );
-
-            // bancontact for sean
-        /*    const name = form.querySelector("#name").value;
-            
-            const preparePayment = {
-                paymentId: paymentId,
-                amount: {
-                    value: this.context.total,
-                    currency: this.getCurrencyCode(this.context.currency)
-                },
-                payedBy: {
-                    id: null,
-                    name: name
-                },
-                beneficiary: {
-                    id: club.organizationId,
-                    name: club.name
-                },
-                paymentMethod: "bancontact",
-                metadata: {
-                    paymentType: "purchase-order",
-                    orderId: this.context.orderId,
-                    saleId: this.context.saleId
-                }
-            };
-            const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
-
-            const response = await fetch(url, {
-                method: 'POST',
-                mode: 'cors',
-                cache: 'no-cache',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(preparePayment),
-            });
-
-            const paymentIntent = await response.json();
-
-            // Redirects away from the client
-            const {error} = await this.stripe.confirmBancontactPayment(paymentIntent.secret, {
-                    payment_method: {
-                        billing_details: {
-                            name: name
-                        }
-                    },
-                    return_url: `${window.location.href}?s=confirm&o=${this.context.orderId}`
-                }
-            );*/
 
             if (result.error) {
                 this.dispatchEvent(new CustomEvent('error', {
@@ -171,44 +124,6 @@ class PurchaseOrderPayment extends HTMLElement {
         return await request.json();
     }
     
-    renderPaymentMethodOption(rowElement, paymentMethodId, paymentMethodName) {
-        const paymentMethodContainer = rowElement.querySelector(".payment-method-container");
-        
-        const radioButton = rowElement.querySelector("input[type='radio']");
-        radioButton.setAttribute("value", paymentMethodId);
-        radioButton.addEventListener('change', event => {
-            const cssClassToUse = "temporary-payment-method-form";
-            this.clearPreviouslySelectedPaymentMethod(cssClassToUse);
-            
-            // add html elements using template
-            const templateId = `clubmgmt-purchase-order-payment-method-${paymentMethodId}-form-template`;
-            const templateBody = document.getElementById(templateId);
-            
-            // cash option has no template
-            if (templateBody) {
-                const content = templateBody.content.cloneNode(true);
-
-                // add CSS class to remove the form elements when the selection is changing
-                for (let node of content.children) {
-                    node.classList.add(cssClassToUse);
-                }
-
-                paymentMethodContainer.append(content);
-            }
-        });
-                
-        const title = rowElement.querySelector("span");
-        title.innerText = paymentMethodName;
-    }
-
-
-    clearPreviouslySelectedPaymentMethod() {
-        const elements = this.querySelectorAll(`.temporary`);
-        for (let element of elements) {
-            element.remove();
-        }
-    }
-
     getCurrencyCode(currencySymbol) {
         if (currencySymbol === "€") {
             return "eur"
