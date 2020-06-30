@@ -69,7 +69,8 @@ class PurchaseOrderPayment extends HTMLElement {
             const payer = {
                 id: this.context.buyer.id,
                 name: this.context.buyer.name,
-                email: this.context.buyer.email
+                email: this.context.buyer.email,
+                preferedLanguage: "nl"
             };
             const beneficiary = {
                 id: club.organizationId,

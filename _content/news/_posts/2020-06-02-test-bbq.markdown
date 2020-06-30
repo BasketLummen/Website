@@ -161,11 +161,21 @@ This is a test for a sale where
 
   <form class="responsive-form" id="orderPayment">
     <fieldset>
-      <legend>Order payment</legend>
+      <legend>Online betaling</legend>
       <payment-method-selector id="paymentMethodSelector">
       </payment-method-selector>
-      <submit-button>Pay</submit-button>
+      <submit-button>Betalen</submit-button>
     </fieldset>
   </form>
   
+</template>
+
+<!-- override payment method templates -->
+
+<template id="clubmgmt-payment-method-cash-form-template">
+	Breng het geld mee op de bbq
+</template>
+
+<template id="clubmgmt-payment-method-wiretransfer-form-template">
+	Schrijf het geld over op rekening nummer XXX XXXXXXXX XX
 </template>

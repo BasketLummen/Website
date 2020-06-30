@@ -163,10 +163,10 @@ This is a test for a sale where
 
   <form class="responsive-form" id="orderPayment">
     <fieldset>
-      <legend>Order payment</legend>
+      <legend>Online betaling</legend>
       <payment-method-selector id="paymentMethodSelector">
       </payment-method-selector>
-      <submit-button>Pay</submit-button>
+      <submit-button>Betalen</submit-button>
     </fieldset>
   </form>
   
