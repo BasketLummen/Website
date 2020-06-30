@@ -26,8 +26,7 @@ class PurchaseOrderConfirmation extends HTMLElement {
 
     async connectedCallback() {
 
-        this.context = JSON.parse(this.contextData);
-      
+        this.context = JSON.parse(this.contextData);      
 
         var content = this.template.content.cloneNode(true);
 
@@ -38,6 +37,15 @@ class PurchaseOrderConfirmation extends HTMLElement {
             link.setAttribute("href", href);
         });
 
+        var form = content.querySelector("form");       
+
+        form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+
+            this.dispatchEvent(new Event('new'));
+            
+        });
+        
         this.append(content);
 
         appInsights.trackEvent({

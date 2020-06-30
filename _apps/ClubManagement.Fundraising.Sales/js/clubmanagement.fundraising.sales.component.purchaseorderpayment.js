@@ -81,9 +81,10 @@ class PurchaseOrderPayment extends HTMLElement {
                 orderId: this.context.orderId,
                 saleId: this.context.saleId
             };
+            var href = window.location.href.split('?')[0];
             const settings = {
                 sendConfirmation: this.context.sendConfirmation,
-                returnUrl: `${window.location.href}?s=confirm&o=${this.context.orderId}`
+                returnUrl: `${href}?s=confirm&o=${this.context.orderId}`
             };
 
             const result = await selector.startPayment(
