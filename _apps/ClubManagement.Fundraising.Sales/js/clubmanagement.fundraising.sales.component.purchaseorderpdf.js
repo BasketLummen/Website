@@ -1,4 +1,4 @@
-import { appInsights } from "/js/ai.module.js"
+import shell from "/js/dish.shell.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { club } from "/js/club.config.js"
 import { queryString } from "/js/clubmanagement.querystring.js"
@@ -61,7 +61,7 @@ class PurchaseOrderPdf extends HTMLElement {
         
         const documentUrl = pdf.output('bloburl');
 
-        appInsights.trackEvent({
+        shell.appInsights.trackEvent({
             name: "PurchaseOrderPdfRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

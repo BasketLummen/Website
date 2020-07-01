@@ -1,4 +1,4 @@
-import { appInsights } from "/js/ai.module.js"
+import shell from "/js/dish.shell.js"
 import { queryString } from "/js/clubmanagement.querystring.js"
 
 class PurchaseOrderWizard extends HTMLElement {
@@ -40,7 +40,7 @@ class PurchaseOrderWizard extends HTMLElement {
           }); 
         }       
 
-        appInsights.trackEvent({
+        shell.appInsights.trackEvent({
             name: "PurchaseOrderWizardRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

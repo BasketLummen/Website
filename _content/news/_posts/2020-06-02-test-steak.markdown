@@ -4,10 +4,8 @@ title:  "Steak Testing"
 date:   2020-06-02 17:00:00
 description: Testing Online Payments Steak
 permalink: /news/2020-06-02-test-steak/
-preload_js:
-  - config
 modules:
-  - ai.module
+  - dish.shell.monitoring.applicationinsights.app
   - clubmanagement.payments.app
   - clubmanagement.fundraising.sales.app
 ---

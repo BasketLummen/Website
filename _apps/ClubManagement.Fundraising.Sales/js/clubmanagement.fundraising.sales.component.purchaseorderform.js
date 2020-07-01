@@ -1,4 +1,4 @@
-import { appInsights } from "/js/ai.module.js"
+import shell from "/js/dish.shell.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { club } from "/js/club.config.js"
 import { guid } from "/js/clubmanagement.guid.js"
@@ -113,7 +113,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 		});
 
-        appInsights.trackEvent({
+        shell.appInsights.trackEvent({
             name: "PurchaseOrderFormRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

@@ -4,10 +4,8 @@ title:  "BBQ Testing"
 date:   2020-06-02 17:00:00
 description: Testing Online Payments BBQ
 permalink: /news/2020-06-02-test-bbq/
-preload_js:
-  - config
 modules:
-  - ai.module
+  - dish.shell.monitoring.applicationinsights.app
   - clubmanagement.payments.app
   - clubmanagement.fundraising.sales.app
 ---

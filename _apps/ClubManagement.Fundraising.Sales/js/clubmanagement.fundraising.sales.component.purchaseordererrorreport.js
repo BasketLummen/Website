@@ -1,4 +1,4 @@
-import { appInsights } from "/js/ai.module.js"
+import shell from "/js/dish.shell.js"
 
 class PurchaseOrderErrorReport extends HTMLElement {
 
@@ -46,7 +46,7 @@ class PurchaseOrderErrorReport extends HTMLElement {
 
         this.append(content);
 
-        appInsights.trackEvent({
+        shell.appInsights.trackEvent({
             name: "PurchaseOrderErrorReportRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });
