@@ -2,6 +2,7 @@ import shell from "/js/dish.shell.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { club } from "/js/club.config.js"
 import { guid } from "/js/clubmanagement.guid.js"
+import monitoring from "./dish.shell.monitoring.applicationinsights.app.js";
 
 class PurchaseOrderForm extends HTMLElement {
 
@@ -113,7 +114,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 		});
 
-        shell.appInsights.trackEvent({
+        monitoring.appInsights.trackEvent({
             name: "PurchaseOrderFormRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

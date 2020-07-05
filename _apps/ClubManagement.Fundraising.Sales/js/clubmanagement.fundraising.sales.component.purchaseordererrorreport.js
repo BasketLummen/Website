@@ -1,4 +1,5 @@
 import shell from "/js/dish.shell.js"
+import monitoring from "./dish.shell.monitoring.applicationinsights.app.js";
 
 class PurchaseOrderErrorReport extends HTMLElement {
 
@@ -46,7 +47,7 @@ class PurchaseOrderErrorReport extends HTMLElement {
 
         this.append(content);
 
-        shell.appInsights.trackEvent({
+        monitoring.appInsights.trackEvent({
             name: "PurchaseOrderErrorReportRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

@@ -1,5 +1,6 @@
 import shell from "/js/dish.shell.js"
 import { queryString } from "/js/clubmanagement.querystring.js"
+import monitoring from "./dish.shell.monitoring.applicationinsights.app.js";
 
 class PurchaseOrderWizard extends HTMLElement {
 
@@ -40,7 +41,7 @@ class PurchaseOrderWizard extends HTMLElement {
           }); 
         }       
 
-        shell.appInsights.trackEvent({
+        monitoring.appInsights.trackEvent({
             name: "PurchaseOrderWizardRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

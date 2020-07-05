@@ -2,8 +2,8 @@ import { club } from "/js/club.config.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import shell from "/js/dish.shell.js"
 import { guid } from "/js/clubmanagement.guid.js"
-
 import { StripeClient } from "./clubmanagement.payments.stripe.js"
+import monitoring from "./dish.shell.monitoring.applicationinsights.app.js";
 
 class PurchaseOrderPayment extends HTMLElement {
 
@@ -108,7 +108,7 @@ class PurchaseOrderPayment extends HTMLElement {
             this.dispatchEvent(new Event('confirm'));
         });
 
-        shell.appInsights.trackEvent({
+        monitoring.appInsights.trackEvent({
             name: "PurchaseOrderPaymentRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

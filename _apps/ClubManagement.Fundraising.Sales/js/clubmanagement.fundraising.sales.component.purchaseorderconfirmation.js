@@ -1,4 +1,5 @@
 import shell from "/js/dish.shell.js"
+import monitoring from "./dish.shell.monitoring.applicationinsights.app.js";
 
 class PurchaseOrderConfirmation extends HTMLElement {
 
@@ -48,7 +49,7 @@ class PurchaseOrderConfirmation extends HTMLElement {
         
         this.append(content);
 
-        shell.appInsights.trackEvent({
+        monitoring.appInsights.trackEvent({
             name: "PurchaseOrderConfirmationRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });

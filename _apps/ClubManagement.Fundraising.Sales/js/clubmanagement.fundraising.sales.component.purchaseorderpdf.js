@@ -2,6 +2,7 @@ import shell from "/js/dish.shell.js"
 import { salesConfig } from "/js/clubmanagement.fundraising.sales.config.js"
 import { club } from "/js/club.config.js"
 import { queryString } from "/js/clubmanagement.querystring.js"
+import monitoring from "./dish.shell.monitoring.applicationinsights.app.js";
 
 class PurchaseOrderPdf extends HTMLElement {
 
@@ -61,7 +62,7 @@ class PurchaseOrderPdf extends HTMLElement {
         
         const documentUrl = pdf.output('bloburl');
 
-        shell.appInsights.trackEvent({
+        monitoring.appInsights.trackEvent({
             name: "PurchaseOrderPdfRendered",
             properties: { eventCategory: "Fundraising.Sales", eventAction: "render" }
         });
