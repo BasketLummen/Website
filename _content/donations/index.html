@@ -15,13 +15,13 @@ modules:
 <script src="https://js.stripe.com/v3/"></script>
 
 <div class="container content">
-	<clubmgmt-donation-form />
+	<clubmgmt-donation-form data-donation-campaign-id="1dba0d07-a781-21db-5739-e648d3187135" />
 </div>
 
 <template id="clubmgmt-donation-form-template">
     <form class="responsive-form" id="amount-form">
         <fieldset>
-            <legend>Choose amount to donate</legend>
+            <legend>Choose amount to donate to <span class="donation-campaign-name"></span></legend>
             <table>
                 <tr>
 					<td>

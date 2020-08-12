@@ -14,11 +14,23 @@ class DonationForm extends HTMLElement {
         this.stripe = Stripe(donationsConfig.stripeKey);
     }
 
+    static get observedAttributes() {
+        return ['data-donation-campaign-id'];
+    }
+
+    get donationCampaignId() {
+        return this.getAttribute('data-donation-campaign-id');
+    }
+
     async connectedCallback() {
+        const donationCampaign = await this.getDonationCampaignInformation();
+                
         this.innerHTML = this.template.innerHTML;
+        
+        const campaignName = this.querySelector(".donation-campaign-name");
+        campaignName.innerText = donationCampaign.name;
 
         let amountForm = this.querySelector('#amount-form');
-        
         let emailAddress = this.querySelector('#email');
         let emailRow = this.querySelector('#emailRow');
         let emailConformation = this.querySelector('#emailConfirmation');
@@ -219,6 +231,18 @@ class DonationForm extends HTMLElement {
             name: "DonationFormRendered",
             properties: { eventCategory: "Fundraising.Donations", eventAction: "render" }
         });
+    }
+
+    async getDonationCampaignInformation() {
+        const url = `${this.donationsBaseUri}/${this.donationCampaignId}`;
+        const response = await fetch(url, {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        return await response.json();
     }
 }
 
