@@ -60,8 +60,8 @@ class PurchaseOrderForm extends HTMLElement {
 
 		var today = new Date();
 		var fromDate = new Date(this.sale.start);
-		var saleStarted = fromDate < today;
-		var saleIsOver = new Date(this.sale.end) <= today;
+		var saleStarted = fromDate <= today;
+		var saleIsOver = new Date(this.sale.end) < today;
 
 		var form = content.querySelector("form");
 		var fieldset = content.querySelector("fieldset");
