@@ -24,7 +24,12 @@ class DonationForm extends HTMLElement {
 
     async connectedCallback() {
         const donationCampaign = await this.getDonationCampaignInformation();
-                
+
+        const today = new Date();
+        const fromDate = new Date(donationCampaign.startDate);
+        const donationCampaignStarted = fromDate <= today;
+        const donationCampaignIsOver = new Date(donationCampaign.endDate) < today;
+
         this.innerHTML = this.template.innerHTML;
         
         const campaignName = this.querySelector(".donation-campaign-name");
