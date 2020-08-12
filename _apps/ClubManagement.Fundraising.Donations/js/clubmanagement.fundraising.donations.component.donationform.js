@@ -108,21 +108,6 @@ class DonationForm extends HTMLElement {
            
             // Prepare donation
             const donationId = guid();
-         /*   const prepareDonation = {
-                donationId: donationId,
-                amount: donation.value,
-                currency: "eur"
-            };
-            const url = `${this.donationsBaseUri}/${donationId}/prepare`;
-
-            const response = await fetch(url, {
-                method: 'POST',
-                mode: 'cors',
-                cache: 'no-cache',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(prepareDonation),
-            });*/
-
             const paymentId = guid();
             const preparePayment = {
                 paymentId: paymentId,
@@ -141,7 +126,8 @@ class DonationForm extends HTMLElement {
                 paymentMethod: "card",
                 metadata: {
                     paymentType: "donation",
-                    donationId: donationId
+                    donationId: donationId,
+                    donationCampaignId: this.donationCampaignId
                 }
             };
             const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
@@ -173,36 +159,6 @@ class DonationForm extends HTMLElement {
             }
             else
             {
-              /*  const url = `${this.donationsBaseUri}/${donationId}/confirm`;
-                const registerDonationConfirmed = {
-                    donationId: donationId,
-                    paymentIntentId: paymentIntent.paymentIntentId,
-                    cardHolder: cardHolder.value,
-                    sendEmailConfirmation: emailConformation.checked,
-                    confirmationEmailAddress: emailAddress.value
-                };
-                
-                const response = await fetch(url, {
-                    method: 'PUT',
-                    mode: 'cors',
-                    cache: 'no-cache',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(registerDonationConfirmed),
-                });*/
-
-                // const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/confirm`;
-                // const confirmPayment = {
-                //     paymentId: paymentId
-                // };
-                //
-                // const response = await fetch(url, {
-                //     method: 'PUT',
-                //     mode: 'cors',
-                //     cache: 'no-cache',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify(confirmPayment),
-                // });
-
                 // todo: add "Email confirmation will be sent if the user opted in"
                 resultMessage.innerText = "Thank you for your donation!"
                 
