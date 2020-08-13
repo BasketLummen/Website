@@ -9,6 +9,8 @@ class DonationForm extends HTMLElement {
         super();
 
         this.template = document.getElementById("clubmgmt-donation-form-template");
+        this.donationCampaingPendingTemplate = document.getElementById("clubmgmt-donation-campaign-pending-template");
+        this.donationCampaingEndedTemplate = document.getElementById("clubmgmt-donation-campaign-ended-template");
         this.donationsBaseUri = donationsConfig.donationsService + "/api/donations";
         this.paymentsBaseUri = donationsConfig.paymentsService + "/api/payments";
         this.stripe = Stripe(donationsConfig.stripeKey);
@@ -28,7 +30,18 @@ class DonationForm extends HTMLElement {
         const today = new Date();
         const fromDate = new Date(donationCampaign.startDate);
         const donationCampaignStarted = fromDate <= today;
-        const donationCampaignIsOver = new Date(donationCampaign.endDate) < today;
+        const donationCampaignFinished = new Date(donationCampaign.endDate) < today;
+        
+        if  (!donationCampaignStarted){
+            this.innerHTML = this.donationCampaingPendingTemplate.innerHTML;
+            const startDate = this.querySelector(".donation-campaign-start-date");
+            startDate.innerText = fromDate;
+            return;
+        }
+        if (donationCampaignFinished){
+            this.innerHTML = this.donationCampaingEndedTemplate.innerHTML;
+            return;
+        }
 
         this.innerHTML = this.template.innerHTML;
         
