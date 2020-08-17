@@ -51,8 +51,8 @@ class DonationForm extends HTMLElement {
         let amountForm = this.querySelector('#amount-form');
         let emailAddress = this.querySelector('#email');
         let emailRow = this.querySelector('#emailRow');
-        let emailConformation = this.querySelector('#emailConfirmation');
-        emailConformation.addEventListener('change', async (event) => {
+        let emailConfirmation = this.querySelector('#emailConfirmation');
+        emailConfirmation.addEventListener('change', async (event) => {
            if (event.target.checked === true){
                emailAddress.setAttribute('required', '');
                emailRow.style.display = 'table-row';
@@ -135,7 +135,9 @@ class DonationForm extends HTMLElement {
                 },
                 payedBy: {
                     id: null,
-                    name: cardHolder.value
+                    name: cardHolder.value,
+                    email: emailAddress.value,
+                    preferedLanguage: 'en'
                 },
                 beneficiary: {
                     id: club.organizationId,
@@ -146,7 +148,8 @@ class DonationForm extends HTMLElement {
                     paymentType: "donation",
                     donationId: donationId,
                     donationCampaignId: this.donationCampaignId
-                }
+                },
+                sendConfirmation: emailConfirmation.checked
             };
             const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
 
@@ -180,7 +183,7 @@ class DonationForm extends HTMLElement {
                 // todo: add "Email confirmation will be sent if the user opted in"
                 resultMessage.innerText = "Thank you for your donation!"
                 
-                if (emailConformation.checked) {
+                if (emailConfirmation.checked) {
                     resultMessage.append(document.createElement('br'));
                     resultMessage.append("Confirmation will be emailed.");
                 }
