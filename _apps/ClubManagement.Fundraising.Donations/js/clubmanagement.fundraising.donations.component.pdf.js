@@ -41,7 +41,8 @@ class DonationPdf extends HTMLElement {
                 donationDate: dateTimeFormat.format(new Date(data.donationDate)),
                 amount: data.amount,
                 currency: this.getCurrencySymbol(data.currency),
-                cardHolder: data.cardHolder
+                donorName: data.donorName,
+                campaignName: data.campaignName
             }
         });
 
