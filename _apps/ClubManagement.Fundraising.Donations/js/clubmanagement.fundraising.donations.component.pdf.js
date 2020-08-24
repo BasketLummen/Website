@@ -22,8 +22,9 @@ class DonationPdf extends HTMLElement {
             .replace("{{{{raw}}}}", "")
             .replace("{{{{/raw}}}}", "");
 
+        const donationCampaignId = queryString.get("c");
         const donationId = queryString.get("d");
-        const url = `${this.baseUri}/${donationId}/receipt`;
+        const url = `${this.baseUri}/${donationCampaignId}/${donationId}/receipt`;
 
         const response = await fetch(url, {
             method: 'GET',
