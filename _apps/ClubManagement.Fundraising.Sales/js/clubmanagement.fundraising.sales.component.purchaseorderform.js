@@ -14,6 +14,8 @@ class PurchaseOrderForm extends HTMLElement {
 		this.salePendingTemplate = document.getElementById("clubmgmt-purchase-order-sale-pending-template");
 		this.saleOverTemplate = document.getElementById("clubmgmt-purchase-order-sale-over-template");
 		this.deliverySlotTemplate = document.getElementById("clubmgmt-purchase-order-delivery-slot-template");
+		this.deliveryLocationTemplate = document.getElementById("clubmgmt-purchase-order-delivery-location-template");
+		this.deliveryTypesTemplate = document.getElementById("clubmgmt-purchase-order-delivery-types-template");
 		this.offerTemplate = document.getElementById("clubmgmt-purchase-order-offer-template");
 		this.numberInputTemplate = document.getElementById("clubmgmt-purchase-order-offer-input-number-template");
 		this.toggleInputTemplate = document.getElementById("clubmgmt-purchase-order-offer-input-toggle-template");
@@ -22,6 +24,14 @@ class PurchaseOrderForm extends HTMLElement {
 		this.horizontalContainerTemplate = document.getElementById("clubmgmt-purchase-order-offer-horizontal-container-template");
 
 		this.selectedOptionMemory = [];
+		this.addressMemory = {
+			addressLine1: null,
+			addressLine2: null,
+			zipCode: null,
+			city: null,
+			stateProvince: null,
+			country: null,
+		}
     }
 	
 	static get observedAttributes() {
@@ -123,32 +133,82 @@ class PurchaseOrderForm extends HTMLElement {
 	renderDeliverySlots(content){
 		if(this.sale.deliverySlots.length > 0)
         {
-			var slots = content.querySelector("#delivery-slots");
-            this.sale.deliverySlots.forEach((d, i) => {
+			var deliveryTypes = this.sale.deliverySlots
+								.map(d => d.deliveryType)
+								.filter((d, i, types) => types.indexOf(d) == i); //distinct
 
-                var start = new Date(d.start);
-                var end = new Date(d.end);
+			var types = content.querySelector("#delivery-types");
+			var template =  this.deliveryTypesTemplate.content.cloneNode(true);
+			types.append(template);
+			var selector = types.querySelector("#delivery-types-selector");
+			deliveryTypes.forEach((t) => {
+				var option = document.createElement("option");
+				option.value = t;
+				option.innerText = this.translateDelivery(t);
+				selector.append(option);
+			})
 
-				var template =  this.deliverySlotTemplate.content.cloneNode(true);
+			var slots = content.querySelector("#delivery-slots");			
+			var location = content.querySelector("#delivery-location");
 
-				var slotFrom = template.querySelector(".slot-from");
-				slotFrom.innerText =  start.toLocaleTimeString("nl-BE", {hour: '2-digit', minute:'2-digit'});
+			var renderLocation = () => {
+				location.innerHTML = "";
+				var selectedSlotInput = slots.querySelector("input[name=delivery]:checked");
+				var selectedSlot = JSON.parse(selectedSlotInput.value);
+				if(!selectedSlot.location){
+					var template =  this.deliveryLocationTemplate.content.cloneNode(true);
+					location.append(template);
 
-				var slotTo = template.querySelector(".slot-to");
-				slotTo.innerText =  end.toLocaleTimeString("nl-BE", {hour: '2-digit', minute:'2-digit'});
+					var addressLine1 = location.querySelector("#addressLine1");
+					if(addressLine1.value == "") addressLine1.value = this.addressMemory.addressLine1;
+					addressLine1.addEventListener("change", (event) => {
+						this.addressMemory.addressLine1 = event.target.value; 
+					});
 
-				var input = template.querySelector("input");
-				input.setAttribute("id", "delivery_" + i);
-				input.setAttribute("value", JSON.stringify(d));
-				input.checked = i==0;
+					var addressLine2 = location.querySelector("#addressLine2");
+					if(addressLine2.value == "") addressLine2.value = this.addressMemory.addressLine2;
+					addressLine2.addEventListener("change", (event) => {
+						this.addressMemory.addressLine2 = event.target.value;
+					});
 
-				if(i!=0){
-					var toclear = template.querySelectorAll(".clear-subsequent");
-					toclear.forEach(c => c.innerHTML = '');
 				}
+			}
 
-				slots.append(template);
-            });
+			var renderSlots = () => {
+				var type = selector.value;				
+				slots.innerHTML = "";
+				var i = 0;
+				this.sale.deliverySlots.forEach((d) => {
+	
+					if(d.deliveryType != type) return;
+
+					var start = new Date(d.start);
+					var end = new Date(d.end);
+	
+					var template =  this.deliverySlotTemplate.content.cloneNode(true);
+	
+					var slotFrom = template.querySelector(".slot-from");
+					slotFrom.innerText =  start.toLocaleTimeString("nl-BE", {hour: '2-digit', minute:'2-digit'});
+	
+					var slotTo = template.querySelector(".slot-to");
+					slotTo.innerText =  end.toLocaleTimeString("nl-BE", {hour: '2-digit', minute:'2-digit'});
+	
+					var input = template.querySelector("input");
+					input.setAttribute("id", "delivery_" + i);
+					input.setAttribute("value", JSON.stringify(d));
+					input.checked = i==0;
+	
+					input.addEventListener("change", () => { renderLocation(); });
+
+					slots.append(template);
+					i++;
+				});
+				renderLocation();
+			}
+
+			selector.addEventListener("change", () => { renderSlots(); });
+			renderSlots();			
+			
         }
 	}
 	
@@ -671,9 +731,19 @@ class PurchaseOrderForm extends HTMLElement {
 
 		var orderLines = this.composeOrderLines();
 
-		var expectedDeliveryDateRangeInput = this.querySelector("input[name=delivery]:checked");
-		var expectedDeliveryDateRangeJson = expectedDeliveryDateRangeInput != null ? expectedDeliveryDateRangeInput.value : null;
-		var expectedDeliveryDateRange = expectedDeliveryDateRangeJson != null ? JSON.parse(expectedDeliveryDateRangeJson) : null;
+		var expectedDeliveryInput = this.querySelector("input[name=delivery]:checked");
+		var expectedDeliveryJson = expectedDeliveryInput != null ? expectedDeliveryInput.value : null;
+		var expectedDelivery = expectedDeliveryJson != null ? JSON.parse(expectedDeliveryJson) : null;
+
+		var location = expectedDelivery != null ? (expectedDelivery.location != null ? expectedDelivery.location : {
+			addressLine1: this.querySelector("#addressLine1").value,
+			addressLine2: this.querySelector("#addressLine2").value,
+			zipCode: this.querySelector("#zipCode").value,
+			city: this.querySelector("#city").value,
+			stateProvince: this.querySelector("#stateProvince").value,
+			country: this.querySelector("#country").value
+		}) : null
+
 
 		var cmd = {
 			orderId: this.context.orderId, 
@@ -682,11 +752,13 @@ class PurchaseOrderForm extends HTMLElement {
 			buyer: buyer,
 			orderLines: orderLines,
 			statusUpdateRequested: statusUpdatesRequested,
-			deliveryExpectations: expectedDeliveryDateRange != null ? {
+			deliveryExpectations: expectedDelivery != null ? {
 				expectedDeliveryDateRange: {
-					start: expectedDeliveryDateRange.start,
-					end: expectedDeliveryDateRange.end
-				}
+					start: expectedDelivery.start,
+					end: expectedDelivery.end
+				},
+				deliveryType: expectedDelivery.deliveryType,
+				location: location
 			} : null,
 			referenceNumber: sequence
 		};
@@ -769,6 +841,18 @@ class PurchaseOrderForm extends HTMLElement {
 		});
 
 		return orderLines;
+	}
+
+	translateDelivery(deliveryType){
+		if(deliveryType == "Consumption"){ 
+			return "Wij komen eten";
+		} 
+		else if (deliveryType == "TakeAway"){
+			return "Afhalen";
+		}
+		else if (deliveryType == "HomeDelivery"){
+			return "Thuis levering"
+		}
 	}
 }
 
