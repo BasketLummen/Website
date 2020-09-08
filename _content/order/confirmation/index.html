@@ -25,7 +25,8 @@ modules:
     <div id="confirmation-body">
         <p><b>{{{data.confirmation.buyer.name}}},</b></p>
         <p>{{{data.sale.confirmationMessage.textParts.thank_you_message}}}</p>
-        <p>{{{data.sale.confirmationMessage.textParts.welcome_message}}}</p>
+        <p>{{{data.sale.confirmationMessage.textParts.welcome_message}}}</p>        
+        <p>{{{data.sale.confirmationMessage.textParts.delivery_instructions}}}</p>
         <p><b>Overzicht van je bestelling:</b></p>
         <ul>
             {{#each data.confirmation.orderLines}}
@@ -36,8 +37,7 @@ modules:
             {{/each}}
         </ul>
         <p><b>Totaal:</b>  &euro; {{{order-total data.confirmation}}}</p>
-        <p>{{{data.sale.confirmationMessage.textParts.payment_instructions}}}</p>
-        <p>{{{data.sale.confirmationMessage.textParts.checkin_instructions}}}</p>
+        <!-- <p>{{{data.sale.confirmationMessage.textParts.payment_instructions}}}</p> -->
         <p>{{{data.sale.confirmationMessage.textParts.support_message}}}</p>
         <p>{{{data.sale.confirmationMessage.textParts.see_you_message}}},<br/>Basket Lummen</p>
     </div>

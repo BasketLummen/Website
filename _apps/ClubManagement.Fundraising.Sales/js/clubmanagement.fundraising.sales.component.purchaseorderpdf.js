@@ -41,7 +41,21 @@ class PurchaseOrderPdf extends HTMLElement {
        
         var confirmation = await this.loadConfirmation(orderId);
         var sale = await this.loadSale(confirmation.saleId);
-        
+
+        if(confirmation.deliveryExpectations && confirmation.deliveryExpectations.deliveryType && confirmation.deliveryExpectations.expectedDeliveryDateRange){          
+
+            var key = "delivery_instructions_" + confirmation.deliveryExpectations.deliveryType.toLowerCase();
+
+            if(sale.confirmationMessage.textParts[key]){
+
+                var start = new Date(confirmation.deliveryExpectations.expectedDeliveryDateRange.start);
+                var end = new Date(confirmation.deliveryExpectations.expectedDeliveryDateRange.end);
+
+                var instructions = this.format(sale.confirmationMessage.textParts[key], start.toLocaleTimeString("nl-BE", { hour: '2-digit', minute: '2-digit'}), end.toLocaleTimeString("nl-BE", { hour: '2-digit', minute: '2-digit'}));
+                sale.confirmationMessage.textParts["delivery_instructions"] = instructions;
+            }            
+        }
+
         const template = Handlebars.compile(templateText);
         const body = template({
             data: {
@@ -72,6 +86,16 @@ class PurchaseOrderPdf extends HTMLElement {
         const iframe = document.getElementById('printoutput');
         iframe.src = `/pdf/viewer.html?file=${documentUrl}`;
     }
+
+    format(toFormat) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        return toFormat.replace(/{(\d+)}/g, function(match, number) { 
+            return typeof args[number] != 'undefined'
+            ? args[number] 
+            : match
+            ;
+        });
+    };
 
     async loadConfirmation(orderId){
         var uri = `${salesConfig.bookingService}/api/orderbookings/confirmation/${orderId}`;
