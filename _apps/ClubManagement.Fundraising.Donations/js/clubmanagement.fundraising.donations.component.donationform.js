@@ -149,7 +149,8 @@ class DonationForm extends HTMLElement {
                     donationId: donationId,
                     donationCampaignId: this.donationCampaignId
                 },
-                sendConfirmation: emailConfirmation.checked
+                sendConfirmation: emailConfirmation.checked,
+                paymentToken: donationCampaign.paymentToken
             };
             const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
 
