@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Een blijk van dank voor onze officials!"
-date: 2020-10-04 11:00:00
+date: 2020-10-05 11:00:00
 description: Week van de Official
-cover: /news/img/2020-10-04-wvdo2020c.jpg
+cover: /news/img/2020-10-04-wvdoc.jpg
 permalink: /news/2020-10-04-wvdo2020/
 ---
 
@@ -47,6 +47,6 @@ Scores, fouten en time-outs worden ook digitaal genoteerd (digitaal wedstrijdfor
 
 Bij wedstrijden vanaf U14 werkt men met de '24-seconden regel' en moet een official de kleine klok bedienen. Hij of zij focust op de bal en minder op de spelers, ze krijgen immers geen instructies van de scheidsrechter.
 
-![OfficialJeugd](/news/img/2020-10-04-wvdo2020a.jpg)
+![OfficialJeugd](/news/img/2020-10-04-wvdoa.jpg)
 
-![OfficialSeniors](/news/img/2020-10-04-wvdo2020d.jpg)
+![OfficialSeniors](/news/img/2020-10-04-wvdod.jpg)
