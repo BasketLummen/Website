@@ -13,7 +13,7 @@ December 1968 (eerste seizoen in competitie: 1969-1970)
 
 ### Adres
 
-Sint-Annastraat 59, 3560 Lummen
+Hoevestraat 19, 3580 Beringen 
 
 ### BTW-nummer
 

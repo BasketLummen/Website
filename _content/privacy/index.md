@@ -18,8 +18,8 @@ Wij hechten eraan dat onze dienstverlening transparant, persoonlijk en betrouwba
 Heb je vragen over onze privacyverklaring, dan kun je deze richten aan: 
 
 Basket Lummen  
-Sint-Annastraat 59  
-B-3560 Lummen  
+Hoevestraat 19
+3580 Beringen 
 [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be)  
 
 ## Welke persoonsgegevens verzamelt Basket Lummen?
