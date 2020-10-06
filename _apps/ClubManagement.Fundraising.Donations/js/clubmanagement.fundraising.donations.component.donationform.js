@@ -1,24 +1,58 @@
 import { appInsights } from "/js/ai.module.js"
+import { donationsConfig } from "/js/clubmanagement.fundraising.donations.config.js"
+import { club } from "/js/club.config.js"
+import { guid } from "/js/clubmanagement.guid.js"
 
-class Donate extends HTMLElement {
+class DonationForm extends HTMLElement {
 
     constructor(){
         super();
 
-        this.template = document.getElementById("donation-template");
-        this.baseUri = "https://clubmgmt-donation-service-test.azurewebsites.net/api/donations";
-        this.stripe = Stripe("pk_test_8U57DC7IOjILi4nOIQM3lmVg");
+        this.template = document.getElementById("clubmgmt-donation-form-template");
+        this.donationCampaingPendingTemplate = document.getElementById("clubmgmt-donation-campaign-pending-template");
+        this.donationCampaingEndedTemplate = document.getElementById("clubmgmt-donation-campaign-ended-template");
+        this.donationsBaseUri = donationsConfig.donationsService + "/api/donations";
+        this.paymentsBaseUri = donationsConfig.paymentsService + "/api/payments";
+        this.stripe = Stripe(donationsConfig.stripeKey);
+    }
+
+    static get observedAttributes() {
+        return ['data-donation-campaign-id'];
+    }
+
+    get donationCampaignId() {
+        return this.getAttribute('data-donation-campaign-id');
     }
 
     async connectedCallback() {
+        const donationCampaign = await this.getDonationCampaignInformation();
+
+        const today = new Date();
+        const fromDate = new Date(donationCampaign.startDate);
+        const donationCampaignStarted = fromDate <= today;
+        const donationCampaignFinished = new Date(donationCampaign.endDate) < today;
+        
+        if  (!donationCampaignStarted){
+            this.innerHTML = this.donationCampaingPendingTemplate.innerHTML;
+            const startDate = this.querySelector(".donation-campaign-start-date");
+            startDate.innerText = fromDate;
+            return;
+        }
+        if (donationCampaignFinished){
+            this.innerHTML = this.donationCampaingEndedTemplate.innerHTML;
+            return;
+        }
+
         this.innerHTML = this.template.innerHTML;
+        
+        const campaignName = this.querySelector(".donation-campaign-name");
+        campaignName.innerText = donationCampaign.name;
 
         let amountForm = this.querySelector('#amount-form');
-        
         let emailAddress = this.querySelector('#email');
         let emailRow = this.querySelector('#emailRow');
-        let emailConformation = this.querySelector('#emailConfirmation');
-        emailConformation.addEventListener('change', async (event) => {
+        let emailConfirmation = this.querySelector('#emailConfirmation');
+        emailConfirmation.addEventListener('change', async (event) => {
            if (event.target.checked === true){
                emailAddress.setAttribute('required', '');
                emailRow.style.display = 'table-row';
@@ -92,19 +126,40 @@ class Donate extends HTMLElement {
            
             // Prepare donation
             const donationId = guid();
-            const prepareDonation = {
-                donationId: donationId,
-                amount: donation.value,
-                currency: "eur"
+            const paymentId = guid();
+            const preparePayment = {
+                paymentId: paymentId,
+                amount: {
+                    value: donation.value,
+                    currency: "eur"
+                },
+                payedBy: {
+                    id: null,
+                    name: cardHolder.value,
+                    email: emailAddress.value,
+                    preferedLanguage: 'en'
+                },
+                beneficiary: {
+                    id: club.organizationId,
+                    name: club.name
+                },
+                paymentMethod: "card",
+                metadata: {
+                    paymentType: "donation",
+                    donationId: donationId,
+                    donationCampaignId: this.donationCampaignId
+                },
+                sendConfirmation: emailConfirmation.checked,
+                paymentToken: donationCampaign.paymentToken
             };
-            const url = `${this.baseUri}/${donationId}/prepare`;
+            const url = `${this.paymentsBaseUri}/beneficiaries/${club.organizationId}/${paymentId}/prepare`;
 
             const response = await fetch(url, {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(prepareDonation),
+                body: JSON.stringify(preparePayment),
             });
 
             const paymentIntent = await response.json();
@@ -126,27 +181,10 @@ class Donate extends HTMLElement {
             }
             else
             {
-                const url = `${this.baseUri}/${donationId}/confirm`;
-                const registerDonationConfirmed = {
-                    donationId: donationId,
-                    paymentIntentId: paymentIntent.paymentIntentId,
-                    cardHolder: cardHolder.value,
-                    sendEmailConfirmation: emailConformation.checked,
-                    confirmationEmailAddress: emailAddress.value
-                };
-                
-                const response = await fetch(url, {
-                    method: 'PUT',
-                    mode: 'cors',
-                    cache: 'no-cache',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(registerDonationConfirmed),
-                });
-
                 // todo: add "Email confirmation will be sent if the user opted in"
                 resultMessage.innerText = "Thank you for your donation!"
                 
-                if (emailConformation.checked) {
+                if (emailConfirmation.checked) {
                     resultMessage.append(document.createElement('br'));
                     resultMessage.append("Confirmation will be emailed.");
                 }
@@ -172,6 +210,18 @@ class Donate extends HTMLElement {
             properties: { eventCategory: "Fundraising.Donations", eventAction: "render" }
         });
     }
+
+    async getDonationCampaignInformation() {
+        const url = `${this.donationsBaseUri}/${this.donationCampaignId}`;
+        const response = await fetch(url, {
+            method: 'GET',
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        return await response.json();
+    }
 }
 
-export { Donate }
+export { DonationForm }

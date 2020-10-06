@@ -3,25 +3,42 @@ layout: page
 title: Basket Lummen
 description: Basket Lummen
 keywords: Basket, Lummen, Donaties
+hidden: true
 preload_js:
   - config
 custom_js:
   - guid
 modules:
   - ai.module
-  - donations.app
+  - clubmanagement.fundraising.donations.app
 ---
-
+<!-- 
 <script src="https://js.stripe.com/v3/"></script>
 
 <div class="container content">
-	<donate-form />
+	<clubmgmt-donation-form data-donation-campaign-id="2b5a130d-d82f-4114-a40b-1e88a57c1670" />
 </div>
 
-<template id="donation-template">
+<template id="clubmgmt-donation-campaign-pending-template">
+	<table>
+		<tr>
+			<td><label>Registratie gaat pas open op <span class="donation-campaign-start-date"></span></label></td>
+		</tr>
+	</table>
+</template>
+
+<template id="clubmgmt-donation-campaign-ended-template">
+	<table>
+		<tr>
+			<td><label>Registratie is afgelopen</label></td>
+		</tr>
+	</table>
+</template>
+
+<template id="clubmgmt-donation-form-template">
     <form class="responsive-form" id="amount-form">
         <fieldset>
-            <legend>Choose amount to donate</legend>
+            <legend>Choose amount to donate to <span class="donation-campaign-name"></span></legend>
             <table>
                 <tr>
 					<td>
@@ -87,4 +104,4 @@ modules:
             </table>
         </fieldset>
 	</form>
-</template>
+</template> -->

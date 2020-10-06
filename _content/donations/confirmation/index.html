@@ -3,6 +3,7 @@ layout: page
 title: Basket Lummen
 description: Bevestiging van je donatie
 keywords: Basket, Lummen
+hidden: true
 custom_css:
 - pdfviewermod
 custom_js:
@@ -11,22 +12,20 @@ custom_js:
 - config
 modules:
 - ai.module
-- donations.app
+- clubmanagement.fundraising.donations.app
 ---
+<!-- 
+<clubmgmt-donation-pdf></clubmgmt-donation-pdf>
 
-<donation-confirmation></donation-confirmation>
 
-<iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe>
-
-<div id="confirmation-canvas" style="display: none;"></div>
-<script id="confirmation-template" type="text/x-handlebars-template">
+<template id="clubmgmt-donation-pdf-template">
     {{{{raw}}}}
     <div id="confirmation-header">
         Basket Lummen
     </div>
     <div id="confirmation-body">   
-        <p><b>{{{data.cardHolder}}},</b></p>
-        <p>TODO: thank you message</p>
+        <p><b>{{{data.donorName}}},</b></p>
+        <p>Thank you for your donation towards '{{{data.campaignName}}}' donation campaign!</p>
         <p><h3>Overzicht van je donatie</h3></p>
         <table>
             <tr>
@@ -48,4 +47,4 @@ modules:
         </table>
     </div>
     {{{{/raw}}}}
-</script>
+</template> -->
