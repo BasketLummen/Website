@@ -643,7 +643,7 @@ class PurchaseOrderForm extends HTMLElement {
         var uri = `${salesConfig.sequenceService}/api/sequences/${this.sale.id}`;
 
         var defineSequence = {
-          initialOffset: 700,
+          initialOffset: 0,
           rangeSize: 10
       	}
 

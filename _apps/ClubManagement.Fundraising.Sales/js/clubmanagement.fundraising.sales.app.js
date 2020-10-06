@@ -4,11 +4,13 @@ import { PurchaseOrderPayment } from "/js/clubmanagement.fundraising.sales.compo
 import { PurchaseOrderConfirmation } from "/js/clubmanagement.fundraising.sales.component.purchaseorderconfirmation.js"
 import { PurchaseOrderErrorReport } from "/js/clubmanagement.fundraising.sales.component.purchaseordererrorreport.js"
 import { PurchaseOrderPdf } from "/js/clubmanagement.fundraising.sales.component.purchaseorderpdf.js"
-//import { SubmitButton } from "/js/clubmanagement.component.submit-button.js"
+import { paymentsConfig } from "./clubmanagement.payments.config.js";
 
 import shell from "./dish.shell.js"
 
 (function() {
+
+	paymentsConfig.language = "nl-be";
 
 	shell.activate();
 
@@ -18,5 +20,4 @@ import shell from "./dish.shell.js"
 	customElements.define('clubmgmt-purchase-order-confirmation', PurchaseOrderConfirmation);
 	customElements.define('clubmgmt-purchase-order-error-report', PurchaseOrderErrorReport);
 	customElements.define('clubmgmt-purchase-order-pdf', PurchaseOrderPdf);
-	//customElements.define('submit-button', SubmitButton);
  })();
