@@ -53,9 +53,13 @@ Je kan kiezen uit volgende gerechten:
 - Tomatensoep met balletjes (1L) **€5,00**
 - Aspergeroomsoep (1L) **€5,00**
 
+### Enkel online betaling
+
+Cash betalingen zijn niet mogelijk. Na het ingeven van je bestelling kan je betalen via Bancontact of via je krediet kaart. Enkel betaalde bestellingen zullen aanvaard worden. Moest je problemen ondervinden met je online betaling, dan kan je contact opnemen met [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
+
 ### Opgelet!
 
-Bestellingen moeten uiterlijk **woensdag 4 november 2020**. In tegenstelling tot bij onze klassieke eetdagen zijn latere bestellingen echt **NIET** mogelijk.
+Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In tegenstelling tot bij onze klassieke eetdagen zijn latere bestellingen echt **NIET** mogelijk.
 
 <clubmgmt-purchase-order-wizard sale-id="be11416f-e7bb-41f0-92c0-5df34e34fca8"></clubmgmt-purchase-order-wizard>
 
@@ -82,7 +86,7 @@ Bestellingen moeten uiterlijk **woensdag 4 november 2020**. In tegenstelling tot
           <td><label for="email">Email</label></td>
           <td><input type="text" id="email" name="email" placeholder="Vul je email in..."></input></td>
         </tr>
-		<tr>
+		    <tr>
           <td><label for="telephone">Telefoon</label></td>
           <td><input type="text" id="telephone" name="telephone" placeholder="Vul je telefoon in..."></input></td>
         </tr>
@@ -100,9 +104,9 @@ Bestellingen moeten uiterlijk **woensdag 4 november 2020**. In tegenstelling tot
           <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" checked></input> (vereist email)</td>
         </tr>  
       </tbody>
-      <tbody id="delivery-types"></tbody>
-      <tbody id="delivery-slots"></tbody>
-      <tbody id="delivery-location"></tbody>     
+      <tbody id="delivery-types" style="display: none"></tbody>
+      <tbody id="delivery-slots" style="display: none"></tbody>
+      <tbody id="delivery-location" style="display: none"></tbody>     
       <tbody>
         <tr>
           <td><label for="submit"></label></td>
@@ -246,7 +250,7 @@ Bestellingen moeten uiterlijk **woensdag 4 november 2020**. In tegenstelling tot
 
   <form class="responsive-form" id="orderPayment">
     <fieldset>
-      <legend>Online betaling, kies je betaal methode</legend>
+      <legend>Kies een betaal methode</legend>
       <payment-method-selector id="paymentMethodSelector">
       </payment-method-selector>
       <submit-button>Betalen</submit-button>
