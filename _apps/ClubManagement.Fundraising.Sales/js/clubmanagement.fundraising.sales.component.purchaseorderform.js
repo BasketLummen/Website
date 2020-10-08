@@ -720,7 +720,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var telephone = optionalTelephoneInput != null ? optionalTelephoneInput.value : null;
 		var optionalAddressInput = this.querySelector('#address');
 		var address = optionalAddressInput != null ?  optionalAddressInput.value: null;
-		var statusUpdatesRequested = this.querySelector('#sendConfirmation').checked;
+		var statusUpdatesRequested = this.querySelector('#sendConfirmation').checked;		
 
 		var buyer = {
 			name : firstname + " " + name,
@@ -744,6 +744,8 @@ class PurchaseOrderForm extends HTMLElement {
 			country: this.querySelector("#country").value
 		}) : null
 
+		var optionalCommentInput = this.querySelector('#comment');
+		var comment = optionalCommentInput != null ?  optionalCommentInput.value: null;
 
 		var cmd = {
 			orderId: this.context.orderId, 
@@ -760,7 +762,8 @@ class PurchaseOrderForm extends HTMLElement {
 				deliveryType: expectedDelivery.deliveryType,
 				location: location
 			} : null,
-			referenceNumber: sequence
+			referenceNumber: sequence,
+			comment: comment
 		};
 
 		return cmd

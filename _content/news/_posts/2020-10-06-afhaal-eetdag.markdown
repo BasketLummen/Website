@@ -19,23 +19,16 @@ Onnodig om te zeggen dat we jullie steun keihard nodig hebben om het seizoen doo
 
 We organiseren daarom onze eerste afhaal-eetdag op woensdag 11 november 2020.
 
-Je kan kiezen ui een 8-tal lekkere gerechten.
+Afhaalmoment: **Van 9u tot 12u aan sporthal De Vijfsprong, Sportweg 8 Lummen**
 
-### Hoe gaat het in zijn werk?
-
-- Je bezoekt net als alle andere jaren de buren, vrienden, familie, kennissen aan wie je een kaart voor de eetdag wil verkopen. Dit jaar vragen we je om nog een extra inspanning te doen en deur aan deur bij jou in de buurt rond te gaan.
-- Je noteert de bestellingen en gebruikt hiervoor [dit document](/news/downloads/afhaal-eetdag.pdf) dat je zo vaak kan afdrukken als nodig. Eén helft geef je aan de buurman, nonkel of kennis en de andere helft hou je bij.
-- Je vraagt ook dadelijk af te rekenenen en neemt het geld mee naar huis.
-- Als je thuis komt breng je de bestellingen in via onderstaande formulier en je stort het geld onmiddelijk door naar de club via de nieuwe online betaal opties.
-- Op woensdag 11 november kom je tussen 9u en 12u je bestellingen oppikken aan de sporthal in Lummen. Deze worden gekoeld bewaard en de bedoeling is dat je ze na afhaling direct bij de mensen aan wie jij een kaart verkocht hebt gaat leveren. We verpakken ze per bestelling met de naam erop vermeld bij wie je moet leveren.
-- Smakelijk!
+Je kan kiezen uit een 8-tal lekkere gerechten.
 
 ### Hoe klaarmaken
 
 - Elke portie bevat ongeveer 600 gram en is bereid met verse producten.
 - Je hoeft enkel een paar gaatjes in de folie te prikken en na 5 minuten in de microgolfovern kan je aan tafel!
-- Je kan een menu nog een week in de koelkast bewaren of invriezen voor later. Bestel dus gerust wat meer om een week niet meer te hoeven koken!
-- Omwille van praktische en hygiënische redenen moeten we met plastic bakjes werken. We roepen iedereen dan ook op om deze correct te recycleren en niet bij het grof vuil mee te geven.
+- **Je kan een menu nog een week in de koelkast bewaren of invriezen voor later. Bestel dus gerust wat meer om een week niet meer te hoeven koken!**
+- Omwille van praktische en hygiënische redenen moeten we met plastic bakjes werken. We roepen iedereen dan ook op om deze correct te recycleren en niet met het grof vuil mee te geven.
 
 ### Gerechten
 
@@ -97,8 +90,14 @@ Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In 
           <td><label>Te betalen</label></td>
           <td><label id="price">€ 0</label></td>
         </tr>   
+      </tbody>      
+      <tbody>
+        <tr>
+          <td style="vertical-align: top"><label for="comment">Opmerking</label></td>
+          <td><textarea id="comment" name="comment" rows="4" style="width: initial" placeholder="Ga je bij iemand leveren? Noteer dan hier voor wie de bestelling bestemd is."></textarea></td>
+        </tr> 
       </tbody>
-       <tbody>  
+      <tbody> 
         <tr>
           <td><label for="sendConfirmation">Stuur me een bevestiging</label></td>
           <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" checked></input> (vereist email)</td>
@@ -106,13 +105,13 @@ Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In 
       </tbody>
       <tbody id="delivery-types" style="display: none"></tbody>
       <tbody id="delivery-slots" style="display: none"></tbody>
-      <tbody id="delivery-location" style="display: none"></tbody>     
+      <tbody id="delivery-location" style="display: none"></tbody>
       <tbody>
         <tr>
           <td><label for="submit"></label></td>
           <td><submit-button>Doorgaan naar betalen</submit-button></td>
         </tr>
-       </tbody>        
+      </tbody>        
     </table>
 </template>
 
