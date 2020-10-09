@@ -37,7 +37,7 @@ modules:
             {{/each}}
         </ul>
         <p><b>Totaal:</b>  &euro; {{{order-total data.confirmation}}}</p>
-        <!-- <p>{{{data.sale.confirmationMessage.textParts.payment_instructions}}}</p> -->
+        <p><b>Opmerking:</b> {{{data.confirmation.comment}}}</p> 
         <p>{{{data.sale.confirmationMessage.textParts.support_message}}}</p>
         <p>{{{data.sale.confirmationMessage.textParts.see_you_message}}},<br/>Basket Lummen</p>
     </div>
