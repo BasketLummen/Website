@@ -2,7 +2,6 @@
 layout: post
 title:  "11 November 2020: Afhaal Eetdag"
 date:   2020-10-06 00:00:00
-hidden: true
 description: Wij organizeren onze eerste, corona-proof, afhaal eetdag op 11 November 2020
 permalink: /news/2020-10-06-afhaal-eetdag/
 modules:
