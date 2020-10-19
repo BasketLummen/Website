@@ -105,8 +105,10 @@ class PurchaseOrderPayment extends HTMLElement {
                     }
                 }));
             }
+            else{
+                this.dispatchEvent(new Event('confirm'));
+            }           
             
-            this.dispatchEvent(new Event('confirm'));
         });
 
         monitoring.appInsights.trackEvent({
