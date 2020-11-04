@@ -10,6 +10,14 @@ modules:
   - clubmanagement.fundraising.sales.app
 ---
 
+De verkoop is nu gesloten, er kunnen geen nieuwe bestellingen meer geplaatst worden.
+
+**Heel hartelijk bedankt alvast voor al de bestellingen!**
+
+Vergeet niet uw bestellingen af te komen halen op **11 november 2020 tussen 09u00 en 12u00**, aan sporthal De Vijfsprong, Sportweg 8 Lummen.
+
+### Afhaal eetdag
+
 Omwille van de coronamaatregelen is het voor de club niet mogelijk om de traditionele eetdag te organiseren. Wij hopen dat u dit kan begrijpen.
 
 We willen toch iedereen de kans geven om in zijn of haar bubbel lekker te kunnen eten en tegelijkertijd de werking van onze club te steunen.
