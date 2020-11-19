@@ -55,11 +55,11 @@ class PurchaseOrderForm extends HTMLElement {
         this.context = JSON.parse(this.contextData);
 
         this.sale = await this.loadSale();
-		this.collection = await this.loadCollection();
+		this.catalogs = await this.loadCatalogs();
 
 		this.createIndexes();
 
-		await this.registerSequence(); // todo: only zolder needs this, lummen doesn't, perhaps factor out in a strategy?
+		await this.registerSequence();
 
         await this.render();
     }
@@ -345,7 +345,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var label = template.querySelector("label");
 		if(variants.length == 1){
 			var variant = variants[0];
-			label.innerText = itemDescription.name + (variant.price.value > 0 ? " " + variant.price.currency + variant.price.value : "");
+			label.innerText = itemDescription.name + (variant.price.value > 0 ? " " + variant.price.currency + this.round(variant.price.value).toFixed(2) : "");
 		}
 		else{
 			label.innerText = itemDescription.name;
@@ -356,7 +356,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var labelHolder = template.querySelector(".label-holder");
 		var labelTemplate = this.optionLabelTemplate.content.cloneNode(true);
 		var label = labelTemplate.querySelector(".option-label");
-		label.innerText = name + (variant != null  && variant.price.value > 0 ? " " + variant.price.currency + variant.price.value : "");
+		label.innerText = name + (variant != null  && variant.price.value > 0 ? " " + variant.price.currency + this.round(variant.price.value).toFixed(2) : "");
 		labelHolder.append(label);
 	}
 
@@ -422,7 +422,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 		input.addEventListener("change", (event) => {
 			var total = this.computeTotal();
-			this.querySelector('#price').innerText = total.currency + " " + total.amount;
+			this.querySelector('#price').innerText = total.currency + " " + total.amount.toFixed(2);
 		});
 		
 		inputHolder.append(inputTemplate);
@@ -452,7 +452,7 @@ class PurchaseOrderForm extends HTMLElement {
 	
 		return {
 			currency: currency,
-			amount: sum
+			amount: this.round(sum)
 		};
 	};
 
@@ -621,11 +621,11 @@ class PurchaseOrderForm extends HTMLElement {
         return await request.json();
     }
 
-    async loadCollection(){
+    async loadCatalogs(){
       if(this.sale && this.sale.items){
         var item = this.sale.items[0]; // assume all items from same catalog & collection for now
 
-        var uri = `${salesConfig.catalogService}/api/catalogs/${club.organizationId}/${item.catalogId}/collections/${item.collectionId}`;
+        var uri = `${salesConfig.catalogService}/api/catalogs/${club.organizationId}`;
         var request = await fetch(uri, {
             method: "GET",
             mode: 'cors',
@@ -697,7 +697,9 @@ class PurchaseOrderForm extends HTMLElement {
 		for (var key in this.sale.items) {
 			if (this.sale.items.hasOwnProperty(key)){
 				var item = this.sale.items[key];
-				var itemDescription = this.collection.items.filter(function(i){ return i.id == item.id})[0];
+				var catalog = this.catalogs.filter(function(i){ return i.id == item.catalogId})[0];
+				var collection = catalog.collections.filter(function(i){ return i.id == item.collectionId})[0];
+				var itemDescription = collection.items.filter(function(i){ return i.id == item.id})[0];
 				itemDescriptions[item.id] = itemDescription;
 				
 				if (!variantsPerItem.hasOwnProperty(item.id)){
@@ -856,6 +858,10 @@ class PurchaseOrderForm extends HTMLElement {
 		else if (deliveryType == "HomeDelivery"){
 			return "Thuis levering"
 		}
+	}
+
+	round(number){
+		return Math.round((number + Number.EPSILON) * 100) / 100;
 	}
 }
 
