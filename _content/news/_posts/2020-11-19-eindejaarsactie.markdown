@@ -95,6 +95,13 @@ TODO
     </tr>
 </template>
 
+<template id="clubmgmt-purchase-order-offer-collection-name-template">
+    <tr>
+        <td></td>
+        <td><label class="collection-name"></label></td>
+    </tr>
+</template>
+
 <template id="clubmgmt-purchase-order-offer-label-template">
     <label></label>
 </template>
