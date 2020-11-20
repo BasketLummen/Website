@@ -26,17 +26,19 @@ modules:
         <p><b>{{{data.confirmation.buyer.name}}},</b></p>
         <p>{{{data.sale.confirmationMessage.textParts.thank_you_message}}}</p>
         <p>{{{data.sale.confirmationMessage.textParts.welcome_message}}}</p>        
-        <p>{{{data.sale.confirmationMessage.textParts.delivery_instructions}}}</p>
-        <p><b>Overzicht van je bestelling:</b></p>
-        <ul>
-            {{#each data.confirmation.orderLines}}
+        <p>{{{data.sale.confirmationMessage.textParts.delivery_instructions}}}</p>        
+        {{#each data.batches}}
+        <p><b class="overview-title">Overzicht van je bestelling: (nr. {{{@root.data.confirmation.referenceNumber}}})</b></p>
+        <ul class="page-break">
+            {{#each this}}
                 <li>{{{this.quantity}}} x {{{this.orderedItem.name}}} = &euro; {{{line-item-total this}}}</li>
                 {{#each this.orderedItem.selectedOptions}}
                     {{{this.value}}}
                 {{/each}}
             {{/each}}
         </ul>
-        <p><b>Totaal:</b>  &euro; {{{order-total data.confirmation}}}</p>
+        {{/each}}
+        <p><b>Totaal:</b>  &euro; {{{data.total}}}</p>
         <p><b>Opmerking:</b> {{{data.confirmation.comment}}}</p> 
         <p>{{{data.sale.confirmationMessage.textParts.support_message}}}</p>
         <p>{{{data.sale.confirmationMessage.textParts.see_you_message}}},<br/>Basket Lummen</p>

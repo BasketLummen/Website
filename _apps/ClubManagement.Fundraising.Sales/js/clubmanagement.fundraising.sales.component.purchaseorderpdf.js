@@ -18,19 +18,9 @@ class PurchaseOrderPdf extends HTMLElement {
         return;
 
         Handlebars.registerHelper('line-item-total', function(orderLine) {
-            return orderLine.quantity * orderLine.orderedItem.price.value;
+            return (orderLine.quantity * orderLine.orderedItem.price.value).toFixed(2);
          });
-         
-         Handlebars.registerHelper('order-total', function(confirmation) {
-            var total = 0;
-             
-            confirmation.orderLines.forEach(function(orderLine){
-                total += orderLine.quantity * orderLine.orderedItem.price.value;
-            });
-           
-            return total;
-        }); 
-   
+            
         this.innerHTML = '<iframe id="printoutput" style="width:100vw; height: 100vh; border: none"></iframe><div id="confirmation-canvas" style="display: none;"></div>';
 
         const templateText = this.template.innerHTML
@@ -55,21 +45,35 @@ class PurchaseOrderPdf extends HTMLElement {
                 sale.confirmationMessage.textParts["delivery_instructions"] = instructions;
             }            
         }
+       
+        var total = 0;             
+        confirmation.orderLines.forEach(function(orderLine){
+            total += orderLine.quantity * orderLine.orderedItem.price.value;
+        });
 
+        var batches = this.chunkArray(confirmation.orderLines, 40);
+       
         const template = Handlebars.compile(templateText);
         const body = template({
             data: {
                 confirmation: confirmation,
-                sale: sale
+                batches: batches,
+                sale: sale,
+                total: this.round(total)
             }
         });
 
         const canvas = this.querySelector("#confirmation-canvas");
         canvas.innerHTML = body;
         canvas.style.display = "block";
+        canvas.style.minHeight = (batches.length * 1222) + "px"; 
         
         const pdf = await html2pdf()
-            .set({ html2canvas: { scale: 4, letterRendering: true } })
+            .set({ 
+                html2canvas: { scale: 4, letterRendering: true }, 
+                jsPDF: {orientation: 'portrait', unit: 'in', format: 'letter', compressPDF: true},
+                //pagebreak: { mode: 'css' } 
+            })
             .from(canvas)
             .toPdf()
             .get('pdf');
@@ -96,6 +100,20 @@ class PurchaseOrderPdf extends HTMLElement {
             ;
         });
     };
+
+    round(number){
+		return Math.round((number + Number.EPSILON) * 100) / 100;
+	}
+
+    chunkArray(arr, chunk_size){
+        var results = [];
+        
+        while (arr.length) {
+            results.push(arr.splice(0, chunk_size));
+        }
+        
+        return results;
+    }
 
     async loadConfirmation(orderId){
         var uri = `${salesConfig.bookingService}/api/orderbookings/confirmation/${orderId}`;

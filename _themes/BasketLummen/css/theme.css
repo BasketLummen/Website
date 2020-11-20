@@ -877,12 +877,14 @@ button .spinner{
 	max-width: 480px;
 }
 
-#confirmation-canvas{
+
+
+#confirmation-canvas{	
 	background-color: #f2f4f6;
 	/*  */
-	height: 1122px;
+	min-height: 1122px;
 	font-family: 'Nunito Sans',Helvetica,Arial,sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 }
 #confirmation-header{
 	color: #A8AAAF;
@@ -902,6 +904,18 @@ button .spinner{
 #confirmation-body table{
 	margin-bottom: 20px;
 }
+
+#confirmation-canvas ul{
+	padding-left: 10px;
+}
+
+#confirmation-canvas .overview-title:not(:first-of-type){
+	padding-top: 20px;
+}
+#confirmation-canvas .page-break:not(:last-of-type){
+	page-break-after: always;
+}
+
 .align-right{
 	text-align: right !important;
 }
@@ -916,6 +930,7 @@ button .spinner{
 .horizontal-container span{
 	padding: 0vh 0.2vw;
 }
+
 
 /* TODO: move to shell.css */
 
