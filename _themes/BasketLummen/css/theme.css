@@ -46,6 +46,13 @@ label, input, button, select {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
+@media (max-width: 767px) {
+	label {
+		white-space: break-spaces;
+	}	
+}
+
+
 input[type=text],input[type=number], select{
 	min-width: 200px;
 	border:1px solid #999; 
