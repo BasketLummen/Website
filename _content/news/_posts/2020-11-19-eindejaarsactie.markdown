@@ -9,7 +9,34 @@ modules:
   - clubmanagement.payments.app
   - clubmanagement.fundraising.sales.app
 ---
-TODO
+
+Met de eindejaarsdagen in zicht, sluiten we binnenkort met zijn allen een bijzonder bizar jaar af. Wij geloven alvast in een kleinschalig knallend feestje. Iedereen in zijn of haar kot. Gezellig tafelend om er het beste van te maken. En vooral: plannen smeden om in 2021 - eens we dat stomme virus de baas zijn - ons sociaal leven weer op te pakken.
+
+Maar eerst nog 2020 vaarwel zeggen. En naar goede gewoonte bieden we vanuit Baskebalclub Lummen weer een smakelijk assortiment kwaliteitswijnen en ander
+lekkers aan. Deze keer werken we samen met ad Bibendum uit Sint-Truiden, De Kaarskesprocessie Leonidas uit Lummen en Ekofib uit Antwerpen. Zij hebben voor ons een mooi aanbod samengesteld waarmee we de eindejaarsdagen toch nog gezellig kunnen maken.
+
+Enerzijds zullen de smaakpapillen van elke wijn-, cava- en champagneliefhebber geprikkeld worden door de wijnen van ad Bibendum. In [bijgevoegde folder](/news/downloads/eindejaarsactie-2020-ad-bibendum.pdf) vind je een volledig overzicht terug met een woordje uitleg én enkele foodpairing tips bij elke fles.
+
+Als dessert, of stiekem als tussendoortje, hebben we opnieuw heerlijke Leonidas pralines in aanbod. Niemand kan weerstaan aan de beroemde Witte Manon praline. De heerlijke roomboter met koffiesmaak op een bedje van praliné, omhuld met witte chocolade, maken deze praline legendarisch. Hou je toch van wat meer afwisseling, dan vind je die zeker in een doosje gemengde pralines.
+
+Na de maaltijd zullen we het ook nog lekker gezellig maken met de lekker warme en comfortabele bamboe sokken van Ekofib. Deze zijn one size fits all (zowel voor hem als haar), anti geur, anti alergisch en werken vocht regulerend. Gezelligheid gegarandeerd dus.
+
+### Hoe bestellen
+
+Bestel je voor privé gebruik? Vul dan gewoon onderstaande bestel formulier in om je bestelling door te geven. Na het ingeven van je bestelling kan je betalen via Bancontact of via je krediet kaart. Cash betalingen zijn nog steeds niet mogelijk wegens de geldende corona maatregelen. Enkel betaalde bestellingen zullen aanvaard worden.
+
+Bestel je voor zakelijk gebruik, bvb als relatiegeschenk, en heb je een factuur nodig? Stuur dan je bestelling per email naar [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
+
+### Afhaal moment
+
+We voorzien opnieuw een corona proof afhaal moment op zaterdag 19 December tussen 10 en 12u. Dit is het weekend voor Kerstmis zodat de pralines nog lekker vers zijn tijdens de feestdagen. Dit afhaal moment zal opnieuw het protocol volgen dat we bij de afhaal eetdag gebruikt hebben. Print dus de bevestiging van je bestelling af en kom dan met de wagen naar het afhaalpunt aan sporthal De Vijfsprong tussen 10 en 12u om je bestelling op te pikken.
+
+Voor de zakelijke bestellingen kan apart een afspraak gemaakt worden voor de levering, zodat je de producten nog tijdig bij je zakelijke relaties kan krijgen. 
+
+### Vragen
+
+Moest je problemen ondervinden met je online betaling, of heb je een andere praktische vraag over je bestelling, dan kan je steeds contact opnemen met [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
+
 
 <clubmgmt-purchase-order-wizard sale-id="1f35da38-a943-472f-8977-dd11c81d53f6"></clubmgmt-purchase-order-wizard>
 
