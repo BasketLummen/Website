@@ -22,6 +22,7 @@ class PurchaseOrderForm extends HTMLElement {
 		this.dropdownTemplate = document.getElementById("clubmgmt-purchase-order-offer-input-dropdown-template");
 		this.optionLabelTemplate = document.getElementById("clubmgmt-purchase-order-offer-option-label-template");
 		this.horizontalContainerTemplate = document.getElementById("clubmgmt-purchase-order-offer-horizontal-container-template");
+		this.collectionNameTemplate = document.getElementById("clubmgmt-purchase-order-offer-collection-name-template");
 
 		this.selectedOptionMemory = [];
 		this.addressMemory = {
@@ -55,11 +56,11 @@ class PurchaseOrderForm extends HTMLElement {
         this.context = JSON.parse(this.contextData);
 
         this.sale = await this.loadSale();
-		this.collection = await this.loadCollection();
+		this.catalogs = await this.loadCatalogs();
 
 		this.createIndexes();
 
-		await this.registerSequence(); // todo: only zolder needs this, lummen doesn't, perhaps factor out in a strategy?
+		await this.registerSequence();
 
         await this.render();
     }
@@ -114,14 +115,6 @@ class PurchaseOrderForm extends HTMLElement {
 			this.context.sendConfirmation =  cmd.statusUpdateRequested;
 
 			this.dispatchEvent(new Event('pay'));
-
-			//this.dispatchEvent(new Event('confirm'));
-			// this.dispatchEvent(new CustomEvent('error', {
-			// 	detail: {
-			// 		error: "Oops"
-			// 	}
-			// }));
-
 		});
 
         monitoring.appInsights.trackEvent({
@@ -214,20 +207,28 @@ class PurchaseOrderForm extends HTMLElement {
 	
 	renderVariants(content){
 		var offers = content.querySelector("#offers");
-		
+		var previousCollection = null;
 		for (var itemId in this.variantsPerItem) {
 			if (this.variantsPerItem.hasOwnProperty(itemId)){
-				var variants = this.variantsPerItem[itemId];				
-				if(variants.length > 0){
-					var itemDescription = this.itemDescriptions[itemId];					
+				var variants = this.variantsPerItem[itemId];
+				if(variants.length > 0){			
+
+					var itemDescription = this.itemDescriptions[itemId];		
+					var description = itemDescription.description;
+					// TODO: render collection if different from previous
+					if(!previousCollection || itemDescription.collection.id != previousCollection.id){
+						this.renderCollectionLabel(content, itemDescription.collection);	
+						previousCollection = itemDescription.collection;
+					}
+
 					var template = this.offerTemplate.content.cloneNode(true);
 
-					this.renderOfferLabel(template, variants, itemDescription);
-					this.renderOfferInputOrOptionLabels(template, variants, itemDescription);							
+					this.renderOfferLabel(template, variants, description);
+					this.renderOfferInputOrOptionLabels(template, variants, description);							
 					
 					offers.append(template);	
 
-					this.renderOptions(content, variants, itemDescription);	
+					this.renderOptions(content, variants, description);	
 				}
 			}
 		}		
@@ -341,11 +342,21 @@ class PurchaseOrderForm extends HTMLElement {
 		}
 	}
 
+	renderCollectionLabel(content, collection){
+		var offers = content.querySelector("#offers");
+		var template = this.collectionNameTemplate.content.cloneNode(true);
+
+		var name = template.querySelector(".collection-name");
+		name.innerHTML = collection.name;
+		
+		offers.append(template);
+	}
+
 	renderOfferLabel(template, variants, itemDescription){
 		var label = template.querySelector("label");
 		if(variants.length == 1){
 			var variant = variants[0];
-			label.innerText = itemDescription.name + (variant.price.value > 0 ? " " + variant.price.currency + variant.price.value : "");
+			label.innerText = itemDescription.name + (variant.price.value > 0 ? " " + variant.price.currency + this.round(variant.price.value).toFixed(2) : "");
 		}
 		else{
 			label.innerText = itemDescription.name;
@@ -356,7 +367,7 @@ class PurchaseOrderForm extends HTMLElement {
 		var labelHolder = template.querySelector(".label-holder");
 		var labelTemplate = this.optionLabelTemplate.content.cloneNode(true);
 		var label = labelTemplate.querySelector(".option-label");
-		label.innerText = name + (variant != null  && variant.price.value > 0 ? " " + variant.price.currency + variant.price.value : "");
+		label.innerText = name + (variant != null  && variant.price.value > 0 ? " " + variant.price.currency + this.round(variant.price.value).toFixed(2) : "");
 		labelHolder.append(label);
 	}
 
@@ -422,7 +433,7 @@ class PurchaseOrderForm extends HTMLElement {
 
 		input.addEventListener("change", (event) => {
 			var total = this.computeTotal();
-			this.querySelector('#price').innerText = total.currency + " " + total.amount;
+			this.querySelector('#price').innerText = total.currency + " " + total.amount.toFixed(2);
 		});
 		
 		inputHolder.append(inputTemplate);
@@ -452,7 +463,7 @@ class PurchaseOrderForm extends HTMLElement {
 	
 		return {
 			currency: currency,
-			amount: sum
+			amount: this.round(sum)
 		};
 	};
 
@@ -621,17 +632,22 @@ class PurchaseOrderForm extends HTMLElement {
         return await request.json();
     }
 
-    async loadCollection(){
+    async loadCatalogs(){
       if(this.sale && this.sale.items){
-        var item = this.sale.items[0]; // assume all items from same catalog & collection for now
+        var catalogIds = [...new Set(this.sale.items.map(i => i.catalogId))];
 
-        var uri = `${salesConfig.catalogService}/api/catalogs/${club.organizationId}/${item.catalogId}/collections/${item.collectionId}`;
+		var mapCatalogs = {
+			catalogIds: catalogIds
+		}
+
+        var uri = `${salesConfig.catalogService}/api/catalogs/${club.organizationId}/map`;
         var request = await fetch(uri, {
-            method: "GET",
+            method: "POST",
             mode: 'cors',
             headers: {
               "Content-Type": "application/json"
-            }        
+			},
+			body:  JSON.stringify(mapCatalogs)     
         });
         return await request.json();
       }
@@ -694,11 +710,25 @@ class PurchaseOrderForm extends HTMLElement {
 		var variantsPerItem = {};
 		var itemDescriptions = [];
 
+		const by = (fields) => (a, b) => fields.map(o => {
+			let d = 1;
+			if (o[0] === '-') { d = -1; o=o.substring(1); }
+			return a[o] > b[o] ? d : a[o] < b[o] ? -(d) : 0;
+		}).reduce((p, n) => p ? p : n, 0);
+
+		this.sale.items = this.sale.items.sort(by["catalogId", "collectionId"]);
+
 		for (var key in this.sale.items) {
 			if (this.sale.items.hasOwnProperty(key)){
 				var item = this.sale.items[key];
-				var itemDescription = this.collection.items.filter(function(i){ return i.id == item.id})[0];
-				itemDescriptions[item.id] = itemDescription;
+				var catalog = this.catalogs.filter(function(i){ return i.id == item.catalogId})[0];
+				var collection = catalog.collections.filter(function(i){ return i.id == item.collectionId})[0];
+				var itemDescription = collection.items.filter(function(i){ return i.id == item.id})[0];
+				itemDescriptions[item.id] = {
+					description: itemDescription,
+					collection: collection,
+					catalog: catalog
+				};
 				
 				if (!variantsPerItem.hasOwnProperty(item.id)){
 					variantsPerItem[item.id] = []
@@ -787,7 +817,7 @@ class PurchaseOrderForm extends HTMLElement {
 			
 			if(variant) {
 				
-				var description = this.itemDescriptions[variant.id];
+				var description = this.itemDescriptions[variant.id].description;
 
 				var selectedOptions = null;
 				if(matchingOptions && matchingOptions.length > 0){
@@ -824,7 +854,7 @@ class PurchaseOrderForm extends HTMLElement {
 		orderLines.forEach(orderLine =>{
 			if(orderLine.orderedItem.selectedOptions == null){
 				var selectedOptions = [];
-				var itemDescription = this.itemDescriptions[orderLine.orderedItem.id];
+				var itemDescription = this.itemDescriptions[orderLine.orderedItem.id].description;
 				if(itemDescription.optionSets !== "undefined" && itemDescription.optionSets !== null){
 					itemDescription.optionSets.forEach(optionSet => {
 						var selectedInput = this.querySelector('[data-itemid="' + orderLine.orderedItem.id + '"][data-optionsetid="' + optionSet.id + '"]');
@@ -856,6 +886,10 @@ class PurchaseOrderForm extends HTMLElement {
 		else if (deliveryType == "HomeDelivery"){
 			return "Thuis levering"
 		}
+	}
+
+	round(number){
+		return Math.round((number + Number.EPSILON) * 100) / 100;
 	}
 }
 
