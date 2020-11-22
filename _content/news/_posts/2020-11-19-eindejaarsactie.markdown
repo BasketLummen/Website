@@ -13,12 +13,12 @@ modules:
 
 Met de eindejaarsdagen in zicht, sluiten we binnenkort met zijn allen een bijzonder bizar jaar af. Wij geloven alvast in een kleinschalig knallend feestje. Iedereen in zijn of haar kot. Gezellig tafelend om er het beste van te maken. En vooral: plannen smeden om in 2021 - eens we dat stomme virus de baas zijn - ons sociaal leven weer op te pakken.
 
-Maar eerst nog 2020 vaarwel zeggen. En naar goede gewoonte bieden we vanuit Baskebalclub Lummen weer een smakelijk assortiment kwaliteitswijnen en ander lekkers aan. Deze keer werken we samen met ad Bibendum uit Sint-Truiden, De Kaarskesprocessie Leonidas uit Lummen en Ekofib uit Antwerpen. 
+Maar eerst nog 2020 vaarwel zeggen. En naar goede gewoonte bieden we vanuit Basketbalclub Lummen weer een smakelijk assortiment kwaliteitswijnen en ander lekkers aan. Deze keer werken we samen met ad Bibendum uit Sint-Truiden, De Kaarskesprocessie Leonidas uit Lummen en Ekofib uit Antwerpen. 
 
 Zij hebben voor ons een mooi aanbod samengesteld waarmee we de eindejaarsdagen toch nog gezellig kunnen maken.
 
 * Enerzijds zullen de smaakpapillen van elke wijn-, cava- en champagneliefhebber geprikkeld worden door de wijnen van ad Bibendum. In [deze folder](/news/downloads/eindejaarsactie-2020-ad-bibendum.pdf) vind je een volledig overzicht terug met een woordje uitleg én enkele foodpairing tips bij elke fles.
-* Als dessert, of stiekem als tussendoortje, hebben we opnieuw heerlijke Leonidas pralines in aanbod. Niemand kan weerstaan aan de beroemde Witte Manon praline. De heerlijke roomboter met koffiesmaak op een bedje van praliné, omhuld met witte chocolade, maken deze praline legendarisch. Hou je toch van wat meer afwisseling, dan vind je die zeker in een doosje gemengde pralines.
+* Als dessert, of stiekem tussen door, hebben we opnieuw heerlijke Leonidas pralines in aanbod. Niemand kan weerstaan aan de beroemde Witte Manon praline. De heerlijke roomboter met koffiesmaak op een bedje van praliné, omhuld met witte chocolade, maken deze praline legendarisch. Hou je toch van wat meer afwisseling, dan vind je die zeker in een doosje gemengde pralines.
 * Na de maaltijd zullen we het ook nog lekker gezellig maken met de lekker warme en comfortabele bamboe sokken van Ekofib. Deze zijn one size fits all (zowel voor hem als haar), anti geur, anti alergisch en werken vocht regulerend. Gezelligheid gegarandeerd dus.
 
 ### Hoe bestellen
