@@ -34,7 +34,18 @@ class PurchaseOrderPdf extends HTMLElement {
 
         if(confirmation.deliveryExpectations && confirmation.deliveryExpectations.deliveryType && confirmation.deliveryExpectations.expectedDeliveryDateRange){          
 
-            var key = "delivery_instructions_" + confirmation.deliveryExpectations.deliveryType.toLowerCase();
+            var key = "welcome_message";
+
+            if(sale.confirmationMessage.textParts[key]){
+
+                var start = new Date(confirmation.deliveryExpectations.expectedDeliveryDateRange.start);
+                var end = new Date(confirmation.deliveryExpectations.expectedDeliveryDateRange.end);
+
+                var instructions = this.format(sale.confirmationMessage.textParts[key], start.toLocaleTimeString("nl-BE", { hour: '2-digit', minute: '2-digit'}), end.toLocaleTimeString("nl-BE", { hour: '2-digit', minute: '2-digit'}));
+                sale.confirmationMessage.textParts["welcome_message"] = instructions;
+            } 
+
+            key = "delivery_instructions_" + confirmation.deliveryExpectations.deliveryType.toLowerCase();
 
             if(sale.confirmationMessage.textParts[key]){
 
