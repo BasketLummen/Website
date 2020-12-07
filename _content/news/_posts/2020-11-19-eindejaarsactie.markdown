@@ -27,6 +27,8 @@ Bestel je voor privé gebruik? Vul dan gewoon onderstaande bestel formulier in o
 
 Bestel je voor zakelijk gebruik, bvb als relatiegeschenk, en heb je een factuur nodig? Stuur dan je bestelling per email naar [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
 
+Je kan bestellen tot en met Maandag 14 December, nadien zijn bestellingen echt niet meer mogelijk.
+
 ### Afhaal moment
 
 We voorzien opnieuw een corona proof afhaal moment op zaterdag 19 December tussen 10 en 12u. Dit is het weekend voor Kerstmis zodat de pralines nog lekker vers zijn tijdens de feestdagen. Dit afhaal moment zal opnieuw het protocol volgen dat we bij de afhaal eetdag gebruikt hebben. Print dus de bevestiging van je bestelling af en kom dan met de wagen naar het afhaalpunt aan sporthal De Vijfsprong tussen 10 en 12u om je bestelling op te pikken.
