@@ -27,7 +27,7 @@ Bestel je voor privé gebruik? Vul dan gewoon onderstaande bestel formulier in o
 
 Bestel je voor zakelijk gebruik, bvb als relatiegeschenk, en heb je een factuur nodig? Stuur dan je bestelling per email naar [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
 
-Je kan bestellen tot en met Maandag 14 December, nadien zijn bestellingen echt niet meer mogelijk.
+Je kan bestellen tot 16 December, nadien zijn bestellingen echt niet meer mogelijk.
 
 ### Afhaal moment
 
