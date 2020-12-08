@@ -20,15 +20,15 @@ STARS
     
     Game Situations 1 en 2 juli 2020 in Zonhoven
     
-    Shooting        2 en 3 november 2020 in Zonhoven
+    Shooting        2 en 3 november 2020 in Zonhoven (geannuleerd)
 
 FROS
 
     Easter          6 tot 10 april 2020 in Neerpelt (intern met USA coach Ronny Mc Collum)
 
-    Summer          10 tot 14 augustus 2020 in Zonhoven (extern met USA coach Cal Boyd/Bryan Galuski)
+    Summer          10 tot 14 augustus 2020 in Zonhoven (extern met USA coach Cal Boyd/Bryan Galuski) (geannuleerd)
 
-    Xmas            21, 22 en 23 december 2020 in Kuringen en Zonhoven of Lummen
+    Xmas            21, 22 en 23 december 2020 in Kuringen en Zonhoven of Lummen (geannuleerd)
 
 
 ### Inschrijven
