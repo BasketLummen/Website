@@ -15,7 +15,7 @@ Maar niet getroost, Basket Lummen zou Basket Lummen niet zijn, mochten we naar o
 
 ### Livestream
 
-Via deze pagina kan u zaterdag 2 januari om 19u30 de wedstrijd tegen Sparta Laarne live volgen. 
+Via deze pagina zal u zaterdag 2 januari om 19u30 de wedstrijd tegen Sparta Laarne live kunnen volgen. 
 
 Inderdaad, 19u30 want met de nachtklok moeten we onze bezoekers de tijd geven om tijdig terug thuis te geraken. 
 
