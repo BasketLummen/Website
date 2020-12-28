@@ -11,7 +11,7 @@ We zijn blij om mogen aan te kondigen dat onze Athena's Lummen op zaterdag 2 jan
 
 Samen met de andere ploegen van TDW1 volgen zij een strikt schema van wekelijkse testen en trainingen binnen hun bubbel. Dit laat toe om de wedstrijden in TDW1 momenteel achter gesloten deuren te spelen.
 
-Maar niet getroost, Basket Lummen zou Basket Lummen niet zijn, mochten we naar onze supporters toe hiervoor geen oplossing gevonden hebben.
+Maar niet getreurd, Basket Lummen zou Basket Lummen niet zijn, mochten we naar onze supporters toe hiervoor geen oplossing gevonden hebben.
 
 ### Livestream
 
