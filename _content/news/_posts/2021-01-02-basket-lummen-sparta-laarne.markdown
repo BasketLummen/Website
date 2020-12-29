@@ -20,3 +20,5 @@ Via deze pagina zal u zaterdag 2 januari om 19u30 de wedstrijd tegen Sparta Laar
 Inderdaad, 19u30 want met de nachtklok moeten we onze bezoekers de tijd geven om tijdig terug thuis te geraken. 
 
 Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de wedstrijd Athena's Lummen - Sparta Laarne. Een betere manier om 2021 aan te vatten is er niet!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UC51QJlYeufZRnWidFfYY6bQ" frameborder="0" allowfullscreen></iframe>
