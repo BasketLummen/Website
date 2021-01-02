@@ -6,7 +6,7 @@ description: We zijn blij om mogen aan te kondigen dat onze Athena's Lummen op z
 cover: /news/img/athenas-2020.jpg
 permalink: /news/2021-01-02-basket-lummen-sparta-laarne/
 ---
-<!--
+
 We zijn blij om mogen aan te kondigen dat onze Athena's Lummen op zaterdag 2 januari terug starten met de competitie.
 
 Samen met de andere ploegen van TDW1 volgen zij een strikt schema van wekelijkse testen en trainingen binnen hun bubbel. Dit laat toe om de wedstrijden in TDW1 momenteel achter gesloten deuren te spelen.
@@ -15,12 +15,20 @@ Maar niet getreurd, Basket Lummen zou Basket Lummen niet zijn, mochten we naar o
 
 ### Livestream
 
+Je kan de livestream rechtstreeks volgen via het Youtube kanaal van Athena's Lummen
+
+https://www.youtube.com/watch?v=eEEzr2D8NuA
+
+
+<!--
 Via deze pagina zal u zaterdag 2 januari om 19u30 de wedstrijd tegen Sparta Laarne live kunnen volgen. 
 
 Inderdaad, 19u30 want met de nachtklok moeten we onze bezoekers de tijd geven om tijdig terug thuis te geraken. 
 
-Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de wedstrijd Athena's Lummen - Sparta Laarne. Een betere manier om 2021 aan te vatten is er niet!-->
+Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de wedstrijd Athena's Lummen - Sparta Laarne. Een betere manier om 2021 aan te vatten is er niet!
+-->
 
+<!-- 
 <style>
 .videoWrapper {
   position: relative;
@@ -41,5 +49,5 @@ Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de w
 
 <div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
     <iframe width="560" height="349" src="https://www.youtube.com/embed/live_stream?channel=UC51QJlYeufZRnWidFfYY6bQ&rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
+</div> -->
 
