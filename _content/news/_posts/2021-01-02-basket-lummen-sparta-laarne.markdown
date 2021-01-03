@@ -15,20 +15,14 @@ Maar niet getreurd, Basket Lummen zou Basket Lummen niet zijn, mochten we naar o
 
 ### Livestream
 
-Je kan de livestream rechtstreeks volgen via het Youtube kanaal van Athena's Lummen
-
-https://www.youtube.com/watch?v=eEEzr2D8NuA
-
-
-<!--
 Via deze pagina zal u zaterdag 2 januari om 19u30 de wedstrijd tegen Sparta Laarne live kunnen volgen. 
 
 Inderdaad, 19u30 want met de nachtklok moeten we onze bezoekers de tijd geven om tijdig terug thuis te geraken. 
 
 Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de wedstrijd Athena's Lummen - Sparta Laarne. Een betere manier om 2021 aan te vatten is er niet!
--->
 
-<!-- 
+### Herbekijk de wedstrijd
+
 <style>
 .videoWrapper {
   position: relative;
@@ -48,6 +42,14 @@ Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de w
 </style>
 
 <div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
+    <iframe width="560" height="349" src="https://www.youtube.com/embed/eEEzr2D8NuA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
+    <iframe width="560" height="349" src="https://www.youtube.com/embed/o7TIdiD9BVQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- <div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
     <iframe width="560" height="349" src="https://www.youtube.com/embed/live_stream?channel=UC51QJlYeufZRnWidFfYY6bQ&rel=0" frameborder="0" allowfullscreen></iframe>
 </div> -->
 
