@@ -45,10 +45,6 @@ Dus noteer zaterdag 2 januari in je agenda en kijk samen met je bubbel naar de w
     <iframe width="560" height="349" src="https://www.youtube.com/embed/eEEzr2D8NuA?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
-    <iframe width="560" height="349" src="https://www.youtube.com/embed/o7TIdiD9BVQ?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
 <!-- <div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
     <iframe width="560" height="349" src="https://www.youtube.com/embed/live_stream?channel=UC51QJlYeufZRnWidFfYY6bQ&rel=0" frameborder="0" allowfullscreen></iframe>
 </div> -->
