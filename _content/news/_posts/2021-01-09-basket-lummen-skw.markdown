@@ -11,8 +11,9 @@ Nu zaterdag nemen onze Athenas het op tegen BBC SKW. Met een aantal Belgian Cats
 
 Let wel, deze keer is de wedstrijd om 20u30! 
 
-### Livestream
+### Herbekijk de wedstrijd
 
 <div class="videoWrapper" style="--aspect-ratio: 9 / 16;">
-    <iframe width="560" height="349" src="https://www.youtube.com/embed/live_stream?channel=UC51QJlYeufZRnWidFfYY6bQ&rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="349" src="https://www.youtube.com/watch?v=kbauoV3jy3E" frameborder="0" allowfullscreen></iframe>
 </div>
+
