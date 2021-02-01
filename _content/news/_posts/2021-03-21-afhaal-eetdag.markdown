@@ -10,26 +10,13 @@ modules:
   - clubmanagement.fundraising.sales.app
 ---
 
-TODO
+### Afhaal pastadag
 
-<!--
-De verkoop is nu gesloten, er kunnen geen nieuwe bestellingen meer geplaatst worden.
+Omwille van de coronamaatregelen is het voor de club niet mogelijk het traditionele mosselfeest te organiseren. 
 
-**Heel hartelijk bedankt alvast voor al de bestellingen!**
+Daarom hebben we beslist om een afhaal pastadag te organizeren. Dit keer werken we samen met La Passione uit Bolderberg.
 
-Vergeet niet uw bestellingen af te komen halen op **11 november 2020 tussen 09u00 en 12u00**, aan sporthal De Vijfsprong, Sportweg 8 Lummen.
-
-### Afhaal eetdag
-
-Omwille van de coronamaatregelen is het voor de club niet mogelijk om de traditionele eetdag te organiseren. Wij hopen dat u dit kan begrijpen.
-
-We willen toch iedereen de kans geven om in zijn of haar bubbel lekker te kunnen eten en tegelijkertijd de werking van onze club te steunen.
-
-Onnodig om te zeggen dat we jullie steun keihard nodig hebben om het seizoen door te geraken.
-
-We organiseren daarom onze eerste afhaal-eetdag op woensdag 11 november 2020.
-
-Afhaalmoment: **Van 9u tot 12u aan sporthal De Vijfsprong, Sportweg 8 Lummen**
+Het afhaalmoment zal plaatsvinden : **Op Zondag 21 maart 2021 van 9u tot 12u aan sporthal De Vijfsprong, Sportweg 8 Lummen**
 
 Je kan kiezen uit een 8-tal lekkere gerechten.
 
@@ -44,17 +31,15 @@ Je kan kiezen uit een 8-tal lekkere gerechten.
 
 Je kan kiezen uit volgende gerechten:
 
-- Spaghetti Bolognese **€9,00**
-- Macaroni met kaas en ham **€9,00**
-- Linguini met scamp **€11,00**
-- Vidée met puree **€10,00**
-- Balletjes in tomatensaus en puree **€10,00**
-- Hespenrolletjes met witloof en puree **€10,00**
-- Vispannetje met puree **€11,00**
-- Schelvishaasje gestoofde prei puree **€11,00**
-- Vegetarische wok **€10,00**
-- Tomatensoep met balletjes (1L) **€5,00**
-- Aspergeroomsoep (1L) **€5,00**
+- Spaghetti Bolognese **€10,00**
+- Spaghetti carbonara **€10,00**
+- Lasagna bolognese **€10,00**
+- Veggie Lasagna **€10,00**
+- Koninginnehapje **€11,00**
+- Stoofvlees met puree **€11,00**
+- Tomatensoep met balletjes **€7,00**
+- Chocomousse **€4,00**
+- Tiramisu **€4,00**
 
 ### Enkel online betaling
 
@@ -62,9 +47,9 @@ Cash betalingen zijn niet mogelijk. Na het ingeven van je bestelling kan je beta
 
 ### Opgelet!
 
-Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In tegenstelling tot bij onze klassieke eetdagen zijn latere bestellingen echt **NIET** mogelijk.
+Bestellingen moeten uiterlijk voor **woensdag 17 maart 2021** binnen zijn. In tegenstelling tot bij onze klassieke eetdagen zijn latere bestellingen echt **NIET** mogelijk.
 
-<clubmgmt-purchase-order-wizard sale-id="be11416f-e7bb-41f0-92c0-5df34e34fca8"></clubmgmt-purchase-order-wizard>
+<clubmgmt-purchase-order-wizard sale-id="2360899d-110e-4c0a-9b4e-bedd524786f4"></clubmgmt-purchase-order-wizard>
 
 <template id="clubmgmt-purchase-order-form-template">
   <form class="responsive-form">
@@ -104,7 +89,7 @@ Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In 
       <tbody>
         <tr>
           <td style="vertical-align: top"><label for="comment">Opmerking</label></td>
-          <td><textarea id="comment" name="comment" rows="4" style="width: initial" placeholder="Ga je bij iemand leveren? Noteer dan hier voor wie de bestelling bestemd is."></textarea></td>
+          <td><textarea id="comment" name="comment" rows="4" style="width: initial" placeholder="Ga je bij iemand leveren? Extra wensen? Noteer het dan hier."></textarea></td>
         </tr> 
       </tbody>
       <tbody> 
@@ -145,6 +130,13 @@ Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In 
     <tr>
         <td class="label-holder"><label></label></td>
         <td class="input-holder"></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-collection-name-template">
+    <tr>
+        <td></td>
+        <td><label class="collection-name"></label></td>
     </tr>
 </template>
 
@@ -220,7 +212,7 @@ Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In 
       <table>
         <tr>
           <td colspan="2" class="align-left">
-              We verwelkomen je op 11 november 2020 aan de sporthal van Lummen tussen 9u en 12u.
+              We verwelkomen je op zondag 21 maart 2021 aan de sporthal van Lummen tussen 9u en 12u om je bestelling af te halen.
               Je kan je bestelling <a class="pdf-link" href="/order/confirmation/">hier</a> afdrukken.
           </td>
         </tr>
@@ -252,7 +244,7 @@ Bestellingen moeten uiterlijk voor **woensdag 4 november 2020** binnen zijn. In 
     </fieldset>
   </form>
 </template>
--->
+
 <!-- payment step -->
 
 <template id="clubmgmt-purchase-order-payment-template">
