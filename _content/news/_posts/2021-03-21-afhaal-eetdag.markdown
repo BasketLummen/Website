@@ -91,7 +91,7 @@ Bestellingen moeten uiterlijk voor **woensdag 17 maart 2021** binnen zijn. In te
       <tbody>
         <tr>
           <td style="vertical-align: top"><label for="comment">Opmerking</label></td>
-          <td><textarea id="comment" name="comment" rows="4" style="width: initial" placeholder="Ga je bij iemand leveren? Extra wensen? Noteer het dan hier."></textarea></td>
+          <td><textarea id="comment" name="comment" rows="4" style="width: initial" placeholder="Ga je bij iemand leveren? Noteer het dan hier."></textarea></td>
         </tr> 
       </tbody>
       <tbody> 
