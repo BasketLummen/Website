@@ -5,6 +5,7 @@ title:  "21 Maart 2021: Afhaal Pastadag"
 date:   2021-01-29 00:00:00
 description: In plaats van ons traditioneel mosselfees organizeren we ditmaal een, corona-proof, pastadag op 21 Maart 2021
 permalink: /news/2021-03-21-afhaal-eetdag/
+cover: /news/img/2021-03-21-afhaal-eetdag.jpg
 modules:
   - dish.shell.monitoring.applicationinsights.app
   - clubmanagement.payments.app
