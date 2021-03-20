@@ -12,6 +12,8 @@ modules:
   - clubmanagement.fundraising.sales.app
 ---
 
+**Er zijn momenteel problemen bij onze betaalprovider waardoor online betalingen mogelijk niet bevestigd kunnen worden. Als alternatief voor de online betaling mag je het bedrag ook overschrijven po rekening van de club: BE16 3630 4262 5274 met vermelding van je voor en achternaam.**
+
 ### Afhaal pastadag
 
 Omwille van de coronamaatregelen is het voor de club niet mogelijk het traditionele mosselfeest te organiseren. 
