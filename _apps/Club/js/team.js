@@ -84,12 +84,12 @@ var renderTeam = function(vblTeam, team, profiles){
     $("#link-calendar").attr('href', '/teams/calendar/?' + qs);
     $("#link-results").attr('href', '/teams/results/?' + qs);
 
-    if(team != null){
-        $("#team-name").text(team.groupName);               
-    }
-    else if(vblTeam != null){
-        $("#team-name").text(vblTeam.naam);
-    }
+    // if(team != null){
+    //     $("#team-name").text(team.groupName);               
+    // }
+    // else if(vblTeam != null){
+    //     $("#team-name").text(vblTeam.naam);
+    // }
     
     var imgurl = null;
     var fallbackimgurl = null;

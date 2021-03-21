@@ -5,12 +5,16 @@ description: Basket Lummen
 keywords: Basket, Lummen, Team
 custom_js:
 - team
+modules:
+  - dish.shell.monitoring.applicationinsights.app
+  - clubmanagement.organization.public.app
+  - startup
 ---
 
 <div id="team-photo" class="team-photo">
 </div>
 <div class="container content">  
-     <h1 id="team-name"></h1> 
+     <h1><organization-name data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></organization-name> - <group-name data-group-querystring-parameter="teamid" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></group-name></h1> 
     <div class="loading centered-content"><img src="/img/loader.gif" /></div>
     <div id="team-dashboard" class="dashboard">
         <div class="members pane medium">

@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "clubmanagement.orderbooking": "npm:@messagehandler/clubmanagement.orderbooking.public",
-    "clubmanagement.payments": "npm:@messagehandler/clubmanagement.payments.public"
+    "clubmanagement.payments": "npm:@messagehandler/clubmanagement.payments.public",
+    "clubmanagement.organization": "npm:@messagehandler/clubmanagement.organization.public"
   }
 }
