@@ -6,8 +6,10 @@
   "author": "Yves Goeleven <yves@goeleven.com>",
   "license": "MIT",
   "dependencies": {
-    "clubmanagement.orderbooking": "npm:@messagehandler/clubmanagement.orderbooking.public",
-    "clubmanagement.payments": "npm:@messagehandler/clubmanagement.payments.public",
-    "clubmanagement.organization": "npm:@messagehandler/clubmanagement.organization.public"
+    "clubmanagement.orderbooking.public": "npm:@messagehandler/clubmanagement.orderbooking.public",
+    "clubmanagement.organization.public": "npm:@messagehandler/clubmanagement.organization.public",
+    "clubmanagement.payments.public": "npm:@messagehandler/clubmanagement.payments.public",
+    "clubmanagement.profile.public": "npm:@messagehandler/clubmanagement.profile.public",
+    "clubmanagement.roster.public": "npm:@messagehandler/clubmanagement.roster.public"
   }
 }

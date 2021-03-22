@@ -68,7 +68,7 @@ repository.pastMatches(vblteamid, function(match){
 
 };
 
-var renderTeam = function(vblTeam, team, profiles){
+var renderStandings = function(vblTeam){
       
     var qs = null;
     if(teamid != null){
@@ -83,70 +83,7 @@ var renderTeam = function(vblTeam, team, profiles){
 
     $("#link-calendar").attr('href', '/teams/calendar/?' + qs);
     $("#link-results").attr('href', '/teams/results/?' + qs);
-
-    // if(team != null){
-    //     $("#team-name").text(team.groupName);               
-    // }
-    // else if(vblTeam != null){
-    //     $("#team-name").text(vblTeam.naam);
-    // }
-    
-    var imgurl = null;
-    var fallbackimgurl = null;
-    if(team != null){
-        imgurl = "url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg')";        
-    }
-    fallbackimgurl = "url('/img/team_placeholder.png')";
-
-    var combined = null;
-    if(imgurl){
-        combined = imgurl;
-    }
-    if(fallbackimgurl){
-        if(combined){
-            combined += ", " + fallbackimgurl;
-        }
-        else{
-            combined = fallbackimgurl;
-        }
-    }
-    combined += ";";
-    
-    $("#team-photo").attr("style", "background: " + combined +  " background-repeat: no-repeat; background-position: center top; background-size: cover;"); 
-
-    if(team != null)
-    {      
-        team.participations.forEach(function(p){
-            var from = p.from != null ? new Date(p.from) :  null;
-            var to = p.to != null ? new Date(p.to) :  null;
-            if( from != null && from > visualDate || to != null && to <= visualDate ) return;
-
-            var profile = profiles.filter(function(pr){ return pr.id == p.contactId; })[0];
-
-            var contactName = (profile.publicShape.includeFirstName ? profile.firstName : "") +  (profile.publicShape.includeName ? " " + profile.name : "");
-            
-            if(p.roleName == "Player"){
-                var div = $.template("#player-template",
-                {
-                    name: contactName,
-                    // imgurl: '/img/members/' + pic +  '.jpg'        
-                    imgscript: "background: " + (profile.publicShape.includePhoto ? "url('" + clubmgmt.teamspecificprofileimage(p.contactId, team.groupId) + "'), url('" + clubmgmt.profileimage(p.contactId) + "')," : "") + " url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"
-                });
-                $(".players .tiles").append(div); 
-            }
-            else if(p.roleName == "Head coach" || p.roleName == "Assistent coach" || p.roleName == "Shooting Coach" || p.roleName == "Physical coach" || p.roleName == "Team support manager" || p.roleName == "Physio"){
-                var div = $.template("#staff-template",
-                {
-                    name: contactName,
-                    role: p.roleName,
-                    // imgurl: '/img/members/' + pic +  '.jpg'   
-                    imgscript: "background: " + (profile.publicShape.includePhoto ? "url('" + clubmgmt.teamspecificprofileimage(p.contactId, team.groupId) + "'), url('" + clubmgmt.profileimage(p.contactId) + "')," : "") + " url('/img/icon.jpg');  background-repeat: no-repeat; background-position: center; background-size: cover;"       
-                });
-                $(".staff .tiles").append(div); 
-            }
-        });
-    }   
-
+ 
     if(vblTeam && vblTeam.poules){
         vblTeam.poules.forEach(function(p){
             if(p.naam.indexOf("OEFEN") === -1){
@@ -183,68 +120,28 @@ $.topic("repository.initialized").subscribe(function () {
     
     if(partnerOrganizationId == null){
 
-        clubmgmt.mapTeam(teamid, orgId, function(map){
-            if(map == null){            
-                clubmgmt.loadTeam(teamid, orgId, function(t){
-                    team = t;
-                    // team.participations.forEach(function(p){});
-                    var profileIds = team.participations.map(function(p){
-                        return p.contactId;
-                     });  
-                    
-                    clubmgmt.mapProfiles(profileIds, function(pr){
-                        profiles = pr;
-                        renderTeam(null, team, profiles);
-                        $(".loading").hide();
-                        $("#team-dashboard").css("visibility", "visible");  
-                    });                      
-                });                       
-            }
-            else{
+        clubmgmt.mapTeam(teamid, orgId, function(map){    
+            if(map){
                 vblteamid = map.referenceId;
-                clubmgmt.loadTeam(teamid, orgId, function(t){
-                    team = t;
-                    var profileIds = team.participations.map(function(p){
-                        return p.contactId;
-                     });  
-                    clubmgmt.mapProfiles(profileIds, function(pr){
-                        profiles = pr;
-                        repository.loadTeam(vblteamid);  
-                    });                            
-                });
-            }               
+                repository.loadTeam(vblteamid);  
+            }     
+            else{
+                $(".loading").hide();
+                $("#team-dashboard").css("visibility", "visible");
+            }           
         });
 
     }
     else{
         clubmgmt.mapTeam(teamid, partnerOrganizationId, function(map){
-            if(map == null){            
-                clubmgmt.loadTeam(teamid, partnerOrganizationId, function(t){
-                    team = t;
-                    var profileIds = team.participations.map(function(p){
-                        return p.contactId;
-                     });  
-                    clubmgmt.mapProfiles(profileIds, function(pr){
-                        profiles = pr;
-                        renderTeam(null, team, profiles);
-                        $(".loading").hide();
-                        $("#team-dashboard").css("visibility", "visible");  
-                    });        
-                });                        
-            }
-            else{
+            if(map){    
                 vblteamid = map.referenceId;
-                clubmgmt.loadTeam(teamid, partnerOrganizationId, function(t){
-                    team = t;
-                    var profileIds = team.participations.map(function(p){
-                        return p.contactId;
-                     });  
-                    clubmgmt.mapProfiles(profileIds, function(pr){
-                        profiles = pr;
-                        repository.loadTeam(vblteamid);  
-                    });         
-                });
+                repository.loadTeam(vblteamid); 
             }   
+            else{
+                $(".loading").hide();
+                $("#team-dashboard").css("visibility", "visible");
+            } 
         });
     } 
   }
@@ -255,16 +152,9 @@ $.topic("vbl.team.loaded").subscribe(function () {
     repository.loadMatches();
     repository.getTeam(vblteamid, function(vblteam){
 
-        renderTeam(vblteam, team, profiles);
+        renderStandings(vblteam, team, profiles);
         $(".loading").hide();
         $("#team-dashboard").css("visibility", "visible");
-
-       /* if(vblteam && vblteam.guid == vblteamid){
-          
-        }
-        if(!vblteam){
-            $("#team-name").text("Team niet gevonden");
-        }*/
     });     
 });
 

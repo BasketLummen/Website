@@ -51,46 +51,6 @@ var clubmgmt = new function(){
         });
     }
 
-
-    // this.mapTeam = function(groupId,callback){
-    //     self.getRequest(clubmgmtleaguebaseuri + leagueId + "/organizations/" + orgId + "/groups/" + groupId, function(mapping){
-    //         callback(mapping);           
-    //     });
-    // }
-
-    // this.mapPartnerTeam = function(groupId, partnershipId,callback){
-    //     self.getRequest(clubmgmtorgbaseuri + orgId + "/partnerships/" + partnershipId, function(partnership){
-    //         if(partnership == null){
-    //             callback(null);
-    //         }
-    //         else{
-    //             self.getRequest(clubmgmtleaguebaseuri + leagueId + "/organizations/" + partnership.counterPartnerId + "/groups/" + groupId, function(mapping){
-    //                 callback(mapping);           
-    //             });
-    //         }                     
-    //     });
-    // }
-
-    //{orgid}/groups/{groupid}
-    // this.loadTeam = function(groupId, callback){
-    //     self.getRequest(clubmgmtorgbaseuri + orgId + "/groups/" + groupId, function(group){
-    //         callback(group);           
-    //     });
-    // }
-
-    // this.loadPartnerTeam = function(partnershipId, groupId, callback){
-    //     self.getRequest(clubmgmtorgbaseuri + orgId + "/partnerships/" + partnershipId, function(partnership){
-    //         if(partnership == null){
-    //             callback(null);
-    //         }
-    //         else{
-    //             self.getRequest(clubmgmtorgbaseuri + partnership.counterPartnerId + "/partnerships/" + partnershipId + "/playerexchangeagreement/teams/" + groupId, function(group){
-    //                 callback(group);           
-    //             }); 
-    //         }                     
-    //     });
-    // }
-
     this.profileimage = function(profileId){
         return clubmgmtimgbase + profileId + "/" + profileId + ".jpg"; //?v=" + new Date();
     }

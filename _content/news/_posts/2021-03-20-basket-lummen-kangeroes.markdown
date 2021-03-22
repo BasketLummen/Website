@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Livestream Basket Lummen vs Boom"
+title:  "Livestream Basket Lummen vs Mechelen"
 date:   2021-03-20 19:00:00
 description: Nu zaterdag nemen onze Athenas het op tegen Mechelen
 cover: /news/img/2021-03-20-basket-lummen-kangeroes.png

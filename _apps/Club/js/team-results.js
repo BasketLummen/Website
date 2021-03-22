@@ -30,44 +30,6 @@ var renderPastMatches = function(){
   $("#result-table").show();
 };
 
-var renderTeam = function(vblTeam, team){
-      
-    if(team != null){
-        $("#team-name").text("Uitslagen -" + team.groupName);               
-    }
-    else if(vblTeam != null){
-        $("#team-name").text("Uitslagen -" + vblTeam.naam);
-    }
-    
-    var imgurl = null;
-    var fallbackimgurl = null;
-    if(team != null){
-        imgurl = "url('https://clubmgmt.blob.core.windows.net/groups/originals/" + team.groupId + ".jpg')";        
-    }
-    // if(vblTeam != null){       
-    //     var pic = vblTeam.naam.replace(/ +/g,".").toLowerCase();
-    //     fallbackimgurl = "url('/img/teams/" + pic +  ".jpg')"       
-    // }
-    fallbackimgurl = "url('/img/team_placeholder.png')";
-
-    var combined = null;
-    if(imgurl){
-        combined = imgurl;
-    }
-    if(fallbackimgurl){
-        if(combined){
-            combined += ", " + fallbackimgurl;
-        }
-        else{
-            combined = fallbackimgurl;
-        }
-    }
-    combined += ";";
-    
-    $("#team-photo").attr("style", "background: " + combined +  " background-repeat: no-repeat; background-position: center top; background-size: cover;");   
-};
-
-
 $.topic("repository.initialized").subscribe(function () {
     console.log("loading data");
      
@@ -80,19 +42,12 @@ $.topic("repository.initialized").subscribe(function () {
   
           clubmgmt.mapTeam(teamid, orgId, function(map){
               if(map == null){            
-                  clubmgmt.loadTeam(teamid, orgId, function(t){
-                      team = t;
-                      renderTeam(null, team);
-                      $(".loading").hide();
-                      $("#team-dashboard").css("visibility", "visible");     
-                  });                       
+                $(".loading").hide();
+                $("#team-dashboard").css("visibility", "visible");                       
               }
               else{
                   vblteamid = map.referenceId;
-                  clubmgmt.loadTeam(teamid, orgId, function(t){
-                      team = t;
-                      repository.loadTeam(vblteamid);         
-                  });
+                  repository.loadTeam(vblteamid);    
               }               
           });
   
@@ -100,19 +55,12 @@ $.topic("repository.initialized").subscribe(function () {
       else{
           clubmgmt.mapTeam(teamid, partnerOrganizationId, function(map){
               if(map == null){            
-                  clubmgmt.loadTeam(teamid, partnerOrganizationId, function(t){
-                      team = t;
-                      renderTeam(null, team);
-                      $(".loading").hide();
-                      $("#team-dashboard").css("visibility", "visible");     
-                  });                        
+                $(".loading").hide();
+                $("#team-dashboard").css("visibility", "visible");                        
               }
               else{
                   vblteamid = map.referenceId;
-                  clubmgmt.loadTeam(teamid, partnerOrganizationId, function(t){
-                      team = t;
-                      repository.loadTeam(vblteamid);         
-                  });
+                  repository.loadTeam(vblteamid); 
               }   
           });
       } 
@@ -124,12 +72,8 @@ $.topic("vbl.team.loaded").subscribe(function () {
     repository.loadMatches();
     repository.getTeam(vblteamid, function(vblteam){
         if(vblteam && vblteam.guid == vblteamid){
-           renderTeam(vblteam, team);
            $(".loading").hide();
            $("#team-dashboard").css("visibility", "visible");
-        }
-        if(!vblteam){
-            $("#team-name").text("Team niet gevonden");
         }
     });     
 });
