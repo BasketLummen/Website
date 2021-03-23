@@ -9,8 +9,6 @@ var getParameterByName = function (name, url) {
 }
 var vblteamid = getParameterByName("vblteamid");
 var teamid = getParameterByName("teamid");
-var partnerOrganizationId = getParameterByName("o");
-var team;
 var profiles;
 var visualDate = new Date();
 
@@ -77,9 +75,6 @@ var renderStandings = function(vblTeam){
     else if(vblteamid != null){
         qs = "vblteamid=" + vblteamid;   
     }
-    if(partnerOrganizationId != null)    {
-        qs += "&o=" + partnerOrganizationId;
-    }
 
     $("#link-calendar").attr('href', '/teams/calendar/?' + qs);
     $("#link-results").attr('href', '/teams/results/?' + qs);
@@ -118,32 +113,17 @@ $.topic("repository.initialized").subscribe(function () {
   }
   else if(teamid != null){   
     
-    if(partnerOrganizationId == null){
-
-        clubmgmt.mapTeam(teamid, orgId, function(map){    
-            if(map){
-                vblteamid = map.referenceId;
-                repository.loadTeam(vblteamid);  
-            }     
-            else{
-                $(".loading").hide();
-                $("#team-dashboard").css("visibility", "visible");
-            }           
-        });
-
-    }
-    else{
-        clubmgmt.mapTeam(teamid, partnerOrganizationId, function(map){
-            if(map){    
-                vblteamid = map.referenceId;
-                repository.loadTeam(vblteamid); 
-            }   
-            else{
-                $(".loading").hide();
-                $("#team-dashboard").css("visibility", "visible");
-            } 
-        });
-    } 
+    clubmgmt.mapTeam(teamid, orgId, function(map){    
+        if(map){
+            vblteamid = map.referenceId;
+            repository.loadTeam(vblteamid);  
+        }     
+        else{
+            $(".loading").hide();
+            $("#team-dashboard").css("visibility", "visible");
+        }           
+    });
+    
   }
  
 });
@@ -151,8 +131,7 @@ $.topic("repository.initialized").subscribe(function () {
 $.topic("vbl.team.loaded").subscribe(function () {
     repository.loadMatches();
     repository.getTeam(vblteamid, function(vblteam){
-
-        renderStandings(vblteam, team, profiles);
+        renderStandings(vblteam);
         $(".loading").hide();
         $("#team-dashboard").css("visibility", "visible");
     });     

@@ -30,7 +30,6 @@ var clubmgmt = new function(){
     }
     
     //"{leagueid}/organizations/{orgId}/groups/{groupId}"
-
     this.mapTeam = function(groupId, o,callback){
         self.getRequest(clubmgmtleaguebaseuri + leagueId + "/organizations/" + o + "/groups/" + groupId, function(mapping){
             callback(mapping);           

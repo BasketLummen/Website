@@ -9,7 +9,6 @@ var getParameterByName = function (name, url) {
 }
 var vblteamid = getParameterByName("vblteamid");
 var teamid = getParameterByName("teamid");
-var partnerOrganizationId = getParameterByName("o");
 var team;
 var visualDate = new Date();
 
@@ -38,32 +37,17 @@ $.topic("repository.initialized").subscribe(function () {
     }
     else if(teamid != null){   
       
-      if(partnerOrganizationId == null){
-  
-          clubmgmt.mapTeam(teamid, orgId, function(map){
-              if(map == null){            
-                $(".loading").hide();
-                $("#team-dashboard").css("visibility", "visible");                       
-              }
-              else{
-                  vblteamid = map.referenceId;
-                  repository.loadTeam(vblteamid);    
-              }               
-          });
-  
-      }
-      else{
-          clubmgmt.mapTeam(teamid, partnerOrganizationId, function(map){
-              if(map == null){            
-                $(".loading").hide();
-                $("#team-dashboard").css("visibility", "visible");                        
-              }
-              else{
-                  vblteamid = map.referenceId;
-                  repository.loadTeam(vblteamid); 
-              }   
-          });
-      } 
+      clubmgmt.mapTeam(teamid, orgId, function(map){
+        if(map == null){            
+          $(".loading").hide();
+          $("#team-dashboard").css("visibility", "visible");                       
+        }
+        else{
+            vblteamid = map.referenceId;
+            repository.loadTeam(vblteamid);    
+        }               
+    });
+      
     }
    
   });
