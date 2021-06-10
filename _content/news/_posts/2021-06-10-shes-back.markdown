@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "She's back, by She Got Game"
+date:   2021-06-10 18:00:00
+description: Schrijf je snel in
+cover: /news/img/shes-back-square.jpg
+permalink: /news/2021-06-10-shes-back/
+---
+
+![She's back](/news/img/shes-back.jpg)
+
+
