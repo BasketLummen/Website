@@ -639,11 +639,11 @@ class PurchaseOrderForm extends HTMLElement {
     }
 
 	async checkLimit(){
-		if(this.sale && this.sale.salesLimit){
+		if(this.sale && this.sale.saleLimit){
 		  var uri = `${salesConfig.bookingService}/api/orderbookings/${club.organizationId}/${this.sale.id}/checklimit`;
 
 		  var cmd = {
-			maximumQuantity: this.sale.salesLimit.maximumQuantity
+			maximumQuantity: this.sale.saleLimit.maximumQuantity
 		  };
   
 		  var response = await fetch(uri, {
