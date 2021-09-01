@@ -12,20 +12,72 @@ modules:
   - clubmanagement.fundraising.sales.app
 ---
 
-Guess who’s back, back again! Tie-Rock is BACK!
-
 Tie-Rock goes unplugged! coverband OUTBACK & Silk Stalkings zoals je ze nooit zag of hoorde: AKOESTISCH. 
 
 We sluiten de avond stevig af opnieuw met coverband OUTBACK maar dan zoals we ze echt kennen: HARD en LUID!
 
-Let op: Er zijn slechts 300 plaatsen beschikbaar. Enkel toegankelijk voor zij met een COVID Safe ticket!
+**Let op: Er zijn slechts 300 plaatsen beschikbaar!**
+
+Tickets kan je bestellen via het bestelformulier onderaan deze pagina.
+
+### Waar en wanneer gaat het door?
+
+Zaterdag 16 oktober 2021
+
+GCOC Oosterhof
+Dr. Vanderhoeydonckstraat 56, 3560 Lummen
+
+Doors: 20:00 uur
+
+<br />
+
+### Enkel toegankelijk met een COVID Safe ticket!
+
+Om de veiligheid en gezondheid van de aanwezigen te garanderen zullen we het Covid Safe Ticket inzetten. 
+
+**Welke documenten moet je meebrengen?**
+- een geldig ticket
+- je Covid Safe Ticket (niet van toepassing voor -12 jarigen)
+- je identiteitskaart
+
+Je mag deze documenten zowel digitaal op je smartphone als geprint op papier meenemen. Om wachttijden te vermijden vragen we je om deze drie documenten klaar te houden, zodat de controle vlot kan verlopen. Indien je één van deze documenten niet bij hebt, kunnen we je geen toegang verlenen tot het evenement.
+
+Voor je het Oosterhof betreedt zal je Covid Safe Ticket gescand worden. Bij het scannen van het certificaat moet ook een identiteitsdocument worden voorgelegd ter controle dat het certificaat op naam is van de persoon in kwestie.  Kinderen jonger dan 12 jaar mogen zonder bijkomende controle de zaal betreden.
+
+Tot deze controle is uitgevoerd, is het dragen van een mondmasker verplicht en moeten de afstandsregels met andere bubbels worden gerespecteerd. Eens je Covid Safe Ticket gecontroleerd is en geldig wordt bevonden, is het niet meer verplicht om een mondmasker te dragen en vervallen de afstandsregels. 
+
+#### Wat is een Covid Safe Ticket?
+
+Het Covid Safe Ticket is het COVID-certificaat dat je vindt in de [CovidSafeBE-app](https://www.vlaanderen.be/covid-certificaat/covidsafebe-app-mobiele-app-om-covid-certificaten-te-downloaden) (te downloaden in de App Store of via Google Play) en op websites zoals [Mijn Burgerprofiel](https://www.burgerprofiel.be/), [mijngezondheid.be](https://mijngezondheid.be/) of [MyHealthViewer](https://www.myhealthviewer.be/). Om certificaten digitaal op te vragen heb je jouw identiteitskaart, pincode en kaartlezer nodig óf een andere geactiveerde digitale sleutel (bv. itsme)
+
+Heb je geen smartphone of computer? Dan kan je je Covid Safe Ticket ook op papier verkrijgen via [Mijn Burgerprofiel](https://www.burgerprofiel.be/), [mijngezondheid.be](https://mijngezondheid.be/) of via 078 78 78 50. Je Covid Safe Ticket wordt dan via de post opgestuurd. Je moet wel rekening houden met een wachttijd tussen bestelling en ontvangst van 1 week.
+
+#### Wanneer is jouw Covid Safe Ticket geldig?
+
+- Als je minstens 2 weken (14 dagen) voor aanvang van het evenement volledig werd gevaccineerd. OF
+- Als  je over een negatief Corona-testcertificaat beschikt: max. 48 uur oud voor een PCR-test en max. 24 uur oud voor een antigeentest (bij een apotheker). OF
+- Als je maximum 6 maanden hersteld bent van COVID
+
+Stewards zullen de controle uitvoeren alvorens je het Oosterhof betreedt. De persoonsgegevens worden niet getoond, behalve naam, geboortedatum en QR code. Deze gegevens zullen ook niet bijgehouden worden.
+
+#### Kan men zich ter plaatse laten testen?
+
+Neen, we voorzien geen testlocatie.
+
+<br />
+
+Zonder geldig Covid Safe Ticket zal je dus ook geen toegang krijgen tot het evenement en je ticket zal ook niet worden terugbetaald.
+
+**We vragen met aandrang om thuis te blijven indien je ziek bent of symptomen van het virus vertoont.**
+
+<br />
 
 <clubmgmt-purchase-order-wizard sale-id="9ee04c2d-a0d7-4546-b442-8f3f31ebe333"></clubmgmt-purchase-order-wizard>
 
 <template id="clubmgmt-purchase-order-form-template">
   <form class="responsive-form">
     <fieldset>
-      <legend>Reserveer je tickets</legend>
+      <legend>Reserveer hier je tickets</legend>
     </fieldset>
   </form>
 </template>
