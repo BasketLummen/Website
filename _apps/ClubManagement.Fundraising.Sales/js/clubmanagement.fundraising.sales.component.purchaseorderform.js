@@ -13,6 +13,7 @@ class PurchaseOrderForm extends HTMLElement {
 		this.saleOpenTemplate = document.getElementById("clubmgmt-purchase-order-sale-open-template");
 		this.salePendingTemplate = document.getElementById("clubmgmt-purchase-order-sale-pending-template");
 		this.saleOverTemplate = document.getElementById("clubmgmt-purchase-order-sale-over-template");
+		this.soldOutTemplate = document.getElementById("clubmgmt-purchase-order-sold-out-template");
 		this.deliverySlotTemplate = document.getElementById("clubmgmt-purchase-order-delivery-slot-template");
 		this.deliveryLocationTemplate = document.getElementById("clubmgmt-purchase-order-delivery-location-template");
 		this.deliveryTypesTemplate = document.getElementById("clubmgmt-purchase-order-delivery-types-template");
@@ -56,6 +57,7 @@ class PurchaseOrderForm extends HTMLElement {
         this.context = JSON.parse(this.contextData);
 
         this.sale = await this.loadSale();
+		this.limit = await this.checkLimit();
 		this.catalogs = await this.loadCatalogs();
 
 		this.createIndexes();
@@ -85,6 +87,10 @@ class PurchaseOrderForm extends HTMLElement {
 		} else 
 		if(saleIsOver){
 			fieldset.append(this.saleOverTemplate.content.cloneNode(true));
+		}
+		else if(this.limit && this.limit.exceeded)
+		{
+			fieldset.append(this.soldOutTemplate.content.cloneNode(true));
 		}
 		else{
 			var openContent = this.saleOpenTemplate.content.cloneNode(true);
@@ -631,6 +637,26 @@ class PurchaseOrderForm extends HTMLElement {
         });
         return await request.json();
     }
+
+	async checkLimit(){
+		if(this.sale && this.sale.saleLimit){
+		  var uri = `${salesConfig.bookingService}/api/orderbookings/${club.organizationId}/${this.sale.id}/checklimit`;
+
+		  var cmd = {
+			maximumQuantity: this.sale.saleLimit.maximumQuantity
+		  };
+  
+		  var response = await fetch(uri, {
+			  method: "POST",
+			  mode: 'cors',
+			  headers: {
+				"Content-Type": "application/json"
+			  },
+			  body:  JSON.stringify(cmd)
+		  });
+		  return await response.json();
+		}
+	}
 
     async loadCatalogs(){
       if(this.sale && this.sale.items){

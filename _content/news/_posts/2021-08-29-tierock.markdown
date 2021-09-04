@@ -1,0 +1,292 @@
+---
+layout: post
+hidden: true
+title:  "16 Oktober 2021: Tie Rock Unplugged"
+date:   2021-08-29 00:00:00
+description: Tie-Rock goes unplugged! coverband OUTBACK & Silk Stalkings zoals je ze nooit zag of hoorde! AKOESTISCH. 
+permalink: /news/2021-08-29-tierock/
+cover: /news/img/2021-08-29-tierock.jpg
+modules:
+  - dish.shell.monitoring.applicationinsights.app
+  - clubmanagement.payments.public.app
+  - clubmanagement.fundraising.sales.app
+---
+
+Tie-Rock goes unplugged! coverband OUTBACK & Silk Stalkings zoals je ze nooit zag of hoorde: AKOESTISCH. 
+
+We sluiten de avond stevig af opnieuw met coverband OUTBACK maar dan zoals we ze echt kennen: HARD en LUID!
+
+**Let op: Er zijn slechts 300 plaatsen beschikbaar!**
+
+Tickets kan je bestellen via het bestelformulier onderaan deze pagina.
+
+### Waar en wanneer gaat het door?
+
+Zaterdag 16 oktober 2021
+
+GCOC Oosterhof
+Dr. Vanderhoeydonckstraat 56, 3560 Lummen
+
+Doors: 20:00 uur
+
+<br />
+
+### Enkel toegankelijk met een COVID Safe ticket!
+
+Om de veiligheid en gezondheid van de aanwezigen te garanderen zullen we het Covid Safe Ticket inzetten. 
+
+**Welke documenten moet je meebrengen?**
+- een geldig ticket
+- je Covid Safe Ticket (niet van toepassing voor -12 jarigen)
+- je identiteitskaart
+
+Je mag deze documenten zowel digitaal op je smartphone als geprint op papier meenemen. Om wachttijden te vermijden vragen we je om deze drie documenten klaar te houden, zodat de controle vlot kan verlopen. Indien je één van deze documenten niet bij hebt, kunnen we je geen toegang verlenen tot het evenement.
+
+Voor je het Oosterhof betreedt zal je Covid Safe Ticket gescand worden. Bij het scannen van het certificaat moet ook een identiteitsdocument worden voorgelegd ter controle dat het certificaat op naam is van de persoon in kwestie.  Kinderen jonger dan 12 jaar mogen zonder bijkomende controle de zaal betreden.
+
+Tot deze controle is uitgevoerd, is het dragen van een mondmasker verplicht en moeten de afstandsregels met andere bubbels worden gerespecteerd. Eens je Covid Safe Ticket gecontroleerd is en geldig wordt bevonden, is het niet meer verplicht om een mondmasker te dragen en vervallen de afstandsregels. 
+
+#### Wat is een Covid Safe Ticket?
+
+Het Covid Safe Ticket is het COVID-certificaat dat je vindt in de [CovidSafeBE-app](https://www.vlaanderen.be/covid-certificaat/covidsafebe-app-mobiele-app-om-covid-certificaten-te-downloaden) (te downloaden in de App Store of via Google Play) en op websites zoals [Mijn Burgerprofiel](https://www.burgerprofiel.be/), [mijngezondheid.be](https://mijngezondheid.be/) of [MyHealthViewer](https://www.myhealthviewer.be/). Om certificaten digitaal op te vragen heb je jouw identiteitskaart, pincode en kaartlezer nodig óf een andere geactiveerde digitale sleutel (bv. itsme)
+
+Heb je geen smartphone of computer? Dan kan je je Covid Safe Ticket ook op papier verkrijgen via [Mijn Burgerprofiel](https://www.burgerprofiel.be/), [mijngezondheid.be](https://mijngezondheid.be/) of via 078 78 78 50. Je Covid Safe Ticket wordt dan via de post opgestuurd. Je moet wel rekening houden met een wachttijd tussen bestelling en ontvangst van 1 week.
+
+#### Wanneer is jouw Covid Safe Ticket geldig?
+
+- Als je minstens 2 weken (14 dagen) voor aanvang van het evenement volledig werd gevaccineerd. OF
+- Als  je over een negatief Corona-testcertificaat beschikt: max. 48 uur oud voor een PCR-test en max. 24 uur oud voor een antigeentest (bij een apotheker). OF
+- Als je maximum 6 maanden hersteld bent van COVID
+
+Stewards zullen de controle uitvoeren alvorens je het Oosterhof betreedt. De persoonsgegevens worden niet getoond, behalve naam, geboortedatum en QR code. Deze gegevens zullen ook niet bijgehouden worden.
+
+#### Kan men zich ter plaatse laten testen?
+
+Neen, we voorzien geen testlocatie.
+
+<br />
+
+Zonder geldig Covid Safe Ticket zal je dus ook geen toegang krijgen tot het evenement en je ticket zal ook niet worden terugbetaald.
+
+**We vragen met aandrang om thuis te blijven indien je ziek bent of symptomen van het virus vertoont.**
+
+<br />
+
+<clubmgmt-purchase-order-wizard sale-id="9ee04c2d-a0d7-4546-b442-8f3f31ebe333"></clubmgmt-purchase-order-wizard>
+
+<template id="clubmgmt-purchase-order-form-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Reserveer hier je tickets</legend>
+    </fieldset>
+  </form>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-open-template">
+    <table>
+      <tbody>
+        <tr>
+          <td><label for="given-name">Voornaam</label></td>
+          <td><input type="text" id="given-name" name="given-name" placeholder="Vul je voornaam in..." required></input></td>
+        </tr>
+        <tr>
+          <td><label for="family-name">Familienaam</label></td>
+          <td><input type="text" id="family-name" name="family-name" placeholder="Vul je familienaam in..." required></input></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="text" id="email" name="email" placeholder="Vul je email in..."></input></td>
+        </tr>
+		    <tr>
+          <td><label for="telephone">Telefoon</label></td>
+          <td><input type="text" id="telephone" name="telephone" placeholder="Vul je telefoon in..."></input></td>
+        </tr>
+      </tbody>
+      <tbody id="offers"></tbody>
+      <tbody>    
+        <tr class="total-row">
+          <td><label>Te betalen</label></td>
+          <td><label id="price">€ 0</label></td>
+        </tr>   
+      </tbody>      
+      <!-- <tbody>
+        <tr>
+          <td style="vertical-align: top"><label for="comment">Opmerking</label></td>
+          <td><textarea id="comment" name="comment" rows="4" style="width: initial" placeholder="Ga je bij iemand leveren? Noteer het dan hier."></textarea></td>
+        </tr> 
+      </tbody> -->
+      <tbody> 
+        <tr>
+          <td><label for="sendConfirmation">Stuur me een bevestiging</label></td>
+          <td><input type="checkbox" id="sendConfirmation" name="sendConfirmation" checked></input> (vereist email)</td>
+        </tr>  
+      </tbody>
+      <tbody id="delivery-types" style="display: none"></tbody>
+      <tbody id="delivery-slots" style="display: none"></tbody>
+      <tbody id="delivery-location" style="display: none"></tbody>
+      <tbody>
+        <tr>
+          <td><label for="submit"></label></td>
+          <td><submit-button>Doorgaan naar betalen</submit-button></td>
+        </tr>
+      </tbody>        
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-pending-template">
+    <table>
+      <tr>
+        <td><label>Registratie gaat pas open op <span class="sale-from"></span></label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sale-over-template">
+    <table>
+      <tr>
+        <td><label>Registratie is afgelopen</label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-sold-out-template">
+    <table>
+      <tr>
+        <td><label>De tickets zijn reeds uitverkocht!</label></td>
+      </tr>
+    </table>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-template">
+    <tr>
+        <td class="label-holder"><label></label></td>
+        <td class="input-holder"></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-collection-name-template">
+    <tr>
+        <td></td>
+        <td><label class="collection-name"></label></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-label-template">
+    <label></label>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-number-template">
+    <input type="number" placeholder="0" min="0" />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-toggle-template">
+    <input />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-input-dropdown-template">
+    <select />
+</template>
+
+<template id="clubmgmt-purchase-order-offer-horizontal-container-template">
+    <div class="horizontal-container"></span>
+</template>
+
+<template id="clubmgmt-purchase-order-offer-option-label-template">
+    <span class="option-label"></span>
+</template>
+
+<template id="clubmgmt-purchase-order-delivery-types-template">
+    <tr>
+        <td><label>Levering</label></td>
+        <td><select id="delivery-types-selector" name="delivery-types-selector"></select></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-delivery-slot-template">
+    <tr>
+        <td></td>
+        <td><input type="radio" name="delivery"></input> <span class="slot-from"></span> tot <span class="slot-to"></span></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-delivery-location-template">
+    <tr>
+      <td><label for="addressLine1">Adres Lijn 1</label></td>
+      <td><input type="text" id="addressLine1" name="addressLine1" placeholder="Vul je adres in..." required></input></td>
+    </tr>
+    <tr>
+      <td><label for="addressLine2">Adres Lijn 2</label></td>
+      <td><input type="text" id="addressLine2" name="addressLine2" placeholder="Vul je adres in..."></input></td>
+    </tr>
+    <tr>
+      <td><label for="postcode">Postcode</label></td>
+      <td><input type="text" id="zipCode" name="zipCode" value="3560" disabled required></input></td>
+    </tr>
+    <tr>
+      <td><label for="city">Stad</label></td>
+      <td><input type="text" id="city" name="city" value="Lummen" disabled required></input></td>
+    </tr>
+    <tr>
+      <td><label for="stateProvince">Provincie</label></td>
+      <td><input type="text" id="stateProvince" name="stateProvince" value="Limburg" disabled required></input></td>
+    </tr>
+    <tr>
+      <td><label for="country">Land</label></td>
+      <td><input type="text" id="country" name="country" value="België" disabled required></input></td>
+    </tr>
+</template>
+
+<template id="clubmgmt-purchase-order-confirmation-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Bedankt voor je reservatie!</legend>
+      <table>
+        <tr>
+          <td colspan="2" class="align-left">
+              We verwelkomen je op zaterdag 16 oktober 2021 in het Oosterhof te Lummen.
+              Je kan je bevestiging <a class="pdf-link" href="/order/confirmation/">hier</a> afdrukken.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="align-left">
+            <button id="new">Nog meer tickets reserveren</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</template>
+
+<template id="clubmgmt-purchase-order-error-report-template">
+  <form class="responsive-form">
+    <fieldset>
+      <legend>Er is iets fout gegaan!</legend>
+      <table>
+        <tr>
+          <td colspan="2" class="align-left error-message">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="align-left">
+            <button id="new">Opnieuw reserveren</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</template>
+
+<!-- payment step -->
+
+<template id="clubmgmt-purchase-order-payment-template">
+
+  <form class="responsive-form" id="orderPayment">
+    <fieldset>
+      <legend>Kies een betaal methode</legend>
+      <payment-method-selector id="paymentMethodSelector">
+      </payment-method-selector>
+      <submit-button>Betalen</submit-button>
+    </fieldset>
+  </form>
+  
+</template>
