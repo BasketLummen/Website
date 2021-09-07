@@ -5,7 +5,7 @@ description: Basket Lummen
 keywords: Basket, Lummen, Trainingsuren
 ---
 
-## Trainingsuren seizoen 2020-2021
+## Trainingsuren seizoen 2021-202
 
-De trainingsuren voor dit seizoen [vind je hier](/training/2020/trainingsuren-2020-2021.xlsx).
+De trainingsuren voor dit seizoen [vind je hier](/training/2021/trainingsuren-2021-2022.xlsx).
 
