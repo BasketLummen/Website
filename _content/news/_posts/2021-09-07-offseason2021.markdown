@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Offseason najaar 2021"
-cover: /news/img/2021-09-07-offseason2021a.jpg
+cover: /news/img/2021-09-07-offseason2021a.JPG
 date:   2021-09-07 10:00:00
 description: Breng je basketskills naar een hoger niveau!
 permalink: /news/2021-09-07-offseason2021/
@@ -42,6 +42,4 @@ Wil je graag meedoen, schrijf je dan tijdig in via deze link:
 
 https://www.offseason.be/contact
 
-![Offseason2021](/news/img/2021-09-07-offseason2021b.jpg)
-
-
+![Offseason2021](/news/img/2021-09-07-offseason2021b.JPG)
