@@ -11,6 +11,8 @@
 	height: 8vw;
 	min-height: 50px; /*same as navbar*/
 	min-width: 50px;
+	max-width: 200px;
+    max-height: 200px;
 }
 @media (min-width: 768px) {
 	.navbar {
