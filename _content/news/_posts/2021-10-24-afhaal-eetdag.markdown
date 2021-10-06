@@ -49,13 +49,13 @@ Je kan kiezen uit volgende gerechten:
 
 Na het ingeven van je bestelling kan je betalen via Bancontact of via je krediet kaart. Moest je problemen ondervinden met je online betaling, dan kan je contact opnemen met [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
 
-Verder kan je ook terug cash betalen door het geld aan één van onze coaches of bestuursleden te bezorgen; of je kan het het geld overschrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling.
+Verder kan je ook terug cash betalen door het geld aan één van onze coaches of bestuursleden te bezorgen; of je kan het geld overschrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling.
 
 ### Opgelet!
 
 Bestellingen moeten uiterlijk op **woensdag 20 oktober 2021** binnen zijn. In tegenstelling tot bij klassieke eetdagen zijn latere bestellingen echt **NIET** mogelijk. 
 
-Enkel betaalde bestellingen zullen aanvaard worden. 
+Enkel betaalde bestellingen zullen geleverd worden. 
 
 <clubmgmt-purchase-order-wizard sale-id="054cb0f4-5894-4732-9f68-07d90a08e2ce"></clubmgmt-purchase-order-wizard>
 
@@ -268,8 +268,29 @@ Enkel betaalde bestellingen zullen aanvaard worden.
       <legend>Kies een betaal methode</legend>
       <payment-method-selector id="paymentMethodSelector">
       </payment-method-selector>
-      <submit-button>Betalen</submit-button>
+      <submit-button>Doorgaan</submit-button>
     </fieldset>
   </form>
   
+</template>
+
+<template id="clubmgmt-payment-method-cash-form-template">
+  <div class="table">	
+      <div class="table-row">
+        <div class="table-cell">
+          Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.
+        </div>
+        <div class="table-cell"></div>
+      </div>    
+  </div>
+</template>
+<template id="clubmgmt-payment-method-wiretransfer-form-template">
+  <div class="table">	
+		<div class="table-row">
+			<div class="table-cell">
+				 Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling
+			</div>	
+      <div class="table-cell"></div>
+		</div>
+	</div>
 </template>
