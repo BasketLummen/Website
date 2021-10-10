@@ -12,8 +12,6 @@ modules:
   - clubmanagement.fundraising.sales.app
 ---
 
-**De verkoop voor de afhaal pastadag is nog niet open.**
-
 ### Afhaal restaurantdag
 
 Deze actie werd mede mogelijk gemaakt door restaurant La Passione uit Bolderberg.
