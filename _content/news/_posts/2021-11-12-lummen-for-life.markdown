@@ -3,12 +3,14 @@ layout: post
 hidden: false
 title:  "Lummen For Life"
 date:   2021-10-29 00:00:00
-description: Covid richtlijnen
+description: Lummen for life is geannuleerd
 permalink: /news/2021-11-12-lummen-for-life/
 cover: /news/img/2021-lummen-for-life.jpg
 ---
 
-Mogen we met de club een "warme" oproep doen?
+**Jammer genoeg moeten we jullie melden dat gemeente Lummen beslist heeft om Lummen for Life dit jaar volledig te annuleren omwille van de stijgende cijfers.**
+
+~~Mogen we met de club een "warme" oproep doen?
 
 De Warmste Week is jullie wellicht bekend. En ook de gemeente Lummen doet elk jaar een actie ten voordele van 5 lokale goede doelen.
 
@@ -28,5 +30,5 @@ Wij hopen alvast veel basketters te zien in, om en rond de sporthal op 26 novemb
 
 Warme groeten,
 
-Bestuur Basket Lummen
+Bestuur Basket Lummen~~
 
