@@ -19,8 +19,9 @@ Vanuit Basket Lummen bieden we ook dit jaar graag enkele kwaliteitswijnen aan.
 
 Hiervoor werken we samen met ad Bibendum Fine World Wines uit Sint-Truiden en De Kaarskesprocessie Leonidas uit Lummen.
 
-Samen hebben wij een mooi assortiment samengesteld waamee de smaakpapillen van elke wijn- 
-en chocolade liefhebber geprikkeld worden.
+Samen hebben wij een mooi assortiment samengesteld waamee de smaakpapillen van elke wijn- en chocolade liefhebber geprikkeld worden.
+
+Wil je graag een beschrijving van elke wijn, dan kan je deze vinden in [onze brochure](/news/downloads/eindejaarsactie-2021-ad-bibendum.pdf).
 
 De opbrengst van de verkoop geeft ons als club de mogelijkheid om verder te investeren in de toekomst en jullie hebben alvast wat lekkers op de feesttafel!
 
