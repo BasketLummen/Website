@@ -742,7 +742,7 @@ class PurchaseOrderForm extends HTMLElement {
 			return a[o] > b[o] ? d : a[o] < b[o] ? -(d) : 0;
 		}).reduce((p, n) => p ? p : n, 0);
 
-		this.sale.items = this.sale.items.sort(by["catalogId", "collectionId"]);
+		this.sale.items = this.sale.items.sort(by(["catalogId", "-collectionId"]));
 
 		for (var key in this.sale.items) {
 			if (this.sale.items.hasOwnProperty(key)){
