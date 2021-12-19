@@ -721,9 +721,9 @@ only screen and (max-width: 760px),
 .organogram ul.departments li:not(:only-child) a{
 	margin: 1vh 1vw;
 }
-.organogram ul.departments li:only-child a{
+/* .organogram ul.departments li:only-child a{
 	margin: 1vh 0;
-}
+} */
 
 .organogram .management > li > a {
 	min-width: 30vw;
