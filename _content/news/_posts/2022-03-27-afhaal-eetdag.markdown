@@ -1,11 +1,11 @@
 ---
 layout: post
 hidden: false
-title:  "27 maart 2022: Afhaal Pastadag"
+title:  "27 maart 2022: Take away eet- & restaurantdag  "
 date:   2022-03-27 00:00:00
 description: Afhaal restaurantdag op 27 maart 2022
 permalink: /news/2022-03-27-afhaal-eetdag/
-cover: /news/img/2021-03-21-afhaal-eetdag.jpg
+cover: /news/img/2022-03-27-afhaal-eetdag.jpg
 modules:
   - dish.shell.monitoring.applicationinsights.app
   - clubmanagement.payments.public.app
@@ -31,10 +31,14 @@ Je kan kiezen uit een 10-tal lekkere gerechten.
 
 Je kan kiezen uit volgende gerechten:
 
-- Menubox 01: VIS **€28,00**
-- Menubox 02: VLEES **€28,00**
-- Menubox 03: VEGGIE **€28,00**
-- Menubox 04: KIDS **€22,00**
+- Menubox 01: VIS **€28,00** 
+  - Amuses + Kreeftensoep met grijze garnaaltjes + Tongrolletjes met puree van Charlotte aardappel, wokgroenten en kruidensaus + Dessert van de chef + Brood en boter
+- Menubox 02: VLEES **€28,00** 
+  - Amuses + Tomatensoep met kippenballetjes + Hoevekip met vleessaus, krieltjes en wokgroenten + Dessert van de chef + Brood en boter 
+- Menubox 03: VEGGIE **€28,00** 
+  - Amuses + Groentensoep met verse kruiden + Lasagne met verse wokgroenten + Dessert van de chef + Brood en boter
+- Menubox 04: KIDS **€22,00** 
+  - Amuses + Tomatensoep met kippenballetjes + Hoevekip met appelmoes en puree + Chocomousse en lolly + Brood en boter
 - Spaghetti Bolognese **€13,00**
 - Spaghetti carbonara **€13,00**
 - Lasagna bolognese **€13,00**
