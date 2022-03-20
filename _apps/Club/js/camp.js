@@ -1,4 +1,4 @@
-var service = "clubmgmt-camps-service-tst.azurewebsites.net";
+var service = "clubmgmt-camps-service-prd.azurewebsites.net";
 var scheme = "https://";
 //var scheme = "http://";
 //var service = "localhost:22465"; // uncomment for local testing
@@ -142,8 +142,8 @@ function renderForm(){
                 var end = new Date(cd.end);
     
                 table.append($('<tr>')
-                     .append($('<td>').append($('<input>').attr({ id: 'camppart-' + i, name: 'camppart-' + i, type: 'checkbox' }).addClass("camppart")))    
-                     .append($('<td>').append($('<label>').text(start.toLocaleDateString('nl-BE') + " (" + start.toLocaleTimeString('nl-BE', {hour: '2-digit', minute:'2-digit'}) + " - " + end.toLocaleTimeString('nl-BE', {hour: '2-digit', minute:'2-digit'}) + ")").attr('for', 'camppart-' + i)))
+                     .append($('<td>').append($('<input>').attr({ id: cd.partId, name: cd.partId, type: 'checkbox' }).addClass("camppart")))    
+                     .append($('<td>').append($('<label>').text(cd.partName + " " + start.toLocaleDateString('nl-BE') + " (" + start.toLocaleTimeString('nl-BE', {hour: '2-digit', minute:'2-digit'}) + " - " + end.toLocaleTimeString('nl-BE', {hour: '2-digit', minute:'2-digit'}) + ")").attr('for', cd.partId)))
                     
                     );
             });
@@ -197,7 +197,7 @@ function renderForm(){
         var computeTotal = function(){
             var sum = 0;
             camp.parts.forEach(function(cd, i){
-                if($("#camppart-" + i).is(':checked')){
+                if($("#" + cd.partId).is(':checked')){
                     sum += camp.pricingModel.value;
                 }
             });
@@ -321,7 +321,7 @@ function renderForm(){
                 //var sendConfirmation = campholder.find('#sendConfirmation').is(':checked');          
 
                 camp.parts.forEach(function(cd, i){
-                    if($("#camppart-" + i).is(':checked')){
+                    if($("#" + cd.partId).is(':checked')){
                         campParts.push(cd);
                     }
                 });

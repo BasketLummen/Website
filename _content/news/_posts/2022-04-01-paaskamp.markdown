@@ -3,7 +3,7 @@ layout: post
 title: "Mini Paasstage Talent Factory voor u10 tot u16"
 date: 2022-04-20 09:00:00
 description: Mini Paasstage Talent Factory voor u10 tot u16
-cover: /news/img/kerstkamp-u12.JPG
+cover: /news/img/LTF.GIF
 permalink: /news/2022-04-01-paaskamp/
 custom_js:
 - fuse.min
