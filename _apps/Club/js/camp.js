@@ -1,4 +1,4 @@
-var service = "clubmgmt-camp-service.azurewebsites.net";
+var service = "clubmgmt-camps-service-tst.azurewebsites.net";
 var scheme = "https://";
 //var scheme = "http://";
 //var service = "localhost:22465"; // uncomment for local testing
@@ -47,7 +47,7 @@ function renderForm(){
     if(fromDatePassed && !toDatePassed)
     {  
        
-        if(camp.registrationLimitedTo != null){
+        if(camp.registrationLimitedTo != null && camp.registrationLimitedTo.length > 0){
 
             table.append($('<tr>').attr("id", "search-parent")
             .append($('<td>').append($('<label>').text('Naam').attr('for', 'registration-search')))
@@ -73,10 +73,10 @@ function renderForm(){
             search.keydown(function(event) {
 
                 if(!keycode){
-                    appInsights.trackEvent({
-                        name: "CampRegistrationFormSearchStarted",
-                        properties: { eventCategory: "Camps", eventAction: "search",  campid: campid }
-                    });
+                    // appInsights.trackEvent({
+                    //     name: "CampRegistrationFormSearchStarted",
+                    //     properties: { eventCategory: "Camps", eventAction: "search",  campid: campid }
+                    // });
                 }
 
                 keycode = event.which;
@@ -142,8 +142,10 @@ function renderForm(){
                 var end = new Date(cd.end);
     
                 table.append($('<tr>')
-                    .append($('<td>').append($('<label>').text(start.toLocaleDateString() + " (" + camp.pricingModel.unit + camp.pricingModel.value + ")").attr('for', 'camppart-' + i)))
-                    .append($('<td>').append($('<input>').attr({ id: 'camppart-' + i, name: 'camppart-' + i, type: 'checkbox' }).addClass("camppart"))));
+                     .append($('<td>').append($('<input>').attr({ id: 'camppart-' + i, name: 'camppart-' + i, type: 'checkbox' }).addClass("camppart")))    
+                     .append($('<td>').append($('<label>').text(start.toLocaleDateString('nl-BE') + " (" + start.toLocaleTimeString('nl-BE', {hour: '2-digit', minute:'2-digit'}) + " - " + end.toLocaleTimeString('nl-BE', {hour: '2-digit', minute:'2-digit'}) + ")").attr('for', 'camppart-' + i)))
+                    
+                    );
             });
         }       
 
@@ -281,14 +283,14 @@ function renderForm(){
             .append($('<td>').append($('<label>').attr('for', 'submit')))
             .append($('<td>').append(btn)));
 
-        if(camp.registrationLimitedTo != null){
+        if(camp.registrationLimitedTo != null && camp.registrationLimitedTo.length > 0){
             btn.addClass("showaftersearch");
         }
             
-        appInsights.trackEvent({
-            name: "CampRegistrationFormRendered",
-            properties: { eventCategory: "Camps", eventAction: "render",  campid: campid }
-        });
+        // appInsights.trackEvent({
+        //     name: "CampRegistrationFormRendered",
+        //     properties: { eventCategory: "Camps", eventAction: "render",  campid: campid }
+        // });
 
         // set up form validation and submit logic
         var form = campholder.find('.responsive-form');
@@ -356,10 +358,10 @@ function renderForm(){
                   
                 };
 
-                appInsights.trackEvent({
-                    name: "CampRegistrationFormCompleted",
-                    properties: { eventCategory: "Camps", eventAction: "submit",  campid: campid, registrationId: registration.id }
-                });
+                // appInsights.trackEvent({
+                //     name: "CampRegistrationFormCompleted",
+                //     properties: { eventCategory: "Camps", eventAction: "submit",  campid: campid, registrationId: registration.id }
+                // });
                 // send it to the service
                
                 $.ajax({
@@ -446,8 +448,8 @@ $(document).ready(function(){
     optional = toSplit != null ? toSplit.split(" "): [];
     toSplit = campholder.attr("data-allowed-levels");
     levels = toSplit != null ? toSplit.split(" "): [];
-    uri= scheme + service + "/api/camps/" + orgId + "/" + campid;
-    posturi=  scheme + service + "/api/camps/" + orgId + "/" +campid + "/register";
+    uri= scheme + service + "/api/camps/" + campid;
+    posturi=  scheme + service + "/api/camps/" +campid + "/register";
 
     $.ajax({
         type: 'GET',
@@ -458,7 +460,7 @@ $(document).ready(function(){
             
             camp = c;
 
-            if(camp.registrationLimitedTo != null){
+            if(camp.registrationLimitedTo != null && camp.registrationLimitedTo.length > 0){
                 loadEligiblePlayers(renderForm);
             }
             else{

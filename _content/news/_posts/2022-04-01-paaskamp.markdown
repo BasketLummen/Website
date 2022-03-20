@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Mini Paasstage Talent Factory voor u10 tot u16"
+date: 2022-04-20 09:00:00
+description: Mini Paasstage Talent Factory voor u10 tot u16
+cover: /news/img/kerstkamp-u12.JPG
+permalink: /news/2022-04-01-paaskamp/
+custom_js:
+- fuse.min
+- camp
+---
+
+Beste basketfanaten,
+ 
+We willen jullie tijdens de paasvakantie de kans geven om je basketbal vaardigheden verder te ontwikkelen.
+ 
+Daarom organiseert Talent Factory een mini stage voor alle spelers van u10 tot en met u16 van Basket Lummen en BT Hasselt.
+ 
+Dus niet twijfelen, grijpen die kans!
+ 
+Plaats: Sportschuur Kuringen, Grote Baan 171 Kuringen / Hasselt
+
+Data en uren:
+
+- U14 op maandag 4 april van 09:00 tot 12:00.
+- U16 op maandag 4 april van 13:00 tot 16:00.
+- U10 op donderdag 14 april van 09:00 tot 12:00 en vrijdag 15 april van 09:00 tot 12:00.
+- U12 op donderdag 14 april van 13:00 tot 16:00 en vrijdag 15 april van 13:00 tot 16:00.
+
+
+Thema’s: verbeteren zwakke hand, decission making, 1tg1, shooting, Small Sided Games.
+
+Prijs: 5€ per ½ dag.
+ 
+Inschrijvingen via onderstaande formulier.
+
+Graag inschrijven U14 en U16 ten laatste 1 april, U10 en U12 ten laatste maandag 11 april.
+ 
+Alvast veel plezier en prettig paasverlof!
+
+<div data-campid="8fa992be-2e11-4256-ac4a-3f07761d69b4" data-title="Schrijf je in" data-buttontext="Inschrijven" data-nexttext="Nog een speler inschrijven" data-required="email" data-optional="telephone"></div>
+
