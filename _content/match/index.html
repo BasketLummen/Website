@@ -7,7 +7,7 @@ custom_js:
 - match
 - map
 async_js:
-- https://maps.googleapis.com/maps/api/js?key=AIzaSyBesDse5XU1BASBA_G4RqjjsdUp2CQvqp4&libraries=places&callback=initMap
+- https://maps.googleapis.com/maps/api/js?key=AIzaSyBesDse5XU1BASBA_G4RqjjsdUp2CQvqp4&libraries=places&callback=initMaps
 ---
 
 <div id="poule-header" class="black-bar">
@@ -51,9 +51,9 @@ async_js:
 	<h2>Wedstrijd locatie</h2>
 </div>
 
-<div id="map-holder">
-	<div id="map" ></div>
-	<div id="map-info">
+<div id="map-holder"  class="map-holder" >
+	<div id="map" class="map"></div>
+	<div id="map-info" class="map-info">
 		<h2 id="acc-name"></h2>
 		<p><b id="acc-address"></b></p>
 		<p id="acc-telephone"></p>

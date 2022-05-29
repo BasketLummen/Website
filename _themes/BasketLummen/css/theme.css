@@ -376,20 +376,20 @@ input[type=submit]{
 }
 
 /* map */
-#map-holder{
+.map-holder{
 	background-color: #ffe100;
 	border: 1px solid #E7E7E7;
 }
-#map::after{
+.map::after{
 	background-color: #ffe100;
 }
 
-#map-info{
+.map-info{
 	color: #333;
 }
 
 @media (min-width: 768px) {
-	#map-info{
+	.map-info{
 		font-size: 1.2em;
 	}
 }

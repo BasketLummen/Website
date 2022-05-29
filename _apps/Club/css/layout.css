@@ -442,38 +442,38 @@
 }
 
 /* map */
-#map-holder{
+.map-holder{
 	
 	margin: 4vh 0;
 	position: relative;
 }
-#map {
+.map {
 	height: 40vh;
 }
 @media (max-width: 767px) {
-	#map {
+	.map {
 		width: 100vw;
 	}
-	#map-info{
+	.map-info{
 		text-align: center;
 	}
 }
 @media (min-width: 768px) {
-	#map-holder{
+	.map-holder{
 		height: 40vh;
 		display: flex;
 		overflow: hidden;
 	}
-	#map {
-		width: 70vw;
+	.map {
+		width: 80vw;
 	}
-	#map::after {
+	.map::after {
 	  content: '';
 	  position: absolute;
 	  top: 0;
 	  bottom: 0;
-	  right: -165px;
-	  width: 330px;
+	  right: -185px;
+	  width: 400px;
 	  -webkit-transform: skewX(-33deg);
 	  -khtml-transform: skewX(-33deg);
 	  -moz-transform: skewX(-33deg);
@@ -481,7 +481,7 @@
 	  transform: skewX(-33deg);
 	  z-index: 0;
 	}
-	#map-info{
+	.map-info{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
