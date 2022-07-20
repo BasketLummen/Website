@@ -1,1 +1,1 @@
-dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\netcoreapp2.0\dish.dll resize --album %1
+dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net5.0\dish.dll resize --album %1
