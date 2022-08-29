@@ -7,7 +7,7 @@ cover: /news/img/2022-open-trainingen.jpg
 permalink: /news/2022-05-29-open-trainingen/
 ---
 
-Zit je zoon of dochter in de tweede of derde kleuterklas of in het eerste leerjaar? 
+Zit je zoon of dochter in de derde kleuterklas of in het eerste leerjaar? 
 
 Lijkt basketbal wel een heel leuke sport?
 
