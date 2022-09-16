@@ -30,11 +30,11 @@ Je kan kiezen uit volgende gerechten:
 
 - Spaghetti Bolognese **€13,00**
 - Spaghetti carbonara **€13,00**
-- Pasta Vis: **€15,00**
 - Lasagna bolognese **€13,00**
 - Veggie Lasagna **€14,00**
 - Koninginnehapje **€14,00**
 - Stoofvlees met puree **€14,00**
+- Pasta Vis: **€15,00**
 - Hoevekip met appelmoes en krieltjes **€15,00**
 - Tomatensoep met balletjes **€8,00**
 - Chocomousse **€6,00**
@@ -63,9 +63,10 @@ Enkel betaalde bestellingen zullen geleverd worden.
  (async function() {			
 	
     translations.language = "nl";
-    
-	// translations.purchaseOrderFormLegend.en = "Place your order.";
-	// translations.purchaseOrderFormLegend.nl = "Plaats uw bestelling.";
+
+	translations.purchaseOrderFormOrderConfirmationMessage.nl = "We verwelkomen je op zondag 2 oktober 2022 aan de sporthal van Lummen tussen 9u en 12u om je bestelling af te halen.";
+    translations.purchaseOrderFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.";
+    translations.purchaseOrderFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling";
 
 	await shell.activate();		
 	
