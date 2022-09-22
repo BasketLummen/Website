@@ -42,7 +42,7 @@ var repository = new function(){
 
         if (usedb) {  
 
-            var request = indexedDB.open(vblOrgId, dbversion);
+            var request = indexedDB.open(vblOrgId + "-2022", dbversion);
             request.onerror = function(event) {
                 console.warn("Database error: " + event.target.errorCode);
                 $.topic("db.open.error").publish();
