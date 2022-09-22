@@ -2,7 +2,7 @@ var orgId = "5159e64f-4d2e-42c4-968d-6ff38338129b";
 var vblOrgId = "BVBL1176";
 
 var partnerTeamNames = ["Hasselt BT ", "KBBC Miners Beringen "];
-var partnerTeamIds = ["BVBL1087M16%20%201", "BVBL1087M14%20%201", "BVBL1087M14%20%202", "BVBL1076M16%20%201", "BVBL1076J18%20%201", "BVBL1076J16%20%201", "BVBL1076J16%20%202", "BVBL1076G14%20%201", "BVBL1076G14%20%202", "BVBL1076G14%20%203"];
+var partnerTeamIds = ["BVBL1087M19%20%201", "BVBL1087M16%20%201", "BVBL1087M16%20%202", "BVBL1087M14%20%201", "BVBL1087M14%20%202", "BVBL1076G14%20%201"];
 
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; 
