@@ -13,7 +13,7 @@ Voor nieuwe leden vragen we om dit ten laatste veertien dagen na ontvangst van d
 
 Bij storting vermeld het woord lidgeld, samen met de naam van de speler en de ploeg.
 
-## Bedragen seizoen 2020-2021
+## Bedragen seizoen 2022-2023
 
 | Category                    | Bedrag  |
 |-----------------------------|---------|
