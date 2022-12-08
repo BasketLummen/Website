@@ -21,6 +21,8 @@ In [deze brochure](/news/downloads/eindejaarsactie-2022-ad-bibendum.pdf) vind je
 
 Je kan bestellen tot vrijdag 16 december 2022 door de bestelbon en centjes tijdig af te geven aan jullie coach of via het formulier onderaan deze pagina.
 
+Indien je met overschrijving wenst te betalen, dan kan dit op rekening nummer BE16 3630 4262 5274 met vermelding voor en achternaam en het nummer van je bestelling.
+
 ### Afhaal moment
 
 Afhalen van de wijnen en pralines zal doorgaan op **woensdag 21 december 2022 tussen 17u en 20u.**
