@@ -25,7 +25,7 @@ Indien je met overschrijving wenst te betalen, dan kan dit op rekening nummer BE
 
 ### Afhaal moment
 
-Afhalen van de wijnen en pralines zal doorgaan op **woensdag 21 december 2022 tussen 17u en 20u.**
+Afhalen van de wijnen en pralines zal doorgaan op **woensdag 21 december 2022 tussen 17u en 20u.**, in sporthal De Vijfsprong.
 
 Dit is net voor Kerstmis, zodat de pralines nog lekker vers zijn tijdens de feestdagen.
 
