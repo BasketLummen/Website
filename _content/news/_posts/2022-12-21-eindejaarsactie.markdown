@@ -3,7 +3,7 @@ layout: post
 hidden: false
 title:  "21 december 2022: Eindejaarsactie"
 date:   2022-12-21 00:00:00
-description: Afhaal restaurantdag op 02 oktober 2022
+description: Eindejaarsactie op 21 december 2022
 permalink: /news/2022-12-21-eindejaarsactie/
 cover: /news/img/2020-eindejaarsactie.png
 ---
