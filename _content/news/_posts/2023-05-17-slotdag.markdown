@@ -3,7 +3,7 @@ layout: post
 title:  "Slotdag"
 date:   2023-04-24 01:00:00
 description: Graag nodigen wij jullie uit op de slotavond van Basket Lummen voor dit seizoen.
-cover: /news/img/startdag-square.jpg
+cover: /news/img/slotdag-2022.jpg
 permalink: /news/2023-05-17-slotdag/
 ---
 
@@ -34,7 +34,7 @@ Woensdag 17 mei
 
 Drinks by cafetaria Nathan
 
-Food: Kebap (classic of veggie). Graag op voorhand reserveren via het formulier onderaan. 
+Food: Kebap (classic of veggie). Graag op voorhand reserveren via het formulier onderaan. Gelieve het te betalen bedrag mee te brengen op de slotdag.
 
 We hopen dat we samen op 17 mei met jullie kunnen terugkijken op het mooie seizoen van Basket Lummen en kunnen napraten in het cafetaria.
 
@@ -48,7 +48,8 @@ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/r
 
 	translations.purchaseOrderFormOrderConfirmationMessage.nl = "We verwelkomen je graag op onze slotdag woensdag 17 mei 2023 van 19h tot 23h in sporthal De Vijfsprong.";
     translations.purchaseOrderFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag mee te brengen op de slotdag.";
-    
+    translations.purchaseOrderFormSubmitButton.nl = "Bestellen";
+
 	await shell.activate();		
 	
  })();
