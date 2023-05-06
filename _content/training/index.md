@@ -5,17 +5,17 @@ description: Basket Lummen
 keywords: Basket, Lummen, Trainingsuren
 ---
 
-## Trainingsuren seizoen 2022-2023
+## Trainingsuren seizoen 2023-2024
 
-De trainingsuren voor dit seizoen [vind je hier](/training/2022/trainingsuren-2022-2023.xlsx).
+De trainingsuren voor dit seizoen [vind je hier](/training/2023/trainingsuren-2023-2024.xlsx).
 
 ## Wanneer starten de trainingen?
 
 De trainingen zullen terug starten vanaf:
 
-- U12 en ouder starten vanaf begin augustus
-- U10 vanaf half augustus
-- U8 en U6 vanaf september
+- U12 en ouder starten vanaf maandag 31 juli
+- U10 vanaf woensdag 16 augustus
+- U8 en U6 vanaf 1 september
 
 Exacte dagen varieren uiteraard per team en zullen tegen dan door de coach gecommuniceerd worden.
 
