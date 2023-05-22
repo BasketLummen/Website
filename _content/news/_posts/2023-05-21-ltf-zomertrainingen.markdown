@@ -15,7 +15,7 @@ Inschrijven voor de U10 kan via [deze link](https://forms.gle/1fRodZrrWwDjuceJA)
 
 Inschrijven voor de U12 kan via [deze link](https://forms.gle/6WpYyPTXVFeH1oV47)
 
-Inschrijven voor de U12 kan via [deze link](https://forms.gle/dd3Uuz2wznm9kUvB6)
+Inschrijven voor de U14 kan via [deze link](https://forms.gle/dd3Uuz2wznm9kUvB6)
 
 **!! Dank om minstens één week op voorhand willen in te schrijven!!** Bij voorkeur schrijf je direct in voor alle sessies, mocht je aan ze alle 3 of 4 willen deelnemen.
 
