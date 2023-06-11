@@ -19,8 +19,8 @@ Bij storting vermeld het woord lidgeld, samen met de naam van de speler en de pl
 |-----------------------------|---------|
 | Senioren                    | €385    |
 | J14 - J18                   | €375    |
-| Limburg Lizards N1&2        | €XXX    |
-| Limburg Lizards N3&4        | €XXX    |
+| Limburg Lizards N1&2        | €465    |
+| Limburg Lizards N3&4        | €385    |
 | U12                         | €375    |
 | U8 & U10                    | €320    |
 | U6                          | €195    |
