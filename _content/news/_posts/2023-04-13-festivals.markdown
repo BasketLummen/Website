@@ -20,4 +20,4 @@ Dus prik alvast deze data in jullie agenda’s als je wil helpen en plezier make
 
 ## Deelnemen
 
-Voor meer info contacteer Els Dereze: 0479/298786 of [dereze.els@telenet.be](mailt://dereze.els@telenet.be)
+Voor meer info contacteer Els Dereze: 0479/298786 of [dereze.els@telenet.be](mailto://dereze.els@telenet.be)
