@@ -1,0 +1,50 @@
+---
+layout: page
+title: Basket Lummen Webshop
+description: Webshop van Basket Lummen
+keywords: Basket, Lummen, Webshop
+---
+
+<link rel="stylesheet" href="https://fundraising-test.clubmanagement.io/cdn/test/1.0.4/clubmanagement.sales.css" media="screen" type="text/css">
+<style>
+    .shop{
+        max-width: 1200px; 
+        margin: auto;
+    }
+
+    :root{
+        --yellow: #ffe100;
+        --blue: #14225C;
+        --main: var(--yellow, --default-yellow);
+    } 
+
+</style>
+
+<script type="module">
+	
+    import { shell, translations } from "https://fundraising-test.clubmanagement.io/cdn/test/1.0.4/clubmanagement.sales.public.js";
+ 
+     (async function() {			
+         
+        translations.language = "nl";         
+ 
+         await shell.activate();		
+         
+     })();
+     
+ </script>
+
+<div class="shop">
+    <clubmgmt-shop-cart-header
+        data-sale-id="fb0d09bf-2705-120b-da31-7739c3b8fffe" 
+        data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"
+        cart-link="/shop/cart/"
+        checkout-link="/shop/cart/checkout/"
+    ></clubmgmt-shop-cart-header>			
+        
+    <clubmgmt-shop-product-overview></clubmgmt-shop-product-overview>
+
+    <div style="margin-top: 20px">
+        <a-qs href="/shop/">< Terug naar winkel </a-qs>
+    </div>
+</div>
