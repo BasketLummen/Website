@@ -5,6 +5,7 @@ description: Webshop van Basket Lummen
 keywords: Basket, Lummen, Webshop
 ---
 
+{{#string-equals site.Environment "test"}}
 <link rel="stylesheet" href="https://fundraising-test.clubmanagement.io/cdn/test/1.0.4/clubmanagement.sales.css" media="screen" type="text/css">
 <style>
     .shop{
@@ -48,3 +49,4 @@ keywords: Basket, Lummen, Webshop
         product-link="/shop/product/">
     </clubmgmt-shop-gallery>
 </div>
+{{/string-equals}}

@@ -56,8 +56,7 @@
 					</ul>			  
 				</li>				
 				
-				<li><a href="/club/sporthal">Sporthallen</a></li>	
-				<li><a href="/shop">Shop</a></li>
+				<li><a href="/club/sporthal">Sporthallen</a></li>				
 			</ul>			  
 		</li>
 		<li class="dropdown">
@@ -127,6 +126,7 @@
 			</ul>
 		</li>
 		<li><a href="/matches">Games</a></li>
+		{{#string-equals site.Environment "test"}}<li><a href="/shop">Shop</a></li>{{/string-equals}}
 	</ul>
   <ul class="nav navbar-nav navbar-right">
 	 <li><a id="facebook-ico" href="https://www.facebook.com/basketlummen/" target="_blank"></a><a id="facebook-txt" href="https://www.facebook.com/basketlummen/" target="_blank">Facebook</a></li>
