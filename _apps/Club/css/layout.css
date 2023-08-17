@@ -48,6 +48,15 @@
 		margin: 10px;
 	}
 }
+#cart-ico{
+	background-image: url('../img/cart.png');
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
 
 /* carousel */
 .carousel {

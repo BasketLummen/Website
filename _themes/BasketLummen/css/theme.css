@@ -1011,3 +1011,7 @@ button .spinner{
 	width: 100%;
 	height: 100%;
   }
+
+  clubmgmt-shop-cart-header > div{
+	margin-top: 15px;
+  }
