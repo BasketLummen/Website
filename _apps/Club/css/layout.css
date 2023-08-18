@@ -902,3 +902,27 @@ only screen and (max-width: 760px),
 	display: none;
 }
   
+.container{
+	position: relative;
+}
+clubmgmt-shop-cart-header
+{
+	position: absolute;
+	top: 0;
+}
+@media (max-width: 767px){
+	clubmgmt-shop-cart-header
+	{
+		margin-left: auto;
+		margin-right: auto;
+		left: 70px;
+		right: 70px;
+		text-align: center !important;
+	}
+}
+@media (min-width: 767px){
+	clubmgmt-shop-cart-header
+	{
+		right: 0;
+	}
+}
