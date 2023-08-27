@@ -44,3 +44,42 @@ keywords: Basket, Lummen, Webshop
     </clubmgmt-checkout>
 </div>
 {{/string-equals}}
+{{#string-equals site.Environment "prod"}}
+<link rel="stylesheet" href="https://fundraising.clubmanagement.io/cdn/release/1.0.4/clubmanagement.sales.css" media="screen" type="text/css">
+<style>
+    .shop{
+        max-width: 1200px; 
+        margin: auto;
+    }
+
+    :root{
+        --yellow: #ffe100;
+        --blue: #14225C;
+        --main: var(--yellow, --default-yellow);
+    } 
+
+</style>
+
+<script type="module">
+	
+    import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.4/clubmanagement.sales.public.min.js";
+ 
+     (async function() {			
+         
+        translations.language = "nl";         
+ 
+         await shell.activate();		
+         
+     })();
+     
+ </script>
+
+<div class="shop">
+    <clubmgmt-checkout 
+        data-sale-id="eb80d164-901e-27fe-aa45-a4d48fdb8316" 
+        data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"
+        checkout-mode="cart"
+        redirect-uri="/shop/">
+    </clubmgmt-checkout>
+</div>
+{{/string-equals}}
