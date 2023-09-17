@@ -12,7 +12,7 @@ cover: /news/img/2023-10-22-afhaal-eetdag.jpg
 
 Deze actie word mede mogelijk gemaakt door restaurant La Passione uit Bolderberg.
 
-Het afhaalmoment zal plaatsvinden **op zondag 22 oktober 2022 van 9u tot 12u aan sporthal De Vijfsprong, Sportweg 8 Lummen**
+Het afhaalmoment zal plaatsvinden **op zondag 22 oktober 2023 van 9u tot 12u aan sporthal De Vijfsprong, Sportweg 8 Lummen**
 
 Je kan kiezen uit een 10-tal lekkere gerechten.
 
@@ -55,17 +55,29 @@ Bestellingen moeten uiterlijk op **woensdag 19 oktober 2023** binnen zijn. Later
 
 Enkel betaalde bestellingen zullen geleverd worden. 
 
-<!-- <script type="module">
+<style>
+    clubmgmt-checkout-form .table-row .table-cell:first-of-type
+    {
+        width: 30%;
+    }
 
- import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.2/clubmanagement.sales.public.min.js";
+    payment-method
+    {
+        display: table-row-group;
+    }
+</style>
+
+<script type="module">
+
+ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.4/clubmanagement.sales.public.min.js";
 
  (async function() {			
 	
     translations.language = "nl";
 
-	translations.purchaseOrderFormOrderConfirmationMessage.nl = "We verwelkomen je op zondag 2 oktober 2022 aan de sporthal van Lummen tussen 9u en 12u om je bestelling af te halen.";
-    translations.purchaseOrderFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.";
-    translations.purchaseOrderFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling";
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je op zondag 22 oktober 2023 aan de sporthal van Lummen tussen 9u en 12u om je bestelling af te halen.";
+    translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.";
+    translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling";
 
 	await shell.activate();		
 	
@@ -73,4 +85,4 @@ Enkel betaalde bestellingen zullen geleverd worden.
 	
 </script>
 
-<clubmgmt-purchase-order-wizard data-sale-id="4895bfdf-a899-5e4c-6341-c10986498709" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-purchase-order-wizard> -->
+<clubmgmt-checkout data-sale-id="32b3dc8d-bae0-caad-9526-7f58487ef50f" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout>
