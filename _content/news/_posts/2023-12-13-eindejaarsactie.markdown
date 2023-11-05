@@ -42,4 +42,4 @@ Coming soon...
 </script>
 
 <!-- Add this tag on the promotion page of your sale -->
-<clubmgmt-checkout data-sale-id="86e9cac4-fb48-3e00-53fa-b046815224aa" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout>
+<!-- <clubmgmt-checkout data-sale-id="86e9cac4-fb48-3e00-53fa-b046815224aa" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout> -->
