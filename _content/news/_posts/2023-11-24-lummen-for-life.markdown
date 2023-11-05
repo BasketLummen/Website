@@ -27,40 +27,40 @@ Live Muziek vanaf 21U
 
 #### Padel
 
-    Tennis & padel Lummen
-    18u - 22u30, 
-    reserveren via jos.biesmans@tc-lummen.be
+ Tennis & padel Lummen
+ 18u - 22u30, 
+ reserveren via jos.biesmans@tc-lummen.be
 
 #### Binnenspeeltuin
 
-    Sportcomplex Vijfsprong
-    18u - 21u
+ Sportcomplex Vijfsprong
+ 18u - 21u
 
 #### Urban Run
 
-    Sportcomplex Vijfsprong
-    Opwarming 19u, vertrek 19u15
+ Sportcomplex Vijfsprong
+ Opwarming 19u, vertrek 19u15
 
 #### Urban Mountainbike
 
-    Sportcomplex Vijfsprong
-    Vertrek tussen 18u & 19u (kidstour vvk €5, kassa €7u)
+ Sportcomplex Vijfsprong
+ Vertrek tussen 18u & 19u (kidstour vvk €5, kassa €7u)
 
 #### Urban Obstacle Run
 
-    Zwembad Vijfsprong
-    Shift 1: 18u - 19u30
-    Shift 2: 19u30 - 21u
+ Zwembad Vijfsprong
+ Shift 1: 18u - 19u30
+ Shift 2: 19u30 - 21u
 
 #### Urban Walk
 
-    Sportcomplex Vijfsprong
-    Vertrek: 19u30
+ Sportcomplex Vijfsprong
+ Vertrek: 19u30
 
 #### Natuurwandeling
 
-    GCOC Oosterhof
-    Vertrekn tussen 7u uur 15u.
+ GCOC Oosterhof
+ Vertrek: tussen 7u uur 15u.
 
 ### Prijs
 
