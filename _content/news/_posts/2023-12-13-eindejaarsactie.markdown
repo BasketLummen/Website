@@ -61,7 +61,7 @@ Alvast bedankt voor jullie steun en verkoop!
 
 	translations.language = "nl";
 
-	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je op woensdag 23 december 2023 aan de sporthal van Lummen tussen 17u en 20u om je bestelling af te halen.";
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je op woensdag 13 december 2023 aan de sporthal van Lummen tussen 17u en 20u om je bestelling af te halen.";
     translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.";
     translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling";
 
