@@ -1,0 +1,81 @@
+---
+layout: post
+hidden: false
+title:  "18 februari 2024: Mosselfeest - afhaaleetdag"
+date:   2023-12-29 00:00:00
+description: Mosselfeest - afhaaleetdag 18 februari 2024
+permalink: /news/2024-02-18-mosselfeest-afhaaleetdag/
+cover: /news/img/mosselen.jpg
+---
+
+Basket Lummen organiseert op zondag 18 februari weer haar jaarlijks mosselfeest. 
+
+Tevens kan je ervoor kiezen bepaalde gerechten af te halen, zo moet je de rest van de week ook niet koken.
+
+Iedereen is dus welkom om samen overheerlijke mosselen met friet te komen eten, of om zijn/haar gerechten af te komen halen.
+
+Zo bieden we het volgende aan:
+
+### Ter Plekke
+
+- Mosselen (1,1kg)
+- Vidé
+- Stoofvlees
+- Halve haan
+- Veggie
+- Hamburgers
+
+### Om af te halen
+
+- Verse tomatensoep met balletjes (1L)
+- Verse groentensoep (1L)
+- Vidé (1kg)
+- Balletjes in tomatensaus (1kg)
+- Spaghettisaus (1kg)
+- Spaghettisaus vegetarisch (1kg)
+
+## Praktisch
+
+We verwachten je in de Gildezaal van Laren (Hoogstraat, Lummen), op 18 februari van 11h00 tot 14h00 of van 17h00 tot 20h00.
+
+Je kan bestellen tot woensdag 14 februari 2024:
+- via de bestelkaarten bij spelers, coaches, bestuursleden en in de cafetaria
+- via het digitale bestelformulier hieronder
+
+Betalen kan met bancontact, een krediet kaart of overschrijving indien je online besteld. Indien je met overschrijving wenst te betalen, dan kan dit op rekening nummer BE16 3630 4262 5274 met vermelding voor en achternaam en het nummer van je bestelling.
+
+Maar even goed kan je betalen aan de kassa tijdens de eetdag, met cash of met payconiq. 
+
+<style>
+    clubmgmt-checkout-form .table-row .table-cell:first-of-type
+    {
+        width: 50%;
+    }
+
+    payment-method
+    {
+        display: table-row-group;
+    }
+</style>
+
+
+<script type="module">
+
+import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.7/clubmanagement.sales.public.min.js";
+
+(async function() {
+	
+    translations.language = "nl";
+
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je graag op zondag 18 februari 2024 in de gildezaal van Laren, tussen 11u en 14u of tussen 17u en 20u, tot dan!";
+    translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of te betalen bij afhaling (kan ook met payconiq nu).";
+    translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding van de nummer van je bestelling";
+
+	await shell.activate();		
+	
+ })();
+	
+</script>
+
+<!-- prod -->
+<clubmgmt-checkout data-sale-id="99f1f272-185d-67a4-8dfb-fb549bb59a39" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout>
