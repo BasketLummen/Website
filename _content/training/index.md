@@ -5,9 +5,9 @@ description: Basket Lummen
 keywords: Basket, Lummen, Trainingsuren
 ---
 
-## Trainingsuren seizoen 2023-2024
+## Trainingsuren seizoen 2024-2025
 
-De trainingsuren voor dit seizoen [vind je hier](/training/2023/trainingsuren-2023-2024.xlsx).
+De trainingsuren voor dit seizoen [vind je hier](/training/2024/trainingsuren-2024-2025.xlsx).
 
 ## Wanneer starten de trainingen?
 
