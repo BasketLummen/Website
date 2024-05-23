@@ -13,11 +13,11 @@ De trainingsuren voor dit seizoen [vind je hier](/training/2024/trainingsuren-20
 
 De trainingen zullen terug starten vanaf:
 
-- U12 en ouder starten vanaf maandag 31 juli
-- U10 vanaf woensdag 16 augustus
-- U8 en U6 vanaf 1 september
+- De U6 en U8 starten met trainen vanaf de week van 2 september
+- De U10 starten met trainen vanaf de week van 19 augustus
+- Alle andere ploegen starten vanaf de week van 5 augustus.
 
-Exacte dagen varieren uiteraard per team en zullen tegen dan door de coach gecommuniceerd worden.
+Indien hier van afgeweken wordt dan wordt dit nog gecommuniceerd via de coaches.
 
 ## Waar gaan ze door?
 
