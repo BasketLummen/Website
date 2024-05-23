@@ -24,3 +24,7 @@ Indien hier van afgeweken wordt dan wordt dit nog gecommuniceerd via de coaches.
 Volgend seizoen trainen we op drie verschillende locaties: De Vijfsprong, OHVM (spectrum college), Kambergen Zelem.
 
 Je vind de locaties van deze sporthallen terug op [onze sporthallen](/club/sporthal) pagina.
+
+## Vragen
+
+Mocht er iets niet duidelijk zijn, stuur dan een mailtje naar [kalender@basketlummen.be](mailto:kalender@basketlummen.be)
