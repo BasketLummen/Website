@@ -55,7 +55,7 @@ Alvast bedankt voor jullie steun en verkoop!
 <!-- Import, configure and activate the sales library using a script tag -->
 <script type="module">
 
- import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.6/clubmanagement.sales.public.min.js";
+ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.8/clubmanagement.sales.public.min.js";
 
  (async function() {			
 

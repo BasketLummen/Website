@@ -40,7 +40,7 @@ We hopen dat we samen op 17 mei met jullie kunnen terugkijken op het mooie seizo
 
 <script type="module">
 
-import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.3/clubmanagement.sales.public.min.js";
+import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.8/clubmanagement.sales.public.min.js";
 
 (async function() {
 	

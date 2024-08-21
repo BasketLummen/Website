@@ -61,7 +61,7 @@ Maar even goed kan je betalen aan de kassa tijdens de eetdag, met cash of met pa
 
 <script type="module">
 
-import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.7/clubmanagement.sales.public.min.js";
+import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.8/clubmanagement.sales.public.min.js";
 
 (async function() {
 	

@@ -58,7 +58,7 @@ Enkel betaalde bestellingen zullen geleverd worden.
 
 <script type="module">
 
- import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.2/clubmanagement.sales.public.min.js";
+ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.8/clubmanagement.sales.public.min.js";
 
  (async function() {			
 	

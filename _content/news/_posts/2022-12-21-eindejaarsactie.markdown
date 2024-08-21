@@ -45,8 +45,8 @@ Alvast bedankt voor jullie steun en verkoop!
 
 <script type="module">
 
- import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.2/clubmanagement.sales.public.min.js";
- //import { shell, translations } from "https://fundraising-test.clubmanagement.io/cdn/test/1.0.2/clubmanagement.sales.public.js";
+ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.8/clubmanagement.sales.public.min.js";
+ //import { shell, translations } from "https://fundraising-test.clubmanagement.io/cdn/test/1.0.8/clubmanagement.sales.public.js";
 
  (async function() {
 	
