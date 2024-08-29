@@ -13,17 +13,17 @@ Voor nieuwe leden vragen we om dit ten laatste veertien dagen na ontvangst van d
 
 Bij storting vermeld het woord lidgeld, samen met de naam van de speler en de ploeg.
 
-## Bedragen seizoen 2023-2024
+## Bedragen seizoen 2024-2025
 
 | Category                    | Bedrag  |
 |-----------------------------|---------|
-| Senioren                    | €385    |
-| J14 - J18                   | €375    |
-| Limburg Lizards N1&2        | €465    |
-| Limburg Lizards N3&4        | €385    |
-| U12                         | €375    |
-| U8 & U10                    | €320    |
-| U6                          | €195    |
+| Senioren                    | €425    |
+| J14 - J18                   | €410    |
+| Limburg Lizards N1&2        | €485    |
+| Limburg Lizards N3&4        | €420    |
+| U12                         | €410    |
+| U8 & U10                    | €350    |
+| U6                          | €225    |
 
 ## Rekeningnummer
 
