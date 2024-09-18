@@ -4,7 +4,7 @@ title:  "11 november 2024: 3X3 Toernooi Medewerkers gezocht"
 date:   2024-09-09 00:00:00
 description: 3X3 Toernooi Medewerkers gezocht
 permalink: /news/2024-11-11-3x3-medewerkers/
-cover: /news/img/2024-11-11-3x3-medewerkers.png
+cover: /news/img/2024-11-11-3x3-medewerkers.jpg
 ---
 
 Dit jaar organiseren we op maandag **11-11-2024** met een aantal ouders van Basket Lummen een 3x3 basketbaltornooi. 
