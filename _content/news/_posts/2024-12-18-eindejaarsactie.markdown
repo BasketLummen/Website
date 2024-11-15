@@ -9,7 +9,11 @@ cover: /news/img/2020-eindejaarsactie.png
 ---
 
 
-Naar goede gewoonte bieden we vanuit Koninklijke Basketbalclub Lummen weer een smakelijk assortiment kwaliteitswijnen, koffie en pralines aan, in samen werking met ad Bibendum Fine World Wines, BAM Coffee en De Kaarskesprocessie Leonidas Lummen.
+Net als vorig jaar presenteren we vanuit onze vereniging, Koninklijke Basketbalclub Lummen, een prachtig assortiment kwaliteitswijnen, specialty coffee en Leonidas pralines. 
+
+Ook dit jaar bundelen we onze krachten met ad Bibendum Fine World Wines,  BAM Coffee & De Kaarskesprocessie om een gevarieerd aanbod samen te stellen. 
+
+De opbrengst van deze wijnverkoop biedt onze club een welkome financiële boost, waarmee we verder kunnen investeren in een succesvolle toekomst
 
 In [deze brochure](/news/downloads/eindejaarsactie-2024.pdf) vind je een volledig overzicht van het assortiment.
 
@@ -27,15 +31,12 @@ Bestel je wijn, pralines en koffie voor de feestdagen via Koninklijke Basket Lum
 
 ### Voor bedrijven
 
-Had je als bedrijf graag je bestelling eerder gehad voor de eindejaarsgeschenken?
+Wilt u uw eindejaarsgeschenken als bedrijf graag eerder in huis hebben? Geen probleem... We've got your back. Stuur uw bestelling en facturatiegegevens naar [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be), en wij regelen de rest!
 
-Geen probleem, daar zorgen wij voor.
+Alvast hartelijk dank voor jullie steun en inzet
 
-Stuur je bestelling en facturatiegegevens dan naar [secretariaat@basketlummen.be](mailto:secretariaat@basketlummen.be) en we maken dit voor u in orde!
 
-Alvast bedankt voor jullie steun en verkoop!
-
-<!-- <style>
+<style>
     clubmgmt-checkout-form .table-row .table-cell:first-of-type
     {
         width: 50%;
@@ -65,4 +66,4 @@ Alvast bedankt voor jullie steun en verkoop!
 	
 </script>
 
-<clubmgmt-checkout data-sale-id="765eff64-463e-9a96-008b-1a871cead80c" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout> -->
+<clubmgmt-checkout data-sale-id="765eff64-463e-9a96-008b-1a871cead80c" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout>
