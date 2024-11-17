@@ -1,13 +1,12 @@
 ---
 layout: post
-hidden: true
+hidden: false
 title:  "18 december 2024: Eindejaarsactie"
 date:   2024-11-15 00:00:00
 description: Eindejaarsactie op 18 december 2024
 permalink: /news/2024-12-18-eindejaarsactie/
 cover: /news/img/2020-eindejaarsactie.png
 ---
-
 
 Net als vorig jaar presenteren we vanuit onze vereniging, Koninklijke Basketbalclub Lummen, een prachtig assortiment kwaliteitswijnen, specialty coffee en Leonidas pralines. 
 
