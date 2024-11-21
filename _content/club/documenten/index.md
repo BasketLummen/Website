@@ -33,7 +33,6 @@ keywords: Basket, Lummen
 
  * [Christelijke mutualiteit](https://www.cm.be/diensten-en-voordelen/vakantie-en-vrije-tijd/sport/sportvereniging)
  * [De Voorzorg](https://www.devoorzorg.be/limburg/voordelen-advies/terugbetalingen-ledenvoordelen/terugbetalingen-voordelen/vrije-tijd/sport/Pages/default.aspx)
- * [Liberale mutualiteit](https://www.lm.be/lmplus/rubrieken/voordelen-en-diensten/sport-en-beweging/sportprikkel/pages/sportprikkel.aspx)
+ * [Liberale mutualiteit](https://www.lm-ml.be/nl/voordelen-en-diensten/lm-mutplusbe-terugbetaling-sport)
  * [Vlaams & Neutraal ziekenfonds](https://www.vnz.be/voordelen-terugbetalingen/sport-fitnessclub/)
- * [Onafhankelijk ziekenfonds](https://www.oz.be/vitaliteit/voordelen/fitness-sportclub)
- * [Partena](http://www.partena-ziekenfonds.be/nl/ziekenfonds-en-voordelen/voordelen-en-terugbetalingen/sportclub-lidgeld)
+ * [Helan](https://www.helan.be/nl/ons-aanbod/ziekenfonds/voordelen-en-terugbetalingen/lidgeld-sportclub-jeugdbeweging/)
