@@ -1,6 +1,6 @@
 ---
 layout: post
-hidden: true
+hidden: false
 title:  "16 februari 2025: Mosselfeest - afhaaleetdag"
 date:   2024-12-27 00:00:00
 description: Mosselfeest - afhaaleetdag 16 februari 2025
