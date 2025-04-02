@@ -1,0 +1,9 @@
+---
+layout: post
+hidden: true
+title:  "24 Mei 2025: Bak Actie"
+date:   2024-12-27 00:00:00
+description: Bak Actie - afhaal 24 Mei 2025
+permalink: /news/2025-05-24-bak-actie/
+cover: /news/img/mosselen.jpg
+---
