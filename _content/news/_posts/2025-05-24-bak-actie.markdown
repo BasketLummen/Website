@@ -28,3 +28,37 @@ Bestellen kan tot 30/04/2025
 Afhalen kan op de slotdag op 24/5/2025  
 
 Betaling bij bestelling via bancontact.
+
+<style>
+    clubmgmt-checkout-form .table-row .table-cell:first-of-type
+    {
+        width: 50%;
+    }
+
+    payment-method
+    {
+        display: table-row-group;
+    }
+</style>
+
+
+<script type="module">
+
+import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.11/clubmanagement.sales.public.min.js";
+
+(async function() {
+	
+    translations.language = "nl";
+
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je graag op zondag 25 mei februari 2025 in sporthal De Vijfsprong, tot dan!";
+    translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve bedrag te betalen bij afhaling (kan enkel met payconiq).";
+    translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding van de nummer van je bestelling";
+
+	await shell.activate();		
+	
+ })();
+	
+</script>
+
+<!-- prod -->
+<clubmgmt-checkout data-sale-id="371598bb-b17a-f779-64f7-c08c25e3d986" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout>
