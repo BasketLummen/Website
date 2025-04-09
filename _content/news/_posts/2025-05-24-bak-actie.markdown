@@ -1,11 +1,11 @@
 ---
 layout: post
-hidden: true
+hidden: false
 title:  "24 Mei 2025: Bak Actie"
-date:   2024-12-27 00:00:00
+date:   2025-05-24 00:00:00
 description: Bak Actie - afhaal 24 Mei 2025
 permalink: /news/2025-05-24-bak-actie/
-cover: /news/img/mosselen.jpg
+cover: /news/img/bakmix-voorbeeld-2025.jpg
 ---
 
 Beste spelers en speelsters, ouders,  
@@ -44,7 +44,7 @@ Betaling bij bestelling via bancontact.
 
 <script type="module">
 
-import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.11/clubmanagement.sales.public.min.js";
+import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.12/clubmanagement.sales.public.min.js";
 
 (async function() {
 	
