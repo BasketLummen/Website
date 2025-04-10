@@ -50,11 +50,11 @@ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/r
 	
     translations.language = "nl";
 
-	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je graag op zondag 25 mei februari 2025 in sporthal De Vijfsprong, tot dan!";
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je graag op zaterdag 25 mei 2025 in sporthal De Vijfsprong, tot dan!";
     translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve bedrag te betalen bij afhaling (kan enkel met payconiq).";
     translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding van de nummer van je bestelling";
 
-	await shell.activate();		
+	await shell.activate();
 	
  })();
 	
