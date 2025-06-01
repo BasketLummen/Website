@@ -7,7 +7,7 @@ keywords: Basket, Lummen, Trainingsuren
 
 ## Trainingsuren seizoen 2024-2025
 
-De trainingsuren voor dit seizoen [vind je hier](/training/2024/trainingsuren-2024-2025.xlsx).
+De trainingsuren voor dit seizoen [vind je hier](/training/2025/trainingsuren-2025-2026.xlsx).
 
 ## Wanneer starten de trainingen?
 
@@ -21,7 +21,7 @@ Indien hier van afgeweken wordt dan wordt dit nog gecommuniceerd via de coaches.
 
 ## Waar gaan ze door?
 
-Volgend seizoen trainen we op drie verschillende locaties: De Vijfsprong, OHVM (spectrum college), Kambergen Zelem.
+Volgend seizoen trainen we op drie verschillende locaties: De Vijfsprong, OHVM (spectrum college), Velodroom Zolder.
 
 Je vind de locaties van deze sporthallen terug op [onze sporthallen](/club/sporthal) pagina.
 
