@@ -5,7 +5,7 @@ description: Basket Lummen
 keywords: Basket, Lummen, Trainingsuren
 ---
 
-## Trainingsuren seizoen 2024-2025
+## Trainingsuren seizoen 2025-2026
 
 De trainingsuren voor dit seizoen [vind je hier](/training/2025/trainingsuren-2025-2026.xlsx).
 
@@ -13,9 +13,9 @@ De trainingsuren voor dit seizoen [vind je hier](/training/2025/trainingsuren-20
 
 De trainingen zullen terug starten vanaf:
 
-- De U6 en U8 starten met trainen vanaf de week van 2 september
+- De U6 en U8 starten met trainen vanaf de week van 1 september
 - De U10 starten met trainen vanaf de week van 19 augustus
-- Alle andere ploegen starten vanaf de week van 5 augustus.
+- Alle andere ploegen starten vanaf de week van 4 augustus.
 
 Indien hier van afgeweken wordt dan wordt dit nog gecommuniceerd via de coaches.
 
