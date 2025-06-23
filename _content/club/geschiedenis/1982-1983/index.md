@@ -14,6 +14,7 @@ Lummen 76 behaalde een vijfde plaats in 2e provinciale, de dames van Gama Lummen
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | **Gama Lummen**     | 26 | 20 | 6  | 40 |
 | 2  | Kuringen            | 26 | 20 | 6  | 40 |
@@ -32,6 +33,7 @@ Lummen 76 behaalde een vijfde plaats in 2e provinciale, de dames van Gama Lummen
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Alken               | 26 | 23 | 2  | 42 |
 | 2  | Excelsior Hasselt   | 26 | 20 | 6  | 38 |
@@ -50,6 +52,7 @@ Lummen 76 behaalde een vijfde plaats in 2e provinciale, de dames van Gama Lummen
 
 ## Eindklassement 1e provinciale dames A (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Zonhoven A      | 18 | 18 | 0  | 36 |
 | 2  | Lommel          | 18 | 16 | 2  | 32 |

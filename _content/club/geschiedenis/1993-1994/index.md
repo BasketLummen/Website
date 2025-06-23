@@ -11,6 +11,7 @@ Met de derde titel uit de clubgeschiedenis op zak begon men aan de vierde period
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|------------|----|----|----|----|
 | 1  | Heusden    | 26 | 26 | 0  | 52 |
 | 2  | Tongeren   | 26 | 19 | 7  | 38 |

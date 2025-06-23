@@ -1,1 +1,1 @@
-dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net6.0\dish.dll publish --theme BasketLummen --url "https://www.basketlummen.be/" --connectionStringName dish-publish-lummen-prod  --env "prod"
+dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net8.0\dish.dll publish --theme BasketLummen --url "https://www.basketlummen.be/" --connectionStringName dish-publish-lummen-prod  --env "prod"

@@ -15,6 +15,7 @@ Na 2 seizoen de promotie naar 1e provinciale net te missen, kwam Lummen in 1974-
 
 ## Eindklassement 2e provinciale
 
+| #  | Team                  | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|---|----|
 | 1  | Optima Tessenderlo    | 28 | 27 | 1  | 0 | 54 |
 | 2  | Bacma Maaseik         | 28 | 22 | 5  | 1 | 45 |

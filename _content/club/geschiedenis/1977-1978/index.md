@@ -15,6 +15,7 @@ Lummen 76 eindigde voorlaatste in de eerste ronde en hierdoor traden ze in de 2e
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Houthalen          | 26 | 21 | 5  | 42 |
 | 2  | **Gama Lummen**    | 26 | 20 | 6  | 40 |
@@ -33,6 +34,7 @@ Lummen 76 eindigde voorlaatste in de eerste ronde en hierdoor traden ze in de 2e
 
 ## Eindklassement 2e provinciale B (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Hades             | 16 | 14 | 2  | 28 |
 | 2  | Heusden           | 16 | 13 | 3  | 26 |
@@ -46,6 +48,7 @@ Lummen 76 eindigde voorlaatste in de eerste ronde en hierdoor traden ze in de 2e
 
 ## Eindklassement 2e provinciale B (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Maasmechelen      | 12 | 8  | 4  | 16 |
 | 2  | Excelsior Hasselt | 12 | 7  | 5  | 14 |

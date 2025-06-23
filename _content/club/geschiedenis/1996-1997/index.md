@@ -12,6 +12,7 @@ In de eindronde met Namen, Landen en Blankenberge eindigde Lummen ook 2e, maar d
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Flénu Quaregnon | 26 | 22 | 3  | 70 |
 | 2  | **Lummen**      | 26 | 22 | 5  | 70 |

@@ -37,6 +37,7 @@ Het eerste competitiejaar werd afgesloten op een 11de plaats (op 12 ploegen) in 
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|---|----|
 | 1  | Optima             | 22 | 19 | 2  | 1 | 39 |
 | 2  | Overpelt           | 22 | 18 | 4  | 0 | 36 |

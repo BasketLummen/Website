@@ -13,6 +13,7 @@ Ook richtte men in 1976 een tweede Lummense club op "Lummen 76" om het overvloed
 
 ## Eindklassement 2e provinciale B (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | **Gama Lummen** | 12 | 11 | 1  | 22 |
 | 2  | Zonhoven        | 12 | 10 | 2  | 20 |
@@ -24,6 +25,7 @@ Ook richtte men in 1976 een tweede Lummense club op "Lummen 76" om het overvloed
 
 ## Eindklassement 2e provinciale A (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | **Gama Lummen**   | 12 | 12 | 0  | 24 |
 | 2  | Zonhoven          | 12 | 9  | 3  | 18 |
@@ -35,6 +37,7 @@ Ook richtte men in 1976 een tweede Lummense club op "Lummen 76" om het overvloed
 
 ## Eindklassement 2e provinciale B (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Hades             | 12 | 10 | 2  | 20 |
 | 2  | Overpelt          | 12 | 7  | 5  | 14 |

@@ -13,6 +13,7 @@ Delta Lummen werd 9de in 3e provinciale met ook dit seizoen 3 overwinningen, de 
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Heusden             | 26 | 25 | 1  | 50 |
 | 2  | Leopoldsburg        | 26 | 23 | 3  | 46 |
@@ -31,6 +32,7 @@ Delta Lummen werd 9de in 3e provinciale met ook dit seizoen 3 overwinningen, de 
 
 ## Eindklassement 3e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Baclo Lommel        | 18 | 15 | 3  | 30 |
 | 2  | Hades 77            | 18 | 15 | 3  | 30 |

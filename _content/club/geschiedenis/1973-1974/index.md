@@ -17,6 +17,7 @@ Dit seizoen speelde er ook voor de eerste keer een B-ploeg in competitie, maar d
 
 ## Eindklassement 2e provinciale B (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|---|----|
 | 1  | Gems Diepenbeek     | 10 | 8  | 2  | 0 | 16 |
 | 2  | Excelsior Hasselt   | 10 | 8  | 2  | 0 | 16 |
@@ -27,6 +28,7 @@ Dit seizoen speelde er ook voor de eerste keer een B-ploeg in competitie, maar d
 
 ## Eindklassement 2e provinciale B (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|---|----|
 | 1  | **Gama Lummen A**  | 10 | 7  | 3  | 0 | 14 |
 | 2  | Nieuwerkerken      | 10 | 7  | 3  | 0 | 14 |
@@ -37,6 +39,7 @@ Dit seizoen speelde er ook voor de eerste keer een B-ploeg in competitie, maar d
 
 ## Eindklassement 2e provinciale A (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|---|----|
 | 1  | Leopoldsburg A        | 10 | 9  | 1  | 0 | 18 |
 | 2  | Optima Tessenderlo    | 10 | 8  | 2  | 1 | 16 |
@@ -47,6 +50,7 @@ Dit seizoen speelde er ook voor de eerste keer een B-ploeg in competitie, maar d
 
 ## Eindklassement 2e provinciale C (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|---|----|
 | 1  | Hades                 | 10 | 9  | 1  | 0 | 18 |
 | 2  | Kuringen              | 10 | 7  | 3  | 0 | 14 |

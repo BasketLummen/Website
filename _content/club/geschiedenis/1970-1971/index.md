@@ -15,6 +15,7 @@ Tijdens het tweede seizoen had Lummen tot op de laatste speeldag kans op een der
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|---|----|
 | 1  | Zillertal Beringen | 22 | 21 | 1  | 0 | 42 |
 | 2  | Lommel             | 22 | 20 | 2  | 0 | 40 |

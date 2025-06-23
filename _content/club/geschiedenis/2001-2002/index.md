@@ -13,6 +13,7 @@ De dames A werden vice-kampioen in 1e provinciale en promoveerden zo samen met L
 
 ## Eindklassement 3e nationale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | SIN Sombreffe       | 26 | 22 | 4  | 70 |
 | 2  | RUS Mariembourg     | 26 | 20 | 7  | 66 |
@@ -31,6 +32,7 @@ De dames A werden vice-kampioen in 1e provinciale en promoveerden zo samen met L
 
 ## Eindklassement 3e provinciale A
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | **Basket Lummen B** | 22 | 22 | 0  | 66 |
 | 2  | Zonhoven            | 22 | 18 | 4  | 58 |
@@ -47,6 +49,7 @@ De dames A werden vice-kampioen in 1e provinciale en promoveerden zo samen met L
 
 ## Eindklassement 3e provinciale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Baclo Lommel        | 26 | 26 | 0  | 78 |
 | 2  | Union Leopoldsburg  | 26 | 22 | 4  | 70 |
@@ -65,6 +68,7 @@ De dames A werden vice-kampioen in 1e provinciale en promoveerden zo samen met L
 
 ## Eindklassement 1e provinciale Dames
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Lommel            | 20 | 17 | 3  | 54 |
 | 2  | **Basket Lummen** | 20 | 16 | 4  | 52 |

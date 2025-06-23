@@ -13,6 +13,7 @@ Delta Lummen eindigde laatste in 2e provinciale A (3e provinciale was opgedoekt)
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Prayon Trooz    | 26 | 24 | 2  | 48 |
 | 2  | Fléron          | 26 | 22 | 4  | 44 |
@@ -31,6 +32,7 @@ Delta Lummen eindigde laatste in 2e provinciale A (3e provinciale was opgedoekt)
 
 ## Eindklassement 2e provinciale A
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Runkster           | 22 | 20 | 2  | 40 |
 | 2  | Helchteren         | 22 | 20 | 2  | 40 |

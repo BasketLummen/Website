@@ -13,6 +13,7 @@ Lummen 76 werd in de eerste ronde 7e in 2e provinciale B en in de eindronde met 
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Bacma Maaseik      | 26 | 25 | 1  | 50 |
 | 2  | Zonhoven           | 26 | 20 | 6  | 40 |
@@ -31,6 +32,7 @@ Lummen 76 werd in de eerste ronde 7e in 2e provinciale B en in de eindronde met 
 
 ## Eindklassement 2e provinciale B (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|----|
 | 1  | Heusden               | 20 | 18 | 2  | 36 |
 | 2  | Leopoldsburg          | 20 | 17 | 3  | 34 |
@@ -46,6 +48,7 @@ Lummen 76 werd in de eerste ronde 7e in 2e provinciale B en in de eindronde met 
 
 ## Eindklassement 2e provinciale D (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------|----|----|----|----|
 | 1  | Bolderberg    | 6  | 4  | 2  | 8  |
 | 2  | **Lummen 76** | 6  | 3  | 3  | 6  |

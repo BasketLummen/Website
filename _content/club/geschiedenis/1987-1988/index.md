@@ -13,6 +13,7 @@ Delta Lummen speelde opnieuw geen rol van betekenis in 3e provincale en werd 12e
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Leopoldsburg        | 26 | 24 | 2  | 48 |
 | 2  | **Gama Lummen**     | 26 | 20 | 6  | 40 |
@@ -31,6 +32,7 @@ Delta Lummen speelde opnieuw geen rol van betekenis in 3e provincale en werd 12e
 
 ## Eindklassement 3e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Winterslag          | 22 | 18 | 4  | 36 |
 | 2  | Maaseik 84          | 22 | 17 | 5  | 34 |

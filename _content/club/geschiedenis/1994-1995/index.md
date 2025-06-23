@@ -11,6 +11,7 @@ Na de schitterende rentree in 4e nationale legde Lummen uiteraarde de lat een be
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|------------|----|----|----|----|
 | 1  | Brussel    | 26 | 20 | 6  | 40 |
 | 2  | Mazy       | 26 | 18 | 8  | 36 |

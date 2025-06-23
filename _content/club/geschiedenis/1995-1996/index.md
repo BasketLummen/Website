@@ -11,6 +11,7 @@ In 1995-1996 haalde Lummen spelverdeler Yvan Devreught weg bij Excelsior Brussel
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Trubac Sint-Truiden | 26 | 23 | 3  | 46 |
 | 2  | Haneffe             | 26 | 21 | 5  | 42 |

@@ -1,1 +1,1 @@
-dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net6.0\dish.dll generate --full --theme BasketLummen --url "https://test.basketlummen.be/" --env "test"
+dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net8.0\dish.dll generate --full --theme BasketLummen --url "https://test.basketlummen.be/" --env "test"

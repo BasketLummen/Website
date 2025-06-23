@@ -11,6 +11,7 @@ In 1997-1998 behaalde Lummen eindelijk de promotie naar 3e nationale. In de comp
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Avernas         | 26 | 23 | 3  | 72 |
 | 2  | **Lummen**      | 26 | 22 | 4  | 70 |

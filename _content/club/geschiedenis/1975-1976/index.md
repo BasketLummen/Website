@@ -11,6 +11,7 @@ Lummen begon aan het seizoen 1975-1976 met als doel promotie naar 1e provinciale
 
 ## Eindklassement 2e provinciale A (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|----|
 | 1  | **Gama Lummen**       | 10 | 9  | 1  | 18 |
 | 2  | Estancia Peer         | 10 | 8  | 2  | 16 |
@@ -21,6 +22,7 @@ Lummen begon aan het seizoen 1975-1976 met als doel promotie naar 1e provinciale
 
 ## Eindklassement 2e provinciale A (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|----|
 | 1  | Alken                 | 16 | 15 | 1  | 30 |
 | 2  | Gems Diepenbeek       | 16 | 14 | 2  | 28 |

@@ -14,6 +14,7 @@ Delta Lummen eindigde 9e en voorlaatste in 3e provinciale, met 3 overwinningen.
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Sobabee         | 26 | 23 | 3  | 46 |
 | 2  | Soba            | 26 | 23 | 3  | 46 |
@@ -32,6 +33,7 @@ Delta Lummen eindigde 9e en voorlaatste in 3e provinciale, met 3 overwinningen.
 
 ## Eindklassement 3e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Kajoba Zolder     | 18 | 15 | 3  | 30 |
 | 2  | Berkenbos         | 18 | 14 | 4  | 28 |

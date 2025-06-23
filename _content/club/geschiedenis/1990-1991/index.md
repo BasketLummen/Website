@@ -12,6 +12,7 @@ Toch liep het helemaal mis dit seizoen en Lummen stond zelfs een tijd op de laat
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | BT Hasselt         | 26 | 23 | 3  | 46 |
 | 2  | CP Awans           | 26 | 18 | 8  | 36 |

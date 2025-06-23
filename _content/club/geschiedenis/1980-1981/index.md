@@ -15,6 +15,7 @@ Ook speelden er voor het eerst dames in de Lummense kleuren. Zij werden 10e in h
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Optima Tessenderlo | 26 | 24 | 2  | 48 |
 | 2  | Zonhoven           | 26 | 22 | 4  | 44 |
@@ -33,6 +34,7 @@ Ook speelden er voor het eerst dames in de Lummense kleuren. Zij werden 10e in h
 
 ## Eindklassement 2e provinciale B (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Borgloon            | 20 | 18 | 2  | 36 |
 | 2  | Maasmechelen        | 20 | 17 | 3  | 34 |
@@ -47,6 +49,7 @@ Ook speelden er voor het eerst dames in de Lummense kleuren. Zij werden 10e in h
 
 ## Eindklassement 2e provinciale C (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------|----|----|----|----|
 | 1  | **Lummen 76** | 6  | 4  | 2  | 8  |
 | 2  | Nieuwerkerken | 6  | 3  | 3  | 6  |
@@ -55,6 +58,7 @@ Ook speelden er voor het eerst dames in de Lummense kleuren. Zij werden 10e in h
 
 ## Eindklassement 1e provinciale dames 
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Runkster        | 24 | 24 | 0  | 48 |
 | 2  | Dabacoo Koersel | 24 | 21 | 3  | 42 |

@@ -1,1 +1,1 @@
-dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net6.0\dish.dll serve --theme BasketLummen --url "https://test.basketlummen.be/" --port 5001  --env "test"
+dotnet C:\github\dish\sitegenerator\src\Dish.SiteGenerator\bin\Debug\net8.0\dish.dll serve --theme BasketLummen --url "https://test.basketlummen.be/" --port 5001  --env "test"

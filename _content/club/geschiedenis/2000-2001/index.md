@@ -15,6 +15,7 @@ Onder het krantenartikel staan nog foto's van onze chearleaders en van de eerste
 
 ## Eindklassement 2e nationale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Estaimpuis          | 26 | 22 | 4  | 70 |
 | 2  | Facom Damme         | 26 | 19 | 7  | 64 |
@@ -33,6 +34,7 @@ Onder het krantenartikel staan nog foto's van onze chearleaders en van de eerste
 
 ## Eindklassement 3e provinciale A
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Alfa 2000 Achel     | 20 | 19 | 1  | 58 |
 | 2  | Union Leopoldsburg  | 20 | 17 | 3  | 54 |
@@ -48,6 +50,7 @@ Onder het krantenartikel staan nog foto's van onze chearleaders en van de eerste
 
 ## Eindklassement 3e provinciale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Houthalen 2000 B    | 22 | 19 | 3  | 60 |
 | 2  | Zonhoven B          | 22 | 17 | 5  | 56 |
@@ -64,6 +67,7 @@ Onder het krantenartikel staan nog foto's van onze chearleaders en van de eerste
 
 ## Eindklassement 1e provinciale B Dames
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Alken             | 18 | 17 | 1  | 52 |
 | 2  | Runskter B        | 18 | 14 | 4  | 46 |

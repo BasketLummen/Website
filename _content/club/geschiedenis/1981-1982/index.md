@@ -15,6 +15,7 @@ Ook nog vermelden dat onze dames in hun tweede seizoen veel sterker voor de dag 
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Zonhoven        | 26 | 22 | 4  | 44 |
 | 2  | Kuringen        | 26 | 21 | 5  | 42 |
@@ -33,6 +34,7 @@ Ook nog vermelden dat onze dames in hun tweede seizoen veel sterker voor de dag 
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Trubac Sint-Truiden | 26 | 21 | 5  | 42 |
 | 2  | Maasmechelen        | 26 | 19 | 7  | 38 |
@@ -51,6 +53,7 @@ Ook nog vermelden dat onze dames in hun tweede seizoen veel sterker voor de dag 
 
 ## Eindklassement 1e provinciale dames A (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | Gems Diepenbeek | 12 | 12 | 0  | 24 |
 | 2  | Beringen        | 12 | 10 | 2  | 20 |
@@ -62,6 +65,7 @@ Ook nog vermelden dat onze dames in hun tweede seizoen veel sterker voor de dag 
 
 ## Eindklassement 1e provinciale dames B (2e ronde) 
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | **Gama Lummen** | 10 | 9  | 0  | 19 |
 | 2  | Heusden         | 10 | 8  | 2  | 14 |

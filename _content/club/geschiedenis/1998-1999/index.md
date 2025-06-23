@@ -11,6 +11,7 @@ keywords: Basket, Lummen
 
 ## Eindklassement 3e nationale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|----------------------|----|----|----|----|
 | 1  | **Lummen**           | 26 | 19 | 7  | 64 |
 | 2  | Profondeville        | 26 | 19 | 7  | 64 |

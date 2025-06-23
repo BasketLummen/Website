@@ -16,6 +16,7 @@ Lummen plaatste zich als derde voor de promotiereeks. Hierin werd het samen met 
 
 ## Eindklassement 2e provinciale A (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|---|----|
 | 1  | Peerder         | 12 | 12 | 0  | 0 | 24 |
 | 2  | Leopoldsburg A  | 12 | 9  | 2  | 1 | 19 |
@@ -27,6 +28,7 @@ Lummen plaatste zich als derde voor de promotiereeks. Hierin werd het samen met 
 
 ## Eindklassement 2e provinciale A (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|---|----|
 | 1  | Peerder            | 10 | 8  | 2  | 0 | 16 |
 | 2  | Sint-Jans Hasselt  | 10 | 7  | 2  | 0 | 14 |

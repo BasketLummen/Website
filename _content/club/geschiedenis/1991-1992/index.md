@@ -11,6 +11,7 @@ Na de degradatie naar 1e provinciale wilde Lummen zo snel mogelijk terugkeren na
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Tongeren           | 26 | 23 | 3  | 46 |
 | 2  | **Lummen**         | 26 | 21 | 5  | 42 |

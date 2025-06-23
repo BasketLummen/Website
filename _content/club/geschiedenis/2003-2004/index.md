@@ -13,6 +13,7 @@ De dames A speelden hun beste seizoen ooit en werden 8e met 12 overwinningen. He
 
 ## Eindklassement 3e nationale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Haneffe            | 26 | 19 | 7  | 64 |
 | 2  | Ninane             | 26 | 17 | 9  | 60 |
@@ -31,6 +32,7 @@ De dames A speelden hun beste seizoen ooit en werden 8e met 12 overwinningen. He
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | XT Sint-Truiden B   | 26 | 23 | 3  | 72 |
 | 2  | Optima Tessenderlo  | 26 | 22 | 4  | 70 |
@@ -49,6 +51,7 @@ De dames A speelden hun beste seizoen ooit en werden 8e met 12 overwinningen. He
 
 ## Eindklassement 3e provinciale A
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | XT Sint-Truiden C   | 20 | 17 | 3  | 54 |
 | 2  | Black Sheep C       | 20 | 16 | 4  | 52 |
@@ -64,6 +67,7 @@ De dames A speelden hun beste seizoen ooit en werden 8e met 12 overwinningen. He
 
 ## Eindklassement 2e landelijke A Dames
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Boom B            | 26 | 26 | 0  | 78 |
 | 2  | Demesmacre Leuven | 26 | 22 | 4  | 70 |
@@ -82,6 +86,7 @@ De dames A speelden hun beste seizoen ooit en werden 8e met 12 overwinningen. He
 
 ## Eindklassement 1e provinciale Dames
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Leopoldsburg 96     | 24 | 21 | 3  | 66 |
 | 2  | Gems Diepenbeek B   | 24 | 19 | 5  | 62 |

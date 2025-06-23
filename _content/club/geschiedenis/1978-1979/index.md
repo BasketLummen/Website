@@ -14,6 +14,7 @@ Lummen 76 groeide langzaam met een 6e plaats in de eerste ronde van 2e provincia
 
 ## Eindklassement 4e nationale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Houthalen          | 26 | 22 | 4  | 44 |
 | 2  | Oxaco Boechout     | 26 | 22 | 4  | 44 |
@@ -32,6 +33,7 @@ Lummen 76 groeide langzaam met een 6e plaats in de eerste ronde van 2e provincia
 
 ## Eindklassement 2e provinciale A (1e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|----------------------|----|----|----|----|
 | 1  | Sint-Jans Hasselt    | 18 | 16 | 2  | 32 |
 | 2  | Zolder               | 18 | 14 | 4  | 28 |
@@ -46,6 +48,7 @@ Lummen 76 groeide langzaam met een 6e plaats in de eerste ronde van 2e provincia
 
 ## Eindklassement 2e provinciale B (2e ronde)
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Beverlo             | 10 | 8  | 2  | 16 |
 | 2  | Zolder              | 10 | 7  | 3  | 14 |

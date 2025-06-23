@@ -13,6 +13,7 @@ Ook startte men met een B-ploeg in 3e provinciale. Deze werden 10de met 4 overwi
 
 ## Eindklassement 2e nationale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Gentson           | 26 | 19 | 7  | 64 |
 | 2  | Union Hoei        | 26 | 19 | 7  | 64 |
@@ -31,6 +32,7 @@ Ook startte men met een B-ploeg in 3e provinciale. Deze werden 10de met 4 overwi
 
 ## Eindklassement 3e provinciale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Stevoort B          | 20 | 16 | 7  | 52 |
 | 2  | As                  | 20 | 16 | 7  | 52 |

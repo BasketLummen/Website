@@ -16,6 +16,7 @@ Lummen eindigde dit seizoen 1 plaatsje lager op een vijfde plaats.
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|---|----|
 | 1  | Lommel             | 24 | 20 | 2  | 2 | 42 |
 | 2  | Zizubo             | 24 | 20 | 3  | 1 | 41 |

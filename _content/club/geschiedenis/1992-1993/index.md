@@ -11,6 +11,7 @@ In 1992-1993 was er voor de spelers Lummen maar 1 opdracht: kampioen spelen en t
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | **Lummen**         | 26 | 24 | 2  | 48 |
 | 2  | Zolder             | 26 | 17 | 9  | 34 |

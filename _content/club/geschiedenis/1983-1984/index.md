@@ -14,6 +14,7 @@ Lummen 76 speelde kampioen in 2e provinciale na winst in een testwedstrijd tegen
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Union Glain        | 26 | 22 | 4  | 40 |
 | 2  | Bacma Maaseik      | 26 | 20 | 6  | 40 |
@@ -32,6 +33,7 @@ Lummen 76 speelde kampioen in 2e provinciale na winst in een testwedstrijd tegen
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------|----|----|----|----|
 | 1  | **Lummen 76**   | 26 | 21 | 5  | 42 |
 | 2  | Bree            | 26 | 21 | 5  | 42 |
@@ -50,6 +52,7 @@ Lummen 76 speelde kampioen in 2e provinciale na winst in een testwedstrijd tegen
 
 ## Eindklassement 1e provinciale dames 
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|------------------|----|----|----|----|
 | 1  | Kuringen         | 22 | 20 | 2  | 40 |
 | 2  | Houthalen        | 22 | 19 | 3  | 38 |

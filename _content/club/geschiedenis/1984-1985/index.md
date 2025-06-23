@@ -14,6 +14,7 @@ De promotie van Lummen 76 naar 1e provinciale kwam hard aan: ze eindigden laatst
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | Bacma Maaseik      | 26 | 21 | 5  | 42 |
 | 2  | Awans              | 26 | 19 | 7  | 38 |
@@ -32,6 +33,7 @@ De promotie van Lummen 76 naar 1e provinciale kwam hard aan: ze eindigden laatst
 
 ## Eindklassement 1e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Leopoldsburg        | 26 | 24 | 2  | 48 |
 | 2  | Borgloon            | 26 | 21 | 5  | 42 |
@@ -50,6 +52,7 @@ De promotie van Lummen 76 naar 1e provinciale kwam hard aan: ze eindigden laatst
 
 ## Eindklassement 3e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|------------------|----|----|----|----|
 | 1  | Houthalen-Oost   | 22 | 22 | 0  | 44 |
 | 2  | Tongeren 83      | 22 | 20 | 2  | 40 |
@@ -66,6 +69,7 @@ De promotie van Lummen 76 naar 1e provinciale kwam hard aan: ze eindigden laatst
 
 ## Eindklassement 1e provinciale dames 
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|------------------|----|----|----|----|
 | 1  | Zonhoven         | 24 | 23 | 1  | 46 |
 | 2  | Lommel           | 24 | 22 | 2  | 44 |

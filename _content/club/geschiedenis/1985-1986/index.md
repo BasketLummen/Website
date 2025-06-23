@@ -13,6 +13,7 @@ Lummen 76 speelde na degradatie terug in 2e provinciale waar ze 9e eindigden met
 
 ## Eindklassement 4e nationale C
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-----------------------|----|----|----|----|
 | 1  | Boom                  | 26 | 20 | 6  | 40 |
 | 2  | Luchtbal              | 26 | 19 | 7  | 38 |
@@ -31,6 +32,7 @@ Lummen 76 speelde na degradatie terug in 2e provinciale waar ze 9e eindigden met
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Houthalen-Oost      | 26 | 25 | 2  | 48 |
 | 2  | Tongeren 83         | 26 | 22 | 5  | 42 |
@@ -49,12 +51,12 @@ Lummen 76 speelde na degradatie terug in 2e provinciale waar ze 9e eindigden met
 
 ## Eindklassement 3e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Helchteren          | 24 | 19 | 5  | 38 |
 | 2  | Stevoort            | 24 | 18 | 6  | 36 |
 | 3  | Baclo Lommel        | 24 | 16 | 8  | 32 |
 | 4  | Kajoba              | 24 | 15 | 9  | 30 |
-|    |                     |    |    |    |    |
 | 5  | Geleeg Leopoldsburg | 26 | 17 | 9  | 34 |
 | 6  | Maaseik 84          | 26 | 15 | 11 | 40 |
 | 7  | JT Maasmechelen     | 26 | 10 | 16 | 20 |
@@ -64,6 +66,7 @@ Lummen 76 speelde na degradatie terug in 2e provinciale waar ze 9e eindigden met
 
 ## Eindklassement 1e provinciale dames 
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|------------------|----|----|----|----|
 | 1  | Beringen         | 22 | 21 | 1  | 42 |
 | 2  | Lommel           | 22 | 19 | 3  | 38 |

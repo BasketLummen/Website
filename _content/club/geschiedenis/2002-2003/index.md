@@ -14,6 +14,7 @@ De dames hadden een moeilijk seizoen met slechts 1 overwinning. Ze werden 11e en
 
 ## Eindklassement 3e nationale A
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|--------------------|----|----|----|----|
 | 1  | XT Sint-Truiden    | 26 | 22 | 4  | 70 |
 | 2  | Haneffe            | 26 | 20 | 6  | 66 |
@@ -32,6 +33,7 @@ De dames hadden een moeilijk seizoen met slechts 1 overwinning. Ze werden 11e en
 
 ## Eindklassement 2e provinciale
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | **Basket Lummen B** | 26 | 21 | 5  | 68 |
 | 2  | As                  | 26 | 19 | 7  | 64 |
@@ -50,6 +52,7 @@ De dames hadden een moeilijk seizoen met slechts 1 overwinning. Ze werden 11e en
 
 ## Eindklassement 3e provinciale B
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|---------------------|----|----|----|----|
 | 1  | Houthalen 2000 B    | 22 | 20 | 2  | 62 |
 | 2  | Bilzerse B          | 22 | 19 | 3  | 60 |
@@ -66,6 +69,7 @@ De dames hadden een moeilijk seizoen met slechts 1 overwinning. Ze werden 11e en
 
 ## Eindklassement 2e landelijke Dames
 
+| #  | Team               | P  | W  | L  | D | Pts |
 |----|-------------------|----|----|----|----|
 | 1  | Zonhoven Dames    | 20 | 18 | 2  | 56 |
 | 2  | Brasschaat        | 20 | 15 | 5  | 50 |
