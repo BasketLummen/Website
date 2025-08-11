@@ -69,25 +69,47 @@ keywords: Basket, Lummen, Business, Partners, Sponsors
     .sponsor-shirt img { max-width: 160px; max-height: 70px; }
     .sponsor-jeugd img { max-width: 120px; max-height: 55px; }
     .sponsor-partners img { max-width: 90px; max-height: 40px; }
+
+    /* Nieuwe styling voor gecombineerde hoofdsponsors */
+    .hoofdsponsors-combi-row {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 28px;
+    }
+    .hoofdsponsor-combi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 260px;
+    }
+    .hoofdsponsor-combi h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 </style>
 
 <div class="container content partners">
 
 	<h1>Partners</h1>
-	
-  <!-- Clublogo's bovenaan -->
-  <div class="club-logos">
-    <!-- Basket Lummen logo -->
-    <img src="/img/logo-lummen.png" alt="Basket Lummen">
-    <!-- Athenas Lummen logo -->
-    <img src="/img/logo-athenas.png" alt="Athenas Lummen">
-  </div>
 
-  <!-- Hoofdsponsor -->
-  <h3 class="heren">Hoofdsponsor</h3>
-  <ul class="sponsor-row sponsor-hoofdsponsor">
-      <li><a href="http://www.riotech.nl/" target="_blank"><img src="/img/partners/jrt.png"></a></li>
-  </ul>
+    <!-- Gecombineerde hoofdsponsors heren/dames naast elkaar -->
+    <div class="hoofdsponsors-combi-row">
+      <div class="hoofdsponsor-combi">
+        <h3 class="heren">Hoofdsponsor Heren</h3>
+        <ul class="sponsor-row sponsor-hoofdsponsor">
+          <li><a href="http://www.riotech.nl/" target="_blank"><img src="/img/partners/jrt.png"></a></li>
+        </ul>
+      </div>
+      <div class="hoofdsponsor-combi">
+        <h3 class="dames">Hoofdsponsor Dames</h3>
+        <ul class="sponsor-row sponsor-hoofdsponsor">
+          <li><a href="https://festarent.be/" target="_blank"><img src="/img/partners/Festarent.png"></a></li>
+        </ul>
+      </div>
+    </div>
 
   <!-- Sponsors -->
   <h4 class="heren">Sponsors</h4>
@@ -97,13 +119,6 @@ keywords: Basket, Lummen, Business, Partners, Sponsors
       <li><a href="https://www.jqaccountancy.be/" target="_blank"><img src="/img/partners/jan-quintens-accountancy.jpg"></a></li>
   </ul>
 
-  <!-- Hoofdsponsor -->
-  <h3 class="dames">Hoofdsponsor</h3>
-  <ul class="sponsor-row sponsor-hoofdsponsor">
-      <li><a href="https://festarent.be/" target="_blank"><img src="/img/partners/Festarent.png"></a></li>
-  </ul>
-
-  <!-- Sponsors -->
   <h4 class="dames">Sponsors</h4>
   <ul class="sponsor-row sponsor-dames">
       <li><a href="https://thesquarekermt.be/" target="_blank"><img src="/img/partners/the-square.jpg"></a></li>
