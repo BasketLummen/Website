@@ -1,0 +1,78 @@
+---
+layout: post
+hidden: false
+title:  "12 oktober 2025: Pastadag"
+date:   2025-10-12 00:00:00
+description: Pastadag op 10 oktober 2025
+permalink: /news/2025-10-12-pastadag/
+cover: /news/img/penne-carbonara.jpg
+---
+
+### Pastadag
+
+Op Zondag 12 Oktober 2025 organiseren we een **pasta dag** ten voordele van onze jeugdploegen.
+
+Voor de beste pasta bereidingen kan je terecht in **'De Kalen Dries'**, gelegen aan de Meldertse Baan 2 te Lummen, doorlopend van **11 u. tot 20 u**.
+
+### Op het menu staan:
+
+- Grote Spaghetti Bolognaise **€13,00**
+- Kleine Spaghetti Bolognaise **€9,00**
+- Grote Spaghetti Vegetarisch **€12,00**
+- Kleine Spaghetti Vegetarisch **8,00**
+- Grote Penne Carbonara **€13,00**
+- Kleine Penne Carbonara **€8,00**
+- Kaas en Wijn schotel **€15,00**
+
+Om af te halen of om mee naar huis te nemen
+
+- Verse tomatensoep met balletjes (1L) **8,00**
+- Verse groetensoep (1L) **8,00**
+- Balletjes in tomatensaus (1KG) **15,00**
+- Spaghettisaus (1KG) **15,00**
+- Spaghettisaus Vegetarisch (1KG) **15,00**
+
+
+### Betaling
+
+Na het ingeven van je bestelling kan je betalen via Bancontact of via je krediet kaart. Moest je problemen ondervinden met je online betaling, dan kan je contact opnemen met [secretariaat@basketlummen.be](mailto://secretariaat@basketlummen.be).
+
+Verder kan je ook cash betalen door het geld aan één van onze coaches of bestuursleden te bezorgen; of je kan het geld overschrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling en het bestellingsnummer.
+
+### Opgelet!
+
+Bestellingen moeten uiterlijk op **woensdag 8 oktober 2025** binnen zijn. Latere bestellingen echt **NIET** mogelijk. 
+
+Enkel betaalde bestellingen zullen geleverd worden. 
+
+<style>
+    clubmgmt-checkout-form .table-row .table-cell:first-of-type
+    {
+        width: 30%;
+    }
+
+    payment-method
+    {
+        display: table-row-group;
+    }
+</style>
+
+<script type="module">
+
+ import { shell, translations } from "https://fundraising.clubmanagement.io/cdn/release/1.0.9/clubmanagement.sales.public.min.js";
+
+ (async function() {			
+	
+    translations.language = "nl";
+
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je op zondag 12 oktober 2025 in zaal Kalen Dries doorlopend tussen 11u en 20u.";
+    translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.";
+    translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling";
+
+	await shell.activate();
+	
+ })();
+	
+</script>
+
+<clubmgmt-checkout data-sale-id="43ed0142-ca3e-071b-e802-a319aa5ac46e" data-organization-id="5159e64f-4d2e-42c4-968d-6ff38338129b"></clubmgmt-checkout>
