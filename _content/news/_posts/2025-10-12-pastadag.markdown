@@ -12,7 +12,7 @@ cover: /news/img/penne-carbonara.jpg
 
 Op Zondag 12 Oktober 2025 organiseren we een **pasta dag** ten voordele van onze jeugdploegen.
 
-Voor de beste pasta bereidingen kan je terecht in **'De Kalen Dries'**, gelegen aan de Meldertse Baan 2 te Lummen, doorlopend van **11 u. tot 20 u**.
+Voor de beste pasta bereidingen kan je terecht in **'De Kalen Dries'**, gelegen aan de Meldertse Baan 2 te Lummen,  van **11 u. tot 14 u** en van **17 u. tot 20 u**.
 
 ### Op het menu staan:
 
@@ -65,7 +65,7 @@ Enkel betaalde bestellingen zullen geleverd worden.
 	
     translations.language = "nl";
 
-	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je op zondag 12 oktober 2025 in zaal Kalen Dries doorlopend tussen 11u en 20u.";
+	translations.CheckoutFormOrderConfirmationLegend.nl = "We verwelkomen je op zondag 12 oktober 2025 in zaal Kalen Dries doorlopend tussen 11u tot 14u en van 17u tot 20u.";
     translations.CheckoutFormChoosePaymentMethodCashMessage.nl = "Gelieve het te betalen bedrag te bezorgen aan de coach of aan een bestuurslid.";
     translations.CheckoutFormChoosePaymentMethodWireTransferMessage.nl = " Gelieve het geld over te schrijven op rekeningnummer BE16 3630 4262 5274 met vermelding voor en achternaam zoals op de bestelling";
 
