@@ -1,6 +1,6 @@
 ---
 layout: post
-hidden: true
+hidden: false
 title:  "9 Mei 2026: Slot Actie"
 date:   2026-03-09 00:00:00
 description: Slot Actie - Bakmix 9 Mei 2026
@@ -19,9 +19,9 @@ Beschikbaar in de volgende varianten:
 - Speculaaskoekjes 
 - Brownies 
 
-Prijs per bakfles is 8€ 
-3 bakflessen (elke soort 1) 20€ 
-9 bakflessen + 1 gratis (elke soort 3 + 1 naar keuze) 60€ 
+Prijs per bakmix is 8€ 
+3 bakmixen (elke soort 1) 20€ 
+9 bakmixen + 1 gratis (elke soort 3 + 1 naar keuze) 60€ 
 
 Bestellen kan tot 24/04/2026 
 
