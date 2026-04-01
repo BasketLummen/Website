@@ -5,7 +5,7 @@ title:  "9 Mei 2026: Slot Actie"
 date:   2026-03-09 00:00:00
 description: Slot Actie - Bakmix 9 Mei 2026
 permalink: /news/2026-05-09-slotactie/
-cover: /news/img/bakmix-voorbeeld-2025.jpg
+cover: /news/img/bakmix-voorbeeld-2026.png
 ---
 
 Beste spelers en speelsters, ouders,  
