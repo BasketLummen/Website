@@ -25,7 +25,7 @@ Prijs per bakmix is 8€
 
 Bestellen kan tot 24/04/2026 
 
-Afhalen kan op de slotdag op 09/05/2026
+Afhalen kan op de slotdag op 09/05/2026 vanaf 12u
 
 Betaling bij bestelling via bancontact.
 
