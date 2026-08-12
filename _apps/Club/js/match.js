@@ -11,8 +11,8 @@ var matchid = decodeURIComponent(getParameterByName("matchid"));
 
 var renderMatchDetails = function(match, org) {
 
-    $("#poule").text(match.doc.pouleNaam);
-    var d = new Date(match.doc.jsDTCode);
+    $("#poule").text(match._default.pouleNaam);
+    var d = new Date(match._default.jsDTCode);
     // d appears to be a UTC date, but using current local time
     var year = d.getUTCFullYear();
     var month = d.getUTCMonth();
@@ -27,20 +27,20 @@ var renderMatchDetails = function(match, org) {
     $("#next-bottom-title span").text(d.toLocaleString(window.navigator.language, {day: 'numeric'}) + " " + realDate.toLocaleString(window.navigator.language, {month: 'long'}) + " | " + ('0'+realDate.getHours()).slice(-2) + ":" + ('0'+realDate.getMinutes()).slice(-2));    
 
     var vs = "VS";
-    $("#home-team").text(match.doc.teamThuisNaam);
-    $("#away-team").text(match.doc.teamUitNaam);
+    $("#home-team").text(match._default.teamThuisNaam);
+    $("#away-team").text(match._default.teamUitNaam);
 
     $("#next-vs").text(vs);
 
-    var homesrc = vbl.teamimage(match.doc.teamThuisGUID);
-    var awaysrc = vbl.teamimage(match.doc.teamUitGUID);
+    var homesrc = vbl.teamimage(match._default.teamThuisGUID);
+    var awaysrc = vbl.teamimage(match._default.teamUitGUID);
     $("#next-home-team-logo img").attr("src", homesrc);
     $("#next-away-team-logo img").attr("src", awaysrc);
 
     $("#next-middle .container").css("visibility", "visible");
 
     var geocoder = new google.maps.Geocoder();
-    var address = match.doc.accommodatieDoc.adres;
+    var address = match._default.accommodatieDoc.adres;
     var addressStr = address.straat + " " + address.huisNr + ", " + address.plaats;
     geocoder.geocode( { 'address': addressStr}, function(results, status) {
          if (status == google.maps.GeocoderStatus.OK) {
@@ -57,23 +57,23 @@ var renderMatchDetails = function(match, org) {
                 map: map
             });
             google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent('<div><strong>' + match.doc.accommodatieDoc.naam + '</strong><br>' + addressStr + '</div>');
+                infowindow.setContent('<div><strong>' + match._default.accommodatieDoc.naam + '</strong><br>' + addressStr + '</div>');
                 infowindow.open(map, this);
             });
           }
          }
     });
-    $("#acc-name").text(match.doc.accommodatieDoc.naam);
+    $("#acc-name").text(match._default.accommodatieDoc.naam);
     $("#acc-address").text(addressStr);
-    $("#acc-telephone").text(match.doc.accommodatieDoc.telefoon ? match.doc.accommodatieDoc.telefoon : "");
-    $("#acc-web").text(match.doc.accommodatieDoc.website ? match.doc.accommodatieDoc.website : "");
+    $("#acc-telephone").text(match._default.accommodatieDoc.telefoon ? match._default.accommodatieDoc.telefoon : "");
+    $("#acc-web").text(match._default.accommodatieDoc.website ? match._default.accommodatieDoc.website : "");
 
-    $("#division").text(match.doc.wedID.substring(0, 8));
-    $("#game-nr").text(match.doc.wedID.substring(8));
+    $("#division").text(match._default.wedID.substring(0, 8));
+    $("#game-nr").text(match._default.wedID.substring(8));
     $("#mat").text(org.stamNr);
 
-    if(match.doc.wedOff){
-        match.doc.wedOff.forEach(function(off){
+    if(match._default.wedOff){
+        match._default.wedOff.forEach(function(off){
             $('#officials').append($('<tr>').append($('<td>').text(off)));
         });
     }    
@@ -82,8 +82,8 @@ var renderMatchDetails = function(match, org) {
     if(realDate.getTime() < Date.now()){
         $("#result-header").show();
 
-        if(match.doc.uitslag != null && match.doc.uitslag.length > 0){
-            $('#results').text(match.doc.uitslag);
+        if(match._default.uitslag != null && match._default.uitslag.length > 0){
+            $('#results').text(match._default.uitslag);
             $("#result-container").show();
         }
         else{
@@ -96,8 +96,8 @@ var renderMatchDetails = function(match, org) {
 var bindForm = function(match){
     var form = $('#result-form-container form');
    
-    var teamThuisGUID = match.doc.teamThuisGUID;
-    var teamUitGUID = match.doc.teamUitGUID
+    var teamThuisGUID = match._default.teamThuisGUID;
+    var teamUitGUID = match._default.teamUitGUID
 
     var rules = {
         homescore: {

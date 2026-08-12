@@ -42,7 +42,7 @@ var repository = new function(){
 
         if (usedb) {  
 
-            var request = indexedDB.open(vblOrgId + "-2022", dbversion);
+            var request = indexedDB.open(vblOrgId + "-2026", dbversion);
             request.onerror = function(event) {
                 console.warn("Database error: " + event.target.errorCode);
                 $.topic("db.open.error").publish();
@@ -98,8 +98,8 @@ var repository = new function(){
 
     this.ensureMatchDetailsStore =  function(b){
          if (usedb && !self.db.objectStoreNames.contains('matchDetails')) {
-            var matchesStore = self.db.createObjectStore("matchDetails", { keyPath: "doc.guid" });
-            matchesStore.createIndex("jsDTCode", "doc.jsDTCode")
+            var matchesStore = self.db.createObjectStore("matchDetails", { keyPath: "_default.guid" });
+            matchesStore.createIndex("jsDTCode", "_default.jsDTCode")
          }
     }
 
@@ -552,7 +552,7 @@ var repository = new function(){
 
     this._getMatchDetailsFromArrays = function(matchId, callback){
         self.matchDetails.forEach(function(match){
-            if(match.doc.guid == matchId){
+            if(match._default.guid == matchId){
               callback(match)
             }
         });
