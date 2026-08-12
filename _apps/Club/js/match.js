@@ -29,6 +29,16 @@ var loadLeafletForMatch = function (done) {
     document.body.appendChild(script);
 }
 
+var configureLeafletMarkerIcons = function () {
+    if (!window.L || !L.Icon || !L.Icon.Default) return;
+
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl: '/css/images/marker-icon-2x.png',
+        iconUrl: '/css/images/marker-icon.png',
+        shadowUrl: '/css/images/marker-shadow.png'
+    });
+}
+
 var geocodeAddress = function (query, onSuccess) {
     fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=' + encodeURIComponent(query))
         .then(function (response) { return response.json(); })
@@ -43,13 +53,24 @@ var renderMap = function (title, address, lat, lng) {
     var mapElement = document.getElementById('map');
     if (!mapElement || !window.L) return;
 
+    configureLeafletMarkerIcons();
     var map = L.map(mapElement).setView([lat, lng], 15);
     map.attributionControl.setPosition('bottomleft');
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([lat, lng]).addTo(map)
+    L.marker([lat, lng], {
+        icon: L.icon({
+            iconUrl: '/css/images/marker-icon.png',
+            iconRetinaUrl: '/css/images/marker-icon-2x.png',
+            shadowUrl: '/css/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        })
+    }).addTo(map)
         .bindPopup('<div><strong>' + title + '</strong><br>' + address + '</div>');
 }
 

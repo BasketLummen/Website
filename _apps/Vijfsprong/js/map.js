@@ -18,17 +18,38 @@ function loadLeaflet(done) {
   document.body.appendChild(script);
 }
 
+function configureLeafletMarkerIcons() {
+  if (!window.L || !L.Icon || !L.Icon.Default) return;
+
+  L.Icon.Default.mergeOptions({
+    iconRetinaUrl: '/css/images/marker-icon-2x.png',
+    iconUrl: '/css/images/marker-icon.png',
+    shadowUrl: '/css/images/marker-shadow.png'
+  });
+}
+
 function initLeafletMap(elementId, lat, lng, title, address) {
   var el = document.getElementById(elementId);
   if (!el) return;
 
+  configureLeafletMarkerIcons();
   var map = L.map(el).setView([lat, lng], 15);
   map.attributionControl.setPosition('bottomleft');
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  var marker = L.marker([lat, lng]).addTo(map);
+  var marker = L.marker([lat, lng], {
+    icon: L.icon({
+      iconUrl: '/css/images/marker-icon.png',
+      iconRetinaUrl: '/css/images/marker-icon-2x.png',
+      shadowUrl: '/css/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    })
+  }).addTo(map);
   marker.bindPopup('<div><strong>' + title + '</strong><br>' + address + '</div>');
 }
 
