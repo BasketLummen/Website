@@ -1,132 +1,53 @@
-function initVijfsprong() {
-    var el = document.getElementById('vijfsprong');
-    if(!el) return;
+function loadLeaflet(done) {
+  if (window.L) {
+    done();
+    return;
+  }
 
-    var loc = {lat: 50.991189, lng: 5.18965};
-    var map = new google.maps.Map(el, {
-      zoom: 15,
-      center: loc
-    });
-    /*var marker = new google.maps.Marker({
-      position: loc,
-      map: map
-    });*/
+  if (!document.querySelector('link[data-leaflet]')) {
+    var stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    stylesheet.crossOrigin = '';
+    stylesheet.setAttribute('data-leaflet', 'true');
+    document.head.appendChild(stylesheet);
+  }
 
-    
-  var infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
+  var existingScript = document.querySelector('script[data-leaflet]');
+  if (existingScript) {
+    existingScript.addEventListener('load', done, { once: true });
+    return;
+  }
 
-  service.getDetails({ placeId: 'ChIJZRgmzYI7wUcRjEHmCqFIOFA' }, function(place, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-            place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
-      }
-  });
+  var script = document.createElement('script');
+  script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  script.crossOrigin = '';
+  script.setAttribute('data-leaflet', 'true');
+  script.onload = done;
+  document.body.appendChild(script);
 }
 
-function initOHVM() {
-  var el = document.getElementById('ohvm');
-  if(!el) return;
+function initLeafletMap(elementId, lat, lng, title, address) {
+  var el = document.getElementById(elementId);
+  if (!el) return;
 
-  var loc = {lat: 50.98634960469504, lng: 5.194314250017507}; 
-    var map = new google.maps.Map(el, {
-      zoom: 15,
-      center: loc
-    });
-    /*var marker = new google.maps.Marker({
-      position: loc,
-      map: map
-    });*/
-  var infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
+  var map = L.map(el).setView([lat, lng], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
-  service.getDetails({ placeId: 'ChIJB9uhJ3k7wUcRLGCy9wDZbzA' }, function(place, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-            place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
-      }
-  });
-}
-
-function initKambergen() {
-  var el = document.getElementById('kambergen');
-  if(!el) return;
-
-  var loc = {lat: 50.973477484731156, lng: 5.123007369493038};
-  var map = new google.maps.Map(el, {
-    zoom: 15,
-    center: loc
-  });
-  /*var marker = new google.maps.Marker({
-    position: loc,
-    map: map
-  });*/
-  var infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-
-  service.getDetails({ placeId: 'ChIJkZ1Jd7A-wUcR4Bv5dTUY-Vk' }, function(place, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-          place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
-    }
-  });
-}
-
-function initVelodroom() {
-  var el = document.getElementById('velodroom');
-  if(!el) return;
-
-  var loc = {lat: 50.99415, lng: 5.26740};
-  var map = new google.maps.Map(el, {
-    zoom: 15,
-    center: loc
-  });
-  /*var marker = new google.maps.Marker({
-    position: loc,
-    map: map
-  });*/
-  var infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-
-  service.getDetails({ placeId: 'ChIJkZ1Jd7A-wUcR4Bv5dTUY-Vk' }, function(place, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-          place.formatted_address + '</div>');
-        infowindow.open(map, this);
-      });
-    }
-  });
+  var marker = L.marker([lat, lng]).addTo(map);
+  marker.bindPopup('<div><strong>' + title + '</strong><br>' + address + '</div>');
 }
 
 function initMaps() {
-  initVijfsprong();
-  initOHVM();
-  //initKambergen();
-  initVelodroom();
+  loadLeaflet(function () {
+    initLeafletMap('vijfsprong', 50.991189, 5.18965, 'De Vijfsprong', 'Sportweg 8, 3560 Lummen, Belgium');
+    initLeafletMap('ohvm', 50.98634960469504, 5.194314250017507, 'OHVM', 'Pastoor Frederickxstraat 9, 3560 Lummen, Belgium');
+    initLeafletMap('velodroom', 50.99415, 5.2674, 'Velodroom', 'Kerkstraat 151, 3550 Heusden-Zolder, Belgium');
+  });
 }
+
+$(function () {
+  initMaps();
+});

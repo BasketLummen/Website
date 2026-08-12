@@ -9,6 +9,58 @@ var getParameterByName = function (name, url) {
 }
 var matchid = decodeURIComponent(getParameterByName("matchid"));
 
+var loadLeafletForMatch = function (done) {
+    if (window.L) {
+        done();
+        return;
+    };
+
+    if (!document.querySelector('link[data-leaflet]')) {
+        var stylesheet = document.createElement('link');
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+        stylesheet.crossOrigin = '';
+        stylesheet.setAttribute('data-leaflet', 'true');
+        document.head.appendChild(stylesheet);
+    };
+
+    var existingScript = document.querySelector('script[data-leaflet]');
+    if (existingScript) {
+        existingScript.addEventListener('load', done, { once: true });
+        return;
+    };
+
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.crossOrigin = '';
+    script.setAttribute('data-leaflet', 'true');
+    script.onload = done;
+    document.body.appendChild(script);
+}
+
+var geocodeAddress = function (query, onSuccess) {
+    fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=' + encodeURIComponent(query))
+        .then(function (response) { return response.json(); })
+        .then(function (results) {
+            if (results && results.length > 0) {
+                onSuccess(parseFloat(results[0].lat), parseFloat(results[0].lon));
+            }
+        });
+}
+
+var renderMap = function (title, address, lat, lng) {
+    var mapElement = document.getElementById('map');
+    if (!mapElement || !window.L) return;
+
+    var map = L.map(mapElement).setView([lat, lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([lat, lng]).addTo(map)
+        .bindPopup('<div><strong>' + title + '</strong><br>' + address + '</div>');
+}
+
 var renderMatchDetails = function(match, org) {
 
     $("#poule").text(match._default.pouleNaam);
@@ -39,29 +91,12 @@ var renderMatchDetails = function(match, org) {
 
     $("#next-middle .container").css("visibility", "visible");
 
-    var geocoder = new google.maps.Geocoder();
     var address = match._default.accommodatieDoc.adres;
     var addressStr = address.straat + " " + address.huisNr + ", " + address.plaats;
-    geocoder.geocode( { 'address': addressStr}, function(results, status) {
-         if (status == google.maps.GeocoderStatus.OK) {
-          if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-            var loc = results[0].geometry.location;
-
-            var infowindow = new google.maps.InfoWindow();
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: loc
-            });
-            var marker = new google.maps.Marker({
-                position: loc,
-                map: map
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent('<div><strong>' + match._default.accommodatieDoc.naam + '</strong><br>' + addressStr + '</div>');
-                infowindow.open(map, this);
-            });
-          }
-         }
+    loadLeafletForMatch(function () {
+        geocodeAddress(addressStr, function (lat, lng) {
+            renderMap(match._default.accommodatieDoc.naam, addressStr, lat, lng);
+        });
     });
     $("#acc-name").text(match._default.accommodatieDoc.naam);
     $("#acc-address").text(addressStr);
