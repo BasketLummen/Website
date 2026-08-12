@@ -4,15 +4,6 @@ function loadLeaflet(done) {
     return;
   }
 
-  if (!document.querySelector('link[data-leaflet]')) {
-    var stylesheet = document.createElement('link');
-    stylesheet.rel = 'stylesheet';
-    stylesheet.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    stylesheet.crossOrigin = '';
-    stylesheet.setAttribute('data-leaflet', 'true');
-    document.head.appendChild(stylesheet);
-  }
-
   var existingScript = document.querySelector('script[data-leaflet]');
   if (existingScript) {
     existingScript.addEventListener('load', done, { once: true });
@@ -32,6 +23,7 @@ function initLeafletMap(elementId, lat, lng, title, address) {
   if (!el) return;
 
   var map = L.map(el).setView([lat, lng], 15);
+  map.attributionControl.setPosition('bottomleft');
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);

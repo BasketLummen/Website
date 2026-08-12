@@ -465,9 +465,21 @@
 	
 	margin: 4vh 0;
 	position: relative;
+	isolation: isolate;
 }
 .map {
 	height: 40vh;
+	position: relative;
+	z-index: 0;
+}
+
+/* Bootstrap sets img{max-width:100%}; Leaflet tiles/markers must keep native size. */
+.map .leaflet-container img,
+.map .leaflet-pane img,
+.map .leaflet-tile,
+.map .leaflet-marker-icon,
+.map .leaflet-marker-shadow {
+	max-width: none !important;
 }
 @media (max-width: 767px) {
 	.map {
@@ -486,25 +498,29 @@
 	.map {
 		width: 80vw;
 	}
-	.map::after {
+	.map-holder::before {
 	  content: '';
 	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  right: -185px;
+	  top: -2px;
+	  bottom: -2px;
+	  right: calc(20vw - 200px);
 	  width: 400px;
 	  -webkit-transform: skewX(-33deg);
 	  -khtml-transform: skewX(-33deg);
 	  -moz-transform: skewX(-33deg);
 	  -ms-transform: skewX(-33deg);
 	  transform: skewX(-33deg);
-	  z-index: 0;
+	  z-index: 1;
+	  pointer-events: none;
+	  box-shadow: 0 0 0 2px #ffe100;
 	}
 	.map-info{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: right;
+		position: relative;
+		z-index: 2;
 	}
 }
 
