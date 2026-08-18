@@ -1,6 +1,6 @@
 ---
 layout: content
-title: Livestream
+title: Basket Lummen Livestream
 description: Basket Lummen
 keywords: Basket, Lummen, Livestream
 ---
@@ -29,30 +29,35 @@ keywords: Basket, Lummen, Livestream
 </iframe>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const channelID = "UCunXn91ZnQF7Y74M-MOv8Nw";
+
+<!-- athenas id: UC51QJlYeufZRnWidFfYY6bQ -->
+<!-- lummen id: UCunXn91ZnQF7Y74M-MOv8Nw -->
+
+document.addEventListener("DOMContentLoaded", function() {
+        const channelID = "UC51QJlYeufZRnWidFfYY6bQ";
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
         const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
-            if (data.status === "ok" && data.items.length > 0) {
-                // Retrieve the latest video entry from the feed
-                const latestVideo = data.items[0];
-                
-                // Extract the Video ID from the entry's GUID (format: "yt:video:VIDEO_ID")
-                const videoId = latestVideo.guid.replace("yt:video:", "");
+                if (data.status === "ok" && data.items.length > 0) {
+                    const latestVideo = data.items[0];
+                    const videoId = latestVideo.guid.replace("yt:video:", "");
+                    
+                    // Debug: Check which video is being pulled
+                    console.log("Loading Video ID:", videoId, "Title:", latestVideo.title);
 
-                // Update the iframe source dynamically
-                const iframe = document.getElementById("basket-lummen-player");
-                if (iframe) {
-                iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                    const iframe = document.getElementById("basket-lummen-player");
+                    if (iframe) {
+                        // Adding ?rel=0 prevents related videos from other channels showing at the end
+                        iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0`;
+                    }
                 }
-            }
             })
             .catch(error => console.error("Error loading YouTube stream:", error));
-        });
+    });
+ 
 </script>
 
 <style>
