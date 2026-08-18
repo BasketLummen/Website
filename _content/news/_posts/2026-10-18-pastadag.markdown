@@ -1,0 +1,11 @@
+---
+layout: post
+hidden: true
+title:  "18 oktober 2026: Pastadag"
+date:   2026-08-18 00:00:00
+description: Pastadag op 18 oktober 2026
+permalink: /news/2026-10-18-pastadag/
+cover: /news/img/penne-carbonara.jpg
+---
+
+Coming soon...
