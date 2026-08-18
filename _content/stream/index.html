@@ -1,0 +1,162 @@
+---
+layout: content
+title: Livestream
+description: Basket Lummen
+keywords: Basket, Lummen, Livestream
+---
+
+<h1>Latest livestream</h1>
+
+<style>
+    .container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        display: block;
+        border: 0;
+    }
+</style>
+
+<iframe 
+  id="basket-lummen-player"
+  width="560" 
+  height="315" 
+  src="" 
+  title="Basket Lummen Latest Stream" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const channelID = "UCunXn91ZnQF7Y74M-MOv8Nw";
+        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
+        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+            if (data.status === "ok" && data.items.length > 0) {
+                // Retrieve the latest video entry from the feed
+                const latestVideo = data.items[0];
+                
+                // Extract the Video ID from the entry's GUID (format: "yt:video:VIDEO_ID")
+                const videoId = latestVideo.guid.replace("yt:video:", "");
+
+                // Update the iframe source dynamically
+                const iframe = document.getElementById("basket-lummen-player");
+                if (iframe) {
+                iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                }
+            }
+            })
+            .catch(error => console.error("Error loading YouTube stream:", error));
+        });
+</script>
+
+<style>
+    .club-logos {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 24px;
+        justify-content: center;
+    }
+    .club-logos img {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #19305722;
+        padding: 8px;
+    }
+    h3, h4 {       
+        font-weight: 700;
+        margin-top: 1.8em;
+        margin-bottom: 0.35em;
+        letter-spacing: 1px;
+    }
+    h3.heren, h4.heren { color: #193057; }
+    h3.dames, h4.dames { color: #ffc627; }
+    h3, h4:not(.heren):not(.dames) { color: #ff6f29; }
+    .sponsor-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        align-items: stretch;
+    }
+    .sponsor-row li {
+        background: #fff;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(25,48,87,0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+        min-height: 120px;
+        border: 2px solid #ced5e0;
+        transition: box-shadow 0.18s, border-color 0.18s;
+    }
+    .sponsor-row li:hover {
+        box-shadow: 0 4px 18px #ffc62733;
+        border-color: #ff6f29;
+    }
+    .sponsor-row img {
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        max-height: 110px;
+        object-fit: contain;
+        background: #f8f8f8;
+        padding: 2px;
+    }
+    /* Grootte per categorie */
+    .sponsor-hoofdsponsor img { max-width: 280px; max-height: 140px; }
+    .sponsor-hoofdsponsor li { height: 200px; }
+    .sponsor-dames img { max-width: 200px; max-height: 100px; }
+
+    /* Nieuwe styling voor gecombineerde hoofdsponsors */
+    .hoofdsponsors-combi-row {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: left;
+        align-items: stretch;
+        margin-bottom: 28px;
+    }
+    .hoofdsponsor-combi {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        min-width: 260px;
+    }
+    .hoofdsponsor-combi h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="partners">
+
+<div class="hoofdsponsors-combi-row">
+    <div class="hoofdsponsor-combi">
+        <h3 class="dames">Hoofdsponsor</h3>
+        <ul class="sponsor-row sponsor-hoofdsponsor">
+            <li><a href="mailto:rik@neempauze.be"><img src="/img/partners/pauze.png"></a></li>
+            <li><a><img src="/img/partners/roosenvastgoed.png"></a></li>
+        </ul>
+    </div>
+</div>
+
+<h4 class="dames">Sponsors</h4>
+<ul class="sponsor-row sponsor-dames">
+    <li><a href="https://rutten.volvocarbelux.be/nl" target="_blank"><img src="/img/partners/VolvoRutten.png"></a></li>
+    <li><a href="https://www.erreapointlimburg.be/" target="_blank"><img src="/img/partners/errea.png"></a></li>
+    <li><a href="https://www.vinci-energies.be/" target="_blank"><img src="/img/partners/vinci.jpg"></a></li>
+    <li><a><img src="/img/partners/roosenvastgoed.png"></a></li>
+</ul> 
+
+</div>
