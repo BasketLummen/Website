@@ -36,9 +36,16 @@ keywords: Basket, Lummen, Livestream
 document.addEventListener("DOMContentLoaded", function() {
         const channelID = "UC51QJlYeufZRnWidFfYY6bQ";
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
-        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+        // const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
-        fetch(apiUrl)
+        const livePlaylistID = channelID.replace("UC", "UULV");
+        // const videoPlaylistID = channelID.replace("UC", "UULF");
+
+        const liveFeedUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?playlist_id=${livePlaylistID}`)}`;
+        // const videoFeedUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?playlist_id=${videoPlaylistID}`)}`;
+
+
+        fetch(liveFeedUrl)
             .then(response => response.json())
             .then(data => {
                 if (data.status === "ok" && data.items.length > 0) {
