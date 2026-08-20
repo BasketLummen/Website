@@ -19,58 +19,14 @@ keywords: Basket, Lummen, Livestream
 
 <iframe 
   id="basket-lummen-player"
+  src="https://www.youtube.com/embed/live_stream?channel=UCunXn91ZnQF7Y74M-MOv8Nw"
   width="560" 
   height="315" 
-  src="" 
   title="Basket Lummen Latest Stream" 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen>
 </iframe>
-
-<script>
-
-<!-- athenas id: UC51QJlYeufZRnWidFfYY6bQ -->
-<!-- lummen id: UCunXn91ZnQF7Y74M-MOv8Nw -->
-
-document.addEventListener("DOMContentLoaded", function() {
-        const channelID = "UCunXn91ZnQF7Y74M-MOv8Nw";
-         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
-        const livePlaylistID = channelID.replace("UC", "UULV");
-        const liveFeedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${livePlaylistID}`; 
-
-        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(liveFeedUrl)}`;
-
-        fetch(proxyUrl)
-            .then(response => {
-            if (!response.ok) throw new Error("Network response was not ok");
-            return response.text();
-            })
-            .then(xmlText => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-
-            // Get all <entry> tags from YouTube's Atom feed
-            const entries = xmlDoc.getElementsByTagName("entry");
-
-            if (entries.length > 0) {
-                // Extract the video ID directly from YouTube's <yt:videoId> tag
-                const videoIdNode = entries[0].getElementsByTagName("yt:videoId")[0];
-                const videoId = videoIdNode ? videoIdNode.textContent : null;
-
-                if (videoId) {
-                console.log("Found Video ID via native XML:", videoId);
-                const iframe = document.getElementById("basket-lummen-player");
-                if (iframe) {
-                    iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0`;
-                }
-                }
-            }
-        })
-        .catch(error => console.error("Error fetching or parsing RSS feed:", error));
-    });
- 
-</script>
 
 <style>
     .club-logos {
