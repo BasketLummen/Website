@@ -15,7 +15,7 @@ Vermeld kort hoe het ongeval gebeurde (bijvoorbeeld: “voet omgeslagen tijdens 
 
 Daarnaast moet steeds het document ‘eerste vaststelling’ door een arts ingevuld worden. Zonder dit document kan er geen dossier worden opgestart.
 
-Beide documenten moeten binnen de 8 dagen per e-mail naar [linda.doggen@telenet.be](mailto://linda.doggen@telenet.be) doorgestuurd worden.
+Beide documenten moeten binnen de 8 dagen per e-mail naar [ethias@basketlummen.be](mailto://ethias@basketlummen.be) doorgestuurd worden.
 
 **Belangrijk**: ouders mogen zelf geen aangifte rechtstreeks naar Ethias sturen (niet per post, noch per mail). Wij dienen de aangifte digitaal in en bezorgen vervolgens het dossiernummer aan de speler of ouder.
 
