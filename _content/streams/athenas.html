@@ -28,6 +28,49 @@ keywords: Basket, Lummen, Livestream
   allowfullscreen>
 </iframe>
 
+<script>
+
+<!-- athenas id: UC51QJlYeufZRnWidFfYY6bQ -->
+<!-- lummen id: UCunXn91ZnQF7Y74M-MOv8Nw -->
+
+document.addEventListener("DOMContentLoaded", async function() {
+    const channelID = "UC51QJlYeufZRnWidFfYY6bQ";
+    const apikey= "AIzaSyA7T-GLh3W0foWPsmqSJCHM45tFVlpguSc";
+
+    const player = document.getElementById('basket-lummen-player');
+
+    try {
+        // 1. First, check if the channel is CURRENTLY streaming live
+        const liveUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelID}&type=video&eventType=live&key=${apikey}`;
+        let res = await fetch(liveUrl);
+        let data = await res.json();
+
+        if (data.items && data.items.length > 0) {
+        const liveVideoId = data.items[0].id.videoId;
+        console.log("Channel is LIVE. ID:", liveVideoId);
+        player.src = `https://www.youtube.com/embed/${liveVideoId}?rel=0`;
+        return;
+        }
+
+        // 2. If NOT live (items is empty), fetch the most recent video/replay
+        console.log("Channel is offline. Fetching latest uploaded replay...");
+        const recentUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelID}&type=video&order=date&maxResults=1&key=${apikey}`;
+        res = await fetch(recentUrl);
+        data = await res.json();
+
+        if (data.items && data.items.length > 0) {
+        const replayVideoId = data.items[0].id.videoId;
+        console.log("Loading Replay ID:", replayVideoId);
+        player.src = `https://www.youtube.com/embed/${replayVideoId}?rel=0`;
+        }
+    } catch (err) {
+        console.error("API Error:", err);
+    }
+         
+});
+ 
+</script>
+
 <style>
     .club-logos {
         display: flex;
