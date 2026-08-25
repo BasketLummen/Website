@@ -3,6 +3,8 @@ layout: content
 title: Basket Lummen Livestream
 description: Basket Lummen
 keywords: Basket, Lummen, Livestream
+custom_js:
+- carrousel
 ---
 
 <h1>Livestream</h1>
@@ -27,6 +29,14 @@ keywords: Basket, Lummen, Livestream
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
   allowfullscreen>
 </iframe>
+
+<div id="partners">
+    <div>
+            <div class="container">
+                {{>partnerstreamathenas}}
+            </div>
+    </div>		
+</div>	
 
 <script>
 
@@ -154,25 +164,3 @@ document.addEventListener("DOMContentLoaded", async function() {
         margin-bottom: 10px;
     }
 </style>
-
-<div class="partners">
-
-<div class="hoofdsponsors-combi-row">
-    <div class="hoofdsponsor-combi">
-        <h3 class="dames">Hoofdsponsor</h3>
-        <ul class="sponsor-row sponsor-hoofdsponsor">
-            <li><a href="mailto:rik@neempauze.be"><img src="/img/partners/pauze.png"></a></li>
-            <li><a><img src="/img/partners/roosenvastgoed.png"></a></li>
-        </ul>
-    </div>
-</div>
-
-<h4 class="dames">Sponsors</h4>
-<ul class="sponsor-row sponsor-dames">
-    <li><a href="https://rutten.volvocarbelux.be/nl" target="_blank"><img src="/img/partners/VolvoRutten.png"></a></li>
-    <li><a href="https://www.erreapointlimburg.be/" target="_blank"><img src="/img/partners/errea.png"></a></li>
-    <li><a href="https://www.vinci-energies.be/" target="_blank"><img src="/img/partners/vinci.jpg"></a></li>
-    <li><a><img src="/img/partners/roosenvastgoed.png"></a></li>
-</ul> 
-
-</div>
