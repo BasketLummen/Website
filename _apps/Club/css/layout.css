@@ -204,7 +204,9 @@
 
 /* team-photo */
 .roster-picture {
-	height: 80vh;
+	width: 100%;
+ 	height: auto;
+ 	aspect-ratio: 2000 / 910;
 	margin-top: -3vw;
 }
 
