@@ -5,7 +5,7 @@ title:  "16 december 2026: Eindejaarsactie"
 date:   2026-11-09 00:00:00
 description: Eindejaarsactie op 16 december 2026
 permalink: /news/2026-12-16-eindejaarsactie/
-cover: /news/img/2020-eindejaarsactie.png
+cover: /news/img/2026-eindejaarsactie.png
 ---
 
 Net als vorig jaar presenteren we vanuit onze vereniging, Koninklijke Basketbalclub Lummen, een prachtig assortiment kwaliteitswijnen, specialty coffee, ijsstronken en geschenkmanden. 
